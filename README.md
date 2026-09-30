@@ -37,4 +37,22 @@ fully transparent tracked record. If it doesn't, we say so and keep working.
 
 ## Status
 
-Phase 1: data + baseline ratings model. Nothing claimed yet.
+Phase 1 (done): Elo baseline + walk-forward backtest, 1980–2024.
+Phase 2 (done): EPA-based ratings from nflverse play-by-play, 2021–2024.
+Neither beats the modern line yet — see results below. No edge claimed.
+
+## Backtest results (leakage-safe, predict-before-update, chronological)
+
+Elo, 1980–2024 (11,352 games): margin RMSE 13.67 vs closing line 13.68
+(a dead heat), straight-up 63.8%. ATS at >=1.5pt disagreement: 54.0%
+overall, but decaying by decade — 56.3% (80s) → 54.0% (90s) → 54.7%
+(00s) → 53.1% (10s) → 50.8% (2020s). The market got sharper; the edge
+is gone against modern lines.
+
+EPA model, 2021–2024 (1,107 games): straight-up 63.8%, margin RMSE
+14.21 vs line 12.73, ATS 48.2%. Totals: RMSE 15.19 vs line 13.08,
+over/under picks 48.2%. No edge on spreads or totals.
+
+Next levers: QB-specific adjustments, rest differentials, weather/dome
+effects on totals, recency weighting. Tuning on the backtest window is
+overfitting — any parameter search must itself be walk-forward.
