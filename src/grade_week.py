@@ -37,6 +37,32 @@ def grade_pick(p: dict, home_score: int, away_score: int) -> dict:
         r["ou"] = ("push" if abs(diff) < 0.01
                    else ("win" if (diff > 0) == (p["pick_total"] == "over") else "loss"))
     return r
+def grade_parlay(parlay: dict | None, picks: list[dict]) -> dict | None:
+    """Grade the weekly parlay: win = every leg wins, loss = any leg loses,
+    push = no losses but at least one push (standard voided-leg reduction).
+    None result while any leg's game is still pending."""
+    if not parlay:
+        return None
+    by_game = {(p["home_abbr"], p["away_abbr"]): p for p in picks}
+    results = []
+    for leg in parlay["legs"]:
+        p = by_game.get((leg["home_abbr"], leg["away_abbr"]))
+        r = (p or {}).get("result")
+        if not r:
+            return {"legs": parlay["legs"], "result": None}
+        key = "ats" if leg["market"] == "spread" else "ou"
+        if key not in r:
+            return {"legs": parlay["legs"], "result": None}
+        results.append(r[key])
+    if any(x == "loss" for x in results):
+        res = "loss"
+    elif all(x == "win" for x in results):
+        res = "win"
+    else:
+        res = "push"
+    return {"legs": parlay["legs"], "result": res}
+
+
 DATA = REPO / "data"
 SITE_DATA = REPO / "site" / "data"
 SEASON = 2026
@@ -82,6 +108,7 @@ def main() -> None:
         "generated": week_data["generated"],
         "complete": pending == 0,
         "picks": picks,
+        "parlay": grade_parlay(week_data.get("parlay"), picks),
     }
     log_path.write_text(json.dumps(log, indent=2))
     print(f"Week {week}: graded {graded}, pending {pending} -> {log_path}")

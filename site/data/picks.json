@@ -1,8 +1,39 @@
 {
   "season": 2026,
   "week": 4,
-  "generated": "2026-09-30 17:04 PDT",
+  "generated": "2026-09-30 17:33 PDT",
   "disclaimer": "Model probabilities for entertainment. Our backtest shows no edge vs the closing line \u2014 track record published openly.",
+  "parlay": {
+    "legs": [
+      {
+        "game": "NYJ @ CHI",
+        "away_abbr": "NYJ",
+        "home_abbr": "CHI",
+        "market": "spread",
+        "label": "CHI -3.5",
+        "prob": 0.901
+      },
+      {
+        "game": "LAC @ SEA",
+        "away_abbr": "LAC",
+        "home_abbr": "SEA",
+        "market": "total",
+        "label": "Under 42.5",
+        "prob": 0.879
+      },
+      {
+        "game": "KC @ LV",
+        "away_abbr": "KC",
+        "home_abbr": "LV",
+        "market": "total",
+        "label": "Under 47.5",
+        "prob": 0.868
+      }
+    ],
+    "combined_prob": 0.687,
+    "fair_odds": "-220",
+    "book_pays": "+600"
+  },
   "picks": [
     {
       "away": "Pittsburgh Steelers",

@@ -21,7 +21,13 @@ type GradedPick = {
   } | null;
 };
 
-type SeasonLog = { season: number; weeks: Record<string, { generated: string; complete: boolean; picks: GradedPick[] }> };
+type ParlayLeg = { game: string; market: string; label: string; prob: number };
+type WeekLog = {
+  generated: string; complete: boolean; picks: GradedPick[];
+  parlay: { legs: ParlayLeg[]; result: "win" | "loss" | "push" | null } | null;
+};
+
+type SeasonLog = { season: number; weeks: Record<string, WeekLog> };
 
 const seasons = record.seasons as Season[];
 
@@ -195,11 +201,16 @@ function LiveSeason({ log }: { log: SeasonLog }) {
   if (weeks.length === 0) return null;
 
   let aw = 0, al = 0, ap = 0, ow = 0, ol = 0, op = 0;
-  for (const [, w] of weeks)
+  let pw = 0, pl = 0, pp = 0;
+  for (const [, w] of weeks) {
     for (const p of w.picks) {
       if (p.result?.ats === "win") aw++; else if (p.result?.ats === "loss") al++; else if (p.result?.ats === "push") ap++;
       if (p.result?.ou === "win") ow++; else if (p.result?.ou === "loss") ol++; else if (p.result?.ou === "push") op++;
     }
+    if (w.parlay?.result === "win") pw++;
+    else if (w.parlay?.result === "loss") pl++;
+    else if (w.parlay?.result === "push") pp++;
+  }
 
   return (
     <div className="mt-8">
@@ -212,7 +223,7 @@ function LiveSeason({ log }: { log: SeasonLog }) {
       <p className="mt-1 text-sm text-zinc-400">
         This season’s picks, graded as games go final. Nothing hidden, nothing rewritten.
       </p>
-      <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-2">
+      <div className="mt-4 grid grid-cols-3 gap-4">
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4">
           <div className="text-2xl font-extrabold">{aw}-{al}-{ap}</div>
           <div className="mt-1 text-xs text-zinc-500">Against the spread, {log.season}</div>
@@ -221,12 +232,25 @@ function LiveSeason({ log }: { log: SeasonLog }) {
           <div className="text-2xl font-extrabold">{ow}-{ol}-{op}</div>
           <div className="mt-1 text-xs text-zinc-500">Over/under, {log.season}</div>
         </div>
+        <div className="rounded-xl border border-amber-400/25 bg-amber-400/[0.06] p-4">
+          <div className="text-2xl font-extrabold">{pw}-{pl}-{pp}</div>
+          <div className="mt-1 text-xs text-zinc-500">Parlay of the week, {log.season}</div>
+        </div>
       </div>
       {weeks.map(([wn, w]) => (
         <div key={wn} className="mt-6">
           <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400">
             Week {wn} {w.complete ? "" : "· partial"}
           </h3>
+          {w.parlay && w.parlay.legs.length > 0 && (
+            <div className="mt-2 flex flex-wrap items-center gap-2 rounded-xl border border-amber-400/25 bg-amber-400/[0.06] px-4 py-2.5 text-sm">
+              <span className="font-bold text-amber-200">Parlay:</span>
+              <span className="text-zinc-300">
+                {w.parlay.legs.map((l) => l.label).join(" · ")}
+              </span>
+              {resultBadge(w.parlay.result ?? undefined)}
+            </div>
+          )}
           <div className="mt-2 overflow-x-auto rounded-xl border border-zinc-800">
             <table className="w-full min-w-[720px] text-sm">
               <thead>

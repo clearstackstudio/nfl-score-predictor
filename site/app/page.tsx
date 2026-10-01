@@ -124,6 +124,83 @@ function GameCard({ p }: { p: Pick }) {
   );
 }
 
+type ParlayLeg = {
+  game: string; market: "spread" | "total"; label: string; prob: number;
+};
+type Parlay = {
+  legs: ParlayLeg[]; combined_prob: number; fair_odds: string; book_pays: string;
+} | null;
+
+function ParlayCard({ parlay }: { parlay: Parlay }) {
+  if (!parlay || parlay.legs.length < 2) return null;
+  return (
+    <section className="mb-6 rounded-2xl border border-amber-400/30 bg-amber-400/[0.06] p-5">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 className="text-xl font-extrabold tracking-tight">
+          Parlay of the week{" "}
+          <span className="ml-1 rounded bg-zinc-800 px-2 py-0.5 align-middle text-[11px] font-bold uppercase tracking-wider text-zinc-400">
+            for fun
+          </span>
+        </h2>
+        <span className="text-sm text-zinc-500">
+          Our {parlay.legs.length} highest-conviction picks, combined
+        </span>
+      </div>
+
+      <ul className="mt-4 space-y-2">
+        {parlay.legs.map((l) => (
+          <li
+            key={`${l.game}-${l.market}`}
+            className="flex items-center justify-between gap-3 rounded-xl bg-zinc-950/60 px-4 py-2.5"
+          >
+            <div>
+              <span className="font-bold text-amber-200">{l.label}</span>
+              <span className="ml-2 text-sm text-zinc-500">{l.game}</span>
+            </div>
+            <span className="font-mono text-sm font-semibold text-zinc-300">
+              {fmtPct(l.prob)}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-4 grid grid-cols-2 gap-3">
+        <div className="rounded-xl bg-zinc-950/60 p-3">
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
+            Model&rsquo;s combined chance
+          </div>
+          <div className="mt-1 text-lg font-extrabold">
+            {fmtPct(parlay.combined_prob)}{" "}
+            <span className="text-sm font-semibold text-zinc-400">
+              · fair odds {parlay.fair_odds}
+            </span>
+          </div>
+        </div>
+        <div className="rounded-xl bg-zinc-950/60 p-3">
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
+            Books typically pay
+          </div>
+          <div className="mt-1 text-lg font-extrabold">
+            {parlay.book_pays}{" "}
+            <span className="text-sm font-semibold text-zinc-400">
+              on {parlay.legs.length} legs
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <p className="mt-4 text-[13px] leading-relaxed text-zinc-400">
+        The honest fine print: parlays multiply the book&rsquo;s edge along with the
+        payout — on true coin flips a {parlay.legs.length}-legger&rsquo;s fair price is{" "}
+        {parlay.legs.length === 3 ? "+700" : "+300"}, worse than the {parlay.book_pays} books
+        pay. And our model&rsquo;s confidence is unproven: its backtest shows no edge
+        against the closing line, and early-season ratings swing wildly. This is
+        entertainment, not a strategy.
+      </p>
+    </section>
+  );
+}
+
 export default function Home() {
   const nSpread = picks.filter((p) => p.pick_spread).length;
   const nTotal = picks.filter((p) => p.pick_total).length;
@@ -145,6 +222,8 @@ export default function Home() {
           {picksData.disclaimer}
         </p>
       </div>
+
+      <ParlayCard parlay={(picksData as { parlay?: Parlay }).parlay ?? null} />
 
       <div className="grid gap-4 md:grid-cols-2">
         {picks.map((p) => (

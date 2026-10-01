@@ -32,7 +32,83 @@ def normal_cdf(x: float) -> float:
 MARGIN_SD = 13.5  # typical NFL std of (actual margin - predicted margin)
 
 
+def fmt_line_spread(home_margin: float, home_abbr: str, away_abbr: str) -> str:
+    """Favorite-centric 'BAL -11.5' style, home-margin convention."""
+    if abs(home_margin) < 0.05:
+        return "Pick'em"
+    v = f"{abs(home_margin):g}"
+    return f"{home_abbr} -{v}" if home_margin > 0 else f"{away_abbr} -{v}"
+
+
+def fair_american(p: float) -> str:
+    """American odds for a true probability p."""
+    if p > 0.5:
+        return f"-{round(100 * p / (1 - p))}"
+    if p < 0.5:
+        return f"+{round(100 * (1 - p) / p)}"
+    return "+100"
+
+
+# What US books typically pay on a standard parlay (varies by book).
+BOOK_PARLAY_PAYS = {2: "+260", 3: "+600"}
+
+
 def current_ratings(team_games: pd.DataFrame, season: int):
+    """Ratings using every completed game, with prior-season carryover."""
+    end_prev = len(team_games[team_games["season"] < season])
+    if end_prev:
+        off_p, def_p = adjusted_ratings(team_games, end_prev, season - 1, {})
+        prior = {t: (0.5 * off_p[t], 0.5 * def_p[t]) for t in off_p}
+    else:
+        prior = {}
+    return adjusted_ratings(team_games, len(team_games), season, prior)
+
+
+def build_parlay(picks: list[dict]) -> dict | None:
+    """Parlay of the week: the 3 highest-probability picks (spread or total).
+
+    Entertainment only — legs are roughly independent (different games), so
+    the combined probability is the product. Our model's probabilities are
+    unproven (see track record), so the 'fair odds' below are the model's
+    view, not a promise.
+    """
+    legs = []
+    for p in picks:
+        game = f"{p['away_abbr']} @ {p['home_abbr']}"
+        if p["pick_spread"]:
+            team = p["home_abbr"] if p["pick_spread"] == "home" else p["away_abbr"]
+            line = fmt_line_spread(p["line_spread"], p["home_abbr"], p["away_abbr"])
+            num = line.split(" ")[1] if " " in line else ""
+            legs.append({
+                "game": game,
+                "away_abbr": p["away_abbr"], "home_abbr": p["home_abbr"],
+                "market": "spread",
+                "label": f"{team} {num}".strip(),
+                "prob": p["cover_prob"],
+            })
+        if p["pick_total"]:
+            side = "Over" if p["pick_total"] == "over" else "Under"
+            total = f"{p['line_total']:g}"
+            legs.append({
+                "game": game,
+                "away_abbr": p["away_abbr"], "home_abbr": p["home_abbr"],
+                "market": "total",
+                "label": f"{side} {total}",
+                "prob": p["ou_prob"],
+            })
+    legs.sort(key=lambda l: -l["prob"])
+    legs = legs[:3]
+    if len(legs) < 2:
+        return None
+    combined = 1.0
+    for l in legs:
+        combined *= l["prob"]
+    return {
+        "legs": legs,
+        "combined_prob": round(combined, 3),
+        "fair_odds": fair_american(combined),
+        "book_pays": BOOK_PARLAY_PAYS[len(legs)],
+    }
     """Ratings using every completed game, with prior-season carryover."""
     end_prev = len(team_games[team_games["season"] < season])
     if end_prev:
@@ -112,12 +188,19 @@ def main() -> None:
         "generated": pd.Timestamp.now("America/Los_Angeles").strftime("%Y-%m-%d %H:%M %Z"),
         "disclaimer": ("Model probabilities for entertainment. Our backtest shows "
                        "no edge vs the closing line — track record published openly."),
+        "parlay": build_parlay(picks),
         "picks": picks,
     }
     dest = REPO / "site" / "data" / "picks.json"
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(out, indent=2))
     print(f"Week {next_week}: {len(picks)} games -> {dest}")
+    if out["parlay"]:
+        print("Parlay of the week:")
+        for l in out["parlay"]["legs"]:
+            print(f"  {l['label']} ({l['game']}) {l['prob']:.0%}")
+        pl = out["parlay"]
+        print(f"  combined {pl['combined_prob']:.1%} · fair {pl['fair_odds']} · book pays {pl['book_pays']}")
     for p in picks:
         s = (f"{p['away_abbr']} @ {p['home_abbr']}: line {p['line_spread']:+} / {p['line_total']}, "
              f"ours {p['our_spread']:+} / {p['our_total']:.0f}")
