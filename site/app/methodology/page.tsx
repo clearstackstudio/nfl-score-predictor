@@ -2,13 +2,13 @@ export default function Methodology() {
   return (
     <div className="max-w-3xl">
       <h1 className="text-3xl font-extrabold tracking-tight">Methodology</h1>
-      <p className="mt-2 text-sm text-zinc-400">
+      <p className="mt-2 text-[15px] text-zinc-400">
         How the picks are made — and what we honestly claim about them.
       </p>
 
-      <section className="mt-8">
+      <section className="mt-10 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
         <h2 className="text-xl font-bold">The model</h2>
-        <div className="mt-3 space-y-3 text-sm leading-relaxed text-zinc-300">
+        <div className="mt-3 space-y-4 text-[15px] leading-relaxed text-zinc-300">
           <p>
             Every team gets two ratings — offensive and defensive efficiency —
             built from play-by-play EPA (expected points added per play) over a
@@ -31,9 +31,9 @@ export default function Methodology() {
         </div>
       </section>
 
-      <section className="mt-8">
+      <section className="mt-10 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
         <h2 className="text-xl font-bold">The honest part</h2>
-        <div className="mt-3 space-y-3 text-sm leading-relaxed text-zinc-300">
+        <div className="mt-3 space-y-4 text-[15px] leading-relaxed text-zinc-300">
           <p>
             Nobody beats the Vegas line by much. It is one of the most
             efficient markets in the world, and it has only gotten sharper —
@@ -51,9 +51,9 @@ export default function Methodology() {
         </div>
       </section>
 
-      <section className="mt-8">
+      <section className="mt-10 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
         <h2 className="text-xl font-bold">How the backtest stays honest</h2>
-        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-zinc-300">
+        <ul className="mt-3 list-disc space-y-3 pl-5 text-[15px] leading-relaxed text-zinc-300">
           <li>
             <span className="font-semibold text-zinc-100">Walk-forward:</span> games are
             processed in chronological order. Each prediction is made from
@@ -75,9 +75,9 @@ export default function Methodology() {
         </ul>
       </section>
 
-      <section className="mt-8">
+      <section className="mt-10 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
         <h2 className="text-xl font-bold">What’s next</h2>
-        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-zinc-300">
+        <ul className="mt-3 list-disc space-y-3 pl-5 text-[15px] leading-relaxed text-zinc-300">
           <li>QB-specific adjustments (injuries and backup quarterbacks move games).</li>
           <li>Rest differentials: short weeks, Thursday games, bye weeks.</li>
           <li>Weather and dome effects on totals.</li>

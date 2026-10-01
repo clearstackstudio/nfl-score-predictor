@@ -15,80 +15,148 @@ type Pick = {
 
 const picks = picksData.picks as Pick[];
 
-function pickLabel(p: Pick): string {
-  if (!p.pick_spread) return "No play";
-  const team = p.pick_spread === "home" ? p.home_abbr : p.away_abbr;
-  return `${team} ${fmtPct(p.cover_prob)}`;
+function fmtGameday(p: Pick): string {
+  // gameday is YYYY-MM-DD; weekday already provided
+  const [, m, d] = p.gameday.split("-").map(Number);
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return `${p.weekday.slice(0, 3)}, ${months[m - 1]} ${d}`;
 }
 
-function ouLabel(p: Pick): string {
-  if (!p.pick_total) return "No play";
-  return `${p.pick_total === "over" ? "Over" : "Under"} ${trim(p.line_total)} (${fmtPct(p.ou_prob)})`;
+function spreadPickLabel(p: Pick): string {
+  const team = p.pick_spread === "home" ? p.home_abbr : p.away_abbr;
+  const parts = fmtSpread(p.line_spread, p.home_abbr, p.away_abbr).split(" ");
+  const num = parts.length > 1 ? ` ${parts[1]}` : "";
+  return `Pick: ${team}${num} · ${fmtPct(p.cover_prob)} to cover`;
+}
+function edgeLabel(edge: number): string {
+  const v = trim(Math.abs(edge));
+  return edge >= 0 ? `+${v}` : `-${v}`;
+}
+
+function PickPill({ children, active }: { children: React.ReactNode; active: boolean }) {
+  return (
+    <span
+      className={
+        active
+          ? "inline-block rounded-full bg-amber-400/15 px-3 py-1 text-sm font-bold text-amber-300"
+          : "inline-block rounded-full bg-zinc-800/60 px-3 py-1 text-sm font-medium text-zinc-500"
+      }
+    >
+      {children}
+    </span>
+  );
+}
+
+function GameCard({ p }: { p: Pick }) {
+  return (
+    <article className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      {/* Header: matchup + date */}
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 className="text-lg font-bold tracking-tight">
+          {p.away} <span className="font-medium text-zinc-500">@</span> {p.home}
+        </h2>
+        <span className="text-sm text-zinc-500">{fmtGameday(p)}</span>
+      </div>
+      {(p.away_qb || p.home_qb) && (
+        <p className="mt-1 text-xs text-zinc-500">
+          {p.away_abbr}: {p.away_qb ?? "—"} · {p.home_abbr}: {p.home_qb ?? "—"}
+        </p>
+      )}
+
+      {/* Spread row */}
+      <div className="mt-4 grid grid-cols-3 gap-2 rounded-xl bg-zinc-950/60 p-3">
+        <div>
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">Spread</div>
+          <div className="mt-1 font-mono text-sm font-semibold">
+            {fmtSpread(p.our_spread, p.home_abbr, p.away_abbr)}
+          </div>
+          <div className="text-[11px] text-zinc-500">Our number</div>
+        </div>
+        <div>
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">&nbsp;</div>
+          <div className="mt-1 font-mono text-sm text-zinc-400">
+            {fmtSpread(p.line_spread, p.home_abbr, p.away_abbr)}
+          </div>
+          <div className="text-[11px] text-zinc-500">Vegas line</div>
+        </div>
+        <div>
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">&nbsp;</div>
+          <div className="mt-1 font-mono text-sm text-zinc-400">
+            edge {edgeLabel(p.spread_edge)}
+          </div>
+          <div className="text-[11px] text-zinc-500">pts of disagreement</div>
+        </div>
+      </div>
+      <div className="mt-2">
+        <PickPill active={!!p.pick_spread}>
+          {p.pick_spread ? spreadPickLabel(p) : "No spread play — we agree with Vegas"}
+        </PickPill>
+      </div>
+
+      {/* Total row */}
+      <div className="mt-3 grid grid-cols-3 gap-2 rounded-xl bg-zinc-950/60 p-3">
+        <div>
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">Total</div>
+          <div className="mt-1 font-mono text-sm font-semibold">{trim(p.our_total)}</div>
+          <div className="text-[11px] text-zinc-500">Our number</div>
+        </div>
+        <div>
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">&nbsp;</div>
+          <div className="mt-1 font-mono text-sm text-zinc-400">{trim(p.line_total)}</div>
+          <div className="text-[11px] text-zinc-500">Vegas line</div>
+        </div>
+        <div>
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">&nbsp;</div>
+          <div className="mt-1 font-mono text-sm text-zinc-400">
+            edge {edgeLabel(p.total_edge)}
+          </div>
+          <div className="text-[11px] text-zinc-500">pts of disagreement</div>
+        </div>
+      </div>
+      <div className="mt-2">
+        <PickPill active={!!p.pick_total}>
+          {p.pick_total
+            ? `Pick: ${p.pick_total === "over" ? "Over" : "Under"} ${trim(p.line_total)} · ${fmtPct(p.ou_prob)}`
+            : "No total play — we agree with Vegas"}
+        </PickPill>
+      </div>
+    </article>
+  );
 }
 
 export default function Home() {
+  const nSpread = picks.filter((p) => p.pick_spread).length;
+  const nTotal = picks.filter((p) => p.pick_total).length;
+
   return (
     <div>
       <div className="mb-6">
         <h1 className="text-3xl font-extrabold tracking-tight">
-          Week {picksData.week} picks <span className="text-zinc-500">· {picksData.season} season</span>
+          Week {picksData.week} picks{" "}
+          <span className="font-medium text-zinc-500">· {picksData.season} season</span>
         </h1>
-        <p className="mt-2 max-w-2xl text-sm text-zinc-400">
-          Generated {picksData.generated} from opponent-adjusted EPA ratings.
-          The model never sees the betting line — the line is only the benchmark
-          we measure against.{" "}
-          <span className="text-amber-400/90">{picksData.disclaimer}</span>
+        <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
+          {picks.length} games, {nSpread} spread plays and {nTotal} total plays.
+          Generated {picksData.generated} from opponent-adjusted EPA ratings —
+          the model never sees the betting line; the line is only the benchmark
+          we measure against.
+        </p>
+        <p className="mt-3 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90">
+          {picksData.disclaimer}
         </p>
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-zinc-800">
-        <table className="w-full min-w-[720px] text-sm">
-          <thead>
-            <tr className="bg-zinc-900 text-left text-xs uppercase tracking-wider text-zinc-400">
-              <th className="px-4 py-3">Game</th>
-              <th className="px-4 py-3">Our spread</th>
-              <th className="px-4 py-3">Vegas line</th>
-              <th className="px-4 py-3">Spread pick</th>
-              <th className="px-4 py-3">Our total</th>
-              <th className="px-4 py-3">Vegas total</th>
-              <th className="px-4 py-3">O/U pick</th>
-            </tr>
-          </thead>
-          <tbody>
-            {picks.map((p) => (
-              <tr key={`${p.away_abbr}-${p.home_abbr}`} className="border-t border-zinc-800 hover:bg-zinc-900/50">
-                <td className="px-4 py-3">
-                  <div className="font-semibold">
-                    {p.away_abbr} <span className="text-zinc-500">@</span> {p.home_abbr}
-                  </div>
-                  <div className="text-xs text-zinc-500">
-                    {p.weekday} {p.gameday}
-                  </div>
-                </td>
-                <td className="px-4 py-3 font-mono">{fmtSpread(p.our_spread, p.home_abbr, p.away_abbr)}</td>
-                <td className="px-4 py-3 font-mono text-zinc-400">{fmtSpread(p.line_spread, p.home_abbr, p.away_abbr)}</td>
-                <td className="px-4 py-3">
-                  <span className={p.pick_spread ? "font-semibold text-amber-300" : "text-zinc-600"}>
-                    {pickLabel(p)}
-                  </span>
-                </td>
-                <td className="px-4 py-3 font-mono">{trim(p.our_total)}</td>
-                <td className="px-4 py-3 font-mono text-zinc-400">{trim(p.line_total)}</td>
-                <td className="px-4 py-3">
-                  <span className={p.pick_total ? "font-semibold text-amber-300" : "text-zinc-600"}>
-                    {ouLabel(p)}
-                  </span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="grid gap-4 md:grid-cols-2">
+        {picks.map((p) => (
+          <GameCard key={`${p.away_abbr}-${p.home_abbr}`} p={p} />
+        ))}
       </div>
 
-      <p className="mt-4 text-xs text-zinc-500">
-        Spread pick = the side our number favors by at least half a point; probability
-        is our estimated chance that side covers. Totals work the same way against
-        the over/under. Spreads shown favorite-first, standard sportsbook style.
+      <p className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-500">
+        How to read a card: <span className="text-zinc-300">Our number</span> is what the
+        model thinks the spread or total should be; <span className="text-zinc-300">Vegas line</span> is
+        the market. A pick appears only where we disagree by enough to matter —
+        the percentage is our estimated chance that side covers or the total lands.
       </p>
     </div>
   );

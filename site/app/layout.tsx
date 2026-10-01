@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Honest Line — NFL picks with a public track record",
@@ -21,7 +24,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
         <header className="border-b border-zinc-800">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">

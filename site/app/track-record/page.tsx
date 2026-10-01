@@ -64,13 +64,47 @@ export default function TrackRecord() {
 
       <LiveSeason log={seasonLog as SeasonLog} />
 
-      <h2 className="mt-8 text-xl font-bold">ATS by decade — the edge decays</h2>
-      <p className="mt-1 text-sm text-zinc-400">
+      <h2 className="mt-10 text-xl font-bold">ATS by decade — the edge decays</h2>
+      <p className="mt-1 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
         The model beats bad lines from weak eras. Against the modern market, it does not.
+        The dashed line is 52.4% — break-even against standard -110 vig.
       </p>
+
+      {/* Visual: decade win % vs break-even */}
+      <div className="mt-4 space-y-3 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+        {[...decades.entries()].map(([d, ss]) => {
+          const w = ss.reduce((a, s) => a + s.ats_w, 0);
+          const l = ss.reduce((a, s) => a + s.ats_l, 0);
+          const pct = w / (w + l);
+          // scale 45%..60% across the bar
+          const left = Math.max(0, Math.min(100, ((pct - 0.45) / 0.15) * 100));
+          const be = ((0.524 - 0.45) / 0.15) * 100;
+          const good = pct >= 0.524;
+          return (
+            <div key={d} className="flex items-center gap-3">
+              <div className="w-12 shrink-0 text-sm font-bold">{d}s</div>
+              <div className="relative h-6 flex-1 rounded bg-zinc-800/70">
+                <div
+                  className="absolute inset-y-0 left-0 w-px bg-zinc-500"
+                  style={{ left: `${be}%` }}
+                  title="Break-even 52.4%"
+                />
+                <div
+                  className={`absolute inset-y-1 rounded ${good ? "bg-emerald-400/80" : "bg-red-400/80"}`}
+                  style={{ width: `${left}%` }}
+                />
+              </div>
+              <div className={`w-16 shrink-0 text-right font-mono text-sm font-bold ${good ? "text-emerald-400" : "text-red-400"}`}>
+                {fmtPct(pct)}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
       <div className="mt-4 overflow-x-auto rounded-xl border border-zinc-800">
         <table className="w-full min-w-[560px] text-sm">
-          <thead>
+          <thead className="sticky-head">
             <tr className="bg-zinc-900 text-left text-xs uppercase tracking-wider text-zinc-400">
               <th className="px-4 py-3">Decade</th>
               <th className="px-4 py-3">Record</th>
@@ -107,10 +141,13 @@ export default function TrackRecord() {
         52.4% is break-even against standard -110 vig. Green = profitable, red = not.
       </p>
 
-      <h2 className="mt-8 text-xl font-bold">Season by season</h2>
+      <h2 className="mt-10 text-xl font-bold">Season by season</h2>
+      <p className="mt-1 max-w-2xl text-[15px] text-zinc-400">
+        Every season the model was tested on. Green ATS seasons beat the vig; the rest didn’t.
+      </p>
       <div className="mt-4 overflow-x-auto rounded-xl border border-zinc-800">
         <table className="w-full min-w-[720px] text-sm">
-          <thead>
+          <thead className="sticky-head">
             <tr className="bg-zinc-900 text-left text-xs uppercase tracking-wider text-zinc-400">
               <th className="px-4 py-3">Season</th>
               <th className="px-4 py-3">Games</th>
