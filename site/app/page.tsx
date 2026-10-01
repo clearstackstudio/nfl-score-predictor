@@ -222,7 +222,8 @@ export default function Home() {
           {picks.length} games, {nSpread} spread plays and {nTotal} total plays.
           Generated {picksData.generated} from opponent-adjusted EPA ratings —
           the model never sees the betting line; the line is only the benchmark
-          we measure against.
+          we measure against. Lines are a snapshot from generation time and
+          don’t update mid-week — every pick is graded against the line shown here.
         </p>
         <p className="mt-3 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90">
           {picksData.disclaimer}
