@@ -9,6 +9,8 @@ type Pick = {
   spread_edge: number; total_edge: number;
   pick_spread: "home" | "away" | null;
   pick_total: "over" | "under" | null;
+  pick_spread_label: string | null;
+  pick_total_label: string | null;
   cover_prob: number | null; ou_prob: number | null;
   home_qb: string | null; away_qb: string | null;
 };
@@ -22,19 +24,21 @@ function fmtGameday(p: Pick): string {
   return `${p.weekday.slice(0, 3)}, ${months[m - 1]} ${d}`;
 }
 
-function spreadPickLabel(p: Pick): string {
-  // From the picked team's perspective: "NE +6.5", not the favorite-centric "BUF -6.5".
+function spreadPickText(p: Pick): string {
+  // Labels are computed and validated by the generator (single source of
+  // truth); the site renders them verbatim. Fallback only for old data.
+  if (p.pick_spread_label) return `${p.pick_spread_label} · ${fmtPct(p.cover_prob)} to cover`;
   const team = p.pick_spread === "home" ? p.home_abbr : p.away_abbr;
-  const margin = p.pick_spread === "home" ? p.line_spread : -p.line_spread;
-  let spread: string;
-  if (Math.abs(margin) < 0.05) spread = "Pick'em";
-  else if (margin > 0) spread = `${team} -${trim(margin)}`;
-  else spread = `${team} +${trim(-margin)}`;
-  return `Pick: ${spread} · ${fmtPct(p.cover_prob)} to cover`;
+  return `${team} · ${fmtPct(p.cover_prob)} to cover`;
+}
+
+function ouPickText(p: Pick): string {
+  if (p.pick_total_label) return `${p.pick_total_label} · ${fmtPct(p.ou_prob)}`;
+  return `${p.pick_total === "over" ? "Over" : "Under"} ${trim(p.line_total)} · ${fmtPct(p.ou_prob)}`;
 }
 function edgeLabel(edge: number): string {
-  const v = trim(Math.abs(edge));
-  return edge >= 0 ? `+${v}` : `-${v}`;
+  // Absolute: direction is already conveyed by the pick pill.
+  return `${trim(Math.abs(edge))}`;
 }
 
 function PickPill({ children, active }: { children: React.ReactNode; active: boolean }) {
@@ -93,7 +97,7 @@ function GameCard({ p }: { p: Pick }) {
       </div>
       <div className="mt-2">
         <PickPill active={!!p.pick_spread}>
-          {p.pick_spread ? spreadPickLabel(p) : "No spread play — we agree with Vegas"}
+          {p.pick_spread ? `Pick: ${spreadPickText(p)}` : "No spread play — we agree with Vegas"}
         </PickPill>
       </div>
 
@@ -119,9 +123,7 @@ function GameCard({ p }: { p: Pick }) {
       </div>
       <div className="mt-2">
         <PickPill active={!!p.pick_total}>
-          {p.pick_total
-            ? `Pick: ${p.pick_total === "over" ? "Over" : "Under"} ${trim(p.line_total)} · ${fmtPct(p.ou_prob)}`
-            : "No total play — we agree with Vegas"}
+          {p.pick_total ? `Pick: ${ouPickText(p)}` : "No total play — we agree with Vegas"}
         </PickPill>
       </div>
     </article>

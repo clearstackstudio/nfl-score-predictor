@@ -32,6 +32,29 @@ def normal_cdf(x: float) -> float:
 MARGIN_SD = 13.5  # typical NFL std of (actual margin - predicted margin)
 
 
+def pick_spread_label(pick_side: str | None, line_margin: float,
+                      home_abbr: str, away_abbr: str) -> str | None:
+    """Display label from the PICKED team's perspective.
+
+    The bug this prevents: pairing the favorite-centric number with the
+    underdog's abbreviation ("NE -6.5" when the line is Bills -6.5).
+    Correct output names the picked team with their own number ("NE +6.5").
+    """
+    if not pick_side:
+        return None
+    team = home_abbr if pick_side == "home" else away_abbr
+    margin = line_margin if pick_side == "home" else -line_margin
+    if abs(margin) < 0.05:
+        return "Pick'em"
+    return f"{team} -{margin:g}" if margin > 0 else f"{team} +{-margin:g}"
+
+
+def pick_total_label(pick_total: str | None, line_total: float) -> str | None:
+    if not pick_total:
+        return None
+    return f"{'Over' if pick_total == 'over' else 'Under'} {line_total:g}"
+
+
 def fair_american(p: float) -> str:
     """American odds for a true probability p."""
     if p > 0.5:
@@ -68,31 +91,19 @@ def build_parlay(picks: list[dict]) -> dict | None:
     for p in picks:
         game = f"{p['away_abbr']} @ {p['home_abbr']}"
         if p["pick_spread"]:
-            team = p["home_abbr"] if p["pick_spread"] == "home" else p["away_abbr"]
-            # Label from the picked team's perspective ("NE +6.5"), not
-            # favorite-centric ("BUF -6.5").
-            margin = p["line_spread"] if p["pick_spread"] == "home" else -p["line_spread"]
-            if abs(margin) < 0.05:
-                label = "Pick'em"
-            elif margin > 0:
-                label = f"{team} -{margin:g}"
-            else:
-                label = f"{team} +{-margin:g}"
             legs.append({
                 "game": game,
                 "away_abbr": p["away_abbr"], "home_abbr": p["home_abbr"],
                 "market": "spread",
-                "label": label,
+                "label": p["pick_spread_label"],
                 "prob": p["cover_prob"],
             })
         if p["pick_total"]:
-            side = "Over" if p["pick_total"] == "over" else "Under"
-            total = f"{p['line_total']:g}"
             legs.append({
                 "game": game,
                 "away_abbr": p["away_abbr"], "home_abbr": p["home_abbr"],
                 "market": "total",
-                "label": f"{side} {total}",
+                "label": p["pick_total_label"],
                 "prob": p["ou_prob"],
             })
     legs.sort(key=lambda l: -l["prob"])
@@ -102,9 +113,10 @@ def build_parlay(picks: list[dict]) -> dict | None:
     combined = 1.0
     for l in legs:
         combined *= l["prob"]
+    combined = round(combined, 3)  # round once; fair odds derive from this exact value
     return {
         "legs": legs,
-        "combined_prob": round(combined, 3),
+        "combined_prob": combined,
         "fair_odds": fair_american(combined),
         "book_pays": BOOK_PARLAY_PAYS[len(legs)],
     }
@@ -116,6 +128,61 @@ def build_parlay(picks: list[dict]) -> dict | None:
     else:
         prior = {}
     return adjusted_ratings(team_games, len(team_games), season, prior)
+
+
+def validate_picks(picks: list[dict], parlay: dict | None) -> None:
+    """Recompute every display label and consistency rule from raw fields.
+
+    Raises AssertionError on any mismatch. Called BEFORE picks.json is
+    written, so a labeling bug can never reach the website — the previous
+    week's file stays live instead.
+    """
+    for p in picks:
+        # Labels must match a fresh recomputation (catches team/number mixups).
+        assert p["pick_spread_label"] == pick_spread_label(
+            p["pick_spread"], p["line_spread"], p["home_abbr"], p["away_abbr"]
+        ), f"label mismatch: {p['away_abbr']} @ {p['home_abbr']}"
+        assert p["pick_total_label"] == pick_total_label(
+            p["pick_total"], p["line_total"]
+        ), f"total label mismatch: {p['away_abbr']} @ {p['home_abbr']}"
+
+        # The label must name the picked team, never the opponent.
+        if p["pick_spread"]:
+            team = p["home_abbr"] if p["pick_spread"] == "home" else p["away_abbr"]
+            assert p["pick_spread_label"].startswith(team + " ") or \
+                p["pick_spread_label"] == "Pick'em", \
+                f"label names wrong team: {p['pick_spread_label']}"
+
+        # Pick side must agree with the direction of the edge, and picks
+        # only exist past the minimum edge thresholds.
+        se, te = p["spread_edge"], p["total_edge"]
+        if p["pick_spread"]:
+            assert abs(se) >= 0.5, "spread pick below 0.5pt threshold"
+            assert (se > 0) == (p["pick_spread"] == "home"), "spread pick wrong side"
+            assert p["cover_prob"] is not None and 0.5 < p["cover_prob"] <= 1.0
+        else:
+            assert abs(se) < 0.5 and p["cover_prob"] is None
+        if p["pick_total"]:
+            assert abs(te) >= 1.0, "total pick below 1pt threshold"
+            assert (te > 0) == (p["pick_total"] == "over"), "total pick wrong side"
+            assert p["ou_prob"] is not None and 0.5 < p["ou_prob"] <= 1.0
+        else:
+            assert abs(te) < 1.0 and p["ou_prob"] is None
+
+    if parlay:
+        assert 2 <= len(parlay["legs"]) <= 3, "parlay must have 2-3 legs"
+        by_game = {(p["home_abbr"], p["away_abbr"]): p for p in picks}
+        prod = 1.0
+        for leg in parlay["legs"]:
+            p = by_game[(leg["home_abbr"], leg["away_abbr"])]
+            key = "pick_spread_label" if leg["market"] == "spread" else "pick_total_label"
+            assert leg["label"] == p[key], f"parlay leg label wrong: {leg}"
+            probkey = "cover_prob" if leg["market"] == "spread" else "ou_prob"
+            assert leg["prob"] == p[probkey] and leg["prob"] is not None
+            prod *= leg["prob"]
+        assert abs(prod - parlay["combined_prob"]) < 0.002, "parlay combined prob wrong"
+        assert parlay["fair_odds"] == fair_american(parlay["combined_prob"])
+        assert parlay["book_pays"] == BOOK_PARLAY_PAYS[len(parlay["legs"])]
 
 
 def main() -> None:
@@ -177,17 +244,21 @@ def main() -> None:
             "total_edge": round(total_edge, 1),
             "pick_spread": pick_side,
             "pick_total": pick_total,
+            "pick_spread_label": pick_spread_label(pick_side, line_margin, home, away),
+            "pick_total_label": pick_total_label(pick_total, line_total),
             "cover_prob": round(cover_prob, 3) if pick_side else None,
             "ou_prob": round(ou_prob, 3) if pick_total else None,
             "home_qb": g.get("home_qb_name"), "away_qb": g.get("away_qb_name"),
         })
 
+    parlay = build_parlay(picks)
+    validate_picks(picks, parlay)  # fail loudly BEFORE publishing, never after
     out = {
         "season": SEASON, "week": int(next_week),
         "generated": pd.Timestamp.now("America/Los_Angeles").strftime("%Y-%m-%d %H:%M %Z"),
         "disclaimer": ("Model probabilities for entertainment. Our backtest shows "
                        "no edge vs the closing line — track record published openly."),
-        "parlay": build_parlay(picks),
+        "parlay": parlay,
         "picks": picks,
     }
     dest = REPO / "site" / "data" / "picks.json"

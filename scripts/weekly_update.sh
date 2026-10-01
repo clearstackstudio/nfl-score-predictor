@@ -4,6 +4,9 @@
 set -euo pipefail
 cd "$HOME/workspace/nfl-score-predictor"
 
+# Label/unit tests first: fail the whole run before anything publishes.
+python3 src/test_picks.py
+
 python3 src/grade_week.py
 
 GIT_ID="-c user.name=clearstackstudio -c user.email=334314751+clearstackstudio@users.noreply.github.com"

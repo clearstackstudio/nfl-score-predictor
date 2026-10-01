@@ -14,6 +14,8 @@ type GradedPick = {
   our_spread: number; our_total: number;
   pick_spread: "home" | "away" | null;
   pick_total: "over" | "under" | null;
+  pick_spread_label: string | null;
+  pick_total_label: string | null;
   cover_prob: number | null; ou_prob: number | null;
   result: {
     home_score: number; away_score: number;
@@ -277,13 +279,13 @@ function LiveSeason({ log }: { log: SeasonLog }) {
                     </td>
                     <td className="px-4 py-3 text-zinc-400">
                       {p.pick_spread
-                        ? `${p.pick_spread === "home" ? p.home_abbr : p.away_abbr} (${fmtPct(p.cover_prob)})`
+                        ? `${p.pick_spread_label ?? (p.pick_spread === "home" ? p.home_abbr : p.away_abbr)} (${fmtPct(p.cover_prob)})`
                         : "No play"}
                     </td>
                     <td className="px-4 py-3">{resultBadge(p.result?.ats)}</td>
                     <td className="px-4 py-3 text-zinc-400">
                       {p.pick_total
-                        ? `${p.pick_total === "over" ? "Over" : "Under"} ${trim(p.line_total)} (${fmtPct(p.ou_prob)})`
+                        ? `${p.pick_total_label ?? (p.pick_total === "over" ? "Over" : "Under")} (${fmtPct(p.ou_prob)})`
                         : "No play"}
                     </td>
                     <td className="px-4 py-3">{resultBadge(p.result?.ou)}</td>
