@@ -183,8 +183,14 @@ export default function PickEm() {
 
   return (
     <div>
-      <h1 className="text-3xl font-extrabold tracking-tight">Pick&apos;em</h1>
-      <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90">
+        <span className="h-px w-8 bg-amber-400/60" aria-hidden="true" />
+        Beat the model, not the book
+      </div>
+      <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
+        Pick<span className="text-amber-400">&rsquo;em</span>
+      </h1>
+      <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
         Pick every game against the spread or straight up. We grade your card
         every Tuesday from the season log, and you can see exactly how you
         stack up against the model. Picks live in your browser — no account needed.
@@ -206,9 +212,9 @@ export default function PickEm() {
       </div>
 
       {/* This week's card */}
-      <div className="mt-6 flex items-baseline justify-between">
-        <h2 className="text-xl font-bold">
-          Week {week} <span className="text-sm font-medium text-zinc-500">· your card</span>
+      <div className="mt-8 flex items-baseline justify-between">
+        <h2 className="font-display text-2xl font-semibold uppercase tracking-wide">
+          Week {week} <span className="font-sans text-sm font-medium normal-case tracking-normal text-zinc-500">· your card</span>
         </h2>
         <div className="flex items-center gap-3">
           <span className="text-sm text-zinc-400">
@@ -264,7 +270,7 @@ export default function PickEm() {
             );
           };
           return (
-            <article key={k} className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4">
+            <article key={k} className="rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-zinc-900/30 p-4 transition-colors hover:border-white/20">
               <div className="flex items-baseline justify-between">
                 <h3 className="flex flex-wrap items-center gap-x-2 font-bold">
                   <span className="inline-flex items-center gap-1.5">
@@ -298,7 +304,7 @@ export default function PickEm() {
       </p>
 
       {/* You vs the model */}
-      <h2 className="mt-10 text-xl font-bold">You vs the model</h2>
+      <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">You vs the model</h2>
       {gradedWeeks.length === 0 ? (
         <p className="mt-2 max-w-2xl text-[15px] text-zinc-400">
           No graded weeks yet — the first results land Tuesday morning, and this

@@ -53,8 +53,14 @@ export default function TrackRecord() {
 
   return (
     <div>
-      <h1 className="text-3xl font-extrabold tracking-tight">Track record</h1>
-      <p className="mt-2 max-w-2xl text-sm text-zinc-400">{record.model}</p>
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90">
+        <span className="h-px w-8 bg-amber-400/60" aria-hidden="true" />
+        Full history · nothing hidden
+      </div>
+      <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
+        Track <span className="text-amber-400">record</span>
+      </h1>
+      <p className="mt-4 max-w-2xl text-sm text-zinc-400">{record.model}</p>
 
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
         {[
@@ -63,8 +69,8 @@ export default function TrackRecord() {
           { label: "Straight-up", value: fmtPct(su) },
           { label: "ATS (≥1.5pt edge)", value: `${tw}-${tl}-${tp} · ${fmtPct(tw / (tw + tl))}` },
         ].map((c) => (
-          <div key={c.label} className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4">
-            <div className="text-2xl font-extrabold">{c.value}</div>
+          <div key={c.label} className="rounded-xl border border-white/10 bg-zinc-900/50 p-4">
+            <div className="tnum text-2xl font-extrabold">{c.value}</div>
             <div className="mt-1 text-xs text-zinc-500">{c.label}</div>
           </div>
         ))}
@@ -72,7 +78,7 @@ export default function TrackRecord() {
 
       <LiveSeason log={seasonLog as SeasonLog} />
 
-      <h2 className="mt-10 text-xl font-bold">ATS by decade — the edge decays</h2>
+      <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">ATS by decade — the edge decays</h2>
       <p className="mt-1 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
         The model beats bad lines from weak eras. Against the modern market, it does not.
         The dashed line is 52.4% — break-even against standard -110 vig.
@@ -149,7 +155,7 @@ export default function TrackRecord() {
         52.4% is break-even against standard -110 vig. Green = profitable, red = not.
       </p>
 
-      <h2 className="mt-10 text-xl font-bold">Season by season</h2>
+      <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">Season by season</h2>
       <p className="mt-1 max-w-2xl text-[15px] text-zinc-400">
         Every season the model was tested on. Green ATS seasons beat the vig; the rest didn’t.
       </p>
@@ -216,9 +222,9 @@ function LiveSeason({ log }: { log: SeasonLog }) {
 
   return (
     <div className="mt-8">
-      <h2 className="text-xl font-bold">
+      <h2 className="font-display text-3xl font-semibold uppercase tracking-wide">
         {log.season} season — live
-        <span className="ml-2 rounded bg-amber-400/15 px-2 py-0.5 text-xs font-bold uppercase text-amber-300">
+        <span className="ml-3 rounded bg-amber-400/15 px-2 py-0.5 align-middle font-sans text-xs font-bold uppercase tracking-wider text-amber-300">
           grading in progress
         </span>
       </h2>

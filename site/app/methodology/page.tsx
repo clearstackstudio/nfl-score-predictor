@@ -1,14 +1,10 @@
 export default function Methodology() {
-  return (
-    <div className="max-w-3xl">
-      <h1 className="text-3xl font-extrabold tracking-tight">Methodology</h1>
-      <p className="mt-2 text-[15px] text-zinc-400">
-        How the picks are made — and what we honestly claim about them.
-      </p>
-
-      <section className="mt-10 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-        <h2 className="text-xl font-bold">The model</h2>
-        <div className="mt-3 space-y-4 text-[15px] leading-relaxed text-zinc-300">
+  const sections = [
+    {
+      n: "01",
+      title: "The model",
+      body: (
+        <>
           <p>
             Every team gets two ratings — offensive and defensive efficiency —
             built from play-by-play EPA (expected points added per play) over a
@@ -28,12 +24,14 @@ export default function Methodology() {
             Most “prediction” apps quietly feed the line in and echo it back —
             that is circular, and it can never beat the market by construction.
           </p>
-        </div>
-      </section>
-
-      <section className="mt-10 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-        <h2 className="text-xl font-bold">The honest part</h2>
-        <div className="mt-3 space-y-4 text-[15px] leading-relaxed text-zinc-300">
+        </>
+      ),
+    },
+    {
+      n: "02",
+      title: "The honest part",
+      body: (
+        <>
           <p>
             Nobody beats the Vegas line by much. It is one of the most
             efficient markets in the world, and it has only gotten sharper —
@@ -48,42 +46,65 @@ export default function Methodology() {
             If the model develops a real edge, the track record will show it.
             If it doesn’t, the track record will show that too.
           </p>
-        </div>
-      </section>
+        </>
+      ),
+    },
+    {
+      n: "03",
+      title: "How the backtest stays honest",
+      list: [
+        [<span key="k" className="font-semibold text-zinc-100">Walk-forward:</span>, " games are processed in chronological order. Each prediction is made from ratings built only on games already played — the model never learns from the game it’s predicting."],
+        [<span key="k" className="font-semibold text-zinc-100">No line as input:</span>, " ratings come from final scores and play efficiency only."],
+        [<span key="k" className="font-semibold text-zinc-100">Closing lines as benchmark:</span>, " every historical pick is graded against the actual closing spread and total."],
+        [<span key="k" className="font-semibold text-zinc-100">Full history published:</span>, " all 45 seasons, not a cherry-picked hot streak. Code is open source."],
+      ],
+    },
+    {
+      n: "04",
+      title: "What’s next",
+      list: [
+        ["QB-specific adjustments (injuries and backup quarterbacks move games)."],
+        ["Rest differentials: short weeks, Thursday games, bye weeks."],
+        ["Weather and dome effects on totals."],
+        ["Live pick tracking for the current season, graded weekly."],
+      ],
+    },
+  ];
 
-      <section className="mt-10 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-        <h2 className="text-xl font-bold">How the backtest stays honest</h2>
-        <ul className="mt-3 list-disc space-y-3 pl-5 text-[15px] leading-relaxed text-zinc-300">
-          <li>
-            <span className="font-semibold text-zinc-100">Walk-forward:</span> games are
-            processed in chronological order. Each prediction is made from
-            ratings built only on games already played — the model never learns
-            from the game it’s predicting.
-          </li>
-          <li>
-            <span className="font-semibold text-zinc-100">No line as input:</span> ratings
-            come from final scores and play efficiency only.
-          </li>
-          <li>
-            <span className="font-semibold text-zinc-100">Closing lines as benchmark:</span> every
-            historical pick is graded against the actual closing spread and total.
-          </li>
-          <li>
-            <span className="font-semibold text-zinc-100">Full history published:</span> all
-            45 seasons, not a cherry-picked hot streak. Code is open source.
-          </li>
-        </ul>
-      </section>
+  return (
+    <div className="max-w-3xl">
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90">
+        <span className="h-px w-8 bg-amber-400/60" aria-hidden="true" />
+        How it works
+      </div>
+      <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
+        Method<span className="text-amber-400">ology</span>
+      </h1>
+      <p className="mt-4 text-[15px] text-zinc-400">
+        How the picks are made — and what we honestly claim about them.
+      </p>
 
-      <section className="mt-10 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-        <h2 className="text-xl font-bold">What’s next</h2>
-        <ul className="mt-3 list-disc space-y-3 pl-5 text-[15px] leading-relaxed text-zinc-300">
-          <li>QB-specific adjustments (injuries and backup quarterbacks move games).</li>
-          <li>Rest differentials: short weeks, Thursday games, bye weeks.</li>
-          <li>Weather and dome effects on totals.</li>
-          <li>Live pick tracking for the current season, graded weekly.</li>
-        </ul>
-      </section>
+      {sections.map((s) => (
+        <section key={s.n} className="mt-8 rounded-2xl border border-white/10 bg-zinc-900/40 p-6 sm:p-8">
+          <div className="flex items-baseline gap-4">
+            <span className="tnum font-display text-lg font-semibold text-amber-400/80">{s.n}</span>
+            <h2 className="font-display text-2xl font-semibold uppercase tracking-wide">{s.title}</h2>
+          </div>
+          {s.body && (
+            <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-zinc-300">{s.body}</div>
+          )}
+          {s.list && (
+            <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-zinc-300">
+              {s.list.map((item, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400/70" aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))}
     </div>
   );
 }

@@ -37,104 +37,144 @@ function ouPickText(p: Pick): string {
   if (p.pick_total_label) return `${p.pick_total_label} · ${fmtPct(p.ou_prob)}`;
   return `${p.pick_total === "over" ? "Over" : "Under"} ${trim(p.line_total)} · ${fmtPct(p.ou_prob)}`;
 }
-function edgeLabel(edge: number): string {
-  // Absolute: direction is already conveyed by the pick pill.
-  return `${trim(Math.abs(edge))}`;
+
+function Eyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90">
+      <span className="h-px w-8 bg-amber-400/60" aria-hidden="true" />
+      {children}
+    </div>
+  );
 }
 
-function PickPill({ children, active }: { children: React.ReactNode; active: boolean }) {
+function MarketPanel({
+  name,
+  ourLabel,
+  ourCaption,
+  vegasLabel,
+  vegasCaption,
+  edge,
+  edgeCaption,
+  pick,
+}: {
+  name: string;
+  ourLabel: string;
+  ourCaption: string;
+  vegasLabel: string;
+  vegasCaption: string;
+  edge: number;
+  edgeCaption: string;
+  pick: React.ReactNode;
+}) {
   return (
-    <span
-      className={
-        active
-          ? "inline-block rounded-full bg-amber-400/15 px-3 py-1 text-sm font-bold text-amber-300"
-          : "inline-block rounded-full bg-zinc-800/60 px-3 py-1 text-sm font-medium text-zinc-500"
-      }
-    >
-      {children}
-    </span>
+    <div className="mt-4 overflow-hidden rounded-xl border border-white/5 bg-zinc-950/70">
+      <div className="grid grid-cols-3 divide-x divide-white/5">
+        <div className="p-3.5">
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
+            {name} · us
+          </div>
+          <div className="tnum mt-1.5 font-mono text-[15px] font-semibold text-zinc-100">
+            {ourLabel}
+          </div>
+          <div className="mt-0.5 text-[11px] text-zinc-600">{ourCaption}</div>
+        </div>
+        <div className="p-3.5">
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
+            {name} · Vegas
+          </div>
+          <div className="tnum mt-1.5 font-mono text-[15px] text-zinc-400">
+            {vegasLabel}
+          </div>
+          <div className="mt-0.5 text-[11px] text-zinc-600">{vegasCaption}</div>
+        </div>
+        <div className="p-3.5">
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
+            Disagreement
+          </div>
+          <div className="tnum mt-1.5 font-mono text-[15px] text-zinc-400">
+            {trim(Math.abs(edge))} pts
+          </div>
+          <div className="mt-0.5 text-[11px] text-zinc-600">{edgeCaption}</div>
+        </div>
+      </div>
+      <div className="border-t border-white/5">{pick}</div>
+    </div>
+  );
+}
+
+function PickStrip({ active, children }: { active: boolean; children: React.ReactNode }) {
+  if (active) {
+    return (
+      <div className="border-l-2 border-amber-400 bg-amber-400/[0.07] px-4 py-3">
+        <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-amber-400/90">
+          Model pick
+        </div>
+        <div className="mt-0.5 text-[15px] font-semibold text-amber-100">{children}</div>
+      </div>
+    );
+  }
+  return (
+    <div className="px-4 py-2.5 text-[13px] text-zinc-600">
+      No play — we agree with Vegas here.
+    </div>
   );
 }
 
 function GameCard({ p }: { p: Pick }) {
   return (
-    <article className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+    <article className="rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-zinc-900/30 p-5 transition-colors hover:border-white/20">
       {/* Header: matchup + date */}
-      <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="flex flex-wrap items-center gap-x-2 text-lg font-bold tracking-tight">
-          <span className="inline-flex items-center gap-1.5">
-            <TeamLogo abbr={p.away_abbr} />
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <h2 className="flex flex-wrap items-center gap-x-2.5 text-[17px] font-bold tracking-tight">
+          <span className="inline-flex items-center gap-2">
+            <TeamLogo abbr={p.away_abbr} size={26} />
             {p.away}
           </span>
-          <span className="font-medium text-zinc-500">@</span>
-          <span className="inline-flex items-center gap-1.5">
-            <TeamLogo abbr={p.home_abbr} />
+          <span className="text-sm font-medium text-zinc-600">@</span>
+          <span className="inline-flex items-center gap-2">
+            <TeamLogo abbr={p.home_abbr} size={26} />
             {p.home}
           </span>
         </h2>
-        <span className="text-sm text-zinc-500">{fmtGameday(p)}</span>
+        <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-medium text-zinc-400">
+          {fmtGameday(p)}
+        </span>
       </div>
       {(p.away_qb || p.home_qb) && (
-        <p className="mt-1 text-xs text-zinc-500">
-          {p.away_abbr}: {p.away_qb ?? "—"} · {p.home_abbr}: {p.home_qb ?? "—"}
+        <p className="mt-2 text-xs text-zinc-500">
+          Probable QBs — {p.away_abbr}: {p.away_qb ?? "—"} · {p.home_abbr}: {p.home_qb ?? "—"}
         </p>
       )}
 
-      {/* Spread row */}
-      <div className="mt-4 grid grid-cols-3 gap-2 rounded-xl bg-zinc-950/60 p-3">
-        <div>
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">Spread</div>
-          <div className="mt-1 font-mono text-sm font-semibold">
-            {fmtSpread(p.our_spread, p.home_abbr, p.away_abbr)}
-          </div>
-          <div className="text-[11px] text-zinc-500">Our number</div>
-        </div>
-        <div>
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">&nbsp;</div>
-          <div className="mt-1 font-mono text-sm text-zinc-400">
-            {fmtSpread(p.line_spread, p.home_abbr, p.away_abbr)}
-          </div>
-          <div className="text-[11px] text-zinc-500">Vegas line</div>
-        </div>
-        <div>
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">&nbsp;</div>
-          <div className="mt-1 font-mono text-sm text-zinc-400">
-            edge {edgeLabel(p.spread_edge)}
-          </div>
-          <div className="text-[11px] text-zinc-500">pts of disagreement</div>
-        </div>
-      </div>
-      <div className="mt-2">
-        <PickPill active={!!p.pick_spread}>
-          {p.pick_spread ? `Pick: ${spreadPickText(p)}` : "No spread play — we agree with Vegas"}
-        </PickPill>
-      </div>
+      <MarketPanel
+        name="Spread"
+        ourLabel={fmtSpread(p.our_spread, p.home_abbr, p.away_abbr)}
+        ourCaption="Our number"
+        vegasLabel={fmtSpread(p.line_spread, p.home_abbr, p.away_abbr)}
+        vegasCaption="Vegas line"
+        edge={p.spread_edge}
+        edgeCaption="pts of disagreement"
+        pick={
+          <PickStrip active={!!p.pick_spread}>
+            {p.pick_spread ? spreadPickText(p) : null}
+          </PickStrip>
+        }
+      />
 
-      {/* Total row */}
-      <div className="mt-3 grid grid-cols-3 gap-2 rounded-xl bg-zinc-950/60 p-3">
-        <div>
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">Total</div>
-          <div className="mt-1 font-mono text-sm font-semibold">{trim(p.our_total)}</div>
-          <div className="text-[11px] text-zinc-500">Our number</div>
-        </div>
-        <div>
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">&nbsp;</div>
-          <div className="mt-1 font-mono text-sm text-zinc-400">{trim(p.line_total)}</div>
-          <div className="text-[11px] text-zinc-500">Vegas line</div>
-        </div>
-        <div>
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">&nbsp;</div>
-          <div className="mt-1 font-mono text-sm text-zinc-400">
-            edge {edgeLabel(p.total_edge)}
-          </div>
-          <div className="text-[11px] text-zinc-500">pts of disagreement</div>
-        </div>
-      </div>
-      <div className="mt-2">
-        <PickPill active={!!p.pick_total}>
-          {p.pick_total ? `Pick: ${ouPickText(p)}` : "No total play — we agree with Vegas"}
-        </PickPill>
-      </div>
+      <MarketPanel
+        name="Total"
+        ourLabel={trim(p.our_total)}
+        ourCaption="Our number"
+        vegasLabel={trim(p.line_total)}
+        vegasCaption="Vegas line"
+        edge={p.total_edge}
+        edgeCaption="pts of disagreement"
+        pick={
+          <PickStrip active={!!p.pick_total}>
+            {p.pick_total ? ouPickText(p) : null}
+          </PickStrip>
+        }
+      />
     </article>
   );
 }
@@ -149,53 +189,55 @@ type Parlay = {
 function ParlayCard({ parlay }: { parlay: Parlay }) {
   if (!parlay || parlay.legs.length < 2) return null;
   return (
-    <section className="mb-6 rounded-2xl border border-amber-400/30 bg-amber-400/[0.06] p-5">
-      <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="text-xl font-extrabold tracking-tight">
-          Parlay of the week{" "}
-          <span className="ml-1 rounded bg-zinc-800 px-2 py-0.5 align-middle text-[11px] font-bold uppercase tracking-wider text-zinc-400">
-            for fun
-          </span>
-        </h2>
+    <section className="mb-8 overflow-hidden rounded-2xl border border-amber-400/25 bg-gradient-to-b from-amber-400/[0.09] to-amber-400/[0.03]">
+      <div className="flex flex-wrap items-baseline justify-between gap-2 px-5 pt-5">
+        <div>
+          <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-400/90">
+            For fun · not a strategy
+          </div>
+          <h2 className="mt-1 font-display text-3xl font-semibold uppercase tracking-wide">
+            Parlay of the week
+          </h2>
+        </div>
         <span className="text-sm text-zinc-500">
           Our {parlay.legs.length} highest-conviction picks, combined
         </span>
       </div>
 
-      <ul className="mt-4 space-y-2">
+      <ul className="mt-4 space-y-2 px-5">
         {parlay.legs.map((l) => (
           <li
             key={`${l.game}-${l.market}`}
-            className="flex items-center justify-between gap-3 rounded-xl bg-zinc-950/60 px-4 py-2.5"
+            className="flex items-center justify-between gap-3 rounded-xl border border-white/5 bg-zinc-950/70 px-4 py-2.5"
           >
             <div>
               <span className="font-bold text-amber-200">{l.label}</span>
               <span className="ml-2 text-sm text-zinc-500">{l.game}</span>
             </div>
-            <span className="font-mono text-sm font-semibold text-zinc-300">
+            <span className="tnum font-mono text-sm font-semibold text-zinc-300">
               {fmtPct(l.prob)}
             </span>
           </li>
         ))}
       </ul>
 
-      <div className="mt-4 grid grid-cols-2 gap-3">
-        <div className="rounded-xl bg-zinc-950/60 p-3">
+      <div className="mt-4 grid grid-cols-2 gap-3 px-5">
+        <div className="rounded-xl border border-white/5 bg-zinc-950/70 p-3.5">
           <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
             Model&rsquo;s combined chance
           </div>
-          <div className="mt-1 text-lg font-extrabold">
+          <div className="tnum mt-1 text-xl font-extrabold">
             {fmtPct(parlay.combined_prob)}{" "}
             <span className="text-sm font-semibold text-zinc-400">
               · fair odds {parlay.fair_odds}
             </span>
           </div>
         </div>
-        <div className="rounded-xl bg-zinc-950/60 p-3">
+        <div className="rounded-xl border border-white/5 bg-zinc-950/70 p-3.5">
           <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
             Books typically pay
           </div>
-          <div className="mt-1 text-lg font-extrabold">
+          <div className="tnum mt-1 text-xl font-extrabold">
             {parlay.book_pays}{" "}
             <span className="text-sm font-semibold text-zinc-400">
               on {parlay.legs.length} legs
@@ -204,7 +246,7 @@ function ParlayCard({ parlay }: { parlay: Parlay }) {
         </div>
       </div>
 
-      <p className="mt-4 text-[13px] leading-relaxed text-zinc-400">
+      <p className="px-5 pb-5 pt-4 text-[13px] leading-relaxed text-zinc-400">
         The honest fine print: parlays multiply the book&rsquo;s edge along with the
         payout — on true coin flips a {parlay.legs.length}-legger&rsquo;s fair price is{" "}
         {parlay.legs.length === 3 ? "+700" : "+300"}, worse than the {parlay.book_pays} books
@@ -222,25 +264,46 @@ export default function Home() {
 
   return (
     <div>
-      <div className="mb-6">
-        <h1 className="text-3xl font-extrabold tracking-tight">
-          Week {picksData.week} picks{" "}
-          <span className="font-medium text-zinc-500">· {picksData.season} season</span>
+      {/* Hero */}
+      <div className="mb-8">
+        <Eyebrow>
+          Week {picksData.week} · {picksData.season} season · generated {picksData.generated}
+        </Eyebrow>
+        <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide sm:text-6xl">
+          This week&rsquo;s <span className="text-amber-400">picks</span>
         </h1>
-        <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
-          {picks.length} games, {nSpread} spread plays and {nTotal} total plays.
-          Generated {picksData.generated} from opponent-adjusted EPA ratings —
-          the model never sees the betting line; the line is only the benchmark
-          we measure against. Lines are a snapshot from generation time and
-          don’t update mid-week — every pick is graded against the line shown here.
+        <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
+          {picks.length} games, {nSpread} spread plays and {nTotal} total plays —
+          from opponent-adjusted EPA ratings. The model never sees the betting
+          line; the line is only the benchmark we measure against. Lines are a
+          snapshot from generation time and don&rsquo;t update mid-week — every
+          pick is graded against the line shown here.
         </p>
-        <p className="mt-3 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90">
+        <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
+          {[
+            [String(picks.length), "games"],
+            [String(nSpread), "spread plays"],
+            [String(nTotal), "total plays"],
+          ].map(([v, l]) => (
+            <div key={l} className="flex items-baseline gap-2">
+              <span className="tnum font-display text-3xl font-semibold text-zinc-100">{v}</span>
+              <span className="text-xs font-medium uppercase tracking-wider text-zinc-500">{l}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mt-5 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90">
           {picksData.disclaimer}
         </p>
       </div>
 
       <ParlayCard parlay={(picksData as { parlay?: Parlay }).parlay ?? null} />
 
+      <div className="mb-4 flex items-baseline justify-between">
+        <h2 className="font-display text-2xl font-semibold uppercase tracking-wide">
+          Every game
+        </h2>
+        <span className="text-sm text-zinc-500">Model vs. Vegas, side by side</span>
+      </div>
       <div className="grid gap-4 md:grid-cols-2">
         {picks.map((p) => (
           <GameCard key={`${p.away_abbr}-${p.home_abbr}`} p={p} />
