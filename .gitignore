@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 node_modules/
 .next/
+.venv-cfb/
+.venv/
+data/cfb/raw/

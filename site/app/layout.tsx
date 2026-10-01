@@ -14,9 +14,9 @@ const barlow = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Honest Line — NFL picks with a public track record",
+  title: "Honest Line — NFL & college football picks with a public track record",
   description:
-    "A fundamentals-only NFL prediction model. Every pick published, every result tracked, no hidden losers.",
+    "Fundamentals-only NFL and college football prediction models. Every pick published, every result tracked, no hidden losers.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Honest<span className="text-amber-400 light:text-amber-600">Line</span>
                 </span>
                 <span className="hidden text-xs text-zinc-500 md:inline">
-                  NFL picks, tracked in public
+                  Picks, tracked in public
                 </span>
               </Link>
               <Nav />
@@ -53,8 +53,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Honest<span className="text-amber-400 light:text-amber-600">Line</span>
               </div>
               <p className="mt-2 max-w-xs text-sm leading-relaxed text-zinc-500">
-                A fundamentals-only NFL prediction model. Every pick published
-                before kickoff, every result graded in public.
+                Fundamentals-only NFL and college football prediction models.
+                Every pick published before kickoff, every result graded in
+                public.
               </p>
             </div>
             <nav aria-label="Footer">
@@ -63,9 +64,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
               <ul className="mt-3 space-y-2 text-sm">
                 {[
-                  ["This week's picks", "/"],
+                  ["NFL picks", "/"],
+                  ["College picks", "/cfb"],
                   ["Pick'em game", "/pick-em"],
-                  ["Track record", "/track-record"],
+                  ["NFL track record", "/track-record"],
+                  ["College track record", "/cfb/track-record"],
                   ["Methodology", "/methodology"],
                 ].map(([label, href]) => (
                   <li key={href}>

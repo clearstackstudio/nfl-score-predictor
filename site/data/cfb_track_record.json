@@ -1,0 +1,1 @@
+{"model":"Opponent-adjusted PPA/play ratings (garbage time excluded), FBS-vs-FBS only. The betting line is never an input. Walk-forward: every prediction made before learning the result.","overall":null,"pending":true,"pending_reason":"The backtest runs on the first data pull — waiting on the CollegeFootballData API key.","seasons":[]}
