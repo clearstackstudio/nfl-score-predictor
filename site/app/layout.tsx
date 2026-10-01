@@ -30,11 +30,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Image
                   src="/honest-line-mark.png"
                   alt="Honest Line logo"
-                  width={36}
-                  height={36}
-                  className="h-9 w-9 rounded-lg"
+                  width={48}
+                  height={48}
+                  className="h-12 w-12 rounded-lg"
                 />
-                <span className="font-display text-[26px] font-semibold uppercase leading-none tracking-wide">
+                <span className="font-display text-[32px] font-semibold uppercase leading-none tracking-wide">
                   Honest<span className="text-amber-400 light:text-amber-600">Line</span>
                 </span>
                 <span className="hidden text-xs text-zinc-500 md:inline">
