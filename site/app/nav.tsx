@@ -31,7 +31,7 @@ export default function Nav() {
       >
         {[
           { href: "/", label: "NFL", active: !isCfb },
-          { href: "/cfb", label: "College", active: isCfb },
+          { href: "/cfb", label: "NCAAF", active: isCfb },
         ].map((s) => (
           <Link
             key={s.label}
