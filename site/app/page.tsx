@@ -23,10 +23,14 @@ function fmtGameday(p: Pick): string {
 }
 
 function spreadPickLabel(p: Pick): string {
+  // From the picked team's perspective: "NE +6.5", not the favorite-centric "BUF -6.5".
   const team = p.pick_spread === "home" ? p.home_abbr : p.away_abbr;
-  const parts = fmtSpread(p.line_spread, p.home_abbr, p.away_abbr).split(" ");
-  const num = parts.length > 1 ? ` ${parts[1]}` : "";
-  return `Pick: ${team}${num} · ${fmtPct(p.cover_prob)} to cover`;
+  const margin = p.pick_spread === "home" ? p.line_spread : -p.line_spread;
+  let spread: string;
+  if (Math.abs(margin) < 0.05) spread = "Pick'em";
+  else if (margin > 0) spread = `${team} -${trim(margin)}`;
+  else spread = `${team} +${trim(-margin)}`;
+  return `Pick: ${spread} · ${fmtPct(p.cover_prob)} to cover`;
 }
 function edgeLabel(edge: number): string {
   const v = trim(Math.abs(edge));

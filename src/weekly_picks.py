@@ -32,14 +32,6 @@ def normal_cdf(x: float) -> float:
 MARGIN_SD = 13.5  # typical NFL std of (actual margin - predicted margin)
 
 
-def fmt_line_spread(home_margin: float, home_abbr: str, away_abbr: str) -> str:
-    """Favorite-centric 'BAL -11.5' style, home-margin convention."""
-    if abs(home_margin) < 0.05:
-        return "Pick'em"
-    v = f"{abs(home_margin):g}"
-    return f"{home_abbr} -{v}" if home_margin > 0 else f"{away_abbr} -{v}"
-
-
 def fair_american(p: float) -> str:
     """American odds for a true probability p."""
     if p > 0.5:
@@ -77,13 +69,20 @@ def build_parlay(picks: list[dict]) -> dict | None:
         game = f"{p['away_abbr']} @ {p['home_abbr']}"
         if p["pick_spread"]:
             team = p["home_abbr"] if p["pick_spread"] == "home" else p["away_abbr"]
-            line = fmt_line_spread(p["line_spread"], p["home_abbr"], p["away_abbr"])
-            num = line.split(" ")[1] if " " in line else ""
+            # Label from the picked team's perspective ("NE +6.5"), not
+            # favorite-centric ("BUF -6.5").
+            margin = p["line_spread"] if p["pick_spread"] == "home" else -p["line_spread"]
+            if abs(margin) < 0.05:
+                label = "Pick'em"
+            elif margin > 0:
+                label = f"{team} -{margin:g}"
+            else:
+                label = f"{team} +{-margin:g}"
             legs.append({
                 "game": game,
                 "away_abbr": p["away_abbr"], "home_abbr": p["home_abbr"],
                 "market": "spread",
-                "label": f"{team} {num}".strip(),
+                "label": label,
                 "prob": p["cover_prob"],
             })
         if p["pick_total"]:
