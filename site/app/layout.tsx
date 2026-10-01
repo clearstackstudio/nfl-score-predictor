@@ -82,7 +82,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="border-t border-white/5">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-4 text-xs text-zinc-600">
               <span>© 2026 HonestLine</span>
-              <span>Lines are a snapshot from generation time.</span>
+              <span>
+                A{" "}
+                <a
+                  href="https://weclearstack.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200"
+                >
+                  ClearStack Studio
+                </a>{" "}
+                project · Lines are a snapshot from generation time.
+              </span>
             </div>
           </div>
         </footer>
