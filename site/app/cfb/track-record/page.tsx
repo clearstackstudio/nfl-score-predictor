@@ -1,6 +1,7 @@
 import record from "../../../data/cfb_track_record.json";
 import seasonLog from "../../../data/cfb_season_2026.json";
 import { fmtPct } from "../../lib/format";
+import CfbTeamLogo from "../../lib/cfb-team-logo";
 
 type Season = {
   season: number; games: number; straight_up_pct: number;
@@ -254,7 +255,15 @@ function LiveSeason({ log }: { log: SeasonLog }) {
               <tbody>
                 {w.picks.map((p) => (
                   <tr key={`${p.away}-${p.home}`} className="border-t border-zinc-800 light:border-zinc-200">
-                    <td className="px-4 py-3 font-semibold">{p.away} @ {p.home}</td>
+                    <td className="px-4 py-3 font-semibold">
+                      <span className="inline-flex items-center gap-1.5">
+                        <CfbTeamLogo name={p.away} size={20} />{p.away}
+                      </span>
+                      <span className="text-zinc-500"> @ </span>
+                      <span className="inline-flex items-center gap-1.5">
+                        <CfbTeamLogo name={p.home} size={20} />{p.home}
+                      </span>
+                    </td>
                     <td className="px-4 py-3 font-mono">{p.result ? `${p.result.away_score}-${p.result.home_score}` : "—"}</td>
                     <td className="px-4 py-3 text-zinc-400 light:text-zinc-600">
                       {p.pick_spread ? `${p.pick_spread_label ?? p.pick_spread} (${fmtPct(p.cover_prob)})` : "No play"}
