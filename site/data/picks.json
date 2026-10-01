@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 4,
-  "generated": "2026-09-30 17:58 PDT",
+  "generated": "2026-09-30 18:18 PDT",
   "disclaimer": "Model probabilities for entertainment. Our backtest shows no edge vs the closing line \u2014 track record published openly.",
   "parlay": {
     "legs": [
@@ -52,6 +52,10 @@
       "pick_total": "under",
       "pick_spread_label": null,
       "pick_total_label": "Under 38.5",
+      "spread_labels": {
+        "home": "CLE +2.5",
+        "away": "PIT -2.5"
+      },
       "cover_prob": null,
       "ou_prob": 0.795,
       "home_qb": "Deshaun Watson",
@@ -74,6 +78,10 @@
       "pick_total": "over",
       "pick_spread_label": "IND -3.5",
       "pick_total_label": "Over 47.5",
+      "spread_labels": {
+        "home": "WAS +3.5",
+        "away": "IND -3.5"
+      },
       "cover_prob": 0.607,
       "ou_prob": 0.858,
       "home_qb": "Jayden Daniels",
@@ -96,6 +104,10 @@
       "pick_total": "over",
       "pick_spread_label": "BAL -11.5",
       "pick_total_label": "Over 42.5",
+      "spread_labels": {
+        "home": "BAL -11.5",
+        "away": "TEN +11.5"
+      },
       "cover_prob": 0.599,
       "ou_prob": 0.666,
       "home_qb": "Lamar Jackson",
@@ -118,6 +130,10 @@
       "pick_total": "over",
       "pick_spread_label": "NE +6.5",
       "pick_total_label": "Over 48.5",
+      "spread_labels": {
+        "home": "BUF -6.5",
+        "away": "NE +6.5"
+      },
       "cover_prob": 0.653,
       "ou_prob": 0.676,
       "home_qb": "Josh Allen",
@@ -140,6 +156,10 @@
       "pick_total": "over",
       "pick_spread_label": "CHI -3.5",
       "pick_total_label": "Over 43.5",
+      "spread_labels": {
+        "home": "CHI -3.5",
+        "away": "NYJ +3.5"
+      },
       "cover_prob": 0.901,
       "ou_prob": 0.755,
       "home_qb": "Case Keenum",
@@ -162,6 +182,10 @@
       "pick_total": "over",
       "pick_spread_label": "JAX +2.5",
       "pick_total_label": "Over 51.5",
+      "spread_labels": {
+        "home": "CIN -2.5",
+        "away": "JAX +2.5"
+      },
       "cover_prob": 0.841,
       "ou_prob": 0.638,
       "home_qb": "Joe Burrow",
@@ -184,6 +208,10 @@
       "pick_total": "over",
       "pick_spread_label": "HOU -3",
       "pick_total_label": "Over 48.5",
+      "spread_labels": {
+        "home": "HOU -3",
+        "away": "DAL +3"
+      },
       "cover_prob": 0.79,
       "ou_prob": 0.561,
       "home_qb": "C.J. Stroud",
@@ -206,6 +234,10 @@
       "pick_total": "over",
       "pick_spread_label": "NYG +2.5",
       "pick_total_label": "Over 44.5",
+      "spread_labels": {
+        "home": "NYG +2.5",
+        "away": "ARI -2.5"
+      },
       "cover_prob": 0.651,
       "ou_prob": 0.783,
       "home_qb": "Jameis Winston",
@@ -228,6 +260,10 @@
       "pick_total": "over",
       "pick_spread_label": "LA -3",
       "pick_total_label": "Over 43.5",
+      "spread_labels": {
+        "home": "PHI +3",
+        "away": "LA -3"
+      },
       "cover_prob": 0.673,
       "ou_prob": 0.569,
       "home_qb": "Jalen Hurts",
@@ -250,6 +286,10 @@
       "pick_total": "over",
       "pick_spread_label": "TB +3.5",
       "pick_total_label": "Over 38.5",
+      "spread_labels": {
+        "home": "TB +3.5",
+        "away": "GB -3.5"
+      },
       "cover_prob": 0.546,
       "ou_prob": 0.842,
       "home_qb": "Jalon Daniels",
@@ -272,6 +312,10 @@
       "pick_total": "under",
       "pick_spread_label": "MIA +10.5",
       "pick_total_label": "Under 38.5",
+      "spread_labels": {
+        "home": "MIN -10.5",
+        "away": "MIA +10.5"
+      },
       "cover_prob": 0.539,
       "ou_prob": 0.653,
       "home_qb": "Kyler Murray",
@@ -294,6 +338,10 @@
       "pick_total": "under",
       "pick_spread_label": "KC -4.5",
       "pick_total_label": "Under 47.5",
+      "spread_labels": {
+        "home": "LV +4.5",
+        "away": "KC -4.5"
+      },
       "cover_prob": 0.76,
       "ou_prob": 0.868,
       "home_qb": "Kirk Cousins",
@@ -316,6 +364,10 @@
       "pick_total": "under",
       "pick_spread_label": "SEA -7",
       "pick_total_label": "Under 42.5",
+      "spread_labels": {
+        "home": "SEA -7",
+        "away": "LAC +7"
+      },
       "cover_prob": 0.828,
       "ou_prob": 0.879,
       "home_qb": "Drew Lock",
@@ -338,6 +390,10 @@
       "pick_total": "over",
       "pick_spread_label": "DEN +3",
       "pick_total_label": "Over 47.5",
+      "spread_labels": {
+        "home": "SF -3",
+        "away": "DEN +3"
+      },
       "cover_prob": 0.609,
       "ou_prob": 0.695,
       "home_qb": "Brock Purdy",
@@ -360,6 +416,10 @@
       "pick_total": null,
       "pick_spread_label": "DET -3.5",
       "pick_total_label": null,
+      "spread_labels": {
+        "home": "CAR +3.5",
+        "away": "DET -3.5"
+      },
       "cover_prob": 0.543,
       "ou_prob": null,
       "home_qb": "Bryce Young",
@@ -382,6 +442,10 @@
       "pick_total": "under",
       "pick_spread_label": null,
       "pick_total_label": "Under 47.5",
+      "spread_labels": {
+        "home": "NO -2.5",
+        "away": "ATL +2.5"
+      },
       "cover_prob": null,
       "ou_prob": 0.836,
       "home_qb": "Tyler Shough",

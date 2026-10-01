@@ -57,6 +57,10 @@ def mk(away, home, line_spread, line_total, our_spread, our_total):
         "pick_spread": ps, "pick_total": pt,
         "pick_spread_label": pick_spread_label(ps, line_spread, home, away),
         "pick_total_label": pick_total_label(pt, line_total),
+        "spread_labels": {
+            "home": pick_spread_label("home", line_spread, home, away),
+            "away": pick_spread_label("away", line_spread, home, away),
+        },
         "cover_prob": 0.65 if ps else None, "ou_prob": 0.7 if pt else None,
     }
 

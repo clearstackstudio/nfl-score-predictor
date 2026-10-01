@@ -153,6 +153,16 @@ def validate_picks(picks: list[dict], parlay: dict | None) -> None:
                 p["pick_spread_label"] == "Pick'em", \
                 f"label names wrong team: {p['pick_spread_label']}"
 
+        # Both sides' spread labels (used by the pick'em UI) must also check out.
+        assert p["spread_labels"]["home"] == pick_spread_label(
+            "home", p["line_spread"], p["home_abbr"], p["away_abbr"])
+        assert p["spread_labels"]["away"] == pick_spread_label(
+            "away", p["line_spread"], p["home_abbr"], p["away_abbr"])
+        assert p["spread_labels"]["home"].startswith(p["home_abbr"] + " ") or \
+            p["spread_labels"]["home"] == "Pick'em"
+        assert p["spread_labels"]["away"].startswith(p["away_abbr"] + " ") or \
+            p["spread_labels"]["away"] == "Pick'em"
+
         # Pick side must agree with the direction of the edge, and picks
         # only exist past the minimum edge thresholds.
         se, te = p["spread_edge"], p["total_edge"]
@@ -246,6 +256,11 @@ def main() -> None:
             "pick_total": pick_total,
             "pick_spread_label": pick_spread_label(pick_side, line_margin, home, away),
             "pick_total_label": pick_total_label(pick_total, line_total),
+            # Both sides' spread text, generator-owned, for the pick'em UI.
+            "spread_labels": {
+                "home": pick_spread_label("home", line_margin, home, away),
+                "away": pick_spread_label("away", line_margin, home, away),
+            },
             "cover_prob": round(cover_prob, 3) if pick_side else None,
             "ou_prob": round(ou_prob, 3) if pick_total else None,
             "home_qb": g.get("home_qb_name"), "away_qb": g.get("away_qb_name"),
