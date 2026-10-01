@@ -65,19 +65,31 @@ def current_ratings(team_games: pd.DataFrame, season: int):
     return adjusted_ratings(team_games, len(team_games), season, prior)
 
 
-def spread_sign() -> float:
-    """Auto-detect CFBD spread convention: +1 if spread>0 means home
-    favored, -1 if it means away favored. Determined empirically."""
+# Verified 2026-10-01 against completed CFBD games: the raw /lines spread
+# is an AWAY margin (spread > 0 means the away team is favored). Negate to
+# get a home margin (positive = home favored), matching the convention used
+# in fetch_cfb.py ingestion, the backtest, grading, and the site.
+RAW_SPREAD_SIGN = -1.0
+
+
+def verify_spread_convention() -> None:
+    """Loud sanity check: stored line_spread must correlate positively with
+    actual home margin. Raises if CFBD ever changes its convention, so we
+    fail visibly instead of silently flipping every pick."""
     import numpy as np
     g = pd.read_parquet(DATA / "cfb_games.parquet")
     g = g.dropna(subset=["line_spread", "home_score", "away_score"]).head(2000)
+    if len(g) < 50:
+        print("spread check skipped: not enough graded games yet")
+        return
     m = (g["home_score"] - g["away_score"]).to_numpy()
     s = g["line_spread"].to_numpy()
-    corr = np.corrcoef(s, m)[0, 1]
-    sign = 1.0 if corr > 0 else -1.0
-    print(f"spread convention: corr={corr:+.2f} -> "
-          f"spread>0 means {'HOME' if sign > 0 else 'AWAY'} favored")
-    return sign
+    corr = float(np.corrcoef(s, m)[0, 1])
+    print(f"spread convention check: corr(line_spread, home margin)={corr:+.2f}")
+    if corr < 0.5:
+        raise RuntimeError(
+            f"spread convention broken (corr={corr:+.2f}); CFBD may have "
+            "changed its spread sign. Refusing to generate picks.")
 
 
 def fetch_upcoming_week(season: int):
@@ -115,7 +127,8 @@ def fetch_upcoming_week(season: int):
 def main() -> None:
     team_games = load_team_games()
     off, deff = current_ratings(team_games, SEASON)
-    sign = spread_sign()
+    verify_spread_convention()
+    sign = RAW_SPREAD_SIGN
 
     try:
         cfg = json.loads((DATA / "cfb_backtest.json").read_text())

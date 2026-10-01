@@ -35,7 +35,11 @@ CARRYOVER = 0.4
 
 
 def load_team_games() -> pd.DataFrame:
-    """One row per team-game: offensive/defensive PPA per play."""
+    """One row per team-game: offensive/defensive PPA per play.
+
+    CFBD's PPA "overall" is already per-play (verified 2026-10-01), so no
+    division by play count. home_plays/away_plays are kept only as a
+    completeness filter: a team-game with no parsed plays is dropped."""
     g = pd.read_parquet(DATA / "cfb_games.parquet")
     rows = []
     for _, r in g.iterrows():
@@ -52,8 +56,8 @@ def load_team_games() -> pd.DataFrame:
                 "date": r["date"],
                 "team": r[f"{side}_team"],
                 "opp": r[f"{opp_side}_team"],
-                "off_ppa_play": float(off) / float(plays),
-                "def_ppa_play": float(dfn) / float(plays),
+                "off_ppa_play": float(off),
+                "def_ppa_play": float(dfn),
                 "neutral": bool(r["neutral"]),
             })
     tg = pd.DataFrame(rows)
@@ -158,8 +162,9 @@ def run_backtest(seasons: list[int] | None = None) -> dict:
 
         actual_margin = float(row["home_score"]) - float(row["away_score"])
         actual_total = float(row["home_score"]) + float(row["away_score"])
-        # CFBD spread convention: check sign once data arrives; assume
-        # spread > 0 means home favored (verify against scores in test).
+        # Stored line_spread is a HOME margin (positive = home favored).
+        # Verified 2026-10-01 against completed CFBD games: raw CFBD spread
+        # is an away margin, negated once at ingestion in fetch_cfb.py.
         line_margin = float(row["line_spread"])
         line_total = float(row["line_total"])
 

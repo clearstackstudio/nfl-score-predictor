@@ -27,6 +27,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import statistics
 import sys
 import time
 from pathlib import Path
@@ -49,10 +50,13 @@ def get_client():
     from dynamic_credentials import dynamic_credential_entry
     import cfbd
     entry = dynamic_credential_entry("custom.collegefootballdata")
-    token = entry.get("access_token") or entry.get("api_key") or entry.get("token")
+    token = entry.get("surrogate")
     if not token:
         raise RuntimeError("custom.collegefootballdata credential not connected yet")
     cfg = cfbd.Configuration(access_token=token)
+    # The generated client does not read proxy env vars; egress (and the
+    # authd surrogate swap) requires going through the runtime proxy.
+    cfg.proxy = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy")
     return cfbd.ApiClient(cfg)
 
 
@@ -115,19 +119,25 @@ def fetch_season(client, season: int) -> dict:
 
 
 def plays_from_stats(stats: list[dict]) -> int | None:
-    """rushing attempts + pass attempts from CFBD team-game stat blobs."""
+    """Offensive plays = rushing attempts + pass attempts.
+
+    Real CFBD team-game stat schema (verified 2026-10-01): entries look
+    like {"category": "rushingAttempts", "stat": "31"}; pass attempts come
+    as {"category": "completionAttempts", "stat": "29-40"} (comp-att)."""
     rush = pa = None
-    for s in stats:
-        cat = (s.get("category") or "").lower()
-        name = (s.get("stat") or s.get("statName") or "").lower().replace(" ", "")
-        try:
-            v = int(float(s.get("statValue", 0)))
-        except (TypeError, ValueError):
-            continue
-        if cat == "rushing" and name in ("rushingattempts", "attempts", "rushes", "carries"):
-            rush = v
-        elif cat == "passing" and name in ("passattempts", "attempts"):
-            pa = v
+    for s in stats or []:
+        cat = s.get("category") or ""
+        val = s.get("stat")
+        if cat == "rushingAttempts":
+            try:
+                rush = int(float(val))
+            except (TypeError, ValueError):
+                pass
+        elif cat == "completionAttempts":
+            try:
+                pa = int(str(val).split("-")[-1])
+            except (TypeError, ValueError, IndexError):
+                pass
     if rush is None or pa is None:
         return None
     return rush + pa
@@ -142,26 +152,31 @@ def merge_season(season: int):
     ppa = json.loads((RAW / f"ppa_{season}.json").read_text())
     tstats = json.loads((RAW / f"team_stats_{season}.json").read_text())
 
-    # game_id -> {team: plays}
+    # game_id -> {team: plays}. Real shape (verified 2026-10-01):
+    # [{"id": gameId, "teams": [{"team": name, "stats": [...]}, ...]}]
     plays: dict[int, dict[str, int]] = {}
     for t in tstats:
         gid = t.get("id") or t.get("gameId")
-        team = t.get("team")
-        n = plays_from_stats(t.get("stats", []))
-        if gid and team and n:
-            plays.setdefault(gid, {})[team] = n
+        for tm in t.get("teams", []) or []:
+            team = tm.get("team")
+            n = plays_from_stats(tm.get("stats", []))
+            if gid and team and n:
+                plays.setdefault(gid, {})[team] = n
 
-    # (game_id, team) -> (off_ppa, def_ppa)
+    # (game_id, team) -> (off_ppa_per_play, def_ppa_per_play).
+    # Real shape (verified 2026-10-01): {"gameId":..., "team":...,
+    # "offense": {"overall": 0.37, ...}, "defense": {"overall": -0.33, ...}}.
+    # "overall" is ALREADY per-play (league range roughly -0.7..+1.2);
+    # never divide it by play count.
     ppa_map: dict[tuple, tuple] = {}
     for r in ppa:
         try:
-            ppa_map[(r["gameId"], r["team"])] = (
-                float(r["offense"]["total"] if isinstance(r.get("offense"), dict)
-                      else r.get("offense")),
-                float(r["defense"]["total"] if isinstance(r.get("defense"), dict)
-                      else r.get("defense")),
-            )
-        except (TypeError, KeyError):
+            off = r.get("offense")
+            dfn = r.get("defense")
+            off_v = float(off.get("overall") if isinstance(off, dict) else off)
+            dfn_v = float(dfn.get("overall") if isinstance(dfn, dict) else dfn)
+            ppa_map[(r["gameId"], r["team"])] = (off_v, dfn_v)
+        except (TypeError, KeyError, AttributeError):
             continue
 
     rows = []
@@ -185,8 +200,15 @@ def merge_season(season: int):
                     totals.append(float(l["overUnder"]))
                 except (TypeError, ValueError):
                     pass
-        # closing consensus = median across providers (robust to outliers)
-        import statistics
+        # closing consensus = median across providers (robust to outliers).
+        # CFBD raw spread convention (verified 2026-10-01 vs completed games):
+        # spread > 0 means the AWAY team is favored, i.e. raw spread is an
+        # away-margin. Negate once here so line_spread is a HOME margin
+        # (positive = home favored) everywhere downstream.
+        raw_spread = statistics.median(spreads) if spreads else None
+        # PPA columns below are PER-PLAY (CFBD "overall" is already
+        # normalized; verified 2026-10-01). Plays are kept as a data-quality
+        # signal, not a divisor.
         rows.append({
             "game_id": gid,
             "season": season,
@@ -203,7 +225,7 @@ def merge_season(season: int):
             "away_def_ppa": ppa_map.get((gid, away), (None, None))[1],
             "home_plays": (plays.get(gid) or {}).get(home),
             "away_plays": (plays.get(gid) or {}).get(away),
-            "line_spread": statistics.median(spreads) if spreads else None,
+            "line_spread": -raw_spread if raw_spread is not None else None,
             "line_total": statistics.median(totals) if totals else None,
             "n_lines": len(spreads),
         })
