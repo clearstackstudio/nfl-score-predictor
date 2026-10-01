@@ -41,7 +41,7 @@ type RecordFile = {
   pending?: boolean; pending_reason?: string; seasons: Season[];
 };
 
-const rec = record as RecordFile;
+const rec = record as unknown as RecordFile;
 const seasons = rec.seasons;
 
 function decadeOf(s: Season) {
