@@ -61,10 +61,11 @@ ABBR_TO_FULL = {
 }
 
 
-def load_team_games() -> pd.DataFrame:
+def load_team_games(years: list[int] | None = None) -> pd.DataFrame:
     """One row per team-game: offensive and defensive EPA/play."""
+    years = years or PBP_YEARS
     frames = []
-    for year in PBP_YEARS:
+    for year in years:
         pbp = pd.read_parquet(
             DATA / f"play_by_play_{year}.parquet",
             columns=["game_id", "week", "season", "posteam", "defteam",
@@ -191,9 +192,10 @@ def run_backtest() -> dict:
         # Margin ~= net EPA differential: both teams start drives with roughly
         # the same expected points, so drive-start EP cancels out.
         our_margin = (exp_home_off - exp_away_off) * PLAYS_PER_GAME + edge_pts
-        # Total ~= combined offensive EPA + typical drive-start EP per game,
-        # calibrated on trailing games.
-        epa_const = (sum(epa_const_hist) / len(epa_const_hist)) if epa_const_hist else 22.0
+        # Total ~= combined offensive EPA + typical drive-start EP per game.
+        # Empirically combined offensive EPA ≈ 0 (both teams' drive-start
+        # expected points roughly cancel), so the constant ≈ avg total.
+        epa_const = (sum(epa_const_hist) / len(epa_const_hist)) if epa_const_hist else 46.0
         our_total = (exp_home_off + exp_away_off) * PLAYS_PER_GAME + epa_const
 
         actual_margin = float(row["score_home"]) - float(row["score_away"])
