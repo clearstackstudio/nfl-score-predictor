@@ -39,6 +39,24 @@ def fair_american(p: float) -> str:
 BOOK_PARLAY_PAYS = {2: "+260", 3: "+600"}
 
 
+def _gameday_et(start: str) -> dict:
+    """Map CFBD's UTC startDate to the US-Eastern calendar date + weekday.
+
+    Without this, Thursday 8pm CT kickoffs (Friday 01:00 UTC) display as
+    Friday. Eastern covers the continental-US viewing audience; Hawai'i
+    home games are the known edge case.
+    """
+    try:
+        dt = pd.Timestamp(start)
+        if dt.tzinfo is None:
+            dt = dt.tz_localize("UTC")
+        et = dt.tz_convert("America/New_York")
+        return {"gameday": et.strftime("%Y-%m-%d"),
+                "weekday": et.strftime("%A")}
+    except Exception:
+        return {"gameday": str(start)[:10], "weekday": ""}
+
+
 def pick_spread_label(pick_side, line_margin, home, away):
     if not pick_side:
         return None
@@ -175,8 +193,9 @@ def main() -> None:
         picks.append({
             "away": away, "home": home,
             "away_abbr": away, "home_abbr": home,
-            "gameday": str(g.get("startDate", ""))[:10],
-            "weekday": "",
+            # CFBD startDate is UTC; Thursday-night games would otherwise
+            # display as Friday. Convert to US Eastern for the date shown.
+            **_gameday_et(g.get("startDate", "")),
             "neutral": bool(g.get("neutralSite")),
             "line_spread": round(line_margin, 1),
             "line_total": line_total,

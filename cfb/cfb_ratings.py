@@ -111,7 +111,16 @@ def predict(off: dict, deff: dict, home: str, away: str,
     return our_margin, our_total
 
 
-def run_backtest(seasons: list[int] | None = None) -> dict:
+def run_backtest(seasons: list[int] | None = None,
+                 spread_thresh: float = 0.5,
+                 total_thresh: float = 1.0) -> dict:
+    """Chronological walk-forward backtest.
+
+    Thresholds must match the live pick rules in cfb_weekly_picks.py so the
+    published record describes the actual published pick set. Previously
+    (2026-10-01) these were 1.5/3.0 while live picks fired at 0.5/1.0 —
+    the record did not validate the real picks. Aligned 2026-10-01.
+    """
     team_games = load_team_games()
     games = pd.read_parquet(DATA / "cfb_games.parquet")
     if seasons:
@@ -181,7 +190,7 @@ def run_backtest(seasons: list[int] | None = None) -> dict:
         s["line_tse"] += (line_total - actual_total) ** 2
 
         e = our_margin - line_margin
-        if abs(e) >= 1.5:
+        if abs(e) >= spread_thresh:
             r = actual_margin - line_margin
             if abs(r) < 0.01:
                 ats[2] += 1
@@ -193,7 +202,7 @@ def run_backtest(seasons: list[int] | None = None) -> dict:
                 ats[1] += 1
                 s["l"] += 1
         et = our_total - line_total
-        if abs(et) >= 3.0:
+        if abs(et) >= total_thresh:
             r = actual_total - line_total
             if abs(r) < 0.01:
                 ou[2] += 1
@@ -261,6 +270,6 @@ if __name__ == "__main__":
     print(f"Games backtested:      {r['games']:,}")
     print(f"Straight-up accuracy:  {r['straight_up_pct']:.1%}")
     print(f"Our margin RMSE:       {r['our_margin_rmse']:.2f}  (line: {r['line_margin_rmse']:.2f})")
-    print(f"ATS (>=1.5pt edge):    {w}-{l}-{p}  ({r['ats_pct']:.1%})")
+    print(f"ATS (>=0.5pt edge):    {w}-{l}-{p}  ({r['ats_pct']:.1%})")
     print(f"Our total RMSE:        {r['our_total_rmse']:.2f}  (line: {r['line_total_rmse']:.2f})")
-    print(f"O/U (>=3pt edge):      {ow}-{ol}-{op}  ({r['ou_pct']:.1%})")
+    print(f"O/U (>=1pt edge):      {ow}-{ol}-{op}  ({r['ou_pct']:.1%})")

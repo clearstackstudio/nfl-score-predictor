@@ -109,7 +109,7 @@ export default function CfbTrackRecord() {
           { label: "Seasons backtested", value: String(seasons.length) },
           { label: "Games", value: totalGames.toLocaleString() },
           { label: "Straight-up", value: fmtPct(su) },
-          { label: "ATS (≥1.5pt edge)", value: `${tw}-${tl}-${tp} · ${fmtPct(tw / (tw + tl))}` },
+          { label: "ATS (≥0.5pt edge)", value: `${tw}-${tl}-${tp} · ${fmtPct(tw / (tw + tl))}` },
         ].map((c) => (
           <div key={c.label} className="rounded-xl border border-white/10 bg-zinc-900/50 p-4 light:border-zinc-200 light:bg-white">
             <div className="tnum text-2xl font-extrabold">{c.value}</div>

@@ -21,7 +21,9 @@ export default function CfbMethodology() {
           <p>
             From those ratings the model generates its own spread and total for each
             game, then compares them against the market line. Where our number disagrees
-            with Vegas by enough, we publish a pick with an estimated cover probability.
+            with Vegas by at least half a point on the spread (a full point on the total),
+            we publish a pick with an estimated cover probability — and the track record
+            grades exactly that same set of picks, nothing more selective.
           </p>
           <p>
             The betting line is <span className="font-semibold text-zinc-100 light:text-zinc-900">never</span> an
