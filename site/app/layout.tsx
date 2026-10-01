@@ -85,6 +85,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 backtest shows no edge against the closing line — the full
                 record is on the Track record page. If you bet, bet responsibly.
               </p>
+              <p className="mt-3 text-xs">
+                <Link
+                  href="/disclaimer"
+                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200 light:text-zinc-600 light:decoration-zinc-300 light:hover:text-zinc-900"
+                >
+                  Read the full disclaimers
+                </Link>
+              </p>
             </div>
           </div>
           <div className="border-t border-white/5 light:border-zinc-200">
