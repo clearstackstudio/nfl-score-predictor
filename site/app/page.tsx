@@ -1,5 +1,6 @@
 import picksData from "../data/picks.json";
 import { fmtSpread, fmtPct, trim } from "./lib/format";
+import TeamLogo from "./lib/team-logo";
 
 type Pick = {
   away: string; home: string; away_abbr: string; home_abbr: string;
@@ -60,8 +61,16 @@ function GameCard({ p }: { p: Pick }) {
     <article className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
       {/* Header: matchup + date */}
       <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="text-lg font-bold tracking-tight">
-          {p.away} <span className="font-medium text-zinc-500">@</span> {p.home}
+        <h2 className="flex flex-wrap items-center gap-x-2 text-lg font-bold tracking-tight">
+          <span className="inline-flex items-center gap-1.5">
+            <TeamLogo abbr={p.away_abbr} />
+            {p.away}
+          </span>
+          <span className="font-medium text-zinc-500">@</span>
+          <span className="inline-flex items-center gap-1.5">
+            <TeamLogo abbr={p.home_abbr} />
+            {p.home}
+          </span>
         </h2>
         <span className="text-sm text-zinc-500">{fmtGameday(p)}</span>
       </div>

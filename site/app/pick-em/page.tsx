@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import picksData from "../../data/picks.json";
 import seasonData from "../../data/season_2026.json";
+import TeamLogo from "../lib/team-logo";
 
 type Mode = "ats" | "su";
 type Side = "home" | "away";
@@ -251,7 +252,8 @@ export default function PickEm() {
                     : "border-zinc-800 bg-zinc-900 hover:border-zinc-600"
                 }`}
               >
-                <div className={`font-mono text-lg font-bold ${active ? "text-amber-300" : "text-zinc-100"}`}>
+                <div className={`flex items-center gap-2 font-mono text-lg font-bold ${active ? "text-amber-300" : "text-zinc-100"}`}>
+                  <TeamLogo abbr={side === "home" ? g.home_abbr : g.away_abbr} size={28} />
                   {label}
                 </div>
                 <div className="text-xs text-zinc-500">
@@ -264,8 +266,16 @@ export default function PickEm() {
           return (
             <article key={k} className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4">
               <div className="flex items-baseline justify-between">
-                <h3 className="font-bold">
-                  {g.away_abbr} @ {g.home_abbr}
+                <h3 className="flex flex-wrap items-center gap-x-2 font-bold">
+                  <span className="inline-flex items-center gap-1.5">
+                    <TeamLogo abbr={g.away_abbr} size={22} />
+                    {g.away_abbr}
+                  </span>
+                  <span className="font-medium text-zinc-500">@</span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <TeamLogo abbr={g.home_abbr} size={22} />
+                    {g.home_abbr}
+                  </span>
                 </h3>
                 <span className="text-xs text-zinc-500">
                   {g.weekday ? `${g.weekday}, ` : ""}{g.gameday}
