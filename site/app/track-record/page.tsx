@@ -53,14 +53,14 @@ export default function TrackRecord() {
 
   return (
     <div>
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90">
-        <span className="h-px w-8 bg-amber-400/60" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
+        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
         Full history · nothing hidden
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Track <span className="text-amber-400">record</span>
+        Track <span className="text-amber-400 light:text-amber-600">record</span>
       </h1>
-      <p className="mt-4 max-w-2xl text-sm text-zinc-400">{record.model}</p>
+      <p className="mt-4 max-w-2xl text-sm text-zinc-400 light:text-zinc-600">{record.model}</p>
 
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
         {[
@@ -69,7 +69,7 @@ export default function TrackRecord() {
           { label: "Straight-up", value: fmtPct(su) },
           { label: "ATS (≥1.5pt edge)", value: `${tw}-${tl}-${tp} · ${fmtPct(tw / (tw + tl))}` },
         ].map((c) => (
-          <div key={c.label} className="rounded-xl border border-white/10 bg-zinc-900/50 p-4">
+          <div key={c.label} className="rounded-xl border border-white/10 bg-zinc-900/50 p-4 light:border-zinc-200 light:bg-white">
             <div className="tnum text-2xl font-extrabold">{c.value}</div>
             <div className="mt-1 text-xs text-zinc-500">{c.label}</div>
           </div>
@@ -79,13 +79,13 @@ export default function TrackRecord() {
       <LiveSeason log={seasonLog as SeasonLog} />
 
       <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">ATS by decade — the edge decays</h2>
-      <p className="mt-1 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
+      <p className="mt-1 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
         The model beats bad lines from weak eras. Against the modern market, it does not.
         The dashed line is 52.4% — break-even against standard -110 vig.
       </p>
 
       {/* Visual: decade win % vs break-even */}
-      <div className="mt-4 space-y-3 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <div className="mt-4 space-y-3 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 light:border-zinc-200 light:bg-zinc-50">
         {[...decades.entries()].map(([d, ss]) => {
           const w = ss.reduce((a, s) => a + s.ats_w, 0);
           const l = ss.reduce((a, s) => a + s.ats_l, 0);
@@ -97,18 +97,18 @@ export default function TrackRecord() {
           return (
             <div key={d} className="flex items-center gap-3">
               <div className="w-12 shrink-0 text-sm font-bold">{d}s</div>
-              <div className="relative h-6 flex-1 rounded bg-zinc-800/70">
+              <div className="relative h-6 flex-1 rounded bg-zinc-800/70 light:bg-zinc-200">
                 <div
-                  className="absolute inset-y-0 left-0 w-px bg-zinc-500"
+                  className="absolute inset-y-0 left-0 w-px bg-zinc-500 light:bg-zinc-400"
                   style={{ left: `${be}%` }}
                   title="Break-even 52.4%"
                 />
                 <div
-                  className={`absolute inset-y-1 rounded ${good ? "bg-emerald-400/80" : "bg-red-400/80"}`}
+                  className={`absolute inset-y-1 rounded ${good ? "bg-emerald-400/80 light:bg-emerald-500" : "bg-red-400/80 light:bg-red-500"}`}
                   style={{ width: `${left}%` }}
                 />
               </div>
-              <div className={`w-16 shrink-0 text-right font-mono text-sm font-bold ${good ? "text-emerald-400" : "text-red-400"}`}>
+              <div className={`w-16 shrink-0 text-right font-mono text-sm font-bold ${good ? "text-emerald-400 light:text-emerald-700" : "text-red-400 light:text-red-600"}`}>
                 {fmtPct(pct)}
               </div>
             </div>
@@ -116,10 +116,10 @@ export default function TrackRecord() {
         })}
       </div>
 
-      <div className="mt-4 overflow-x-auto rounded-xl border border-zinc-800">
+      <div className="mt-4 overflow-x-auto rounded-xl border border-zinc-800 light:border-zinc-200">
         <table className="w-full min-w-[560px] text-sm">
           <thead className="sticky-head">
-            <tr className="bg-zinc-900 text-left text-xs uppercase tracking-wider text-zinc-400">
+            <tr className="bg-zinc-900 text-left text-xs uppercase tracking-wider text-zinc-400 light:bg-zinc-100 light:text-zinc-600">
               <th className="px-4 py-3">Decade</th>
               <th className="px-4 py-3">Record</th>
               <th className="px-4 py-3">Win %</th>
@@ -137,14 +137,14 @@ export default function TrackRecord() {
               const line = ss.reduce((a, s) => a + s.line_rmse * s.games, 0) / g;
               const pct = w / (w + l);
               return (
-                <tr key={d} className="border-t border-zinc-800">
+                <tr key={d} className="border-t border-zinc-800 light:border-zinc-200">
                   <td className="px-4 py-3 font-semibold">{d}s</td>
                   <td className="px-4 py-3 font-mono">{w}-{l}-{p}</td>
-                  <td className={`px-4 py-3 font-mono font-semibold ${pct >= 0.524 ? "text-emerald-400" : "text-red-400"}`}>
+                  <td className={`px-4 py-3 font-mono font-semibold ${pct >= 0.524 ? "text-emerald-400 light:text-emerald-700" : "text-red-400 light:text-red-600"}`}>
                     {fmtPct(pct)}
                   </td>
-                  <td className="px-4 py-3 font-mono text-zinc-400">{our.toFixed(2)}</td>
-                  <td className="px-4 py-3 font-mono text-zinc-400">{line.toFixed(2)}</td>
+                  <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{our.toFixed(2)}</td>
+                  <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{line.toFixed(2)}</td>
                 </tr>
               );
             })}
@@ -156,13 +156,13 @@ export default function TrackRecord() {
       </p>
 
       <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">Season by season</h2>
-      <p className="mt-1 max-w-2xl text-[15px] text-zinc-400">
+      <p className="mt-1 max-w-2xl text-[15px] text-zinc-400 light:text-zinc-600">
         Every season the model was tested on. Green ATS seasons beat the vig; the rest didn’t.
       </p>
-      <div className="mt-4 overflow-x-auto rounded-xl border border-zinc-800">
+      <div className="mt-4 overflow-x-auto rounded-xl border border-zinc-800 light:border-zinc-200">
         <table className="w-full min-w-[720px] text-sm">
           <thead className="sticky-head">
-            <tr className="bg-zinc-900 text-left text-xs uppercase tracking-wider text-zinc-400">
+            <tr className="bg-zinc-900 text-left text-xs uppercase tracking-wider text-zinc-400 light:bg-zinc-100 light:text-zinc-600">
               <th className="px-4 py-3">Season</th>
               <th className="px-4 py-3">Games</th>
               <th className="px-4 py-3">Straight-up</th>
@@ -174,14 +174,14 @@ export default function TrackRecord() {
           </thead>
           <tbody>
             {[...seasons].reverse().map((s) => (
-              <tr key={s.season} className="border-t border-zinc-800 hover:bg-zinc-900/50">
+              <tr key={s.season} className="border-t border-zinc-800 hover:bg-zinc-900/50 light:border-zinc-200 light:hover:bg-zinc-100">
                 <td className="px-4 py-3 font-semibold">{s.season}</td>
                 <td className="px-4 py-3 font-mono">{s.games}</td>
                 <td className="px-4 py-3 font-mono">{fmtPct(s.straight_up_pct)}</td>
-                <td className="px-4 py-3 font-mono text-zinc-400">{s.our_rmse.toFixed(2)}</td>
-                <td className="px-4 py-3 font-mono text-zinc-400">{s.line_rmse.toFixed(2)}</td>
+                <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{s.our_rmse.toFixed(2)}</td>
+                <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{s.line_rmse.toFixed(2)}</td>
                 <td className="px-4 py-3 font-mono">{s.ats_w}-{s.ats_l}-{s.ats_p}</td>
-                <td className={`px-4 py-3 font-mono ${s.ats_pct != null && s.ats_pct >= 0.524 ? "text-emerald-400" : "text-zinc-400"}`}>
+                <td className={`px-4 py-3 font-mono ${s.ats_pct != null && s.ats_pct >= 0.524 ? "text-emerald-400 light:text-emerald-700" : "text-zinc-400 light:text-zinc-600"}`}>
                   {s.ats_pct != null ? fmtPct(s.ats_pct) : "—"}
                 </td>
               </tr>
@@ -194,11 +194,11 @@ export default function TrackRecord() {
 }
 
 function resultBadge(r?: "win" | "loss" | "push") {
-  if (!r) return <span className="text-zinc-600">—</span>;
+  if (!r) return <span className="text-zinc-600 light:text-zinc-400">—</span>;
   const cls =
-    r === "win" ? "bg-emerald-500/15 text-emerald-400"
-    : r === "loss" ? "bg-red-500/15 text-red-400"
-    : "bg-zinc-500/15 text-zinc-400";
+    r === "win" ? "bg-emerald-500/15 text-emerald-400 light:bg-emerald-600/15 light:text-emerald-700"
+    : r === "loss" ? "bg-red-500/15 text-red-400 light:bg-red-600/15 light:text-red-600"
+    : "bg-zinc-500/15 text-zinc-400 light:bg-zinc-500/15 light:text-zinc-600";
   return (
     <span className={`rounded px-2 py-0.5 text-xs font-bold uppercase ${cls}`}>{r}</span>
   );
@@ -224,45 +224,45 @@ function LiveSeason({ log }: { log: SeasonLog }) {
     <div className="mt-8">
       <h2 className="font-display text-3xl font-semibold uppercase tracking-wide">
         {log.season} season — live
-        <span className="ml-3 rounded bg-amber-400/15 px-2 py-0.5 align-middle font-sans text-xs font-bold uppercase tracking-wider text-amber-300">
+        <span className="ml-3 rounded bg-amber-400/15 px-2 py-0.5 align-middle font-sans text-xs font-bold uppercase tracking-wider text-amber-300 light:bg-amber-600/15 light:text-amber-700">
           grading in progress
         </span>
       </h2>
-      <p className="mt-1 text-sm text-zinc-400">
+      <p className="mt-1 text-sm text-zinc-400 light:text-zinc-600">
         This season’s picks, graded as games go final. Nothing hidden, nothing rewritten.
       </p>
       <div className="mt-4 grid grid-cols-3 gap-4">
-        <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4">
+        <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4 light:border-zinc-200 light:bg-white">
           <div className="text-2xl font-extrabold">{aw}-{al}-{ap}</div>
           <div className="mt-1 text-xs text-zinc-500">Against the spread, {log.season}</div>
         </div>
-        <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4">
+        <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4 light:border-zinc-200 light:bg-white">
           <div className="text-2xl font-extrabold">{ow}-{ol}-{op}</div>
           <div className="mt-1 text-xs text-zinc-500">Over/under, {log.season}</div>
         </div>
-        <div className="rounded-xl border border-amber-400/25 bg-amber-400/[0.06] p-4">
+        <div className="rounded-xl border border-amber-400/25 bg-amber-400/[0.06] p-4 light:bg-amber-50">
           <div className="text-2xl font-extrabold">{pw}-{pl}-{pp}</div>
           <div className="mt-1 text-xs text-zinc-500">Parlay of the week, {log.season}</div>
         </div>
       </div>
       {weeks.map(([wn, w]) => (
         <div key={wn} className="mt-6">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400 light:text-zinc-600">
             Week {wn} {w.complete ? "" : "· partial"}
           </h3>
           {w.parlay && w.parlay.legs.length > 0 && (
-            <div className="mt-2 flex flex-wrap items-center gap-2 rounded-xl border border-amber-400/25 bg-amber-400/[0.06] px-4 py-2.5 text-sm">
-              <span className="font-bold text-amber-200">Parlay:</span>
-              <span className="text-zinc-300">
+            <div className="mt-2 flex flex-wrap items-center gap-2 rounded-xl border border-amber-400/25 bg-amber-400/[0.06] px-4 py-2.5 text-sm light:bg-amber-50">
+              <span className="font-bold text-amber-200 light:text-amber-700">Parlay:</span>
+              <span className="text-zinc-300 light:text-zinc-700">
                 {w.parlay.legs.map((l) => l.label).join(" · ")}
               </span>
               {resultBadge(w.parlay.result ?? undefined)}
             </div>
           )}
-          <div className="mt-2 overflow-x-auto rounded-xl border border-zinc-800">
+          <div className="mt-2 overflow-x-auto rounded-xl border border-zinc-800 light:border-zinc-200">
             <table className="w-full min-w-[720px] text-sm">
               <thead>
-                <tr className="bg-zinc-900 text-left text-xs uppercase tracking-wider text-zinc-400">
+                <tr className="bg-zinc-900 text-left text-xs uppercase tracking-wider text-zinc-400 light:bg-zinc-100 light:text-zinc-600">
                   <th className="px-4 py-3">Game</th>
                   <th className="px-4 py-3">Score</th>
                   <th className="px-4 py-3">Spread pick</th>
@@ -273,23 +273,23 @@ function LiveSeason({ log }: { log: SeasonLog }) {
               </thead>
               <tbody>
                 {w.picks.map((p) => (
-                  <tr key={`${p.away_abbr}-${p.home_abbr}`} className="border-t border-zinc-800">
+                  <tr key={`${p.away_abbr}-${p.home_abbr}`} className="border-t border-zinc-800 light:border-zinc-200">
                     <td className="px-4 py-3">
                       <span className="font-semibold">{p.away_abbr} @ {p.home_abbr}</span>
-                      <span className="ml-2 font-mono text-xs text-zinc-500">
+                      <span className="ml-2 font-mono text-xs text-zinc-500 light:text-zinc-500">
                         {fmtSpread(p.line_spread, p.home_abbr, p.away_abbr)}
                       </span>
                     </td>
                     <td className="px-4 py-3 font-mono">
                       {p.result ? `${p.result.away_score}-${p.result.home_score}` : "—"}
                     </td>
-                    <td className="px-4 py-3 text-zinc-400">
+                    <td className="px-4 py-3 text-zinc-400 light:text-zinc-600">
                       {p.pick_spread
                         ? `${p.pick_spread_label ?? (p.pick_spread === "home" ? p.home_abbr : p.away_abbr)} (${fmtPct(p.cover_prob)})`
                         : "No play"}
                     </td>
                     <td className="px-4 py-3">{resultBadge(p.result?.ats)}</td>
-                    <td className="px-4 py-3 text-zinc-400">
+                    <td className="px-4 py-3 text-zinc-400 light:text-zinc-600">
                       {p.pick_total
                         ? `${p.pick_total_label ?? (p.pick_total === "over" ? "Over" : "Under")} (${fmtPct(p.ou_prob)})`
                         : "No play"}

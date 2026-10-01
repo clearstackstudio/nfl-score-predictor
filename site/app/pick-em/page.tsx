@@ -183,27 +183,27 @@ export default function PickEm() {
 
   return (
     <div>
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90">
-        <span className="h-px w-8 bg-amber-400/60" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
+        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
         Beat the model, not the book
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Pick<span className="text-amber-400">&rsquo;em</span>
+        Pick<span className="text-amber-400 light:text-amber-600">&rsquo;em</span>
       </h1>
-      <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
+      <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
         Pick every game against the spread or straight up. We grade your card
         every Tuesday from the season log, and you can see exactly how you
         stack up against the model. Picks live in your browser — no account needed.
       </p>
 
       {/* Mode toggle */}
-      <div className="mt-5 inline-flex rounded-xl border border-zinc-800 bg-zinc-900 p-1">
+      <div className="mt-5 inline-flex rounded-xl border border-zinc-800 bg-zinc-900 p-1 light:border-zinc-200 light:bg-zinc-100">
         {(["ats", "su"] as Mode[]).map((m) => (
           <button
             key={m}
             onClick={() => setMode(m)}
             className={`rounded-lg px-4 py-2 text-sm font-semibold transition ${
-              mode === m ? "bg-amber-400 text-zinc-950" : "text-zinc-400 hover:text-white"
+              mode === m ? "bg-amber-400 text-zinc-950" : "text-zinc-400 hover:text-white light:text-zinc-600 light:hover:text-zinc-900"
             }`}
           >
             {m === "ats" ? "Against the spread" : "Straight up"}
@@ -217,19 +217,19 @@ export default function PickEm() {
           Week {week} <span className="font-sans text-sm font-medium normal-case tracking-normal text-zinc-500">· your card</span>
         </h2>
         <div className="flex items-center gap-3">
-          <span className="text-sm text-zinc-400">
+          <span className="text-sm text-zinc-400 light:text-zinc-600">
             {ready ? `${pickedCount} of ${games.length} picked` : "…"}
           </span>
           <button
             onClick={clearWeek}
-            className="rounded-lg border border-zinc-800 px-3 py-1.5 text-xs font-semibold text-zinc-400 hover:border-zinc-600 hover:text-white"
+            className="rounded-lg border border-zinc-800 px-3 py-1.5 text-xs font-semibold text-zinc-400 hover:border-zinc-600 hover:text-white light:border-zinc-300 light:text-zinc-600 light:hover:border-zinc-500 light:hover:text-zinc-900"
           >
             Clear
           </button>
         </div>
       </div>
       {ready && pickedCount > 0 && pickedCount < games.length && (
-        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-zinc-800">
+        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-zinc-800 light:bg-zinc-200">
           <div
             className="h-full rounded-full bg-amber-400 transition-all"
             style={{ width: `${(pickedCount / games.length) * 100}%` }}
@@ -255,10 +255,10 @@ export default function PickEm() {
                 className={`flex-1 rounded-xl border px-4 py-3 text-left transition ${
                   active
                     ? "border-amber-400 bg-amber-400/15"
-                    : "border-zinc-800 bg-zinc-900 hover:border-zinc-600"
+                    : "border-zinc-800 bg-zinc-900 hover:border-zinc-600 light:border-zinc-200 light:bg-white light:hover:border-zinc-400"
                 }`}
               >
-                <div className={`flex items-center gap-2 font-mono text-lg font-bold ${active ? "text-amber-300" : "text-zinc-100"}`}>
+                <div className={`flex items-center gap-2 font-mono text-lg font-bold ${active ? "text-amber-300 light:text-amber-700" : "text-zinc-100 light:text-zinc-900"}`}>
                   <TeamLogo abbr={side === "home" ? g.home_abbr : g.away_abbr} size={28} />
                   {label}
                 </div>
@@ -270,7 +270,7 @@ export default function PickEm() {
             );
           };
           return (
-            <article key={k} className="rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-zinc-900/30 p-4 transition-colors hover:border-white/20">
+            <article key={k} className="rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-zinc-900/30 p-4 transition-colors hover:border-white/20 light:border-zinc-200 light:from-white light:to-zinc-50 light:hover:border-zinc-300">
               <div className="flex items-baseline justify-between">
                 <h3 className="flex flex-wrap items-center gap-x-2 font-bold">
                   <span className="inline-flex items-center gap-1.5">
@@ -306,39 +306,39 @@ export default function PickEm() {
       {/* You vs the model */}
       <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">You vs the model</h2>
       {gradedWeeks.length === 0 ? (
-        <p className="mt-2 max-w-2xl text-[15px] text-zinc-400">
+        <p className="mt-2 max-w-2xl text-[15px] text-zinc-400 light:text-zinc-600">
           No graded weeks yet — the first results land Tuesday morning, and this
           is where your record appears next to the model&apos;s.
         </p>
       ) : (
         <div className="mt-4">
           <div className="grid gap-3 sm:grid-cols-2">
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5">
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5 light:border-zinc-200 light:bg-white">
               <div className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
                 Against the spread · season
               </div>
               <div className="mt-2 flex items-baseline gap-4">
                 <div>
-                  <div className="font-mono text-3xl font-extrabold text-amber-300">{fmtTally(youAts)}</div>
+                  <div className="font-mono text-3xl font-extrabold text-amber-300 light:text-amber-700">{fmtTally(youAts)}</div>
                   <div className="text-xs text-zinc-500">You</div>
                 </div>
-                <div className="text-xl text-zinc-600">vs</div>
+                <div className="text-xl text-zinc-600 light:text-zinc-400">vs</div>
                 <div>
                   <div className="font-mono text-3xl font-extrabold">{fmtTally(modelAts)}</div>
                   <div className="text-xs text-zinc-500">Model</div>
                 </div>
               </div>
             </div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5">
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5 light:border-zinc-200 light:bg-white">
               <div className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
                 Straight up · season
               </div>
               <div className="mt-2 flex items-baseline gap-4">
                 <div>
-                  <div className="font-mono text-3xl font-extrabold text-amber-300">{fmtTally(youSu)}</div>
+                  <div className="font-mono text-3xl font-extrabold text-amber-300 light:text-amber-700">{fmtTally(youSu)}</div>
                   <div className="text-xs text-zinc-500">You</div>
                 </div>
-                <div className="text-xl text-zinc-600">vs</div>
+                <div className="text-xl text-zinc-600 light:text-zinc-400">vs</div>
                 <div>
                   <div className="font-mono text-3xl font-extrabold">{fmtTally(modelSu)}</div>
                   <div className="text-xs text-zinc-500">Model</div>
@@ -347,10 +347,10 @@ export default function PickEm() {
             </div>
           </div>
 
-          <div className="mt-4 overflow-x-auto rounded-2xl border border-zinc-800">
+          <div className="mt-4 overflow-x-auto rounded-2xl border border-zinc-800 light:border-zinc-200">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-zinc-800 text-xs uppercase tracking-wider text-zinc-500">
+                <tr className="border-b border-zinc-800 text-xs uppercase tracking-wider text-zinc-500 light:border-zinc-200 light:text-zinc-600">
                   <th className="px-4 py-3">Week</th>
                   <th className="px-4 py-3">You ATS</th>
                   <th className="px-4 py-3">Model ATS</th>
@@ -360,12 +360,12 @@ export default function PickEm() {
               </thead>
               <tbody>
                 {rows.map((r) => (
-                  <tr key={r.week} className="border-b border-zinc-800/60 last:border-0">
+                  <tr key={r.week} className="border-b border-zinc-800/60 last:border-0 light:border-zinc-200">
                     <td className="px-4 py-3 font-semibold">{r.week}</td>
-                    <td className="px-4 py-3 font-mono text-amber-200/90">{r.youAts ? fmtTally(r.youAts) : "—"}</td>
-                    <td className="px-4 py-3 font-mono text-zinc-400">{fmtTally(r.modelAts)}</td>
-                    <td className="px-4 py-3 font-mono text-amber-200/90">{r.youSu ? fmtTally(r.youSu) : "—"}</td>
-                    <td className="px-4 py-3 font-mono text-zinc-400">{fmtTally(r.modelSu)}</td>
+                    <td className="px-4 py-3 font-mono text-amber-200/90 light:text-amber-700">{r.youAts ? fmtTally(r.youAts) : "—"}</td>
+                    <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{fmtTally(r.modelAts)}</td>
+                    <td className="px-4 py-3 font-mono text-amber-200/90 light:text-amber-700">{r.youSu ? fmtTally(r.youSu) : "—"}</td>
+                    <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{fmtTally(r.modelSu)}</td>
                   </tr>
                 ))}
               </tbody>

@@ -21,13 +21,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.className} ${barlow.variable}`}>
-      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
+      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased light:bg-white light:text-zinc-900">
         <div className="page-glow">
-          <header className="sticky top-0 z-40 border-b border-white/10 bg-zinc-950/85 backdrop-blur-md">
+          <header className="sticky top-0 z-40 border-b border-white/10 bg-zinc-950/85 backdrop-blur-md light:border-zinc-200 light:bg-white/85">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-y-3 px-4 py-3.5">
               <Link href="/" className="flex shrink-0 items-baseline gap-2.5">
                 <span className="font-display text-[26px] font-semibold uppercase leading-none tracking-wide">
-                  Honest<span className="text-amber-400">Line</span>
+                  Honest<span className="text-amber-400 light:text-amber-600">Line</span>
                 </span>
                 <span className="hidden text-xs text-zinc-500 md:inline">
                   NFL picks, tracked in public
@@ -38,11 +38,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </header>
           <main className="mx-auto max-w-6xl px-4 pb-16 pt-10">{children}</main>
         </div>
-        <footer className="border-t border-white/10 bg-zinc-950">
+        <footer className="border-t border-white/10 bg-zinc-950 light:border-zinc-200 light:bg-zinc-50">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-[1.2fr_1fr_1fr]">
             <div>
               <div className="font-display text-xl font-semibold uppercase tracking-wide">
-                Honest<span className="text-amber-400">Line</span>
+                Honest<span className="text-amber-400 light:text-amber-600">Line</span>
               </div>
               <p className="mt-2 max-w-xs text-sm leading-relaxed text-zinc-500">
                 A fundamentals-only NFL prediction model. Every pick published
@@ -61,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ["Methodology", "/methodology"],
                 ].map(([label, href]) => (
                   <li key={href}>
-                    <Link href={href} className="text-zinc-400 transition hover:text-white">
+                    <Link href={href} className="text-zinc-400 transition hover:text-white light:text-zinc-600 light:hover:text-zinc-900">
                       {label}
                     </Link>
                   </li>
@@ -79,8 +79,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </p>
             </div>
           </div>
-          <div className="border-t border-white/5">
-            <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-4 text-xs text-zinc-600">
+          <div className="border-t border-white/5 light:border-zinc-200">
+            <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-4 text-xs text-zinc-600 light:text-zinc-500">
               <span>© 2026 HonestLine</span>
               <span>
                 A{" "}
@@ -88,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   href="https://weclearstack.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200"
+                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200 light:text-zinc-600 light:decoration-zinc-300 light:hover:text-zinc-900"
                 >
                   ClearStack Studio
                 </a>{" "}

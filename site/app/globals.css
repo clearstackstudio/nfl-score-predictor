@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
+/* Light-mode variant: applies when the OS/phone is in light mode.
+   The site is dark-first, so `light:` carries the light-theme overrides. */
+@custom-variant light (@media (prefers-color-scheme: light));
+
 :root {
   --background: #09090b;
   --foreground: #f4f4f5;
+  color-scheme: dark light;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #18181b;
+  }
 }
 
 @theme inline {

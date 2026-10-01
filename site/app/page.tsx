@@ -40,8 +40,8 @@ function ouPickText(p: Pick): string {
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90">
-      <span className="h-px w-8 bg-amber-400/60" aria-hidden="true" />
+    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
+      <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
       {children}
     </div>
   );
@@ -67,37 +67,37 @@ function MarketPanel({
   pick: React.ReactNode;
 }) {
   return (
-    <div className="mt-4 overflow-hidden rounded-xl border border-white/5 bg-zinc-950/70">
-      <div className="grid grid-cols-3 divide-x divide-white/5">
+    <div className="mt-4 overflow-hidden rounded-xl border border-white/5 bg-zinc-950/70 light:border-zinc-200 light:bg-zinc-50">
+      <div className="grid grid-cols-3 divide-x divide-white/5 light:divide-zinc-200">
         <div className="p-3.5">
           <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
             {name} · us
           </div>
-          <div className="tnum mt-1.5 font-mono text-[15px] font-semibold text-zinc-100">
+          <div className="tnum mt-1.5 font-mono text-[15px] font-semibold text-zinc-100 light:text-zinc-900">
             {ourLabel}
           </div>
-          <div className="mt-0.5 text-[11px] text-zinc-600">{ourCaption}</div>
+          <div className="mt-0.5 text-[11px] text-zinc-600 light:text-zinc-500">{ourCaption}</div>
         </div>
         <div className="p-3.5">
           <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
             {name} · Vegas
           </div>
-          <div className="tnum mt-1.5 font-mono text-[15px] text-zinc-400">
+          <div className="tnum mt-1.5 font-mono text-[15px] text-zinc-400 light:text-zinc-600">
             {vegasLabel}
           </div>
-          <div className="mt-0.5 text-[11px] text-zinc-600">{vegasCaption}</div>
+          <div className="mt-0.5 text-[11px] text-zinc-600 light:text-zinc-500">{vegasCaption}</div>
         </div>
         <div className="p-3.5">
           <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
             Disagreement
           </div>
-          <div className="tnum mt-1.5 font-mono text-[15px] text-zinc-400">
+          <div className="tnum mt-1.5 font-mono text-[15px] text-zinc-400 light:text-zinc-600">
             {trim(Math.abs(edge))} pts
           </div>
-          <div className="mt-0.5 text-[11px] text-zinc-600">{edgeCaption}</div>
+          <div className="mt-0.5 text-[11px] text-zinc-600 light:text-zinc-500">{edgeCaption}</div>
         </div>
       </div>
-      <div className="border-t border-white/5">{pick}</div>
+      <div className="border-t border-white/5 light:border-zinc-200">{pick}</div>
     </div>
   );
 }
@@ -106,15 +106,15 @@ function PickStrip({ active, children }: { active: boolean; children: React.Reac
   if (active) {
     return (
       <div className="border-l-2 border-amber-400 bg-amber-400/[0.07] px-4 py-3">
-        <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-amber-400/90">
+        <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-amber-400/90 light:text-amber-700">
           Model pick
         </div>
-        <div className="mt-0.5 text-[15px] font-semibold text-amber-100">{children}</div>
+        <div className="mt-0.5 text-[15px] font-semibold text-amber-100 light:text-amber-800">{children}</div>
       </div>
     );
   }
   return (
-    <div className="px-4 py-2.5 text-[13px] text-zinc-600">
+    <div className="px-4 py-2.5 text-[13px] text-zinc-600 light:text-zinc-500">
       No play — we agree with Vegas here.
     </div>
   );
@@ -122,7 +122,7 @@ function PickStrip({ active, children }: { active: boolean; children: React.Reac
 
 function GameCard({ p }: { p: Pick }) {
   return (
-    <article className="rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-zinc-900/30 p-5 transition-colors hover:border-white/20">
+    <article className="rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-zinc-900/30 p-5 transition-colors hover:border-white/20 light:border-zinc-200 light:from-white light:to-zinc-50 light:hover:border-zinc-300">
       {/* Header: matchup + date */}
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="flex flex-wrap items-center gap-x-2.5 text-[17px] font-bold tracking-tight">
@@ -130,13 +130,13 @@ function GameCard({ p }: { p: Pick }) {
             <TeamLogo abbr={p.away_abbr} size={26} />
             {p.away}
           </span>
-          <span className="text-sm font-medium text-zinc-600">@</span>
+          <span className="text-sm font-medium text-zinc-600 light:text-zinc-400">@</span>
           <span className="inline-flex items-center gap-2">
             <TeamLogo abbr={p.home_abbr} size={26} />
             {p.home}
           </span>
         </h2>
-        <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-medium text-zinc-400">
+        <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-medium text-zinc-400 light:border-zinc-200 light:bg-zinc-100 light:text-zinc-600">
           {fmtGameday(p)}
         </span>
       </div>
@@ -192,7 +192,7 @@ function ParlayCard({ parlay }: { parlay: Parlay }) {
     <section className="mb-8 overflow-hidden rounded-2xl border border-amber-400/25 bg-gradient-to-b from-amber-400/[0.09] to-amber-400/[0.03]">
       <div className="flex flex-wrap items-baseline justify-between gap-2 px-5 pt-5">
         <div>
-          <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-400/90">
+          <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
             For fun · not a strategy
           </div>
           <h2 className="mt-1 font-display text-3xl font-semibold uppercase tracking-wide">
@@ -208,13 +208,13 @@ function ParlayCard({ parlay }: { parlay: Parlay }) {
         {parlay.legs.map((l) => (
           <li
             key={`${l.game}-${l.market}`}
-            className="flex items-center justify-between gap-3 rounded-xl border border-white/5 bg-zinc-950/70 px-4 py-2.5"
+            className="flex items-center justify-between gap-3 rounded-xl border border-white/5 bg-zinc-950/70 px-4 py-2.5 light:border-zinc-200 light:bg-white"
           >
             <div>
-              <span className="font-bold text-amber-200">{l.label}</span>
+              <span className="font-bold text-amber-200 light:text-amber-700">{l.label}</span>
               <span className="ml-2 text-sm text-zinc-500">{l.game}</span>
             </div>
-            <span className="tnum font-mono text-sm font-semibold text-zinc-300">
+            <span className="tnum font-mono text-sm font-semibold text-zinc-300 light:text-zinc-700">
               {fmtPct(l.prob)}
             </span>
           </li>
@@ -222,31 +222,31 @@ function ParlayCard({ parlay }: { parlay: Parlay }) {
       </ul>
 
       <div className="mt-4 grid grid-cols-2 gap-3 px-5">
-        <div className="rounded-xl border border-white/5 bg-zinc-950/70 p-3.5">
+        <div className="rounded-xl border border-white/5 bg-zinc-950/70 p-3.5 light:border-zinc-200 light:bg-white">
           <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
             Model&rsquo;s combined chance
           </div>
           <div className="tnum mt-1 text-xl font-extrabold">
             {fmtPct(parlay.combined_prob)}{" "}
-            <span className="text-sm font-semibold text-zinc-400">
+            <span className="text-sm font-semibold text-zinc-400 light:text-zinc-600">
               · fair odds {parlay.fair_odds}
             </span>
           </div>
         </div>
-        <div className="rounded-xl border border-white/5 bg-zinc-950/70 p-3.5">
+        <div className="rounded-xl border border-white/5 bg-zinc-950/70 p-3.5 light:border-zinc-200 light:bg-white">
           <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
             Books typically pay
           </div>
           <div className="tnum mt-1 text-xl font-extrabold">
             {parlay.book_pays}{" "}
-            <span className="text-sm font-semibold text-zinc-400">
+            <span className="text-sm font-semibold text-zinc-400 light:text-zinc-600">
               on {parlay.legs.length} legs
             </span>
           </div>
         </div>
       </div>
 
-      <p className="px-5 pb-5 pt-4 text-[13px] leading-relaxed text-zinc-400">
+      <p className="px-5 pb-5 pt-4 text-[13px] leading-relaxed text-zinc-400 light:text-zinc-600">
         The honest fine print: parlays multiply the book&rsquo;s edge along with the
         payout — on true coin flips a {parlay.legs.length}-legger&rsquo;s fair price is{" "}
         {parlay.legs.length === 3 ? "+700" : "+300"}, worse than the {parlay.book_pays} books
@@ -270,9 +270,9 @@ export default function Home() {
           Week {picksData.week} · {picksData.season} season · generated {picksData.generated}
         </Eyebrow>
         <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide sm:text-6xl">
-          This week&rsquo;s <span className="text-amber-400">picks</span>
+          This week&rsquo;s <span className="text-amber-400 light:text-amber-600">picks</span>
         </h1>
-        <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
+        <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
           {picks.length} games, {nSpread} spread plays and {nTotal} total plays —
           from opponent-adjusted EPA ratings. The model never sees the betting
           line; the line is only the benchmark we measure against. Lines are a
@@ -286,12 +286,12 @@ export default function Home() {
             [String(nTotal), "total plays"],
           ].map(([v, l]) => (
             <div key={l} className="flex items-baseline gap-2">
-              <span className="tnum font-display text-3xl font-semibold text-zinc-100">{v}</span>
+              <span className="tnum font-display text-3xl font-semibold text-zinc-100 light:text-zinc-900">{v}</span>
               <span className="text-xs font-medium uppercase tracking-wider text-zinc-500">{l}</span>
             </div>
           ))}
         </div>
-        <p className="mt-5 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90">
+        <p className="mt-5 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90 light:text-amber-800">
           {picksData.disclaimer}
         </p>
       </div>
@@ -310,9 +310,9 @@ export default function Home() {
         ))}
       </div>
 
-      <p className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-500">
-        How to read a card: <span className="text-zinc-300">Our number</span> is what the
-        model thinks the spread or total should be; <span className="text-zinc-300">Vegas line</span> is
+      <p className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-500 light:text-zinc-600">
+        How to read a card: <span className="text-zinc-300 light:text-zinc-800">Our number</span> is what the
+        model thinks the spread or total should be; <span className="text-zinc-300 light:text-zinc-800">Vegas line</span> is
         the market. A pick appears only where we disagree by enough to matter —
         the percentage is our estimated chance that side covers or the total lands.
       </p>

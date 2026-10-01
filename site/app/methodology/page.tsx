@@ -19,7 +19,7 @@ export default function Methodology() {
             estimated cover probability.
           </p>
           <p>
-            The betting line is <span className="font-semibold text-zinc-100">never</span> an
+            The betting line is <span className="font-semibold text-zinc-100 light:text-zinc-900">never</span> an
             input to the model. It is only the benchmark we measure against.
             Most “prediction” apps quietly feed the line in and echo it back —
             that is circular, and it can never beat the market by construction.
@@ -40,7 +40,7 @@ export default function Methodology() {
           </p>
           <p>
             So we don’t claim magic accuracy. The win we’re chasing is{" "}
-            <span className="font-semibold text-zinc-100">calibration and transparency</span>:
+            <span className="font-semibold text-zinc-100 light:text-zinc-900">calibration and transparency</span>:
             honest probabilities, every pick published before kickoff, and a
             complete public record — winners and losers — that anyone can audit.
             If the model develops a real edge, the track record will show it.
@@ -53,10 +53,10 @@ export default function Methodology() {
       n: "03",
       title: "How the backtest stays honest",
       list: [
-        [<span key="k" className="font-semibold text-zinc-100">Walk-forward:</span>, " games are processed in chronological order. Each prediction is made from ratings built only on games already played — the model never learns from the game it’s predicting."],
-        [<span key="k" className="font-semibold text-zinc-100">No line as input:</span>, " ratings come from final scores and play efficiency only."],
-        [<span key="k" className="font-semibold text-zinc-100">Closing lines as benchmark:</span>, " every historical pick is graded against the actual closing spread and total."],
-        [<span key="k" className="font-semibold text-zinc-100">Full history published:</span>, " all 45 seasons, not a cherry-picked hot streak. Code is open source."],
+        [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">Walk-forward:</span>, " games are processed in chronological order. Each prediction is made from ratings built only on games already played — the model never learns from the game it’s predicting."],
+        [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">No line as input:</span>, " ratings come from final scores and play efficiency only."],
+        [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">Closing lines as benchmark:</span>, " every historical pick is graded against the actual closing spread and total."],
+        [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">Full history published:</span>, " all 45 seasons, not a cherry-picked hot streak. Code is open source."],
       ],
     },
     {
@@ -73,31 +73,31 @@ export default function Methodology() {
 
   return (
     <div className="max-w-3xl">
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90">
-        <span className="h-px w-8 bg-amber-400/60" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
+        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
         How it works
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Method<span className="text-amber-400">ology</span>
+        Method<span className="text-amber-400 light:text-amber-600">ology</span>
       </h1>
-      <p className="mt-4 text-[15px] text-zinc-400">
+      <p className="mt-4 text-[15px] text-zinc-400 light:text-zinc-600">
         How the picks are made — and what we honestly claim about them.
       </p>
 
       {sections.map((s) => (
-        <section key={s.n} className="mt-8 rounded-2xl border border-white/10 bg-zinc-900/40 p-6 sm:p-8">
+        <section key={s.n} className="mt-8 rounded-2xl border border-white/10 bg-zinc-900/40 p-6 sm:p-8 light:border-zinc-200 light:bg-white">
           <div className="flex items-baseline gap-4">
-            <span className="tnum font-display text-lg font-semibold text-amber-400/80">{s.n}</span>
+            <span className="tnum font-display text-lg font-semibold text-amber-400/80 light:text-amber-700">{s.n}</span>
             <h2 className="font-display text-2xl font-semibold uppercase tracking-wide">{s.title}</h2>
           </div>
           {s.body && (
-            <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-zinc-300">{s.body}</div>
+            <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">{s.body}</div>
           )}
           {s.list && (
-            <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-zinc-300">
+            <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
               {s.list.map((item, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400/70" aria-hidden="true" />
+                  <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400/70 light:bg-amber-600" aria-hidden="true" />
                   <span>{item}</span>
                 </li>
               ))}
