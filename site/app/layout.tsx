@@ -27,8 +27,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={inter.className}>
       <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
         <header className="border-b border-zinc-800">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-            <Link href="/" className="flex items-baseline gap-2">
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-y-3 px-4 py-4">
+            <Link href="/" className="flex shrink-0 items-baseline gap-2">
               <span className="text-xl font-extrabold tracking-tight">
                 Honest<span className="text-amber-400">Line</span>
               </span>
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 NFL picks, tracked in public
               </span>
             </Link>
-            <nav className="flex gap-1">
+            <nav className="flex max-w-full gap-1 overflow-x-auto">
               <NavLink href="/">This week</NavLink>
               <NavLink href="/pick-em">Pick&apos;em</NavLink>
               <NavLink href="/track-record">Track record</NavLink>
