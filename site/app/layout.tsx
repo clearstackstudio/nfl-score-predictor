@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Barlow_Condensed } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import Nav from "./nav";
 import "./globals.css";
@@ -25,7 +26,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="page-glow">
           <header className="sticky top-0 z-40 border-b border-white/10 bg-zinc-950/85 backdrop-blur-md light:border-zinc-200 light:bg-white/85">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-y-3 px-4 py-3.5">
-              <Link href="/" className="flex shrink-0 items-baseline gap-2.5">
+              <Link href="/" className="flex shrink-0 items-center gap-2.5">
+                <Image
+                  src="/honest-line-mark.png"
+                  alt="Honest Line logo"
+                  width={36}
+                  height={36}
+                  className="h-9 w-9 rounded-lg"
+                />
                 <span className="font-display text-[26px] font-semibold uppercase leading-none tracking-wide">
                   Honest<span className="text-amber-400 light:text-amber-600">Line</span>
                 </span>
