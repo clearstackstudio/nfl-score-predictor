@@ -10,6 +10,7 @@ type Pick = {
   spread_edge: number; total_edge: number;
   pick_spread: "home" | "away" | null;
   pick_total: "over" | "under" | null;
+  pick_total_note: string | null;
   pick_spread_label: string | null;
   pick_total_label: string | null;
   cover_prob: number | null; ou_prob: number | null;
@@ -102,7 +103,7 @@ function MarketPanel({
   );
 }
 
-function PickStrip({ active, children }: { active: boolean; children: React.ReactNode }) {
+function PickStrip({ active, note, children }: { active: boolean; note?: string | null; children: React.ReactNode }) {
   if (active) {
     return (
       <div className="border-l-2 border-amber-400 bg-amber-400/[0.07] px-4 py-3">
@@ -115,7 +116,7 @@ function PickStrip({ active, children }: { active: boolean; children: React.Reac
   }
   return (
     <div className="px-4 py-2.5 text-[13px] text-zinc-600 light:text-zinc-500">
-      No play — we agree with Vegas here.
+      {note ?? "No play — we agree with Vegas here."}
     </div>
   );
 }
@@ -170,7 +171,7 @@ function GameCard({ p }: { p: Pick }) {
         edge={p.total_edge}
         edgeCaption="pts of disagreement"
         pick={
-          <PickStrip active={!!p.pick_total}>
+          <PickStrip active={!!p.pick_total} note={p.pick_total_note}>
             {p.pick_total ? ouPickText(p) : null}
           </PickStrip>
         }

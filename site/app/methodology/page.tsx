@@ -10,13 +10,25 @@ export default function Methodology() {
             built from play-by-play EPA (expected points added per play) over a
             trailing window of games, adjusted for schedule strength. A team
             that piles up EPA against bad defenses gets less credit than one
-            that does it against good ones.
+            that does it against good ones. Recent games count more than older
+            ones: a game&apos;s weight halves roughly every eight games, so a
+            Week 4 rating reflects this season far more than last.
           </p>
           <p>
             From those ratings the model generates its own spread and total for
-            each game, then compares them against the market line. Where our
-            number disagrees with Vegas by enough, we publish a pick with an
+            each game, then compares them against the market line. Totals also
+            account for pace — how many plays each team typically runs — because
+            points come from efficiency times opportunity. Where our number
+            disagrees with Vegas by enough, we publish a pick with an
             estimated cover probability.
+          </p>
+          <p>
+            Two guardrails keep the model honest with itself. Total
+            probabilities use their own calibrated noise model, not the
+            spread&apos;s. And when our number sits more than a touchdown off
+            the market, we publish no pick at all: extreme disagreement with
+            one of the sharpest markets in the world is more likely our error
+            than our edge.
           </p>
           <p>
             The betting line is <span className="font-semibold text-zinc-100 light:text-zinc-900">never</span> an

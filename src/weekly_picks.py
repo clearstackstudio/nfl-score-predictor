@@ -29,7 +29,11 @@ def normal_cdf(x: float) -> float:
     return 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
 
 
-MARGIN_SD = 13.5  # typical NFL std of (actual margin - predicted margin)
+MARGIN_SD = 14.2  # backtest RMSE of (actual margin - our margin), 2021-2024
+TOTAL_SD = 15.2   # backtest RMSE of (actual total - our total), 2021-2024
+TOTAL_CIRCUIT = 7.0  # |total_edge| beyond this is more likely model error than
+                     # edge (Thursday's 11.1pt miss); skip the pick instead of
+                     # publishing false confidence.
 
 
 def pick_spread_label(pick_side: str | None, line_margin: float,
@@ -72,7 +76,7 @@ def current_ratings(team_games: pd.DataFrame, season: int):
     """Ratings using every completed game, with prior-season carryover."""
     end_prev = len(team_games[team_games["season"] < season])
     if end_prev:
-        off_p, def_p = adjusted_ratings(team_games, end_prev, season - 1, {})
+        off_p, def_p, _ = adjusted_ratings(team_games, end_prev, season - 1, {})
         prior = {t: (0.5 * off_p[t], 0.5 * def_p[t]) for t in off_p}
     else:
         prior = {}
@@ -120,14 +124,6 @@ def build_parlay(picks: list[dict]) -> dict | None:
         "fair_odds": fair_american(combined),
         "book_pays": BOOK_PARLAY_PAYS[len(legs)],
     }
-    """Ratings using every completed game, with prior-season carryover."""
-    end_prev = len(team_games[team_games["season"] < season])
-    if end_prev:
-        off_p, def_p = adjusted_ratings(team_games, end_prev, season - 1, {})
-        prior = {t: (0.5 * off_p[t], 0.5 * def_p[t]) for t in off_p}
-    else:
-        prior = {}
-    return adjusted_ratings(team_games, len(team_games), season, prior)
 
 
 def validate_picks(picks: list[dict], parlay: dict | None) -> None:
@@ -176,8 +172,14 @@ def validate_picks(picks: list[dict], parlay: dict | None) -> None:
             assert abs(te) >= 1.0, "total pick below 1pt threshold"
             assert (te > 0) == (p["pick_total"] == "over"), "total pick wrong side"
             assert p["ou_prob"] is not None and 0.5 < p["ou_prob"] <= 1.0
+            assert not p.get("pick_total_note"), "picked total should not carry a skip note"
         else:
-            assert abs(te) < 1.0 and p["ou_prob"] is None
+            assert p["ou_prob"] is None
+            if p.get("pick_total_note"):
+                # circuit breaker: extreme disagreement, skipped deliberately
+                assert abs(te) > TOTAL_CIRCUIT, "skip note without extreme edge"
+            else:
+                assert abs(te) < 1.0, "missing total pick without reason"
 
     if parlay:
         assert 2 <= len(parlay["legs"]) <= 3, "parlay must have 2-3 legs"
@@ -197,7 +199,7 @@ def validate_picks(picks: list[dict], parlay: dict | None) -> None:
 
 def main() -> None:
     team_games = load_team_games([2021, 2022, 2023, 2024, 2025, 2026])
-    off, deff = current_ratings(team_games, SEASON)
+    off, deff, pace = current_ratings(team_games, SEASON)
 
     sched = pd.read_parquet(DATA / "schedules_games.parquet")
     played_weeks = sorted(
@@ -222,11 +224,15 @@ def main() -> None:
             continue
         exp_home_off = off[home] + deff[away]
         exp_away_off = off[away] + deff[home]
+        # Expected pace: average of the two teams' trailing plays/game.
+        # Totals = efficiency x pace, not efficiency x a league constant.
+        exp_plays = (pace.get(home, PLAYS_PER_GAME)
+                     + pace.get(away, PLAYS_PER_GAME)) / 2
         # All spreads expressed as HOME MARGIN: positive = home favored.
         # (nflverse spread_line already uses this convention.)
-        our_margin = (exp_home_off - exp_away_off) * PLAYS_PER_GAME + HOME_EDGE_PTS
+        our_margin = (exp_home_off - exp_away_off) * exp_plays + HOME_EDGE_PTS
         line_margin = float(g["spread_line"])
-        our_total = (exp_home_off + exp_away_off) * PLAYS_PER_GAME + epa_const
+        our_total = (exp_home_off + exp_away_off) * exp_plays + epa_const
         line_total = float(g["total_line"])
 
         spread_edge = our_margin - line_margin   # >0: we like home more than line
@@ -234,10 +240,19 @@ def main() -> None:
 
         pick_side = ("home" if spread_edge > 0 else "away") if abs(spread_edge) >= 0.5 else None
         pick_total = ("over" if total_edge > 0 else "under") if abs(total_edge) >= 1.0 else None
+        pick_total_note = None
+        if pick_total and abs(total_edge) > TOTAL_CIRCUIT:
+            # Extreme disagreement with an efficient market is more likely
+            # our error than our edge — skip instead of publishing
+            # false confidence.
+            pick_total = None
+            pick_total_note = ("No play — our number is too far from the "
+                               "market to trust.")
         # P(our picked side covers) = Phi(|edge| / sd): how far our number sits
-        # from the line, in units of typical game noise.
+        # from the line, in units of typical game noise. Totals use their own
+        # calibrated noise (TOTAL_SD), not the margin's.
         cover_prob = normal_cdf(abs(spread_edge) / MARGIN_SD)
-        ou_prob = normal_cdf(abs(total_edge) / MARGIN_SD)
+        ou_prob = normal_cdf(abs(total_edge) / TOTAL_SD)
 
         picks.append({
             "away": ABBR_TO_FULL.get(away, away),
@@ -254,6 +269,7 @@ def main() -> None:
             "total_edge": round(total_edge, 1),
             "pick_spread": pick_side,
             "pick_total": pick_total,
+            "pick_total_note": pick_total_note,
             "pick_spread_label": pick_spread_label(pick_side, line_margin, home, away),
             "pick_total_label": pick_total_label(pick_total, line_total),
             # Both sides' spread text, generator-owned, for the pick'em UI.

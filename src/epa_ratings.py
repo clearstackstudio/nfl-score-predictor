@@ -16,6 +16,7 @@ from __future__ import annotations
 import math
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 from backtest import load_games, closing_home_spread, fav_name  # noqa: F401
@@ -36,9 +37,14 @@ def week_int(w) -> int:
 PLAYS_PER_GAME = 63.0
 HOME_EDGE_PTS = 1.8
 WINDOW_GAMES = 17          # trailing games per team
-MIN_GAMES = 4              # below this, blend toward prior-season rating
+MIN_GAMES = 4              # below this effective sample, blend toward prior-season rating
 CARRYOVER = 0.5            # prior season weight at season start
 ADJ_ITERS = 25
+# Recency: a game's weight halves every RECENCY_HALF_LIFE games. Without
+# this, Week 4 ratings are ~80% last season (14 of 17 trailing games) —
+# which is how a total like 27.4 happens in a league averaging 46.
+RECENCY_HALF_LIFE = 8
+_RECENCY_DECAY = 0.5 ** (1.0 / RECENCY_HALF_LIFE)
 
 # nflverse abbr -> spreadspoke full name (2021-2024 era)
 ABBR_TO_FULL = {
@@ -99,39 +105,56 @@ def load_team_games(years: list[int] | None = None) -> pd.DataFrame:
 
 
 def adjusted_ratings(team_games: pd.DataFrame, upto_idx: int,
-                     season: int, prior: dict) -> tuple[dict, dict]:
+                     season: int, prior: dict) -> tuple[dict, dict, dict]:
     """Opponent-adjusted (off, def) EPA/play per team, relative to league
-    average, using only games before upto_idx. prior = last season's final
-    ratings for season-start blending."""
+    average, using only games before upto_idx. Games are time-decayed
+    (recent games count more); pace is the similarly-weighted trailing
+    offensive plays/game. prior = last season's final ratings for
+    season-start blending. Returns (off, deff, pace)."""
     hist = team_games.iloc[:upto_idx]
     hist = hist[hist["season"] >= season - 1]  # current + previous season
     recent = hist.groupby("team").tail(WINDOW_GAMES)
     if recent.empty:
-        return {}, {}
+        return {}, {}, {}
 
-    raw_off, raw_def, opps = {}, {}, {}
+    raw_off, raw_def, pace, opps, opp_w = {}, {}, {}, {}, {}
     for team, g in recent.groupby("team"):
-        raw_off[team] = g["off_epa_play"].mean()
-        raw_def[team] = g["def_epa_play"].mean()
-        opps[team] = list(g["opp"])
+        g = g.sort_values(["season", "week", "game_id"])
         n = len(g)
-        if n < MIN_GAMES and team in prior:
-            w = n / MIN_GAMES
-            raw_off[team] = w * raw_off[team] + (1 - w) * prior[team][0]
-            raw_def[team] = w * raw_def[team] + (1 - w) * prior[team][1]
+        # most recent game weight 1, older games decay
+        w = _RECENCY_DECAY ** np.arange(n - 1, -1, -1)
+        raw_off[team] = float(np.average(g["off_epa_play"], weights=w))
+        raw_def[team] = float(np.average(g["def_epa_play"], weights=w))
+        pace[team] = float(np.average(g["off_plays"], weights=w))
+        opps[team] = list(g["opp"])
+        opp_w[team] = list(w)
+        # Effective sample size shrinks under decay; blend toward the prior
+        # when there isn't much (decayed) information yet.
+        n_eff = w.sum() ** 2 / (w ** 2).sum()
+        if n_eff < MIN_GAMES and team in prior:
+            b = n_eff / MIN_GAMES
+            raw_off[team] = b * raw_off[team] + (1 - b) * prior[team][0]
+            raw_def[team] = b * raw_def[team] + (1 - b) * prior[team][1]
 
     lg_off = sum(raw_off.values()) / len(raw_off)
     lg_def = sum(raw_def.values()) / len(raw_def)
 
     # Single-step schedule correction (NOT iterated: iterating lets
     # off/def adjustments feed back into each other and blow up).
+    # Opponent contributions use the same time-decay weights.
     off, deff = {}, {}
     for t in raw_off:
-        opp_d = [raw_def[o] - lg_def for o in opps[t] if o in raw_def]
-        opp_o = [raw_off[o] - lg_off for o in opps[t] if o in raw_off]
-        off[t] = (raw_off[t] - lg_off) - (sum(opp_d) / len(opp_d) if opp_d else 0)
-        deff[t] = (raw_def[t] - lg_def) - (sum(opp_o) / len(opp_o) if opp_o else 0)
-    return off, deff
+        pairs_d = [(raw_def[o] - lg_def, wt)
+                   for o, wt in zip(opps[t], opp_w[t]) if o in raw_def]
+        pairs_o = [(raw_off[o] - lg_off, wt)
+                   for o, wt in zip(opps[t], opp_w[t]) if o in raw_off]
+        adj_d = (sum(v * wt for v, wt in pairs_d) / sum(wt for _, wt in pairs_d)
+                 if pairs_d else 0.0)
+        adj_o = (sum(v * wt for v, wt in pairs_o) / sum(wt for _, wt in pairs_o)
+                 if pairs_o else 0.0)
+        off[t] = (raw_off[t] - lg_off) - adj_d
+        deff[t] = (raw_def[t] - lg_def) - adj_o
+    return off, deff, pace
 
 
 def run_backtest() -> dict:
@@ -180,7 +203,7 @@ def run_backtest() -> dict:
         if not idxs:
             continue  # no play-by-play for this game (shouldn't happen)
         cutoff = idxs[0]
-        off, deff = adjusted_ratings(team_games, cutoff, season, prior)
+        off, deff, pace = adjusted_ratings(team_games, cutoff, season, prior)
         if home not in off or away not in off:
             continue  # cold start, skip
 
@@ -189,14 +212,17 @@ def run_backtest() -> dict:
         exp_home_off = off[home] + deff[away]
         exp_away_off = off[away] + deff[home]
         edge_pts = 0.0 if neutral else HOME_EDGE_PTS
+        # Expected pace: average of the two teams' trailing plays/game.
+        exp_plays = (pace.get(home, PLAYS_PER_GAME)
+                     + pace.get(away, PLAYS_PER_GAME)) / 2
         # Margin ~= net EPA differential: both teams start drives with roughly
         # the same expected points, so drive-start EP cancels out.
-        our_margin = (exp_home_off - exp_away_off) * PLAYS_PER_GAME + edge_pts
+        our_margin = (exp_home_off - exp_away_off) * exp_plays + edge_pts
         # Total ~= combined offensive EPA + typical drive-start EP per game.
         # Empirically combined offensive EPA ≈ 0 (both teams' drive-start
         # expected points roughly cancel), so the constant ≈ avg total.
         epa_const = (sum(epa_const_hist) / len(epa_const_hist)) if epa_const_hist else 46.0
-        our_total = (exp_home_off + exp_away_off) * PLAYS_PER_GAME + epa_const
+        our_total = (exp_home_off + exp_away_off) * exp_plays + epa_const
 
         actual_margin = float(row["score_home"]) - float(row["score_away"])
         actual_total = float(row["score_home"]) + float(row["score_away"])
@@ -233,7 +259,7 @@ def run_backtest() -> dict:
         epa_const_hist.append(actual_total - game_epa)
 
         # learn: refresh season-final ratings including this game
-        off2, def2 = adjusted_ratings(team_games, idxs[-1] + 1, season, prior)
+        off2, def2, _pace = adjusted_ratings(team_games, idxs[-1] + 1, season, prior)
         season_final = {t: (off2[t], def2[t]) for t in off2}
 
     decided = ats[0] + ats[1]

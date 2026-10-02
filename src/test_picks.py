@@ -6,12 +6,14 @@ and the pick is New England) fails here instead of on the website.
 """
 from weekly_picks import (
     BOOK_PARLAY_PAYS,
+    TOTAL_CIRCUIT,
     build_parlay,
     fair_american,
     pick_spread_label,
     pick_total_label,
     validate_picks,
 )
+from epa_ratings import adjusted_ratings
 
 passed = failed = 0
 
@@ -96,6 +98,55 @@ try:
     print("FAIL validator did not catch wrong-side pick")
 except AssertionError:
     passed += 1
+
+# --- circuit breaker: extreme total disagreement -> skipped with a note ---
+cb = mk("KC", "LV", -3.0, 45.0, -3.0, 45.0 + TOTAL_CIRCUIT + 1.5)
+cb["pick_total"] = None
+cb["pick_total_note"] = "No play — our number is too far from the market to trust."
+cb["pick_total_label"] = None
+cb["ou_prob"] = None
+try:
+    validate_picks([cb], build_parlay([cb]))
+    passed += 1
+except AssertionError as e:
+    failed += 1
+    print(f"FAIL validator rejected circuit-breaker skip: {e}")
+
+# Same extreme edge but no note -> must fail (a missing pick needs a reason).
+cb2 = dict(cb)
+cb2["pick_total_note"] = None
+try:
+    validate_picks([cb2], build_parlay([cb2]))
+    failed += 1
+    print("FAIL validator allowed missing total pick without note")
+except AssertionError:
+    passed += 1
+
+# --- recency weighting: same games, different order -> different rating ---
+import pandas as pd
+
+def rating_frame(aaa_off):
+    rows = []
+    gid = 0
+    for i, epa in enumerate(aaa_off):
+        gid += 1
+        rows.append({"season": 2026, "week": i + 1, "game_id": gid, "team": "AAA",
+                     "off_epa_play": epa, "def_epa_play": 0.0, "off_plays": 60 + i,
+                     "opp": "BBB"})
+        rows.append({"season": 2026, "week": i + 1, "game_id": gid, "team": "BBB",
+                     "off_epa_play": 0.0, "def_epa_play": 0.0, "off_plays": 63,
+                     "opp": "AAA"})
+    return pd.DataFrame(rows)
+
+off_up, _, pace_up = adjusted_ratings(rating_frame([-0.2, -0.2, -0.2, 0.4]), 8, 2026, {})
+off_down, _, pace_down = adjusted_ratings(rating_frame([0.4, -0.2, -0.2, -0.2]), 8, 2026, {})
+# Identical game sets, only order differs: flat means would rate them equal.
+check("recency favors the hot finish", off_up["AAA"] > off_down["AAA"], True)
+
+# Pace is recency-weighted: plays rise 60->63, so the weighted pace must sit
+# above the flat mean (61.5) and below the most recent game (63).
+check("pace recency-weighted", 61.5 < pace_up["AAA"] < 63.0, True)
+check("pace BBB flat", abs(pace_up["BBB"] - 63.0) < 1e-9, True)
 
 print(f"{passed} passed, {failed} failed")
 raise SystemExit(1 if failed else 0)
