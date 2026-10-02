@@ -104,6 +104,111 @@ def load_team_games(years: list[int] | None = None) -> pd.DataFrame:
     return tg.sort_values(["season", "week", "game_id"]).reset_index(drop=True)
 
 
+def load_qb_plays(years: list[int] | None = None) -> pd.DataFrame:
+    """One row per QB dropback (pass attempt or sack), with passer EPA."""
+    years = years or PBP_YEARS
+    frames = []
+    for year in years:
+        pbp = pd.read_parquet(
+            DATA / f"play_by_play_{year}.parquet",
+            columns=["game_id", "week", "season", "posteam", "passer",
+                     "passer_id", "pass_attempt", "sack", "epa"],
+        )
+        q = pbp[pbp["passer_id"].notna() & pbp["epa"].notna()
+                & ((pbp["pass_attempt"] == 1) | (pbp["sack"] == 1))]
+        frames.append(
+            q[["game_id", "week", "season", "posteam", "passer_id", "epa"]])
+    qb = pd.concat(frames, ignore_index=True)
+    return qb.sort_values(["season", "week", "game_id"]).reset_index(drop=True)
+
+
+# How much of a QB's EPA edge over the QBs who generated the team's rating
+# carries into team offensive EPA/play. Pass plays are ~55% of offense, and
+# part of a QB's number is scheme/support, so this is well below 1.
+QB_IMPACT = 0.35
+# Regression strength for QB EPA/play (dropbacks).
+QB_PRIOR_ATT = 150
+# If the starter took more than this share of the window's dropbacks,
+# treat it as "no change" rather than noise.
+QB_SAME_THRESHOLD = 0.85
+# Sanity cap: no single QB change is worth more than ~3 points.
+QB_MAX_ADJ = 0.05
+
+
+def _decayed_mean(values, n):
+    w = _RECENCY_DECAY ** np.arange(n - 1, -1, -1)
+    return float(np.average(values, weights=w))
+
+
+def qb_adjustments(qb_plays: pd.DataFrame, team_games: pd.DataFrame,
+                   upto_idx: int, season: int,
+                   matchups: list[tuple]) -> dict:
+    """EPA/play bump per team for a QB change.
+
+    matchups: (home_abbr, away_abbr, home_qb_id, away_qb_id). QB ids are
+    nflverse GSIS ids (match the schedule's home_qb_id). Returns
+    {team_abbr: adj}; 0 when the starter is unknown or effectively unchanged.
+    """
+    tg = team_games.iloc[:upto_idx]
+    # Leakage-safe cutoff: only QB plays from games already in team_games
+    # (row-based, like the ratings). A (season, week) cutoff would leak the
+    # very game being predicted, since the parquet holds full seasons.
+    allowed_games = set(tg["game_id"])
+    qp = qb_plays[qb_plays["game_id"].isin(allowed_games)]
+    tg = tg[tg["season"] >= season - 1]
+    if tg.empty:
+        return {}
+    lg_mean = float(qp["epa"].mean()) if len(qp) else 0.0
+
+    # Trailing window game_ids per team (same window as the ratings).
+    windows: dict[str, list] = {}
+    for team, g in tg.groupby("team"):
+        g = g.sort_values(["season", "week", "game_id"])
+        windows[team] = list(g.tail(WINDOW_GAMES)["game_id"])
+
+    adj: dict[str, float] = {}
+    for home, away, home_qb, away_qb in matchups:
+        for team, qb_id in ((home, home_qb), (away, away_qb)):
+            adj[team] = _qb_adj_for_team(qp, windows.get(team, []), team,
+                                         qb_id, lg_mean)
+    return adj
+
+
+def _qb_adj_for_team(qp: pd.DataFrame, game_ids: list, team: str,
+                     qb_id, lg_mean: float) -> float:
+    if not game_ids or qb_id is None or (isinstance(qb_id, float) and np.isnan(qb_id)):
+        return 0.0
+    qb_id = str(qb_id)
+    # Window dropbacks thrown FOR this team, in these games.
+    wq = qp[qp["game_id"].isin(game_ids) & (qp["posteam"] == team)].copy()
+    if wq.empty:
+        return 0.0
+    n_win = len(wq)
+    # No change: the starter threw almost all of the window's passes.
+    if (wq["passer_id"] == qb_id).mean() >= QB_SAME_THRESHOLD:
+        return 0.0
+    # Per-game QB EPA/play, decay-weighted BY GAME (consistent with the
+    # team ratings). Weighting by dropback would let one bad recent
+    # relief appearance dominate the whole window.
+    order = {gid: i for i, gid in enumerate(game_ids)}
+    wq["gw"] = wq["game_id"].map(
+        lambda g: _RECENCY_DECAY ** (len(game_ids) - 1 - order[g]))
+    win_epa = float(np.average(wq["epa"], weights=wq["gw"]))
+    win_rel = (win_epa - lg_mean) * n_win / (n_win + QB_PRIOR_ATT)
+
+    # Starter's own trailing form (any team), most recent 400 dropbacks.
+    sq = qp[qp["passer_id"] == qb_id].sort_values(["season", "week", "game_id"])
+    sq = sq.tail(400)
+    n_st = len(sq)
+    if n_st == 0:
+        return 0.0
+    st_epa = _decayed_mean(sq["epa"].to_numpy(), n_st)
+    st_rel = (st_epa - lg_mean) * n_st / (n_st + QB_PRIOR_ATT)
+
+    adj = QB_IMPACT * (st_rel - win_rel)
+    return float(np.clip(adj, -QB_MAX_ADJ, QB_MAX_ADJ))
+
+
 def adjusted_ratings(team_games: pd.DataFrame, upto_idx: int,
                      season: int, prior: dict) -> tuple[dict, dict, dict]:
     """Opponent-adjusted (off, def) EPA/play per team, relative to league
@@ -159,6 +264,13 @@ def adjusted_ratings(team_games: pd.DataFrame, upto_idx: int,
 
 def run_backtest() -> dict:
     team_games = load_team_games()
+    qb_plays = load_qb_plays()
+    sched_qb = pd.read_parquet(
+        DATA / "schedules_games.parquet",
+        columns=["season", "week", "home_team", "away_team",
+                 "home_qb_id", "away_qb_id"])
+    qb_lookup = {(int(r.season), int(r.week), r.home_team, r.away_team):
+                 (r.home_qb_id, r.away_qb_id) for r in sched_qb.itertuples()}
     games = load_games()
     games = games[games["schedule_season"].isin(PBP_YEARS)].copy()
     games["home_abbr"] = games["team_home"].map(
@@ -209,8 +321,12 @@ def run_backtest() -> dict:
 
         # Expected offensive EPA/play per side. A generous defense (positive
         # deff = allows above-average EPA) ADDS to the opponent's expectation.
-        exp_home_off = off[home] + deff[away]
-        exp_away_off = off[away] + deff[home]
+        # QB change bump: 0 when the starter is unknown or unchanged.
+        hq, aq = qb_lookup.get(key, (None, None))
+        qadj = qb_adjustments(qb_plays, team_games, cutoff, season,
+                              [(home, away, hq, aq)])
+        exp_home_off = off[home] + deff[away] + qadj.get(home, 0.0)
+        exp_away_off = off[away] + deff[home] + qadj.get(away, 0.0)
         edge_pts = 0.0 if neutral else HOME_EDGE_PTS
         # Expected pace: average of the two teams' trailing plays/game.
         exp_plays = (pace.get(home, PLAYS_PER_GAME)

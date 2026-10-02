@@ -148,5 +148,37 @@ check("recency favors the hot finish", off_up["AAA"] > off_down["AAA"], True)
 check("pace recency-weighted", 61.5 < pace_up["AAA"] < 63.0, True)
 check("pace BBB flat", abs(pace_up["BBB"] - 63.0) < 1e-9, True)
 
+# --- QB adjustments ---
+from epa_ratings import qb_adjustments
+
+def qb_frames():
+    tg_rows, qb_rows = [], []
+    gid = 0
+    for wk in (1, 2):
+        gid += 1
+        for team, opp in (("AAA", "BBB"), ("BBB", "AAA")):
+            tg_rows.append({"season": 2026, "week": wk, "game_id": gid,
+                            "team": team, "off_epa_play": 0.0,
+                            "def_epa_play": 0.0, "off_plays": 60, "opp": opp})
+        # QB1 throws all of AAA's passes, badly; QB2 stars elsewhere
+        for _ in range(30):
+            qb_rows.append({"game_id": gid, "week": wk, "season": 2026,
+                            "posteam": "AAA", "passer_id": "QB1", "epa": -0.2})
+            qb_rows.append({"game_id": gid, "week": wk, "season": 2026,
+                            "posteam": "BBB", "passer_id": "QB2", "epa": 0.2})
+    return pd.DataFrame(tg_rows), pd.DataFrame(qb_rows)
+
+_tg, _qp = qb_frames()
+# Backup QB2 (great) replaces QB1 (bad) for AAA -> positive bump.
+adj = qb_adjustments(_qp, _tg, len(_tg), 2026, [("BBB", "AAA", "QB2", "QB2")])
+check("qb change bumps offense", adj["AAA"] > 0.01, True)
+check("qb unchanged team ~0", abs(adj["BBB"]) < 1e-9, True)
+# Same starter as the window -> exactly 0.
+adj2 = qb_adjustments(_qp, _tg, len(_tg), 2026, [("BBB", "AAA", "QB2", "QB1")])
+check("qb same starter -> 0", adj2["AAA"] == 0.0, True)
+# Unknown starter -> 0.
+adj3 = qb_adjustments(_qp, _tg, len(_tg), 2026, [("BBB", "AAA", None, "QB2")])
+check("qb unknown home -> 0", adj3["BBB"] == 0.0, True)
+
 print(f"{passed} passed, {failed} failed")
 raise SystemExit(1 if failed else 0)

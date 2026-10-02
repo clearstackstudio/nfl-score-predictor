@@ -23,8 +23,12 @@ export default function Methodology() {
             estimated cover probability.
           </p>
           <p>
-            Two guardrails keep the model honest with itself. Total
-            probabilities use their own calibrated noise model, not the
+            Two guardrails keep the model honest with itself. Quarterback
+            changes are adjusted for explicitly: when the announced starter
+            differs from the passers who produced a team&apos;s trailing
+            numbers, the offensive rating shifts by a regressed measure of the
+            gap — no adjustment when the same quarterback keeps playing.
+            Total probabilities use their own calibrated noise model, not the
             spread&apos;s. And when our number sits more than a touchdown off
             the market, we publish no pick at all: extreme disagreement with
             one of the sharpest markets in the world is more likely our error

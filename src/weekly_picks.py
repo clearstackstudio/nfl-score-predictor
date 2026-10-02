@@ -18,7 +18,7 @@ import pandas as pd
 
 from epa_ratings import (
     ABBR_TO_FULL, HOME_EDGE_PTS, PLAYS_PER_GAME, REPO, adjusted_ratings,
-    load_team_games,
+    load_qb_plays, load_team_games, qb_adjustments,
 )
 
 DATA = REPO / "data"
@@ -29,8 +29,8 @@ def normal_cdf(x: float) -> float:
     return 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
 
 
-MARGIN_SD = 14.2  # backtest RMSE of (actual margin - our margin), 2021-2024
-TOTAL_SD = 15.2   # backtest RMSE of (actual total - our total), 2021-2024
+MARGIN_SD = 14.5  # backtest RMSE of (actual margin - our margin), 2021-2024
+TOTAL_SD = 15.4   # backtest RMSE of (actual total - our total), 2021-2024
 TOTAL_CIRCUIT = 7.0  # |total_edge| beyond this is more likely model error than
                      # edge (Thursday's 11.1pt miss); skip the pick instead of
                      # publishing false confidence.
@@ -70,6 +70,47 @@ def fair_american(p: float) -> str:
 
 # What US books typically pay on a standard parlay (varies by book).
 BOOK_PARLAY_PAYS = {2: "+260", 3: "+600"}
+
+
+def _norm_qb_name(nm: str) -> str:
+    nm = nm.lower().replace(".", "")
+    for suf in (" jr", " sr", " ii", " iii", " iv", " v"):
+        if nm.endswith(suf):
+            nm = nm[: -len(suf)]
+    return nm.strip()
+
+
+def load_qb_overrides(season: int, week: int) -> dict:
+    """Manual starter overrides for mid-week QB news.
+
+    data/qb_overrides.json: {"season": 2026, "week": 5,
+                             "starters": {"PIT": "Aaron Rodgers"}}.
+    Returns {team_abbr: qb_gsis_id}. Empty when the file is absent or stale.
+    """
+    p = DATA / "qb_overrides.json"
+    if not p.exists():
+        return {}
+    cfg = json.loads(p.read_text())
+    if cfg.get("season") != season or cfg.get("week") != week:
+        print(f"qb_overrides: stale (for {cfg.get('season')} W{cfg.get('week')}), ignoring")
+        return {}
+    sched = pd.read_parquet(
+        DATA / "schedules_games.parquet",
+        columns=["home_qb_name", "home_qb_id", "away_qb_name", "away_qb_id"])
+    name_to_id: dict[str, str] = {}
+    for r in sched.itertuples():
+        for nm, i in ((r.home_qb_name, r.home_qb_id),
+                      (r.away_qb_name, r.away_qb_id)):
+            if nm and i == i:
+                name_to_id[_norm_qb_name(nm)] = str(i)
+    out = {}
+    for team, name in cfg.get("starters", {}).items():
+        qid = name_to_id.get(_norm_qb_name(name))
+        if qid:
+            out[team] = qid
+        else:
+            print(f"qb_overrides: no GSIS id for {name!r}, skipping")
+    return out
 
 
 def current_ratings(team_games: pd.DataFrame, season: int):
@@ -200,6 +241,7 @@ def validate_picks(picks: list[dict], parlay: dict | None) -> None:
 def main() -> None:
     team_games = load_team_games([2021, 2022, 2023, 2024, 2025, 2026])
     off, deff, pace = current_ratings(team_games, SEASON)
+    qb_plays = load_qb_plays([2021, 2022, 2023, 2024, 2025, 2026])
 
     sched = pd.read_parquet(DATA / "schedules_games.parquet")
     played_weeks = sorted(
@@ -208,6 +250,19 @@ def main() -> None:
     upcoming = sched[(sched["season"] == SEASON)
                      & (sched["week"] == next_week)].copy()
     upcoming = upcoming[upcoming["spread_line"].notna()]
+
+    # QB adjustments: schedule QBs, with manual overrides for mid-week news.
+    qb_over = load_qb_overrides(SEASON, next_week)
+    matchups = []
+    for _, g in upcoming.sort_values("gameday").iterrows():
+        hq = qb_over.get(g["home_team"])
+        if not hq and pd.notna(g["home_qb_id"]):
+            hq = str(g["home_qb_id"])
+        aq = qb_over.get(g["away_team"])
+        if not aq and pd.notna(g["away_qb_id"]):
+            aq = str(g["away_qb_id"])
+        matchups.append((g["home_team"], g["away_team"], hq, aq))
+    qadj = qb_adjustments(qb_plays, team_games, len(team_games), SEASON, matchups)
 
     # EPA->points constant: combined offensive EPA/game ≈ 0, so the constant
     # is just the trailing average total. Calibrate on completed games.
@@ -222,8 +277,8 @@ def main() -> None:
         home, away = g["home_team"], g["away_team"]
         if home not in off or away not in off:
             continue
-        exp_home_off = off[home] + deff[away]
-        exp_away_off = off[away] + deff[home]
+        exp_home_off = off[home] + deff[away] + qadj.get(home, 0.0)
+        exp_away_off = off[away] + deff[home] + qadj.get(away, 0.0)
         # Expected pace: average of the two teams' trailing plays/game.
         # Totals = efficiency x pace, not efficiency x a league constant.
         exp_plays = (pace.get(home, PLAYS_PER_GAME)
@@ -267,6 +322,8 @@ def main() -> None:
             "our_total": round(our_total, 1),
             "spread_edge": round(spread_edge, 1),
             "total_edge": round(total_edge, 1),
+            "qb_adj_home": round(qadj.get(home, 0.0) * exp_plays, 1),
+            "qb_adj_away": round(qadj.get(away, 0.0) * exp_plays, 1),
             "pick_spread": pick_side,
             "pick_total": pick_total,
             "pick_total_note": pick_total_note,
