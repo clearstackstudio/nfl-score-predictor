@@ -32,8 +32,12 @@ export default function Methodology() {
             about a point for every mph of forecast wind above 10 (capped at
             8), because the 2021–24 backtest showed our totals running ~7
             points hot in 15–20 mph wind. Domes and retractable roofs get no
-            adjustment. Total probabilities use their own calibrated noise
-            model, not the spread&apos;s. And when our number sits more than a touchdown off
+            wind adjustment (there&apos;s no wind inside). Total probabilities use their own calibrated noise
+            model, not the spread&apos;s. Indoor games get +3 points on our
+            total: the 2021–24 backtest showed domes and retractable roofs
+            scoring about 3 points higher than the model expected, consistently
+            across all four seasons — perfect conditions and a fast track.
+            And when our number sits more than a touchdown off
             the market, we publish no pick at all: extreme disagreement with
             one of the sharpest markets in the world is more likely our error
             than our edge.

@@ -100,3 +100,22 @@ def _at_kickoff(winds: list[tuple[str, float]],
         if t[:16] <= kickoff_iso and w is not None:
             best = float(w)
     return best
+
+
+INDOOR_TOTAL_ADJ = 3.0
+
+
+def indoor_total_adjustment(home_team: str) -> float:
+    """Points to add to our total for indoor games.
+
+    Calibrated 2026-10-02 on walk-forward 2021-2024 totals (leakage-safe,
+    wind hinge already applied): indoor games (dome + retractable, via
+    is_outdoor()) scored E[actual_total - our_total] = +3.13, stable all
+    four seasons (+2.37/+4.26/+3.60/+2.22, n=329, t ~= 3.6). Perfect
+    conditions / fast track systematically beat the model. Outdoor games
+    and unknown stadiums: 0.
+    """
+    s = STADIUMS.get(home_team)
+    if s is None or s[2] == "outdoor":
+        return 0.0
+    return INDOOR_TOTAL_ADJ

@@ -20,7 +20,8 @@ from epa_ratings import (
     ABBR_TO_FULL, HOME_EDGE_PTS, PLAYS_PER_GAME, REPO, adjusted_ratings,
     load_qb_plays, load_team_games, qb_adjustments,
 )
-from weather import fetch_kickoff_winds, wind_total_adjustment
+from weather import (fetch_kickoff_winds, indoor_total_adjustment,
+                     wind_total_adjustment)
 
 DATA = REPO / "data"
 SEASON = 2026
@@ -301,6 +302,11 @@ def main() -> None:
         wind_mph = kickoff_winds.get((home, str(g["gameday"])))
         wind_adj = wind_total_adjustment(wind_mph, home)
         our_total += wind_adj
+        # Indoor adjustment: domes / retractable roofs play ~3 pts higher
+        # than the model expects (perfect conditions, fast track).
+        # Calibrated 2026-10-02 on 2021-2024 walk-forward totals.
+        indoor_adj = indoor_total_adjustment(home)
+        our_total += indoor_adj
         line_total = float(g["total_line"])
 
         spread_edge = our_margin - line_margin   # >0: we like home more than line
@@ -339,6 +345,7 @@ def main() -> None:
             "qb_adj_away": round(qadj.get(away, 0.0) * exp_plays, 1),
             "wind_mph": round(wind_mph) if wind_mph is not None else None,
             "wind_adj_pts": round(wind_adj, 1),
+            "indoor_adj_pts": round(indoor_adj, 1),
             "pick_spread": pick_side,
             "pick_total": pick_total,
             "pick_total_note": pick_total_note,

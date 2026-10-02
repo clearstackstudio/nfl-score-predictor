@@ -13,7 +13,7 @@ from weekly_picks import (
     pick_total_label,
     validate_picks,
 )
-from weather import wind_total_adjustment
+from weather import indoor_total_adjustment, wind_total_adjustment
 from epa_ratings import adjusted_ratings
 
 passed = failed = 0
@@ -190,6 +190,12 @@ check("wind 25 -> -8 cap", wind_total_adjustment(25.0, "BUF"), -8.0)
 check("wind dome -> 0", wind_total_adjustment(25.0, "DET"), 0.0)
 check("wind retractable -> 0", wind_total_adjustment(25.0, "DAL"), 0.0)
 check("wind unknown -> 0", wind_total_adjustment(None, "BUF"), 0.0)
+
+# --- indoor adjustment: +3.0 for dome/retractable, 0 for outdoor/unknown ---
+check("indoor dome -> +3", indoor_total_adjustment("DET"), 3.0)
+check("indoor retractable -> +3", indoor_total_adjustment("DAL"), 3.0)
+check("indoor outdoor -> 0", indoor_total_adjustment("BUF"), 0.0)
+check("indoor unknown -> 0", indoor_total_adjustment("XXX"), 0.0)
 
 print(f"{passed} passed, {failed} failed")
 raise SystemExit(1 if failed else 0)
