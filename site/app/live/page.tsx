@@ -231,8 +231,8 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
               {/* Score header */}
               <div className="flex items-center justify-between rounded-2xl border border-white/20 bg-zinc-800/90 p-5 shadow-lg shadow-black/30 light:border-zinc-200 light:bg-white light:shadow-zinc-300/40">
                 {[
-                  { abbr: detail.game.awayAbbr, name: detail.game.awayName, score: detail.game.awayScore, logo: detail.game.awayLogo },
-                  { abbr: detail.game.homeAbbr, name: detail.game.homeName, score: detail.game.homeScore, logo: detail.game.homeLogo },
+                  { abbr: detail.game.awayAbbr, name: detail.game.awayName, score: detail.game.awayScore, logo: games?.find((g) => g.id === selectedId)?.awayLogo || detail.game.awayLogo },
+                  { abbr: detail.game.homeAbbr, name: detail.game.homeName, score: detail.game.homeScore, logo: games?.find((g) => g.id === selectedId)?.homeLogo || detail.game.homeLogo },
                 ].map((t, i) => (
                   <div key={t.abbr} className={`flex flex-1 items-center gap-3 ${i === 1 ? "flex-row-reverse text-right" : ""}`}>
                     <TeamMark logo={t.logo} abbr={t.abbr} size={48} />
