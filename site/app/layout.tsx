@@ -69,7 +69,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ["Pick'em game", "/pick-em"],
                   ["NFL track record", "/track-record"],
                   ["College track record", "/cfb/track-record"],
-                  ["Methodology", "/methodology"],
                 ].map(([label, href]) => (
                   <li key={href}>
                     <Link href={href} className="text-zinc-400 transition hover:text-white light:text-zinc-600 light:hover:text-zinc-900">

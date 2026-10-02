@@ -16,7 +16,6 @@ const NAV_ITEMS = [
   { slug: "/live", label: "Live", liveDot: true },
   { slug: "/pick-em", label: "Pick'em" },
   { slug: "/track-record", label: "Track record" },
-  { slug: "/methodology", label: "Methodology" },
 ];
 
 function leagueOf(pathname: string): LeagueId {
