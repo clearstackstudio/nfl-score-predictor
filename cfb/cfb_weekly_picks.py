@@ -38,6 +38,13 @@ def fair_american(p: float) -> str:
 
 BOOK_PARLAY_PAYS = {2: "+260", 3: "+600"}
 
+# Total circuit breaker (same idea as the NFL model): if our total is more
+# than this many points from the market total, publish no total pick. An
+# extreme disagreement is more likely our model being wrong than the market
+# being wrong. Scaled from the NFL's 7.0 by the backtest total residual SD
+# (18.71 vs 15.4).
+TOTAL_CIRCUIT = 8.5
+
 
 def _gameday_et(start: str) -> dict:
     """Map CFBD's UTC startDate to the US-Eastern calendar date + weekday.
@@ -76,7 +83,7 @@ def pick_total_label(pick_total, line_total):
 def current_ratings(team_games: pd.DataFrame, season: int):
     end_prev = len(team_games[team_games["season"] < season])
     if end_prev:
-        off_p, def_p = adjusted_ratings(team_games, end_prev, season - 1, {})
+        off_p, def_p, _ = adjusted_ratings(team_games, end_prev, season - 1, {})
         prior = {t: (CARRYOVER * off_p[t], CARRYOVER * def_p[t]) for t in off_p}
     else:
         prior = {}
@@ -144,7 +151,7 @@ def fetch_upcoming_week(season: int):
 
 def main() -> None:
     team_games = load_team_games()
-    off, deff = current_ratings(team_games, SEASON)
+    off, deff, pace = current_ratings(team_games, SEASON)
     verify_spread_convention()
     sign = RAW_SPREAD_SIGN
 
@@ -178,7 +185,7 @@ def main() -> None:
             continue
         line_margin = sign * statistics.median(spreads)
         line_total = statistics.median(totals)
-        pr = predict(off, deff, home, away, bool(g.get("neutralSite")), epa_const)
+        pr = predict(off, deff, pace, home, away, bool(g.get("neutralSite")), epa_const)
         if pr is None:
             continue
         our_margin, our_total = pr
@@ -190,6 +197,16 @@ def main() -> None:
             if abs(total_edge) >= 1.0 else None
         cover_prob = normal_cdf(abs(spread_edge) / margin_sd)
         ou_prob = normal_cdf(abs(total_edge) / total_sd)
+
+        # Total circuit breaker: extreme disagreement with the market is a
+        # model-error signal, not an edge. Suppress the pick but still show
+        # both numbers so the disagreement is visible.
+        total_note = None
+        if pick_total and abs(total_edge) > TOTAL_CIRCUIT:
+            pick_total = None
+            ou_prob = None
+            total_note = ("No play — our total is too far from the market "
+                          "to trust.")
         picks.append({
             "away": away, "home": home,
             "away_abbr": away, "home_abbr": home,
@@ -207,6 +224,7 @@ def main() -> None:
             "pick_total": pick_total,
             "pick_spread_label": pick_spread_label(pick_side, line_margin, home, away),
             "pick_total_label": pick_total_label(pick_total, line_total),
+            "pick_total_note": total_note,
             "spread_labels": {
                 "home": pick_spread_label("home", line_margin, home, away),
                 "away": pick_spread_label("away", line_margin, home, away),

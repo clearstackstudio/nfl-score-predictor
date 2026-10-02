@@ -13,6 +13,7 @@ from weekly_picks import (
     pick_total_label,
     validate_picks,
 )
+from weather import wind_total_adjustment
 from epa_ratings import adjusted_ratings
 
 passed = failed = 0
@@ -179,6 +180,16 @@ check("qb same starter -> 0", adj2["AAA"] == 0.0, True)
 # Unknown starter -> 0.
 adj3 = qb_adjustments(_qp, _tg, len(_tg), 2026, [("BBB", "AAA", None, "QB2")])
 check("qb unknown home -> 0", adj3["BBB"] == 0.0, True)
+
+# --- wind adjustment: hinge at 10 mph, -1 pt/mph, cap -8, outdoor only ---
+check("wind calm -> 0", wind_total_adjustment(5.0, "BUF"), 0.0)
+check("wind 10 -> 0", wind_total_adjustment(10.0, "BUF"), 0.0)
+check("wind 13 -> -3", wind_total_adjustment(13.0, "BUF"), -3.0)
+check("wind 18 -> -8 cap", wind_total_adjustment(18.0, "BUF"), -8.0)
+check("wind 25 -> -8 cap", wind_total_adjustment(25.0, "BUF"), -8.0)
+check("wind dome -> 0", wind_total_adjustment(25.0, "DET"), 0.0)
+check("wind retractable -> 0", wind_total_adjustment(25.0, "DAL"), 0.0)
+check("wind unknown -> 0", wind_total_adjustment(None, "BUF"), 0.0)
 
 print(f"{passed} passed, {failed} failed")
 raise SystemExit(1 if failed else 0)

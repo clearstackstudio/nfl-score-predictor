@@ -22,6 +22,7 @@ from __future__ import annotations
 import math
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 REPO = Path(__file__).resolve().parent.parent
@@ -32,6 +33,9 @@ HOME_EDGE_PTS = 2.8
 WINDOW_GAMES = 12
 MIN_GAMES = 4
 CARRYOVER = 0.4
+# Recency: a game's weight halves every 8 games (same as the NFL model).
+RECENCY_HALF_LIFE = 8
+_RECENCY_DECAY = 0.5 ** (1.0 / RECENCY_HALF_LIFE)
 
 
 def load_team_games() -> pd.DataFrame:
@@ -47,7 +51,7 @@ def load_team_games() -> pd.DataFrame:
             off = r[f"{side}_off_ppa"]
             dfn = r[f"{side}_def_ppa"]
             plays = r[f"{side}_plays"]
-            if pd.isna(off) or pd.isna(dfn) or not plays:
+            if pd.isna(off) or pd.isna(dfn) or pd.isna(plays) or not plays:
                 continue
             rows.append({
                 "game_id": r["game_id"],
@@ -58,6 +62,7 @@ def load_team_games() -> pd.DataFrame:
                 "opp": r[f"{opp_side}_team"],
                 "off_ppa_play": float(off),
                 "def_ppa_play": float(dfn),
+                "plays": int(plays),
                 "neutral": bool(r["neutral"]),
             })
     tg = pd.DataFrame(rows)
@@ -65,25 +70,32 @@ def load_team_games() -> pd.DataFrame:
 
 
 def adjusted_ratings(team_games: pd.DataFrame, upto_idx: int,
-                     season: int, prior: dict) -> tuple[dict, dict]:
+                     season: int, prior: dict) -> tuple[dict, dict, dict]:
     """Opponent-adjusted (off, def) PPA/play per team vs league average,
-    using only games before upto_idx. prior = last season's final ratings."""
+    using only games before upto_idx. Games are time-decayed (recent count
+    more); pace is the similarly-weighted trailing plays/game.
+    prior = last season's final ratings. Returns (off, deff, pace)."""
     hist = team_games.iloc[:upto_idx]
     hist = hist[hist["season"] >= season - 1]
     recent = hist.groupby("team").tail(WINDOW_GAMES)
     if recent.empty:
-        return {}, {}
+        return {}, {}, {}
 
-    raw_off, raw_def, opps = {}, {}, {}
+    raw_off, raw_def, pace, opps, opp_w = {}, {}, {}, {}, {}
     for team, gg in recent.groupby("team"):
-        raw_off[team] = gg["off_ppa_play"].mean()
-        raw_def[team] = gg["def_ppa_play"].mean()
-        opps[team] = list(gg["opp"])
+        gg = gg.sort_values(["season", "week", "date", "game_id"])
         n = len(gg)
-        if n < MIN_GAMES and team in prior:
-            w = n / MIN_GAMES
-            raw_off[team] = w * raw_off[team] + (1 - w) * prior[team][0]
-            raw_def[team] = w * raw_def[team] + (1 - w) * prior[team][1]
+        w = _RECENCY_DECAY ** np.arange(n - 1, -1, -1)
+        raw_off[team] = float(np.average(gg["off_ppa_play"], weights=w))
+        raw_def[team] = float(np.average(gg["def_ppa_play"], weights=w))
+        pace[team] = float(np.average(gg["plays"], weights=w))
+        opps[team] = list(gg["opp"])
+        opp_w[team] = list(w)
+        n_eff = w.sum() ** 2 / (w ** 2).sum()
+        if n_eff < MIN_GAMES and team in prior:
+            b = n_eff / MIN_GAMES
+            raw_off[team] = b * raw_off[team] + (1 - b) * prior[team][0]
+            raw_def[team] = b * raw_def[team] + (1 - b) * prior[team][1]
 
     lg_off = sum(raw_off.values()) / len(raw_off)
     lg_def = sum(raw_def.values()) / len(raw_def)
@@ -92,22 +104,31 @@ def adjusted_ratings(team_games: pd.DataFrame, upto_idx: int,
     # iterating lets off/def adjustments feed back and blow up).
     off, deff = {}, {}
     for t in raw_off:
-        opp_d = [raw_def[o] - lg_def for o in opps[t] if o in raw_def]
-        opp_o = [raw_off[o] - lg_off for o in opps[t] if o in raw_off]
-        off[t] = (raw_off[t] - lg_off) - (sum(opp_d) / len(opp_d) if opp_d else 0)
-        deff[t] = (raw_def[t] - lg_def) - (sum(opp_o) / len(opp_o) if opp_o else 0)
-    return off, deff
+        pairs_d = [(raw_def[o] - lg_def, wt)
+                   for o, wt in zip(opps[t], opp_w[t]) if o in raw_def]
+        pairs_o = [(raw_off[o] - lg_off, wt)
+                   for o, wt in zip(opps[t], opp_w[t]) if o in raw_off]
+        adj_d = (sum(v * wt for v, wt in pairs_d) / sum(wt for _, wt in pairs_d)
+                 if pairs_d else 0.0)
+        adj_o = (sum(v * wt for v, wt in pairs_o) / sum(wt for _, wt in pairs_o)
+                 if pairs_o else 0.0)
+        off[t] = (raw_off[t] - lg_off) - adj_d
+        deff[t] = (raw_def[t] - lg_def) - adj_o
+    return off, deff, pace
 
 
-def predict(off: dict, deff: dict, home: str, away: str,
+def predict(off: dict, deff: dict, pace: dict, home: str, away: str,
             neutral: bool, epa_const: float) -> tuple[float, float] | None:
     if home not in off or away not in off:
         return None
     exp_home_off = off[home] + deff[away]
     exp_away_off = off[away] + deff[home]
     edge = 0.0 if neutral else HOME_EDGE_PTS
-    our_margin = (exp_home_off - exp_away_off) * PLAYS_PER_GAME + edge
-    our_total = (exp_home_off + exp_away_off) * PLAYS_PER_GAME + epa_const
+    # Expected pace: average of the two teams' trailing plays/game.
+    exp_plays = (pace.get(home, PLAYS_PER_GAME)
+                 + pace.get(away, PLAYS_PER_GAME)) / 2
+    our_margin = (exp_home_off - exp_away_off) * exp_plays + edge
+    our_total = (exp_home_off + exp_away_off) * exp_plays + epa_const
     return our_margin, our_total
 
 
@@ -161,10 +182,10 @@ def run_backtest(seasons: list[int] | None = None,
             "our_tse": 0.0, "line_tse": 0.0,
             "w": 0, "l": 0, "p": 0, "ow": 0, "ol": 0, "op": 0,
         })
-        off, deff = adjusted_ratings(team_games, cutoff, season, prior)
+        off, deff, pace = adjusted_ratings(team_games, cutoff, season, prior)
         epa_const = (sum(epa_const_hist) / len(epa_const_hist)
                      if epa_const_hist else 58.0)  # college totals > NFL
-        pr = predict(off, deff, home, away, bool(row["neutral"]), epa_const)
+        pr = predict(off, deff, pace, home, away, bool(row["neutral"]), epa_const)
         if pr is None:
             continue
         our_margin, our_total = pr
@@ -219,7 +240,7 @@ def run_backtest(seasons: list[int] | None = None,
         # so the constant carries the sport's scoring level.
         epa_const_hist.append(actual_total)
 
-        off2, def2 = adjusted_ratings(team_games, cutoff + 2, season, prior)
+        off2, def2, _ = adjusted_ratings(team_games, cutoff + 2, season, prior)
         season_final = {t: (off2[t], def2[t]) for t in off2}
 
     decided = ats[0] + ats[1]

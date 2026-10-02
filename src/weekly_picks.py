@@ -20,6 +20,7 @@ from epa_ratings import (
     ABBR_TO_FULL, HOME_EDGE_PTS, PLAYS_PER_GAME, REPO, adjusted_ratings,
     load_qb_plays, load_team_games, qb_adjustments,
 )
+from weather import fetch_kickoff_winds, wind_total_adjustment
 
 DATA = REPO / "data"
 SEASON = 2026
@@ -273,6 +274,12 @@ def main() -> None:
     epa_const = float(avg_total - per_game_epa.mean())
 
     picks = []
+    # Wind: forecast at kickoff per outdoor stadium (one API call per
+    # stadium-date; failures -> None -> no adjustment, never a crash).
+    wx_games = [{"home_team": g["home_team"], "gameday": str(g["gameday"]),
+                 "gametime": str(g.get("gametime") or "13:00")}
+                for _, g in upcoming.iterrows()]
+    kickoff_winds = fetch_kickoff_winds(wx_games)
     for _, g in upcoming.sort_values("gameday").iterrows():
         home, away = g["home_team"], g["away_team"]
         if home not in off or away not in off:
@@ -288,6 +295,12 @@ def main() -> None:
         our_margin = (exp_home_off - exp_away_off) * exp_plays + HOME_EDGE_PTS
         line_margin = float(g["spread_line"])
         our_total = (exp_home_off + exp_away_off) * exp_plays + epa_const
+        # Wind adjustment (outdoor stadiums only): high wind suppresses
+        # scoring ~1 pt per mph above 10, capped at -8. Calibrated on
+        # 2021-2024 walk-forward totals; uses forecast wind at kickoff.
+        wind_mph = kickoff_winds.get((home, str(g["gameday"])))
+        wind_adj = wind_total_adjustment(wind_mph, home)
+        our_total += wind_adj
         line_total = float(g["total_line"])
 
         spread_edge = our_margin - line_margin   # >0: we like home more than line
@@ -324,6 +337,8 @@ def main() -> None:
             "total_edge": round(total_edge, 1),
             "qb_adj_home": round(qadj.get(home, 0.0) * exp_plays, 1),
             "qb_adj_away": round(qadj.get(away, 0.0) * exp_plays, 1),
+            "wind_mph": round(wind_mph) if wind_mph is not None else None,
+            "wind_adj_pts": round(wind_adj, 1),
             "pick_spread": pick_side,
             "pick_total": pick_total,
             "pick_total_note": pick_total_note,

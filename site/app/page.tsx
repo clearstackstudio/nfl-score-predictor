@@ -10,7 +10,8 @@ type Pick = {
   spread_edge: number; total_edge: number;
   pick_spread: "home" | "away" | null;
   pick_total: "over" | "under" | null;
-  pick_total_note: string | null;
+  pick_total_note?: string | null;
+  wind_mph?: number | null; wind_adj_pts?: number | null;
   pick_spread_label: string | null;
   pick_total_label: string | null;
   cover_prob: number | null; ou_prob: number | null;
@@ -165,7 +166,9 @@ function GameCard({ p }: { p: Pick }) {
       <MarketPanel
         name="Total"
         ourLabel={trim(p.our_total)}
-        ourCaption="Our number"
+        ourCaption={p.wind_mph != null && p.wind_adj_pts
+          ? `Our number · wind ${p.wind_mph} mph (${p.wind_adj_pts} pts)`
+          : "Our number"}
         vegasLabel={trim(p.line_total)}
         vegasCaption="Vegas line"
         edge={p.total_edge}

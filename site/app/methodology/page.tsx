@@ -28,8 +28,12 @@ export default function Methodology() {
             differs from the passers who produced a team&apos;s trailing
             numbers, the offensive rating shifts by a regressed measure of the
             gap — no adjustment when the same quarterback keeps playing.
-            Total probabilities use their own calibrated noise model, not the
-            spread&apos;s. And when our number sits more than a touchdown off
+            Wind is adjusted for too: in outdoor stadiums, our total drops
+            about a point for every mph of forecast wind above 10 (capped at
+            8), because the 2021–24 backtest showed our totals running ~7
+            points hot in 15–20 mph wind. Domes and retractable roofs get no
+            adjustment. Total probabilities use their own calibrated noise
+            model, not the spread&apos;s. And when our number sits more than a touchdown off
             the market, we publish no pick at all: extreme disagreement with
             one of the sharpest markets in the world is more likely our error
             than our edge.

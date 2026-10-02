@@ -9,14 +9,18 @@ export default function CfbMethodology() {
             Every FBS team gets two ratings — offensive and defensive efficiency —
             built from per-play PPA (predicted points added), garbage time excluded,
             over a trailing window of about one season&rsquo;s worth of games, adjusted
-            for schedule strength. A team that piles up PPA against bad defenses gets
+            for schedule strength. Recent games count more than old ones — a
+            team&rsquo;s rating now is driven by how it&rsquo;s playing <span className="font-semibold text-zinc-100 light:text-zinc-900">lately</span>,
+            not by last October. A team that piles up PPA against bad defenses gets
             less credit than one that does it against good ones.
           </p>
           <p>
             Per-play matters more in college than anywhere: pace ranges from 60 to 90
             plays a game, so raw totals would reward fast teams for being fast. Ratings
-            are efficiency, then re-scaled by a typical game&rsquo;s play count to produce
-            our spread and total.
+            are efficiency, then re-scaled by each <span className="font-semibold text-zinc-100 light:text-zinc-900">matchup&rsquo;s expected pace</span> —
+            the average of the two teams&rsquo; trailing plays per game — to produce
+            our spread and total. A shootout between two tempo teams gets a higher
+            total than the same efficiencies at a crawl.
           </p>
           <p>
             From those ratings the model generates its own spread and total for each
@@ -24,6 +28,12 @@ export default function CfbMethodology() {
             with Vegas by at least half a point on the spread (a full point on the total),
             we publish a pick with an estimated cover probability — and the track record
             grades exactly that same set of picks, nothing more selective.
+          </p>
+          <p>
+            One safety valve: if our total is more than about eight points from the market
+            total, we publish no total pick at all. An extreme disagreement is more likely
+            our model being wrong than the market being wrong — October 2026&rsquo;s NFL model
+            learned that lesson the expensive way, and the college side inherited the fix.
           </p>
           <p>
             The betting line is <span className="font-semibold text-zinc-100 light:text-zinc-900">never</span> an
