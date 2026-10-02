@@ -40,7 +40,7 @@ function TeamMark({ logo, abbr, size = 28 }: { logo: string; abbr: string; size?
 function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: number }[]; homeAbbr: string; awayAbbr: string }) {
   const { path, area } = useMemo(() => {
     if (points.length < 2) return { path: "", area: "" };
-    const W = 600, H = 96, PAD = 6;
+    const W = 600, H = 120, PAD = 8;
     const x = (i: number) => PAD + (i / (points.length - 1)) * (W - 2 * PAD);
     const y = (p: number) => PAD + (1 - p) * (H - 2 * PAD);
     const pts = points.map((pt, i) => `${x(i).toFixed(1)},${y(pt.homeWinPct).toFixed(1)}`);
@@ -52,23 +52,23 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
   if (points.length < 2) return null;
   const last = points[points.length - 1].homeWinPct;
   return (
-    <div className="rounded-xl border border-white/10 bg-zinc-950/70 p-4">
+    <div className="rounded-2xl border border-white/10 bg-zinc-950/70 p-5">
       <div className="flex items-baseline justify-between">
-        <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
+        <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
           Win probability
         </div>
-        <div className="tnum font-mono text-sm font-bold">
+        <div className="tnum font-mono text-base font-bold">
           <span className="text-zinc-400">{awayAbbr} {Math.round((1 - last) * 100)}%</span>
           <span className="mx-2 text-zinc-700">·</span>
           <span className="text-amber-300">{homeAbbr} {Math.round(last * 100)}%</span>
         </div>
       </div>
-      <svg viewBox="0 0 600 96" className="mt-2 h-24 w-full" preserveAspectRatio="none" role="img" aria-label="Win probability chart">
-        <line x1="0" y1="48" x2="600" y2="48" stroke="#3f3f46" strokeDasharray="4 4" strokeWidth="1" />
+      <svg viewBox="0 0 600 120" className="mt-3 h-32 w-full" preserveAspectRatio="none" role="img" aria-label="Win probability chart">
+        <line x1="0" y1="60" x2="600" y2="60" stroke="#3f3f46" strokeDasharray="4 4" strokeWidth="1" />
         <path d={area} fill="rgba(251,191,36,0.12)" />
         <path d={path} fill="none" stroke="#fbbf24" strokeWidth="2" vectorEffect="non-scaling-stroke" />
       </svg>
-      <div className="mt-1 flex justify-between text-[10px] text-zinc-600">
+      <div className="mt-2 flex justify-between text-[11px] font-medium text-zinc-500">
         <span>Kickoff</span>
         <span>Now</span>
       </div>
@@ -111,27 +111,27 @@ function GameCard({ g, selected, onSelect }: { g: LiveGame; selected: boolean; o
 function PlayRow({ p, homeAbbr }: { p: GameDetail["drives"][number]["plays"][number]; homeAbbr: string }) {
   return (
     <div
-      className={`flex gap-3 border-b border-white/5 px-4 py-2.5 last:border-0 ${
-        p.scoringPlay ? "bg-amber-400/[0.06]" : ""
+      className={`flex gap-4 border-b border-white/5 px-5 py-3.5 last:border-0 ${
+        p.scoringPlay ? "border-l-2 border-l-amber-400 bg-amber-400/[0.07]" : ""
       }`}
     >
-      <div className="w-16 shrink-0 pt-0.5">
-        <div className="tnum font-mono text-[11px] font-semibold text-zinc-400">
+      <div className="w-[72px] shrink-0 pt-0.5">
+        <div className="tnum font-mono text-xs font-bold text-zinc-300">
           Q{p.period || "–"}
         </div>
-        <div className="tnum font-mono text-[11px] text-zinc-600">{p.clock}</div>
+        <div className="tnum font-mono text-xs text-zinc-500">{p.clock}</div>
       </div>
       <div className="min-w-0 flex-1">
-        <p className={`text-[13px] leading-relaxed ${p.scoringPlay ? "font-semibold text-amber-100" : "text-zinc-300"}`}>
+        <p className={`text-sm leading-relaxed ${p.scoringPlay ? "font-semibold text-amber-100" : "text-zinc-200"}`}>
           {p.scoringPlay && <span className="mr-1.5">🏈</span>}
           {p.turnover && !p.scoringPlay && <span className="mr-1.5">🔄</span>}
           {p.text}
         </p>
         {p.downDistance && (
-          <p className="mt-0.5 text-[11px] text-zinc-600">{p.downDistance}</p>
+          <p className="mt-1 font-mono text-[11px] uppercase tracking-wide text-zinc-500">{p.downDistance}</p>
         )}
       </div>
-      <div className="tnum shrink-0 font-mono text-[11px] text-zinc-500">
+      <div className="tnum shrink-0 pt-0.5 font-mono text-xs font-semibold text-zinc-400">
         {p.awayScore}–{p.homeScore}
       </div>
     </div>
@@ -236,11 +236,11 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
                 ].map((t, i) => (
                   <div key={t.abbr} className={`flex flex-1 items-center gap-3 ${i === 1 ? "flex-row-reverse text-right" : ""}`}>
                     <TeamMark logo={t.logo} abbr={t.abbr} size={44} />
-                    <div>
-                      <div className="font-bold">{t.name}</div>
+                    <div className="min-w-0">
+                      <div className="truncate text-sm font-bold sm:text-base">{t.name}</div>
                       <div className="text-xs text-zinc-500">{t.abbr}</div>
                     </div>
-                    <div className="tnum font-display text-5xl font-semibold">{t.score}</div>
+                    <div className="tnum font-display text-4xl font-semibold sm:text-5xl">{t.score}</div>
                   </div>
                 ))}
                 <div className="px-4 text-center">

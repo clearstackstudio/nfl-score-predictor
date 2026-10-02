@@ -1,0 +1,830 @@
+{
+ "Air Force": {
+  "lat": 38.997,
+  "lon": -104.844,
+  "dome": false,
+  "stadium": "Falcon Stadium"
+ },
+ "Akron": {
+  "lat": 41.073,
+  "lon": -81.508,
+  "dome": false,
+  "stadium": "InfoCision Stadium"
+ },
+ "Alabama": {
+  "lat": 33.208,
+  "lon": -87.55,
+  "dome": false,
+  "stadium": "Bryant-Denny Stadium"
+ },
+ "App State": {
+  "lat": 36.211,
+  "lon": -81.685,
+  "dome": false,
+  "stadium": "Kidd Brewer Stadium"
+ },
+ "Arizona": {
+  "lat": 32.229,
+  "lon": -110.949,
+  "dome": false,
+  "stadium": "Arizona Stadium"
+ },
+ "Arizona State": {
+  "lat": 33.426,
+  "lon": -111.933,
+  "dome": false,
+  "stadium": "Mountain America Stadium"
+ },
+ "Arkansas": {
+  "lat": 36.068,
+  "lon": -94.179,
+  "dome": false,
+  "stadium": "Razorback Stadium"
+ },
+ "Arkansas State": {
+  "lat": 35.849,
+  "lon": -90.668,
+  "dome": false,
+  "stadium": "Centennial Bank Stadium"
+ },
+ "Army": {
+  "lat": 41.387,
+  "lon": -73.964,
+  "dome": false,
+  "stadium": "Michie Stadium"
+ },
+ "Auburn": {
+  "lat": 32.603,
+  "lon": -85.49,
+  "dome": false,
+  "stadium": "Jordan-Hare Stadium"
+ },
+ "Ball State": {
+  "lat": 40.216,
+  "lon": -85.416,
+  "dome": false,
+  "stadium": "Scheumann Stadium"
+ },
+ "Baylor": {
+  "lat": 31.558,
+  "lon": -97.116,
+  "dome": false,
+  "stadium": "McLane Stadium"
+ },
+ "Boise State": {
+  "lat": 43.603,
+  "lon": -116.196,
+  "dome": false,
+  "stadium": "Albertsons Stadium"
+ },
+ "Boston College": {
+  "lat": 42.335,
+  "lon": -71.166,
+  "dome": false,
+  "stadium": "Alumni Stadium (Chestnut Hill, MA)"
+ },
+ "Bowling Green": {
+  "lat": 41.378,
+  "lon": -83.623,
+  "dome": false,
+  "stadium": "Doyt L. Perry Stadium"
+ },
+ "Buffalo": {
+  "lat": 42.999,
+  "lon": -78.778,
+  "dome": false,
+  "stadium": "UB Stadium"
+ },
+ "BYU": {
+  "lat": 40.258,
+  "lon": -111.655,
+  "dome": false,
+  "stadium": "LaVell Edwards Stadium"
+ },
+ "California": {
+  "lat": 37.871,
+  "lon": -122.251,
+  "dome": false,
+  "stadium": "California Memorial Stadium"
+ },
+ "Central Michigan": {
+  "lat": 43.578,
+  "lon": -84.771,
+  "dome": false,
+  "stadium": "Kelly/Shorts Stadium"
+ },
+ "Charlotte": {
+  "lat": 35.311,
+  "lon": -80.74,
+  "dome": false,
+  "stadium": "Jerry Richardson Stadium"
+ },
+ "Cincinnati": {
+  "lat": 39.131,
+  "lon": -84.516,
+  "dome": false,
+  "stadium": "Nippert Stadium"
+ },
+ "Clemson": {
+  "lat": 34.679,
+  "lon": -82.843,
+  "dome": false,
+  "stadium": "Memorial Stadium (Clemson, SC)"
+ },
+ "Coastal Carolina": {
+  "lat": 33.793,
+  "lon": -79.017,
+  "dome": false,
+  "stadium": "Brooks Stadium (SC)"
+ },
+ "Colorado": {
+  "lat": 40.009,
+  "lon": -105.267,
+  "dome": false,
+  "stadium": "Folsom Field"
+ },
+ "Colorado State": {
+  "lat": 40.57,
+  "lon": -105.088,
+  "dome": false,
+  "stadium": "Canvas Stadium"
+ },
+ "Delaware": {
+  "lat": 39.662,
+  "lon": -75.749,
+  "dome": false,
+  "stadium": "Delaware Stadium"
+ },
+ "Duke": {
+  "lat": 35.995,
+  "lon": -78.942,
+  "dome": false,
+  "stadium": "Wallace Wade Stadium"
+ },
+ "East Carolina": {
+  "lat": 35.597,
+  "lon": -77.365,
+  "dome": false,
+  "stadium": "Dowdy-Ficklen Stadium"
+ },
+ "Eastern Michigan": {
+  "lat": 42.256,
+  "lon": -83.647,
+  "dome": false,
+  "stadium": "Rynearson Stadium"
+ },
+ "Florida": {
+  "lat": 29.65,
+  "lon": -82.349,
+  "dome": false,
+  "stadium": "Ben Hill Griffin Stadium"
+ },
+ "Florida Atlantic": {
+  "lat": 26.376,
+  "lon": -80.102,
+  "dome": false,
+  "stadium": "FAU Stadium"
+ },
+ "Florida International": {
+  "lat": 25.753,
+  "lon": -80.378,
+  "dome": false,
+  "stadium": "Pitbull Stadium"
+ },
+ "Florida State": {
+  "lat": 30.438,
+  "lon": -84.304,
+  "dome": false,
+  "stadium": "Doak Campbell Stadium"
+ },
+ "Fresno State": {
+  "lat": 36.814,
+  "lon": -119.758,
+  "dome": false,
+  "stadium": "Valley Children's Stadium"
+ },
+ "Georgia": {
+  "lat": 33.95,
+  "lon": -83.373,
+  "dome": false,
+  "stadium": "Sanford Stadium"
+ },
+ "Georgia Southern": {
+  "lat": 32.412,
+  "lon": -81.785,
+  "dome": false,
+  "stadium": "Allen E. Paulson Stadium"
+ },
+ "Georgia State": {
+  "lat": 33.735,
+  "lon": -84.39,
+  "dome": false,
+  "stadium": "Center Parc Stadium"
+ },
+ "Georgia Tech": {
+  "lat": 33.772,
+  "lon": -84.393,
+  "dome": false,
+  "stadium": "Bobby Dodd Stadium"
+ },
+ "Hawai'i": {
+  "lat": 21.294,
+  "lon": -157.819,
+  "dome": false,
+  "stadium": "Clarence T.C. Ching Athletics Complex"
+ },
+ "Houston": {
+  "lat": 29.722,
+  "lon": -95.349,
+  "dome": false,
+  "stadium": "TDECU Stadium"
+ },
+ "Illinois": {
+  "lat": 40.099,
+  "lon": -88.236,
+  "dome": false,
+  "stadium": "Memorial Stadium (Champaign, IL)"
+ },
+ "Indiana": {
+  "lat": 39.181,
+  "lon": -86.526,
+  "dome": false,
+  "stadium": "Memorial Stadium (Bloomington, IN)"
+ },
+ "Iowa": {
+  "lat": 41.659,
+  "lon": -91.551,
+  "dome": false,
+  "stadium": "Kinnick Stadium"
+ },
+ "Iowa State": {
+  "lat": 42.014,
+  "lon": -93.636,
+  "dome": false,
+  "stadium": "Jack Trice Stadium"
+ },
+ "Jacksonville State": {
+  "lat": 33.82,
+  "lon": -85.766,
+  "dome": false,
+  "stadium": "AmFirst Stadium"
+ },
+ "James Madison": {
+  "lat": 38.435,
+  "lon": -78.873,
+  "dome": false,
+  "stadium": "Bridgeforth Stadium"
+ },
+ "Kansas": {
+  "lat": 38.963,
+  "lon": -95.246,
+  "dome": false,
+  "stadium": "Memorial Stadium"
+ },
+ "Kansas State": {
+  "lat": 39.202,
+  "lon": -96.594,
+  "dome": false,
+  "stadium": "Bill Snyder Family Stadium"
+ },
+ "Kennesaw State": {
+  "lat": 34.029,
+  "lon": -84.568,
+  "dome": false,
+  "stadium": "Fifth Third Stadium"
+ },
+ "Kent State": {
+  "lat": 41.139,
+  "lon": -81.313,
+  "dome": false,
+  "stadium": "Dix Stadium"
+ },
+ "Kentucky": {
+  "lat": 38.022,
+  "lon": -84.505,
+  "dome": false,
+  "stadium": "Kroger Field"
+ },
+ "Liberty": {
+  "lat": 37.354,
+  "lon": -79.175,
+  "dome": false,
+  "stadium": "Williams Stadium (VA)"
+ },
+ "Louisiana": {
+  "lat": 30.216,
+  "lon": -92.042,
+  "dome": false,
+  "stadium": "Cajun Field"
+ },
+ "Louisiana Tech": {
+  "lat": 32.532,
+  "lon": -92.656,
+  "dome": false,
+  "stadium": "Joe Aillet Stadium"
+ },
+ "Louisville": {
+  "lat": 38.206,
+  "lon": -85.759,
+  "dome": false,
+  "stadium": "L&N Federal Credit Union Stadium"
+ },
+ "LSU": {
+  "lat": 30.412,
+  "lon": -91.184,
+  "dome": false,
+  "stadium": "Tiger Stadium (LA)"
+ },
+ "Marshall": {
+  "lat": 38.425,
+  "lon": -82.421,
+  "dome": false,
+  "stadium": "Joan C. Edwards Stadium"
+ },
+ "Maryland": {
+  "lat": 38.99,
+  "lon": -76.947,
+  "dome": false,
+  "stadium": "SECU Stadium"
+ },
+ "Massachusetts": {
+  "lat": 42.377,
+  "lon": -72.536,
+  "dome": false,
+  "stadium": "Warren McGuirk Alumni Stadium"
+ },
+ "Memphis": {
+  "lat": 35.121,
+  "lon": -89.977,
+  "dome": false,
+  "stadium": "Simmons Bank Liberty Stadium"
+ },
+ "Miami": {
+  "lat": 25.958,
+  "lon": -80.239,
+  "dome": false,
+  "stadium": "Hard Rock Stadium"
+ },
+ "Miami (OH)": {
+  "lat": 39.52,
+  "lon": -84.733,
+  "dome": false,
+  "stadium": "Yager Stadium"
+ },
+ "Michigan": {
+  "lat": 42.266,
+  "lon": -83.749,
+  "dome": false,
+  "stadium": "Michigan Stadium"
+ },
+ "Michigan State": {
+  "lat": 42.728,
+  "lon": -84.485,
+  "dome": false,
+  "stadium": "Spartan Stadium"
+ },
+ "Middle Tennessee": {
+  "lat": 35.851,
+  "lon": -86.368,
+  "dome": false,
+  "stadium": "Johnny \"Red\" Floyd Stadium"
+ },
+ "Minnesota": {
+  "lat": 44.977,
+  "lon": -93.225,
+  "dome": false,
+  "stadium": "Huntington Bank Stadium"
+ },
+ "Mississippi State": {
+  "lat": 33.456,
+  "lon": -88.793,
+  "dome": false,
+  "stadium": "Davis Wade Stadium"
+ },
+ "Missouri": {
+  "lat": 38.936,
+  "lon": -92.333,
+  "dome": false,
+  "stadium": "Memorial Stadium"
+ },
+ "Missouri State": {
+  "lat": 37.198,
+  "lon": -93.28,
+  "dome": false,
+  "stadium": "Plaster Sports Complex"
+ },
+ "Navy": {
+  "lat": 38.985,
+  "lon": -76.508,
+  "dome": false,
+  "stadium": "Navy-Marine Corps Memorial Stadium"
+ },
+ "NC State": {
+  "lat": 35.801,
+  "lon": -78.72,
+  "dome": false,
+  "stadium": "Carter-Finley Stadium"
+ },
+ "Nebraska": {
+  "lat": 40.821,
+  "lon": -96.706,
+  "dome": false,
+  "stadium": "Memorial Stadium (Lincoln, NE)"
+ },
+ "Nevada": {
+  "lat": 39.547,
+  "lon": -119.818,
+  "dome": false,
+  "stadium": "Mackay Stadium"
+ },
+ "New Mexico": {
+  "lat": 35.067,
+  "lon": -106.628,
+  "dome": false,
+  "stadium": "University Stadium (NM)"
+ },
+ "New Mexico State": {
+  "lat": 32.28,
+  "lon": -106.741,
+  "dome": false,
+  "stadium": "Aggie Memorial Stadium"
+ },
+ "North Carolina": {
+  "lat": 35.907,
+  "lon": -79.048,
+  "dome": false,
+  "stadium": "Kenan Stadium"
+ },
+ "North Dakota State": {
+  "lat": 46.903,
+  "lon": -96.8,
+  "dome": true,
+  "stadium": "Fargodome"
+ },
+ "Northern Illinois": {
+  "lat": 41.934,
+  "lon": -88.778,
+  "dome": false,
+  "stadium": "Huskie Stadium"
+ },
+ "North Texas": {
+  "lat": 33.204,
+  "lon": -97.159,
+  "dome": false,
+  "stadium": "DATCU Stadium"
+ },
+ "Northwestern": {
+  "lat": 42.058,
+  "lon": -87.671,
+  "dome": false,
+  "stadium": "Lanny and Sharon Martin Stadium"
+ },
+ "Notre Dame": {
+  "lat": 41.698,
+  "lon": -86.234,
+  "dome": false,
+  "stadium": "Notre Dame Stadium"
+ },
+ "Ohio": {
+  "lat": 39.321,
+  "lon": -82.103,
+  "dome": false,
+  "stadium": "Peden Stadium"
+ },
+ "Ohio State": {
+  "lat": 40.002,
+  "lon": -83.02,
+  "dome": false,
+  "stadium": "Ohio Stadium"
+ },
+ "Oklahoma": {
+  "lat": 35.206,
+  "lon": -97.442,
+  "dome": false,
+  "stadium": "Memorial Stadium (Norman, OK)"
+ },
+ "Oklahoma State": {
+  "lat": 36.126,
+  "lon": -97.067,
+  "dome": false,
+  "stadium": "Boone Pickens Stadium"
+ },
+ "Old Dominion": {
+  "lat": 36.889,
+  "lon": -76.305,
+  "dome": false,
+  "stadium": "S.B. Ballard Stadium"
+ },
+ "Ole Miss": {
+  "lat": 34.362,
+  "lon": -89.534,
+  "dome": false,
+  "stadium": "Vaught-Hemingway Stadium"
+ },
+ "Oregon": {
+  "lat": 44.058,
+  "lon": -123.068,
+  "dome": false,
+  "stadium": "Autzen Stadium"
+ },
+ "Oregon State": {
+  "lat": 44.559,
+  "lon": -123.281,
+  "dome": false,
+  "stadium": "Reser Stadium"
+ },
+ "Penn State": {
+  "lat": 40.812,
+  "lon": -77.856,
+  "dome": false,
+  "stadium": "Beaver Stadium"
+ },
+ "Pittsburgh": {
+  "lat": 40.447,
+  "lon": -80.016,
+  "dome": false,
+  "stadium": "Acrisure Stadium"
+ },
+ "Purdue": {
+  "lat": 40.435,
+  "lon": -86.919,
+  "dome": false,
+  "stadium": "Ross-Ade Stadium"
+ },
+ "Rice": {
+  "lat": 29.716,
+  "lon": -95.409,
+  "dome": false,
+  "stadium": "Rice Stadium"
+ },
+ "Rutgers": {
+  "lat": 40.514,
+  "lon": -74.465,
+  "dome": false,
+  "stadium": "SHI Stadium"
+ },
+ "Sacramento State": {
+  "lat": 38.556,
+  "lon": -121.423,
+  "dome": false,
+  "stadium": "Hornet Stadium"
+ },
+ "Sam Houston": {
+  "lat": 30.714,
+  "lon": -95.542,
+  "dome": false,
+  "stadium": "Elliott T. Bowers Stadium"
+ },
+ "San Diego State": {
+  "lat": 32.784,
+  "lon": -117.123,
+  "dome": false,
+  "stadium": "Snapdragon Stadium"
+ },
+ "San Jos\u00e9 State": {
+  "lat": 37.32,
+  "lon": -121.868,
+  "dome": false,
+  "stadium": "CEFCU Stadium"
+ },
+ "SMU": {
+  "lat": 32.838,
+  "lon": -96.783,
+  "dome": false,
+  "stadium": "Gerald J. Ford Stadium"
+ },
+ "South Alabama": {
+  "lat": 30.697,
+  "lon": -88.192,
+  "dome": false,
+  "stadium": "Hancock Whitney Stadium"
+ },
+ "South Carolina": {
+  "lat": 33.973,
+  "lon": -81.019,
+  "dome": false,
+  "stadium": "Williams-Brice Stadium"
+ },
+ "Southern Miss": {
+  "lat": 31.329,
+  "lon": -89.332,
+  "dome": false,
+  "stadium": "M. M. Roberts Stadium"
+ },
+ "South Florida": {
+  "lat": 27.976,
+  "lon": -82.503,
+  "dome": false,
+  "stadium": "Raymond James Stadium"
+ },
+ "Stanford": {
+  "lat": 37.435,
+  "lon": -122.161,
+  "dome": false,
+  "stadium": "Stanford Stadium"
+ },
+ "Syracuse": {
+  "lat": 43.036,
+  "lon": -76.136,
+  "dome": true,
+  "stadium": "JMA Wireless Dome"
+ },
+ "TCU": {
+  "lat": 32.71,
+  "lon": -97.368,
+  "dome": false,
+  "stadium": "Amon G. Carter Stadium"
+ },
+ "Temple": {
+  "lat": 39.901,
+  "lon": -75.168,
+  "dome": false,
+  "stadium": "Lincoln Financial Field"
+ },
+ "Tennessee": {
+  "lat": 35.955,
+  "lon": -83.925,
+  "dome": false,
+  "stadium": "Neyland Stadium"
+ },
+ "Texas": {
+  "lat": 30.284,
+  "lon": -97.733,
+  "dome": false,
+  "stadium": "DKR-Texas Memorial Stadium"
+ },
+ "Texas A&M": {
+  "lat": 30.61,
+  "lon": -96.34,
+  "dome": false,
+  "stadium": "Kyle Field"
+ },
+ "Texas State": {
+  "lat": 29.891,
+  "lon": -97.926,
+  "dome": false,
+  "stadium": "Bobcat Stadium (TX)"
+ },
+ "Texas Tech": {
+  "lat": 33.591,
+  "lon": -101.873,
+  "dome": false,
+  "stadium": "Jones AT&T Stadium"
+ },
+ "Toledo": {
+  "lat": 41.657,
+  "lon": -83.614,
+  "dome": false,
+  "stadium": "Glass Bowl"
+ },
+ "Troy": {
+  "lat": 31.8,
+  "lon": -85.952,
+  "dome": false,
+  "stadium": "Veterans Memorial Stadium (AL)"
+ },
+ "Tulane": {
+  "lat": 29.945,
+  "lon": -90.117,
+  "dome": false,
+  "stadium": "Yulman Stadium"
+ },
+ "Tulsa": {
+  "lat": 36.149,
+  "lon": -95.944,
+  "dome": false,
+  "stadium": "Chapman Stadium"
+ },
+ "UAB": {
+  "lat": 33.521,
+  "lon": -86.802,
+  "dome": false,
+  "stadium": "Protective Stadium"
+ },
+ "UCF": {
+  "lat": 28.608,
+  "lon": -81.193,
+  "dome": false,
+  "stadium": "FBC Mortgage Stadium"
+ },
+ "UCLA": {
+  "lat": 34.161,
+  "lon": -118.168,
+  "dome": false,
+  "stadium": "Rose Bowl"
+ },
+ "UConn": {
+  "lat": 41.76,
+  "lon": -72.619,
+  "dome": false,
+  "stadium": "Pratt & Whitney Stadium"
+ },
+ "UL Monroe": {
+  "lat": 32.531,
+  "lon": -92.066,
+  "dome": false,
+  "stadium": "Malone Stadium"
+ },
+ "UNLV": {
+  "lat": 36.091,
+  "lon": -115.184,
+  "dome": true,
+  "stadium": "Allegiant Stadium"
+ },
+ "USC": {
+  "lat": 34.014,
+  "lon": -118.288,
+  "dome": false,
+  "stadium": "Los Angeles Memorial Coliseum"
+ },
+ "Utah": {
+  "lat": 40.76,
+  "lon": -111.849,
+  "dome": false,
+  "stadium": "Rice-Eccles Stadium"
+ },
+ "Utah State": {
+  "lat": 41.752,
+  "lon": -111.812,
+  "dome": false,
+  "stadium": "Maverik Stadium"
+ },
+ "UTEP": {
+  "lat": 31.773,
+  "lon": -106.508,
+  "dome": false,
+  "stadium": "Sun Bowl"
+ },
+ "UTSA": {
+  "lat": 29.417,
+  "lon": -98.479,
+  "dome": true,
+  "stadium": "Alamodome"
+ },
+ "Vanderbilt": {
+  "lat": 36.144,
+  "lon": -86.809,
+  "dome": false,
+  "stadium": "FirstBank Stadium"
+ },
+ "Virginia": {
+  "lat": 38.031,
+  "lon": -78.514,
+  "dome": false,
+  "stadium": "Scott Stadium"
+ },
+ "Virginia Tech": {
+  "lat": 37.22,
+  "lon": -80.418,
+  "dome": false,
+  "stadium": "Lane Stadium"
+ },
+ "Wake Forest": {
+  "lat": 36.131,
+  "lon": -80.255,
+  "dome": false,
+  "stadium": "Allegacy Federal Credit Union Stadium"
+ },
+ "Washington": {
+  "lat": 47.65,
+  "lon": -122.302,
+  "dome": false,
+  "stadium": "Husky Stadium"
+ },
+ "Washington State": {
+  "lat": 46.732,
+  "lon": -117.16,
+  "dome": false,
+  "stadium": "Gesa Field"
+ },
+ "Western Kentucky": {
+  "lat": 36.985,
+  "lon": -86.459,
+  "dome": false,
+  "stadium": "Houchens Industries-L.T. Smith Stadium"
+ },
+ "Western Michigan": {
+  "lat": 42.286,
+  "lon": -85.601,
+  "dome": false,
+  "stadium": "Waldo Stadium"
+ },
+ "West Virginia": {
+  "lat": 39.65,
+  "lon": -79.955,
+  "dome": false,
+  "stadium": "Milan Puskar Stadium"
+ },
+ "Wisconsin": {
+  "lat": 43.07,
+  "lon": -89.413,
+  "dome": false,
+  "stadium": "Camp Randall Stadium"
+ },
+ "Wyoming": {
+  "lat": 41.312,
+  "lon": -105.568,
+  "dome": false,
+  "stadium": "War Memorial Stadium"
+ }
+}
