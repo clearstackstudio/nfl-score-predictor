@@ -52,23 +52,23 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
   if (points.length < 2) return null;
   const last = points[points.length - 1].homeWinPct;
   return (
-    <div className="rounded-2xl border border-white/10 bg-zinc-950/70 p-5">
+    <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-5">
       <div className="flex items-baseline justify-between">
-        <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+        <div className="text-xs font-semibold uppercase tracking-wider text-zinc-300">
           Win probability
         </div>
         <div className="tnum font-mono text-base font-bold">
-          <span className="text-zinc-400">{awayAbbr} {Math.round((1 - last) * 100)}%</span>
-          <span className="mx-2 text-zinc-700">·</span>
+          <span className="text-zinc-300">{awayAbbr} {Math.round((1 - last) * 100)}%</span>
+          <span className="mx-2 text-zinc-600">·</span>
           <span className="text-amber-300">{homeAbbr} {Math.round(last * 100)}%</span>
         </div>
       </div>
       <svg viewBox="0 0 600 120" className="mt-3 h-32 w-full" preserveAspectRatio="none" role="img" aria-label="Win probability chart">
-        <line x1="0" y1="60" x2="600" y2="60" stroke="#3f3f46" strokeDasharray="4 4" strokeWidth="1" />
-        <path d={area} fill="rgba(251,191,36,0.12)" />
-        <path d={path} fill="none" stroke="#fbbf24" strokeWidth="2" vectorEffect="non-scaling-stroke" />
+        <line x1="0" y1="60" x2="600" y2="60" stroke="#52525b" strokeDasharray="4 4" strokeWidth="1" />
+        <path d={area} fill="rgba(251,191,36,0.15)" />
+        <path d={path} fill="none" stroke="#fbbf24" strokeWidth="2.5" vectorEffect="non-scaling-stroke" />
       </svg>
-      <div className="mt-2 flex justify-between text-[11px] font-medium text-zinc-500">
+      <div className="mt-2 flex justify-between text-[11px] font-medium text-zinc-400">
         <span>Kickoff</span>
         <span>Now</span>
       </div>
@@ -83,14 +83,14 @@ function GameCard({ g, selected, onSelect }: { g: LiveGame; selected: boolean; o
       className={`w-64 shrink-0 snap-start rounded-xl border p-3.5 text-left transition ${
         selected
           ? "border-amber-400/60 bg-amber-400/[0.08]"
-          : "border-white/10 bg-zinc-900/60 hover:border-white/25"
+          : "border-white/15 bg-zinc-800/60 hover:border-white/30"
       }`}
     >
       <div className="flex items-center justify-between">
-        <span className={`text-[11px] font-bold uppercase tracking-wider ${g.state === "in" ? "text-amber-400" : "text-zinc-500"}`}>
+        <span className={`text-[11px] font-bold uppercase tracking-wider ${g.state === "in" ? "text-amber-400" : "text-zinc-400"}`}>
           {g.state === "in" ? "● Live" : g.state === "post" ? "Final" : "Upcoming"}
         </span>
-        <span className="text-[11px] text-zinc-500">{g.detail}</span>
+        <span className="text-[11px] text-zinc-400">{g.detail}</span>
       </div>
       <div className="mt-2.5 space-y-1.5">
         {[
@@ -111,27 +111,27 @@ function GameCard({ g, selected, onSelect }: { g: LiveGame; selected: boolean; o
 function PlayRow({ p, homeAbbr }: { p: GameDetail["drives"][number]["plays"][number]; homeAbbr: string }) {
   return (
     <div
-      className={`flex gap-4 border-b border-white/5 px-5 py-3.5 last:border-0 ${
+      className={`flex gap-4 border-b border-white/10 px-5 py-3.5 last:border-0 ${
         p.scoringPlay ? "border-l-2 border-l-amber-400 bg-amber-400/[0.07]" : ""
       }`}
     >
       <div className="w-[72px] shrink-0 pt-0.5">
-        <div className="tnum font-mono text-xs font-bold text-zinc-300">
+        <div className="tnum font-mono text-xs font-bold text-zinc-200">
           Q{p.period || "–"}
         </div>
-        <div className="tnum font-mono text-xs text-zinc-500">{p.clock}</div>
+        <div className="tnum font-mono text-xs text-zinc-400">{p.clock}</div>
       </div>
       <div className="min-w-0 flex-1">
-        <p className={`text-sm leading-relaxed ${p.scoringPlay ? "font-semibold text-amber-100" : "text-zinc-200"}`}>
+        <p className={`text-sm leading-relaxed ${p.scoringPlay ? "font-semibold text-amber-100" : "text-zinc-100"}`}>
           {p.scoringPlay && <span className="mr-1.5">🏈</span>}
           {p.turnover && !p.scoringPlay && <span className="mr-1.5">🔄</span>}
           {p.text}
         </p>
         {p.downDistance && (
-          <p className="mt-1 font-mono text-[11px] uppercase tracking-wide text-zinc-500">{p.downDistance}</p>
+          <p className="mt-1 font-mono text-[11px] uppercase tracking-wide text-zinc-400">{p.downDistance}</p>
         )}
       </div>
-      <div className="tnum shrink-0 pt-0.5 font-mono text-xs font-semibold text-zinc-400">
+      <div className="tnum shrink-0 pt-0.5 font-mono text-xs font-semibold text-zinc-300">
         {p.awayScore}–{p.homeScore}
       </div>
     </div>
@@ -197,7 +197,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide sm:text-6xl">
         Live <span className="text-amber-400">play-by-play</span>
       </h1>
-      <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
+      <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-300">
         Every snap, as it happens — pulled live from the ESPN feed and refreshed
         every 30 seconds. Scores, drives, and win probability update together.
       </p>
@@ -229,7 +229,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
           {detail ? (
             <div className="mt-6">
               {/* Score header */}
-              <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-zinc-900/30 p-5">
+              <div className="flex items-center justify-between rounded-2xl border border-white/15 bg-gradient-to-b from-zinc-900 to-zinc-900/70 p-5">
                 {[
                   { abbr: detail.game.awayAbbr, name: detail.game.awayName, score: detail.game.awayScore, logo: detail.game.awayLogo },
                   { abbr: detail.game.homeAbbr, name: detail.game.homeName, score: detail.game.homeScore, logo: detail.game.homeLogo },
@@ -244,11 +244,11 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
                   </div>
                 ))}
                 <div className="px-4 text-center">
-                  <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-400" : "text-zinc-400"}`}>
+                  <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-400" : "text-zinc-300"}`}>
                     {detail.game.state === "in" ? detail.game.detail || "Live" : detail.game.state === "post" ? "Final" : detail.game.detail}
                   </div>
                   {lastUpdate && (
-                    <div className="mt-1 text-[11px] text-zinc-600">
+                    <div className="mt-1 text-[11px] text-zinc-500">
                       updated {lastUpdate.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}
                     </div>
                   )}
@@ -264,12 +264,12 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
                 Drives
               </h2>
               {detail.drives.length === 0 ? (
-                <p className="mt-3 text-sm text-zinc-500">No drives yet — the game hasn&apos;t started.</p>
+                <p className="mt-3 text-sm text-zinc-400">No drives yet — the game hasn&apos;t started.</p>
               ) : (
                 <div className="mt-4 space-y-4">
                   {detail.drives.map((dr, di) => (
-                    <section key={dr.id} className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40">
-                      <div className="flex items-center justify-between gap-3 border-b border-white/5 bg-zinc-950/60 px-4 py-3">
+                    <section key={dr.id} className="overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70">
+                      <div className="flex items-center justify-between gap-3 border-b border-white/10 bg-zinc-950/70 px-5 py-3">
                         <div className="flex min-w-0 items-center gap-2.5">
                           <TeamMark logo={dr.teamLogo} abbr={dr.teamAbbr} size={24} />
                           <div className="min-w-0">
@@ -307,7 +307,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
         </>
       )}
 
-      <p className="mt-8 max-w-2xl text-xs leading-relaxed text-zinc-600">
+      <p className="mt-8 max-w-2xl text-xs leading-relaxed text-zinc-500">
         Live data via ESPN. Play-by-play and win probability refresh automatically
         while games are in progress; pre-game and final states update on the minute.
       </p>
