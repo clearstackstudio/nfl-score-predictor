@@ -90,7 +90,7 @@ export default function Nav() {
       </div>
       <nav className="flex max-w-full gap-1 overflow-x-auto" aria-label="Primary">
         {NAV_ITEMS.map((item) => {
-          const href = `${base}${item.slug}`;
+          const href = `${base}${item.slug}` || "/";
           const active =
             item.slug === "" ? pathname === href || pathname === `${href}/` : pathname.startsWith(href);
           return (
