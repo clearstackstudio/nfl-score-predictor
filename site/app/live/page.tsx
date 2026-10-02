@@ -99,8 +99,8 @@ function GameCard({ g, selected, onSelect }: { g: LiveGame; selected: boolean; o
         ].map((t) => (
           <div key={t.abbr} className="flex items-center gap-2">
             <TeamMark logo={t.logo} abbr={t.abbr} size={22} />
-            <span className="flex-1 truncate text-sm font-semibold">{t.abbr}</span>
-            <span className="tnum font-mono text-sm font-bold">{t.score}</span>
+            <span className="flex-1 truncate text-sm font-semibold text-zinc-100">{t.abbr}</span>
+            <span className="tnum font-mono text-sm font-bold text-white">{t.score}</span>
           </div>
         ))}
       </div>
@@ -229,26 +229,26 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
           {detail ? (
             <div className="mt-6">
               {/* Score header */}
-              <div className="flex items-center justify-between rounded-2xl border border-white/15 bg-gradient-to-b from-zinc-900 to-zinc-900/70 p-5">
+              <div className="flex items-center justify-between rounded-2xl border border-white/20 bg-zinc-800/90 p-5 shadow-lg shadow-black/30">
                 {[
                   { abbr: detail.game.awayAbbr, name: detail.game.awayName, score: detail.game.awayScore, logo: detail.game.awayLogo },
                   { abbr: detail.game.homeAbbr, name: detail.game.homeName, score: detail.game.homeScore, logo: detail.game.homeLogo },
                 ].map((t, i) => (
                   <div key={t.abbr} className={`flex flex-1 items-center gap-3 ${i === 1 ? "flex-row-reverse text-right" : ""}`}>
-                    <TeamMark logo={t.logo} abbr={t.abbr} size={44} />
+                    <TeamMark logo={t.logo} abbr={t.abbr} size={48} />
                     <div className="min-w-0">
-                      <div className="truncate text-sm font-bold sm:text-base">{t.name}</div>
-                      <div className="text-xs text-zinc-500">{t.abbr}</div>
+                      <div className="truncate text-base font-bold text-white sm:text-lg">{t.name}</div>
+                      <div className="text-xs font-medium text-zinc-400">{t.abbr}</div>
                     </div>
-                    <div className="tnum font-display text-4xl font-semibold sm:text-5xl">{t.score}</div>
+                    <div className="tnum font-display text-5xl font-semibold text-white sm:text-6xl">{t.score}</div>
                   </div>
                 ))}
-                <div className="px-4 text-center">
-                  <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-400" : "text-zinc-300"}`}>
+                <div className="shrink-0 px-3 text-center sm:px-4">
+                  <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-300" : "text-zinc-200"}`}>
                     {detail.game.state === "in" ? detail.game.detail || "Live" : detail.game.state === "post" ? "Final" : detail.game.detail}
                   </div>
                   {lastUpdate && (
-                    <div className="mt-1 text-[11px] text-zinc-500">
+                    <div className="mt-1 text-[11px] text-zinc-400">
                       updated {lastUpdate.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}
                     </div>
                   )}
