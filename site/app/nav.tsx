@@ -8,7 +8,7 @@ type LeagueId = "nfl" | "cfb" | "nba";
 
 const LEAGUES: { id: LeagueId; label: string; base: string; scoreboard: string }[] = [
   { id: "nfl", label: "NFL", base: "", scoreboard: "football/nfl" },
-  { id: "cfb", label: "College", base: "/cfb", scoreboard: "football/college-football" },
+  { id: "cfb", label: "NCAAF", base: "/cfb", scoreboard: "football/college-football" },
   { id: "nba", label: "NBA", base: "/nba", scoreboard: "basketball/nba" },
 ];
 
