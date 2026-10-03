@@ -1,7 +1,11 @@
 // ESPN unofficial API helpers (site.api.espn.com). Free, no key, CORS-open.
 // Used for live scores + play-by-play. Falls back gracefully when no games live.
 
-export type League = "nfl" | "college-football";
+export type League = "nfl" | "college-football" | "nba";
+
+function sportOf(l: League): "football" | "basketball" {
+  return l === "nba" ? "basketball" : "football";
+}
 
 export type GameState = "pre" | "in" | "post";
 
@@ -55,14 +59,14 @@ export interface GameDetail {
   winProb: WinProbPoint[];
 }
 
-const API = "https://site.api.espn.com/apis/site/v2/sports/football";
+const API = "https://site.api.espn.com/apis/site/v2/sports";
 
 function stateOf(s: string): GameState {
   return s === "in" ? "in" : s === "post" ? "post" : "pre";
 }
 
 export async function fetchScoreboard(league: League): Promise<LiveGame[]> {
-  const res = await fetch(`${API}/${league}/scoreboard`, { cache: "no-store" });
+  const res = await fetch(`${API}/${sportOf(league)}/${league}/scoreboard`, { cache: "no-store" });
   if (!res.ok) throw new Error(`scoreboard ${res.status}`);
   const d = await res.json();
   return (d.events ?? []).map((ev: any): LiveGame => {
@@ -111,7 +115,7 @@ function ordinal(n: number): string {
 }
 
 export async function fetchGameDetail(league: League, gameId: string): Promise<GameDetail> {
-  const res = await fetch(`${API}/${league}/summary?event=${gameId}`, { cache: "no-store" });
+  const res = await fetch(`${API}/${sportOf(league)}/${league}/summary?event=${gameId}`, { cache: "no-store" });
   if (!res.ok) throw new Error(`summary ${res.status}`);
   const d = await res.json();
   const comp = d.header?.competitions?.[0] ?? {};

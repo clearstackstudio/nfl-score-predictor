@@ -14,9 +14,9 @@ const barlow = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Honest Line — NFL & college football picks with a public track record",
+  title: "Honest Line — NFL, college football & NBA picks with a public track record",
   description:
-    "Fundamentals-only NFL and college football prediction models. Every pick published, every result tracked, no hidden losers.",
+    "Fundamentals-only NFL, college football, and NBA prediction models. Every pick published, every result tracked, no hidden losers.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -53,8 +53,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Honest<span className="text-amber-400 light:text-amber-600">Line</span>
               </div>
               <p className="mt-2 max-w-xs text-sm leading-relaxed text-zinc-500">
-                Fundamentals-only NFL and college football prediction models.
-                Every pick published before kickoff, every result graded in
+                Fundamentals-only NFL, college football, and NBA prediction models.
+                Every pick published before tip-off, every result graded in
                 public.
               </p>
             </div>

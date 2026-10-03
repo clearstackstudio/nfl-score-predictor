@@ -4,36 +4,43 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type LeagueId = "nfl" | "cfb";
+type LeagueId = "nfl" | "cfb" | "nba";
 
-const LEAGUES: { id: LeagueId; label: string; base: string; espn: string }[] = [
-  { id: "nfl", label: "NFL", base: "", espn: "nfl" },
-  { id: "cfb", label: "College", base: "/cfb", espn: "college-football" },
+const LEAGUES: { id: LeagueId; label: string; base: string; scoreboard: string }[] = [
+  { id: "nfl", label: "NFL", base: "", scoreboard: "football/nfl" },
+  { id: "cfb", label: "College", base: "/cfb", scoreboard: "football/college-football" },
+  { id: "nba", label: "NBA", base: "/nba", scoreboard: "basketball/nba" },
 ];
 
 const NAV_ITEMS = [
-  { slug: "", label: "This week" },
+  { slug: "", label: "This week", nbaLabel: "Today" },
   { slug: "/live", label: "Live", liveDot: true },
   { slug: "/pick-em", label: "Pick'em" },
   { slug: "/track-record", label: "Track record" },
 ];
 
 function leagueOf(pathname: string): LeagueId {
-  return pathname === "/cfb" || pathname.startsWith("/cfb/") ? "cfb" : "nfl";
+  if (pathname === "/nba" || pathname.startsWith("/nba/")) return "nba";
+  if (pathname === "/cfb" || pathname.startsWith("/cfb/")) return "cfb";
+  return "nfl";
 }
 
 function switchHref(pathname: string, target: LeagueId): string {
   const current = leagueOf(pathname);
   if (current === target) return pathname;
-  if (target === "cfb") return pathname === "/" ? "/cfb" : `/cfb${pathname}`;
-  return pathname.replace(/^\/cfb/, "") || "/";
+  const stripped =
+    current === "nfl" ? pathname : pathname.replace(/^\/(cfb|nba)/, "") || "/";
+  if (target === "nfl") return stripped;
+  const base = target === "cfb" ? "/cfb" : "/nba";
+  return stripped === "/" ? base : `${base}${stripped}`;
 }
 
 export default function Nav() {
   const pathname = usePathname();
   const league = leagueOf(pathname);
-  const base = league === "cfb" ? "/cfb" : "";
-  const espnLeague = league === "cfb" ? "college-football" : "nfl";
+  const leagueCfg = LEAGUES.find((l) => l.id === league) ?? LEAGUES[0];
+  const base = leagueCfg.base;
+  const scoreboard = leagueCfg.scoreboard;
   const [anyLive, setAnyLive] = useState(false);
 
   useEffect(() => {
@@ -41,7 +48,7 @@ export default function Nav() {
     const check = async () => {
       try {
         const res = await fetch(
-          `https://site.api.espn.com/apis/site/v2/sports/football/${espnLeague}/scoreboard`,
+          `https://site.api.espn.com/apis/site/v2/sports/${scoreboard}/scoreboard`,
           { cache: "no-store" }
         );
         if (!res.ok) return;
@@ -60,7 +67,7 @@ export default function Nav() {
       cancelled = true;
       clearInterval(t);
     };
-  }, [espnLeague]);
+  }, [scoreboard]);
 
   return (
     <div className="flex max-w-full flex-wrap items-center gap-x-3 gap-y-2">
@@ -90,6 +97,7 @@ export default function Nav() {
       <nav className="flex max-w-full gap-1 overflow-x-auto" aria-label="Primary">
         {NAV_ITEMS.map((item) => {
           const href = `${base}${item.slug}` || "/";
+          const label = league === "nba" && item.nbaLabel ? item.nbaLabel : item.label;
           const active =
             item.slug === "" ? pathname === href || pathname === `${href}/` : pathname.startsWith(href);
           return (
@@ -109,7 +117,7 @@ export default function Nav() {
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-amber-400" />
                 </span>
               )}
-              {item.label}
+              {label}
             </Link>
           );
         })}
