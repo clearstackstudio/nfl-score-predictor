@@ -1,6 +1,8 @@
 import picksData from "../data/picks.json";
 import { fmtSpread, fmtPct, trim } from "./lib/format";
 import TeamLogo from "./lib/team-logo";
+import EmailSignup from "./lib/email-signup";
+import SharePicks from "./lib/share-picks";
 
 type Pick = {
   away: string; home: string; away_abbr: string; home_abbr: string;
@@ -298,6 +300,9 @@ export default function Home() {
         <p className="mt-5 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90 light:text-amber-800">
           {picksData.disclaimer}
         </p>
+        <div className="mt-5">
+          <SharePicks />
+        </div>
       </div>
 
       <ParlayCard parlay={(picksData as { parlay?: Parlay }).parlay ?? null} />
@@ -320,6 +325,10 @@ export default function Home() {
         the market. A pick appears only where we disagree by enough to matter —
         the percentage is our estimated chance that side covers or the total lands.
       </p>
+
+      <div className="mt-10">
+        <EmailSignup />
+      </div>
     </div>
   );
 }
