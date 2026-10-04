@@ -30,9 +30,13 @@ function switchHref(pathname: string, target: LeagueId): string {
   if (current === target) return pathname;
   const stripped =
     current === "nfl" ? pathname : pathname.replace(/^\/(cfb|nba)/, "") || "/";
-  if (target === "nfl") return stripped;
+  // Only league subpages exist under every league; anything else (e.g.
+  // /accuracy, /disclaimer) falls back to the league home.
+  const leagueSlugs = ["", "/live", "/pick-em", "/track-record"];
+  const valid = leagueSlugs.includes(stripped);
+  if (target === "nfl") return valid ? stripped : "/";
   const base = target === "cfb" ? "/cfb" : "/nba";
-  return stripped === "/" ? base : `${base}${stripped}`;
+  return valid && stripped !== "/" ? `${base}${stripped}` : base;
 }
 
 export default function Nav() {
