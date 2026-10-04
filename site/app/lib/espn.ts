@@ -132,6 +132,13 @@ export async function fetchGameDetail(league: League, gameId: string): Promise<G
   const comp = d.header?.competitions?.[0] ?? {};
   const away = comp.competitors?.find((c: any) => c.homeAway === "away") ?? {};
   const home = comp.competitors?.find((c: any) => c.homeAway === "home") ?? {};
+  const possId = comp.situation?.possession;
+  const possessionAbbr =
+    possId != null && String(away.team?.id) === String(possId)
+      ? (away.team?.abbreviation ?? null)
+      : possId != null && String(home.team?.id) === String(possId)
+        ? (home.team?.abbreviation ?? null)
+        : null;
   const game: LiveGame = {
     id: String(d.header?.id ?? gameId),
     name: d.header?.name ?? "",
@@ -147,6 +154,7 @@ export async function fetchGameDetail(league: League, gameId: string): Promise<G
     homeName: home.team?.displayName ?? "",
     homeScore: home.score ?? "0",
     homeLogo: home.team?.logo ?? "",
+    possessionAbbr,
   };
 
   const logoFor = (abbr: string) =>

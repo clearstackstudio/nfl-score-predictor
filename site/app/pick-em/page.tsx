@@ -6,10 +6,12 @@ import seasonData from "../../data/season_2026.json";
 import TeamLogo from "../lib/team-logo";
 import { trim } from "../lib/format";
 
-type Mode = "ats" | "su" | "ou";
+type Mode = "combo" | "su";
 type Side = "home" | "away";
 type OuPick = "over" | "under";
 type PickValue = Side | OuPick;
+/** Storage bucket per pick kind — kept separate so old saved cards survive. */
+type Store = "ats" | "su" | "ou";
 
 type Game = {
   away_abbr: string;
@@ -26,7 +28,7 @@ type Game = {
   result?: { home_score: number; away_score: number; ats?: string; ou?: string } | null;
 };
 
-type Stored = { weeks: Record<string, Record<Mode, Record<string, PickValue>>> };
+type Stored = { weeks: Record<string, Record<Store, Record<string, PickValue>>> };
 const LS_KEY = "hl-pickem-2026";
 
 function gameKey(g: { away_abbr: string; home_abbr: string }) {
@@ -52,7 +54,7 @@ function modelSuLean(ourSpread: number): Side | null {
 }
 
 function gradeSide(
-  g: Game, side: Side, mode: Mode
+  g: Game, side: Side, mode: "ats" | "su"
 ): "win" | "loss" | "push" | null {
   const r = g.result;
   if (!r) return null;
@@ -82,7 +84,7 @@ function fmtTally(t: Tally) {
 }
 
 export default function PickEm() {
-  const [mode, setMode] = useState<Mode>("ats");
+  const [mode, setMode] = useState<Mode>("combo");
   const [stored, setStored] = useState<Stored>({ weeks: {} });
   const [ready, setReady] = useState(false);
 
@@ -101,9 +103,9 @@ export default function PickEm() {
   }, []);
 
   const weekPicks: Record<string, PickValue> =
-    stored.weeks[week]?.[mode] ?? {};
+    stored.weeks[week]?.su ?? {};
 
-  function setPick(g: Game, value: PickValue) {
+  function setPick(g: Game, store: Store, value: PickValue) {
     setStored((prev) => {
       const wk = prev.weeks[week] ?? { ats: {}, su: {}, ou: {} };
       const next: Stored = {
@@ -113,7 +115,7 @@ export default function PickEm() {
             ats: { ...wk.ats },
             su: { ...wk.su },
             ou: { ...wk.ou },
-            [mode]: { ...wk[mode], [gameKey(g)]: value },
+            [store]: { ...wk[store], [gameKey(g)]: value },
           },
         },
       };
@@ -139,7 +141,12 @@ export default function PickEm() {
     });
   }
 
-  const pickedCount = Object.keys(weekPicks).length;
+  const pickedCount =
+    mode === "combo"
+      ? Object.keys(stored.weeks[week]?.ats ?? {}).length +
+        Object.keys(stored.weeks[week]?.ou ?? {}).length
+      : Object.keys(weekPicks).length;
+  const pickedTotal = mode === "combo" ? games.length * 2 : games.length;
 
   // ---- You vs the model, from graded weeks ----
   const { youAts, modelAts, youSu, modelSu, youOu, modelOu, rows } = useMemo(() => {
@@ -200,9 +207,9 @@ export default function PickEm() {
     return { youAts, modelAts, youSu, modelSu, youOu, modelOu, rows };
   }, [gradedWeeks, stored]);
 
-  const modelHint = (g: Game): string | null => {
-    if (mode === "ats") return g.pick_spread_label ?? null;
-    if (mode === "ou") return g.pick_total_label ?? null;
+  const modelHint = (g: Game, store: Store): string | null => {
+    if (store === "ats") return g.pick_spread_label ?? null;
+    if (store === "ou") return g.pick_total_label ?? null;
     const lean = modelSuLean(g.our_spread);
     return lean ? (lean === "home" ? g.home_abbr : g.away_abbr) : null;
   };
@@ -217,17 +224,17 @@ export default function PickEm() {
         Pick<span className="text-amber-400 light:text-amber-600">&rsquo;em</span>
       </h1>
       <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
-        Pick every game against the spread, straight up, or on the total. We grade your card
-        every Tuesday from the season log, and you can see exactly how you
-        stack up against the model. Picks live in your browser — no account needed.
+        Pick every game against the spread and on the total — or go straight up.
+        We grade your card every Tuesday from the season log, and you can see
+        exactly how you stack up against the model. Picks live in your browser —
+        no account needed.
       </p>
 
       {/* Mode toggle */}
       <div className="mt-5 inline-flex rounded-xl border border-zinc-800 bg-zinc-900 p-1 light:border-zinc-200 light:bg-zinc-100">
         {([
-          ["ats", "Against the spread"],
+          ["combo", "Spread + Totals"],
           ["su", "Straight up"],
-          ["ou", "Over/Under"],
         ] as [Mode, string][]).map(([m, label]) => (
           <button
             key={m}
@@ -248,7 +255,7 @@ export default function PickEm() {
         </h2>
         <div className="flex items-center gap-3">
           <span className="text-sm text-zinc-400 light:text-zinc-600">
-            {ready ? `${pickedCount} of ${games.length} picked` : "…"}
+            {ready ? `${pickedCount} of ${pickedTotal} picked` : "…"}
           </span>
           <button
             onClick={clearWeek}
@@ -258,11 +265,11 @@ export default function PickEm() {
           </button>
         </div>
       </div>
-      {ready && pickedCount > 0 && pickedCount < games.length && (
+      {ready && pickedCount > 0 && pickedCount < pickedTotal && (
         <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-zinc-800 light:bg-zinc-200">
           <div
             className="h-full rounded-full bg-amber-400 transition-all"
-            style={{ width: `${(pickedCount / games.length) * 100}%` }}
+            style={{ width: `${(pickedCount / pickedTotal) * 100}%` }}
           />
         </div>
       )}
@@ -270,40 +277,19 @@ export default function PickEm() {
       <div className="mt-4 grid gap-3 md:grid-cols-2">
         {games.map((g) => {
           const k = gameKey(g);
-          const sel = weekPicks[k];
-          const hint = modelHint(g);
-          const ouBtn = (pick: OuPick) => {
-            const active = sel === pick;
-            const label = `${pick === "over" ? "Over" : "Under"} ${trim(g.line_total)}`;
-            return (
-              <button
-                key={pick}
-                onClick={() => setPick(g, pick)}
-                className={`flex-1 rounded-xl border px-4 py-3 text-left transition ${
-                  active
-                    ? "border-amber-400 bg-amber-400/15"
-                    : "border-zinc-800 bg-zinc-900 hover:border-zinc-600 light:border-zinc-200 light:bg-white light:hover:border-zinc-400"
-                }`}
-              >
-                <div className={`font-mono text-lg font-bold ${active ? "text-amber-300 light:text-amber-700" : "text-zinc-100 light:text-zinc-900"}`}>
-                  {label}
-                </div>
-                <div className="text-xs text-zinc-500">
-                  {hint && g.pick_total === pick && "· model's pick"}
-                </div>
-              </button>
-            );
-          };
-          const btn = (side: Side) => {
-            const active = sel === side;
-            const label =
-              mode === "ats"
-                ? g.spread_labels[side]
-                : side === "home" ? g.home_abbr : g.away_abbr;
+          const selAts = stored.weeks[week]?.ats?.[k] as Side | undefined;
+          const selOu = stored.weeks[week]?.ou?.[k] as OuPick | undefined;
+          const selSu = weekPicks[k] as Side | undefined;
+          const hintAts = modelHint(g, "ats");
+          const hintOu = modelHint(g, "ou");
+          const hintSu = modelHint(g, "su");
+          const spreadBtn = (side: Side) => {
+            const active = selAts === side;
+            const label = g.spread_labels[side];
             return (
               <button
                 key={side}
-                onClick={() => setPick(g, side)}
+                onClick={() => setPick(g, "ats", side)}
                 className={`flex-1 rounded-xl border px-4 py-3 text-left transition ${
                   active
                     ? "border-amber-400 bg-amber-400/15"
@@ -316,7 +302,52 @@ export default function PickEm() {
                 </div>
                 <div className="text-xs text-zinc-500">
                   {side === "home" ? g.home_abbr : g.away_abbr}
-                  {mode === "su" && hint && (side === "home" ? g.home_abbr : g.away_abbr) === hint && " · model's lean"}
+                  {hintAts && g.spread_labels[side] === hintAts && " · model's pick"}
+                </div>
+              </button>
+            );
+          };
+          const ouBtn = (pick: OuPick) => {
+            const active = selOu === pick;
+            const label = `${pick === "over" ? "Over" : "Under"} ${trim(g.line_total)}`;
+            return (
+              <button
+                key={pick}
+                onClick={() => setPick(g, "ou", pick)}
+                className={`flex-1 rounded-xl border px-4 py-3 text-left transition ${
+                  active
+                    ? "border-amber-400 bg-amber-400/15"
+                    : "border-zinc-800 bg-zinc-900 hover:border-zinc-600 light:border-zinc-200 light:bg-white light:hover:border-zinc-400"
+                }`}
+              >
+                <div className={`font-mono text-lg font-bold ${active ? "text-amber-300 light:text-amber-700" : "text-zinc-100 light:text-zinc-900"}`}>
+                  {label}
+                </div>
+                <div className="text-xs text-zinc-500">
+                  {hintOu && g.pick_total === pick && "· model's pick"}
+                </div>
+              </button>
+            );
+          };
+          const suBtn = (side: Side) => {
+            const active = selSu === side;
+            return (
+              <button
+                key={side}
+                onClick={() => setPick(g, "su", side)}
+                className={`flex-1 rounded-xl border px-4 py-3 text-left transition ${
+                  active
+                    ? "border-amber-400 bg-amber-400/15"
+                    : "border-zinc-800 bg-zinc-900 hover:border-zinc-600 light:border-zinc-200 light:bg-white light:hover:border-zinc-400"
+                }`}
+              >
+                <div className={`flex items-center gap-2 font-mono text-lg font-bold ${active ? "text-amber-300 light:text-amber-700" : "text-zinc-100 light:text-zinc-900"}`}>
+                  <TeamLogo abbr={side === "home" ? g.home_abbr : g.away_abbr} size={28} />
+                  {side === "home" ? g.home_abbr : g.away_abbr}
+                </div>
+                <div className="text-xs text-zinc-500">
+                  {side === "home" ? g.home_abbr : g.away_abbr}
+                  {hintSu && (side === "home" ? g.home_abbr : g.away_abbr) === hintSu && " · model's lean"}
                 </div>
               </button>
             );
@@ -339,19 +370,32 @@ export default function PickEm() {
                   {g.weekday ? `${g.weekday}, ` : ""}{g.gameday}
                 </span>
               </div>
-              {mode === "ats" && hint && (
-                <p className="mt-1 text-xs text-zinc-500">Model&apos;s pick: {hint}</p>
+              {mode === "combo" ? (
+                <>
+                  <div className="mt-3">
+                    <div className="mb-1.5 flex items-baseline justify-between">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-500">Spread</span>
+                      {hintAts && <span className="text-[11px] text-zinc-500">Model: {hintAts}</span>}
+                    </div>
+                    <div className="flex gap-2">
+                      {spreadBtn("away")}{spreadBtn("home")}
+                    </div>
+                  </div>
+                  <div className="mt-3">
+                    <div className="mb-1.5 flex items-baseline justify-between">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-500">Total</span>
+                      {hintOu && <span className="text-[11px] text-zinc-500">Model: {hintOu}</span>}
+                    </div>
+                    <div className="flex gap-2">
+                      {ouBtn("over")}{ouBtn("under")}
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div className="mt-3 flex gap-2">
+                  {suBtn("away")}{suBtn("home")}
+                </div>
               )}
-              {mode === "ou" && hint && (
-                <p className="mt-1 text-xs text-zinc-500">Model&apos;s pick: {hint}</p>
-              )}
-              <div className="mt-3 flex gap-2">
-                {mode === "ou" ? (
-                  <>{ouBtn("over")}{ouBtn("under")}</>
-                ) : (
-                  <>{btn("away")}{btn("home")}</>
-                )}
-              </div>
             </article>
           );
         })}
