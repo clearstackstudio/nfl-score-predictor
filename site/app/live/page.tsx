@@ -96,13 +96,26 @@ function GameCard({ g, selected, onSelect }: { g: LiveGame; selected: boolean; o
         {[
           { abbr: g.awayAbbr, name: g.awayName, score: g.awayScore, logo: g.awayLogo },
           { abbr: g.homeAbbr, name: g.homeName, score: g.homeScore, logo: g.homeLogo },
-        ].map((t) => (
-          <div key={t.abbr} className="flex items-center gap-2">
-            <TeamMark logo={t.logo} abbr={t.abbr} size={22} />
-            <span className="flex-1 truncate text-sm font-semibold text-zinc-100 light:text-zinc-900">{t.abbr}</span>
-            <span className="tnum font-mono text-sm font-bold text-white light:text-zinc-900">{t.score}</span>
-          </div>
-        ))}
+        ].map((t) => {
+          const hasBall = g.state === "in" && g.possessionAbbr === t.abbr;
+          return (
+            <div key={t.abbr} className="flex items-center gap-2">
+              <TeamMark logo={t.logo} abbr={t.abbr} size={22} />
+              <span className="flex flex-1 items-center gap-1.5 truncate text-sm font-semibold text-zinc-100 light:text-zinc-900">
+                {t.abbr}
+                {hasBall && (
+                  <svg aria-label="Possession" role="img" width="13" height="13" viewBox="0 0 16 16" className="shrink-0 text-amber-400 light:text-amber-600">
+                    <ellipse cx="8" cy="8" rx="7" ry="4.6" transform="rotate(-30 8 8)" fill="currentColor" />
+                    <line x1="6.2" y1="6.4" x2="9.8" y2="9.6" stroke="#09090b" strokeWidth="1.1" strokeLinecap="round" transform="rotate(-30 8 8)" />
+                    <line x1="8" y1="4.6" x2="8" y2="6.2" stroke="#09090b" strokeWidth="1" strokeLinecap="round" transform="rotate(-30 8 8)" />
+                    <line x1="8" y1="9.8" x2="8" y2="11.4" stroke="#09090b" strokeWidth="1" strokeLinecap="round" transform="rotate(-30 8 8)" />
+                  </svg>
+                )}
+              </span>
+              <span className="tnum font-mono text-sm font-bold text-white light:text-zinc-900">{t.score}</span>
+            </div>
+          );
+        })}
       </div>
     </button>
   );

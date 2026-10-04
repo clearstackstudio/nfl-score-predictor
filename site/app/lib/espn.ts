@@ -24,6 +24,8 @@ export interface LiveGame {
   homeName: string;
   homeScore: string;
   homeLogo: string;
+  /** Abbreviation of the team currently in possession, or null if unknown/not live. */
+  possessionAbbr: string | null;
 }
 
 export interface Play {
@@ -73,6 +75,14 @@ export async function fetchScoreboard(league: League): Promise<LiveGame[]> {
     const comp = ev.competitions?.[0] ?? {};
     const away = comp.competitors?.find((c: any) => c.homeAway === "away") ?? {};
     const home = comp.competitors?.find((c: any) => c.homeAway === "home") ?? {};
+    // ESPN reports possession as a team id in the live situation; map it to an abbreviation
+    const possId = comp.situation?.possession;
+    const possessionAbbr =
+      possId != null && String(away.team?.id) === String(possId)
+        ? (away.team?.abbreviation ?? null)
+        : possId != null && String(home.team?.id) === String(possId)
+          ? (home.team?.abbreviation ?? null)
+          : null;
     return {
       id: ev.id,
       name: ev.name,
@@ -88,6 +98,7 @@ export async function fetchScoreboard(league: League): Promise<LiveGame[]> {
       homeName: home.team?.displayName ?? home.team?.abbreviation ?? "",
       homeScore: home.score ?? "0",
       homeLogo: home.team?.logo ?? "",
+      possessionAbbr,
     };
   });
 }
