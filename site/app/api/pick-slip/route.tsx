@@ -39,7 +39,7 @@ export async function GET() {
             HONEST LINE
           </div>
           <div style={{ fontSize: 28, color: "#a1a1aa" }}>
-            NFL · Week {week} {season}
+            {`NFL · Week ${week} ${season}`}
           </div>
         </div>
         <div style={{ fontSize: 26, color: "#d4d4d8", marginTop: 8 }}>
@@ -59,7 +59,7 @@ export async function GET() {
                 {p.pick_spread_label && (
                   <div style={{ fontSize: 26, color: "#e4e4e7", display: "flex", gap: 8 }}>
                     <span>{p.pick_spread_label}</span>
-                    <span style={{ color: "#a1a1aa" }}>{pct(p.cover_prob)} to cover</span>
+                    <span style={{ color: "#a1a1aa" }}>{`${pct(p.cover_prob)} to cover`}</span>
                   </div>
                 )}
                 {p.pick_total_label && (
