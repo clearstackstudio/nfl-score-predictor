@@ -50,19 +50,21 @@ export async function GET() {
         <div style={{ display: "flex", flexDirection: "column", gap: 14, flex: 1 }}>
           {picks.map((p) => (
             <div key={`${p.away_abbr}-${p.home_abbr}`} style={{ display: "flex", alignItems: "center" }}>
-              <div style={{ width: 220, fontSize: 30, fontWeight: 700 }}>
-                {p.away_abbr} <span style={{ color: "#71717a" }}>@</span> {p.home_abbr}
+              <div style={{ width: 230, fontSize: 30, fontWeight: 700, display: "flex", gap: 10 }}>
+                <span>{p.away_abbr}</span>
+                <span style={{ color: "#71717a" }}>@</span>
+                <span>{p.home_abbr}</span>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                 {p.pick_spread_label && (
-                  <div style={{ fontSize: 26, color: "#e4e4e7" }}>
-                    {p.pick_spread_label}
+                  <div style={{ fontSize: 26, color: "#e4e4e7", display: "flex", gap: 8 }}>
+                    <span>{p.pick_spread_label}</span>
                     <span style={{ color: "#a1a1aa" }}>{pct(p.cover_prob)} to cover</span>
                   </div>
                 )}
                 {p.pick_total_label && (
-                  <div style={{ fontSize: 26, color: "#e4e4e7" }}>
-                    {p.pick_total_label}
+                  <div style={{ fontSize: 26, color: "#e4e4e7", display: "flex", gap: 8 }}>
+                    <span>{p.pick_total_label}</span>
                     <span style={{ color: "#a1a1aa" }}>{pct(p.ou_prob)}</span>
                   </div>
                 )}
