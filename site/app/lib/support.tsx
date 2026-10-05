@@ -1,7 +1,7 @@
 // Tip-jar link. Empty string = button stays hidden site-wide.
 // Bryant: paste your Ko-fi page URL here (e.g. "https://ko-fi.com/yourname")
 // once the account is set up, and the button appears automatically.
-export const KO_FI_URL = "";
+export const KO_FI_URL = "https://ko-fi.com/honestline";
 
 export function SupportButton() {
   if (!KO_FI_URL) return null;
