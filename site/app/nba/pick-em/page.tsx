@@ -86,9 +86,10 @@ function fmtTally(t: Tally) {
   return `${t.w}-${t.l}${t.p ? `-${t.p}` : ""}`;
 }
 
-const picksFile = picksData as { week?: number | null; date?: string | null; picks: Game[] };
+const picksFile = picksData as { week?: number | null; date?: string | null; picks: Game[]; preseason?: boolean; experimental_note?: string | null };
 const slateKey = String(picksFile.week ?? picksFile.date ?? "slate");
 const slateLabel = picksFile.week != null ? `Week ${picksFile.week}` : "Tonight's slate";
+const showPreseason = picksFile.preseason === true;
 
 function slateTitle(wn: string) {
   return /^\d+$/.test(wn) ? `Week ${wn}` : wn;
@@ -243,6 +244,14 @@ export default function NbaPickEm() {
       </p>
 
       {/* Mode toggle */}
+      {showPreseason && (
+        <div className="mt-5 rounded-xl border border-sky-400/25 bg-sky-400/[0.07] px-4 py-3 light:bg-sky-50">
+          <div className="text-xs font-bold uppercase tracking-[0.16em] text-sky-300 light:text-sky-700">Preseason — experimental</div>
+          <p className="mt-1 text-sm text-zinc-400 light:text-zinc-600">
+            {picksFile.experimental_note ?? "The model is running before it has seen a real regular-season game. Treat these numbers as a calibration exercise, not as picks."}
+          </p>
+        </div>
+      )}
       <div className="mt-5 inline-flex rounded-xl border border-zinc-800 bg-zinc-900 p-1 light:border-zinc-200 light:bg-zinc-100">
         {([
           ["combo", "Spread + Totals"],
