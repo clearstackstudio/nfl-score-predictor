@@ -18,6 +18,7 @@ type Pick = {
   pick_total_label: string | null;
   cover_prob: number | null; ou_prob: number | null;
   home_qb: string | null; away_qb: string | null;
+  result?: { home_score: number; away_score: number; ats?: string; ou?: string } | null;
 };
 
 const picks = picksData.picks as Pick[];
@@ -106,12 +107,28 @@ function MarketPanel({
   );
 }
 
-function PickStrip({ active, note, children }: { active: boolean; note?: string | null; children: React.ReactNode }) {
+function ResultBadge({ r }: { r: "win" | "loss" | "push" }) {
+  const cls =
+    r === "win"
+      ? "bg-emerald-400/15 text-emerald-300 light:bg-emerald-600/10 light:text-emerald-700"
+      : r === "loss"
+        ? "bg-rose-400/15 text-rose-300 light:bg-rose-600/10 light:text-rose-700"
+        : "bg-zinc-400/15 text-zinc-400 light:bg-zinc-500/10 light:text-zinc-600";
+  const text = r === "win" ? "✓ Won" : r === "loss" ? "✗ Lost" : "Push";
+  return (
+    <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-semibold ${cls}`}>
+      {text}
+    </span>
+  );
+}
+
+function PickStrip({ active, note, result, children }: { active: boolean; note?: string | null; result?: "win" | "loss" | "push" | null; children: React.ReactNode }) {
   if (active) {
     return (
       <div className="border-l-2 border-amber-400 bg-amber-400/[0.07] px-4 py-3">
-        <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-amber-400/90 light:text-amber-700">
+        <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-amber-400/90 light:text-amber-700">
           Model pick
+          {result && <ResultBadge r={result} />}
         </div>
         <div className="mt-0.5 text-[15px] font-semibold text-amber-100 light:text-amber-800">{children}</div>
       </div>
@@ -159,7 +176,7 @@ function GameCard({ p }: { p: Pick }) {
         edge={p.spread_edge}
         edgeCaption="pts of disagreement"
         pick={
-          <PickStrip active={!!p.pick_spread}>
+          <PickStrip active={!!p.pick_spread} result={(p.result?.ats as "win" | "loss" | "push") ?? null}>
             {p.pick_spread ? spreadPickText(p) : null}
           </PickStrip>
         }
@@ -176,7 +193,7 @@ function GameCard({ p }: { p: Pick }) {
         edge={p.total_edge}
         edgeCaption="pts of disagreement"
         pick={
-          <PickStrip active={!!p.pick_total} note={p.pick_total_note}>
+          <PickStrip active={!!p.pick_total} note={p.pick_total_note} result={(p.result?.ou as "win" | "loss" | "push") ?? null}>
             {p.pick_total ? ouPickText(p) : null}
           </PickStrip>
         }

@@ -80,6 +80,30 @@ function gradeOu(g: Game, pick: OuPick): "win" | "loss" | "push" | null {
   return (diff > 0) === (pick === "over") ? "win" : "loss";
 }
 
+type Grade = "win" | "loss" | "push";
+type GameDetail = {
+  label: string;
+  score: string;
+  ats: { pick: string; result: Grade } | null;
+  su: { pick: string; result: Grade } | null;
+  ou: { pick: string; result: Grade } | null;
+};
+
+function ResultBadge({ r }: { r: Grade }) {
+  const cls =
+    r === "win"
+      ? "bg-emerald-400/15 text-emerald-300 light:bg-emerald-600/10 light:text-emerald-700"
+      : r === "loss"
+        ? "bg-rose-400/15 text-rose-300 light:bg-rose-600/10 light:text-rose-700"
+        : "bg-zinc-400/15 text-zinc-400 light:bg-zinc-500/10 light:text-zinc-600";
+  const text = r === "win" ? "✓ Won" : r === "loss" ? "✗ Lost" : "Push";
+  return (
+    <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-semibold ${cls}`}>
+      {text}
+    </span>
+  );
+}
+
 type Tally = { w: number; l: number; p: number };
 const blank = (): Tally => ({ w: 0, l: 0, p: 0 });
 function fmtTally(t: Tally) {
@@ -168,6 +192,7 @@ export default function NbaPickEm() {
       youAts: Tally | null; modelAts: Tally;
       youSu: Tally | null; modelSu: Tally;
       youOu: Tally | null; modelOu: Tally;
+      games: GameDetail[];
     }[] = [];
     for (const { week: wk, picks } of gradedWeeks) {
       const sp = stored.weeks[wk];
@@ -175,8 +200,28 @@ export default function NbaPickEm() {
       const rSu: Tally | null = sp ? blank() : null;
       const rOu: Tally | null = sp ? blank() : null;
       const mAts = blank(), mSu = blank(), mOu = blank();
+      const details: GameDetail[] = [];
       for (const g of picks) {
         if (!g.result) continue;
+        // per-game detail for your picks
+        if (sp) {
+          const k = gameKey(g);
+          const ya = sp.ats?.[k] as Side | undefined;
+          const ys = sp.su?.[k] as Side | undefined;
+          const yo = sp.ou?.[k] as OuPick | undefined;
+          const dAts = ya ? gradeSide(g, ya, "ats") : null;
+          const dSu = ys ? gradeSide(g, ys, "su") : null;
+          const dOu = yo ? gradeOu(g, yo) : null;
+          if (dAts || dSu || dOu) {
+            details.push({
+              label: `${g.away_abbr} @ ${g.home_abbr}`,
+              score: `${g.result.away_score}–${g.result.home_score}`,
+              ats: dAts ? { pick: g.spread_labels?.[ya as Side] ?? fmtSpread(g.line_spread, g.home_abbr, g.away_abbr), result: dAts } : null,
+              su: dSu ? { pick: ys === "home" ? g.home_abbr : g.away_abbr, result: dSu } : null,
+              ou: dOu ? { pick: `${yo === "over" ? "Over" : "Under"} ${trim(g.line_total)}`, result: dOu } : null,
+            });
+          }
+        }
         // model ATS (result.ats exists only when the model made a spread pick,
         // and it already grades the model's own pick_spread side)
         const mAtsR = g.result.ats as "win" | "loss" | "push" | undefined;
@@ -213,7 +258,7 @@ export default function NbaPickEm() {
       for (const [dst, src] of [[youAts, rAts], [modelAts, mAts], [youSu, rSu], [modelSu, mSu], [youOu, rOu], [modelOu, mOu]] as const) {
         if (src) { dst.w += src.w; dst.l += src.l; dst.p += src.p; }
       }
-      rows.push({ week: wk, youAts: rAts, modelAts: mAts, youSu: rSu, modelSu: mSu, youOu: rOu, modelOu: mOu });
+      rows.push({ week: wk, youAts: rAts, modelAts: mAts, youSu: rSu, modelSu: mSu, youOu: rOu, modelOu: mOu, games: details });
     }
     return { youAts, modelAts, youSu, modelSu, youOu, modelOu, rows };
   }, [gradedWeeks, stored]);
@@ -531,6 +576,55 @@ export default function NbaPickEm() {
           <p className="mt-3 text-xs text-zinc-500">
             “—” means you didn&apos;t save picks that night on this browser.
           </p>
+          {rows.some((r) => r.games.length > 0) && (
+            <div className="mt-8">
+              <h3 className="font-display text-xl font-semibold uppercase tracking-wide">
+                Your picks, game by game
+              </h3>
+              <div className="mt-3 space-y-3">
+                {rows.filter((r) => r.games.length > 0).map((r) => (
+                  <details
+                    key={r.week}
+                    className="group rounded-2xl border border-zinc-800 light:border-zinc-200"
+                  >
+                    <summary className="cursor-pointer list-none px-4 py-3 font-semibold">
+                      <span className="mr-2 inline-block transition-transform group-open:rotate-90">▸</span>
+                      {slateTitle(r.week)}
+                      <span className="ml-2 font-sans text-sm font-normal text-zinc-500">
+                        {r.games.length} graded {r.games.length === 1 ? "pick" : "picks"}
+                      </span>
+                    </summary>
+                    <ul className="space-y-2 border-t border-zinc-800/60 px-4 py-3 light:border-zinc-200">
+                      {r.games.map((gd) => (
+                        <li key={gd.label} className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+                          <span className="font-mono font-bold">{gd.label}</span>
+                          <span className="font-mono text-xs text-zinc-500">{gd.score}</span>
+                          {gd.ats && (
+                            <span className="inline-flex items-center gap-1.5">
+                              <span className="text-zinc-400 light:text-zinc-600">Spread: {gd.ats.pick}</span>
+                              <ResultBadge r={gd.ats.result} />
+                            </span>
+                          )}
+                          {gd.su && (
+                            <span className="inline-flex items-center gap-1.5">
+                              <span className="text-zinc-400 light:text-zinc-600">SU: {gd.su.pick}</span>
+                              <ResultBadge r={gd.su.result} />
+                            </span>
+                          )}
+                          {gd.ou && (
+                            <span className="inline-flex items-center gap-1.5">
+                              <span className="text-zinc-400 light:text-zinc-600">O/U: {gd.ou.pick}</span>
+                              <ResultBadge r={gd.ou.result} />
+                            </span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
