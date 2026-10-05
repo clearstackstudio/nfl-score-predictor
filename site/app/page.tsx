@@ -1,4 +1,7 @@
+"use client";
+import { useState } from "react";
 import picksData from "../data/picks.json";
+import seasonLog from "../data/season_2026.json";
 import { fmtSpread, fmtPct, trim } from "./lib/format";
 import TeamLogo from "./lib/team-logo";
 import EmailSignup from "./lib/email-signup";
@@ -21,7 +24,6 @@ type Pick = {
   result?: { home_score: number; away_score: number; ats?: string; ou?: string } | null;
 };
 
-const picks = picksData.picks as Pick[];
 
 function fmtGameday(p: Pick): string {
   // gameday is YYYY-MM-DD; weekday already provided
@@ -207,7 +209,46 @@ type ParlayLeg = {
 };
 type Parlay = {
   legs: ParlayLeg[]; combined_prob: number; fair_odds: string; book_pays: string;
+  result?: "win" | "loss" | "push" | null;
 } | null;
+
+type WeekLog = {
+  generated: string; complete: boolean;
+  picks: Pick[]; parlay: Parlay;
+};
+type SeasonLog = { season: number; weeks: Record<string, WeekLog> };
+
+type WeekView = {
+  week: number; season: number; generated: string;
+  picks: Pick[]; parlay: Parlay; disclaimer: string;
+  isCurrent: boolean; complete: boolean;
+};
+
+const currentWeek: WeekView = {
+  week: (picksData as { week: number }).week,
+  season: (picksData as { season: number }).season,
+  generated: (picksData as { generated: string }).generated,
+  picks: (picksData as { picks: Pick[] }).picks,
+  parlay: (picksData as { parlay?: Parlay }).parlay ?? null,
+  disclaimer: (picksData as { disclaimer: string }).disclaimer,
+  isCurrent: true,
+  complete: false,
+};
+
+const pastWeeks: WeekView[] = Object.entries((seasonLog as SeasonLog).weeks)
+  .map(([wn, w]) => ({
+    week: Number(wn),
+    season: (seasonLog as SeasonLog).season,
+    generated: w.generated,
+    picks: w.picks,
+    parlay: w.parlay ?? null,
+    disclaimer: "",
+    isCurrent: false,
+    complete: w.complete,
+  }))
+  .sort((a, b) => b.week - a.week);
+
+const allWeeks: WeekView[] = [currentWeek, ...pastWeeks];
 
 function ParlayCard({ parlay }: { parlay: Parlay }) {
   if (!parlay || parlay.legs.length < 2) return null;
@@ -220,6 +261,11 @@ function ParlayCard({ parlay }: { parlay: Parlay }) {
           </div>
           <h2 className="mt-1 font-display text-3xl font-semibold uppercase tracking-wide">
             Parlay of the week
+            {parlay.result && (
+              <span className="ml-3 align-middle">
+                <ResultBadge r={parlay.result} />
+              </span>
+            )}
           </h2>
         </div>
         <span className="text-sm text-zinc-500">
@@ -282,6 +328,9 @@ function ParlayCard({ parlay }: { parlay: Parlay }) {
 }
 
 export default function Home() {
+  const [sel, setSel] = useState(0);
+  const wv = allWeeks[sel] ?? currentWeek;
+  const picks = wv.picks;
   const nSpread = picks.filter((p) => p.pick_spread).length;
   const nTotal = picks.filter((p) => p.pick_total).length;
 
@@ -290,11 +339,37 @@ export default function Home() {
       {/* Hero */}
       <div className="mb-8">
         <Eyebrow>
-          Week {picksData.week} · {picksData.season} season · generated {picksData.generated}
+          Week {wv.week} · {wv.season} season · generated {wv.generated}
+          {!wv.isCurrent && !wv.complete && (
+            <span className="ml-2 rounded bg-zinc-500/15 px-2 py-0.5 text-zinc-400 light:text-zinc-600">partial</span>
+          )}
         </Eyebrow>
         <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide sm:text-6xl">
-          This week&rsquo;s <span className="text-amber-400 light:text-amber-600">picks</span>
+          {wv.isCurrent ? (
+            <>This week&rsquo;s <span className="text-amber-400 light:text-amber-600">picks</span></>
+          ) : (
+            <>Week {wv.week} <span className="text-amber-400 light:text-amber-600">picks</span></>
+          )}
         </h1>
+        {allWeeks.length > 1 && (
+          <div className="mt-4 flex flex-wrap gap-2" role="tablist" aria-label="Browse weeks">
+            {allWeeks.map((w, i) => (
+              <button
+                key={w.week}
+                role="tab"
+                aria-selected={i === sel}
+                onClick={() => setSel(i)}
+                className={`rounded-full border px-3.5 py-1.5 text-sm font-semibold transition ${
+                  i === sel
+                    ? "border-amber-400 bg-amber-400/15 text-amber-200 light:border-amber-600 light:bg-amber-600/10 light:text-amber-700"
+                    : "border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200 light:border-zinc-200 light:bg-white light:text-zinc-600 light:hover:border-zinc-400"
+                }`}
+              >
+                {w.isCurrent ? `Week ${w.week} · current` : `Week ${w.week}`}
+              </button>
+            ))}
+          </div>
+        )}
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
           {picks.length} games, {nSpread} spread plays and {nTotal} total plays —
           from opponent-adjusted EPA ratings. The model never sees the betting
@@ -315,14 +390,14 @@ export default function Home() {
           ))}
         </div>
         <p className="mt-5 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90 light:text-amber-800">
-          {picksData.disclaimer}
+          {wv.isCurrent ? wv.disclaimer : "Graded results — every pick marked won, lost, or push. Nothing hidden, nothing rewritten."}
         </p>
         <div className="mt-5">
           <SharePicks />
         </div>
       </div>
 
-      <ParlayCard parlay={(picksData as { parlay?: Parlay }).parlay ?? null} />
+      <ParlayCard parlay={wv.parlay} />
 
       <div className="mb-4 flex items-baseline justify-between">
         <h2 className="font-display text-2xl font-semibold uppercase tracking-wide">
@@ -343,9 +418,11 @@ export default function Home() {
         the percentage is our estimated chance that side covers or the total lands.
       </p>
 
-      <div className="mt-10">
-        <EmailSignup />
-      </div>
+      {wv.isCurrent && (
+        <div className="mt-10">
+          <EmailSignup />
+        </div>
+      )}
     </div>
   );
 }
