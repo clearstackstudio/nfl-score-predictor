@@ -3,6 +3,7 @@ import { Inter, Barlow_Condensed } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import Nav from "./nav";
+import { SupportButton } from "./lib/support";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Every pick published before tip-off, every result graded in
                 public.
               </p>
+              <SupportButton />
             </div>
             <nav aria-label="Footer">
               <div className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
