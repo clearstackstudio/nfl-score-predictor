@@ -1,1 +1,549 @@
-{"season": 2026, "weeks": {}}
+{
+  "season": 2026,
+  "weeks": {
+    "4": {
+      "generated": "2026-09-30 18:18 PDT",
+      "complete": true,
+      "picks": [
+        {
+          "away": "Pittsburgh Steelers",
+          "home": "Cleveland Browns",
+          "away_abbr": "PIT",
+          "home_abbr": "CLE",
+          "gameday": "2026-10-01",
+          "weekday": "Thursday",
+          "line_spread": -2.5,
+          "line_total": 38.5,
+          "our_spread": -2.4,
+          "our_total": 27.4,
+          "spread_edge": 0.1,
+          "total_edge": -11.1,
+          "pick_spread": null,
+          "pick_total": "under",
+          "pick_spread_label": null,
+          "pick_total_label": "Under 38.5",
+          "spread_labels": {
+            "home": "CLE +2.5",
+            "away": "PIT -2.5"
+          },
+          "cover_prob": null,
+          "ou_prob": 0.795,
+          "home_qb": "Deshaun Watson",
+          "away_qb": "Aaron Rodgers",
+          "result": {
+            "home_score": 27,
+            "away_score": 24,
+            "ou": "loss"
+          }
+        },
+        {
+          "away": "Indianapolis Colts",
+          "home": "Washington Commanders",
+          "away_abbr": "IND",
+          "home_abbr": "WAS",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": -3.5,
+          "line_total": 47.5,
+          "our_spread": -7.2,
+          "our_total": 62.0,
+          "spread_edge": -3.7,
+          "total_edge": 14.5,
+          "pick_spread": "away",
+          "pick_total": "over",
+          "pick_spread_label": "IND -3.5",
+          "pick_total_label": "Over 47.5",
+          "spread_labels": {
+            "home": "WAS +3.5",
+            "away": "IND -3.5"
+          },
+          "cover_prob": 0.607,
+          "ou_prob": 0.858,
+          "home_qb": "Jayden Daniels",
+          "away_qb": "Daniel Jones",
+          "result": {
+            "home_score": 13,
+            "away_score": 30,
+            "ats": "win",
+            "ou": "loss"
+          }
+        },
+        {
+          "away": "Tennessee Titans",
+          "home": "Baltimore Ravens",
+          "away_abbr": "TEN",
+          "home_abbr": "BAL",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": 11.5,
+          "line_total": 42.5,
+          "our_spread": 14.9,
+          "our_total": 48.3,
+          "spread_edge": 3.4,
+          "total_edge": 5.8,
+          "pick_spread": "home",
+          "pick_total": "over",
+          "pick_spread_label": "BAL -11.5",
+          "pick_total_label": "Over 42.5",
+          "spread_labels": {
+            "home": "BAL -11.5",
+            "away": "TEN +11.5"
+          },
+          "cover_prob": 0.599,
+          "ou_prob": 0.666,
+          "home_qb": "Lamar Jackson",
+          "away_qb": "Cam Ward",
+          "result": {
+            "home_score": 24,
+            "away_score": 18,
+            "ats": "loss",
+            "ou": "loss"
+          }
+        },
+        {
+          "away": "New England Patriots",
+          "home": "Buffalo Bills",
+          "away_abbr": "NE",
+          "home_abbr": "BUF",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": 6.5,
+          "line_total": 48.5,
+          "our_spread": 1.2,
+          "our_total": 54.7,
+          "spread_edge": -5.3,
+          "total_edge": 6.2,
+          "pick_spread": "away",
+          "pick_total": "over",
+          "pick_spread_label": "NE +6.5",
+          "pick_total_label": "Over 48.5",
+          "spread_labels": {
+            "home": "BUF -6.5",
+            "away": "NE +6.5"
+          },
+          "cover_prob": 0.653,
+          "ou_prob": 0.676,
+          "home_qb": "Josh Allen",
+          "away_qb": "Drake Maye",
+          "result": {
+            "home_score": 26,
+            "away_score": 29,
+            "ats": "win",
+            "ou": "win"
+          }
+        },
+        {
+          "away": "New York Jets",
+          "home": "Chicago Bears",
+          "away_abbr": "NYJ",
+          "home_abbr": "CHI",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": 3.5,
+          "line_total": 43.5,
+          "our_spread": 20.9,
+          "our_total": 52.8,
+          "spread_edge": 17.4,
+          "total_edge": 9.3,
+          "pick_spread": "home",
+          "pick_total": "over",
+          "pick_spread_label": "CHI -3.5",
+          "pick_total_label": "Over 43.5",
+          "spread_labels": {
+            "home": "CHI -3.5",
+            "away": "NYJ +3.5"
+          },
+          "cover_prob": 0.901,
+          "ou_prob": 0.755,
+          "home_qb": "Case Keenum",
+          "away_qb": "Geno Smith",
+          "result": {
+            "home_score": 23,
+            "away_score": 12,
+            "ats": "win",
+            "ou": "loss"
+          }
+        },
+        {
+          "away": "Jacksonville Jaguars",
+          "home": "Cincinnati Bengals",
+          "away_abbr": "JAX",
+          "home_abbr": "CIN",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": 2.5,
+          "line_total": 51.5,
+          "our_spread": -11.0,
+          "our_total": 56.3,
+          "spread_edge": -13.5,
+          "total_edge": 4.8,
+          "pick_spread": "away",
+          "pick_total": "over",
+          "pick_spread_label": "JAX +2.5",
+          "pick_total_label": "Over 51.5",
+          "spread_labels": {
+            "home": "CIN -2.5",
+            "away": "JAX +2.5"
+          },
+          "cover_prob": 0.841,
+          "ou_prob": 0.638,
+          "home_qb": "Joe Burrow",
+          "away_qb": "Trevor Lawrence",
+          "result": {
+            "home_score": 17,
+            "away_score": 22,
+            "ats": "win",
+            "ou": "loss"
+          }
+        },
+        {
+          "away": "Dallas Cowboys",
+          "home": "Houston Texans",
+          "away_abbr": "DAL",
+          "home_abbr": "HOU",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": 3.0,
+          "line_total": 48.5,
+          "our_spread": 13.9,
+          "our_total": 50.6,
+          "spread_edge": 10.9,
+          "total_edge": 2.1,
+          "pick_spread": "home",
+          "pick_total": "over",
+          "pick_spread_label": "HOU -3",
+          "pick_total_label": "Over 48.5",
+          "spread_labels": {
+            "home": "HOU -3",
+            "away": "DAL +3"
+          },
+          "cover_prob": 0.79,
+          "ou_prob": 0.561,
+          "home_qb": "C.J. Stroud",
+          "away_qb": "Dak Prescott",
+          "result": {
+            "home_score": 30,
+            "away_score": 34,
+            "ats": "loss",
+            "ou": "win"
+          }
+        },
+        {
+          "away": "Arizona Cardinals",
+          "home": "New York Giants",
+          "away_abbr": "ARI",
+          "home_abbr": "NYG",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": -2.5,
+          "line_total": 44.5,
+          "our_spread": 2.7,
+          "our_total": 55.1,
+          "spread_edge": 5.2,
+          "total_edge": 10.6,
+          "pick_spread": "home",
+          "pick_total": "over",
+          "pick_spread_label": "NYG +2.5",
+          "pick_total_label": "Over 44.5",
+          "spread_labels": {
+            "home": "NYG +2.5",
+            "away": "ARI -2.5"
+          },
+          "cover_prob": 0.651,
+          "ou_prob": 0.783,
+          "home_qb": "Jameis Winston",
+          "away_qb": "Jacoby Brissett",
+          "result": {
+            "home_score": 36,
+            "away_score": 24,
+            "ats": "win",
+            "ou": "win"
+          }
+        },
+        {
+          "away": "Los Angeles Rams",
+          "home": "Philadelphia Eagles",
+          "away_abbr": "LA",
+          "home_abbr": "PHI",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": -3.0,
+          "line_total": 43.5,
+          "our_spread": -9.1,
+          "our_total": 45.9,
+          "spread_edge": -6.1,
+          "total_edge": 2.4,
+          "pick_spread": "away",
+          "pick_total": "over",
+          "pick_spread_label": "LA -3",
+          "pick_total_label": "Over 43.5",
+          "spread_labels": {
+            "home": "PHI +3",
+            "away": "LA -3"
+          },
+          "cover_prob": 0.673,
+          "ou_prob": 0.569,
+          "home_qb": "Jalen Hurts",
+          "away_qb": "Matthew Stafford",
+          "result": {
+            "home_score": 20,
+            "away_score": 24,
+            "ats": "win",
+            "ou": "win"
+          }
+        },
+        {
+          "away": "Green Bay Packers",
+          "home": "Tampa Bay Buccaneers",
+          "away_abbr": "GB",
+          "home_abbr": "TB",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": -3.5,
+          "line_total": 38.5,
+          "our_spread": -1.9,
+          "our_total": 52.0,
+          "spread_edge": 1.6,
+          "total_edge": 13.5,
+          "pick_spread": "home",
+          "pick_total": "over",
+          "pick_spread_label": "TB +3.5",
+          "pick_total_label": "Over 38.5",
+          "spread_labels": {
+            "home": "TB +3.5",
+            "away": "GB -3.5"
+          },
+          "cover_prob": 0.546,
+          "ou_prob": 0.842,
+          "home_qb": "Jalon Daniels",
+          "away_qb": "Jordan Love",
+          "result": {
+            "home_score": 14,
+            "away_score": 17,
+            "ats": "win",
+            "ou": "loss"
+          }
+        },
+        {
+          "away": "Miami Dolphins",
+          "home": "Minnesota Vikings",
+          "away_abbr": "MIA",
+          "home_abbr": "MIN",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": 10.5,
+          "line_total": 38.5,
+          "our_spread": 9.2,
+          "our_total": 33.2,
+          "spread_edge": -1.3,
+          "total_edge": -5.3,
+          "pick_spread": "away",
+          "pick_total": "under",
+          "pick_spread_label": "MIA +10.5",
+          "pick_total_label": "Under 38.5",
+          "spread_labels": {
+            "home": "MIN -10.5",
+            "away": "MIA +10.5"
+          },
+          "cover_prob": 0.539,
+          "ou_prob": 0.653,
+          "home_qb": "Kyler Murray",
+          "away_qb": "Malik Willis",
+          "result": {
+            "home_score": 15,
+            "away_score": 10,
+            "ats": "win",
+            "ou": "win"
+          }
+        },
+        {
+          "away": "Kansas City Chiefs",
+          "home": "Las Vegas Raiders",
+          "away_abbr": "KC",
+          "home_abbr": "LV",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": -4.5,
+          "line_total": 47.5,
+          "our_spread": -14.0,
+          "our_total": 32.4,
+          "spread_edge": -9.5,
+          "total_edge": -15.1,
+          "pick_spread": "away",
+          "pick_total": "under",
+          "pick_spread_label": "KC -4.5",
+          "pick_total_label": "Under 47.5",
+          "spread_labels": {
+            "home": "LV +4.5",
+            "away": "KC -4.5"
+          },
+          "cover_prob": 0.76,
+          "ou_prob": 0.868,
+          "home_qb": "Kirk Cousins",
+          "away_qb": "Patrick Mahomes",
+          "result": {
+            "home_score": 27,
+            "away_score": 30,
+            "ats": "loss",
+            "ou": "loss"
+          }
+        },
+        {
+          "away": "Los Angeles Chargers",
+          "home": "Seattle Seahawks",
+          "away_abbr": "LAC",
+          "home_abbr": "SEA",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": 7.0,
+          "line_total": 42.5,
+          "our_spread": 19.8,
+          "our_total": 26.7,
+          "spread_edge": 12.8,
+          "total_edge": -15.8,
+          "pick_spread": "home",
+          "pick_total": "under",
+          "pick_spread_label": "SEA -7",
+          "pick_total_label": "Under 42.5",
+          "spread_labels": {
+            "home": "SEA -7",
+            "away": "LAC +7"
+          },
+          "cover_prob": 0.828,
+          "ou_prob": 0.879,
+          "home_qb": "Drew Lock",
+          "away_qb": "Justin Herbert",
+          "result": {
+            "home_score": 30,
+            "away_score": 23,
+            "ats": "push",
+            "ou": "loss"
+          }
+        },
+        {
+          "away": "Denver Broncos",
+          "home": "San Francisco 49ers",
+          "away_abbr": "DEN",
+          "home_abbr": "SF",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": 3.0,
+          "line_total": 47.5,
+          "our_spread": -0.7,
+          "our_total": 54.4,
+          "spread_edge": -3.7,
+          "total_edge": 6.9,
+          "pick_spread": "away",
+          "pick_total": "over",
+          "pick_spread_label": "DEN +3",
+          "pick_total_label": "Over 47.5",
+          "spread_labels": {
+            "home": "SF -3",
+            "away": "DEN +3"
+          },
+          "cover_prob": 0.609,
+          "ou_prob": 0.695,
+          "home_qb": "Brock Purdy",
+          "away_qb": "Bo Nix",
+          "result": {
+            "home_score": 24,
+            "away_score": 14,
+            "ats": "loss",
+            "ou": "loss"
+          }
+        },
+        {
+          "away": "Detroit Lions",
+          "home": "Carolina Panthers",
+          "away_abbr": "DET",
+          "home_abbr": "CAR",
+          "gameday": "2026-10-04",
+          "weekday": "Sunday",
+          "line_spread": -3.5,
+          "line_total": 51.5,
+          "our_spread": -5.0,
+          "our_total": 51.2,
+          "spread_edge": -1.5,
+          "total_edge": -0.3,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "DET -3.5",
+          "pick_total_label": null,
+          "spread_labels": {
+            "home": "CAR +3.5",
+            "away": "DET -3.5"
+          },
+          "cover_prob": 0.543,
+          "ou_prob": null,
+          "home_qb": "Bryce Young",
+          "away_qb": "Jared Goff",
+          "result": {
+            "home_score": 32,
+            "away_score": 26,
+            "ats": "loss"
+          }
+        },
+        {
+          "away": "Atlanta Falcons",
+          "home": "New Orleans Saints",
+          "away_abbr": "ATL",
+          "home_abbr": "NO",
+          "gameday": "2026-10-05",
+          "weekday": "Monday",
+          "line_spread": 2.5,
+          "line_total": 47.5,
+          "our_spread": 2.5,
+          "our_total": 34.3,
+          "spread_edge": 0.0,
+          "total_edge": -13.2,
+          "pick_spread": null,
+          "pick_total": "under",
+          "pick_spread_label": null,
+          "pick_total_label": "Under 47.5",
+          "spread_labels": {
+            "home": "NO -2.5",
+            "away": "ATL +2.5"
+          },
+          "cover_prob": null,
+          "ou_prob": 0.836,
+          "home_qb": "Tyler Shough",
+          "away_qb": "Michael Penix Jr.",
+          "result": {
+            "home_score": 24,
+            "away_score": 45,
+            "ou": "loss"
+          }
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "NYJ @ CHI",
+            "away_abbr": "NYJ",
+            "home_abbr": "CHI",
+            "market": "spread",
+            "label": "CHI -3.5",
+            "prob": 0.901
+          },
+          {
+            "game": "LAC @ SEA",
+            "away_abbr": "LAC",
+            "home_abbr": "SEA",
+            "market": "total",
+            "label": "Under 42.5",
+            "prob": 0.879
+          },
+          {
+            "game": "KC @ LV",
+            "away_abbr": "KC",
+            "home_abbr": "LV",
+            "market": "total",
+            "label": "Under 47.5",
+            "prob": 0.868
+          }
+        ],
+        "result": "loss"
+      }
+    }
+  }
+}
