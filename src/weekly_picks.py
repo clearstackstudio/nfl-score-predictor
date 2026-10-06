@@ -309,8 +309,12 @@ def main() -> None:
         our_total += indoor_adj
         line_total = float(g["total_line"])
 
-        spread_edge = our_margin - line_margin   # >0: we like home more than line
-        total_edge = our_total - line_total      # >0: we like over more than line
+        # Round BEFORE thresholding: published edges are 0.1-rounded, and
+        # validation checks those published values. Thresholding on raw
+        # edges could disagree with the stored edges — e.g. a 0.96-pt raw
+        # total edge rounds to 1.0 but never got a pick (2026-10-06 Week 5).
+        spread_edge = round(our_margin - line_margin, 1)  # >0: we like home more than line
+        total_edge = round(our_total - line_total, 1)     # >0: we like over more than line
 
         pick_side = ("home" if spread_edge > 0 else "away") if abs(spread_edge) >= 0.5 else None
         pick_total = ("over" if total_edge > 0 else "under") if abs(total_edge) >= 1.0 else None

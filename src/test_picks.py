@@ -123,6 +123,28 @@ try:
 except AssertionError:
     passed += 1
 
+# --- rounding boundary: picks are decided on the published 0.1-rounded
+# edges. A raw edge that rounds onto a threshold must agree with its stored
+# edge. Regression: 2026-10-06 Week 5 generation failed validation because
+# main() thresholded raw edges while validation read the rounded ones.
+b = mk("A", "B", 0.0, 45.0, 0.0, 45.96)  # raw total edge 0.96 -> stored 1.0
+check("boundary total pick made", b["pick_total"], "over")
+try:
+    validate_picks([b], build_parlay([b]))
+    passed += 1
+except AssertionError as e:
+    failed += 1
+    print(f"FAIL validate boundary total pick: {e}")
+
+b2 = mk("C", "D", 0.0, 45.0, 0.46, 45.0)  # raw spread edge 0.46 -> stored 0.5
+check("boundary spread pick made", b2["pick_spread"], "home")
+try:
+    validate_picks([b2], build_parlay([b2]))
+    passed += 1
+except AssertionError as e:
+    failed += 1
+    print(f"FAIL validate boundary spread pick: {e}")
+
 # --- recency weighting: same games, different order -> different rating ---
 import pandas as pd
 
