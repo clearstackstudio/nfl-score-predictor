@@ -39,8 +39,11 @@ def grade_pick(p: dict, home_score: int, away_score: int) -> dict:
 
 
 def grade_parlay(parlay: dict | None, picks: list[dict]) -> dict | None:
+    # Preserves the generator's parlay metadata (combined_prob, fair_odds,
+    # book_pays) — dropping them blanks the parlay card on /cfb (2026-10-06).
     if not parlay:
         return None
+    graded = dict(parlay)  # keep combined_prob / fair_odds / book_pays
     by_game = {(p["home"], p["away"]): p for p in picks}
     results = []
     for leg in parlay["legs"]:
@@ -48,10 +51,12 @@ def grade_parlay(parlay: dict | None, picks: list[dict]) -> dict | None:
         p = by_game.get((home, away))
         r = (p or {}).get("result")
         if not r:
-            return {"legs": parlay["legs"], "result": None}
+            graded["result"] = None
+            return graded
         key = "ats" if leg["market"] == "spread" else "ou"
         if key not in r:
-            return {"legs": parlay["legs"], "result": None}
+            graded["result"] = None
+            return graded
         results.append(r[key])
     if any(x == "loss" for x in results):
         res = "loss"
@@ -59,7 +64,8 @@ def grade_parlay(parlay: dict | None, picks: list[dict]) -> dict | None:
         res = "win"
     else:
         res = "push"
-    return {"legs": parlay["legs"], "result": res}
+    graded["result"] = res
+    return graded
 
 
 def main() -> None:

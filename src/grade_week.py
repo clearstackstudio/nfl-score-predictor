@@ -40,19 +40,24 @@ def grade_pick(p: dict, home_score: int, away_score: int) -> dict:
 def grade_parlay(parlay: dict | None, picks: list[dict]) -> dict | None:
     """Grade the weekly parlay: win = every leg wins, loss = any leg loses,
     push = no losses but at least one push (standard voided-leg reduction).
-    None result while any leg's game is still pending."""
+    None result while any leg's game is still pending.
+    Preserves the generator's parlay metadata (combined_prob, fair_odds,
+    book_pays) — dropping them broke the site's TypeScript build (2026-10-06)."""
     if not parlay:
         return None
+    graded = dict(parlay)  # keep combined_prob / fair_odds / book_pays
     by_game = {(p["home_abbr"], p["away_abbr"]): p for p in picks}
     results = []
     for leg in parlay["legs"]:
         p = by_game.get((leg["home_abbr"], leg["away_abbr"]))
         r = (p or {}).get("result")
         if not r:
-            return {"legs": parlay["legs"], "result": None}
+            graded["result"] = None
+            return graded
         key = "ats" if leg["market"] == "spread" else "ou"
         if key not in r:
-            return {"legs": parlay["legs"], "result": None}
+            graded["result"] = None
+            return graded
         results.append(r[key])
     if any(x == "loss" for x in results):
         res = "loss"
@@ -60,7 +65,8 @@ def grade_parlay(parlay: dict | None, picks: list[dict]) -> dict | None:
         res = "win"
     else:
         res = "push"
-    return {"legs": parlay["legs"], "result": res}
+    graded["result"] = res
+    return graded
 
 
 DATA = REPO / "data"

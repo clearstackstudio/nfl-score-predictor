@@ -542,6 +542,9 @@
             "prob": 0.868
           }
         ],
+        "combined_prob": 0.687,
+        "fair_odds": "-219",
+        "book_pays": "+600",
         "result": "loss"
       }
     }

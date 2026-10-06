@@ -1484,6 +1484,9 @@
             "prob": 0.965
           }
         ],
+        "combined_prob": 0.918,
+        "fair_odds": "-1120",
+        "book_pays": "+600",
         "result": null
       }
     }

@@ -12,6 +12,11 @@ $PY src/test_picks.py
 
 $PY src/grade_week.py
 
+# Type-check the site against the freshly written data before publishing:
+# a data/type mismatch fails the Vercel build (outage 2026-10-06), so fail
+# the run here instead of pushing a broken deploy.
+(cd site && npx tsc --noEmit)
+
 GIT_ID="-c user.name=clearstackstudio -c user.email=334314751+clearstackstudio@users.noreply.github.com"
 git $GIT_ID add site/data/picks.json "site/data/season_2026.json"
 
