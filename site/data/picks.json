@@ -537,7 +537,12 @@
       "cover_prob": null,
       "ou_prob": 0.836,
       "home_qb": "Tyler Shough",
-      "away_qb": "Michael Penix Jr."
+      "away_qb": "Michael Penix Jr.",
+      "result": {
+        "home_score": 24,
+        "away_score": 45,
+        "ou": "loss"
+      }
     }
   ]
 }
