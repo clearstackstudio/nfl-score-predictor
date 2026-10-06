@@ -4,7 +4,6 @@ import picksData from "../data/picks.json";
 import seasonLog from "../data/season_2026.json";
 import { fmtSpread, fmtPct, trim } from "./lib/format";
 import TeamLogo from "./lib/team-logo";
-import EmailSignup from "./lib/email-signup";
 import SharePicks from "./lib/share-picks";
 
 type Pick = {
@@ -417,12 +416,6 @@ export default function Home() {
         the market. A pick appears only where we disagree by enough to matter —
         the percentage is our estimated chance that side covers or the total lands.
       </p>
-
-      {wv.isCurrent && (
-        <div className="mt-10">
-          <EmailSignup />
-        </div>
-      )}
     </div>
   );
 }
