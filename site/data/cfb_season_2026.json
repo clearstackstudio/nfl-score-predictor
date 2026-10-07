@@ -3,16 +3,16 @@
   "sport": "cfb",
   "weeks": {
     "5": {
-      "generated": "2026-10-01 00:24 PDT",
-      "complete": false,
+      "generated": "2026-10-01 00:49 PDT",
+      "complete": true,
       "picks": [
         {
           "away": "Western Kentucky",
           "home": "New Mexico State",
           "away_abbr": "Western Kentucky",
           "home_abbr": "New Mexico State",
-          "gameday": "2026-10-02",
-          "weekday": "",
+          "gameday": "2026-10-01",
+          "weekday": "Thursday",
           "neutral": false,
           "line_spread": 2.5,
           "line_total": 57.25,
@@ -30,15 +30,19 @@
           },
           "cover_prob": null,
           "ou_prob": 0.692,
-          "result": null
+          "result": {
+            "home_score": 34,
+            "away_score": 13,
+            "ou": "win"
+          }
         },
         {
           "away": "North Texas",
           "home": "Tulsa",
           "away_abbr": "North Texas",
           "home_abbr": "Tulsa",
-          "gameday": "2026-10-02",
-          "weekday": "",
+          "gameday": "2026-10-01",
+          "weekday": "Thursday",
           "neutral": false,
           "line_spread": -1.2,
           "line_total": 57.25,
@@ -56,7 +60,12 @@
           },
           "cover_prob": 0.849,
           "ou_prob": 0.526,
-          "result": null
+          "result": {
+            "home_score": 44,
+            "away_score": 45,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Liberty",
@@ -64,7 +73,7 @@
           "away_abbr": "Liberty",
           "home_abbr": "Delaware",
           "gameday": "2026-10-02",
-          "weekday": "",
+          "weekday": "Friday",
           "neutral": false,
           "line_spread": -7.5,
           "line_total": 50.25,
@@ -82,7 +91,12 @@
           },
           "cover_prob": 0.54,
           "ou_prob": 0.815,
-          "result": null
+          "result": {
+            "home_score": 14,
+            "away_score": 30,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Pittsburgh",
@@ -90,7 +104,7 @@
           "away_abbr": "Pittsburgh",
           "home_abbr": "Virginia Tech",
           "gameday": "2026-10-02",
-          "weekday": "",
+          "weekday": "Friday",
           "neutral": false,
           "line_spread": 3.0,
           "line_total": 54.75,
@@ -108,15 +122,19 @@
           },
           "cover_prob": 0.774,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 33,
+            "away_score": 35,
+            "ats": "win"
+          }
         },
         {
           "away": "Penn State",
           "home": "Northwestern",
           "away_abbr": "Penn State",
           "home_abbr": "Northwestern",
-          "gameday": "2026-10-03",
-          "weekday": "",
+          "gameday": "2026-10-02",
+          "weekday": "Friday",
           "neutral": false,
           "line_spread": -2.8,
           "line_total": 45.5,
@@ -134,7 +152,12 @@
           },
           "cover_prob": 0.756,
           "ou_prob": 0.793,
-          "result": null
+          "result": {
+            "home_score": 34,
+            "away_score": 13,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Notre Dame",
@@ -142,7 +165,7 @@
           "away_abbr": "Notre Dame",
           "home_abbr": "North Carolina",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -21.0,
           "line_total": 47.25,
@@ -160,7 +183,11 @@
           },
           "cover_prob": 0.968,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 26,
+            "away_score": 37,
+            "ats": "loss"
+          }
         },
         {
           "away": "Middle Tennessee",
@@ -168,7 +195,7 @@
           "away_abbr": "Middle Tennessee",
           "home_abbr": "Kansas",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 18.2,
           "line_total": 49.5,
@@ -186,7 +213,12 @@
           },
           "cover_prob": 0.651,
           "ou_prob": 0.823,
-          "result": null
+          "result": {
+            "home_score": 55,
+            "away_score": 0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Alabama",
@@ -194,7 +226,7 @@
           "away_abbr": "Alabama",
           "home_abbr": "Mississippi State",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -6.0,
           "line_total": 59.75,
@@ -212,7 +244,12 @@
           },
           "cover_prob": 0.737,
           "ou_prob": 0.575,
-          "result": null
+          "result": {
+            "home_score": 23,
+            "away_score": 56,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "UCF",
@@ -220,7 +257,7 @@
           "away_abbr": "UCF",
           "home_abbr": "Houston",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 11.8,
           "line_total": 51.5,
@@ -238,7 +275,12 @@
           },
           "cover_prob": 0.543,
           "ou_prob": 0.535,
-          "result": null
+          "result": {
+            "home_score": 27,
+            "away_score": 17,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Syracuse",
@@ -246,7 +288,7 @@
           "away_abbr": "Syracuse",
           "home_abbr": "UConn",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -6.5,
           "line_total": 50.5,
@@ -264,7 +306,11 @@
           },
           "cover_prob": 0.983,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 41,
+            "away_score": 42,
+            "ats": "win"
+          }
         },
         {
           "away": "West Virginia",
@@ -272,7 +318,7 @@
           "away_abbr": "West Virginia",
           "home_abbr": "Iowa State",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 3.0,
           "line_total": 53.25,
@@ -290,7 +336,12 @@
           },
           "cover_prob": 0.88,
           "ou_prob": 0.554,
-          "result": null
+          "result": {
+            "home_score": 45,
+            "away_score": 42,
+            "ats": "push",
+            "ou": "loss"
+          }
         },
         {
           "away": "Boston College",
@@ -298,7 +349,7 @@
           "away_abbr": "Boston College",
           "home_abbr": "SMU",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 21.0,
           "line_total": 55.5,
@@ -316,7 +367,12 @@
           },
           "cover_prob": 0.541,
           "ou_prob": 0.547,
-          "result": null
+          "result": {
+            "home_score": 25,
+            "away_score": 16,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Navy",
@@ -324,7 +380,7 @@
           "away_abbr": "Navy",
           "home_abbr": "Air Force",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 3.5,
           "line_total": 45.75,
@@ -342,7 +398,12 @@
           },
           "cover_prob": 0.691,
           "ou_prob": 0.965,
-          "result": null
+          "result": {
+            "home_score": 14,
+            "away_score": 9,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Michigan",
@@ -350,7 +411,7 @@
           "away_abbr": "Michigan",
           "home_abbr": "Minnesota",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -5.8,
           "line_total": 43.25,
@@ -368,7 +429,12 @@
           },
           "cover_prob": 0.769,
           "ou_prob": 0.697,
-          "result": null
+          "result": {
+            "home_score": 20,
+            "away_score": 14,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Stanford",
@@ -376,7 +442,7 @@
           "away_abbr": "Stanford",
           "home_abbr": "Wake Forest",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 13.2,
           "line_total": 53.5,
@@ -394,7 +460,12 @@
           },
           "cover_prob": 0.585,
           "ou_prob": 0.609,
-          "result": null
+          "result": {
+            "home_score": 57,
+            "away_score": 3,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Michigan State",
@@ -402,7 +473,7 @@
           "away_abbr": "Michigan State",
           "home_abbr": "Wisconsin",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 10.0,
           "line_total": 43.25,
@@ -420,7 +491,12 @@
           },
           "cover_prob": 0.753,
           "ou_prob": 0.674,
-          "result": null
+          "result": {
+            "home_score": 31,
+            "away_score": 3,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Vanderbilt",
@@ -428,7 +504,7 @@
           "away_abbr": "Vanderbilt",
           "home_abbr": "Georgia",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 25.2,
           "line_total": 50.5,
@@ -446,7 +522,12 @@
           },
           "cover_prob": 0.774,
           "ou_prob": 0.869,
-          "result": null
+          "result": {
+            "home_score": 38,
+            "away_score": 14,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Western Michigan",
@@ -454,7 +535,7 @@
           "away_abbr": "Western Michigan",
           "home_abbr": "Buffalo",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -13.8,
           "line_total": 46.5,
@@ -472,7 +553,11 @@
           },
           "cover_prob": null,
           "ou_prob": 0.71,
-          "result": null
+          "result": {
+            "home_score": 17,
+            "away_score": 20,
+            "ou": "win"
+          }
         },
         {
           "away": "Toledo",
@@ -480,7 +565,7 @@
           "away_abbr": "Toledo",
           "home_abbr": "Ball State",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -19.5,
           "line_total": 52.5,
@@ -498,7 +583,12 @@
           },
           "cover_prob": 0.705,
           "ou_prob": 0.771,
-          "result": null
+          "result": {
+            "home_score": 24,
+            "away_score": 39,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Akron",
@@ -506,7 +596,7 @@
           "away_abbr": "Akron",
           "home_abbr": "Central Michigan",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 6.5,
           "line_total": 46.75,
@@ -524,7 +614,12 @@
           },
           "cover_prob": 0.784,
           "ou_prob": 0.627,
-          "result": null
+          "result": {
+            "home_score": 41,
+            "away_score": 17,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Old Dominion",
@@ -532,7 +627,7 @@
           "away_abbr": "Old Dominion",
           "home_abbr": "Georgia State",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 2.5,
           "line_total": 51.5,
@@ -550,7 +645,12 @@
           },
           "cover_prob": 0.91,
           "ou_prob": 0.641,
-          "result": null
+          "result": {
+            "home_score": 42,
+            "away_score": 10,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "California",
@@ -558,7 +658,7 @@
           "away_abbr": "California",
           "home_abbr": "UNLV",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 2.5,
           "line_total": 53.5,
@@ -576,7 +676,12 @@
           },
           "cover_prob": 0.847,
           "ou_prob": 0.686,
-          "result": null
+          "result": {
+            "home_score": 39,
+            "away_score": 31,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Ohio State",
@@ -584,7 +689,7 @@
           "away_abbr": "Ohio State",
           "home_abbr": "Iowa",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -14.5,
           "line_total": 45.5,
@@ -602,7 +707,12 @@
           },
           "cover_prob": 0.606,
           "ou_prob": 0.66,
-          "result": null
+          "result": {
+            "home_score": 14,
+            "away_score": 31,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Bowling Green",
@@ -610,7 +720,7 @@
           "away_abbr": "Bowling Green",
           "home_abbr": "Miami (OH)",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 13.5,
           "line_total": 43.5,
@@ -628,7 +738,11 @@
           },
           "cover_prob": 0.766,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 20,
+            "away_score": 24,
+            "ats": "loss"
+          }
         },
         {
           "away": "Ohio",
@@ -636,7 +750,7 @@
           "away_abbr": "Ohio",
           "home_abbr": "Kent State",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -3.5,
           "line_total": 50.75,
@@ -654,7 +768,12 @@
           },
           "cover_prob": 0.787,
           "ou_prob": 0.783,
-          "result": null
+          "result": {
+            "home_score": 10,
+            "away_score": 13,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Eastern Michigan",
@@ -662,7 +781,7 @@
           "away_abbr": "Eastern Michigan",
           "home_abbr": "Massachusetts",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 6.2,
           "line_total": 48.75,
@@ -680,7 +799,12 @@
           },
           "cover_prob": 0.868,
           "ou_prob": 0.723,
-          "result": null
+          "result": {
+            "home_score": 14,
+            "away_score": 38,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Auburn",
@@ -688,7 +812,7 @@
           "away_abbr": "Auburn",
           "home_abbr": "Tennessee",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 7.0,
           "line_total": 54.25,
@@ -706,7 +830,12 @@
           },
           "cover_prob": 0.525,
           "ou_prob": 0.66,
-          "result": null
+          "result": {
+            "home_score": 24,
+            "away_score": 14,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Florida",
@@ -714,7 +843,7 @@
           "away_abbr": "Florida",
           "home_abbr": "Missouri",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -5.5,
           "line_total": 57.25,
@@ -732,7 +861,12 @@
           },
           "cover_prob": 0.739,
           "ou_prob": 0.695,
-          "result": null
+          "result": {
+            "home_score": 45,
+            "away_score": 17,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Memphis",
@@ -740,7 +874,7 @@
           "away_abbr": "Memphis",
           "home_abbr": "Charlotte",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -20.5,
           "line_total": 52.75,
@@ -758,7 +892,12 @@
           },
           "cover_prob": 0.686,
           "ou_prob": 0.761,
-          "result": null
+          "result": {
+            "home_score": 8,
+            "away_score": 59,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Louisville",
@@ -766,7 +905,7 @@
           "away_abbr": "Louisville",
           "home_abbr": "NC State",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -3.5,
           "line_total": 58.5,
@@ -784,7 +923,12 @@
           },
           "cover_prob": 0.742,
           "ou_prob": 0.617,
-          "result": null
+          "result": {
+            "home_score": 31,
+            "away_score": 28,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Virginia",
@@ -792,7 +936,7 @@
           "away_abbr": "Virginia",
           "home_abbr": "Florida State",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -2.8,
           "line_total": 51.5,
@@ -810,7 +954,12 @@
           },
           "cover_prob": 0.553,
           "ou_prob": 0.541,
-          "result": null
+          "result": {
+            "home_score": 38,
+            "away_score": 7,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Wyoming",
@@ -818,7 +967,7 @@
           "away_abbr": "Wyoming",
           "home_abbr": "North Dakota State",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 18.2,
           "line_total": 45.5,
@@ -836,7 +985,12 @@
           },
           "cover_prob": 0.632,
           "ou_prob": 0.88,
-          "result": null
+          "result": {
+            "home_score": 28,
+            "away_score": 0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Marshall",
@@ -844,7 +998,7 @@
           "away_abbr": "Marshall",
           "home_abbr": "James Madison",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 19.2,
           "line_total": 56.25,
@@ -862,7 +1016,12 @@
           },
           "cover_prob": 0.517,
           "ou_prob": 0.634,
-          "result": null
+          "result": {
+            "home_score": 45,
+            "away_score": 17,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Maryland",
@@ -870,7 +1029,7 @@
           "away_abbr": "Maryland",
           "home_abbr": "Nebraska",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 14.5,
           "line_total": 52.5,
@@ -888,7 +1047,11 @@
           },
           "cover_prob": 0.551,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 48,
+            "away_score": 23,
+            "ats": "loss"
+          }
         },
         {
           "away": "UTEP",
@@ -896,7 +1059,7 @@
           "away_abbr": "UTEP",
           "home_abbr": "New Mexico",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 22.5,
           "line_total": 48.5,
@@ -914,7 +1077,12 @@
           },
           "cover_prob": 0.836,
           "ou_prob": 0.766,
-          "result": null
+          "result": {
+            "home_score": 61,
+            "away_score": 7,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Purdue",
@@ -922,7 +1090,7 @@
           "away_abbr": "Purdue",
           "home_abbr": "Illinois",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 10.0,
           "line_total": 61.5,
@@ -940,7 +1108,11 @@
           },
           "cover_prob": null,
           "ou_prob": 0.772,
-          "result": null
+          "result": {
+            "home_score": 17,
+            "away_score": 24,
+            "ou": "loss"
+          }
         },
         {
           "away": "Kentucky",
@@ -948,7 +1120,7 @@
           "away_abbr": "Kentucky",
           "home_abbr": "South Carolina",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 2.8,
           "line_total": 53.5,
@@ -966,7 +1138,12 @@
           },
           "cover_prob": 0.557,
           "ou_prob": 0.655,
-          "result": null
+          "result": {
+            "home_score": 34,
+            "away_score": 35,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Oregon State",
@@ -974,7 +1151,7 @@
           "away_abbr": "Oregon State",
           "home_abbr": "Colorado State",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -6.0,
           "line_total": 61.5,
@@ -992,7 +1169,12 @@
           },
           "cover_prob": 0.635,
           "ou_prob": 0.527,
-          "result": null
+          "result": {
+            "home_score": 26,
+            "away_score": 56,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "UTSA",
@@ -1000,7 +1182,7 @@
           "away_abbr": "UTSA",
           "home_abbr": "Rice",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -11.8,
           "line_total": 56.25,
@@ -1018,7 +1200,12 @@
           },
           "cover_prob": 0.613,
           "ou_prob": 0.554,
-          "result": null
+          "result": {
+            "home_score": 14,
+            "away_score": 16,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "UL Monroe",
@@ -1026,7 +1213,7 @@
           "away_abbr": "UL Monroe",
           "home_abbr": "South Alabama",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 14.0,
           "line_total": 57.5,
@@ -1044,7 +1231,11 @@
           },
           "cover_prob": null,
           "ou_prob": 0.557,
-          "result": null
+          "result": {
+            "home_score": 52,
+            "away_score": 35,
+            "ou": "loss"
+          }
         },
         {
           "away": "BYU",
@@ -1052,7 +1243,7 @@
           "away_abbr": "BYU",
           "home_abbr": "TCU",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -6.5,
           "line_total": 47.75,
@@ -1070,7 +1261,12 @@
           },
           "cover_prob": 0.577,
           "ou_prob": 0.567,
-          "result": null
+          "result": {
+            "home_score": 10,
+            "away_score": 17,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Arkansas",
@@ -1078,7 +1274,7 @@
           "away_abbr": "Arkansas",
           "home_abbr": "Texas A&M",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 14.0,
           "line_total": 50.25,
@@ -1096,7 +1292,12 @@
           },
           "cover_prob": 0.575,
           "ou_prob": 0.892,
-          "result": null
+          "result": {
+            "home_score": 34,
+            "away_score": 7,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Georgia Southern",
@@ -1104,7 +1305,7 @@
           "away_abbr": "Georgia Southern",
           "home_abbr": "Coastal Carolina",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -2.5,
           "line_total": 54.25,
@@ -1122,7 +1323,12 @@
           },
           "cover_prob": 0.526,
           "ou_prob": 0.78,
-          "result": null
+          "result": {
+            "home_score": 24,
+            "away_score": 31,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Temple",
@@ -1130,7 +1336,7 @@
           "away_abbr": "Temple",
           "home_abbr": "South Florida",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 6.5,
           "line_total": 48.25,
@@ -1148,7 +1354,12 @@
           },
           "cover_prob": 0.805,
           "ou_prob": 0.832,
-          "result": null
+          "result": {
+            "home_score": 13,
+            "away_score": 17,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Texas Tech",
@@ -1156,7 +1367,7 @@
           "away_abbr": "Texas Tech",
           "home_abbr": "Colorado",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -12.0,
           "line_total": 50.5,
@@ -1174,7 +1385,12 @@
           },
           "cover_prob": 0.911,
           "ou_prob": 0.732,
-          "result": null
+          "result": {
+            "home_score": 7,
+            "away_score": 29,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Washington",
@@ -1182,7 +1398,7 @@
           "away_abbr": "Washington",
           "home_abbr": "USC",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 9.5,
           "line_total": 58.75,
@@ -1200,7 +1416,12 @@
           },
           "cover_prob": 0.534,
           "ou_prob": 0.572,
-          "result": null
+          "result": {
+            "home_score": 25,
+            "away_score": 21,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Army",
@@ -1208,7 +1429,7 @@
           "away_abbr": "Army",
           "home_abbr": "Louisiana Tech",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -2.5,
           "line_total": 47.5,
@@ -1226,7 +1447,12 @@
           },
           "cover_prob": 0.521,
           "ou_prob": 0.582,
-          "result": null
+          "result": {
+            "home_score": 31,
+            "away_score": 29,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Miami",
@@ -1234,7 +1460,7 @@
           "away_abbr": "Miami",
           "home_abbr": "Clemson",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -16.8,
           "line_total": 47.75,
@@ -1252,7 +1478,11 @@
           },
           "cover_prob": 0.512,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 13,
+            "away_score": 41,
+            "ats": "win"
+          }
         },
         {
           "away": "Utah State",
@@ -1260,7 +1490,7 @@
           "away_abbr": "Utah State",
           "home_abbr": "Boise State",
           "gameday": "2026-10-03",
-          "weekday": "",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 20.2,
           "line_total": 51.5,
@@ -1278,15 +1508,19 @@
           },
           "cover_prob": 0.584,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 37,
+            "away_score": 18,
+            "ats": "win"
+          }
         },
         {
           "away": "Indiana",
           "home": "Rutgers",
           "away_abbr": "Indiana",
           "home_abbr": "Rutgers",
-          "gameday": "2026-10-04",
-          "weekday": "",
+          "gameday": "2026-10-03",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -23.8,
           "line_total": 56.25,
@@ -1304,15 +1538,20 @@
           },
           "cover_prob": 0.844,
           "ou_prob": 0.699,
-          "result": null
+          "result": {
+            "home_score": 15,
+            "away_score": 47,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Arkansas State",
           "home": "Louisiana",
           "away_abbr": "Arkansas State",
           "home_abbr": "Louisiana",
-          "gameday": "2026-10-04",
-          "weekday": "",
+          "gameday": "2026-10-03",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 6.5,
           "line_total": 47.75,
@@ -1330,15 +1569,20 @@
           },
           "cover_prob": 0.537,
           "ou_prob": 0.61,
-          "result": null
+          "result": {
+            "home_score": 23,
+            "away_score": 20,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Fresno State",
           "home": "Washington State",
           "away_abbr": "Fresno State",
           "home_abbr": "Washington State",
-          "gameday": "2026-10-04",
-          "weekday": "",
+          "gameday": "2026-10-03",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 1.8,
           "line_total": 45.5,
@@ -1356,15 +1600,20 @@
           },
           "cover_prob": 0.675,
           "ou_prob": 0.895,
-          "result": null
+          "result": {
+            "home_score": 6,
+            "away_score": 26,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Baylor",
           "home": "Arizona State",
           "away_abbr": "Baylor",
           "home_abbr": "Arizona State",
-          "gameday": "2026-10-04",
-          "weekday": "",
+          "gameday": "2026-10-03",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 4.0,
           "line_total": 49.25,
@@ -1382,15 +1631,20 @@
           },
           "cover_prob": 0.579,
           "ou_prob": 0.655,
-          "result": null
+          "result": {
+            "home_score": 19,
+            "away_score": 55,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Texas State",
           "home": "San Diego State",
           "away_abbr": "Texas State",
           "home_abbr": "San Diego State",
-          "gameday": "2026-10-04",
-          "weekday": "",
+          "gameday": "2026-10-03",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": -7.0,
           "line_total": 59.25,
@@ -1408,15 +1662,20 @@
           },
           "cover_prob": 0.756,
           "ou_prob": 0.537,
-          "result": null
+          "result": {
+            "home_score": 31,
+            "away_score": 29,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Cincinnati",
           "home": "Arizona",
           "away_abbr": "Cincinnati",
           "home_abbr": "Arizona",
-          "gameday": "2026-10-04",
-          "weekday": "",
+          "gameday": "2026-10-03",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 6.5,
           "line_total": 55.5,
@@ -1434,15 +1693,19 @@
           },
           "cover_prob": null,
           "ou_prob": 0.849,
-          "result": null
+          "result": {
+            "home_score": 34,
+            "away_score": 7,
+            "ou": "loss"
+          }
         },
         {
           "away": "San Jos\u00e9 State",
           "home": "Hawai'i",
           "away_abbr": "San Jos\u00e9 State",
           "home_abbr": "Hawai'i",
-          "gameday": "2026-10-04",
-          "weekday": "",
+          "gameday": "2026-10-03",
+          "weekday": "Saturday",
           "neutral": false,
           "line_spread": 3.0,
           "line_total": 51.5,
@@ -1460,7 +1723,11 @@
           },
           "cover_prob": null,
           "ou_prob": 0.634,
-          "result": null
+          "result": {
+            "home_score": 16,
+            "away_score": 20,
+            "ou": "loss"
+          }
         }
       ],
       "parlay": {
@@ -1487,7 +1754,7 @@
         "combined_prob": 0.918,
         "fair_odds": "-1120",
         "book_pays": "+600",
-        "result": null
+        "result": "loss"
       }
     }
   }
