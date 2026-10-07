@@ -209,13 +209,16 @@ function resultBadge(r?: "win" | "loss" | "push") {
   );
 }
 
+function winPct(w: number, l: number): number | null {
+  return w + l === 0 ? null : w / (w + l);
+}
+
 function LiveSeason({ log }: { log: SeasonLog }) {
   const weeks = Object.entries(log.weeks).sort(([a], [b]) => Number(a) - Number(b));
   if (weeks.length === 0) return null;
 
   let aw = 0, al = 0, ap = 0, ow = 0, ol = 0, op = 0;
-  let pw = 0, pl = 0, pp = 0;
-  for (const [, w] of weeks) {
+  let pw = 0, pl = 0, pp = 0;  for (const [, w] of weeks) {
     for (const p of w.picks) {
       if (p.result?.ats === "win") aw++; else if (p.result?.ats === "loss") al++; else if (p.result?.ats === "push") ap++;
       if (p.result?.ou === "win") ow++; else if (p.result?.ou === "loss") ol++; else if (p.result?.ou === "push") op++;
@@ -239,14 +242,17 @@ function LiveSeason({ log }: { log: SeasonLog }) {
       <div className="mt-4 grid grid-cols-3 gap-4">
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4 light:border-zinc-200 light:bg-white">
           <div className="text-2xl font-extrabold">{aw}-{al}-{ap}</div>
+          <div className="mt-0.5 text-sm font-semibold text-zinc-400 light:text-zinc-600">{fmtPct(winPct(aw, al))}</div>
           <div className="mt-1 text-xs text-zinc-500">Against the spread, {log.season}</div>
         </div>
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4 light:border-zinc-200 light:bg-white">
           <div className="text-2xl font-extrabold">{ow}-{ol}-{op}</div>
+          <div className="mt-0.5 text-sm font-semibold text-zinc-400 light:text-zinc-600">{fmtPct(winPct(ow, ol))}</div>
           <div className="mt-1 text-xs text-zinc-500">Over/under, {log.season}</div>
         </div>
         <div className="rounded-xl border border-amber-400/25 bg-amber-400/[0.06] p-4 light:bg-amber-50">
           <div className="text-2xl font-extrabold">{pw}-{pl}-{pp}</div>
+          <div className="mt-0.5 text-sm font-semibold text-zinc-400 light:text-zinc-600">{fmtPct(winPct(pw, pl))}</div>
           <div className="mt-1 text-xs text-zinc-500">Parlay of the week, {log.season}</div>
         </div>
       </div>
