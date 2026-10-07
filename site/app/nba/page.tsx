@@ -18,6 +18,7 @@ type Pick = {
   pick_total_note?: string | null;
   spread_labels?: { home: string; away: string };
   cover_prob: number | null; ou_prob: number | null;
+  result?: { home_score: number; away_score: number; ats?: string; ou?: string } | null;
 };
 
 type PicksFile = {
@@ -262,6 +263,40 @@ function PendingNotice({ reason }: { reason?: string }) {
   );
 }
 
+function winPct(w: number, l: number): number | null {
+  return w + l === 0 ? null : w / (w + l);
+}
+
+function SeasonRecord({ days, href }: { days: DayView[]; href: string }) {
+  let aw = 0, al = 0, ap = 0, ow = 0, ol = 0, op = 0;
+  for (const d of days)
+    for (const p of d.picks) {
+      const r = p.result;
+      if (r?.ats === "win") aw++; else if (r?.ats === "loss") al++; else if (r?.ats === "push") ap++;
+      if (r?.ou === "win") ow++; else if (r?.ou === "loss") ol++; else if (r?.ou === "push") op++;
+    }
+  if (aw + al + ow + ol === 0) return null;
+  const card = "rounded-xl border border-white/10 bg-zinc-900/50 p-4 transition-colors hover:border-amber-400/40 light:border-zinc-200 light:bg-white";
+  return (
+    <a href={href} className="mb-8 grid max-w-2xl grid-cols-2 gap-3" aria-label="Season record — full track record">
+      <div className={card}>
+        <div className="tnum text-xl font-extrabold">
+          {aw}-{al}-{ap}
+          <span className="ml-2 text-sm font-semibold text-zinc-400 light:text-zinc-600">{fmtPct(winPct(aw, al))}</span>
+        </div>
+        <div className="mt-1 text-xs text-zinc-500">ATS this season →</div>
+      </div>
+      <div className={card}>
+        <div className="tnum text-xl font-extrabold">
+          {ow}-{ol}-{op}
+          <span className="ml-2 text-sm font-semibold text-zinc-400 light:text-zinc-600">{fmtPct(winPct(ow, ol))}</span>
+        </div>
+        <div className="mt-1 text-xs text-zinc-500">O/U this season →</div>
+      </div>
+    </a>
+  );
+}
+
 export default function NbaHome() {
   const [sel, setSel] = useState(0);
   const dv = allDays[sel] ?? currentDay;
@@ -342,6 +377,8 @@ export default function NbaHome() {
           </>
         )}
       </div>
+
+      {!isPending && <SeasonRecord days={allDays} href="/nba/track-record" />}
 
       {!isPending && <ParlayCard parlay={dv.parlay ?? null} title="Parlay of the night" />}
 
