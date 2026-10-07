@@ -1,4 +1,7 @@
+"use client";
+import { useState } from "react";
 import picksData from "../../data/cfb_picks.json";
+import seasonLog from "../../data/cfb_season_2026.json";
 import { fmtSpread, fmtPct, trim } from "../lib/format";
 import CfbTeamLogo from "../lib/cfb-team-logo";
 
@@ -25,7 +28,48 @@ type PicksFile = {
 };
 
 const data = picksData as unknown as PicksFile;
-const picks = data.picks;
+
+type WeekLog = {
+  generated: string; complete: boolean;
+  picks: Pick[]; parlay: Parlay;
+};
+type SeasonLog = { sport: string; season: number; weeks: Record<string, WeekLog> };
+
+type WeekView = {
+  week: number | null; season: number; generated: string | null;
+  picks: Pick[]; parlay: Parlay; disclaimer: string;
+  pending?: boolean; pending_reason?: string;
+  isCurrent: boolean; complete: boolean;
+};
+
+const currentWeek: WeekView = {
+  week: data.week,
+  season: data.season,
+  generated: data.generated,
+  picks: data.picks,
+  parlay: data.parlay ?? null,
+  disclaimer: data.disclaimer,
+  pending: data.pending,
+  pending_reason: data.pending_reason,
+  isCurrent: true,
+  complete: false,
+};
+
+const pastWeeks: WeekView[] = Object.entries((seasonLog as unknown as SeasonLog).weeks)
+  .filter(([wn]) => Number(wn) !== data.week) // season log also holds the current week
+  .map(([wn, w]) => ({
+    week: Number(wn),
+    season: (seasonLog as unknown as SeasonLog).season,
+    generated: w.generated,
+    picks: w.picks,
+    parlay: w.parlay ?? null,
+    disclaimer: "",
+    isCurrent: false,
+    complete: w.complete,
+  }))
+  .sort((a, b) => (b.week ?? 0) - (a.week ?? 0));
+
+const allWeeks: WeekView[] = [currentWeek, ...pastWeeks];
 
 function fmtGameday(p: Pick): string {
   if (p.neutral) return "Neutral site";
@@ -213,12 +257,12 @@ function ParlayCard({ parlay }: { parlay: Parlay }) {
   );
 }
 
-function PendingNotice() {
+function PendingNotice({ reason }: { reason?: string }) {
   return (
     <div className="rounded-2xl border border-amber-400/25 bg-amber-400/[0.06] p-8 text-center light:bg-amber-50">
       <div className="font-display text-2xl font-semibold uppercase tracking-wide">First kickoff soon</div>
       <p className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
-        {data.pending_reason} Check back soon — the pipeline, the model, and the backtest are all built.
+        {reason} Check back soon — the pipeline, the model, and the backtest are all built.
         Only the data connection is missing.
       </p>
     </div>
@@ -226,6 +270,9 @@ function PendingNotice() {
 }
 
 export default function CfbHome() {
+  const [sel, setSel] = useState(0);
+  const wv = allWeeks[sel] ?? currentWeek;
+  const picks = wv.picks;
   const nSpread = picks.filter((p) => p.pick_spread).length;
   const nTotal = picks.filter((p) => p.pick_total).length;
 
@@ -233,20 +280,46 @@ export default function CfbHome() {
     <div>
       <div className="mb-8">
         <Eyebrow>
-          College football · {data.season} season{data.week ? ` · Week ${data.week}` : ""}
-          {data.generated ? ` · generated ${data.generated}` : ""}
+          College football · {wv.season} season{wv.week ? ` · Week ${wv.week}` : ""}
+          {wv.generated ? ` · generated ${wv.generated}` : ""}
+          {!wv.isCurrent && !wv.complete && (
+            <span className="ml-2 rounded bg-zinc-500/15 px-2 py-0.5 text-zinc-400 light:text-zinc-600">partial</span>
+          )}
         </Eyebrow>
         <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide sm:text-6xl">
-          College <span className="text-amber-400 light:text-amber-600">picks</span>
+          {wv.isCurrent ? (
+            <>College <span className="text-amber-400 light:text-amber-600">picks</span></>
+          ) : (
+            <>Week {wv.week} <span className="text-amber-400 light:text-amber-600">picks</span></>
+          )}
         </h1>
+        {allWeeks.length > 1 && (
+          <div className="mt-4 flex flex-wrap gap-2" role="tablist" aria-label="Browse weeks">
+            {allWeeks.map((w, i) => (
+              <button
+                key={w.week ?? "current"}
+                role="tab"
+                aria-selected={i === sel}
+                onClick={() => setSel(i)}
+                className={`rounded-full border px-3.5 py-1.5 text-sm font-semibold transition ${
+                  i === sel
+                    ? "border-amber-400 bg-amber-400/15 text-amber-200 light:border-amber-600 light:bg-amber-600/10 light:text-amber-700"
+                    : "border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200 light:border-zinc-200 light:bg-white light:text-zinc-600 light:hover:border-zinc-400"
+                }`}
+              >
+                {w.isCurrent ? `Week ${w.week} · current` : `Week ${w.week}`}
+              </button>
+            ))}
+          </div>
+        )}
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
           FBS games from opponent-adjusted PPA ratings — college football&rsquo;s answer to EPA,
           garbage time excluded. The model never sees the betting line; the line is only the
           benchmark we measure against. Same honesty rules as the NFL side: every pick published
           before kickoff, every result graded in public.
         </p>
-        {data.pending || picks.length === 0 ? (
-          <div className="mt-6"><PendingNotice /></div>
+        {wv.pending || picks.length === 0 ? (
+          <div className="mt-6"><PendingNotice reason={wv.pending_reason} /></div>
         ) : (
           <>
             <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
@@ -258,15 +331,15 @@ export default function CfbHome() {
               ))}
             </div>
             <p className="mt-5 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90 light:text-amber-800">
-              {data.disclaimer}
+              {wv.isCurrent ? wv.disclaimer : "Graded results — every pick marked won, lost, or push. Nothing hidden, nothing rewritten."}
             </p>
           </>
         )}
       </div>
 
-      {!data.pending && <ParlayCard parlay={data.parlay ?? null} />}
+      {!wv.pending && <ParlayCard parlay={wv.parlay ?? null} />}
 
-      {!data.pending && picks.length > 0 && (
+      {!wv.pending && picks.length > 0 && (
         <>
           <div className="mb-4 flex items-baseline justify-between">
             <h2 className="font-display text-2xl font-semibold uppercase tracking-wide">Every game</h2>
