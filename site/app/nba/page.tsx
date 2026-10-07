@@ -1,4 +1,7 @@
+"use client";
+import { useState } from "react";
 import picksData from "../../data/nba_picks.json";
+import seasonLog from "../../data/nba_season_2027.json";
 import { fmtSpread, fmtPct, trim } from "../lib/format";
 import NbaTeamLogo from "../lib/nba-team-logo";
 
@@ -26,8 +29,55 @@ type PicksFile = {
 };
 
 const data = picksData as PicksFile;
-const picks = data.picks;
-const isPending = !!data.pending || picks.length === 0;
+
+type DayLog = {
+  date: string; generated: string | null;
+  preseason?: boolean; experimental_note?: string | null;
+  graded: boolean; complete: boolean;
+  picks: Pick[]; parlay: Parlay;
+};
+type SeasonLog = { sport: string; season: number; days: Record<string, DayLog> };
+
+type DayView = {
+  date: string | null; season: number; generated: string | null;
+  picks: Pick[]; parlay: Parlay; disclaimer: string;
+  preseason?: boolean; experimental_note?: string | null;
+  pending?: boolean; pending_reason?: string;
+  isCurrent: boolean; complete: boolean;
+};
+
+const currentDay: DayView = {
+  date: data.date ?? null,
+  season: data.season,
+  generated: data.generated,
+  picks: data.picks,
+  parlay: data.parlay ?? null,
+  disclaimer: data.disclaimer,
+  preseason: data.preseason ?? data.experimental,
+  experimental_note: data.experimental_note,
+  pending: data.pending,
+  pending_reason: data.pending_reason,
+  isCurrent: true,
+  complete: false,
+};
+
+const pastDays: DayView[] = Object.entries((seasonLog as unknown as SeasonLog).days)
+  .filter(([dk]) => dk !== data.date) // season log also holds the current day
+  .map(([dk, d]) => ({
+    date: d.date,
+    season: (seasonLog as unknown as SeasonLog).season,
+    generated: d.generated,
+    picks: d.picks,
+    parlay: d.parlay ?? null,
+    disclaimer: "",
+    preseason: d.preseason,
+    experimental_note: d.experimental_note,
+    isCurrent: false,
+    complete: d.complete,
+  }))
+  .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
+
+const allDays: DayView[] = [currentDay, ...pastDays];
 
 function fmtGameday(p: Pick): string {
   if (p.neutral) return "Neutral site";
@@ -213,22 +263,52 @@ function PendingNotice({ reason }: { reason?: string }) {
 }
 
 export default function NbaHome() {
+  const [sel, setSel] = useState(0);
+  const dv = allDays[sel] ?? currentDay;
+  const picks = dv.picks;
+  const isPending = !!dv.pending || picks.length === 0;
   const nSpread = picks.filter((p) => p.pick_spread).length;
   const nTotal = picks.filter((p) => p.pick_total).length;
-  const seasonLabel = `${data.season - 1}–${String(data.season).slice(2)}`;
-  const showPreseason = data.preseason === true || data.experimental === true || !!data.experimental_note;
+  const seasonLabel = `${dv.season - 1}–${String(dv.season).slice(2)}`;
+  const showPreseason = dv.preseason === true || !!dv.experimental_note;
 
   return (
     <div>
       <div className="mb-8">
         <Eyebrow>
-          NBA · {seasonLabel} season{data.week ? ` · Week ${data.week}` : ""}
-          {data.date ? ` · ${fmtSlateDate(data.date)}` : ""}
-          {data.generated ? ` · generated ${data.generated}` : ""}
+          NBA · {seasonLabel} season
+          {dv.date ? ` · ${fmtSlateDate(dv.date)}` : ""}
+          {dv.generated ? ` · generated ${dv.generated}` : ""}
+          {!dv.isCurrent && !dv.complete && (
+            <span className="ml-2 rounded bg-zinc-500/15 px-2 py-0.5 text-zinc-400 light:text-zinc-600">partial</span>
+          )}
         </Eyebrow>
         <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide sm:text-6xl">
-          NBA <span className="text-amber-400 light:text-amber-600">picks</span>
+          {dv.isCurrent ? (
+            <>NBA <span className="text-amber-400 light:text-amber-600">picks</span></>
+          ) : (
+            <><span className="text-amber-400 light:text-amber-600">{fmtSlateDate(dv.date)}</span> slate</>
+          )}
         </h1>
+        {allDays.length > 1 && (
+          <div className="mt-4 flex flex-wrap gap-2" role="tablist" aria-label="Browse days">
+            {allDays.map((d, i) => (
+              <button
+                key={d.date ?? "current"}
+                role="tab"
+                aria-selected={i === sel}
+                onClick={() => setSel(i)}
+                className={`rounded-full border px-3.5 py-1.5 text-sm font-semibold transition ${
+                  i === sel
+                    ? "border-amber-400 bg-amber-400/15 text-amber-200 light:border-amber-600 light:bg-amber-600/10 light:text-amber-700"
+                    : "border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200 light:border-zinc-200 light:bg-white light:text-zinc-600 light:hover:border-zinc-400"
+                }`}
+              >
+                {d.isCurrent ? `${fmtSlateDate(d.date)} · today` : fmtSlateDate(d.date)}
+              </button>
+            ))}
+          </div>
+        )}
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
           Tonight&rsquo;s slate from a margin-adjusted Elo — home edge 2.75, k=26, prior-season
           carryover — with an offensive/defensive efficiency totals model and a rest-day
@@ -240,12 +320,12 @@ export default function NbaHome() {
           <div className="mt-5 max-w-2xl rounded-xl border border-sky-400/30 bg-sky-400/10 px-4 py-3 light:bg-sky-50">
             <div className="text-xs font-bold uppercase tracking-[0.16em] text-sky-300 light:text-sky-700">Preseason — experimental</div>
             <p className="mt-1 text-sm leading-relaxed text-sky-200/90 light:text-sky-800">
-              {data.experimental_note ?? "The model is running before it has seen a real regular-season game. Treat these numbers as a calibration exercise, not as picks."}
+              {dv.experimental_note ?? "The model is running before it has seen a real regular-season game. Treat these numbers as a calibration exercise, not as picks."}
             </p>
           </div>
         )}
         {isPending ? (
-          <div className="mt-6"><PendingNotice reason={data.pending_reason} /></div>
+          <div className="mt-6"><PendingNotice reason={dv.pending_reason} /></div>
         ) : (
           <>
             <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
@@ -257,13 +337,13 @@ export default function NbaHome() {
               ))}
             </div>
             <p className="mt-5 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90 light:text-amber-800">
-              {data.disclaimer}
+              {dv.isCurrent ? dv.disclaimer : "Graded results — every pick marked won, lost, or push. Nothing hidden, nothing rewritten."}
             </p>
           </>
         )}
       </div>
 
-      {!isPending && <ParlayCard parlay={data.parlay ?? null} title={data.week ? "Parlay of the week" : "Parlay of the night"} />}
+      {!isPending && <ParlayCard parlay={dv.parlay ?? null} title="Parlay of the night" />}
 
       {!isPending && picks.length > 0 && (
         <>
