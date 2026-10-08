@@ -118,7 +118,14 @@ def verify_spread_convention() -> None:
 
 
 def fetch_upcoming_week(season: int):
-    """Next unplayed week: schedule + lines, live from the API."""
+    """Week with the next unplayed games: schedule + lines, live from the API.
+
+    The latest week with completed games is usually still in progress
+    (midweek games go final days before Saturday), so only advance past it
+    when every game in it is final. Advancing blindly on max(played)+1
+    skipped an entire Saturday slate on 2026-10-08 after 3 Wednesday
+    games went final.
+    """
     import sys
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from fetch_cfb import get_client
@@ -127,19 +134,30 @@ def fetch_upcoming_week(season: int):
     client = get_client()
     ga, ba = games_api.GamesApi(client), betting_api.BettingApi(client)
 
+    def week_games(week):
+        out = []
+        for st in ("regular", "postseason"):
+            try:
+                for x in ga.get_games(year=season, week=week, season_type=st,
+                                      classification="fbs"):
+                    out.append(x.to_dict())
+            except Exception as e:
+                print(f"  games w{week} {st}: {e}")
+        return out
+
     team_games = load_team_games()
     played = team_games[team_games["season"] == season]["week"].unique()
-    next_week = int(max(played)) + 1 if len(played) else 1
-    print(f"next week: {next_week}")
+    latest = int(max(played)) if len(played) else 1
+    probe = week_games(latest)
+    if any(not g.get("completed") for g in probe):
+        next_week = latest
+    else:
+        next_week = latest + 1
+    print(f"next week: {next_week} (latest week with finals: {latest})")
 
-    sched, lines = [], {}
+    sched = probe if next_week == latest else week_games(next_week)
+    lines = {}
     for st in ("regular", "postseason"):
-        try:
-            for x in ga.get_games(year=season, week=next_week, season_type=st,
-                                  classification="fbs"):
-                sched.append(x.to_dict())
-        except Exception as e:
-            print(f"  games w{next_week} {st}: {e}")
         try:
             for l in ba.get_lines(year=season, week=next_week, season_type=st):
                 d = l.to_dict()
