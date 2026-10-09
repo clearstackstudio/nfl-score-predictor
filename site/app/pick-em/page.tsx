@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import picksData from "../../data/picks.json";
 import seasonData from "../../data/season_2026.json";
 import TeamLogo from "../lib/team-logo";
+import ShareResultsCard from "../lib/share-results-card";
 import { trim } from "../lib/format";
 
 type Mode = "combo" | "su";
@@ -451,7 +452,18 @@ export default function PickEm() {
       </p>
 
       {/* You vs the model */}
-      <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">You vs the model</h2>
+      <div className="mt-12 flex flex-wrap items-center justify-between gap-3">
+        <h2 className="font-display text-3xl font-semibold uppercase tracking-wide">You vs the model</h2>
+        {gradedWeeks.length > 0 && (
+          <ShareResultsCard
+            sport="NFL"
+            period={`Week ${week}`}
+            path="/pick-em"
+            you={{ ats: youAts, su: youSu, ou: youOu }}
+            model={{ ats: modelAts, su: modelSu, ou: modelOu }}
+          />
+        )}
+      </div>
       {gradedWeeks.length === 0 ? (
         <p className="mt-2 max-w-2xl text-[15px] text-zinc-400 light:text-zinc-600">
           No graded weeks yet — the first results land Tuesday morning, and this
