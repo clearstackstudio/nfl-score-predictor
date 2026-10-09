@@ -4,12 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type LeagueId = "nfl" | "cfb" | "nba";
+type LeagueId = "nfl" | "cfb" | "nba" | "mlb";
 
 const LEAGUES: { id: LeagueId; label: string; base: string; scoreboard: string }[] = [
   { id: "nfl", label: "NFL", base: "", scoreboard: "football/nfl" },
   { id: "cfb", label: "NCAAF", base: "/cfb", scoreboard: "football/college-football" },
   { id: "nba", label: "NBA", base: "/nba", scoreboard: "basketball/nba" },
+  { id: "mlb", label: "MLB", base: "/mlb", scoreboard: "baseball/mlb" },
 ];
 
 const NAV_ITEMS = [
@@ -20,6 +21,7 @@ const NAV_ITEMS = [
 ];
 
 function leagueOf(pathname: string): LeagueId {
+  if (pathname === "/mlb" || pathname.startsWith("/mlb/")) return "mlb";
   if (pathname === "/nba" || pathname.startsWith("/nba/")) return "nba";
   if (pathname === "/cfb" || pathname.startsWith("/cfb/")) return "cfb";
   return "nfl";
@@ -29,13 +31,15 @@ function switchHref(pathname: string, target: LeagueId): string {
   const current = leagueOf(pathname);
   if (current === target) return pathname;
   const stripped =
-    current === "nfl" ? pathname : pathname.replace(/^\/(cfb|nba)/, "") || "/";
+    current === "nfl" ? pathname : pathname.replace(/^\/(cfb|nba|mlb)/, "") || "/";
   // Only league subpages exist under every league; anything else (e.g.
   // /accuracy, /disclaimer) falls back to the league home.
+  // MLB has no live page, so /live is not a valid MLB slug.
   const leagueSlugs = ["", "/live", "/pick-em", "/track-record"];
-  const valid = leagueSlugs.includes(stripped);
+  const mlbSlugs = ["", "/pick-em", "/track-record"];
+  const valid = (target === "mlb" ? mlbSlugs : leagueSlugs).includes(stripped);
   if (target === "nfl") return valid ? stripped : "/";
-  const base = target === "cfb" ? "/cfb" : "/nba";
+  const base = target === "cfb" ? "/cfb" : target === "nba" ? "/nba" : "/mlb";
   return valid && stripped !== "/" ? `${base}${stripped}` : base;
 }
 
@@ -99,9 +103,9 @@ export default function Nav() {
         })}
       </div>
       <nav className="flex max-w-full gap-1 overflow-x-auto" aria-label="Primary">
-        {NAV_ITEMS.map((item) => {
+        {NAV_ITEMS.filter((item) => !(league === "mlb" && item.slug === "/live")).map((item) => {
           const href = `${base}${item.slug}` || "/";
-          const label = league === "nba" && item.nbaLabel ? item.nbaLabel : item.label;
+          const label = (league === "nba" || league === "mlb") && item.nbaLabel ? item.nbaLabel : item.label;
           const active =
             item.slug === "" ? pathname === href || pathname === `${href}/` : pathname.startsWith(href);
           return (

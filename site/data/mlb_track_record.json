@@ -1,0 +1,291 @@
+{
+ "model": "Park-adjusted exponential runs ratings (fitted home edge 0.130 runs, alpha 1/40, 0.25 prior-season carryover) with a Normal-CDF win probability (sigma 4.135). The closing line is never an input -- only the benchmark. Walk-forward: every prediction made before learning the result.",
+ "overall": {
+  "games": 22765,
+  "straight_up_pct": 0.5527,
+  "brier_model": 0.2456,
+  "brier_line": 0.2402,
+  "ml": {
+   "bets": 11369,
+   "wins": 5061,
+   "losses": 6308,
+   "win_pct": 0.4452,
+   "profit": -24958.99,
+   "roi": -0.022
+  },
+  "totals": {
+   "our_rmse": 4.419,
+   "line_rmse": 4.371,
+   "ou": [
+    6582,
+    6472,
+    680
+   ],
+   "ou_pct": 0.5042,
+   "profit": -47938.76,
+   "roi": -0.0367
+  }
+ },
+ "seasons": [
+  {
+   "season": 2012,
+   "games": 2430,
+   "straight_up_pct": 0.5543,
+   "brier_model": 0.246,
+   "brier_line": 0.2418,
+   "ml": {
+    "bets": 1135,
+    "wins": 532,
+    "losses": 603,
+    "win_pct": 0.4687,
+    "profit": -486.68,
+    "roi": -0.0043
+   },
+   "totals": {
+    "our_rmse": 4.3283,
+    "line_rmse": 4.2697,
+    "ou": [
+     747,
+     718,
+     63
+    ],
+    "ou_pct": 0.5099,
+    "roi": -0.0228
+   }
+  },
+  {
+   "season": 2013,
+   "games": 2431,
+   "straight_up_pct": 0.5533,
+   "brier_model": 0.2458,
+   "brier_line": 0.2413,
+   "ml": {
+    "bets": 1105,
+    "wins": 480,
+    "losses": 625,
+    "win_pct": 0.4344,
+    "profit": -4206.04,
+    "roi": -0.0381
+   },
+   "totals": {
+    "our_rmse": 4.2058,
+    "line_rmse": 4.141,
+    "ou": [
+     651,
+     697,
+     71
+    ],
+    "ou_pct": 0.4829,
+    "roi": -0.0808
+   }
+  },
+  {
+   "season": 2014,
+   "games": 2430,
+   "straight_up_pct": 0.5317,
+   "brier_model": 0.2495,
+   "brier_line": 0.2419,
+   "ml": {
+    "bets": 1176,
+    "wins": 503,
+    "losses": 673,
+    "win_pct": 0.4277,
+    "profit": -6467.67,
+    "roi": -0.055
+   },
+   "totals": {
+    "our_rmse": 4.0699,
+    "line_rmse": 4.0363,
+    "ou": [
+     652,
+     654,
+     76
+    ],
+    "ou_pct": 0.4992,
+    "roi": -0.0457
+   }
+  },
+  {
+   "season": 2015,
+   "games": 2429,
+   "straight_up_pct": 0.5336,
+   "brier_model": 0.2492,
+   "brier_line": 0.2417,
+   "ml": {
+    "bets": 1222,
+    "wins": 528,
+    "losses": 694,
+    "win_pct": 0.4321,
+    "profit": -6938.16,
+    "roi": -0.0568
+   },
+   "totals": {
+    "our_rmse": 4.3648,
+    "line_rmse": 4.3459,
+    "ou": [
+     767,
+     731,
+     81
+    ],
+    "ou_pct": 0.512,
+    "roi": -0.0198
+   }
+  },
+  {
+   "season": 2016,
+   "games": 2428,
+   "straight_up_pct": 0.5317,
+   "brier_model": 0.2496,
+   "brier_line": 0.2404,
+   "ml": {
+    "bets": 1215,
+    "wins": 497,
+    "losses": 718,
+    "win_pct": 0.4091,
+    "profit": -9808.94,
+    "roi": -0.0807
+   },
+   "totals": {
+    "our_rmse": 4.4397,
+    "line_rmse": 4.4224,
+    "ou": [
+     738,
+     678,
+     82
+    ],
+    "ou_pct": 0.5212,
+    "roi": -0.0064
+   }
+  },
+  {
+   "season": 2017,
+   "games": 2430,
+   "straight_up_pct": 0.5449,
+   "brier_model": 0.247,
+   "brier_line": 0.2408,
+   "ml": {
+    "bets": 1353,
+    "wins": 617,
+    "losses": 736,
+    "win_pct": 0.456,
+    "profit": 781.36,
+    "roi": 0.0058
+   },
+   "totals": {
+    "our_rmse": 4.5105,
+    "line_rmse": 4.4566,
+    "ou": [
+     661,
+     681,
+     65
+    ],
+    "ou_pct": 0.4925,
+    "roi": -0.0618
+   }
+  },
+  {
+   "season": 2018,
+   "games": 2431,
+   "straight_up_pct": 0.5804,
+   "brier_model": 0.2409,
+   "brier_line": 0.2391,
+   "ml": {
+    "bets": 1205,
+    "wins": 569,
+    "losses": 636,
+    "win_pct": 0.4722,
+    "profit": 4908.59,
+    "roi": 0.0407
+   },
+   "totals": {
+    "our_rmse": 4.5474,
+    "line_rmse": 4.4862,
+    "ou": [
+     678,
+     667,
+     59
+    ],
+    "ou_pct": 0.5041,
+    "roi": -0.0405
+   }
+  },
+  {
+   "season": 2019,
+   "games": 2429,
+   "straight_up_pct": 0.5813,
+   "brier_model": 0.2397,
+   "brier_line": 0.2357,
+   "ml": {
+    "bets": 1235,
+    "wins": 569,
+    "losses": 666,
+    "win_pct": 0.4607,
+    "profit": -383.47,
+    "roi": -0.0031
+   },
+   "totals": {
+    "our_rmse": 4.725,
+    "line_rmse": 4.6694,
+    "ou": [
+     691,
+     688,
+     90
+    ],
+    "ou_pct": 0.5011,
+    "roi": -0.0457
+   }
+  },
+  {
+   "season": 2020,
+   "games": 898,
+   "straight_up_pct": 0.5679,
+   "brier_model": 0.2453,
+   "brier_line": 0.2403,
+   "ml": {
+    "bets": 485,
+    "wins": 202,
+    "losses": 283,
+    "win_pct": 0.4165,
+    "profit": -620.24,
+    "roi": -0.0128
+   },
+   "totals": {
+    "our_rmse": 4.5243,
+    "line_rmse": 4.4598,
+    "ou": [
+     273,
+     256,
+     27
+    ],
+    "ou_pct": 0.5161,
+    "roi": -0.0179
+   }
+  },
+  {
+   "season": 2021,
+   "games": 2429,
+   "straight_up_pct": 0.5578,
+   "brier_model": 0.243,
+   "brier_line": 0.2387,
+   "ml": {
+    "bets": 1238,
+    "wins": 564,
+    "losses": 674,
+    "win_pct": 0.4556,
+    "profit": -1737.75,
+    "roi": -0.014
+   },
+   "totals": {
+    "our_rmse": 4.5055,
+    "line_rmse": 4.4452,
+    "ou": [
+     724,
+     702,
+     66
+    ],
+    "ou_pct": 0.5077,
+    "roi": -0.0201
+   }
+  }
+ ]
+}

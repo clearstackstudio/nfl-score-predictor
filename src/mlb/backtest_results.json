@@ -1,0 +1,433 @@
+{
+  "overall": {
+    "games": 22765,
+    "su_win_pct": 0.5527344607950802,
+    "brier_model": 0.24561142454594134,
+    "brier_line": 0.24015897278940412,
+    "moneyline": {
+      "0.03": {
+        "bets": 15549,
+        "wins": 6998,
+        "losses": 8551,
+        "win_pct": 0.4500610971766673,
+        "profit": -48293.63,
+        "roi": -0.031058993305226386
+      },
+      "0.05": {
+        "bets": 11369,
+        "wins": 5061,
+        "losses": 6308,
+        "win_pct": 0.44515788547805435,
+        "profit": -24958.99,
+        "roi": -0.021953545910319908
+      }
+    },
+    "model_total_rmse": 4.418953634947028,
+    "line_total_rmse": 4.371024283111375,
+    "ou_bets": 13054,
+    "ou_wins": 6582,
+    "ou_losses": 6472,
+    "ou_pushes": 680,
+    "ou_win_pct": 0.5042132679638425,
+    "ou_profit": -47938.76,
+    "ou_roi": -0.036723427937104376
+  },
+  "by_season": {
+    "2012": {
+      "games": 2430,
+      "su_win_pct": 0.554320987654321,
+      "brier_model": 0.24600236314841606,
+      "brier_line": 0.24181983956096906,
+      "moneyline": {
+        "0.03": {
+          "bets": 1627,
+          "wins": 750,
+          "losses": 877,
+          "win_pct": 0.46097111247695144,
+          "profit": -6244.38,
+          "roi": -0.038379730974338715
+        },
+        "0.05": {
+          "bets": 1135,
+          "wins": 532,
+          "losses": 603,
+          "win_pct": 0.4687224669603524,
+          "profit": -486.68,
+          "roi": -0.004287903180336014
+        }
+      },
+      "model_total_rmse": 4.3283024315210215,
+      "line_total_rmse": 4.269713418356918,
+      "ou_bets": 1465,
+      "ou_wins": 747,
+      "ou_losses": 718,
+      "ou_pushes": 63,
+      "ou_win_pct": 0.5098976109215017,
+      "ou_profit": -3347.01,
+      "ou_roi": -0.022846478347294343
+    },
+    "2013": {
+      "games": 2431,
+      "su_win_pct": 0.5532702591526121,
+      "brier_model": 0.24576899154404236,
+      "brier_line": 0.24128225912163653,
+      "moneyline": {
+        "0.03": {
+          "bets": 1593,
+          "wins": 699,
+          "losses": 894,
+          "win_pct": 0.4387947269303202,
+          "profit": -7842.6,
+          "roi": -0.049231642058056316
+        },
+        "0.05": {
+          "bets": 1105,
+          "wins": 480,
+          "losses": 625,
+          "win_pct": 0.4343891402714932,
+          "profit": -4206.04,
+          "roi": -0.038063667198720674
+        }
+      },
+      "model_total_rmse": 4.205801165168906,
+      "line_total_rmse": 4.141024898127363,
+      "ou_bets": 1348,
+      "ou_wins": 651,
+      "ou_losses": 697,
+      "ou_pushes": 71,
+      "ou_win_pct": 0.48293768545994065,
+      "ou_profit": -10886.53,
+      "ou_roi": -0.08076063080256089
+    },
+    "2014": {
+      "games": 2430,
+      "su_win_pct": 0.5316872427983539,
+      "brier_model": 0.2494629248546768,
+      "brier_line": 0.2419142900058878,
+      "moneyline": {
+        "0.03": {
+          "bets": 1617,
+          "wins": 696,
+          "losses": 921,
+          "win_pct": 0.43042671614100186,
+          "profit": -10949.44,
+          "roi": -0.06771452972644372
+        },
+        "0.05": {
+          "bets": 1176,
+          "wins": 503,
+          "losses": 673,
+          "win_pct": 0.42772108843537415,
+          "profit": -6467.67,
+          "roi": -0.05499717873506315
+        }
+      },
+      "model_total_rmse": 4.069915401246137,
+      "line_total_rmse": 4.036319168250144,
+      "ou_bets": 1306,
+      "ou_wins": 652,
+      "ou_losses": 654,
+      "ou_pushes": 76,
+      "ou_win_pct": 0.4992343032159265,
+      "ou_profit": -5967.91,
+      "ou_roi": -0.045696126115508356
+    },
+    "2015": {
+      "games": 2429,
+      "su_win_pct": 0.5335529024289831,
+      "brier_model": 0.24918388278568337,
+      "brier_line": 0.24167185872973682,
+      "moneyline": {
+        "0.03": {
+          "bets": 1679,
+          "wins": 745,
+          "losses": 934,
+          "win_pct": 0.44371649791542583,
+          "profit": -8920.04,
+          "roi": -0.05312710747933463
+        },
+        "0.05": {
+          "bets": 1222,
+          "wins": 528,
+          "losses": 694,
+          "win_pct": 0.4320785597381342,
+          "profit": -6938.16,
+          "roi": -0.056777052920653354
+        }
+      },
+      "model_total_rmse": 4.364779323078266,
+      "line_total_rmse": 4.345892852459156,
+      "ou_bets": 1498,
+      "ou_wins": 767,
+      "ou_losses": 731,
+      "ou_pushes": 81,
+      "ou_win_pct": 0.5120160213618158,
+      "ou_profit": -2965.67,
+      "ou_roi": -0.019797530260917
+    },
+    "2016": {
+      "games": 2428,
+      "su_win_pct": 0.5317133443163097,
+      "brier_model": 0.2495829781422057,
+      "brier_line": 0.24035421304234472,
+      "moneyline": {
+        "0.03": {
+          "bets": 1659,
+          "wins": 706,
+          "losses": 953,
+          "win_pct": 0.4255575647980711,
+          "profit": -11016.86,
+          "roi": -0.06640660056375276
+        },
+        "0.05": {
+          "bets": 1215,
+          "wins": 497,
+          "losses": 718,
+          "win_pct": 0.4090534979423868,
+          "profit": -9808.94,
+          "roi": -0.08073201458652532
+        }
+      },
+      "model_total_rmse": 4.439672949808486,
+      "line_total_rmse": 4.422416035543612,
+      "ou_bets": 1416,
+      "ou_wins": 738,
+      "ou_losses": 678,
+      "ou_pushes": 82,
+      "ou_win_pct": 0.5211864406779662,
+      "ou_profit": -902.51,
+      "ou_roi": -0.006373635997460003
+    },
+    "2017": {
+      "games": 2430,
+      "su_win_pct": 0.5448559670781893,
+      "brier_model": 0.24703273220204988,
+      "brier_line": 0.2408078104621464,
+      "moneyline": {
+        "0.03": {
+          "bets": 1779,
+          "wins": 805,
+          "losses": 974,
+          "win_pct": 0.45250140528386734,
+          "profit": -4127.73,
+          "roi": -0.023202524152476985
+        },
+        "0.05": {
+          "bets": 1353,
+          "wins": 617,
+          "losses": 736,
+          "win_pct": 0.45602365114560234,
+          "profit": 781.36,
+          "roi": 0.0057750262847367185
+        }
+      },
+      "model_total_rmse": 4.510470414567252,
+      "line_total_rmse": 4.456615279905415,
+      "ou_bets": 1342,
+      "ou_wins": 661,
+      "ou_losses": 681,
+      "ou_pushes": 65,
+      "ou_win_pct": 0.49254843517138597,
+      "ou_profit": -8299.83,
+      "ou_roi": -0.06184672037200726
+    },
+    "2018": {
+      "games": 2431,
+      "su_win_pct": 0.5804195804195804,
+      "brier_model": 0.24091736986063683,
+      "brier_line": 0.23909259271210673,
+      "moneyline": {
+        "0.03": {
+          "bets": 1640,
+          "wins": 785,
+          "losses": 855,
+          "win_pct": 0.47865853658536583,
+          "profit": 5230.45,
+          "roi": 0.031892975358766555
+        },
+        "0.05": {
+          "bets": 1205,
+          "wins": 569,
+          "losses": 636,
+          "win_pct": 0.4721991701244813,
+          "profit": 4908.59,
+          "roi": 0.04073515607383112
+        }
+      },
+      "model_total_rmse": 4.5474416943460625,
+      "line_total_rmse": 4.486175574755851,
+      "ou_bets": 1345,
+      "ou_wins": 678,
+      "ou_losses": 667,
+      "ou_pushes": 59,
+      "ou_win_pct": 0.504089219330855,
+      "ou_profit": -5447.47,
+      "ou_roi": -0.04050160527918234
+    },
+    "2019": {
+      "games": 2429,
+      "su_win_pct": 0.5813091807328119,
+      "brier_model": 0.23967451330861114,
+      "brier_line": 0.23572892384671768,
+      "moneyline": {
+        "0.03": {
+          "bets": 1664,
+          "wins": 790,
+          "losses": 874,
+          "win_pct": 0.47475961538461536,
+          "profit": 1650.78,
+          "roi": 0.009920548462849834
+        },
+        "0.05": {
+          "bets": 1235,
+          "wins": 569,
+          "losses": 666,
+          "win_pct": 0.46072874493927124,
+          "profit": -383.47,
+          "roi": -0.0031050291017391766
+        }
+      },
+      "model_total_rmse": 4.725041623607312,
+      "line_total_rmse": 4.669390880834873,
+      "ou_bets": 1379,
+      "ou_wins": 691,
+      "ou_losses": 688,
+      "ou_pushes": 90,
+      "ou_win_pct": 0.5010877447425671,
+      "ou_profit": -6302.3,
+      "ou_roi": -0.045701989704667476
+    },
+    "2020": {
+      "games": 898,
+      "su_win_pct": 0.5679287305122495,
+      "brier_model": 0.24532516087038295,
+      "brier_line": 0.240343939142205,
+      "moneyline": {
+        "0.03": {
+          "bets": 646,
+          "wins": 270,
+          "losses": 376,
+          "win_pct": 0.4179566563467492,
+          "profit": -2173.69,
+          "roi": -0.03364852185491374
+        },
+        "0.05": {
+          "bets": 485,
+          "wins": 202,
+          "losses": 283,
+          "win_pct": 0.41649484536082476,
+          "profit": -620.24,
+          "roi": -0.012788427597858632
+        }
+      },
+      "model_total_rmse": 4.5242982388068125,
+      "line_total_rmse": 4.459793157887018,
+      "ou_bets": 529,
+      "ou_wins": 273,
+      "ou_losses": 256,
+      "ou_pushes": 27,
+      "ou_win_pct": 0.5160680529300568,
+      "ou_profit": -948.03,
+      "ou_roi": -0.017921144908076777
+    },
+    "2021": {
+      "games": 2429,
+      "su_win_pct": 0.5578427336352408,
+      "brier_model": 0.2429859352042728,
+      "brier_line": 0.23868894564761262,
+      "moneyline": {
+        "0.03": {
+          "bets": 1645,
+          "wins": 752,
+          "losses": 893,
+          "win_pct": 0.45714285714285713,
+          "profit": -3900.11,
+          "roi": -0.02370889792919522
+        },
+        "0.05": {
+          "bets": 1238,
+          "wins": 564,
+          "losses": 674,
+          "win_pct": 0.4555735056542811,
+          "profit": -1737.75,
+          "roi": -0.014036734905221355
+        }
+      },
+      "model_total_rmse": 4.505457823567439,
+      "line_total_rmse": 4.445185571298128,
+      "ou_bets": 1426,
+      "ou_wins": 724,
+      "ou_losses": 702,
+      "ou_pushes": 66,
+      "ou_win_pct": 0.5077138849929874,
+      "ou_profit": -2871.5,
+      "ou_roi": -0.020136753352978078
+    }
+  },
+  "post_tuning_era": {
+    "games": 13045,
+    "su_win_pct": 0.5598313530088156,
+    "brier_model": 0.2441265895140559,
+    "brier_line": 0.2390315802165132,
+    "moneyline": {
+      "0.03": {
+        "bets": 9033,
+        "wins": 4108,
+        "losses": 4925,
+        "win_pct": 0.4547769290379719,
+        "profit": -14337.17,
+        "roi": -0.01587198613791257
+      },
+      "0.05": {
+        "bets": 6731,
+        "wins": 3018,
+        "losses": 3713,
+        "win_pct": 0.4483731986331897,
+        "profit": -6860.45,
+        "roi": -0.010192319154462361
+      }
+    },
+    "model_total_rmse": 4.545106039006861,
+    "line_total_rmse": 4.494300295659617,
+    "ou_bets": 7437,
+    "ou_wins": 3765,
+    "ou_losses": 3672,
+    "ou_pushes": 389,
+    "ou_win_pct": 0.5062525211778943,
+    "ou_profit": -24771.64,
+    "ou_roi": -0.03330864140817401
+  },
+  "seasons": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "games": 22765,
+  "su_win_pct": 0.5527344607950802,
+  "brier_model": 0.24561142454594134,
+  "brier_line": 0.24015897278940412,
+  "primary_ml_threshold": 0.05,
+  "ou_threshold_runs": 0.5,
+  "stake": 100.0,
+  "tuning": {
+    "tune_seasons": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "alpha": 0.025,
+    "carryover": 0.25,
+    "tuning_rmse": 4.134858829697596,
+    "home_edge": 0.1297118979546954,
+    "sigma": 4.134851897482218
+  },
+  "verdict": "Walk-forward backtest, 2012-2021 (22,765 games, prediction before update, lines never used as inputs): the team-level runs model picks the winner 55.3% straight up. Brier score 0.2456 vs 0.2402 for the vig-removed closing line -- the line remains the sharper probability. Flat $100 moneyline bets at a 0.05 edge threshold went 5061-6308 (44.5%) for $-24959 (-2.2% ROI) over 11369 bets; on the post-tuning 2016-2021 slice it was 3018-3713 ($-6860, -1.0% ROI). Totals: model RMSE 4.42 vs line 4.37; over/under bets at a 0.5-run threshold went 6582-6472 (50.4%, $-47939, -3.7% ROI). VERDICT: competent forecaster, no betting edge. Team strength alone does not beat the closing MLB line; the honest use is as a calibrated forecaster, with probable-pitcher adjustments (see pitcher.py) as the plausible path to any future edge."
+}
