@@ -44,6 +44,7 @@ from elo import NBAElo
 from totals import NBATotals
 from features import (REST_CAP_DAYS, apply_rest_adjustment,
                       apply_rest_adjustment_total)
+from stars import apply_star_adjustment, load_stars_out
 from teams import normalize_team
 
 REPO = Path(__file__).resolve().parent.parent.parent
@@ -383,6 +384,9 @@ def main() -> None:
 
     seen = set()
     picks = []
+    # Star absences: nightly designations from data/nba/star_out.json
+    # (populated by the news watch). Missing/stale file -> no adjustment.
+    stars_out = load_stars_out(season, game_date)
     for g in sorted(day_games, key=lambda x: x["commence_time"]):
         home = normalize_team(g["home_team"])
         away = normalize_team(g["away_team"])
@@ -399,6 +403,10 @@ def main() -> None:
         ar = rest_days(away, season, game_date, last_date)
         our_margin = apply_rest_adjustment(
             elo.predict_margin(home, away), hr, ar)
+        our_margin = apply_star_adjustment(
+            our_margin,
+            len(stars_out.get(home, ())),
+            len(stars_out.get(away, ())))
         our_total = apply_rest_adjustment_total(
             totals.predict_total(home, away), hr, ar)
 
