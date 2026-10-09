@@ -27,7 +27,8 @@
     ],
     "combined_prob": 0.663,
     "fair_odds": "-197",
-    "book_pays": "+600"
+    "book_pays": "+600",
+    "result": null
   },
   "picks": [
     {
@@ -54,7 +55,13 @@
         "away": "Missouri State +1.25"
       },
       "cover_prob": 0.567,
-      "ou_prob": 0.522
+      "ou_prob": 0.522,
+      "result": {
+        "home_score": 34,
+        "away_score": 13,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Sam Houston",
@@ -80,7 +87,12 @@
         "away": "Sam Houston +13.5"
       },
       "cover_prob": 0.687,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 35,
+        "away_score": 3,
+        "ats": "win"
+      }
     },
     {
       "away": "South Florida",
@@ -106,7 +118,12 @@
         "away": "South Florida +6.5"
       },
       "cover_prob": 0.849,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 31,
+        "away_score": 24,
+        "ats": "loss"
+      }
     },
     {
       "away": "South Alabama",
@@ -132,7 +149,13 @@
         "away": "South Alabama +3"
       },
       "cover_prob": 0.525,
-      "ou_prob": 0.551
+      "ou_prob": 0.551,
+      "result": {
+        "home_score": 49,
+        "away_score": 56,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Florida State",
