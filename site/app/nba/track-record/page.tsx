@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import record from "../../../data/nba_track_record.json";
 import seasonLog from "../../../data/nba_season_2027.json";
 import { fmtPct } from "../../lib/format";
+
+export const metadata: Metadata = {
+  title: "NBA track record",
+  description:
+    "The complete Honest Line NBA track record: every pick graded in public, season by season.",
+  alternates: { canonical: "/nba/track-record" },
+};
 import NbaTeamLogo from "../../lib/nba-team-logo";
 
 type Era = {

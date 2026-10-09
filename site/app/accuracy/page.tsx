@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import nfl from "../../data/track_record.json";
 import cfb from "../../data/cfb_track_record.json";
+
+export const metadata: Metadata = {
+  title: "Model accuracy",
+  description:
+    "How accurate are the Honest Line models? Prediction error vs the closing line for NFL, college football, NBA, and MLB — the full honest accounting.",
+  alternates: { canonical: "/accuracy" },
+};
 import nba from "../../data/nba_track_record.json";
 import { fmtPct } from "../lib/format";
 

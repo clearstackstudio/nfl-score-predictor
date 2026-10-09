@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import record from "../../../data/cfb_track_record.json";
 import seasonLog from "../../../data/cfb_season_2026.json";
 import { fmtPct } from "../../lib/format";
+
+export const metadata: Metadata = {
+  title: "College football track record",
+  description:
+    "The complete Honest Line college football track record: every FBS pick graded in public, season by season.",
+  alternates: { canonical: "/cfb/track-record" },
+};
 import CfbTeamLogo from "../../lib/cfb-team-logo";
 
 type Season = {

@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MLB pick'em game",
+  description:
+    "Free MLB pick'em game: pick every winner straight up. Returns for the 2027 season.",
+  alternates: { canonical: "/mlb/pick-em" },
+};
+
 export default function MlbPickEm() {
   return (
     <div>

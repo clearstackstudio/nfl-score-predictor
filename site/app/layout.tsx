@@ -15,15 +15,69 @@ const barlow = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Honest Line — NFL, college football & NBA picks with a public track record",
+  metadataBase: new URL("https://honest-line.vercel.app"),
+  title: {
+    default:
+      "Honest Line — NFL, college football, NBA & MLB picks with a public track record",
+    template: "%s · Honest Line",
+  },
   description:
-    "Fundamentals-only NFL, college football, and NBA prediction models. Every pick published, every result tracked, no hidden losers.",
+    "Fundamentals-only NFL, college football, NBA, and MLB prediction models. Every pick published before game time, every result graded in public — including the losers.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Honest Line — picks with a public track record",
+    description:
+      "Every pick published before game time, every result graded in public — including the losers. NFL, college football, NBA & MLB.",
+    url: "/",
+    siteName: "Honest Line",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Honest Line — picks with a public track record",
+    description:
+      "Every pick published before game time, every result graded in public — including the losers.",
+    images: ["/og-image.png"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "Honest Line",
+      url: "https://honest-line.vercel.app",
+      logo: "https://honest-line.vercel.app/honest-line-mark.png",
+    },
+    {
+      "@type": "WebSite",
+      name: "Honest Line",
+      url: "https://honest-line.vercel.app",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://honest-line.vercel.app",
+        },
+      ],
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.className} ${barlow.variable}`}>
       <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased light:bg-white light:text-zinc-900">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <div className="page-glow">
           <header className="sticky top-0 z-40 border-b border-white/10 bg-zinc-950/85 backdrop-blur-md light:border-zinc-200 light:bg-white/85">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-y-3 px-4 py-3.5">
@@ -54,9 +108,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Honest<span className="text-amber-400 light:text-amber-600">Line</span>
               </div>
               <p className="mt-2 max-w-xs text-sm leading-relaxed text-zinc-500">
-                Fundamentals-only NFL, college football, and NBA prediction models.
-                Every pick published before tip-off, every result graded in
-                public.
+                Fundamentals-only NFL, college football, NBA, and MLB
+                prediction models. Every pick published before tip-off, every
+                result graded in public.
               </p>
               <SupportButton />
             </div>

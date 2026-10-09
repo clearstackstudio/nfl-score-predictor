@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import record from "../../data/track_record.json";
 import seasonLog from "../../data/season_2026.json";
 import { fmtPct, fmtSpread, trim } from "../lib/format";
+
+export const metadata: Metadata = {
+  title: "NFL track record",
+  description:
+    "The complete Honest Line NFL track record: every pick graded against the spread and totals, season by season, in public.",
+  alternates: { canonical: "/track-record" },
+};
 
 type Season = {
   season: number; games: number; straight_up_pct: number;

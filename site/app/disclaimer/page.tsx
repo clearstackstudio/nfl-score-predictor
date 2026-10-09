@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Disclaimers — Honest Line",
+  title: "Disclaimers",
   description:
     "Entertainment and research only. Our picks are not betting advice, carry no guarantees, and are for adults 21+. Please play responsibly.",
+  alternates: { canonical: "/disclaimer" },
 };
 
 const sections = [

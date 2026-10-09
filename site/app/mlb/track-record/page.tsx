@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import record from "../../../data/mlb_track_record.json";
 import { fmtPct } from "../../lib/format";
+
+export const metadata: Metadata = {
+  title: "MLB track record",
+  description:
+    "The Honest Line MLB track record: a 10-season walk-forward backtest over 22,765 games, published honestly — including the losing ROI.",
+  alternates: { canonical: "/mlb/track-record" },
+};
 
 type Season = {
   season: number; games: number; straight_up_pct: number;
