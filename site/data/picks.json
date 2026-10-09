@@ -66,7 +66,12 @@
       "cover_prob": 0.772,
       "ou_prob": null,
       "home_qb": "Dak Prescott",
-      "away_qb": "Jalon Daniels"
+      "away_qb": "Jalon Daniels",
+      "result": {
+        "home_score": 16,
+        "away_score": 24,
+        "ats": "win"
+      }
     },
     {
       "away": "Philadelphia Eagles",
