@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 /**
  * Shareable results card — the pick'em viral loop.
@@ -8,7 +8,11 @@ import { useState } from "react";
  * Renders the player's graded record vs the model's as a branded PNG entirely
  * client-side (canvas). This must be client-side: pick'em entries live only in
  * browser localStorage, so no server endpoint can ever see them.
- * Shares via the native share sheet when supported, otherwise downloads.
+ *
+ * Share flow: native share sheet where supported (mobile). Anywhere else —
+ * or if the native share throws — falls back to an in-page preview dialog
+ * with Download PNG + copy-link buttons. Every click produces visible
+ * feedback (loading → dialog or error); the button is never dead.
  */
 export type CardTally = { w: number; l: number; p: number };
 
@@ -176,6 +180,8 @@ async function renderBlob(
   return { blob, filename: `honest-line-pickem-${slug}${shape === "square" ? "-square" : ""}.png` };
 }
 
+type Preview = { url: string; filename: string; pageUrl: string };
+
 export default function ShareResultsCard({
   sport,
   period,
@@ -185,9 +191,29 @@ export default function ShareResultsCard({
   shape = "wide",
 }: Props) {
   const [busy, setBusy] = useState(false);
+  const [preview, setPreview] = useState<Preview | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  const closeDialog = () => {
+    if (preview) URL.revokeObjectURL(preview.url);
+    setPreview(null);
+    setError(null);
+    setCopied(false);
+  };
+
+  useEffect(() => {
+    if (!preview && !error) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeDialog();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  });
 
   const share = async () => {
     setBusy(true);
+    setError(null);
     try {
       const url = `${window.location.origin}${path}`;
       const hero = headlineFor(you);
@@ -199,43 +225,130 @@ export default function ShareResultsCard({
       const text = hero
         ? `${hero.text} ${hero.sub} Honest Line ${sport} Pick'em (${period}) — ${url}`
         : `Think you can beat the Honest Line ${sport} model? Play free: ${url}`;
-      // Native share sheet on mobile when supported
+      // Native share sheet where supported (mobile). canShare() can report
+      // true while share() still rejects (headless/desktop Chrome) — only a
+      // user cancellation ends here; any other failure falls through to the
+      // in-page dialog so the button is never dead.
       if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({
-          files: [file],
-          title: "Honest Line Pick'em",
-          text,
-        });
-      } else {
-        // Fallback: download the image
-        const dl = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = dl;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        URL.revokeObjectURL(dl);
+        try {
+          await navigator.share({
+            files: [file],
+            title: "Honest Line Pick'em",
+            text,
+          });
+          return; // shared — done
+        } catch (e) {
+          if (e instanceof Error && e.name === "AbortError") return; // user cancelled
+          // fall through to dialog
+        }
       }
+      // Fallback: in-page preview dialog. Works with zero native share support.
+      setPreview({ url: URL.createObjectURL(blob), filename, pageUrl: url });
     } catch (e) {
-      // User cancelled share — not an error
-      if (e instanceof Error && e.name !== "AbortError") console.error(e);
+      // Canvas/render failure: explicit error state, never silent.
+      setError(e instanceof Error ? e.message : "Could not generate the image.");
     } finally {
       setBusy(false);
     }
   };
 
+  const copyLink = async () => {
+    if (!preview) return;
+    try {
+      await navigator.clipboard.writeText(preview.pageUrl);
+    } catch {
+      // Clipboard API unavailable (e.g. non-secure context): legacy fallback.
+      const ta = document.createElement("textarea");
+      ta.value = preview.pageUrl;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand("copy");
+      } catch {
+        /* give up silently — the link is visible in the card */
+      }
+      ta.remove();
+    }
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <button
-      onClick={share}
-      disabled={busy}
-      className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 px-5 py-2.5 text-sm font-semibold text-amber-400 transition hover:bg-amber-400/10 disabled:opacity-50 light:border-amber-600/40 light:text-amber-700 light:hover:bg-amber-600/10"
-    >
-      <svg aria-hidden="true" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 3v9M8 7l4-4 4 4M4 13h12" transform="translate(-2 0)" />
-        <path d="M2 12v2h12v-2" />
-      </svg>
-      {busy ? "Preparing…" : shape === "square" ? "Share square card" : "Share your results"}
-    </button>
+    <>
+      <button
+        onClick={share}
+        disabled={busy}
+        className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 px-5 py-2.5 text-sm font-semibold text-amber-400 transition hover:bg-amber-400/10 disabled:opacity-50 light:border-amber-600/40 light:text-amber-700 light:hover:bg-amber-600/10"
+      >
+        <svg aria-hidden="true" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 3v9M8 7l4-4 4 4M4 13h12" transform="translate(-2 0)" />
+          <path d="M2 12v2h12v-2" />
+        </svg>
+        {busy ? "Preparing…" : shape === "square" ? "Share square card" : "Share your results"}
+      </button>
+
+      {(preview || error) && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+          onClick={closeDialog}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Share your results"
+        >
+          <div
+            className="w-full max-w-lg overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 light:border-zinc-200 light:bg-white"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {error ? (
+              <div className="p-6">
+                <h3 className="text-base font-semibold text-zinc-100 light:text-zinc-900">
+                  Couldn&apos;t make your card
+                </h3>
+                <p className="mt-2 text-sm text-zinc-400 light:text-zinc-600">{error}</p>
+                <button
+                  onClick={closeDialog}
+                  className="mt-4 rounded-full border border-zinc-700 px-4 py-2 text-sm font-semibold text-zinc-200 transition hover:bg-zinc-800 light:border-zinc-300 light:text-zinc-700 light:hover:bg-zinc-100"
+                >
+                  Close
+                </button>
+              </div>
+            ) : (
+              preview && (
+                <>
+                  <img
+                    src={preview.url}
+                    alt="Your Honest Line pick'em results card"
+                    className="block w-full"
+                  />
+                  <div className="flex flex-wrap items-center gap-2 p-4">
+                    <a
+                      href={preview.url}
+                      download={preview.filename}
+                      className="rounded-full bg-amber-400 px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-amber-300 light:bg-amber-600 light:text-white light:hover:bg-amber-700"
+                    >
+                      Download PNG
+                    </a>
+                    <button
+                      onClick={copyLink}
+                      className="rounded-full border border-amber-400/40 px-4 py-2 text-sm font-semibold text-amber-400 transition hover:bg-amber-400/10 light:border-amber-600/40 light:text-amber-700 light:hover:bg-amber-600/10"
+                    >
+                      {copied ? "Copied!" : "Copy link"}
+                    </button>
+                    <button
+                      onClick={closeDialog}
+                      className="rounded-full px-4 py-2 text-sm font-semibold text-zinc-400 transition hover:text-zinc-200 light:text-zinc-500 light:hover:text-zinc-800"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </>
+              )
+            )}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
