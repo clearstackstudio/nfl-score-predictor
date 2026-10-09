@@ -171,12 +171,17 @@ def build_parlay(picks: list[dict]) -> dict | None:
     }
 
 
-def validate_picks(picks: list[dict], parlay: dict | None) -> None:
+def validate_picks(picks: list[dict], parlay: dict | None,
+                   locked: bool = False) -> None:
     """Recompute every display label and consistency rule from raw fields.
 
     Raises AssertionError on any mismatch. Called BEFORE picks.json is
     written, so a labeling bug can never reach the website — the previous
     week's file stays live instead.
+
+    When the parlay is locked (carried over from first publish), its legs
+    are a published record: labels reflect publish-time lines, so only
+    structural sanity is checked, not equality with current picks.
     """
     for p in picks:
         # Labels must match a fresh recomputation (catches team/number mixups).
@@ -231,11 +236,18 @@ def validate_picks(picks: list[dict], parlay: dict | None) -> None:
         by_game = {(p["home_abbr"], p["away_abbr"]): p for p in picks}
         prod = 1.0
         for leg in parlay["legs"]:
-            p = by_game[(leg["home_abbr"], leg["away_abbr"])]
-            key = "pick_spread_label" if leg["market"] == "spread" else "pick_total_label"
-            assert leg["label"] == p[key], f"parlay leg label wrong: {leg}"
-            probkey = "cover_prob" if leg["market"] == "spread" else "ou_prob"
-            assert leg["prob"] == p[probkey] and leg["prob"] is not None
+            if not locked:
+                # Fresh parlay: legs must match the current picks exactly.
+                p = by_game[(leg["home_abbr"], leg["away_abbr"])]
+                key = "pick_spread_label" if leg["market"] == "spread" else "pick_total_label"
+                assert leg["label"] == p[key], f"parlay leg label wrong: {leg}"
+                probkey = "cover_prob" if leg["market"] == "spread" else "ou_prob"
+                assert leg["prob"] == p[probkey] and leg["prob"] is not None
+            else:
+                # Locked parlay: published record, labels are from publish
+                # time — only structural sanity still applies.
+                assert leg["prob"] is not None and 0.5 < leg["prob"] <= 1.0, \
+                    f"locked parlay leg prob out of range: {leg}"
             prod *= leg["prob"]
         assert abs(prod - parlay["combined_prob"]) < 0.002, "parlay combined prob wrong"
         assert parlay["fair_odds"] == fair_american(parlay["combined_prob"])
@@ -272,15 +284,16 @@ def main() -> None:
     # graded results over by game identity (teams + gameday) instead of
     # wiping the final games' badges until the next merge. A final score
     # doesn't change because the betting line moved.
-    old_results = {}
+    old_doc = {}
     try:
-        old_picks = json.loads(
-            (REPO / "site" / "data" / "picks.json").read_text()).get("picks", [])
-        for p in old_picks:
-            old_results[(p["home_abbr"], p["away_abbr"],
-                         p.get("gameday"))] = p
+        old_doc = json.loads(
+            (REPO / "site" / "data" / "picks.json").read_text())
     except Exception:
         pass
+    old_results = {}
+    for p in old_doc.get("picks", []):
+        old_results[(p["home_abbr"], p["away_abbr"],
+                     p.get("gameday"))] = p
 
     # QB adjustments: schedule QBs, with manual overrides for mid-week news.
     qb_over = load_qb_overrides(SEASON, next_week)
@@ -401,8 +414,19 @@ def main() -> None:
             pick["result"] = old["result"]
         picks.append(pick)
 
-    parlay = build_parlay(picks)
-    validate_picks(picks, parlay)  # fail loudly BEFORE publishing, never after
+    # Parlay lock: the parlay is a published record. Once a week's parlay is
+    # out, mid-week re-runs keep it exactly as published instead of silently
+    # swapping legs as lines move. A new week builds a fresh parlay.
+    if (old_doc.get("season") == SEASON
+            and old_doc.get("week") == int(next_week)
+            and old_doc.get("parlay")):
+        parlay = old_doc["parlay"]
+        parlay_locked = True
+        print("Parlay locked at first publish — carrying over.")
+    else:
+        parlay = build_parlay(picks)
+        parlay_locked = False
+    validate_picks(picks, parlay, locked=parlay_locked)  # fail loudly BEFORE publishing, never after
     out = {
         "season": SEASON, "week": int(next_week),
         "generated": pd.Timestamp.now("America/Los_Angeles").strftime("%Y-%m-%d %H:%M %Z"),

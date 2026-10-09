@@ -251,24 +251,49 @@ def main() -> None:
             "ou_prob": round(ou_prob, 3) if pick_total else None,
         })
 
-    # Parlay of the week: 3 highest-probability legs.
-    legs = []
-    for p in picks:
-        game = f"{p['away']} @ {p['home']}"
-        if p["pick_spread"]:
-            legs.append({"game": game, "market": "spread",
-                         "label": p["pick_spread_label"], "prob": p["cover_prob"]})
-        if p["pick_total"]:
-            legs.append({"game": game, "market": "total",
-                         "label": p["pick_total_label"], "prob": p["ou_prob"]})
-    legs.sort(key=lambda l: -l["prob"])
-    legs = legs[:3]
-    parlay = None
-    if len(legs) >= 2:
-        combined = round(math.prod(l["prob"] for l in legs), 3)
-        parlay = {"legs": legs, "combined_prob": combined,
-                  "fair_odds": fair_american(combined),
-                  "book_pays": BOOK_PARLAY_PAYS[len(legs)]}
+    # Graded carry-over + parlay lock: the nightly merge writes finals into
+    # cfb_picks.json, but this script regenerates only upcoming games. A
+    # mid-week re-run must not wipe the week's graded badges — and the
+    # published parlay is a public record, so re-runs keep it exactly as
+    # published instead of silently swapping legs as lines move.
+    old_doc = {}
+    try:
+        old_doc = json.loads((REPO / "site" / "data" / "cfb_picks.json").read_text())
+    except Exception:
+        pass
+    same_week = (old_doc.get("sport") == "cfb"
+                 and old_doc.get("season") == SEASON
+                 and old_doc.get("week") == next_week)
+    if same_week:
+        have = {(p["away"], p["home"]) for p in picks}
+        for op in old_doc.get("picks", []):
+            if op.get("result") and (op["away"], op["home"]) not in have:
+                picks.append(op)  # already final: keep published pick + grade
+
+    if same_week and old_doc.get("parlay"):
+        parlay = old_doc["parlay"]
+        print("Parlay locked at first publish — carrying over.")
+    else:
+        # Parlay of the week: 3 highest-probability legs.
+        legs = []
+        for p in picks:
+            if p.get("result"):
+                continue  # already final: never a live parlay leg
+            game = f"{p['away']} @ {p['home']}"
+            if p["pick_spread"]:
+                legs.append({"game": game, "market": "spread",
+                             "label": p["pick_spread_label"], "prob": p["cover_prob"]})
+            if p["pick_total"]:
+                legs.append({"game": game, "market": "total",
+                             "label": p["pick_total_label"], "prob": p["ou_prob"]})
+        legs.sort(key=lambda l: -l["prob"])
+        legs = legs[:3]
+        parlay = None
+        if len(legs) >= 2:
+            combined = round(math.prod(l["prob"] for l in legs), 3)
+            parlay = {"legs": legs, "combined_prob": combined,
+                      "fair_odds": fair_american(combined),
+                      "book_pays": BOOK_PARLAY_PAYS[len(legs)]}
 
     out = {
         "sport": "cfb", "season": SEASON, "week": next_week,
