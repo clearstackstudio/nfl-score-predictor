@@ -136,6 +136,8 @@ def build_parlay(picks: list[dict]) -> dict | None:
     """
     legs = []
     for p in picks:
+        if p.get("result"):
+            continue  # already final: never a live parlay leg on re-runs
         game = f"{p['away_abbr']} @ {p['home_abbr']}"
         if p["pick_spread"]:
             legs.append({
@@ -267,14 +269,16 @@ def main() -> None:
 
     # Grading the nightly merge already wrote into the current picks.json.
     # A mid-week re-run regenerates the same week's slate, so carry those
-    # results over (only when the lines are unchanged) instead of wiping
-    # the final games' badges until the next merge.
+    # graded results over by game identity (teams + gameday) instead of
+    # wiping the final games' badges until the next merge. A final score
+    # doesn't change because the betting line moved.
     old_results = {}
     try:
         old_picks = json.loads(
             (REPO / "site" / "data" / "picks.json").read_text()).get("picks", [])
         for p in old_picks:
-            old_results[(p["home_abbr"], p["away_abbr"])] = p
+            old_results[(p["home_abbr"], p["away_abbr"],
+                         p.get("gameday"))] = p
     except Exception:
         pass
 
@@ -389,10 +393,11 @@ def main() -> None:
             "ou_prob": round(ou_prob, 3) if pick_total else None,
             "home_qb": g.get("home_qb_name"), "away_qb": g.get("away_qb_name"),
         }
-        old = old_results.get((home, away))
-        if (old and old.get("result")
-                and old.get("line_spread") == pick["line_spread"]
-                and old.get("line_total") == pick["line_total"]):
+        # Game identity is teams + gameday. A graded result carries over
+        # even when the line moved — the final score is already decided
+        # (graded against the line at publish time).
+        old = old_results.get((home, away, str(g["gameday"])))
+        if old and old.get("result"):
             pick["result"] = old["result"]
         picks.append(pick)
 

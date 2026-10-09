@@ -16,6 +16,7 @@ Usage:
     # (custom.collegefootballdata connector), then:
     python3 cfb/fetch_cfb.py --seasons 2014-2026
     python3 cfb/fetch_cfb.py --seasons 2026 --refresh   # weekly update
+        # (merges into the existing parquet; other seasons are kept)
 
 API budget: per season — 1 games + 1 team PPA + 1 lines + ~15 weekly
 team-stat calls ≈ ~19 calls/season. Weekly --refresh ≈ ~19 calls.
@@ -264,9 +265,18 @@ def main():
               f"{df['line_spread'].notna().sum()} with lines")
         frames.append(df)
 
-    allg = pd.concat(frames, ignore_index=True)
     dest = REPO / "data" / "cfb" / "cfb_games.parquet"
     dest.parent.mkdir(parents=True, exist_ok=True)
+    allg = pd.concat(frames, ignore_index=True)
+    # Merge, never replace: seasons not re-pulled this run keep their
+    # existing rows, so a partial refresh (e.g. --seasons 2026 --refresh)
+    # can never silently discard the history the ratings need.
+    if dest.exists():
+        existing = pd.read_parquet(dest)
+        keep = existing[~existing["season"].isin(seasons)]
+        allg = pd.concat([keep, allg], ignore_index=True)
+        print(f"kept {len(keep)} games from seasons "
+              f"{sorted(keep['season'].unique())}; refreshed {seasons}")
     allg.to_parquet(dest, index=False)
     print(f"Wrote {len(allg)} games -> {dest}")
 
