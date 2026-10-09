@@ -147,10 +147,10 @@ def fit_home_edge(games: pd.DataFrame) -> float:
 
 
 def walk_forward(games: pd.DataFrame, alpha: float, carryover: float,
-                 home_edge: float, hook=None) -> None:
+                 home_edge: float, hook=None) -> MLBRatings:
     """Run the predict/update loop; call ``hook(row, pred_h, pred_a)`` before
     each update. Shared by tuning and the backtest so both use identical
-    leakage-safe ordering."""
+    leakage-safe ordering. Returns the fitted ratings (final state)."""
     r = MLBRatings(alpha=alpha, carryover=carryover, home_edge=home_edge)
     last_season = None
     for row in games.itertuples():
@@ -163,6 +163,7 @@ def walk_forward(games: pd.DataFrame, alpha: float, carryover: float,
             hook(row, pred_h, pred_a)
         r.update(row.home, row.away, float(row.home_runs), float(row.away_runs),
                  row.park, bool(row.neutral))
+    return r
 
 
 def _tuning_rmse(games: pd.DataFrame, alpha: float, carryover: float,
