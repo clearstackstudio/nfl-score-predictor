@@ -40,12 +40,14 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 from elo import NBAElo
 from totals import NBATotals
 from features import (REST_CAP_DAYS, apply_rest_adjustment,
                       apply_rest_adjustment_total)
 from stars import apply_star_adjustment, load_stars_out
 from teams import normalize_team
+from recalibration import recalibrate
 
 REPO = Path(__file__).resolve().parent.parent.parent
 DATA = REPO / "data" / "nba"
@@ -58,6 +60,8 @@ SEASON = 2027  # 2026-27 season, ending-year convention like games.csv
 # (data/nba/backtest_results.md, final model with rest adjustment).
 # Same role as the NFL pipeline's MARGIN_SD/TOTAL_SD:
 # P(picked side covers) = Phi(|edge| / sd) -- display probability only.
+# Since 2026-10-09 the raw Phi value goes through empirical recalibration
+# (src/recalibration.py) before display; see the calibration check.
 MARGIN_SD = 12.50
 TOTAL_SD = 18.26
 
@@ -305,12 +309,12 @@ def validate_picks(picks: list[dict]) -> None:
     for p in picks:
         se = abs(p["spread_edge"])
         if p["pick_spread"]:
-            assert 0.5 < p["cover_prob"] <= 1.0, p
+            assert 0.5 <= p["cover_prob"] <= 1.0, p
             assert se >= SPREAD_PICK_MIN - 0.05, p
         else:
             assert p["cover_prob"] is None and se < SPREAD_PICK_MIN + 0.05, p
         if p["pick_total"]:
-            assert 0.5 < p["ou_prob"] <= 1.0, p
+            assert 0.5 <= p["ou_prob"] <= 1.0, p
         else:
             assert p["ou_prob"] is None, p
 
@@ -425,8 +429,14 @@ def main() -> None:
             pick_total = None
             total_note = ("No play -- our total is too far from the market "
                           "to trust.")
-        cover_prob = normal_cdf(abs(spread_edge) / MARGIN_SD)
-        ou_prob = normal_cdf(abs(total_edge) / TOTAL_SD)
+        # Raw Phi(|edge|/sd) is systematically overconfident (2026-10-09
+        # calibration check), so the empirical curve is applied to the final
+        # edge-derived probability -- after rest and star adjustments, which
+        # feed the edge. Picks (threshold-based) are unchanged.
+        cover_prob = recalibrate(normal_cdf(abs(spread_edge) / MARGIN_SD),
+                                 "nba", "ats")
+        ou_prob = recalibrate(normal_cdf(abs(total_edge) / TOTAL_SD),
+                              "nba", "totals")
 
         ct = datetime.datetime.fromisoformat(g["commence_time"]).astimezone(PT)
         picks.append({

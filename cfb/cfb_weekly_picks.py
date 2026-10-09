@@ -17,8 +17,10 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.append(str(Path(__file__).resolve().parent.parent / "src"))
 from cfb_ratings import (CARRYOVER, HOME_EDGE_PTS, PLAYS_PER_GAME, REPO,
                          adjusted_ratings, load_team_games, predict)
+from recalibration import recalibrate, CALIBRATION_VERSION
 
 DATA = REPO / "data" / "cfb"
 SEASON = 2026
@@ -213,8 +215,14 @@ def main() -> None:
             if abs(spread_edge) >= 0.5 else None
         pick_total = ("over" if total_edge > 0 else "under") \
             if abs(total_edge) >= 1.0 else None
-        cover_prob = normal_cdf(abs(spread_edge) / margin_sd)
-        ou_prob = normal_cdf(abs(total_edge) / total_sd)
+        # Raw Phi(|edge|/sd) probabilities are systematically overconfident
+        # (2026-10-09 calibration check) -- the empirical curve makes the
+        # published number mean what it says. Picks (threshold-based) are
+        # unchanged; only the displayed probability is recalibrated.
+        cover_prob = recalibrate(normal_cdf(abs(spread_edge) / margin_sd),
+                                 "cfb", "ats")
+        ou_prob = recalibrate(normal_cdf(abs(total_edge) / total_sd),
+                              "cfb", "totals")
 
         # Total circuit breaker: extreme disagreement with the market is a
         # model-error signal, not an edge. Suppress the pick but still show
@@ -270,7 +278,10 @@ def main() -> None:
             if op.get("result") and (op["away"], op["home"]) not in have:
                 picks.append(op)  # already final: keep published pick + grade
 
-    if same_week and old_doc.get("parlay"):
+    # Methodology-aware parlay lock: a calibration change rebuilds the parlay
+    # once so the site never displays probabilities from a superseded formula.
+    if (same_week and old_doc.get("parlay")
+            and old_doc["parlay"].get("calibration") == CALIBRATION_VERSION):
         parlay = old_doc["parlay"]
         print("Parlay locked at first publish — carrying over.")
     else:
@@ -293,7 +304,8 @@ def main() -> None:
             combined = round(math.prod(l["prob"] for l in legs), 3)
             parlay = {"legs": legs, "combined_prob": combined,
                       "fair_odds": fair_american(combined),
-                      "book_pays": BOOK_PARLAY_PAYS[len(legs)]}
+                      "book_pays": BOOK_PARLAY_PAYS[len(legs)],
+                      "calibration": CALIBRATION_VERSION}
 
     out = {
         "sport": "cfb", "season": SEASON, "week": next_week,

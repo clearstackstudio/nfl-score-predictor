@@ -83,6 +83,34 @@ export default function NbaMethodology() {
     },
     {
       n: "04",
+      title: "How the probabilities are calibrated",
+      body: (
+        <>
+          <p>
+            The cover probabilities on our picks used to come straight from a
+            textbook formula — how far our number sat from the Vegas line, in
+            units of typical game noise. On 2026-10-09 we checked that formula
+            against our own walk-forward backtest, and it was systematically
+            overconfident: a published 74% was hitting about 51%. The gap
+            between our number and the line turned out to be mostly our error,
+            not our insight.
+          </p>
+          <p>
+            So we replaced it with an empirical calibration: every published
+            probability is mapped through the actual hit rates from the
+            backtest. A number we publish as 55% is a number that hit about
+            55% in testing. Because the honest curve is nearly flat, most
+            picks now show probabilities near 50% — that is the data telling
+            the truth, not the model being modest. The picks themselves (which
+            side, over or under) are unchanged; only the probabilities got
+            honest. We re-check the calibration regularly and will refit the
+            curve if it drifts.
+          </p>
+        </>
+      ),
+    },
+    {
+      n: "05",
       title: "How the backtest stays honest",
       list: [
         [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">Walk-forward:</span>, " games are processed in chronological order. Each prediction is made from ratings built only on games already played — the model never learns from the game it’s predicting."],

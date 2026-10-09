@@ -22,6 +22,7 @@ from epa_ratings import (
 )
 from weather import (fetch_kickoff_winds, indoor_total_adjustment,
                      wind_total_adjustment)
+from recalibration import recalibrate, CALIBRATION_VERSION
 
 DATA = REPO / "data"
 SEASON = 2026
@@ -168,6 +169,7 @@ def build_parlay(picks: list[dict]) -> dict | None:
         "combined_prob": combined,
         "fair_odds": fair_american(combined),
         "book_pays": BOOK_PARLAY_PAYS[len(legs)],
+        "calibration": CALIBRATION_VERSION,
     }
 
 
@@ -215,13 +217,13 @@ def validate_picks(picks: list[dict], parlay: dict | None,
         if p["pick_spread"]:
             assert abs(se) >= 0.5, "spread pick below 0.5pt threshold"
             assert (se > 0) == (p["pick_spread"] == "home"), "spread pick wrong side"
-            assert p["cover_prob"] is not None and 0.5 < p["cover_prob"] <= 1.0
+            assert p["cover_prob"] is not None and 0.5 <= p["cover_prob"] <= 1.0
         else:
             assert abs(se) < 0.5 and p["cover_prob"] is None
         if p["pick_total"]:
             assert abs(te) >= 1.0, "total pick below 1pt threshold"
             assert (te > 0) == (p["pick_total"] == "over"), "total pick wrong side"
-            assert p["ou_prob"] is not None and 0.5 < p["ou_prob"] <= 1.0
+            assert p["ou_prob"] is not None and 0.5 <= p["ou_prob"] <= 1.0
             assert not p.get("pick_total_note"), "picked total should not carry a skip note"
         else:
             assert p["ou_prob"] is None
@@ -246,7 +248,7 @@ def validate_picks(picks: list[dict], parlay: dict | None,
             else:
                 # Locked parlay: published record, labels are from publish
                 # time — only structural sanity still applies.
-                assert leg["prob"] is not None and 0.5 < leg["prob"] <= 1.0, \
+                assert leg["prob"] is not None and 0.5 <= leg["prob"] <= 1.0, \
                     f"locked parlay leg prob out of range: {leg}"
             prod *= leg["prob"]
         assert abs(prod - parlay["combined_prob"]) < 0.002, "parlay combined prob wrong"
@@ -368,11 +370,18 @@ def main() -> None:
             pick_total = None
             pick_total_note = ("No play — our number is too far from the "
                                "market to trust.")
-        # P(our picked side covers) = Phi(|edge| / sd): how far our number sits
-        # from the line, in units of typical game noise. Totals use their own
-        # calibrated noise (TOTAL_SD), not the margin's.
-        cover_prob = normal_cdf(abs(spread_edge) / MARGIN_SD)
-        ou_prob = normal_cdf(abs(total_edge) / TOTAL_SD)
+        # P(our picked side covers) starts as Phi(|edge| / sd): how far our
+        # number sits from the line, in units of typical game noise. Totals
+        # use their own calibrated noise (TOTAL_SD), not the margin's.
+        # The raw Phi probabilities are systematically overconfident
+        # (2026-10-09 calibration check: a published 77% hits ~45%), so they
+        # go through the empirical recalibration curve before display.
+        # Picks (edge-threshold based) are unchanged -- only the displayed
+        # probability is recalibrated.
+        cover_prob = recalibrate(normal_cdf(abs(spread_edge) / MARGIN_SD),
+                                 "nfl", "ats")
+        ou_prob = recalibrate(normal_cdf(abs(total_edge) / TOTAL_SD),
+                              "nfl", "totals")
 
         pick = {
             "away": ABBR_TO_FULL.get(away, away),
@@ -416,16 +425,21 @@ def main() -> None:
 
     # Parlay lock: the parlay is a published record. Once a week's parlay is
     # out, mid-week re-runs keep it exactly as published instead of silently
-    # swapping legs as lines move. A new week builds a fresh parlay.
+    # swapping legs as lines move. A new week builds a fresh parlay. The lock
+    # is methodology-aware: a calibration change rebuilds the parlay once so
+    # the site never displays probabilities from a superseded formula.
     if (old_doc.get("season") == SEASON
             and old_doc.get("week") == int(next_week)
-            and old_doc.get("parlay")):
+            and old_doc.get("parlay")
+            and old_doc["parlay"].get("calibration") == CALIBRATION_VERSION):
         parlay = old_doc["parlay"]
         parlay_locked = True
         print("Parlay locked at first publish — carrying over.")
     else:
         parlay = build_parlay(picks)
         parlay_locked = False
+        if old_doc.get("parlay"):
+            print("Parlay rebuilt under new calibration (methodology change).")
     validate_picks(picks, parlay, locked=parlay_locked)  # fail loudly BEFORE publishing, never after
     out = {
         "season": SEASON, "week": int(next_week),
