@@ -3,3 +3,4 @@ numpy
 scikit-learn
 requests
 pyarrow
+cfbd==5.32.1
