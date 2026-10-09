@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import SharePreviewDialog, { type SharePreview } from "./share-dialog";
 
 /**
  * Shareable results card — the pick'em viral loop.
@@ -180,8 +181,6 @@ async function renderBlob(
   return { blob, filename: `honest-line-pickem-${slug}${shape === "square" ? "-square" : ""}.png` };
 }
 
-type Preview = { url: string; filename: string; pageUrl: string };
-
 export default function ShareResultsCard({
   sport,
   period,
@@ -191,25 +190,14 @@ export default function ShareResultsCard({
   shape = "wide",
 }: Props) {
   const [busy, setBusy] = useState(false);
-  const [preview, setPreview] = useState<Preview | null>(null);
+  const [preview, setPreview] = useState<SharePreview | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [copied, setCopied] = useState(false);
 
   const closeDialog = () => {
     if (preview) URL.revokeObjectURL(preview.url);
     setPreview(null);
     setError(null);
-    setCopied(false);
   };
-
-  useEffect(() => {
-    if (!preview && !error) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeDialog();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  });
 
   const share = async () => {
     setBusy(true);
@@ -252,29 +240,6 @@ export default function ShareResultsCard({
     }
   };
 
-  const copyLink = async () => {
-    if (!preview) return;
-    try {
-      await navigator.clipboard.writeText(preview.pageUrl);
-    } catch {
-      // Clipboard API unavailable (e.g. non-secure context): legacy fallback.
-      const ta = document.createElement("textarea");
-      ta.value = preview.pageUrl;
-      ta.style.position = "fixed";
-      ta.style.opacity = "0";
-      document.body.appendChild(ta);
-      ta.select();
-      try {
-        document.execCommand("copy");
-      } catch {
-        /* give up silently — the link is visible in the card */
-      }
-      ta.remove();
-    }
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <>
       <button
@@ -289,66 +254,14 @@ export default function ShareResultsCard({
         {busy ? "Preparing…" : shape === "square" ? "Share square card" : "Share your results"}
       </button>
 
-      {(preview || error) && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
-          onClick={closeDialog}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Share your results"
-        >
-          <div
-            className="w-full max-w-lg overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 light:border-zinc-200 light:bg-white"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {error ? (
-              <div className="p-6">
-                <h3 className="text-base font-semibold text-zinc-100 light:text-zinc-900">
-                  Couldn&apos;t make your card
-                </h3>
-                <p className="mt-2 text-sm text-zinc-400 light:text-zinc-600">{error}</p>
-                <button
-                  onClick={closeDialog}
-                  className="mt-4 rounded-full border border-zinc-700 px-4 py-2 text-sm font-semibold text-zinc-200 transition hover:bg-zinc-800 light:border-zinc-300 light:text-zinc-700 light:hover:bg-zinc-100"
-                >
-                  Close
-                </button>
-              </div>
-            ) : (
-              preview && (
-                <>
-                  <img
-                    src={preview.url}
-                    alt="Your Honest Line pick'em results card"
-                    className="block w-full"
-                  />
-                  <div className="flex flex-wrap items-center gap-2 p-4">
-                    <a
-                      href={preview.url}
-                      download={preview.filename}
-                      className="rounded-full bg-amber-400 px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-amber-300 light:bg-amber-600 light:text-white light:hover:bg-amber-700"
-                    >
-                      Download PNG
-                    </a>
-                    <button
-                      onClick={copyLink}
-                      className="rounded-full border border-amber-400/40 px-4 py-2 text-sm font-semibold text-amber-400 transition hover:bg-amber-400/10 light:border-amber-600/40 light:text-amber-700 light:hover:bg-amber-600/10"
-                    >
-                      {copied ? "Copied!" : "Copy link"}
-                    </button>
-                    <button
-                      onClick={closeDialog}
-                      className="rounded-full px-4 py-2 text-sm font-semibold text-zinc-400 transition hover:text-zinc-200 light:text-zinc-500 light:hover:text-zinc-800"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </>
-              )
-            )}
-          </div>
-        </div>
-      )}
+      <SharePreviewDialog
+        preview={preview}
+        error={error}
+        onClose={closeDialog}
+        dialogLabel="Share your results"
+        imageAlt="Your Honest Line pick'em results card"
+        errorTitle="Couldn't make your card"
+      />
     </>
   );
 }
