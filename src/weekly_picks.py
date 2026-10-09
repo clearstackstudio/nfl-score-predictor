@@ -248,10 +248,35 @@ def main() -> None:
     sched = pd.read_parquet(DATA / "schedules_games.parquet")
     played_weeks = sorted(
         team_games[team_games["season"] == SEASON]["week"].unique())
-    next_week = max(played_weeks) + 1
+    latest = max(played_weeks)
+    # Only advance past the latest week with finals when every game in it
+    # is final. Advancing blindly on max(played)+1 skips the rest of a week
+    # whenever a mid-week game (e.g. Thursday night) goes final before the
+    # Sunday slate — which is exactly when the mid-week re-run path fires
+    # (see the Lamar Jackson injury-watch cron).
+    latest_sched = sched[(sched["season"] == SEASON)
+                         & (sched["week"] == latest)]
+    if latest_sched["home_score"].notna().all():
+        next_week = latest + 1
+    else:
+        next_week = latest
+    print(f"week: {next_week} (latest week with finals: {latest})")
     upcoming = sched[(sched["season"] == SEASON)
                      & (sched["week"] == next_week)].copy()
     upcoming = upcoming[upcoming["spread_line"].notna()]
+
+    # Grading the nightly merge already wrote into the current picks.json.
+    # A mid-week re-run regenerates the same week's slate, so carry those
+    # results over (only when the lines are unchanged) instead of wiping
+    # the final games' badges until the next merge.
+    old_results = {}
+    try:
+        old_picks = json.loads(
+            (REPO / "site" / "data" / "picks.json").read_text()).get("picks", [])
+        for p in old_picks:
+            old_results[(p["home_abbr"], p["away_abbr"])] = p
+    except Exception:
+        pass
 
     # QB adjustments: schedule QBs, with manual overrides for mid-week news.
     qb_over = load_qb_overrides(SEASON, next_week)
@@ -332,7 +357,7 @@ def main() -> None:
         cover_prob = normal_cdf(abs(spread_edge) / MARGIN_SD)
         ou_prob = normal_cdf(abs(total_edge) / TOTAL_SD)
 
-        picks.append({
+        pick = {
             "away": ABBR_TO_FULL.get(away, away),
             "home": ABBR_TO_FULL.get(home, home),
             "away_abbr": away, "home_abbr": home,
@@ -363,7 +388,13 @@ def main() -> None:
             "cover_prob": round(cover_prob, 3) if pick_side else None,
             "ou_prob": round(ou_prob, 3) if pick_total else None,
             "home_qb": g.get("home_qb_name"), "away_qb": g.get("away_qb_name"),
-        })
+        }
+        old = old_results.get((home, away))
+        if (old and old.get("result")
+                and old.get("line_spread") == pick["line_spread"]
+                and old.get("line_total") == pick["line_total"]):
+            pick["result"] = old["result"]
+        picks.append(pick)
 
     parlay = build_parlay(picks)
     validate_picks(picks, parlay)  # fail loudly BEFORE publishing, never after
