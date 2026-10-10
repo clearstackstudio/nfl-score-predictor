@@ -143,6 +143,17 @@ export default function Nav() {
           Recaps
         </Link>
         <Link
+          href="/tracker"
+          aria-current={pathname === "/tracker" ? "page" : undefined}
+          className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition ${
+            pathname === "/tracker"
+              ? "bg-white/10 text-white"
+              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100"
+          }`}
+        >
+          Tracker
+        </Link>
+        <Link
           href="/accuracy"
           aria-current={pathname === "/accuracy" ? "page" : undefined}
           className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition ${

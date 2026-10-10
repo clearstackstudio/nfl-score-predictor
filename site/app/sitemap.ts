@@ -10,6 +10,7 @@ const routes = [
   "/live",
   "/pick-em",
   "/recaps",
+  "/tracker",
   "/track-record",
   "/cfb",
   "/cfb/live",
