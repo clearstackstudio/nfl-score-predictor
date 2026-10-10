@@ -102,17 +102,19 @@ def _at_kickoff(winds: list[tuple[str, float]],
     return best
 
 
-INDOOR_TOTAL_ADJ = 3.0
+INDOOR_TOTAL_ADJ = 0.0
 
 
 def indoor_total_adjustment(home_team: str) -> float:
     """Points to add to our total for indoor games.
 
-    Calibrated 2026-10-02 on walk-forward 2021-2024 totals (leakage-safe,
-    wind hinge already applied): indoor games (dome + retractable, via
-    is_outdoor()) scored E[actual_total - our_total] = +3.13, stable all
-    four seasons (+2.37/+4.26/+3.60/+2.22, n=329, t ~= 3.6). Perfect
-    conditions / fast track systematically beat the model. Outdoor games
+    DISABLED 2026-10-09 (set to 0.0): the +3.0 value was calibrated 2026-10-02
+    on walk-forward 2021-2024 totals (indoor residual +3.13, t ~= 3.6), but
+    experiment H1 (2026-10-09, pre-registered keep/kill) showed it does not
+    help picks — dome games went 46.5% with it vs 46.9% without (z=-0.07).
+    The closing line already under-predicts indoor scoring by ~2 pts, i.e.
+    the market prices the dome effect, so the adjustment only manufactured
+    false over-picks. See totals-diagnostic.md H1 section. Outdoor games
     and unknown stadiums: 0.
     """
     s = STADIUMS.get(home_team)
