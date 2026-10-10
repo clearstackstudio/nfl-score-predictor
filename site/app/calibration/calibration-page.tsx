@@ -364,6 +364,18 @@ function MarketSection({ sportId, market, season }: { sportId: string; market: C
   return (
     <div className="mt-10">
       <h3 className="font-display text-2xl font-semibold uppercase tracking-wide">{market.label}</h3>
+      {sportId === "nba" && market.id === "totals" && (
+        <div className="mt-4 max-w-3xl rounded-2xl border border-zinc-700/60 bg-zinc-900/60 p-5 light:border-zinc-300 light:bg-zinc-100">
+          <div className="font-display text-lg font-semibold uppercase tracking-wide text-zinc-200 light:text-zinc-800">
+            Not published — pulled
+          </div>
+          <p className="mt-2 text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
+            We no longer publish NBA totals. The 18,552-game walk-forward below has them
+            at 48.3% — worse than a coin flip — so we&rsquo;d rather show nothing than a
+            losing pick. The plot and bins stay up as the receipt for why.
+          </p>
+        </div>
+      )}
       <div className={`mt-3 max-w-3xl border-l-2 pl-4 text-[15px] leading-relaxed light:border-amber-700 ${
         honest ? "border-emerald-400/70" : "border-amber-400/70"}`}>
         <span className={`font-bold ${honest ? "text-emerald-300 light:text-emerald-700" : "text-amber-200 light:text-amber-700"}`}>

@@ -302,12 +302,11 @@ function LiveSeason({ log }: { log: SeasonLog }) {
   const days = Object.entries(log.days).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0));
   if (days.length === 0) return null;
 
-  let aw = 0, al = 0, ap = 0, ow = 0, ol = 0, op = 0;
+  let aw = 0, al = 0, ap = 0;
   let pw = 0, pl = 0, pp = 0;
   for (const [, w] of days) {
     for (const p of w.picks) {
       if (p.result?.ats === "win") aw++; else if (p.result?.ats === "loss") al++; else if (p.result?.ats === "push") ap++;
-      if (p.result?.ou === "win") ow++; else if (p.result?.ou === "loss") ol++; else if (p.result?.ou === "push") op++;
     }
     if (w.parlay?.result === "win") pw++;
     else if (w.parlay?.result === "loss") pl++;
@@ -325,16 +324,11 @@ function LiveSeason({ log }: { log: SeasonLog }) {
       <p className="mt-1 text-sm text-zinc-400 light:text-zinc-600">
         This season&rsquo;s picks, graded as games go final. Nothing hidden, nothing rewritten.
       </p>
-      <div className="mt-4 grid grid-cols-3 gap-4">
+      <div className="mt-4 grid grid-cols-2 gap-4">
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4 light:border-zinc-200 light:bg-white">
           <div className="text-2xl font-extrabold">{aw}-{al}-{ap}</div>
           <div className="mt-0.5 text-sm font-semibold text-zinc-400 light:text-zinc-600">{fmtPct(winPct(aw, al))}</div>
           <div className="mt-1 text-xs text-zinc-500">Against the spread</div>
-        </div>
-        <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4 light:border-zinc-200 light:bg-white">
-          <div className="text-2xl font-extrabold">{ow}-{ol}-{op}</div>
-          <div className="mt-0.5 text-sm font-semibold text-zinc-400 light:text-zinc-600">{fmtPct(winPct(ow, ol))}</div>
-          <div className="mt-1 text-xs text-zinc-500">Over/under</div>
         </div>
         <div className="rounded-xl border border-amber-400/25 bg-amber-400/[0.06] p-4 light:bg-amber-50">
           <div className="text-2xl font-extrabold">{pw}-{pl}-{pp}</div>
@@ -342,6 +336,11 @@ function LiveSeason({ log }: { log: SeasonLog }) {
           <div className="mt-1 text-xs text-zinc-500">Parlay of the night</div>
         </div>
       </div>
+      <p className="mt-3 max-w-2xl text-[13px] leading-relaxed text-zinc-500 light:text-zinc-600">
+        No over/under record here — we stopped publishing NBA totals. The 18,552-game
+        backtest has them at 48.3%, worse than a coin flip. The historical evidence is
+        in the table above and on the calibration page.
+      </p>
       {days.map(([dk, w]) => (
         <div key={dk} className="mt-6">
           <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400 light:text-zinc-600">
@@ -362,8 +361,6 @@ function LiveSeason({ log }: { log: SeasonLog }) {
                   <th className="px-4 py-3">Score</th>
                   <th className="px-4 py-3">Spread pick</th>
                   <th className="px-4 py-3">ATS</th>
-                  <th className="px-4 py-3">O/U pick</th>
-                  <th className="px-4 py-3">O/U</th>
                 </tr>
               </thead>
               <tbody>
@@ -383,10 +380,6 @@ function LiveSeason({ log }: { log: SeasonLog }) {
                       {p.pick_spread ? `${p.pick_spread_label ?? p.pick_spread} (${fmtPct(p.cover_prob)})` : "No play"}
                     </td>
                     <td className="px-4 py-3">{resultBadge(p.result?.ats)}</td>
-                    <td className="px-4 py-3 text-zinc-400 light:text-zinc-600">
-                      {p.pick_total ? `${p.pick_total_label ?? p.pick_total} (${fmtPct(p.ou_prob)})` : "No play"}
-                    </td>
-                    <td className="px-4 py-3">{resultBadge(p.result?.ou)}</td>
                   </tr>
                 ))}
               </tbody>

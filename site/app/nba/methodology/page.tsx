@@ -27,9 +27,11 @@ export default function NbaMethodology() {
           <p>
             From those ratings the model generates its own spread and total for each
             game, then compares them against the market line. Where our number disagrees
-            with Vegas by at least 1.5 points on the spread (3 points on the total),
-            we publish a pick with an estimated cover probability — and the track record
-            grades exactly that same set of picks, nothing more selective.
+            with Vegas by at least 1.5 points on the spread, we publish a pick with an
+            estimated cover probability — and the track record grades exactly that same
+            set of picks, nothing more selective. Totals are still computed (the research
+            record needs them), but we stopped publishing them: the walk-forward has
+            them at 48.3%, worse than a coin flip.
           </p>
           <p>
             The betting line is <span className="font-semibold text-zinc-100 light:text-zinc-900">never</span> an

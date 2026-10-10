@@ -107,11 +107,6 @@ function spreadPickText(p: Pick): string {
   return `${team} · ${fmtPct(p.cover_prob)} to cover`;
 }
 
-function ouPickText(p: Pick): string {
-  if (p.pick_total_label) return `${p.pick_total_label} · ${fmtPct(p.ou_prob)}`;
-  return `${p.pick_total === "over" ? "Over" : "Under"} ${trim(p.line_total)} · ${fmtPct(p.ou_prob)}`;
-}
-
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
@@ -194,16 +189,13 @@ function GameCard({ p }: { p: Pick }) {
         edgeCaption="pts of disagreement"
         pick={<PickStrip active={!!p.pick_spread}>{p.pick_spread ? spreadPickText(p) : null}</PickStrip>}
       />
-      <MarketPanel
-        name="Total"
-        ourLabel={trim(p.our_total)}
-        ourCaption="Our number"
-        vegasLabel={trim(p.line_total)}
-        vegasCaption="Vegas line"
-        edge={p.total_edge}
-        edgeCaption="pts of disagreement"
-        pick={<PickStrip active={!!p.pick_total} note={p.pick_total_note}>{p.pick_total ? ouPickText(p) : null}</PickStrip>}
-      />
+      <div className="border-t border-white/5 px-4 py-3 light:border-zinc-200">
+        <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-zinc-500 light:text-zinc-500">Total — not published</div>
+        <p className="mt-1 text-[13px] leading-relaxed text-zinc-500 light:text-zinc-500">
+          We don&rsquo;t publish NBA totals. Our 18,552-game backtest has them at 48.3% —
+          worse than a coin flip. We&rsquo;d rather show nothing than a losing pick.
+        </p>
+      </div>
     </article>
   );
 }
@@ -268,17 +260,16 @@ function winPct(w: number, l: number): number | null {
 }
 
 function SeasonRecord({ days, href }: { days: DayView[]; href: string }) {
-  let aw = 0, al = 0, ap = 0, ow = 0, ol = 0, op = 0;
+  let aw = 0, al = 0, ap = 0;
   for (const d of days)
     for (const p of d.picks) {
       const r = p.result;
       if (r?.ats === "win") aw++; else if (r?.ats === "loss") al++; else if (r?.ats === "push") ap++;
-      if (r?.ou === "win") ow++; else if (r?.ou === "loss") ol++; else if (r?.ou === "push") op++;
     }
-  if (aw + al + ow + ol === 0) return null;
+  if (aw + al === 0) return null;
   const card = "rounded-xl border border-white/10 bg-zinc-900/50 p-4 transition-colors hover:border-amber-400/40 light:border-zinc-200 light:bg-white";
   return (
-    <a href={href} className="mb-8 grid max-w-2xl grid-cols-2 gap-3" aria-label="Season record — full track record">
+    <a href={href} className="mb-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-2" aria-label="Season record — full track record">
       <div className={card}>
         <div className="tnum text-xl font-extrabold">
           {aw}-{al}-{ap}
@@ -286,12 +277,11 @@ function SeasonRecord({ days, href }: { days: DayView[]; href: string }) {
         </div>
         <div className="mt-1 text-xs text-zinc-500">ATS this season →</div>
       </div>
-      <div className={card}>
-        <div className="tnum text-xl font-extrabold">
-          {ow}-{ol}-{op}
-          <span className="ml-2 text-sm font-semibold text-zinc-400 light:text-zinc-600">{fmtPct(winPct(ow, ol))}</span>
+      <div className="rounded-xl border border-white/10 bg-zinc-900/50 p-4 light:border-zinc-200 light:bg-white">
+        <div className="text-xl font-extrabold text-zinc-400 light:text-zinc-600">No totals</div>
+        <div className="mt-1 text-xs leading-relaxed text-zinc-500">
+          Pulled — our backtest has NBA totals at 48.3%. <span className="underline">Why →</span>
         </div>
-        <div className="mt-1 text-xs text-zinc-500">O/U this season →</div>
       </div>
     </a>
   );
@@ -303,7 +293,6 @@ export default function NbaHome() {
   const picks = dv.picks;
   const isPending = !!dv.pending || picks.length === 0;
   const nSpread = picks.filter((p) => p.pick_spread).length;
-  const nTotal = picks.filter((p) => p.pick_total).length;
   const seasonLabel = `${dv.season - 1}–${String(dv.season).slice(2)}`;
   const showPreseason = dv.preseason === true || !!dv.experimental_note;
 
@@ -346,11 +335,20 @@ export default function NbaHome() {
         )}
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
           Tonight&rsquo;s slate from a margin-adjusted Elo — home edge 2.75, k=26, prior-season
-          carryover — with an offensive/defensive efficiency totals model and a rest-day
+          carryover — with an offensive/defensive efficiency model and a rest-day
           adjustment. The model never sees the betting line; the line is only the
           benchmark we measure against. Same honesty rules as every sport here: every pick published
           before tip-off, every result graded in public.
         </p>
+        <div className="mt-5 max-w-2xl rounded-xl border border-zinc-700/60 bg-zinc-900/60 px-4 py-3 light:border-zinc-300 light:bg-zinc-100">
+          <div className="text-xs font-bold uppercase tracking-[0.16em] text-zinc-300 light:text-zinc-700">No totals on this page</div>
+          <p className="mt-1 text-sm leading-relaxed text-zinc-400 light:text-zinc-600">
+            We pulled NBA over/unders. The 18,552-game backtest has them at 48.3% —
+            worse than a coin flip — so we&rsquo;d rather show nothing than a losing pick.
+            The receipts are on the <a href="/nba/track-record" className="underline">track record</a> and{" "}
+            <a href="/calibration#nba" className="underline">calibration</a> pages.
+          </p>
+        </div>
         {showPreseason && (
           <div className="mt-5 max-w-2xl rounded-xl border border-sky-400/30 bg-sky-400/10 px-4 py-3 light:bg-sky-50">
             <div className="text-xs font-bold uppercase tracking-[0.16em] text-sky-300 light:text-sky-700">Preseason — experimental</div>
@@ -364,7 +362,7 @@ export default function NbaHome() {
         ) : (
           <>
             <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
-              {[[String(picks.length), "games"], [String(nSpread), "spread plays"], [String(nTotal), "total plays"]].map(([v, l]) => (
+              {[[String(picks.length), "games"], [String(nSpread), "spread plays"]].map(([v, l]) => (
                 <div key={l} className="flex items-baseline gap-2">
                   <span className="tnum font-display text-3xl font-semibold text-zinc-100 light:text-zinc-900">{v}</span>
                   <span className="text-xs font-medium uppercase tracking-wider text-zinc-500">{l}</span>
