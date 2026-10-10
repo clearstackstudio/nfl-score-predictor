@@ -6,10 +6,11 @@ import cfb from "../../data/cfb_track_record.json";
 export const metadata: Metadata = {
   title: "Model accuracy",
   description:
-    "How accurate are the Honest Line models? Prediction error vs the closing line for NFL, college football, NBA, and MLB — the full honest accounting.",
+    "How accurate are the Honest Line models? Prediction error vs the closing line for NFL, college football, NBA, and NCAAB — the full honest accounting.",
   alternates: { canonical: "/accuracy" },
 };
 import nba from "../../data/nba_track_record.json";
+import ncaab from "../../data/ncaab_track_record.json";
 import { fmtPct } from "../lib/format";
 
 type SportCard = {
@@ -106,8 +107,24 @@ function AtsBar({ pct }: { pct: number }) {
   );
 }
 
+function ncaabCard(): SportCard {
+  const o = (ncaab as any).overall;
+  const eras = (ncaab as any).eras as { label: string }[];
+  const first = eras[0]?.label.split("–")[0] ?? "";
+  const last = eras[eras.length - 1]?.label.split("–")[1] ?? "";
+  return {
+    name: "NCAAB",
+    span: `${first}–${last} · ${eras.length} eras`,
+    games: o.games, suPct: o.straight_up_pct,
+    atsW: o.ats[0], atsL: o.ats[1], atsP: o.ats[2], ouPct: o.ou_pct,
+    ourRmse: o.our_margin_rmse, lineRmse: o.line_margin_rmse,
+    href: "/ncaab/track-record",
+    note: "No era beat the vig: 48.9% → 49.8% → 50.2% ATS.",
+  };
+}
+
 export default function Accuracy() {
-  const cards = [nflCard(), cfbCard(), nbaCard()];
+  const cards = [nflCard(), cfbCard(), nbaCard(), ncaabCard()];
   return (
     <div>
       <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
@@ -182,7 +199,7 @@ export default function Accuracy() {
         <h2 className="font-display text-xl font-semibold uppercase tracking-wide">The honest verdict</h2>
         <p className="mt-2 max-w-3xl text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
           A competent forecaster that roughly matches the Vegas line on prediction error —
-          but with no demonstrated betting edge. None of the three models clears the 52.4%
+          but with no demonstrated betting edge. None of the four models clears the 52.4%
           needed to beat the spread long-term, and the edges that existed in older eras
           have decayed as markets got sharper. Good enough to follow for fun; not a way
           to make money.

@@ -1,10 +1,10 @@
 // ESPN unofficial API helpers (site.api.espn.com). Free, no key, CORS-open.
 // Used for live scores + play-by-play. Falls back gracefully when no games live.
 
-export type League = "nfl" | "college-football" | "nba";
+export type League = "nfl" | "college-football" | "nba" | "mens-college-basketball";
 
 function sportOf(l: League): "football" | "basketball" {
-  return l === "nba" ? "basketball" : "football";
+  return l === "nfl" || l === "college-football" ? "football" : "basketball";
 }
 
 export type GameState = "pre" | "in" | "post";

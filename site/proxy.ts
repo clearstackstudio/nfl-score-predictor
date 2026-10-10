@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 /** Admin-only pages: HTTP Basic Auth via env vars.
  *  Set ADMIN_USER + ADMIN_PASS in Vercel (all environments). */
-const PROTECTED = ["/methodology", "/cfb/methodology", "/nba/methodology", "/mlb/methodology"];
+const PROTECTED = ["/methodology", "/cfb/methodology", "/nba/methodology", "/mlb/methodology", "/ncaab/methodology"];
 
 export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
@@ -38,5 +38,5 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/methodology/:path*", "/cfb/methodology/:path*", "/nba/methodology/:path*", "/mlb/methodology/:path*"],
+  matcher: ["/methodology/:path*", "/cfb/methodology/:path*", "/nba/methodology/:path*", "/mlb/methodology/:path*", "/ncaab/methodology/:path*"],
 };

@@ -4,12 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type LeagueId = "nfl" | "cfb" | "nba" | "mlb";
+type LeagueId = "nfl" | "cfb" | "nba" | "ncaab" | "mlb";
 
 const LEAGUES: { id: LeagueId; label: string; base: string; scoreboard: string }[] = [
   { id: "nfl", label: "NFL", base: "", scoreboard: "football/nfl" },
   { id: "cfb", label: "NCAAF", base: "/cfb", scoreboard: "football/college-football" },
   { id: "nba", label: "NBA", base: "/nba", scoreboard: "basketball/nba" },
+  { id: "ncaab", label: "NCAAB", base: "/ncaab", scoreboard: "basketball/mens-college-basketball" },
   { id: "mlb", label: "MLB", base: "/mlb", scoreboard: "baseball/mlb" },
 ];
 
@@ -22,6 +23,7 @@ const NAV_ITEMS = [
 
 function leagueOf(pathname: string): LeagueId {
   if (pathname === "/mlb" || pathname.startsWith("/mlb/")) return "mlb";
+  if (pathname === "/ncaab" || pathname.startsWith("/ncaab/")) return "ncaab";
   if (pathname === "/nba" || pathname.startsWith("/nba/")) return "nba";
   if (pathname === "/cfb" || pathname.startsWith("/cfb/")) return "cfb";
   return "nfl";
@@ -31,7 +33,7 @@ function switchHref(pathname: string, target: LeagueId): string {
   const current = leagueOf(pathname);
   if (current === target) return pathname;
   const stripped =
-    current === "nfl" ? pathname : pathname.replace(/^\/(cfb|nba|mlb)/, "") || "/";
+    current === "nfl" ? pathname : pathname.replace(/^\/(cfb|nba|ncaab|mlb)/, "") || "/";
   // Only league subpages exist under every league; anything else (e.g.
   // /accuracy, /disclaimer) falls back to the league home.
   // MLB has no live page, so /live is not a valid MLB slug.
@@ -39,7 +41,7 @@ function switchHref(pathname: string, target: LeagueId): string {
   const mlbSlugs = ["", "/pick-em", "/track-record"];
   const valid = (target === "mlb" ? mlbSlugs : leagueSlugs).includes(stripped);
   if (target === "nfl") return valid ? stripped : "/";
-  const base = target === "cfb" ? "/cfb" : target === "nba" ? "/nba" : "/mlb";
+  const base = target === "cfb" ? "/cfb" : target === "nba" ? "/nba" : target === "ncaab" ? "/ncaab" : "/mlb";
   return valid && stripped !== "/" ? `${base}${stripped}` : base;
 }
 
