@@ -111,9 +111,8 @@ def main() -> None:
             raw = normal_cdf(abs(te) / t_sd)
             diff = at - float(row.total)
             ou_recs.append((raw, (diff > 0) == (te > 0)))
-        month = pd.to_datetime(row.date).month
         model.update(row.home_team, row.away_team, float(row.home_score),
-                     float(row.away_score), game_poss(model, row), month)
+                     float(row.away_score), game_poss(model, row))
 
     ats_pts = fit_curve(ats_recs, "NCAAB ATS calibration")
     ou_pts = fit_curve(ou_recs, "NCAAB totals calibration")

@@ -18,10 +18,14 @@ to produce the margin as well):
     (home_edge = 0 for neutral-site games).
   - Predicted total = (home_ppp + away_ppp) * poss.
 
-November prior (transfer-portal era): rosters turn over heavily every
-offseason, so early-season ratings are noisy. November updates use half
-the per-game weight (NOV_ALPHA_FACTOR = 0.5), December 0.75, January on
-full weight -- structural priors, not fitted values.
+November prior (transfer-portal era): REMOVED 2026-10-10. November updates
+previously used half the per-game weight (and December 0.75) on the theory
+that early-season ratings are noisy. Walk-forward experiment H (pattern
+study, section 9) showed this was a wrong structural prior: in the
+transfer-portal era the preseason prior is weak, so slowing early learning
+just anchors the model to bad ratings longer. Full-weight updates from
+game one beat both the downweighting and a Bayesian-shrinkage variant on
+two independent splits (Nov-Dec RMSE 14.38 -> 13.83 on holdout).
 
 Honesty rules (same as the NBA model):
   - The betting line is NEVER a model input, anywhere. It is only the
@@ -38,23 +42,11 @@ from __future__ import annotations
 # near the minimum (12.015-12.071 across alpha 0.08-0.12 / carry 0.5-0.67),
 # so these are plateau-center values, not sharp optima:
 #   TEAM_ALPHA = 0.10, SEASON_CARRYOVER = 0.6, HOME_EDGE_PTS = 5.04
-# (mean home margin on non-neutral tuning-split games). NOV/DEC_ALPHA_FACTOR
-# are structural priors for early-season roster noise (transfer-portal
-# era), not fitted values.
+# (mean home margin on non-neutral tuning-split games).
 TEAM_ALPHA = 0.10
-NOV_ALPHA_FACTOR = 0.5
-DEC_ALPHA_FACTOR = 0.75
 LEAGUE_ALPHA = 0.005
 SEASON_CARRYOVER = 0.6
 HOME_EDGE_PTS = 5.04
-
-
-def month_alpha_factor(month: int) -> float:
-    if month == 11:
-        return NOV_ALPHA_FACTOR
-    if month == 12:
-        return DEC_ALPHA_FACTOR
-    return 1.0
 
 
 def sanitize_poss(poss: float | None, season: int) -> float | None:
@@ -138,12 +130,16 @@ class NCAABEfficiency:
         return (home_pts - away_pts + edge, home_pts + away_pts)
 
     def update(self, home: str, away: str, home_score: float,
-               away_score: float, poss: float, month: int) -> None:
-        """Learn from a final score. Call AFTER predict(). ``month`` is the
-        calendar month of the game (November updates are down-weighted)."""
+               away_score: float, poss: float) -> None:
+        """Learn from a final score. Call AFTER predict().
+
+        Full-weight updates from game one. The old Nov/Dec downweighting
+        was removed 2026-10-10 (experiment H, pattern study section 9):
+        in the transfer-portal era the preseason prior is weak, so slowing
+        early learning anchors the model to bad ratings longer."""
         if not poss or poss <= 0:
             return
-        a = self.team_alpha * month_alpha_factor(month)
+        a = self.team_alpha
         h_ppp = home_score / poss
         a_ppp = away_score / poss
         ho, hd, ht = self._off(home), self._def(home), self._tempo(home)

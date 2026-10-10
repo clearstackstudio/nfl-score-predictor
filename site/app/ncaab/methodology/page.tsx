@@ -24,10 +24,13 @@ export default function NcaabMethodology() {
           </p>
           <p>
             The transfer portal makes November uniquely noisy: rosters turn over
-            almost completely every offseason. So <span className="font-semibold text-zinc-100 light:text-zinc-900">November
-            updates are down-weighted by half</span> (0.5), December by a quarter
-            (0.75), January onward at full weight. The model learns the new
-            season more slowly on purpose.
+            almost completely every offseason. We <span className="font-semibold text-zinc-100 light:text-zinc-900">used to down-weight
+            November updates by half</span> (0.5) and December by a quarter
+            (0.75) — but a 2026 walk-forward test showed that was wrong. In the
+            portal era the preseason prior is weak, so slow learning just
+            anchored the model to bad ratings longer. Since October 2026 the
+            model learns at full weight from game one, and early-season
+            accuracy improved.
           </p>
           <p>
             From those ratings the model generates its own spread and total for
@@ -50,7 +53,7 @@ export default function NcaabMethodology() {
       list: [
         [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">Efficiency is the whole model:</span>, " in the NBA, efficiency feeds totals while Elo drives the spread. In college basketball, adjusted per-possession efficiency drives everything."],
         [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">A real home-court edge:</span>, " 5.04 fitted points vs the NBA's 2.75 — college crowds, student sections, and young teams far from home move numbers. Neutral courts get zero."],
-        [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">November/December down-weighting:</span>, " the portal-era roster churn has no NBA equivalent; early-season updates count half until the ratings have seen real games."],
+        [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">Full-weight learning from game one:</span>, " the portal-era roster churn has no NBA equivalent, so the model learns fast from real games instead of anchoring to a weak preseason prior — a 2026 test showed down-weighting early updates made ratings worse."],
         [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">D1 only:</span>, " games count only when both teams are Division I — mirroring the CFB FBS-only rule. Exhibition games are excluded entirely."],
       ],
     },
@@ -62,8 +65,8 @@ export default function NcaabMethodology() {
           <p>
             The verdict is plain: <span className="font-semibold text-zinc-100 light:text-zinc-900">no betting edge</span>.
             Walk-forward over 2013–2026 (47,794 regular and postseason games),
-            the model&rsquo;s margin RMSE is <span className="font-semibold text-zinc-100 light:text-zinc-900">12.30 vs the closing line&rsquo;s 11.00</span> —
-            1.30 points worse. Totals are 18.30 vs 16.90 — 1.40 points worse.
+            the model&rsquo;s margin RMSE is <span className="font-semibold text-zinc-100 light:text-zinc-900">12.17 vs the closing line&rsquo;s 11.04</span> —
+            1.13 points worse. Totals are 18.05 vs 16.90 — 1.15 points worse.
             The line is simply better at this than we are.
           </p>
           <p>

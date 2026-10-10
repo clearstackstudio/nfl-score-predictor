@@ -16,8 +16,9 @@ Honesty rules (same as the rest of this repo):
     experimental in the output (the model was validated on
     regular/postseason games only).
 
-November note: the model's November updates are down-weighted
-(efficiency.NOV_ALPHA_FACTOR) for transfer-portal roster noise.
+November note: the model uses full-weight updates from game one
+(experiment H, 2026-10-10: the old Nov/Dec downweighting anchored the
+model to weak preseason priors in the transfer-portal era).
 
 Usage:
     TZ=America/Los_Angeles .venv-cfb/bin/python src/ncaab/daily_picks.py \
@@ -232,9 +233,8 @@ def train(df: pd.DataFrame, roll_to_season: int | None = None
         if poss is None:
             poss = model.predict_poss(r.home_team, r.away_team)
         d = r.date
-        month = d.month if hasattr(d, "month") else int(str(d)[5:7])
         model.update(r.home_team, r.away_team, r.home_score, r.away_score,
-                     poss, month)
+                     poss)
         for team in (r.home_team, r.away_team):
             key = (team, season)
             if key not in last_date or d > last_date[key]:

@@ -1,52 +1,52 @@
 {
-  "model": "Adjusted per-possession efficiency ratings (offense/defense PPP + tempo, opponent-adjusted at prediction time; fitted team_alpha=0.10, carryover=0.6, home edge 5.04 points). The closing line is never an input \u2014 only the benchmark. Walk-forward: every prediction made before learning the result.",
-  "overall": {
-    "games": 47794,
-    "straight_up_pct": 0.704,
-    "our_margin_rmse": 12.3,
-    "line_margin_rmse": 11.0,
-    "ats": [
-      16868,
-      17093,
-      488
-    ],
-    "ats_pct": 0.497,
-    "ou": [
-      15366,
-      14817,
-      200
-    ],
-    "ou_pct": 0.509,
-    "our_total_rmse": 18.3,
-    "line_total_rmse": 16.9
-  },
-  "eras": [
-    {
-      "label": "2013\u20132016",
-      "ats_pct": 0.489,
-      "ou_pct": 0.516,
-      "su_pct": 0.699,
-      "our_rmse": 11.76,
-      "line_rmse": 10.52
-    },
-    {
-      "label": "2017\u20132020",
-      "ats_pct": 0.498,
-      "ou_pct": 0.508,
-      "su_pct": 0.71,
-      "our_rmse": 12.28,
-      "line_rmse": 11.17
-    },
-    {
-      "label": "2021\u20132026",
-      "ats_pct": 0.502,
-      "ou_pct": 0.502,
-      "su_pct": 0.702,
-      "our_rmse": 12.91,
-      "line_rmse": 11.35
-    }
+ "model": "Adjusted per-possession efficiency ratings (offense/defense PPP + tempo, opponent-adjusted at prediction time; fitted team_alpha=0.10, carryover=0.6, home edge 5.04 points). The closing line is never an input \u2014 only the benchmark. Walk-forward: every prediction made before learning the result.",
+ "overall": {
+  "games": 47794,
+  "straight_up_pct": 0.707,
+  "our_margin_rmse": 12.17,
+  "line_margin_rmse": 11.04,
+  "ats": [
+   16744,
+   17090,
+   473
   ],
-  "pending_seasons": true,
-  "pending_season_reason": "Per-season detail is still being tabulated from the walk-forward run \u2014 the era summary below comes from the completed backtest (2013\u20132021, 2025\u20132026; seasons 2022\u20132024 missing after the CBBD monthly quota was exhausted mid-pull).",
-  "seasons": []
+  "ats_pct": 0.495,
+  "ou": [
+   14569,
+   14252,
+   193
+  ],
+  "ou_pct": 0.505,
+  "our_total_rmse": 18.05,
+  "line_total_rmse": 16.9
+ },
+ "eras": [
+  {
+   "label": "2013\u20132016",
+   "ats_pct": 0.489,
+   "ou_pct": 0.515,
+   "su_pct": 0.7,
+   "our_rmse": 11.66,
+   "line_rmse": 10.52
+  },
+  {
+   "label": "2017\u20132020",
+   "ats_pct": 0.495,
+   "ou_pct": 0.5,
+   "su_pct": 0.712,
+   "our_rmse": 12.13,
+   "line_rmse": 11.17
+  },
+  {
+   "label": "2021\u20132026",
+   "ats_pct": 0.5,
+   "ou_pct": 0.502,
+   "su_pct": 0.706,
+   "our_rmse": 12.68,
+   "line_rmse": 11.35
+  }
+ ],
+ "pending_seasons": true,
+ "pending_season_reason": "Per-season detail is still being tabulated from the walk-forward run \u2014 the era summary below comes from the completed backtest (2013\u20132021, 2025\u20132026; seasons 2022\u20132024 missing after the CBBD monthly quota was exhausted mid-pull).",
+ "seasons": []
 }

@@ -220,9 +220,8 @@ def run_backtest(games: pd.DataFrame, team_alpha: float = TEAM_ALPHA,
             actual_margin, actual_total, neutral)
 
         # NOW learn from the game.
-        month = pd.to_datetime(row.date).month
         model.update(row.home_team, row.away_team, float(row.home_score),
-                     float(row.away_score), game_poss(model, row), month)
+                     float(row.away_score), game_poss(model, row))
 
     return {
         "params": {"team_alpha": team_alpha, "carryover": carryover,
@@ -306,9 +305,8 @@ def fit_rest_slopes(games: pd.DataFrame, params: dict) -> tuple[float, float]:
             t_res.append(at - pt)
             t_rd.append(min(max(hr + ar, -2 * REST_CAP_DAYS),
                             2 * REST_CAP_DAYS))
-        month = pd.to_datetime(row.date).month
         model.update(row.home_team, row.away_team, float(row.home_score),
-                     float(row.away_score), game_poss(model, row), month)
+                     float(row.away_score), game_poss(model, row))
     import numpy as np
     m_slope = float(np.polyfit(m_rd, m_res, 1)[0]) if m_res else 0.0
     t_slope = float(np.polyfit(t_rd, t_res, 1)[0]) if t_res else 0.0
