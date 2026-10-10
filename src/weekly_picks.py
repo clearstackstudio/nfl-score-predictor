@@ -88,7 +88,8 @@ def load_qb_overrides(season: int, week: int) -> dict:
 
     data/qb_overrides.json: {"season": 2026, "week": 5,
                              "starters": {"PIT": "Aaron Rodgers"}}.
-    Returns {team_abbr: qb_gsis_id}. Empty when the file is absent or stale.
+    Returns {team_abbr: (qb_gsis_id, display_name)}. Empty when the file is
+    absent or stale.
     """
     p = DATA / "qb_overrides.json"
     if not p.exists():
@@ -110,7 +111,7 @@ def load_qb_overrides(season: int, week: int) -> dict:
     for team, name in cfg.get("starters", {}).items():
         qid = name_to_id.get(_norm_qb_name(name))
         if qid:
-            out[team] = qid
+            out[team] = (qid, name)
         else:
             print(f"qb_overrides: no GSIS id for {name!r}, skipping")
     return out
@@ -299,12 +300,14 @@ def main() -> None:
 
     # QB adjustments: schedule QBs, with manual overrides for mid-week news.
     qb_over = load_qb_overrides(SEASON, next_week)
+    qb_over_ids = {t: qid for t, (qid, _) in qb_over.items()}
+    qb_over_names = {t: nm for t, (_, nm) in qb_over.items()}
     matchups = []
     for _, g in upcoming.sort_values("gameday").iterrows():
-        hq = qb_over.get(g["home_team"])
+        hq = qb_over_ids.get(g["home_team"])
         if not hq and pd.notna(g["home_qb_id"]):
             hq = str(g["home_qb_id"])
-        aq = qb_over.get(g["away_team"])
+        aq = qb_over_ids.get(g["away_team"])
         if not aq and pd.notna(g["away_qb_id"]):
             aq = str(g["away_qb_id"])
         matchups.append((g["home_team"], g["away_team"], hq, aq))
@@ -413,7 +416,8 @@ def main() -> None:
             },
             "cover_prob": round(cover_prob, 3) if pick_side else None,
             "ou_prob": round(ou_prob, 3) if pick_total else None,
-            "home_qb": g.get("home_qb_name"), "away_qb": g.get("away_qb_name"),
+            "home_qb": qb_over_names.get(g["home_team"]) or g.get("home_qb_name"),
+            "away_qb": qb_over_names.get(g["away_team"]) or g.get("away_qb_name"),
         }
         # Game identity is teams + gameday. A graded result carries over
         # even when the line moved — the final score is already decided
