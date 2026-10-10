@@ -94,6 +94,10 @@ export default function MlbMethodology() {
             adjustment — and it has to clear the same walk-forward bar before it claims
             anything.
           </p>
+          <p>
+            And it never needed recalibration to earn that sentence: a published 57% won 57% —
+            see the bins on the <a href="/calibration" className="font-semibold text-emerald-400 underline decoration-emerald-400/40 underline-offset-4 hover:decoration-emerald-400 light:text-emerald-700">calibration page</a>.
+          </p>
         </>
       ),
     },

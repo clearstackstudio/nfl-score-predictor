@@ -106,6 +106,10 @@ export default function NbaMethodology() {
             honest. We re-check the calibration regularly and will refit the
             curve if it drifts.
           </p>
+          <p>
+            The full evidence — the backtest curves plus this season&rsquo;s live receipts — is on
+            the <a href="/calibration" className="font-semibold text-emerald-400 underline decoration-emerald-400/40 underline-offset-4 hover:decoration-emerald-400 light:text-emerald-700">calibration page</a>.
+          </p>
         </>
       ),
     },

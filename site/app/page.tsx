@@ -433,6 +433,13 @@ export default function Home() {
 
       <SeasonRecord weeks={allWeeks} href="/track-record" />
 
+      <div className="mb-8 -mt-5 max-w-2xl text-sm text-zinc-500 light:text-zinc-600">
+        How honest are those percentages?{" "}
+        <a href="/calibration" className="font-semibold text-emerald-400 underline decoration-emerald-400/40 underline-offset-4 transition hover:decoration-emerald-400 light:text-emerald-700">
+          See the calibration receipts →
+        </a>
+      </div>
+
       <ParlayCard parlay={wv.parlay} />
 
       <div className="mb-4 flex items-baseline justify-between">

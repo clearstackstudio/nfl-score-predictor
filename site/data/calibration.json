@@ -1,0 +1,592 @@
+{
+  "generated": "2026-10-09",
+  "note": "Backtest calibration evidence for the Honest Line calibration dashboard. Spread/total bins transcribed from goals/nfl-score-prediction-website/files/calibration-check.md (2026-10-09); NCAAB bins computed 2026-10-09 via src/ncaab/fit_recalibration.py (--results data/ncaab/backtest_results.json); fitted recalibration curves imported from src/recalibration.py _CURVES (MLB moneyline is already calibrated, so its curve is null). predicted = mean published probability in the bin; actual = empirical cover/hit rate. All values are 0–1 decimals.",
+  "sports": [
+    {
+      "id": "nfl",
+      "label": "NFL",
+      "markets": [
+        {
+          "id": "ats",
+          "label": "Against the spread",
+          "backtest": {
+            "label": "Walk-forward 2021–2024, EPA model",
+            "games": 991,
+            "bins": [
+              {
+                "label": "50–55%",
+                "n": 196,
+                "predicted": 0.532,
+                "actual": 0.434
+              },
+              {
+                "label": "55–60%",
+                "n": 214,
+                "predicted": 0.575,
+                "actual": 0.491
+              },
+              {
+                "label": "60–65%",
+                "n": 210,
+                "predicted": 0.623,
+                "actual": 0.495
+              },
+              {
+                "label": "65–70%",
+                "n": 137,
+                "predicted": 0.674,
+                "actual": 0.504
+              },
+              {
+                "label": "70%+",
+                "n": 234,
+                "predicted": 0.775,
+                "actual": 0.449
+              }
+            ]
+          },
+          "curve": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.532,
+              0.434
+            ],
+            [
+              0.575,
+              0.491
+            ],
+            [
+              0.623,
+              0.495
+            ],
+            [
+              0.674,
+              0.504
+            ],
+            [
+              0.775,
+              0.449
+            ]
+          ],
+          "verdict": "Severely overconfident — a published 77% hit 45%."
+        },
+        {
+          "id": "totals",
+          "label": "Totals",
+          "backtest": {
+            "label": "Walk-forward 2021–2024, EPA model",
+            "games": 574,
+            "bins": [
+              {
+                "label": "50–55%",
+                "n": 96,
+                "predicted": 0.538,
+                "actual": 0.51
+              },
+              {
+                "label": "55–60%",
+                "n": 192,
+                "predicted": 0.574,
+                "actual": 0.51
+              },
+              {
+                "label": "60–65%",
+                "n": 180,
+                "predicted": 0.623,
+                "actual": 0.533
+              },
+              {
+                "label": "65–70%",
+                "n": 106,
+                "predicted": 0.663,
+                "actual": 0.481
+              }
+            ]
+          },
+          "curve": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.538,
+              0.51
+            ],
+            [
+              0.574,
+              0.51
+            ],
+            [
+              0.623,
+              0.533
+            ],
+            [
+              0.663,
+              0.481
+            ]
+          ],
+          "verdict": "Overconfident — 65–70% publishes at 66%, hits 48%."
+        }
+      ]
+    },
+    {
+      "id": "cfb",
+      "label": "College Football",
+      "markets": [
+        {
+          "id": "ats",
+          "label": "Against the spread",
+          "backtest": {
+            "label": "Walk-forward 2014–2026, PPA model",
+            "games": 8606,
+            "bins": [
+              {
+                "label": "50–55%",
+                "n": 1552,
+                "predicted": 0.531,
+                "actual": 0.499
+              },
+              {
+                "label": "55–60%",
+                "n": 1871,
+                "predicted": 0.574,
+                "actual": 0.506
+              },
+              {
+                "label": "60–65%",
+                "n": 1643,
+                "predicted": 0.624,
+                "actual": 0.514
+              },
+              {
+                "label": "65–70%",
+                "n": 1256,
+                "predicted": 0.675,
+                "actual": 0.469
+              },
+              {
+                "label": "70%+",
+                "n": 2284,
+                "predicted": 0.78,
+                "actual": 0.497
+              }
+            ]
+          },
+          "curve": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.531,
+              0.499
+            ],
+            [
+              0.574,
+              0.506
+            ],
+            [
+              0.624,
+              0.514
+            ],
+            [
+              0.675,
+              0.469
+            ],
+            [
+              0.78,
+              0.497
+            ]
+          ],
+          "verdict": "Severely overconfident — the 70%+ bin (n=2,284) hits 49.7%."
+        },
+        {
+          "id": "totals",
+          "label": "Totals",
+          "backtest": {
+            "label": "Walk-forward 2014–2026, PPA model",
+            "games": 5133,
+            "bins": [
+              {
+                "label": "50–55%",
+                "n": 1065,
+                "predicted": 0.536,
+                "actual": 0.493
+              },
+              {
+                "label": "55–60%",
+                "n": 1790,
+                "predicted": 0.574,
+                "actual": 0.508
+              },
+              {
+                "label": "60–65%",
+                "n": 1560,
+                "predicted": 0.624,
+                "actual": 0.519
+              },
+              {
+                "label": "65–70%",
+                "n": 718,
+                "predicted": 0.662,
+                "actual": 0.527
+              }
+            ]
+          },
+          "curve": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.536,
+              0.493
+            ],
+            [
+              0.574,
+              0.508
+            ],
+            [
+              0.624,
+              0.519
+            ],
+            [
+              0.662,
+              0.527
+            ]
+          ],
+          "verdict": "Overconfident — recalibration slope 0.30, still far below 1."
+        }
+      ]
+    },
+    {
+      "id": "nba",
+      "label": "NBA",
+      "markets": [
+        {
+          "id": "ats",
+          "label": "Against the spread",
+          "backtest": {
+            "label": "Walk-forward 2008–2023, rest-adjusted model",
+            "games": 15678,
+            "bins": [
+              {
+                "label": "50–55%",
+                "n": 5161,
+                "predicted": 0.533,
+                "actual": 0.51
+              },
+              {
+                "label": "55–60%",
+                "n": 5478,
+                "predicted": 0.573,
+                "actual": 0.499
+              },
+              {
+                "label": "60–65%",
+                "n": 3011,
+                "predicted": 0.622,
+                "actual": 0.5
+              },
+              {
+                "label": "65–70%",
+                "n": 1270,
+                "predicted": 0.672,
+                "actual": 0.524
+              },
+              {
+                "label": "70%+",
+                "n": 758,
+                "predicted": 0.743,
+                "actual": 0.513
+              }
+            ]
+          },
+          "curve": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.533,
+              0.51
+            ],
+            [
+              0.573,
+              0.499
+            ],
+            [
+              0.622,
+              0.5
+            ],
+            [
+              0.672,
+              0.524
+            ],
+            [
+              0.743,
+              0.513
+            ]
+          ],
+          "verdict": "Severely overconfident — slope ≈ 0; 70%+ is a coin flip."
+        },
+        {
+          "id": "totals",
+          "label": "Totals",
+          "backtest": {
+            "label": "Walk-forward 2008–2023, rest-adjusted model",
+            "games": 13717,
+            "bins": [
+              {
+                "label": "50–55%",
+                "n": 4382,
+                "predicted": 0.535,
+                "actual": 0.502
+              },
+              {
+                "label": "55–60%",
+                "n": 5698,
+                "predicted": 0.573,
+                "actual": 0.491
+              },
+              {
+                "label": "60–65%",
+                "n": 2852,
+                "predicted": 0.622,
+                "actual": 0.475
+              },
+              {
+                "label": "65–70%",
+                "n": 785,
+                "predicted": 0.663,
+                "actual": 0.502
+              }
+            ]
+          },
+          "curve": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.535,
+              0.502
+            ],
+            [
+              0.573,
+              0.491
+            ],
+            [
+              0.622,
+              0.475
+            ],
+            [
+              0.663,
+              0.502
+            ]
+          ],
+          "verdict": "Severely overconfident — slope negative."
+        }
+      ]
+    },
+    {
+      "id": "ncaab",
+      "label": "College Basketball",
+      "markets": [
+        {
+          "id": "ats",
+          "label": "Against the spread",
+          "backtest": {
+            "label": "Walk-forward 2013–2021 + 2025–2026, efficiency model",
+            "games": 34449,
+            "bins": [
+              {
+                "label": "50–55%",
+                "n": 436,
+                "predicted": 0.549,
+                "actual": 0.484
+              },
+              {
+                "label": "55–60%",
+                "n": 11736,
+                "predicted": 0.574,
+                "actual": 0.494
+              },
+              {
+                "label": "60–65%",
+                "n": 8830,
+                "predicted": 0.623,
+                "actual": 0.495
+              },
+              {
+                "label": "65–70%",
+                "n": 5444,
+                "predicted": 0.673,
+                "actual": 0.493
+              },
+              {
+                "label": "70%+",
+                "n": 8003,
+                "predicted": 0.79,
+                "actual": 0.498
+              }
+            ]
+          },
+          "curve": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.549,
+              0.484
+            ],
+            [
+              0.574,
+              0.494
+            ],
+            [
+              0.623,
+              0.495
+            ],
+            [
+              0.673,
+              0.493
+            ],
+            [
+              0.79,
+              0.498
+            ]
+          ],
+          "verdict": "Severely overconfident — a raw 79% recalibrates to ~50%."
+        },
+        {
+          "id": "totals",
+          "label": "Totals",
+          "backtest": {
+            "label": "Walk-forward 2013–2021 + 2025–2026, efficiency model",
+            "games": 30383,
+            "bins": [
+              {
+                "label": "55–60%",
+                "n": 8005,
+                "predicted": 0.582,
+                "actual": 0.509
+              },
+              {
+                "label": "60–65%",
+                "n": 8787,
+                "predicted": 0.623,
+                "actual": 0.505
+              },
+              {
+                "label": "65–70%",
+                "n": 6012,
+                "predicted": 0.673,
+                "actual": 0.503
+              },
+              {
+                "label": "70%+",
+                "n": 7579,
+                "predicted": 0.774,
+                "actual": 0.518
+              }
+            ]
+          },
+          "curve": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.582,
+              0.509
+            ],
+            [
+              0.623,
+              0.505
+            ],
+            [
+              0.673,
+              0.503
+            ],
+            [
+              0.774,
+              0.518
+            ]
+          ],
+          "verdict": "Overconfident — empirical hit rates sit at ~50–52% in every bin."
+        }
+      ]
+    },
+    {
+      "id": "mlb",
+      "label": "MLB",
+      "markets": [
+        {
+          "id": "moneyline",
+          "label": "Moneyline",
+          "backtest": {
+            "label": "Walk-forward 2012–2021, runs model",
+            "games": 22765,
+            "bins": [
+              {
+                "label": "<35%",
+                "n": 976,
+                "predicted": 0.304,
+                "actual": 0.35
+              },
+              {
+                "label": "35–40%",
+                "n": 1446,
+                "predicted": 0.378,
+                "actual": 0.446
+              },
+              {
+                "label": "40–45%",
+                "n": 2908,
+                "predicted": 0.427,
+                "actual": 0.491
+              },
+              {
+                "label": "45–50%",
+                "n": 4724,
+                "predicted": 0.477,
+                "actual": 0.511
+              },
+              {
+                "label": "50–55%",
+                "n": 5123,
+                "predicted": 0.524,
+                "actual": 0.544
+              },
+              {
+                "label": "55–60%",
+                "n": 3929,
+                "predicted": 0.573,
+                "actual": 0.573
+              },
+              {
+                "label": "60–65%",
+                "n": 2204,
+                "predicted": 0.622,
+                "actual": 0.616
+              },
+              {
+                "label": "65%+",
+                "n": 1455,
+                "predicted": 0.691,
+                "actual": 0.661
+              }
+            ]
+          },
+          "curve": null,
+          "verdict": "Roughly calibrated — the exception; slight tilt favoring underdogs."
+        }
+      ]
+    }
+  ]
+}
