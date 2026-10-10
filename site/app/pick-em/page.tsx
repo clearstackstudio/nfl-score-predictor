@@ -5,6 +5,7 @@ import picksData from "../../data/picks.json";
 import seasonData from "../../data/season_2026.json";
 import TeamLogo from "../lib/team-logo";
 import ShareResultsCard from "../lib/share-results-card";
+import PickemLeaderboard from "../lib/pickem-leaderboard";
 import { trim } from "../lib/format";
 
 type Mode = "combo" | "su";
@@ -450,6 +451,13 @@ export default function PickEm() {
         Honor system for now — lock your picks before kickoff. Your card is graded
         Tuesday morning when the week&apos;s results land.
       </p>
+
+      <PickemLeaderboard
+        sport="nfl"
+        lsKey="hl-pickem-2026"
+        periodKey={week}
+        gameCount={games.length}
+      />
 
       {/* You vs the model */}
       <div className="mt-12 flex flex-wrap items-center justify-between gap-3">

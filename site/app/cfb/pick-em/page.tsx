@@ -6,6 +6,7 @@ import seasonData from "../../../data/cfb_season_2026.json";
 import { trim } from "../../lib/format";
 import CfbTeamLogo from "../../lib/cfb-team-logo";
 import ShareResultsCard from "../../lib/share-results-card";
+import PickemLeaderboard from "../../lib/pickem-leaderboard";
 
 type Mode = "combo" | "su";
 type Side = "home" | "away";
@@ -458,6 +459,13 @@ export default function CfbPickEm() {
         Honor system for now — lock your picks before kickoff. Your card is graded
         Tuesday morning when the week&apos;s results land.
       </p>
+
+      <PickemLeaderboard
+        sport="cfb"
+        lsKey="hl-cfb-pickem-2026"
+        periodKey={week}
+        gameCount={games.length}
+      />
 
       {/* You vs the model */}
       <div className="mt-12 flex flex-wrap items-center justify-between gap-3">

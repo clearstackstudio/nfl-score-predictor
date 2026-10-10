@@ -6,6 +6,7 @@ import seasonData from "../../../data/nba_season_2027.json";
 import { fmtSpread, trim } from "../../lib/format";
 import NbaTeamLogo from "../../lib/nba-team-logo";
 import ShareResultsCard from "../../lib/share-results-card";
+import PickemLeaderboard from "../../lib/pickem-leaderboard";
 
 type Mode = "combo" | "su";
 type Side = "home" | "away";
@@ -485,6 +486,13 @@ export default function NbaPickEm() {
         Honor system for now — lock your picks before tip-off. Your card is graded
         when the slate&rsquo;s results land.
       </p>
+
+      <PickemLeaderboard
+        sport="nba"
+        lsKey="hl-nba-pickem-2026"
+        periodKey={slateKey}
+        gameCount={games.length}
+      />
 
       {/* You vs the model */}
       <div className="mt-12 flex flex-wrap items-center justify-between gap-3">
