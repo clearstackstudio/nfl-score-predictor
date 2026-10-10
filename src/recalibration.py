@@ -67,6 +67,26 @@ _CURVES: dict[tuple[str, str], list[tuple[float, float]]] = {
         (0.624, 0.519),
         (0.662, 0.527),
     ],
+    # Fitted 2026-10-09 from the NCAAB walk-forward backtest (47,794 games,
+    # 2013-2021 + 2025-2026; src/ncaab/fit_recalibration.py). The curves
+    # are nearly flat at 0.50: the model shows no edge vs the closing line,
+    # so a raw 79% ATS probability recalibrates to ~50%. Calibrated from
+    # day one, honestly.
+    ("ncaab", "ats"): [
+        (0.50, 0.50),
+        (0.549, 0.484),
+        (0.574, 0.494),
+        (0.623, 0.495),
+        (0.673, 0.493),
+        (0.790, 0.498),
+    ],
+    ("ncaab", "totals"): [
+        (0.50, 0.50),
+        (0.582, 0.509),
+        (0.623, 0.505),
+        (0.673, 0.503),
+        (0.774, 0.518),
+    ],
 }
 
 # Bumped whenever the curves are refit. The parlay lock only preserves

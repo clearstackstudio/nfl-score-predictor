@@ -1,0 +1,13 @@
+{
+  "sport": "ncaab",
+  "season": 2027,
+  "date": "2026-10-09",
+  "preseason": false,
+  "experimental_note": null,
+  "generated": "2026-10-09 21:20 PDT",
+  "disclaimer": "Model probabilities for entertainment. Our backtest shows no proven edge vs the closing line \u2014 track record published openly.",
+  "parlay": null,
+  "picks": [],
+  "pending_reason": "No NCAAB games with logged lines yet. The 2026-27 regular season starts ~Nov 3, 2026; daily picks begin with the nightly odds logging on Nov 1.",
+  "odds_snapshot": null
+}
