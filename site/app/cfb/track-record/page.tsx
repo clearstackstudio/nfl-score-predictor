@@ -200,7 +200,7 @@ function winPct(w: number, l: number): number | null {
 }
 
 function LiveSeason({ log }: { log: SeasonLog }) {
-  const weeks = Object.entries(log.weeks).sort(([a], [b]) => Number(a) - Number(b));
+  const weeks = Object.entries(log.weeks).sort(([a], [b]) => Number(b) - Number(a));
   if (weeks.length === 0) return null;
 
   let aw = 0, al = 0, ap = 0, ow = 0, ol = 0, op = 0;

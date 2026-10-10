@@ -299,7 +299,7 @@ function winPct(w: number, l: number): number | null {
 }
 
 function LiveSeason({ log }: { log: SeasonLog }) {
-  const days = Object.entries(log.days).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0));
+  const days = Object.entries(log.days).sort(([a], [b]) => (a < b ? 1 : a > b ? -1 : 0));
   if (days.length === 0) return null;
 
   let aw = 0, al = 0, ap = 0;
