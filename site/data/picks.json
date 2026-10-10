@@ -33,7 +33,8 @@
     "combined_prob": 0.133,
     "fair_odds": "+652",
     "book_pays": "+600",
-    "calibration": "empirical-2026-10-09"
+    "calibration": "empirical-2026-10-09",
+    "result": null
   },
   "picks": [
     {
