@@ -1,0 +1,137 @@
+{
+  "id": "2026-10-05",
+  "title": "Weekly recap \u2014 Oct 5, 2026",
+  "period_label": "NFL Week 4 \u00b7 CFB Week 5",
+  "published": "2026-10-05",
+  "covers": [
+    {
+      "sport": "nfl",
+      "period": "4"
+    },
+    {
+      "sport": "cfb",
+      "period": "5"
+    }
+  ],
+  "overall": {
+    "ats": [
+      33,
+      29,
+      2
+    ],
+    "ou": [
+      27,
+      37,
+      0
+    ]
+  },
+  "sports": [
+    {
+      "sport": "nfl",
+      "label": "NFL",
+      "period": "Week 4",
+      "ats": [
+        8,
+        5,
+        1
+      ],
+      "ou": [
+        5,
+        10,
+        0
+      ],
+      "n_picks": 16
+    },
+    {
+      "sport": "cfb",
+      "label": "CFB",
+      "period": "Week 5",
+      "ats": [
+        25,
+        24,
+        1
+      ],
+      "ou": [
+        22,
+        27,
+        0
+      ],
+      "n_picks": 56
+    }
+  ],
+  "best_call": {
+    "label": "UConn +6.5",
+    "kind": "spread",
+    "edge": 38.5,
+    "prob": 0.983,
+    "game": "Syracuse at UConn",
+    "score": "42\u201341",
+    "sport": "CFB",
+    "period": "Week 5"
+  },
+  "worst_miss": {
+    "label": "Notre Dame -21",
+    "kind": "spread",
+    "edge": -33.7,
+    "prob": 0.968,
+    "game": "Notre Dame at North Carolina",
+    "score": "37\u201326",
+    "sport": "CFB",
+    "period": "Week 5"
+  },
+  "observation": "About what you'd expect from a coin-flip operation: 60-66. Totals detail: NFL totals 5-10; CFB totals 22-27.",
+  "season_to_date": {
+    "nfl": {
+      "label": "NFL",
+      "ats": [
+        9,
+        5,
+        14
+      ],
+      "ou": [
+        5,
+        10,
+        4
+      ]
+    },
+    "cfb": {
+      "label": "CFB",
+      "ats": [
+        26,
+        27,
+        50
+      ],
+      "ou": [
+        24,
+        27,
+        29
+      ]
+    },
+    "nba": {
+      "label": "NBA",
+      "ats": [
+        0,
+        0,
+        0
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ]
+    },
+    "ncaab": {
+      "label": "NCAAB",
+      "ats": [
+        0,
+        0,
+        0
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}
