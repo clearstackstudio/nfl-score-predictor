@@ -58,10 +58,10 @@ def fav_name(abbr: str, season: int) -> str | None:
         "IND": "Indianapolis Colts",
         "JAX": "Jacksonville Jaguars",
         "KC": "Kansas City Chiefs",
-        "LAC": "Los Angeles Chargers",
-        "LAR": "Los Angeles Rams",
+        "LAC": None,  # San Diego Chargers pre-2017, LA from 2017
+        "LAR": None,  # LA Rams pre-1995, St. Louis 1995-2015, LA from 2016
         "LV": "Las Vegas Raiders",
-        "LVR": "Las Vegas Raiders",
+        "LVR": None,  # Oakland pre-1982, LA 1982-94, Oakland 1995-2019, LV from 2020
         "MIA": "Miami Dolphins",
         "MIN": "Minnesota Vikings",
         "NE": "New England Patriots",
@@ -88,7 +88,21 @@ def fav_name(abbr: str, season: int) -> str | None:
     if abbr == "HOU":
         return "Houston Oilers" if season <= 1996 else "Houston Texans"
     if abbr == "TEN":
+        if season <= 1996:
+            return "Houston Oilers"
         return "Tennessee Oilers" if season <= 1998 else "Tennessee Titans"
+    if abbr == "LAC":
+        return "San Diego Chargers" if season <= 2016 else "Los Angeles Chargers"
+    if abbr == "LAR":
+        if season <= 1994:
+            return "Los Angeles Rams"
+        return "St. Louis Rams" if season <= 2015 else "Los Angeles Rams"
+    if abbr == "LVR":
+        if season <= 1981:
+            return "Oakland Raiders"
+        if season <= 1994:
+            return "Los Angeles Raiders"
+        return "Oakland Raiders" if season <= 2019 else "Las Vegas Raiders"
     if abbr == "WAS":
         if season <= 2019:
             return "Washington Redskins"
