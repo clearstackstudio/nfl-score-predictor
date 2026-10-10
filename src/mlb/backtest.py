@@ -20,9 +20,10 @@ Metrics (model vs line on the same games):
     Reported at thresholds 0.03 and 0.05 (primary: 0.05 -- the more
     selective threshold, fewer bets, less variance-chasing; both shown).
   - Totals: model total RMSE vs closing-total RMSE, plus an over/under
-    record betting $100 when |model_total - line_total| >= 0.5 runs (one
-    full line move -- the standard MLB total granularity) at the closing
-    over/under odds.
+    record betting $100 when |(model_total - TOTAL_SKEW) - line_total| >= 0.5
+    runs (one full line move -- the standard MLB total granularity) at the
+    closing over/under odds. The skew adjustment corrects for the model
+    predicting the mean total while the line tracks the median.
 
 Usage:
     python3 src/mlb/backtest.py [--seasons 2012 2021] [--out results.json]
@@ -49,6 +50,20 @@ ML_THRESHOLDS = (0.03, 0.05)
 PRIMARY_ML_THRESHOLD = 0.05
 OU_THRESHOLD = 0.5  # runs; one full MLB line move
 STAKE = 100.0
+
+# Totals skew correction, validated 2026-10-10: the model predicts the MEAN
+# total but the closing line tracks the MEDIAN (right-skewed run scoring).
+# s = median(actual - model_total) = -0.561 on 2012-2015 discovery, -0.554 on
+# fresh 2022-2026 -- a stable structural property, not a fitted edge.
+# The OU edge compares the median-adjusted total to the line; the displayed
+# model total stays the mean. Validated: skew-adjusted OU on 2016-2021
+# holdout went 51.5% (n=7,210, z=+2.34 vs fair odds) with the 74-82%
+# structural over-tilt removed. See the model pattern study (2026-10-10).
+# v2 idea (NOT validated, do not implement without a test): bucket-specific
+# skew (<=7: -0.95 ... 10+: +0.55).
+# 2027 logging: daily_picks.py must log model_total_raw AND model_total_adj
+# per game -- see goals/honest-line-mlb-prediction-model/agent_notes/2027-validation-logging-spec.md.
+TOTAL_SKEW = 0.56
 
 
 def implied_prob(odds: float) -> float:
@@ -101,7 +116,9 @@ class Metrics:
 
         self.total_model_se += (model_total - actual_total) ** 2
         self.total_line_se += (line_total - actual_total) ** 2
-        t_edge = model_total - line_total
+        # Skew-adjusted edge: compare the median-implied total to the line.
+        # model_total itself stays the mean (display + RMSE use it unadjusted).
+        t_edge = (model_total - TOTAL_SKEW) - line_total
         if abs(t_edge) >= OU_THRESHOLD:
             bet_over = t_edge > 0
             if abs(actual_total - line_total) < 1e-9:
