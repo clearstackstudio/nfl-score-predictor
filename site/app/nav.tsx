@@ -19,6 +19,7 @@ const NAV_ITEMS = [
   { slug: "/live", label: "Live", liveDot: true },
   { slug: "/pick-em", label: "Pick'em" },
   { slug: "/track-record", label: "Track record" },
+  { slug: "/rankings", label: "Rankings", nflOnly: true },
 ];
 
 function leagueOf(pathname: string): LeagueId {
@@ -105,7 +106,11 @@ export default function Nav() {
         })}
       </div>
       <nav className="flex max-w-full gap-1 overflow-x-auto" aria-label="Primary">
-        {NAV_ITEMS.filter((item) => !(league === "mlb" && item.slug === "/live")).map((item) => {
+        {NAV_ITEMS.filter(
+          (item) =>
+            !(league === "mlb" && item.slug === "/live") &&
+            !((item as { nflOnly?: boolean }).nflOnly && league !== "nfl")
+        ).map((item) => {
           const href = `${base}${item.slug}` || "/";
           const label = (league === "nba" || league === "mlb") && item.nbaLabel ? item.nbaLabel : item.label;
           const active =

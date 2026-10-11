@@ -128,6 +128,64 @@ def current_ratings(team_games: pd.DataFrame, season: int):
     return adjusted_ratings(team_games, len(team_games), season, prior)
 
 
+def export_power_rankings(off: dict, deff: dict, week: int) -> None:
+    """Write site/data/power_rankings.json from the current team ratings.
+
+    Read-only use of the ratings: rating = (off - deff) * PLAYS_PER_GAME,
+    i.e. expected margin vs an average team on a neutral field. This is the
+    same team-strength number that feeds our_margin in the weekly picks
+    (before game-specific QB/weather adjustments) -- no new computation.
+    Movement arrows come from the previous export when its week differs;
+    mid-week re-runs of the same week keep the prior week's ranks.
+    """
+    from epa_ratings import PLAYS_PER_GAME  # local import: keep module import order stable
+    dest = REPO / "site" / "data" / "power_rankings.json"
+    prev_ranks: dict[str, int] = {}
+    prev_week = None
+    try:
+        old = json.loads(dest.read_text())
+        prev_week = old.get("week")
+        if prev_week is not None and int(prev_week) != int(week):
+            for t in old.get("teams", []):
+                if t.get("abbr") and t.get("rank"):
+                    prev_ranks[t["abbr"]] = int(t["rank"])
+        elif prev_week is not None:
+            # Same-week re-run: preserve the movement baseline we already have.
+            for t in old.get("teams", []):
+                if t.get("abbr") and t.get("prev_rank"):
+                    prev_ranks[t["abbr"]] = int(t["prev_rank"])
+    except Exception:
+        pass
+    rows = []
+    for abbr in off:
+        if abbr not in deff or abbr not in ABBR_TO_FULL:
+            continue
+        rows.append((round((off[abbr] - deff[abbr]) * PLAYS_PER_GAME, 1), abbr))
+    rows.sort(reverse=True)
+    teams = [
+        {
+            "rank": i + 1,
+            "team": ABBR_TO_FULL[abbr],
+            "abbr": abbr,
+            "rating": pts,
+            "prev_rank": prev_ranks.get(abbr),
+        }
+        for i, (pts, abbr) in enumerate(rows)
+    ]
+    out = {
+        "season": SEASON,
+        "week": int(week),
+        "updated": pd.Timestamp.now("America/Los_Angeles").strftime("%Y-%m-%d %H:%M %Z"),
+        "note": ("Model-internal predictive ratings: expected margin vs an average "
+                 "team on a neutral field, before weekly QB/weather adjustments. "
+                 "Not a resume ranking; moves only on game results."),
+        "teams": teams,
+    }
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(out, indent=2))
+    print(f"Power rankings (week {week}): {len(teams)} teams -> {dest}")
+
+
 def build_parlay(picks: list[dict]) -> dict | None:
     """Parlay of the week: the 3 highest-probability picks (spread or total).
 
@@ -457,6 +515,7 @@ def main() -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(out, indent=2))
     print(f"Week {next_week}: {len(picks)} games -> {dest}")
+    export_power_rankings(off, deff, int(next_week))
     if out["parlay"]:
         print("Parlay of the week:")
         for l in out["parlay"]["legs"]:
