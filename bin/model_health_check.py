@@ -288,6 +288,50 @@ def check_nfl_bias_slices(picks: list[dict]) -> SportReport:
     return rep
 
 
+def check_nfl_home_field_drift(picks: list[dict]) -> SportReport:
+    """Home-field edge calibration watch (added 2026-10-10).
+
+    Background: 45-season backtest (1980-2024) found the model's fixed
+    2.2-pt home edge drifting stale -- actual home margin fell from ~3.3
+    (1990s) to ~1.9 (2020s); implied true HFA ~1.8 recently. The ~0.4-pt
+    miscalibration was not significant (p=0.11), so no change was made.
+    This check watches live residuals; a WATCH finding proposes a
+    recalibration for approval (never auto-applied).
+    """
+    rep = SportReport(sport="NFL")
+    resids = []
+    for p in picks:
+        r = p["_raw"]
+        res = r.get("result") or {}
+        # our_spread is our predicted home margin (positive = home favored).
+        # Note: site data has no neutral-site flag; rare international games
+        # are included and wash out at scale.
+        if "home_score" in res and r.get("our_spread") is not None:
+            actual = res["home_score"] - res["away_score"]
+            resids.append(actual - r["our_spread"])
+    n = len(resids)
+    if n < 30:
+        rep.lines.append(
+            f"Home-field drift: only {n} graded games with scores; "
+            f"too few to judge (need 30+)."
+        )
+        return rep
+    mean = sum(resids) / n
+    implied = 2.2 + mean
+    rep.lines.append(
+        f"Home-field drift: mean home residual {mean:+.2f} pts (n={n}); "
+        f"implied true HFA ~{implied:.2f} vs model's 2.2."
+    )
+    if n >= 100 and abs(mean) >= 1.0:
+        rep.findings.append(Finding(
+            "WATCH", "NFL",
+            f"Home-field miscalibration {mean:+.2f} pts (n={n})",
+            f"Implied true HFA ~{implied:.2f} vs model 2.2. "
+            f"Propose recalibration for approval; do not auto-apply.",
+        ))
+    return rep
+
+
 def check_cfb_slices(picks: list[dict]) -> SportReport:
     rep = SportReport(sport="CFB")
     ou_picks = [p for p in picks if p.get("ou") in ("win", "loss")]
@@ -447,6 +491,9 @@ def build_report(live: dict[str, list[dict]], cal: dict,
         rep = check_rolling_performance(sport, picks)
         if sport == "NFL":
             extra = check_nfl_bias_slices(picks)
+            rep.lines.extend(extra.lines)
+            rep.findings.extend(extra.findings)
+            extra = check_nfl_home_field_drift(picks)
             rep.lines.extend(extra.lines)
             rep.findings.extend(extra.findings)
         if sport == "CFB":
