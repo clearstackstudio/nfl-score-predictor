@@ -1,13 +1,13 @@
 {
   "sport": "nba",
   "season": 2027,
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "preseason": false,
   "experimental_note": null,
-  "generated": "2026-10-09 21:39 PDT",
+  "generated": "2026-10-10 21:39 PDT",
   "disclaimer": "Model probabilities for entertainment. Our backtest shows no proven edge vs the closing line \u2014 track record published openly.",
   "parlay": null,
   "picks": [],
-  "pending_reason": "No NBA games with logged lines on 2026-10-09 or 2026-10-10. (Regular season starts ~Oct 20, 2026.)",
-  "odds_snapshot": "2026-10-09"
+  "pending_reason": "No NBA games with logged lines on 2026-10-10 or 2026-10-11. (Regular season starts ~Oct 20, 2026.)",
+  "odds_snapshot": "2026-10-10"
 }
