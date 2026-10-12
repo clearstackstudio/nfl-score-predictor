@@ -68,6 +68,17 @@ TOTAL_SD = 18.26
 SPREAD_PICK_MIN = 0.5  # |spread edge| needed to publish a spread pick (mirrors NFL/CFB)
 TOTAL_PICK_MIN = 1.0   # |total edge| needed to publish a total pick
 
+# NBA totals picks are NOT published (H6, approved by Bryant 2026-10-12).
+# The pre-registered walk-forward test (2008-2023; modern era 2018-2023)
+# found totals picks lose at EVERY threshold, including the live
+# |edge|>=1.0 (48.0%, n=5,271, z=-2.85); higher thresholds are worse
+# (45.3% at >=8.0). No threshold cleared the pre-registered adoption bar
+# (>=52% on >=500 decided picks in the modern era). The model still
+# predicts totals internally (our_total/line_total are emitted for
+# context) but no over/under pick is published. Revisit only if a future
+# model version clears that bar in a new pre-registered test.
+PUBLISH_TOTALS = False
+
 # Total circuit breaker (same idea as the NFL/CFB pipelines): if our total
 # is more than this many points from the market total, publish no total pick.
 # An extreme disagreement is more likely our model being wrong than the
@@ -420,7 +431,7 @@ def main() -> None:
         pick_side = ("home" if spread_edge > 0 else "away") \
             if abs(spread_edge) >= SPREAD_PICK_MIN else None
         pick_total = ("over" if total_edge > 0 else "under") \
-            if abs(total_edge) >= TOTAL_PICK_MIN else None
+            if PUBLISH_TOTALS and abs(total_edge) >= TOTAL_PICK_MIN else None
         total_note = None
         if pick_total and abs(total_edge) > TOTAL_CIRCUIT:
             # Extreme disagreement with an efficient market is more likely
