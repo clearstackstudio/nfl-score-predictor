@@ -74,7 +74,7 @@ export default function TrackRecord() {
 
       <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">Historical backtest</h2>
       <p className="mt-1 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
-        45 seasons of walk-forward predictions, graded against actual final scores.
+        45 seasons of walk-forward predictions from our earlier Elo model — the predecessor to today&apos;s EPA ratings — graded against actual final scores.
       </p>
 
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">

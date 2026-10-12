@@ -59,7 +59,7 @@ export default function Methodology() {
           <p>
             Nobody beats the Vegas line by much. It is one of the most
             efficient markets in the world, and it has only gotten sharper —
-            our own 45-season backtest shows a winning ATS record in the 80s
+            our own 45-season Elo backtest shows a winning ATS record in the 80s
             through 2000s decaying to a coin flip in the 2020s.
           </p>
           <p>
