@@ -213,9 +213,9 @@ check("wind dome -> 0", wind_total_adjustment(25.0, "DET"), 0.0)
 check("wind retractable -> 0", wind_total_adjustment(25.0, "DAL"), 0.0)
 check("wind unknown -> 0", wind_total_adjustment(None, "BUF"), 0.0)
 
-# --- indoor adjustment: +3.0 for dome/retractable, 0 for outdoor/unknown ---
-check("indoor dome -> +3", indoor_total_adjustment("DET"), 3.0)
-check("indoor retractable -> +3", indoor_total_adjustment("DAL"), 3.0)
+# --- indoor adjustment: removed 2026-10-10 (market already prices it in) — 0 everywhere ---
+check("indoor dome -> 0", indoor_total_adjustment("DET"), 0.0)
+check("indoor retractable -> 0", indoor_total_adjustment("DAL"), 0.0)
 check("indoor outdoor -> 0", indoor_total_adjustment("BUF"), 0.0)
 check("indoor unknown -> 0", indoor_total_adjustment("XXX"), 0.0)
 
