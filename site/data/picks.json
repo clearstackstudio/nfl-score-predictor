@@ -589,7 +589,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Matthew Stafford",
-      "away_qb": "Josh Allen"
+      "away_qb": "Josh Allen",
+      "result": {
+        "home_score": 34,
+        "away_score": 37,
+        "ats": "loss"
+      }
     }
   ]
 }
