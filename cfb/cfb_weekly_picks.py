@@ -47,6 +47,64 @@ BOOK_PARLAY_PAYS = {2: "+260", 3: "+600"}
 # (18.71 vs 15.4).
 TOTAL_CIRCUIT = 8.5
 
+# Parlay publication: STOPPED 2026-10-12 (Bryant, adopting the CFB
+# improvement diagnostic). Over 185 simulated weeks (2014-2025) every leg
+# policy lost 13-26% ROI: the leg pools are sub-breakeven and the
+# recalibrated probabilities carry no ranking signal. Flip back to True
+# only if a future pre-registered study validates a leg pool.
+PUBLISH_PARLAY = False
+
+# CFB wind hinge (adopted 2026-10-12 with the totals shrinkage, same
+# diagnostic): subtract 1.0 pt per mph above 12, capped at 4, outdoor
+# non-neutral games only. Walk-forward fit chose (12, 1.0, 4) in all 10
+# evaluation years; it removes most of the model's +4.3-pt over-prediction
+# at >=15 mph. The NFL hinge (10, 1.0, 8) was tested on CFB and
+# overcorrects -- do not port it here.
+WIND_THRESHOLD_MPH = 12.0
+WIND_SLOPE = 1.0
+WIND_CAP_PTS = 4.0
+_STADIUMS = None
+
+
+def wind_adjustment(home: str, neutral: bool, start_utc: str):
+    """(wind_mph, adj_pts) for a game; (None, 0.0) when not applicable.
+
+    Forecast wind at kickoff from Open-Meteo at the home stadium.
+    Any failure (no stadium match, dome, neutral site, fetch error)
+    degrades gracefully to no adjustment -- weather never blocks picks.
+    """
+    global _STADIUMS
+    try:
+        if neutral or not start_utc:
+            return None, 0.0
+        if _STADIUMS is None:
+            _STADIUMS = json.loads(
+                (Path(__file__).resolve().parent / "cfb_stadiums.json")
+                .read_text())
+        stad = _STADIUMS.get(home)
+        if not stad or stad.get("dome"):
+            return None, 0.0
+        import urllib.request
+        kickoff = pd.Timestamp(start_utc)
+        if kickoff.tzinfo is None:
+            kickoff = kickoff.tz_localize("UTC")
+        day = kickoff.strftime("%Y-%m-%d")
+        url = ("https://api.open-meteo.com/v1/forecast"
+               f"?latitude={stad['lat']}&longitude={stad['lon']}"
+               "&hourly=wind_speed_10m&wind_speed_unit=mph&timezone=UTC"
+               f"&start_date={day}&end_date={day}")
+        with urllib.request.urlopen(url, timeout=15) as r:
+            hourly = json.load(r)["hourly"]
+        times = hourly["time"]
+        idx = min(range(len(times)),
+                  key=lambda i: abs(pd.Timestamp(times[i], tz="UTC") - kickoff))
+        wind = float(hourly["wind_speed_10m"][idx])
+        adj = -min(WIND_CAP_PTS, max(0.0, wind - WIND_THRESHOLD_MPH) * WIND_SLOPE)
+        return round(wind, 1), round(adj, 1)
+    except Exception as e:
+        print(f"  wind lookup failed for {home}: {e}")
+        return None, 0.0
+
 
 def _gameday_et(start: str) -> dict:
     """Map CFBD's UTC startDate to the US-Eastern calendar date + weekday.
@@ -209,6 +267,10 @@ def main() -> None:
         if pr is None:
             continue
         our_margin, our_total = pr
+        # Wind hinge on the total (outdoor, non-neutral only; see constants).
+        wind_mph, wind_adj = wind_adjustment(home, bool(g.get("neutralSite")),
+                                             g.get("startDate", ""))
+        our_total += wind_adj
         spread_edge = our_margin - line_margin
         total_edge = our_total - line_total
         pick_side = ("home" if spread_edge > 0 else "away") \
@@ -244,6 +306,8 @@ def main() -> None:
             "line_total": line_total,
             "our_spread": round(our_margin, 1),
             "our_total": round(our_total, 1),
+            "wind_mph": wind_mph,
+            "wind_adj_pts": wind_adj,
             "spread_edge": round(spread_edge, 1),
             "total_edge": round(total_edge, 1),
             "pick_spread": pick_side,
@@ -278,9 +342,11 @@ def main() -> None:
             if op.get("result") and (op["away"], op["home"]) not in have:
                 picks.append(op)  # already final: keep published pick + grade
 
+    if not PUBLISH_PARLAY:
+        parlay = None
     # Methodology-aware parlay lock: a calibration change rebuilds the parlay
     # once so the site never displays probabilities from a superseded formula.
-    if (same_week and old_doc.get("parlay")
+    elif (same_week and old_doc.get("parlay")
             and old_doc["parlay"].get("calibration") == CALIBRATION_VERSION):
         parlay = old_doc["parlay"]
         print("Parlay locked at first publish — carrying over.")

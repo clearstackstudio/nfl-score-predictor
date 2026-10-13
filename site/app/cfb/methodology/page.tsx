@@ -23,6 +23,16 @@ export default function CfbMethodology() {
             total than the same efficiencies at a crawl.
           </p>
           <p>
+            One correction we apply on purpose: our raw totals run hot. When we tested
+            the model across twelve backtest seasons (October 2026), the further our
+            total sat from the sport&rsquo;s scoring average, the more likely we — not
+            the market — were the wrong ones. So every predicted total is pulled 30% of
+            the way back toward that average before we compare it to the line. In
+            walk-forward testing that single change improved total accuracy in 11 of 11
+            seasons. It does not manufacture an edge — our totals picks still grade
+            about 50% — it just makes the number we publish closer to the truth.
+          </p>
+          <p>
             From those ratings the model generates its own spread and total for each
             game, then compares them against the market line. Where our number disagrees
             with Vegas by at least half a point on the spread (a full point on the total),
@@ -34,6 +44,14 @@ export default function CfbMethodology() {
             total, we publish no total pick at all. An extreme disagreement is more likely
             our model being wrong than the market being wrong — October 2026&rsquo;s NFL model
             learned that lesson the expensive way, and the college side inherited the fix.
+          </p>
+          <p>
+            Weather gets exactly one adjustment: wind. For outdoor games — never
+            domes, never neutral sites — our total comes down in real wind, by a
+            point per mph above 12, capped at 4 points. College wind hurts scoring
+            less than pro wind does; an earlier attempt to borrow the NFL model&rsquo;s
+            stronger adjustment overcorrected, so this one is fitted to college
+            games specifically and validated the same walk-forward way.
           </p>
           <p>
             The betting line is <span className="font-semibold text-zinc-100 light:text-zinc-900">never</span> an

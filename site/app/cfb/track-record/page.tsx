@@ -112,6 +112,29 @@ export default function CfbTrackRecord() {
       </h1>
       <p className="mt-4 max-w-2xl text-sm text-zinc-400 light:text-zinc-600">{rec.model}</p>
 
+      <div className="mt-6 max-w-3xl rounded-2xl border border-amber-400/25 bg-amber-400/[0.06] p-5 light:bg-amber-50">
+        <p className="text-sm font-semibold uppercase tracking-wide text-amber-400 light:text-amber-700">
+          Correction — October 13, 2026
+        </p>
+        <p className="mt-2 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+          This backtest was regenerated and restated; the old numbers were wrong in
+          the model&apos;s favor. Two fixes: (1) the old run stepped through games by
+          week number, and because postseason week numbers restart, a few games were
+          effectively rated using later results. Games are now processed strictly by
+          date. (2) Predicted totals now use the shrinkage adopted October 12 —
+          totals pulled 30% toward the league scoring average, validated
+          walk-forward — which the live model uses starting with the Week 7 picks.
+          Spread ratings were not changed by the shrinkage; the ATS change comes
+          entirely from the ordering fix.
+        </p>
+        <p className="mt-2 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+          Old → new: games 8,945 → 8,947 · ATS 4157-4185-153 (49.8%) → 4104-4220-154
+          (49.3%) · over/under 4111-4002-89 (50.7%) → 3990-3871-88 (50.8%) ·
+          totals error (RMSE) 18.71 → 17.72. The previous figures remain in the
+          site&apos;s version history — nothing was quietly edited.
+        </p>
+      </div>
+
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
         {[
           { label: "Seasons backtested", value: String(seasons.length) },

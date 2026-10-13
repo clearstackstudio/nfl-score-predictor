@@ -16,6 +16,16 @@ College-specific parameters (empirically tunable, documented honestly):
     WINDOW_GAMES   = 12   (about one college season of trailing games)
     CARRYOVER      = 0.4  (portal-era roster turnover -> less prior weight
                            than the NFL's 0.5)
+    TOTAL_SHRINKAGE = 0.7 (predicted totals are shrunk 30% toward the
+                           scoring mean; validated walk-forward 2014-2025
+                           in the 2026-10-12 improvement diagnostic —
+                           total RMSE improved in 11/11 seasons)
+
+Ordering note (corrected 2026-10-12): all chronological sorts in this
+module are by (season, date, game_id) — NOT week number. CFBD postseason
+week numbers restart at 1, so week-ordering let bowl games be predicted
+with ratings contaminated by later same-season games and flattered the
+published backtest by ~0.6pp ATS.
 """
 from __future__ import annotations
 
@@ -33,6 +43,13 @@ HOME_EDGE_PTS = 2.8
 WINDOW_GAMES = 12
 MIN_GAMES = 4
 CARRYOVER = 0.4
+# Predicted totals are shrunk toward the scoring mean (epa_const):
+# total = epa_const + TOTAL_SHRINKAGE * (ppa_sum * exp_plays). Adopted
+# 2026-10-12 (Bryant, on the pre-registered CFB improvement diagnostic):
+# walk-forward s=0.7 improved total RMSE in 11/11 seasons (18.73 -> 17.73
+# pooled) with OU% unchanged. Margins are unaffected (the spread uses
+# the PPA difference, which shrinkage does not touch).
+TOTAL_SHRINKAGE = 0.7
 # Recency: a game's weight halves every 8 games (same as the NFL model).
 RECENCY_HALF_LIFE = 8
 _RECENCY_DECAY = 0.5 ** (1.0 / RECENCY_HALF_LIFE)
@@ -66,7 +83,9 @@ def load_team_games() -> pd.DataFrame:
                 "neutral": bool(r["neutral"]),
             })
     tg = pd.DataFrame(rows)
-    return tg.sort_values(["season", "week", "date", "game_id"]).reset_index(drop=True)
+    # Chronological by date, NOT week: postseason week numbers restart
+    # at 1 and would scramble the walk-forward order (fixed 2026-10-12).
+    return tg.sort_values(["season", "date", "game_id"]).reset_index(drop=True)
 
 
 def adjusted_ratings(team_games: pd.DataFrame, upto_idx: int,
@@ -83,7 +102,7 @@ def adjusted_ratings(team_games: pd.DataFrame, upto_idx: int,
 
     raw_off, raw_def, pace, opps, opp_w = {}, {}, {}, {}, {}
     for team, gg in recent.groupby("team"):
-        gg = gg.sort_values(["season", "week", "date", "game_id"])
+        gg = gg.sort_values(["season", "date", "game_id"])
         n = len(gg)
         w = _RECENCY_DECAY ** np.arange(n - 1, -1, -1)
         raw_off[team] = float(np.average(gg["off_ppa_play"], weights=w))
@@ -128,7 +147,7 @@ def predict(off: dict, deff: dict, pace: dict, home: str, away: str,
     exp_plays = (pace.get(home, PLAYS_PER_GAME)
                  + pace.get(away, PLAYS_PER_GAME)) / 2
     our_margin = (exp_home_off - exp_away_off) * exp_plays + edge
-    our_total = (exp_home_off + exp_away_off) * exp_plays + epa_const
+    our_total = epa_const + TOTAL_SHRINKAGE * (exp_home_off + exp_away_off) * exp_plays
     return our_margin, our_total
 
 
@@ -147,7 +166,7 @@ def run_backtest(seasons: list[int] | None = None,
     if seasons:
         games = games[games["season"].isin(seasons)].copy()
     games = games.dropna(subset=["line_spread", "line_total"]).copy()
-    games = games.sort_values(["season", "week", "date"]).reset_index(drop=True)
+    games = games.sort_values(["season", "date", "game_id"]).reset_index(drop=True)
 
     # game_id -> first team_games row index for that game (walk-forward cutoff)
     gid_first: dict[int, int] = {}
