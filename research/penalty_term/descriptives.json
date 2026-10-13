@@ -1,0 +1,50 @@
+{
+  "penalty_only_plays_total": 10115,
+  "plays_per_season": {
+    "2021": 2532,
+    "2022": 2383,
+    "2023": 2459,
+    "2024": 2741
+  },
+  "epa_null_rows": 0,
+  "team_games": 2278,
+  "pen_plays_per_team_game": {
+    "mean": 4.440298507462686,
+    "median": 4.0,
+    "max": 16.0
+  },
+  "pen_epa_per_team_game_off_attribution": {
+    "mean": -0.13948399608984496,
+    "median": -0.3347818786278367,
+    "sd": 2.2957044802604067,
+    "p5": -3.5263923110018367,
+    "p95": 3.903842289579916,
+    "share_abs_ge_3": 0.17251975417032483
+  },
+  "abs_pen_epa_both_teams_per_game": {
+    "mean": 3.5223182618906024,
+    "p95": 7.512521498731802
+  },
+  "team_season_spread": {
+    "sd_across_teams_within_season": {
+      "2021": 0.5209080426372079,
+      "2022": 0.4920379380558237,
+      "2023": 0.5764965875799739,
+      "2024": 0.556505080252087
+    },
+    "best_team_season": {
+      "season": 2023,
+      "team": "JAX",
+      "mean_pen_epa_per_game": 1.5070086238110154
+    },
+    "worst_team_season": {
+      "season": 2024,
+      "team": "BAL",
+      "mean_pen_epa_per_game": -1.4537720585863816
+    },
+    "overall_range": [
+      -1.4537720585863816,
+      1.5070086238110154
+    ]
+  }
+}

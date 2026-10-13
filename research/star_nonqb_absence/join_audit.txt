@@ -1,0 +1,9 @@
+gameweek rows scraped: 13669
+unmatched abbr rows: 0
+tenures processed: 956
+star-level absence rows: 1731
+game-join misses: 0
+DNP-mark agreement (season>=2000): 1.000
+both-teams-shorthanded games (excluded from primary): 66
+PRIMARY team-game observations: 1484
+star-seasons with >=1 absence: 406

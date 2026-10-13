@@ -1,0 +1,480 @@
+new-coach team-seasons: 474
+  retreads: 139, first-timers: 335
+  seasons covered: 1920-2026
+  multi-coach seasons excluded: 131
+
+All new-coach seasons (audit):
+  1966 Atlanta Falcons              Hecker             first-time
+  1977 Atlanta Falcons              Bennett            first-time
+  1983 Atlanta Falcons              Henning            first-time
+  1987 Atlanta Falcons              Campbell           RETREAD
+  1990 Atlanta Falcons              Glanville          RETREAD
+  1994 Atlanta Falcons              Jones              first-time
+  1997 Atlanta Falcons              Reeves             RETREAD
+  2004 Atlanta Falcons              Mora               first-time
+  2008 Atlanta Falcons              Smith              first-time
+  2015 Atlanta Falcons              Quinn              first-time
+  2021 Atlanta Falcons              Smith              first-time
+  2024 Atlanta Falcons              Morris             RETREAD
+  2026 Atlanta Falcons              Stefanski          RETREAD
+  1960 Buffalo Bills                Ramsey             first-time
+  1962 Buffalo Bills                Saban              RETREAD
+  1966 Buffalo Bills                Collier            first-time
+  1969 Buffalo Bills                Rauch              RETREAD
+  1971 Buffalo Bills                Johnson            first-time
+  1972 Buffalo Bills                Saban              RETREAD
+  1978 Buffalo Bills                Knox               RETREAD
+  1983 Buffalo Bills                Stephenson         first-time
+  1998 Buffalo Bills                Phillips           RETREAD
+  2001 Buffalo Bills                Williams           first-time
+  2004 Buffalo Bills                Mularkey           first-time
+  2006 Buffalo Bills                Jauron             RETREAD
+  2010 Buffalo Bills                Gailey             RETREAD
+  2013 Buffalo Bills                Marrone            first-time
+  2015 Buffalo Bills                Ryan               RETREAD
+  2017 Buffalo Bills                McDermott          first-time
+  2026 Buffalo Bills                Brady              first-time
+  1995 Carolina Panthers            Capers             first-time
+  1999 Carolina Panthers            Seifert            RETREAD
+  2002 Carolina Panthers            Fox                first-time
+  2011 Carolina Panthers            Rivera             first-time
+  2020 Carolina Panthers            Rhule              first-time
+  2024 Carolina Panthers            Canales            first-time
+  1920 Decatur Staleys              Halas              first-time
+  1930 Chicago Bears                Jones              first-time
+  1933 Chicago Bears                Halas              first-time
+  1946 Chicago Bears                Halas              first-time
+  1956 Chicago Bears                Driscoll           RETREAD
+  1958 Chicago Bears                Halas              first-time
+  1968 Chicago Bears                Dooley             first-time
+  1972 Chicago Bears                Gibron             first-time
+  1975 Chicago Bears                Pardee             first-time
+  1978 Chicago Bears                Armstrong          first-time
+  1982 Chicago Bears                Ditka              first-time
+  1993 Chicago Bears                Wannstedt          first-time
+  1999 Chicago Bears                Jauron             first-time
+  2004 Chicago Bears                Smith              first-time
+  2013 Chicago Bears                Trestman           first-time
+  2015 Chicago Bears                Fox                RETREAD
+  2018 Chicago Bears                Nagy               first-time
+  2022 Chicago Bears                Eberflus           first-time
+  2025 Chicago Bears                Johnson            first-time
+  1968 Cincinnati Bengals           Brown              RETREAD
+  1976 Cincinnati Bengals           Johnson            first-time
+  1980 Cincinnati Bengals           Gregg              RETREAD
+  1984 Cincinnati Bengals           Wyche              first-time
+  1992 Cincinnati Bengals           Shula              first-time
+  2003 Cincinnati Bengals           Lewis              first-time
+  2019 Cincinnati Bengals           Taylor             first-time
+  1946 Cleveland Browns             Brown              first-time
+  1963 Cleveland Browns             Collier            first-time
+  1971 Cleveland Browns             Skorich            RETREAD
+  1975 Cleveland Browns             Gregg              first-time
+  1978 Cleveland Browns             Rutigliano         first-time
+  1989 Cleveland Browns             Carson             first-time
+  1991 Cleveland Browns             Belichick          first-time
+  1999 Cleveland Browns             Palmer             first-time
+  2001 Cleveland Browns             Davis              first-time
+  2005 Cleveland Browns             Crennel            first-time
+  2009 Cleveland Browns             Mangini            RETREAD
+  2011 Cleveland Browns             Shurmur            first-time
+  2013 Cleveland Browns             Chudzinski         first-time
+  2014 Cleveland Browns             Pettine            first-time
+  2016 Cleveland Browns             Jackson            RETREAD
+  2019 Cleveland Browns             Kitchens           first-time
+  2020 Cleveland Browns             Stefanski          first-time
+  2026 Cleveland Browns             Monken             first-time
+  1953 Baltimore Colts              Molesworth         first-time
+  1954 Baltimore Colts              Ewbank             first-time
+  1963 Baltimore Colts              Shula              first-time
+  1970 Baltimore Colts              McCafferty         first-time
+  1973 Baltimore Colts              Schnellenberger    first-time
+  1975 Baltimore Colts              Marchibroda        first-time
+  1980 Baltimore Colts              McCormack          RETREAD
+  1982 Baltimore Colts              Kush               first-time
+  1985 Indianapolis Colts           Dowhower           first-time
+  1992 Indianapolis Colts           Marchibroda        first-time
+  1996 Indianapolis Colts           Infante            RETREAD
+  1998 Indianapolis Colts           Mora               RETREAD
+  2002 Indianapolis Colts           Dungy              RETREAD
+  2009 Indianapolis Colts           Caldwell           first-time
+  2012 Indianapolis Colts           Pagano             first-time
+  2018 Indianapolis Colts           Reich              first-time
+  2023 Indianapolis Colts           Steichen           first-time
+  1920 Chicago Cardinals            Driscoll           first-time
+  1923 Chicago Cardinals            Horween            first-time
+  1925 Chicago Cardinals            Barry              first-time
+  1927 Chicago Cardinals            Chamberlin         first-time
+  1928 Chicago Cardinals            Gillies            first-time
+  1929 Chicago Cardinals            Scanlon            first-time
+  1930 Chicago Cardinals            Nevers             first-time
+  1932 Chicago Cardinals            Chevigny           first-time
+  1933 Chicago Cardinals            Schissler          first-time
+  1935 Chicago Cardinals            Creighton          first-time
+  1939 Chicago Cardinals            Nevers             first-time
+  1940 Chicago Cardinals            Conzelman          first-time
+  1943 Chicago Cardinals            Handler            first-time
+  1946 Chicago Cardinals            Conzelman          first-time
+  1950 Chicago Cardinals            Lambeau            RETREAD
+  1952 Chicago Cardinals            Kuharich           first-time
+  1953 Chicago Cardinals            Stydahar           RETREAD
+  1955 Chicago Cardinals            Richards           first-time
+  1958 Chicago Cardinals            Ivy                first-time
+  1962 St. Louis Cardinals          Lemm               RETREAD
+  1966 St. Louis Cardinals          Winner             first-time
+  1971 St. Louis Cardinals          Hollway            first-time
+  1973 St. Louis Cardinals          Coryell            first-time
+  1978 St. Louis Cardinals          Wilkinson          first-time
+  1980 St. Louis Cardinals          Hanifan            first-time
+  1986 St. Louis Cardinals          Stallings          first-time
+  1990 Phoenix Cardinals            Bugel              first-time
+  1994 Arizona Cardinals            Ryan               RETREAD
+  1996 Arizona Cardinals            Tobin              first-time
+  2004 Arizona Cardinals            Green              RETREAD
+  2007 Arizona Cardinals            Whisenhunt         first-time
+  2013 Arizona Cardinals            Arians             first-time
+  2018 Arizona Cardinals            Wilks              first-time
+  2019 Arizona Cardinals            Kingsbury          first-time
+  2023 Arizona Cardinals            Gannon             first-time
+  2026 Arizona Cardinals            LaFleur            first-time
+  1960 Dallas Cowboys               Landry             first-time
+  1989 Dallas Cowboys               Johnson            first-time
+  1994 Dallas Cowboys               Switzer            first-time
+  1998 Dallas Cowboys               Gailey             first-time
+  2000 Dallas Cowboys               Campo              first-time
+  2003 Dallas Cowboys               Parcells           RETREAD
+  2007 Dallas Cowboys               Phillips           RETREAD
+  2011 Dallas Cowboys               Garrett            first-time
+  2020 Dallas Cowboys               McCarthy           RETREAD
+  2025 Dallas Cowboys               Schottenheimer     first-time
+  1960 Denver Broncos               Filchock           first-time
+  1962 Denver Broncos               Faulkner           first-time
+  1967 Denver Broncos               Saban              RETREAD
+  1972 Denver Broncos               Ralston            first-time
+  1977 Denver Broncos               Miller             first-time
+  1981 Denver Broncos               Reeves             first-time
+  1993 Denver Broncos               Phillips           RETREAD
+  1995 Denver Broncos               Shanahan           RETREAD
+  2009 Denver Broncos               McDaniels          first-time
+  2011 Denver Broncos               Fox                RETREAD
+  2015 Denver Broncos               Kubiak             RETREAD
+  2017 Denver Broncos               Joseph             first-time
+  2019 Denver Broncos               Fangio             first-time
+  2023 Denver Broncos               Payton             RETREAD
+  1930 Portsmouth Spartans          Griffen            first-time
+  1931 Portsmouth Spartans          Clark              first-time
+  1937 Detroit Lions                Clark              first-time
+  1939 Detroit Lions                Henderson          first-time
+  1940 Detroit Lions                Clark              first-time
+  1941 Detroit Lions                Edwards            first-time
+  1943 Detroit Lions                Dorais             first-time
+  1948 Detroit Lions                McMillin           first-time
+  1951 Detroit Lions                Parker             RETREAD
+  1957 Detroit Lions                Wilson             first-time
+  1965 Detroit Lions                Gilmer             first-time
+  1967 Detroit Lions                Schmidt            first-time
+  1973 Detroit Lions                McCafferty         RETREAD
+  1974 Detroit Lions                Forzano            first-time
+  1978 Detroit Lions                Clark              RETREAD
+  1985 Detroit Lions                Rogers             first-time
+  1997 Detroit Lions                Ross               RETREAD
+  2001 Detroit Lions                Mornhinweg         first-time
+  2003 Detroit Lions                Mariucci           RETREAD
+  2006 Detroit Lions                Marinelli          first-time
+  2009 Detroit Lions                Schwartz           first-time
+  2014 Detroit Lions                Caldwell           RETREAD
+  2018 Detroit Lions                Patricia           first-time
+  2021 Detroit Lions                Campbell           RETREAD
+  1921 Green Bay Packers            Lambeau            first-time
+  1950 Green Bay Packers            Ronzani            first-time
+  1954 Green Bay Packers            Blackbourn         first-time
+  1958 Green Bay Packers            McLean             first-time
+  1959 Green Bay Packers            Lombardi           first-time
+  1968 Green Bay Packers            Bengtson           first-time
+  1971 Green Bay Packers            Devine             first-time
+  1975 Green Bay Packers            Starr              first-time
+  1984 Green Bay Packers            Gregg              RETREAD
+  1988 Green Bay Packers            Infante            first-time
+  1992 Green Bay Packers            Holmgren           first-time
+  1999 Green Bay Packers            Rhodes             RETREAD
+  2000 Green Bay Packers            Sherman            first-time
+  2006 Green Bay Packers            McCarthy           first-time
+  2019 Green Bay Packers            LaFleur            first-time
+  2002 Houston Texans               Capers             RETREAD
+  2006 Houston Texans               Kubiak             first-time
+  2014 Houston Texans               O'Brien            first-time
+  2021 Houston Texans               Culley             first-time
+  2022 Houston Texans               Smith              RETREAD
+  2023 Houston Texans               Ryans              first-time
+  1995 Jacksonville Jaguars         Coughlin           first-time
+  2003 Jacksonville Jaguars         Del Rio            first-time
+  2012 Jacksonville Jaguars         Mularkey           RETREAD
+  2013 Jacksonville Jaguars         Bradley            first-time
+  2017 Jacksonville Jaguars         Marrone            RETREAD
+  2022 Jacksonville Jaguars         Pederson           RETREAD
+  2025 Jacksonville Jaguars         Coen               first-time
+  1960 Dallas Texans                Stram              first-time
+  1975 Kansas City Chiefs           Wiggin             first-time
+  1978 Kansas City Chiefs           Levy               first-time
+  1983 Kansas City Chiefs           Mackovic           first-time
+  1987 Kansas City Chiefs           Gansz              first-time
+  1989 Kansas City Chiefs           Schottenheimer     RETREAD
+  1999 Kansas City Chiefs           Cunningham         first-time
+  2001 Kansas City Chiefs           Vermeil            RETREAD
+  2006 Kansas City Chiefs           Edwards            RETREAD
+  2009 Kansas City Chiefs           Haley              first-time
+  2013 Kansas City Chiefs           Reid               RETREAD
+  1966 Miami Dolphins               Wilson             RETREAD
+  1970 Miami Dolphins               Shula              RETREAD
+  1996 Miami Dolphins               Johnson            RETREAD
+  2000 Miami Dolphins               Wannstedt          RETREAD
+  2005 Miami Dolphins               Saban              first-time
+  2007 Miami Dolphins               Cameron            first-time
+  2008 Miami Dolphins               Sparano            first-time
+  2012 Miami Dolphins               Philbin            first-time
+  2016 Miami Dolphins               Gase               first-time
+  2019 Miami Dolphins               Flores             first-time
+  2022 Miami Dolphins               McDaniel           first-time
+  2026 Miami Dolphins               Hafley             first-time
+  1961 Minnesota Vikings            Van Brocklin       first-time
+  1967 Minnesota Vikings            Grant              first-time
+  1984 Minnesota Vikings            Steckel            first-time
+  1985 Minnesota Vikings            Grant              first-time
+  1986 Minnesota Vikings            Burns              first-time
+  1992 Minnesota Vikings            Green              first-time
+  2006 Minnesota Vikings            Childress          first-time
+  2014 Minnesota Vikings            Zimmer             first-time
+  2022 Minnesota Vikings            O'Connell          first-time
+  1967 New Orleans Saints           Fears              first-time
+  1971 New Orleans Saints           Roberts            first-time
+  1973 New Orleans Saints           North              first-time
+  1976 New Orleans Saints           Stram              RETREAD
+  1978 New Orleans Saints           Nolan              RETREAD
+  1981 New Orleans Saints           Phillips           RETREAD
+  1986 New Orleans Saints           Mora               first-time
+  1997 New Orleans Saints           Ditka              RETREAD
+  2000 New Orleans Saints           Haslett            first-time
+  2006 New Orleans Saints           Payton             first-time
+  2013 New Orleans Saints           Payton             first-time
+  2022 New Orleans Saints           Allen              RETREAD
+  2025 New Orleans Saints           Moore              first-time
+  1960 Boston Patriots              Saban              first-time
+  1969 Boston Patriots              Rush               first-time
+  1973 New England Patriots         Fairbanks          first-time
+  1982 New England Patriots         Meyer              first-time
+  1990 New England Patriots         Rust               first-time
+  1991 New England Patriots         MacPherson         first-time
+  1993 New England Patriots         Parcells           RETREAD
+  1997 New England Patriots         Carroll            RETREAD
+  2000 New England Patriots         Belichick          RETREAD
+  2024 New England Patriots         Mayo               first-time
+  2025 New England Patriots         Vrabel             RETREAD
+  1925 New York Giants              Folwell            first-time
+  1926 New York Giants              Alexander          first-time
+  1927 New York Giants              Potteiger          first-time
+  1929 New York Giants              Andrews            first-time
+  1954 New York Giants              Howell             first-time
+  1961 New York Giants              Sherman            first-time
+  1969 New York Giants              Webster            first-time
+  1974 New York Giants              Arnsparger         first-time
+  1979 New York Giants              Perkins            first-time
+  1983 New York Giants              Parcells           first-time
+  1991 New York Giants              Handley            first-time
+  1993 New York Giants              Reeves             RETREAD
+  1997 New York Giants              Fassel             first-time
+  2004 New York Giants              Coughlin           RETREAD
+  2016 New York Giants              McAdoo             first-time
+  2018 New York Giants              Shurmur            RETREAD
+  2020 New York Giants              Judge              first-time
+  2022 New York Giants              Daboll             first-time
+  2026 New York Giants              Harbaugh           RETREAD
+  1960 New York Titans              Baugh              first-time
+  1962 New York Titans              Turner             first-time
+  1963 New York Jets                Ewbank             RETREAD
+  1974 New York Jets                Winner             RETREAD
+  1977 New York Jets                Michaels           first-time
+  1983 New York Jets                Walton             first-time
+  1990 New York Jets                Coslet             first-time
+  1994 New York Jets                Carroll            first-time
+  1995 New York Jets                Kotite             RETREAD
+  1997 New York Jets                Parcells           RETREAD
+  2000 New York Jets                Groh               first-time
+  2001 New York Jets                Edwards            first-time
+  2006 New York Jets                Mangini            first-time
+  2009 New York Jets                Ryan               first-time
+  2015 New York Jets                Bowles             RETREAD
+  2019 New York Jets                Gase               RETREAD
+  2021 New York Jets                Saleh              first-time
+  2025 New York Jets                Glenn              first-time
+  1960 Houston Oilers               Rymkus             first-time
+  1962 Houston Oilers               Ivy                RETREAD
+  1964 Houston Oilers               Baugh              RETREAD
+  1965 Houston Oilers               Taylor             first-time
+  1966 Houston Oilers               Lemm               RETREAD
+  1971 Houston Oilers               Hughes             first-time
+  1972 Houston Oilers               Peterson           first-time
+  1975 Houston Oilers               Phillips           first-time
+  1981 Houston Oilers               Biles              first-time
+  1984 Houston Oilers               Campbell           first-time
+  1990 Houston Oilers               Pardee             RETREAD
+  2011 Tennessee Titans             Munchak            first-time
+  2014 Tennessee Titans             Whisenhunt         RETREAD
+  2018 Tennessee Titans             Vrabel             first-time
+  2024 Tennessee Titans             Callahan           first-time
+  2026 Tennessee Titans             Saleh              RETREAD
+  1933 Philadelphia Eagles          Wray               RETREAD
+  1936 Philadelphia Eagles          Bell               first-time
+  1941 Philadelphia Eagles          Neale              first-time
+  1952 Philadelphia Eagles          Trimble            first-time
+  1956 Philadelphia Eagles          Devore             RETREAD
+  1958 Philadelphia Eagles          Shaw               RETREAD
+  1961 Philadelphia Eagles          Skorich            first-time
+  1964 Philadelphia Eagles          Kuharich           RETREAD
+  1969 Philadelphia Eagles          Williams           first-time
+  1973 Philadelphia Eagles          McCormack          first-time
+  1976 Philadelphia Eagles          Vermeil            first-time
+  1983 Philadelphia Eagles          Campbell           RETREAD
+  1986 Philadelphia Eagles          Ryan               first-time
+  1991 Philadelphia Eagles          Kotite             first-time
+  1995 Philadelphia Eagles          Rhodes             first-time
+  1999 Philadelphia Eagles          Reid               first-time
+  2013 Philadelphia Eagles          Kelly              first-time
+  2016 Philadelphia Eagles          Pederson           first-time
+  2021 Philadelphia Eagles          Sirianni           first-time
+  1933 Pittsburgh Pirates           Douds              first-time
+  1934 Pittsburgh Pirates           DiMeolo            first-time
+  1935 Pittsburgh Pirates           Bach               first-time
+  1937 Pittsburgh Pirates           Blood              first-time
+  1945 Pittsburgh Steelers          Leonard            first-time
+  1946 Pittsburgh Steelers          Sutherland         first-time
+  1948 Pittsburgh Steelers          Michelosen         first-time
+  1952 Pittsburgh Steelers          Bach               first-time
+  1954 Pittsburgh Steelers          Kiesling           RETREAD
+  1957 Pittsburgh Steelers          Parker             RETREAD
+  1965 Pittsburgh Steelers          Nixon              RETREAD
+  1966 Pittsburgh Steelers          Austin             first-time
+  1969 Pittsburgh Steelers          Noll               first-time
+  1992 Pittsburgh Steelers          Cowher             first-time
+  2007 Pittsburgh Steelers          Tomlin             first-time
+  2026 Pittsburgh Steelers          McCarthy           RETREAD
+  1960 Oakland Raiders              Erdelatz           first-time
+  1963 Oakland Raiders              Davis              first-time
+  1966 Oakland Raiders              Rauch              first-time
+  1969 Oakland Raiders              Madden             first-time
+  1979 Oakland Raiders              Flores             first-time
+  1988 Los Angeles Raiders          Shanahan           first-time
+  1995 Oakland Raiders              White              first-time
+  1997 Oakland Raiders              Bugel              RETREAD
+  1998 Oakland Raiders              Gruden             first-time
+  2002 Oakland Raiders              Callahan           first-time
+  2004 Oakland Raiders              Turner             RETREAD
+  2006 Oakland Raiders              Shell              first-time
+  2007 Oakland Raiders              Kiffin             first-time
+  2011 Oakland Raiders              Jackson            first-time
+  2012 Oakland Raiders              Allen              first-time
+  2015 Oakland Raiders              Del Rio            RETREAD
+  2018 Oakland Raiders              Gruden             RETREAD
+  2022 Las Vegas Raiders            McDaniels          RETREAD
+  2025 Las Vegas Raiders            Carroll            RETREAD
+  2026 Las Vegas Raiders            Kubiak             first-time
+  1937 Cleveland Rams               Bezdek             first-time
+  1939 Cleveland Rams               Clark              RETREAD
+  1944 Cleveland Rams               Donelli            RETREAD
+  1945 Cleveland Rams               Walsh              first-time
+  1947 Los Angeles Rams             Snyder             first-time
+  1948 Los Angeles Rams             Shaughnessy        first-time
+  1950 Los Angeles Rams             Stydahar           first-time
+  1955 Los Angeles Rams             Gillman            first-time
+  1960 Los Angeles Rams             Waterfield         first-time
+  1966 Los Angeles Rams             Allen              first-time
+  1971 Los Angeles Rams             Prothro            first-time
+  1973 Los Angeles Rams             Knox               first-time
+  1978 Los Angeles Rams             Malavasi           RETREAD
+  1983 Los Angeles Rams             Robinson           first-time
+  1992 Los Angeles Rams             Knox               RETREAD
+  1995 St. Louis Rams               Brooks             first-time
+  1997 St. Louis Rams               Vermeil            RETREAD
+  2000 St. Louis Rams               Martz              first-time
+  2006 St. Louis Rams               Linehan            first-time
+  2009 St. Louis Rams               Spagnuolo          first-time
+  2012 St. Louis Rams               Fisher             RETREAD
+  2017 Los Angeles Rams             McVay              first-time
+  1996 Baltimore Ravens             Marchibroda        RETREAD
+  1999 Baltimore Ravens             Billick            first-time
+  2008 Baltimore Ravens             Harbaugh           first-time
+  2026 Baltimore Ravens             Minter             first-time
+  1960 Los Angeles Chargers         Gillman            RETREAD
+  1974 San Diego Chargers           Prothro            RETREAD
+  1989 San Diego Chargers           Henning            RETREAD
+  1992 San Diego Chargers           Ross               first-time
+  1997 San Diego Chargers           Gilbride           first-time
+  1999 San Diego Chargers           Riley              first-time
+  2002 San Diego Chargers           Schottenheimer     RETREAD
+  2007 San Diego Chargers           Turner             RETREAD
+  2013 San Diego Chargers           McCoy              first-time
+  2017 Los Angeles Chargers         Lynn               RETREAD
+  2021 Los Angeles Chargers         Staley             first-time
+  2024 Los Angeles Chargers         Harbaugh           RETREAD
+  1976 Seattle Seahawks             Patera             first-time
+  1983 Seattle Seahawks             Knox               RETREAD
+  1992 Seattle Seahawks             Flores             RETREAD
+  1995 Seattle Seahawks             Erickson           first-time
+  1999 Seattle Seahawks             Holmgren           RETREAD
+  2009 Seattle Seahawks             Mora               RETREAD
+  2010 Seattle Seahawks             Carroll            RETREAD
+  2024 Seattle Seahawks             Macdonald          first-time
+  1946 San Francisco 49ers          Shaw               first-time
+  1955 San Francisco 49ers          Strader            first-time
+  1956 San Francisco 49ers          Albert             first-time
+  1959 San Francisco 49ers          Hickey             first-time
+  1968 San Francisco 49ers          Nolan              first-time
+  1976 San Francisco 49ers          Clark              first-time
+  1977 San Francisco 49ers          Meyer              first-time
+  1979 San Francisco 49ers          Walsh              first-time
+  1989 San Francisco 49ers          Seifert            first-time
+  1997 San Francisco 49ers          Mariucci           first-time
+  2003 San Francisco 49ers          Erickson           RETREAD
+  2005 San Francisco 49ers          Nolan              first-time
+  2011 San Francisco 49ers          Harbaugh           first-time
+  2015 San Francisco 49ers          Tomsula            first-time
+  2016 San Francisco 49ers          Kelly              RETREAD
+  2017 San Francisco 49ers          Shanahan           first-time
+  1976 Tampa Bay Buccaneers         McKay              first-time
+  1985 Tampa Bay Buccaneers         Bennett            RETREAD
+  1987 Tampa Bay Buccaneers         Perkins            RETREAD
+  1992 Tampa Bay Buccaneers         Wyche              RETREAD
+  1996 Tampa Bay Buccaneers         Dungy              first-time
+  2002 Tampa Bay Buccaneers         Gruden             RETREAD
+  2009 Tampa Bay Buccaneers         Morris             first-time
+  2012 Tampa Bay Buccaneers         Schiano            first-time
+  2014 Tampa Bay Buccaneers         Smith              RETREAD
+  2016 Tampa Bay Buccaneers         Koetter            first-time
+  2019 Tampa Bay Buccaneers         Arians             RETREAD
+  2022 Tampa Bay Buccaneers         Bowles             RETREAD
+  1932 Boston Braves                Wray               first-time
+  1933 Boston Redskins              Dietz              first-time
+  1935 Boston Redskins              Casey              first-time
+  1936 Boston Redskins              Flaherty           first-time
+  1943 Washington Redskins          Bergman            first-time
+  1944 Washington Redskins          DeGroot            first-time
+  1946 Washington Redskins          Edwards            first-time
+  1952 Washington Redskins          Lambeau            RETREAD
+  1954 Washington Redskins          Kuharich           RETREAD
+  1959 Washington Redskins          Nixon              first-time
+  1961 Washington Redskins          McPeak             first-time
+  1966 Washington Redskins          Graham             first-time
+  1969 Washington Redskins          Lombardi           RETREAD
+  1970 Washington Redskins          Austin             RETREAD
+  1971 Washington Redskins          Allen              RETREAD
+  1978 Washington Redskins          Pardee             RETREAD
+  1981 Washington Redskins          Gibbs              first-time
+  1993 Washington Redskins          Petitbon           first-time
+  1994 Washington Redskins          Turner             first-time
+  2001 Washington Redskins          Schottenheimer     RETREAD
+  2002 Washington Redskins          Spurrier           first-time
+  2004 Washington Redskins          Gibbs              first-time
+  2008 Washington Redskins          Zorn               first-time
+  2010 Washington Redskins          Shanahan           RETREAD
+  2014 Washington Redskins          Gruden             first-time
+  2020 Washington Football Team     Rivera             RETREAD
+  2024 Washington Commanders        Quinn              RETREAD

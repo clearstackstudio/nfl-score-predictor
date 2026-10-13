@@ -1,0 +1,2255 @@
+franchise,season,team_name,n_coaches,coach_slugs,coach_names,multi_coach
+atl,1966,Atlanta Falcons,1,HeckNo0,Hecker,0
+atl,1967,Atlanta Falcons,1,HeckNo0,Hecker,0
+atl,1968,Atlanta Falcons,2,VanBNo0|HeckNo0,Van Brocklin|Hecker,1
+atl,1969,Atlanta Falcons,1,VanBNo0,Van Brocklin,0
+atl,1970,Atlanta Falcons,1,VanBNo0,Van Brocklin,0
+atl,1971,Atlanta Falcons,1,VanBNo0,Van Brocklin,0
+atl,1972,Atlanta Falcons,1,VanBNo0,Van Brocklin,0
+atl,1973,Atlanta Falcons,1,VanBNo0,Van Brocklin,0
+atl,1974,Atlanta Falcons,2,VanBNo0|CampMa0,Van Brocklin|Campbell,1
+atl,1975,Atlanta Falcons,1,CampMa0,Campbell,0
+atl,1976,Atlanta Falcons,2,PeppPa0|CampMa0,Peppler|Campbell,1
+atl,1977,Atlanta Falcons,1,BennLe0,Bennett,0
+atl,1978,Atlanta Falcons,1,BennLe0,Bennett,0
+atl,1979,Atlanta Falcons,1,BennLe0,Bennett,0
+atl,1980,Atlanta Falcons,1,BennLe0,Bennett,0
+atl,1981,Atlanta Falcons,1,BennLe0,Bennett,0
+atl,1982,Atlanta Falcons,1,BennLe0,Bennett,0
+atl,1983,Atlanta Falcons,1,HennDa0,Henning,0
+atl,1984,Atlanta Falcons,1,HennDa0,Henning,0
+atl,1985,Atlanta Falcons,1,HennDa0,Henning,0
+atl,1986,Atlanta Falcons,1,HennDa0,Henning,0
+atl,1987,Atlanta Falcons,1,CampMa0,Campbell,0
+atl,1988,Atlanta Falcons,1,CampMa0,Campbell,0
+atl,1989,Atlanta Falcons,2,CampMa0|HaniJi0,Campbell|Hanifan,1
+atl,1990,Atlanta Falcons,1,GlanJe0,Glanville,0
+atl,1991,Atlanta Falcons,1,GlanJe0,Glanville,0
+atl,1992,Atlanta Falcons,1,GlanJe0,Glanville,0
+atl,1993,Atlanta Falcons,1,GlanJe0,Glanville,0
+atl,1994,Atlanta Falcons,1,JoneJu0,Jones,0
+atl,1995,Atlanta Falcons,1,JoneJu0,Jones,0
+atl,1996,Atlanta Falcons,1,JoneJu0,Jones,0
+atl,1997,Atlanta Falcons,1,ReevDa0,Reeves,0
+atl,1998,Atlanta Falcons,1,ReevDa0,Reeves,0
+atl,1999,Atlanta Falcons,1,ReevDa0,Reeves,0
+atl,2000,Atlanta Falcons,1,ReevDa0,Reeves,0
+atl,2001,Atlanta Falcons,1,ReevDa0,Reeves,0
+atl,2002,Atlanta Falcons,1,ReevDa0,Reeves,0
+atl,2003,Atlanta Falcons,2,ReevDa0|PhilWa0,Reeves|Phillips,1
+atl,2004,Atlanta Falcons,1,MoraJi1,Mora,0
+atl,2005,Atlanta Falcons,1,MoraJi1,Mora,0
+atl,2006,Atlanta Falcons,1,MoraJi1,Mora,0
+atl,2007,Atlanta Falcons,2,PetrBo0|ThomEm0,Petrino|Thomas,1
+atl,2008,Atlanta Falcons,1,SmitMi0,Smith,0
+atl,2009,Atlanta Falcons,1,SmitMi0,Smith,0
+atl,2010,Atlanta Falcons,1,SmitMi0,Smith,0
+atl,2011,Atlanta Falcons,1,SmitMi0,Smith,0
+atl,2012,Atlanta Falcons,1,SmitMi0,Smith,0
+atl,2013,Atlanta Falcons,1,SmitMi0,Smith,0
+atl,2014,Atlanta Falcons,1,SmitMi0,Smith,0
+atl,2015,Atlanta Falcons,1,QuinDa0,Quinn,0
+atl,2016,Atlanta Falcons,1,QuinDa0,Quinn,0
+atl,2017,Atlanta Falcons,1,QuinDa0,Quinn,0
+atl,2018,Atlanta Falcons,1,QuinDa0,Quinn,0
+atl,2019,Atlanta Falcons,1,QuinDa0,Quinn,0
+atl,2020,Atlanta Falcons,2,MorrRa0|QuinDa0,Morris|Quinn,1
+atl,2021,Atlanta Falcons,1,SmitAr0,Smith,0
+atl,2022,Atlanta Falcons,1,SmitAr0,Smith,0
+atl,2023,Atlanta Falcons,1,SmitAr0,Smith,0
+atl,2024,Atlanta Falcons,1,MorrRa0,Morris,0
+atl,2025,Atlanta Falcons,1,MorrRa0,Morris,0
+atl,2026,Atlanta Falcons,1,StefKe0,Stefanski,0
+buf,1960,Buffalo Bills,1,RamsGa0,Ramsey,0
+buf,1961,Buffalo Bills,1,RamsGa0,Ramsey,0
+buf,1962,Buffalo Bills,1,SabaLo0,Saban,0
+buf,1963,Buffalo Bills,1,SabaLo0,Saban,0
+buf,1964,Buffalo Bills,1,SabaLo0,Saban,0
+buf,1965,Buffalo Bills,1,SabaLo0,Saban,0
+buf,1966,Buffalo Bills,1,CollJo0,Collier,0
+buf,1967,Buffalo Bills,1,CollJo0,Collier,0
+buf,1968,Buffalo Bills,2,JohnHa0|CollJo0,Johnson|Collier,1
+buf,1969,Buffalo Bills,1,RaucJo0,Rauch,0
+buf,1970,Buffalo Bills,1,RaucJo0,Rauch,0
+buf,1971,Buffalo Bills,1,JohnHa0,Johnson,0
+buf,1972,Buffalo Bills,1,SabaLo0,Saban,0
+buf,1973,Buffalo Bills,1,SabaLo0,Saban,0
+buf,1974,Buffalo Bills,1,SabaLo0,Saban,0
+buf,1975,Buffalo Bills,1,SabaLo0,Saban,0
+buf,1976,Buffalo Bills,2,SabaLo0|RingJi0,Saban|Ringo,1
+buf,1977,Buffalo Bills,1,RingJi0,Ringo,0
+buf,1978,Buffalo Bills,1,KnoxCh0,Knox,0
+buf,1979,Buffalo Bills,1,KnoxCh0,Knox,0
+buf,1980,Buffalo Bills,1,KnoxCh0,Knox,0
+buf,1981,Buffalo Bills,1,KnoxCh0,Knox,0
+buf,1982,Buffalo Bills,1,KnoxCh0,Knox,0
+buf,1983,Buffalo Bills,1,StepKa0,Stephenson,0
+buf,1984,Buffalo Bills,1,StepKa0,Stephenson,0
+buf,1985,Buffalo Bills,2,BullHa0|StepKa0,Bullough|Stephenson,1
+buf,1986,Buffalo Bills,2,LevyMa0|BullHa0,Levy|Bullough,1
+buf,1987,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1988,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1989,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1990,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1991,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1992,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1993,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1994,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1995,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1996,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1997,Buffalo Bills,1,LevyMa0,Levy,0
+buf,1998,Buffalo Bills,1,PhilWa0,Phillips,0
+buf,1999,Buffalo Bills,1,PhilWa0,Phillips,0
+buf,2000,Buffalo Bills,1,PhilWa0,Phillips,0
+buf,2001,Buffalo Bills,1,WillGr0,Williams,0
+buf,2002,Buffalo Bills,1,WillGr0,Williams,0
+buf,2003,Buffalo Bills,1,WillGr0,Williams,0
+buf,2004,Buffalo Bills,1,MulaMi0,Mularkey,0
+buf,2005,Buffalo Bills,1,MulaMi0,Mularkey,0
+buf,2006,Buffalo Bills,1,JaurDi0,Jauron,0
+buf,2007,Buffalo Bills,1,JaurDi0,Jauron,0
+buf,2008,Buffalo Bills,1,JaurDi0,Jauron,0
+buf,2009,Buffalo Bills,2,JaurDi0|FewePe0,Jauron|Fewell,1
+buf,2010,Buffalo Bills,1,GailCh0,Gailey,0
+buf,2011,Buffalo Bills,1,GailCh0,Gailey,0
+buf,2012,Buffalo Bills,1,GailCh0,Gailey,0
+buf,2013,Buffalo Bills,1,MarrDo0,Marrone,0
+buf,2014,Buffalo Bills,1,MarrDo0,Marrone,0
+buf,2015,Buffalo Bills,1,RyanRe0,Ryan,0
+buf,2016,Buffalo Bills,2,RyanRe0|LynnAn0,Ryan|Lynn,1
+buf,2017,Buffalo Bills,1,McDeSe0,McDermott,0
+buf,2018,Buffalo Bills,1,McDeSe0,McDermott,0
+buf,2019,Buffalo Bills,1,McDeSe0,McDermott,0
+buf,2020,Buffalo Bills,1,McDeSe0,McDermott,0
+buf,2021,Buffalo Bills,1,McDeSe0,McDermott,0
+buf,2022,Buffalo Bills,1,McDeSe0,McDermott,0
+buf,2023,Buffalo Bills,1,McDeSe0,McDermott,0
+buf,2024,Buffalo Bills,1,McDeSe0,McDermott,0
+buf,2025,Buffalo Bills,1,McDeSe0,McDermott,0
+buf,2026,Buffalo Bills,1,BradJo0,Brady,0
+car,1995,Carolina Panthers,1,CapeDo0,Capers,0
+car,1996,Carolina Panthers,1,CapeDo0,Capers,0
+car,1997,Carolina Panthers,1,CapeDo0,Capers,0
+car,1998,Carolina Panthers,1,CapeDo0,Capers,0
+car,1999,Carolina Panthers,1,SeifGe0,Seifert,0
+car,2000,Carolina Panthers,1,SeifGe0,Seifert,0
+car,2001,Carolina Panthers,1,SeifGe0,Seifert,0
+car,2002,Carolina Panthers,1,FoxxJo0,Fox,0
+car,2003,Carolina Panthers,1,FoxxJo0,Fox,0
+car,2004,Carolina Panthers,1,FoxxJo0,Fox,0
+car,2005,Carolina Panthers,1,FoxxJo0,Fox,0
+car,2006,Carolina Panthers,1,FoxxJo0,Fox,0
+car,2007,Carolina Panthers,1,FoxxJo0,Fox,0
+car,2008,Carolina Panthers,1,FoxxJo0,Fox,0
+car,2009,Carolina Panthers,1,FoxxJo0,Fox,0
+car,2010,Carolina Panthers,1,FoxxJo0,Fox,0
+car,2011,Carolina Panthers,1,RiveRo0,Rivera,0
+car,2012,Carolina Panthers,1,RiveRo0,Rivera,0
+car,2013,Carolina Panthers,1,RiveRo0,Rivera,0
+car,2014,Carolina Panthers,1,RiveRo0,Rivera,0
+car,2015,Carolina Panthers,1,RiveRo0,Rivera,0
+car,2016,Carolina Panthers,1,RiveRo0,Rivera,0
+car,2017,Carolina Panthers,1,RiveRo0,Rivera,0
+car,2018,Carolina Panthers,1,RiveRo0,Rivera,0
+car,2019,Carolina Panthers,2,RiveRo0|FewePe0,Rivera|Fewell,1
+car,2020,Carolina Panthers,1,RhulMa0,Rhule,0
+car,2021,Carolina Panthers,1,RhulMa0,Rhule,0
+car,2022,Carolina Panthers,2,WilkSt0|RhulMa0,Wilks|Rhule,1
+car,2023,Carolina Panthers,2,TaboCh0|ReicFr0,Tabor|Reich,1
+car,2024,Carolina Panthers,1,CanaDa0,Canales,0
+car,2025,Carolina Panthers,1,CanaDa0,Canales,0
+car,2026,Carolina Panthers,1,CanaDa0,Canales,0
+chi,1920,Decatur Staleys,1,HalaGe0,Halas,0
+chi,1921,Chicago Staleys,1,HalaGe0,Halas,0
+chi,1922,Chicago Bears,1,HalaGe0,Halas,0
+chi,1923,Chicago Bears,1,HalaGe0,Halas,0
+chi,1924,Chicago Bears,1,HalaGe0,Halas,0
+chi,1925,Chicago Bears,1,HalaGe0,Halas,0
+chi,1926,Chicago Bears,1,HalaGe0,Halas,0
+chi,1927,Chicago Bears,1,HalaGe0,Halas,0
+chi,1928,Chicago Bears,1,HalaGe0,Halas,0
+chi,1929,Chicago Bears,1,HalaGe0,Halas,0
+chi,1930,Chicago Bears,1,JoneRa0,Jones,0
+chi,1931,Chicago Bears,1,JoneRa0,Jones,0
+chi,1932,Chicago Bears,1,JoneRa0,Jones,0
+chi,1933,Chicago Bears,1,HalaGe0,Halas,0
+chi,1934,Chicago Bears,1,HalaGe0,Halas,0
+chi,1935,Chicago Bears,1,HalaGe0,Halas,0
+chi,1936,Chicago Bears,1,HalaGe0,Halas,0
+chi,1937,Chicago Bears,1,HalaGe0,Halas,0
+chi,1938,Chicago Bears,1,HalaGe0,Halas,0
+chi,1939,Chicago Bears,1,HalaGe0,Halas,0
+chi,1940,Chicago Bears,1,HalaGe0,Halas,0
+chi,1941,Chicago Bears,1,HalaGe0,Halas,0
+chi,1942,Chicago Bears,3,JohnLu0|AndeHu0|HalaGe0,Johnsos|Anderson|Halas,1
+chi,1943,Chicago Bears,2,JohnLu0|AndeHu0,Johnsos|Anderson,1
+chi,1944,Chicago Bears,2,JohnLu0|AndeHu0,Johnsos|Anderson,1
+chi,1945,Chicago Bears,2,JohnLu0|AndeHu0,Johnsos|Anderson,1
+chi,1946,Chicago Bears,1,HalaGe0,Halas,0
+chi,1947,Chicago Bears,1,HalaGe0,Halas,0
+chi,1948,Chicago Bears,1,HalaGe0,Halas,0
+chi,1949,Chicago Bears,1,HalaGe0,Halas,0
+chi,1950,Chicago Bears,1,HalaGe0,Halas,0
+chi,1951,Chicago Bears,1,HalaGe0,Halas,0
+chi,1952,Chicago Bears,1,HalaGe0,Halas,0
+chi,1953,Chicago Bears,1,HalaGe0,Halas,0
+chi,1954,Chicago Bears,1,HalaGe0,Halas,0
+chi,1955,Chicago Bears,1,HalaGe0,Halas,0
+chi,1956,Chicago Bears,1,DrisPa0,Driscoll,0
+chi,1957,Chicago Bears,1,DrisPa0,Driscoll,0
+chi,1958,Chicago Bears,1,HalaGe0,Halas,0
+chi,1959,Chicago Bears,1,HalaGe0,Halas,0
+chi,1960,Chicago Bears,1,HalaGe0,Halas,0
+chi,1961,Chicago Bears,1,HalaGe0,Halas,0
+chi,1962,Chicago Bears,1,HalaGe0,Halas,0
+chi,1963,Chicago Bears,1,HalaGe0,Halas,0
+chi,1964,Chicago Bears,1,HalaGe0,Halas,0
+chi,1965,Chicago Bears,1,HalaGe0,Halas,0
+chi,1966,Chicago Bears,1,HalaGe0,Halas,0
+chi,1967,Chicago Bears,1,HalaGe0,Halas,0
+chi,1968,Chicago Bears,1,DoolJi0,Dooley,0
+chi,1969,Chicago Bears,1,DoolJi0,Dooley,0
+chi,1970,Chicago Bears,1,DoolJi0,Dooley,0
+chi,1971,Chicago Bears,1,DoolJi0,Dooley,0
+chi,1972,Chicago Bears,1,GibrAb0,Gibron,0
+chi,1973,Chicago Bears,1,GibrAb0,Gibron,0
+chi,1974,Chicago Bears,1,GibrAb0,Gibron,0
+chi,1975,Chicago Bears,1,PardJa0,Pardee,0
+chi,1976,Chicago Bears,1,PardJa0,Pardee,0
+chi,1977,Chicago Bears,1,PardJa0,Pardee,0
+chi,1978,Chicago Bears,1,ArmsNe0,Armstrong,0
+chi,1979,Chicago Bears,1,ArmsNe0,Armstrong,0
+chi,1980,Chicago Bears,1,ArmsNe0,Armstrong,0
+chi,1981,Chicago Bears,1,ArmsNe0,Armstrong,0
+chi,1982,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1983,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1984,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1985,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1986,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1987,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1988,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1989,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1990,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1991,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1992,Chicago Bears,1,DitkMi0,Ditka,0
+chi,1993,Chicago Bears,1,WannDa0,Wannstedt,0
+chi,1994,Chicago Bears,1,WannDa0,Wannstedt,0
+chi,1995,Chicago Bears,1,WannDa0,Wannstedt,0
+chi,1996,Chicago Bears,1,WannDa0,Wannstedt,0
+chi,1997,Chicago Bears,1,WannDa0,Wannstedt,0
+chi,1998,Chicago Bears,1,WannDa0,Wannstedt,0
+chi,1999,Chicago Bears,1,JaurDi0,Jauron,0
+chi,2000,Chicago Bears,1,JaurDi0,Jauron,0
+chi,2001,Chicago Bears,1,JaurDi0,Jauron,0
+chi,2002,Chicago Bears,1,JaurDi0,Jauron,0
+chi,2003,Chicago Bears,1,JaurDi0,Jauron,0
+chi,2004,Chicago Bears,1,SmitLo0,Smith,0
+chi,2005,Chicago Bears,1,SmitLo0,Smith,0
+chi,2006,Chicago Bears,1,SmitLo0,Smith,0
+chi,2007,Chicago Bears,1,SmitLo0,Smith,0
+chi,2008,Chicago Bears,1,SmitLo0,Smith,0
+chi,2009,Chicago Bears,1,SmitLo0,Smith,0
+chi,2010,Chicago Bears,1,SmitLo0,Smith,0
+chi,2011,Chicago Bears,1,SmitLo0,Smith,0
+chi,2012,Chicago Bears,1,SmitLo0,Smith,0
+chi,2013,Chicago Bears,1,TresMa0,Trestman,0
+chi,2014,Chicago Bears,1,TresMa0,Trestman,0
+chi,2015,Chicago Bears,1,FoxxJo0,Fox,0
+chi,2016,Chicago Bears,1,FoxxJo0,Fox,0
+chi,2017,Chicago Bears,1,FoxxJo0,Fox,0
+chi,2018,Chicago Bears,1,NagyMa0,Nagy,0
+chi,2019,Chicago Bears,1,NagyMa0,Nagy,0
+chi,2020,Chicago Bears,1,NagyMa0,Nagy,0
+chi,2021,Chicago Bears,1,NagyMa0,Nagy,0
+chi,2022,Chicago Bears,1,EberMa0,Eberflus,0
+chi,2023,Chicago Bears,1,EberMa0,Eberflus,0
+chi,2024,Chicago Bears,2,EberMa0|BrowTh0,Eberflus|Brown,1
+chi,2025,Chicago Bears,1,JohnBe0,Johnson,0
+chi,2026,Chicago Bears,1,JohnBe0,Johnson,0
+cin,1968,Cincinnati Bengals,1,BrowPa0,Brown,0
+cin,1969,Cincinnati Bengals,1,BrowPa0,Brown,0
+cin,1970,Cincinnati Bengals,1,BrowPa0,Brown,0
+cin,1971,Cincinnati Bengals,1,BrowPa0,Brown,0
+cin,1972,Cincinnati Bengals,1,BrowPa0,Brown,0
+cin,1973,Cincinnati Bengals,1,BrowPa0,Brown,0
+cin,1974,Cincinnati Bengals,1,BrowPa0,Brown,0
+cin,1975,Cincinnati Bengals,1,BrowPa0,Brown,0
+cin,1976,Cincinnati Bengals,1,JohnBi0,Johnson,0
+cin,1977,Cincinnati Bengals,1,JohnBi0,Johnson,0
+cin,1978,Cincinnati Bengals,2,RiceHo0|JohnBi0,Rice|Johnson,1
+cin,1979,Cincinnati Bengals,1,RiceHo0,Rice,0
+cin,1980,Cincinnati Bengals,1,GregFo0,Gregg,0
+cin,1981,Cincinnati Bengals,1,GregFo0,Gregg,0
+cin,1982,Cincinnati Bengals,1,GregFo0,Gregg,0
+cin,1983,Cincinnati Bengals,1,GregFo0,Gregg,0
+cin,1984,Cincinnati Bengals,1,WychSa0,Wyche,0
+cin,1985,Cincinnati Bengals,1,WychSa0,Wyche,0
+cin,1986,Cincinnati Bengals,1,WychSa0,Wyche,0
+cin,1987,Cincinnati Bengals,1,WychSa0,Wyche,0
+cin,1988,Cincinnati Bengals,1,WychSa0,Wyche,0
+cin,1989,Cincinnati Bengals,1,WychSa0,Wyche,0
+cin,1990,Cincinnati Bengals,1,WychSa0,Wyche,0
+cin,1991,Cincinnati Bengals,1,WychSa0,Wyche,0
+cin,1992,Cincinnati Bengals,1,ShulDa0,Shula,0
+cin,1993,Cincinnati Bengals,1,ShulDa0,Shula,0
+cin,1994,Cincinnati Bengals,1,ShulDa0,Shula,0
+cin,1995,Cincinnati Bengals,1,ShulDa0,Shula,0
+cin,1996,Cincinnati Bengals,2,CoslBr0|ShulDa0,Coslet|Shula,1
+cin,1997,Cincinnati Bengals,1,CoslBr0,Coslet,0
+cin,1998,Cincinnati Bengals,1,CoslBr0,Coslet,0
+cin,1999,Cincinnati Bengals,1,CoslBr0,Coslet,0
+cin,2000,Cincinnati Bengals,2,LeBeDi0|CoslBr0,LeBeau|Coslet,1
+cin,2001,Cincinnati Bengals,1,LeBeDi0,LeBeau,0
+cin,2002,Cincinnati Bengals,1,LeBeDi0,LeBeau,0
+cin,2003,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2004,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2005,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2006,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2007,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2008,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2009,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2010,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2011,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2012,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2013,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2014,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2015,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2016,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2017,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2018,Cincinnati Bengals,1,LewiMa0,Lewis,0
+cin,2019,Cincinnati Bengals,1,TaylZa0,Taylor,0
+cin,2020,Cincinnati Bengals,1,TaylZa0,Taylor,0
+cin,2021,Cincinnati Bengals,1,TaylZa0,Taylor,0
+cin,2022,Cincinnati Bengals,1,TaylZa0,Taylor,0
+cin,2023,Cincinnati Bengals,1,TaylZa0,Taylor,0
+cin,2024,Cincinnati Bengals,1,TaylZa0,Taylor,0
+cin,2025,Cincinnati Bengals,1,TaylZa0,Taylor,0
+cin,2026,Cincinnati Bengals,1,TaylZa0,Taylor,0
+cle,1946,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1947,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1948,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1949,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1950,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1951,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1952,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1953,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1954,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1955,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1956,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1957,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1958,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1959,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1960,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1961,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1962,Cleveland Browns,1,BrowPa0,Brown,0
+cle,1963,Cleveland Browns,1,CollBl0,Collier,0
+cle,1964,Cleveland Browns,1,CollBl0,Collier,0
+cle,1965,Cleveland Browns,1,CollBl0,Collier,0
+cle,1966,Cleveland Browns,1,CollBl0,Collier,0
+cle,1967,Cleveland Browns,1,CollBl0,Collier,0
+cle,1968,Cleveland Browns,1,CollBl0,Collier,0
+cle,1969,Cleveland Browns,1,CollBl0,Collier,0
+cle,1970,Cleveland Browns,1,CollBl0,Collier,0
+cle,1971,Cleveland Browns,1,SkorNi0,Skorich,0
+cle,1972,Cleveland Browns,1,SkorNi0,Skorich,0
+cle,1973,Cleveland Browns,1,SkorNi0,Skorich,0
+cle,1974,Cleveland Browns,1,SkorNi0,Skorich,0
+cle,1975,Cleveland Browns,1,GregFo0,Gregg,0
+cle,1976,Cleveland Browns,1,GregFo0,Gregg,0
+cle,1977,Cleveland Browns,2,GregFo0|ModzDi0,Gregg|Modzelewski,1
+cle,1978,Cleveland Browns,1,RutiSa0,Rutigliano,0
+cle,1979,Cleveland Browns,1,RutiSa0,Rutigliano,0
+cle,1980,Cleveland Browns,1,RutiSa0,Rutigliano,0
+cle,1981,Cleveland Browns,1,RutiSa0,Rutigliano,0
+cle,1982,Cleveland Browns,1,RutiSa0,Rutigliano,0
+cle,1983,Cleveland Browns,1,RutiSa0,Rutigliano,0
+cle,1984,Cleveland Browns,2,SchoMa0|RutiSa0,Schottenheimer|Rutigliano,1
+cle,1985,Cleveland Browns,1,SchoMa0,Schottenheimer,0
+cle,1986,Cleveland Browns,1,SchoMa0,Schottenheimer,0
+cle,1987,Cleveland Browns,1,SchoMa0,Schottenheimer,0
+cle,1988,Cleveland Browns,1,SchoMa0,Schottenheimer,0
+cle,1989,Cleveland Browns,1,CarsBu0,Carson,0
+cle,1990,Cleveland Browns,2,CarsBu0|ShofJi0,Carson|Shofner,1
+cle,1991,Cleveland Browns,1,BeliBi0,Belichick,0
+cle,1992,Cleveland Browns,1,BeliBi0,Belichick,0
+cle,1993,Cleveland Browns,1,BeliBi0,Belichick,0
+cle,1994,Cleveland Browns,1,BeliBi0,Belichick,0
+cle,1995,Cleveland Browns,1,BeliBi0,Belichick,0
+cle,1999,Cleveland Browns,1,PalmCh0,Palmer,0
+cle,2000,Cleveland Browns,1,PalmCh0,Palmer,0
+cle,2001,Cleveland Browns,1,DaviBu0,Davis,0
+cle,2002,Cleveland Browns,1,DaviBu0,Davis,0
+cle,2003,Cleveland Browns,1,DaviBu0,Davis,0
+cle,2004,Cleveland Browns,2,DaviBu0|RobiTe0,Davis|Robiskie,1
+cle,2005,Cleveland Browns,1,CrenRo0,Crennel,0
+cle,2006,Cleveland Browns,1,CrenRo0,Crennel,0
+cle,2007,Cleveland Browns,1,CrenRo0,Crennel,0
+cle,2008,Cleveland Browns,1,CrenRo0,Crennel,0
+cle,2009,Cleveland Browns,1,MangEr0,Mangini,0
+cle,2010,Cleveland Browns,1,MangEr0,Mangini,0
+cle,2011,Cleveland Browns,1,ShurPa0,Shurmur,0
+cle,2012,Cleveland Browns,1,ShurPa0,Shurmur,0
+cle,2013,Cleveland Browns,1,ChudRo0,Chudzinski,0
+cle,2014,Cleveland Browns,1,PettMi0,Pettine,0
+cle,2015,Cleveland Browns,1,PettMi0,Pettine,0
+cle,2016,Cleveland Browns,1,JackHu0,Jackson,0
+cle,2017,Cleveland Browns,1,JackHu0,Jackson,0
+cle,2018,Cleveland Browns,2,WillGr0|JackHu0,Williams|Jackson,1
+cle,2019,Cleveland Browns,1,KitcFr0,Kitchens,0
+cle,2020,Cleveland Browns,1,StefKe0,Stefanski,0
+cle,2021,Cleveland Browns,1,StefKe0,Stefanski,0
+cle,2022,Cleveland Browns,1,StefKe0,Stefanski,0
+cle,2023,Cleveland Browns,1,StefKe0,Stefanski,0
+cle,2024,Cleveland Browns,1,StefKe0,Stefanski,0
+cle,2025,Cleveland Browns,1,StefKe0,Stefanski,0
+cle,2026,Cleveland Browns,1,MonkTo0,Monken,0
+clt,1953,Baltimore Colts,1,MoleKe0,Molesworth,0
+clt,1954,Baltimore Colts,1,EwbaWe0,Ewbank,0
+clt,1955,Baltimore Colts,1,EwbaWe0,Ewbank,0
+clt,1956,Baltimore Colts,1,EwbaWe0,Ewbank,0
+clt,1957,Baltimore Colts,1,EwbaWe0,Ewbank,0
+clt,1958,Baltimore Colts,1,EwbaWe0,Ewbank,0
+clt,1959,Baltimore Colts,1,EwbaWe0,Ewbank,0
+clt,1960,Baltimore Colts,1,EwbaWe0,Ewbank,0
+clt,1961,Baltimore Colts,1,EwbaWe0,Ewbank,0
+clt,1962,Baltimore Colts,1,EwbaWe0,Ewbank,0
+clt,1963,Baltimore Colts,1,ShulDo0,Shula,0
+clt,1964,Baltimore Colts,1,ShulDo0,Shula,0
+clt,1965,Baltimore Colts,1,ShulDo0,Shula,0
+clt,1966,Baltimore Colts,1,ShulDo0,Shula,0
+clt,1967,Baltimore Colts,1,ShulDo0,Shula,0
+clt,1968,Baltimore Colts,1,ShulDo0,Shula,0
+clt,1969,Baltimore Colts,1,ShulDo0,Shula,0
+clt,1970,Baltimore Colts,1,McCaDo0,McCafferty,0
+clt,1971,Baltimore Colts,1,McCaDo0,McCafferty,0
+clt,1972,Baltimore Colts,2,SandJo0|McCaDo0,Sandusky|McCafferty,1
+clt,1973,Baltimore Colts,1,SchnHo0,Schnellenberger,0
+clt,1974,Baltimore Colts,2,ThomJo0|SchnHo0,Thomas|Schnellenberger,1
+clt,1975,Baltimore Colts,1,MarcTe0,Marchibroda,0
+clt,1976,Baltimore Colts,1,MarcTe0,Marchibroda,0
+clt,1977,Baltimore Colts,1,MarcTe0,Marchibroda,0
+clt,1978,Baltimore Colts,1,MarcTe0,Marchibroda,0
+clt,1979,Baltimore Colts,1,MarcTe0,Marchibroda,0
+clt,1980,Baltimore Colts,1,McCoMi0,McCormack,0
+clt,1981,Baltimore Colts,1,McCoMi0,McCormack,0
+clt,1982,Baltimore Colts,1,KushFr0,Kush,0
+clt,1983,Baltimore Colts,1,KushFr0,Kush,0
+clt,1984,Indianapolis Colts,2,KushFr0|HuntHa0,Kush|Hunter,1
+clt,1985,Indianapolis Colts,1,DowhRo0,Dowhower,0
+clt,1986,Indianapolis Colts,2,MeyeRo0|DowhRo0,Meyer|Dowhower,1
+clt,1987,Indianapolis Colts,1,MeyeRo0,Meyer,0
+clt,1988,Indianapolis Colts,1,MeyeRo0,Meyer,0
+clt,1989,Indianapolis Colts,1,MeyeRo0,Meyer,0
+clt,1990,Indianapolis Colts,1,MeyeRo0,Meyer,0
+clt,1991,Indianapolis Colts,2,VentRi0|MeyeRo0,Venturi|Meyer,1
+clt,1992,Indianapolis Colts,1,MarcTe0,Marchibroda,0
+clt,1993,Indianapolis Colts,1,MarcTe0,Marchibroda,0
+clt,1994,Indianapolis Colts,1,MarcTe0,Marchibroda,0
+clt,1995,Indianapolis Colts,1,MarcTe0,Marchibroda,0
+clt,1996,Indianapolis Colts,1,InfaLi0,Infante,0
+clt,1997,Indianapolis Colts,1,InfaLi0,Infante,0
+clt,1998,Indianapolis Colts,1,MoraJi0,Mora,0
+clt,1999,Indianapolis Colts,1,MoraJi0,Mora,0
+clt,2000,Indianapolis Colts,1,MoraJi0,Mora,0
+clt,2001,Indianapolis Colts,1,MoraJi0,Mora,0
+clt,2002,Indianapolis Colts,1,DungTo0,Dungy,0
+clt,2003,Indianapolis Colts,1,DungTo0,Dungy,0
+clt,2004,Indianapolis Colts,1,DungTo0,Dungy,0
+clt,2005,Indianapolis Colts,1,DungTo0,Dungy,0
+clt,2006,Indianapolis Colts,1,DungTo0,Dungy,0
+clt,2007,Indianapolis Colts,1,DungTo0,Dungy,0
+clt,2008,Indianapolis Colts,1,DungTo0,Dungy,0
+clt,2009,Indianapolis Colts,1,CaldJi0,Caldwell,0
+clt,2010,Indianapolis Colts,1,CaldJi0,Caldwell,0
+clt,2011,Indianapolis Colts,1,CaldJi0,Caldwell,0
+clt,2012,Indianapolis Colts,1,PagaCh0,Pagano,0
+clt,2013,Indianapolis Colts,1,PagaCh0,Pagano,0
+clt,2014,Indianapolis Colts,1,PagaCh0,Pagano,0
+clt,2015,Indianapolis Colts,1,PagaCh0,Pagano,0
+clt,2016,Indianapolis Colts,1,PagaCh0,Pagano,0
+clt,2017,Indianapolis Colts,1,PagaCh0,Pagano,0
+clt,2018,Indianapolis Colts,1,ReicFr0,Reich,0
+clt,2019,Indianapolis Colts,1,ReicFr0,Reich,0
+clt,2020,Indianapolis Colts,1,ReicFr0,Reich,0
+clt,2021,Indianapolis Colts,1,ReicFr0,Reich,0
+clt,2022,Indianapolis Colts,2,ReicFr0|SatuJe0,Reich|Saturday,1
+clt,2023,Indianapolis Colts,1,SteiSh0,Steichen,0
+clt,2024,Indianapolis Colts,1,SteiSh0,Steichen,0
+clt,2025,Indianapolis Colts,1,SteiSh0,Steichen,0
+clt,2026,Indianapolis Colts,1,SteiSh0,Steichen,0
+crd,1920,Chicago Cardinals,1,DrisPa0,Driscoll,0
+crd,1921,Chicago Cardinals,1,DrisPa0,Driscoll,0
+crd,1922,Chicago Cardinals,1,DrisPa0,Driscoll,0
+crd,1923,Chicago Cardinals,1,HorwAr0,Horween,0
+crd,1924,Chicago Cardinals,1,HorwAr0,Horween,0
+crd,1925,Chicago Cardinals,1,BarrNo0,Barry,0
+crd,1926,Chicago Cardinals,1,BarrNo0,Barry,0
+crd,1927,Chicago Cardinals,1,ChamGu0,Chamberlin,0
+crd,1928,Chicago Cardinals,1,GillFr0,Gillies,0
+crd,1929,Chicago Cardinals,1,ScanDe0,Scanlon,0
+crd,1930,Chicago Cardinals,1,NeveEr0,Nevers,0
+crd,1931,Chicago Cardinals,2,NeveEr0|AndrRo0,Nevers|Andrews,1
+crd,1932,Chicago Cardinals,1,ChevJa0,Chevigny,0
+crd,1933,Chicago Cardinals,1,SchiPa0,Schissler,0
+crd,1934,Chicago Cardinals,1,SchiPa0,Schissler,0
+crd,1935,Chicago Cardinals,1,CreiMi0,Creighton,0
+crd,1936,Chicago Cardinals,1,CreiMi0,Creighton,0
+crd,1937,Chicago Cardinals,1,CreiMi0,Creighton,0
+crd,1938,Chicago Cardinals,1,CreiMi0,Creighton,0
+crd,1939,Chicago Cardinals,1,NeveEr0,Nevers,0
+crd,1940,Chicago Cardinals,1,ConzJi0,Conzelman,0
+crd,1941,Chicago Cardinals,1,ConzJi0,Conzelman,0
+crd,1942,Chicago Cardinals,1,ConzJi0,Conzelman,0
+crd,1943,Chicago Cardinals,1,HandPh0,Handler,0
+crd,1944,Chi/Pit Cards/Steelers,2,KiesWa0|HandPh0,Kiesling|Handler,1
+crd,1945,Chicago Cardinals,1,HandPh0,Handler,0
+crd,1946,Chicago Cardinals,1,ConzJi0,Conzelman,0
+crd,1947,Chicago Cardinals,1,ConzJi0,Conzelman,0
+crd,1948,Chicago Cardinals,1,ConzJi0,Conzelman,0
+crd,1949,Chicago Cardinals,2,ParkRa0|HandPh0,Parker|Handler,1
+crd,1950,Chicago Cardinals,1,LambCu0,Lambeau,0
+crd,1951,Chicago Cardinals,3,LambCu0|IsbeCe0|HandPh0,Lambeau|Isbell|Handler,1
+crd,1952,Chicago Cardinals,1,KuhaJo0,Kuharich,0
+crd,1953,Chicago Cardinals,1,StydJo0,Stydahar,0
+crd,1954,Chicago Cardinals,1,StydJo0,Stydahar,0
+crd,1955,Chicago Cardinals,1,RichRa0,Richards,0
+crd,1956,Chicago Cardinals,1,RichRa0,Richards,0
+crd,1957,Chicago Cardinals,1,RichRa0,Richards,0
+crd,1958,Chicago Cardinals,1,IvyxPo0,Ivy,0
+crd,1959,Chicago Cardinals,1,IvyxPo0,Ivy,0
+crd,1960,St. Louis Cardinals,1,IvyxPo0,Ivy,0
+crd,1961,St. Louis Cardinals,4,IvyxPo0|WilsRa0|ProcRa0|DrulCh0,Ivy|Willsey|Prochaska|Drulis,1
+crd,1962,St. Louis Cardinals,1,LemmWa0,Lemm,0
+crd,1963,St. Louis Cardinals,1,LemmWa0,Lemm,0
+crd,1964,St. Louis Cardinals,1,LemmWa0,Lemm,0
+crd,1965,St. Louis Cardinals,1,LemmWa0,Lemm,0
+crd,1966,St. Louis Cardinals,1,WinnCh0,Winner,0
+crd,1967,St. Louis Cardinals,1,WinnCh0,Winner,0
+crd,1968,St. Louis Cardinals,1,WinnCh0,Winner,0
+crd,1969,St. Louis Cardinals,1,WinnCh0,Winner,0
+crd,1970,St. Louis Cardinals,1,WinnCh0,Winner,0
+crd,1971,St. Louis Cardinals,1,HollBo0,Hollway,0
+crd,1972,St. Louis Cardinals,1,HollBo0,Hollway,0
+crd,1973,St. Louis Cardinals,1,CoryDo0,Coryell,0
+crd,1974,St. Louis Cardinals,1,CoryDo0,Coryell,0
+crd,1975,St. Louis Cardinals,1,CoryDo0,Coryell,0
+crd,1976,St. Louis Cardinals,1,CoryDo0,Coryell,0
+crd,1977,St. Louis Cardinals,1,CoryDo0,Coryell,0
+crd,1978,St. Louis Cardinals,1,WilkBu0,Wilkinson,0
+crd,1979,St. Louis Cardinals,2,WilkBu0|WilsLa0,Wilkinson|Wilson,1
+crd,1980,St. Louis Cardinals,1,HaniJi0,Hanifan,0
+crd,1981,St. Louis Cardinals,1,HaniJi0,Hanifan,0
+crd,1982,St. Louis Cardinals,1,HaniJi0,Hanifan,0
+crd,1983,St. Louis Cardinals,1,HaniJi0,Hanifan,0
+crd,1984,St. Louis Cardinals,1,HaniJi0,Hanifan,0
+crd,1985,St. Louis Cardinals,1,HaniJi0,Hanifan,0
+crd,1986,St. Louis Cardinals,1,StalGe0,Stallings,0
+crd,1987,St. Louis Cardinals,1,StalGe0,Stallings,0
+crd,1988,Phoenix Cardinals,1,StalGe0,Stallings,0
+crd,1989,Phoenix Cardinals,2,StalGe0|KuhlHa0,Stallings|Kuhlmann,1
+crd,1990,Phoenix Cardinals,1,BugeJo0,Bugel,0
+crd,1991,Phoenix Cardinals,1,BugeJo0,Bugel,0
+crd,1992,Phoenix Cardinals,1,BugeJo0,Bugel,0
+crd,1993,Phoenix Cardinals,1,BugeJo0,Bugel,0
+crd,1994,Arizona Cardinals,1,RyanBu0,Ryan,0
+crd,1995,Arizona Cardinals,1,RyanBu0,Ryan,0
+crd,1996,Arizona Cardinals,1,TobiVi0,Tobin,0
+crd,1997,Arizona Cardinals,1,TobiVi0,Tobin,0
+crd,1998,Arizona Cardinals,1,TobiVi0,Tobin,0
+crd,1999,Arizona Cardinals,1,TobiVi0,Tobin,0
+crd,2000,Arizona Cardinals,2,TobiVi0|McGiDa0,Tobin|McGinnis,1
+crd,2001,Arizona Cardinals,1,McGiDa0,McGinnis,0
+crd,2002,Arizona Cardinals,1,McGiDa0,McGinnis,0
+crd,2003,Arizona Cardinals,1,McGiDa0,McGinnis,0
+crd,2004,Arizona Cardinals,1,GreeDe0,Green,0
+crd,2005,Arizona Cardinals,1,GreeDe0,Green,0
+crd,2006,Arizona Cardinals,1,GreeDe0,Green,0
+crd,2007,Arizona Cardinals,1,WhisKe0,Whisenhunt,0
+crd,2008,Arizona Cardinals,1,WhisKe0,Whisenhunt,0
+crd,2009,Arizona Cardinals,1,WhisKe0,Whisenhunt,0
+crd,2010,Arizona Cardinals,1,WhisKe0,Whisenhunt,0
+crd,2011,Arizona Cardinals,1,WhisKe0,Whisenhunt,0
+crd,2012,Arizona Cardinals,1,WhisKe0,Whisenhunt,0
+crd,2013,Arizona Cardinals,1,AriaBr0,Arians,0
+crd,2014,Arizona Cardinals,1,AriaBr0,Arians,0
+crd,2015,Arizona Cardinals,1,AriaBr0,Arians,0
+crd,2016,Arizona Cardinals,1,AriaBr0,Arians,0
+crd,2017,Arizona Cardinals,1,AriaBr0,Arians,0
+crd,2018,Arizona Cardinals,1,WilkSt0,Wilks,0
+crd,2019,Arizona Cardinals,1,KingKl0,Kingsbury,0
+crd,2020,Arizona Cardinals,1,KingKl0,Kingsbury,0
+crd,2021,Arizona Cardinals,1,KingKl0,Kingsbury,0
+crd,2022,Arizona Cardinals,1,KingKl0,Kingsbury,0
+crd,2023,Arizona Cardinals,1,GannJo0,Gannon,0
+crd,2024,Arizona Cardinals,1,GannJo0,Gannon,0
+crd,2025,Arizona Cardinals,1,GannJo0,Gannon,0
+crd,2026,Arizona Cardinals,1,LaFlMi0,LaFleur,0
+dal,1960,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1961,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1962,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1963,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1964,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1965,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1966,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1967,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1968,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1969,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1970,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1971,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1972,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1973,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1974,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1975,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1976,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1977,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1978,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1979,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1980,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1981,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1982,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1983,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1984,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1985,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1986,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1987,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1988,Dallas Cowboys,1,LandTo0,Landry,0
+dal,1989,Dallas Cowboys,1,JohnJi0,Johnson,0
+dal,1990,Dallas Cowboys,1,JohnJi0,Johnson,0
+dal,1991,Dallas Cowboys,1,JohnJi0,Johnson,0
+dal,1992,Dallas Cowboys,1,JohnJi0,Johnson,0
+dal,1993,Dallas Cowboys,1,JohnJi0,Johnson,0
+dal,1994,Dallas Cowboys,1,SwitBa0,Switzer,0
+dal,1995,Dallas Cowboys,1,SwitBa0,Switzer,0
+dal,1996,Dallas Cowboys,1,SwitBa0,Switzer,0
+dal,1997,Dallas Cowboys,1,SwitBa0,Switzer,0
+dal,1998,Dallas Cowboys,1,GailCh0,Gailey,0
+dal,1999,Dallas Cowboys,1,GailCh0,Gailey,0
+dal,2000,Dallas Cowboys,1,CampDa0,Campo,0
+dal,2001,Dallas Cowboys,1,CampDa0,Campo,0
+dal,2002,Dallas Cowboys,1,CampDa0,Campo,0
+dal,2003,Dallas Cowboys,1,ParcBi0,Parcells,0
+dal,2004,Dallas Cowboys,1,ParcBi0,Parcells,0
+dal,2005,Dallas Cowboys,1,ParcBi0,Parcells,0
+dal,2006,Dallas Cowboys,1,ParcBi0,Parcells,0
+dal,2007,Dallas Cowboys,1,PhilWa0,Phillips,0
+dal,2008,Dallas Cowboys,1,PhilWa0,Phillips,0
+dal,2009,Dallas Cowboys,1,PhilWa0,Phillips,0
+dal,2010,Dallas Cowboys,2,GarrJa0|PhilWa0,Garrett|Phillips,1
+dal,2011,Dallas Cowboys,1,GarrJa0,Garrett,0
+dal,2012,Dallas Cowboys,1,GarrJa0,Garrett,0
+dal,2013,Dallas Cowboys,1,GarrJa0,Garrett,0
+dal,2014,Dallas Cowboys,1,GarrJa0,Garrett,0
+dal,2015,Dallas Cowboys,1,GarrJa0,Garrett,0
+dal,2016,Dallas Cowboys,1,GarrJa0,Garrett,0
+dal,2017,Dallas Cowboys,1,GarrJa0,Garrett,0
+dal,2018,Dallas Cowboys,1,GarrJa0,Garrett,0
+dal,2019,Dallas Cowboys,1,GarrJa0,Garrett,0
+dal,2020,Dallas Cowboys,1,McCaMi0,McCarthy,0
+dal,2021,Dallas Cowboys,1,McCaMi0,McCarthy,0
+dal,2022,Dallas Cowboys,1,McCaMi0,McCarthy,0
+dal,2023,Dallas Cowboys,1,McCaMi0,McCarthy,0
+dal,2024,Dallas Cowboys,1,McCaMi0,McCarthy,0
+dal,2025,Dallas Cowboys,1,SchoBr0,Schottenheimer,0
+dal,2026,Dallas Cowboys,1,SchoBr0,Schottenheimer,0
+den,1960,Denver Broncos,1,FilcFr0,Filchock,0
+den,1961,Denver Broncos,1,FilcFr0,Filchock,0
+den,1962,Denver Broncos,1,FaulJa0,Faulkner,0
+den,1963,Denver Broncos,1,FaulJa0,Faulkner,0
+den,1964,Denver Broncos,2,SpeeMa0|FaulJa0,Speedie|Faulkner,1
+den,1965,Denver Broncos,1,SpeeMa0,Speedie,0
+den,1966,Denver Broncos,2,MalaRa0|SpeeMa0,Malavasi|Speedie,1
+den,1967,Denver Broncos,1,SabaLo0,Saban,0
+den,1968,Denver Broncos,1,SabaLo0,Saban,0
+den,1969,Denver Broncos,1,SabaLo0,Saban,0
+den,1970,Denver Broncos,1,SabaLo0,Saban,0
+den,1971,Denver Broncos,2,SmitJe0|SabaLo0,Smith|Saban,1
+den,1972,Denver Broncos,1,RalsJo0,Ralston,0
+den,1973,Denver Broncos,1,RalsJo0,Ralston,0
+den,1974,Denver Broncos,1,RalsJo0,Ralston,0
+den,1975,Denver Broncos,1,RalsJo0,Ralston,0
+den,1976,Denver Broncos,1,RalsJo0,Ralston,0
+den,1977,Denver Broncos,1,MillRe0,Miller,0
+den,1978,Denver Broncos,1,MillRe0,Miller,0
+den,1979,Denver Broncos,1,MillRe0,Miller,0
+den,1980,Denver Broncos,1,MillRe0,Miller,0
+den,1981,Denver Broncos,1,ReevDa0,Reeves,0
+den,1982,Denver Broncos,1,ReevDa0,Reeves,0
+den,1983,Denver Broncos,1,ReevDa0,Reeves,0
+den,1984,Denver Broncos,1,ReevDa0,Reeves,0
+den,1985,Denver Broncos,1,ReevDa0,Reeves,0
+den,1986,Denver Broncos,1,ReevDa0,Reeves,0
+den,1987,Denver Broncos,1,ReevDa0,Reeves,0
+den,1988,Denver Broncos,1,ReevDa0,Reeves,0
+den,1989,Denver Broncos,1,ReevDa0,Reeves,0
+den,1990,Denver Broncos,1,ReevDa0,Reeves,0
+den,1991,Denver Broncos,1,ReevDa0,Reeves,0
+den,1992,Denver Broncos,1,ReevDa0,Reeves,0
+den,1993,Denver Broncos,1,PhilWa0,Phillips,0
+den,1994,Denver Broncos,1,PhilWa0,Phillips,0
+den,1995,Denver Broncos,1,ShanMi0,Shanahan,0
+den,1996,Denver Broncos,1,ShanMi0,Shanahan,0
+den,1997,Denver Broncos,1,ShanMi0,Shanahan,0
+den,1998,Denver Broncos,1,ShanMi0,Shanahan,0
+den,1999,Denver Broncos,1,ShanMi0,Shanahan,0
+den,2000,Denver Broncos,1,ShanMi0,Shanahan,0
+den,2001,Denver Broncos,1,ShanMi0,Shanahan,0
+den,2002,Denver Broncos,1,ShanMi0,Shanahan,0
+den,2003,Denver Broncos,1,ShanMi0,Shanahan,0
+den,2004,Denver Broncos,1,ShanMi0,Shanahan,0
+den,2005,Denver Broncos,1,ShanMi0,Shanahan,0
+den,2006,Denver Broncos,1,ShanMi0,Shanahan,0
+den,2007,Denver Broncos,1,ShanMi0,Shanahan,0
+den,2008,Denver Broncos,1,ShanMi0,Shanahan,0
+den,2009,Denver Broncos,1,McDaJo0,McDaniels,0
+den,2010,Denver Broncos,2,McDaJo0|StudEr0,McDaniels|Studesville,1
+den,2011,Denver Broncos,1,FoxxJo0,Fox,0
+den,2012,Denver Broncos,1,FoxxJo0,Fox,0
+den,2013,Denver Broncos,1,FoxxJo0,Fox,0
+den,2014,Denver Broncos,1,FoxxJo0,Fox,0
+den,2015,Denver Broncos,1,KubiGa0,Kubiak,0
+den,2016,Denver Broncos,1,KubiGa0,Kubiak,0
+den,2017,Denver Broncos,1,JoseVa0,Joseph,0
+den,2018,Denver Broncos,1,JoseVa0,Joseph,0
+den,2019,Denver Broncos,1,FangVi0,Fangio,0
+den,2020,Denver Broncos,1,FangVi0,Fangio,0
+den,2021,Denver Broncos,1,FangVi0,Fangio,0
+den,2022,Denver Broncos,2,HackNa0|RosbJe0,Hackett|Rosburg,1
+den,2023,Denver Broncos,1,PaytSe0,Payton,0
+den,2024,Denver Broncos,1,PaytSe0,Payton,0
+den,2025,Denver Broncos,1,PaytSe0,Payton,0
+den,2026,Denver Broncos,1,PaytSe0,Payton,0
+det,1930,Portsmouth Spartans,1,GrifHa0,Griffen,0
+det,1931,Portsmouth Spartans,1,ClarPo0,Clark,0
+det,1932,Portsmouth Spartans,1,ClarPo0,Clark,0
+det,1933,Portsmouth Spartans,1,ClarPo0,Clark,0
+det,1934,Detroit Lions,1,ClarPo0,Clark,0
+det,1935,Detroit Lions,1,ClarPo0,Clark,0
+det,1936,Detroit Lions,1,ClarPo0,Clark,0
+det,1937,Detroit Lions,1,ClarDu0,Clark,0
+det,1938,Detroit Lions,1,ClarDu0,Clark,0
+det,1939,Detroit Lions,1,HendGu0,Henderson,0
+det,1940,Detroit Lions,1,ClarPo0,Clark,0
+det,1941,Detroit Lions,1,EdwaBi0,Edwards,0
+det,1942,Detroit Lions,2,KarcBu0|EdwaBi0,Karcis|Edwards,1
+det,1943,Detroit Lions,1,DoraGu0,Dorais,0
+det,1944,Detroit Lions,1,DoraGu0,Dorais,0
+det,1945,Detroit Lions,1,DoraGu0,Dorais,0
+det,1946,Detroit Lions,1,DoraGu0,Dorais,0
+det,1947,Detroit Lions,1,DoraGu0,Dorais,0
+det,1948,Detroit Lions,1,McMiAl0,McMillin,0
+det,1949,Detroit Lions,1,McMiAl0,McMillin,0
+det,1950,Detroit Lions,1,McMiAl0,McMillin,0
+det,1951,Detroit Lions,1,ParkRa0,Parker,0
+det,1952,Detroit Lions,1,ParkRa0,Parker,0
+det,1953,Detroit Lions,1,ParkRa0,Parker,0
+det,1954,Detroit Lions,1,ParkRa0,Parker,0
+det,1955,Detroit Lions,1,ParkRa0,Parker,0
+det,1956,Detroit Lions,1,ParkRa0,Parker,0
+det,1957,Detroit Lions,1,WilsGe0,Wilson,0
+det,1958,Detroit Lions,1,WilsGe0,Wilson,0
+det,1959,Detroit Lions,1,WilsGe0,Wilson,0
+det,1960,Detroit Lions,1,WilsGe0,Wilson,0
+det,1961,Detroit Lions,1,WilsGe0,Wilson,0
+det,1962,Detroit Lions,1,WilsGe0,Wilson,0
+det,1963,Detroit Lions,1,WilsGe0,Wilson,0
+det,1964,Detroit Lions,1,WilsGe0,Wilson,0
+det,1965,Detroit Lions,1,GilmHa0,Gilmer,0
+det,1966,Detroit Lions,1,GilmHa0,Gilmer,0
+det,1967,Detroit Lions,1,SchmJo0,Schmidt,0
+det,1968,Detroit Lions,1,SchmJo0,Schmidt,0
+det,1969,Detroit Lions,1,SchmJo0,Schmidt,0
+det,1970,Detroit Lions,1,SchmJo0,Schmidt,0
+det,1971,Detroit Lions,1,SchmJo0,Schmidt,0
+det,1972,Detroit Lions,1,SchmJo0,Schmidt,0
+det,1973,Detroit Lions,1,McCaDo0,McCafferty,0
+det,1974,Detroit Lions,1,ForzRi0,Forzano,0
+det,1975,Detroit Lions,1,ForzRi0,Forzano,0
+det,1976,Detroit Lions,2,HudsTo0|ForzRi0,Hudspeth|Forzano,1
+det,1977,Detroit Lions,1,HudsTo0,Hudspeth,0
+det,1978,Detroit Lions,1,ClarMo0,Clark,0
+det,1979,Detroit Lions,1,ClarMo0,Clark,0
+det,1980,Detroit Lions,1,ClarMo0,Clark,0
+det,1981,Detroit Lions,1,ClarMo0,Clark,0
+det,1982,Detroit Lions,1,ClarMo0,Clark,0
+det,1983,Detroit Lions,1,ClarMo0,Clark,0
+det,1984,Detroit Lions,1,ClarMo0,Clark,0
+det,1985,Detroit Lions,1,RogeDa0,Rogers,0
+det,1986,Detroit Lions,1,RogeDa0,Rogers,0
+det,1987,Detroit Lions,1,RogeDa0,Rogers,0
+det,1988,Detroit Lions,2,RogeDa0|FontWa0,Rogers|Fontes,1
+det,1989,Detroit Lions,1,FontWa0,Fontes,0
+det,1990,Detroit Lions,1,FontWa0,Fontes,0
+det,1991,Detroit Lions,1,FontWa0,Fontes,0
+det,1992,Detroit Lions,1,FontWa0,Fontes,0
+det,1993,Detroit Lions,1,FontWa0,Fontes,0
+det,1994,Detroit Lions,1,FontWa0,Fontes,0
+det,1995,Detroit Lions,1,FontWa0,Fontes,0
+det,1996,Detroit Lions,1,FontWa0,Fontes,0
+det,1997,Detroit Lions,1,RossBo0,Ross,0
+det,1998,Detroit Lions,1,RossBo0,Ross,0
+det,1999,Detroit Lions,1,RossBo0,Ross,0
+det,2000,Detroit Lions,2,RossBo0|MoelGa0,Ross|Moeller,1
+det,2001,Detroit Lions,1,MornMa0,Mornhinweg,0
+det,2002,Detroit Lions,1,MornMa0,Mornhinweg,0
+det,2003,Detroit Lions,1,MariSt0,Mariucci,0
+det,2004,Detroit Lions,1,MariSt0,Mariucci,0
+det,2005,Detroit Lions,2,MariSt0|JaurDi0,Mariucci|Jauron,1
+det,2006,Detroit Lions,1,MariRo0,Marinelli,0
+det,2007,Detroit Lions,1,MariRo0,Marinelli,0
+det,2008,Detroit Lions,1,MariRo0,Marinelli,0
+det,2009,Detroit Lions,1,SchwJi0,Schwartz,0
+det,2010,Detroit Lions,1,SchwJi0,Schwartz,0
+det,2011,Detroit Lions,1,SchwJi0,Schwartz,0
+det,2012,Detroit Lions,1,SchwJi0,Schwartz,0
+det,2013,Detroit Lions,1,SchwJi0,Schwartz,0
+det,2014,Detroit Lions,1,CaldJi0,Caldwell,0
+det,2015,Detroit Lions,1,CaldJi0,Caldwell,0
+det,2016,Detroit Lions,1,CaldJi0,Caldwell,0
+det,2017,Detroit Lions,1,CaldJi0,Caldwell,0
+det,2018,Detroit Lions,1,PatrMa0,Patricia,0
+det,2019,Detroit Lions,1,PatrMa0,Patricia,0
+det,2020,Detroit Lions,2,PatrMa0|BeveDa0,Patricia|Bevell,1
+det,2021,Detroit Lions,1,CampDa1,Campbell,0
+det,2022,Detroit Lions,1,CampDa1,Campbell,0
+det,2023,Detroit Lions,1,CampDa1,Campbell,0
+det,2024,Detroit Lions,1,CampDa1,Campbell,0
+det,2025,Detroit Lions,1,CampDa1,Campbell,0
+det,2026,Detroit Lions,1,CampDa1,Campbell,0
+gnb,1921,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1922,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1923,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1924,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1925,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1926,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1927,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1928,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1929,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1930,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1931,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1932,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1933,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1934,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1935,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1936,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1937,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1938,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1939,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1940,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1941,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1942,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1943,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1944,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1945,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1946,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1947,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1948,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1949,Green Bay Packers,1,LambCu0,Lambeau,0
+gnb,1950,Green Bay Packers,1,RonzGe0,Ronzani,0
+gnb,1951,Green Bay Packers,1,RonzGe0,Ronzani,0
+gnb,1952,Green Bay Packers,1,RonzGe0,Ronzani,0
+gnb,1953,Green Bay Packers,3,RonzGe0|McLeRa0|DevoHu0,Ronzani|McLean|Devore,1
+gnb,1954,Green Bay Packers,1,BlacLi0,Blackbourn,0
+gnb,1955,Green Bay Packers,1,BlacLi0,Blackbourn,0
+gnb,1956,Green Bay Packers,1,BlacLi0,Blackbourn,0
+gnb,1957,Green Bay Packers,1,BlacLi0,Blackbourn,0
+gnb,1958,Green Bay Packers,1,McLeRa0,McLean,0
+gnb,1959,Green Bay Packers,1,LombVi0,Lombardi,0
+gnb,1960,Green Bay Packers,1,LombVi0,Lombardi,0
+gnb,1961,Green Bay Packers,1,LombVi0,Lombardi,0
+gnb,1962,Green Bay Packers,1,LombVi0,Lombardi,0
+gnb,1963,Green Bay Packers,1,LombVi0,Lombardi,0
+gnb,1964,Green Bay Packers,1,LombVi0,Lombardi,0
+gnb,1965,Green Bay Packers,1,LombVi0,Lombardi,0
+gnb,1966,Green Bay Packers,1,LombVi0,Lombardi,0
+gnb,1967,Green Bay Packers,1,LombVi0,Lombardi,0
+gnb,1968,Green Bay Packers,1,BengPh0,Bengtson,0
+gnb,1969,Green Bay Packers,1,BengPh0,Bengtson,0
+gnb,1970,Green Bay Packers,1,BengPh0,Bengtson,0
+gnb,1971,Green Bay Packers,1,DeviDa0,Devine,0
+gnb,1972,Green Bay Packers,1,DeviDa0,Devine,0
+gnb,1973,Green Bay Packers,1,DeviDa0,Devine,0
+gnb,1974,Green Bay Packers,1,DeviDa0,Devine,0
+gnb,1975,Green Bay Packers,1,StarBa0,Starr,0
+gnb,1976,Green Bay Packers,1,StarBa0,Starr,0
+gnb,1977,Green Bay Packers,1,StarBa0,Starr,0
+gnb,1978,Green Bay Packers,1,StarBa0,Starr,0
+gnb,1979,Green Bay Packers,1,StarBa0,Starr,0
+gnb,1980,Green Bay Packers,1,StarBa0,Starr,0
+gnb,1981,Green Bay Packers,1,StarBa0,Starr,0
+gnb,1982,Green Bay Packers,1,StarBa0,Starr,0
+gnb,1983,Green Bay Packers,1,StarBa0,Starr,0
+gnb,1984,Green Bay Packers,1,GregFo0,Gregg,0
+gnb,1985,Green Bay Packers,1,GregFo0,Gregg,0
+gnb,1986,Green Bay Packers,1,GregFo0,Gregg,0
+gnb,1987,Green Bay Packers,1,GregFo0,Gregg,0
+gnb,1988,Green Bay Packers,1,InfaLi0,Infante,0
+gnb,1989,Green Bay Packers,1,InfaLi0,Infante,0
+gnb,1990,Green Bay Packers,1,InfaLi0,Infante,0
+gnb,1991,Green Bay Packers,1,InfaLi0,Infante,0
+gnb,1992,Green Bay Packers,1,HolmMi0,Holmgren,0
+gnb,1993,Green Bay Packers,1,HolmMi0,Holmgren,0
+gnb,1994,Green Bay Packers,1,HolmMi0,Holmgren,0
+gnb,1995,Green Bay Packers,1,HolmMi0,Holmgren,0
+gnb,1996,Green Bay Packers,1,HolmMi0,Holmgren,0
+gnb,1997,Green Bay Packers,1,HolmMi0,Holmgren,0
+gnb,1998,Green Bay Packers,1,HolmMi0,Holmgren,0
+gnb,1999,Green Bay Packers,1,RhodRa0,Rhodes,0
+gnb,2000,Green Bay Packers,1,SherMi0,Sherman,0
+gnb,2001,Green Bay Packers,1,SherMi0,Sherman,0
+gnb,2002,Green Bay Packers,1,SherMi0,Sherman,0
+gnb,2003,Green Bay Packers,1,SherMi0,Sherman,0
+gnb,2004,Green Bay Packers,1,SherMi0,Sherman,0
+gnb,2005,Green Bay Packers,1,SherMi0,Sherman,0
+gnb,2006,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2007,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2008,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2009,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2010,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2011,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2012,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2013,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2014,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2015,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2016,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2017,Green Bay Packers,1,McCaMi0,McCarthy,0
+gnb,2018,Green Bay Packers,2,McCaMi0|PhilJo0,McCarthy|Philbin,1
+gnb,2019,Green Bay Packers,1,LaFlMa0,LaFleur,0
+gnb,2020,Green Bay Packers,1,LaFlMa0,LaFleur,0
+gnb,2021,Green Bay Packers,1,LaFlMa0,LaFleur,0
+gnb,2022,Green Bay Packers,1,LaFlMa0,LaFleur,0
+gnb,2023,Green Bay Packers,1,LaFlMa0,LaFleur,0
+gnb,2024,Green Bay Packers,1,LaFlMa0,LaFleur,0
+gnb,2025,Green Bay Packers,1,LaFlMa0,LaFleur,0
+gnb,2026,Green Bay Packers,1,LaFlMa0,LaFleur,0
+htx,2002,Houston Texans,1,CapeDo0,Capers,0
+htx,2003,Houston Texans,1,CapeDo0,Capers,0
+htx,2004,Houston Texans,1,CapeDo0,Capers,0
+htx,2005,Houston Texans,1,CapeDo0,Capers,0
+htx,2006,Houston Texans,1,KubiGa0,Kubiak,0
+htx,2007,Houston Texans,1,KubiGa0,Kubiak,0
+htx,2008,Houston Texans,1,KubiGa0,Kubiak,0
+htx,2009,Houston Texans,1,KubiGa0,Kubiak,0
+htx,2010,Houston Texans,1,KubiGa0,Kubiak,0
+htx,2011,Houston Texans,1,KubiGa0,Kubiak,0
+htx,2012,Houston Texans,1,KubiGa0,Kubiak,0
+htx,2013,Houston Texans,2,KubiGa0|PhilWa0,Kubiak|Phillips,1
+htx,2014,Houston Texans,1,OBriBi0,O'Brien,0
+htx,2015,Houston Texans,1,OBriBi0,O'Brien,0
+htx,2016,Houston Texans,1,OBriBi0,O'Brien,0
+htx,2017,Houston Texans,1,OBriBi0,O'Brien,0
+htx,2018,Houston Texans,1,OBriBi0,O'Brien,0
+htx,2019,Houston Texans,1,OBriBi0,O'Brien,0
+htx,2020,Houston Texans,2,CrenRo0|OBriBi0,Crennel|O'Brien,1
+htx,2021,Houston Texans,1,CullDa0,Culley,0
+htx,2022,Houston Texans,1,SmitLo0,Smith,0
+htx,2023,Houston Texans,1,RyanDe0,Ryans,0
+htx,2024,Houston Texans,1,RyanDe0,Ryans,0
+htx,2025,Houston Texans,1,RyanDe0,Ryans,0
+htx,2026,Houston Texans,1,RyanDe0,Ryans,0
+jax,1995,Jacksonville Jaguars,1,CougTo0,Coughlin,0
+jax,1996,Jacksonville Jaguars,1,CougTo0,Coughlin,0
+jax,1997,Jacksonville Jaguars,1,CougTo0,Coughlin,0
+jax,1998,Jacksonville Jaguars,1,CougTo0,Coughlin,0
+jax,1999,Jacksonville Jaguars,1,CougTo0,Coughlin,0
+jax,2000,Jacksonville Jaguars,1,CougTo0,Coughlin,0
+jax,2001,Jacksonville Jaguars,1,CougTo0,Coughlin,0
+jax,2002,Jacksonville Jaguars,1,CougTo0,Coughlin,0
+jax,2003,Jacksonville Jaguars,1,DelRJa0,Del Rio,0
+jax,2004,Jacksonville Jaguars,1,DelRJa0,Del Rio,0
+jax,2005,Jacksonville Jaguars,1,DelRJa0,Del Rio,0
+jax,2006,Jacksonville Jaguars,1,DelRJa0,Del Rio,0
+jax,2007,Jacksonville Jaguars,1,DelRJa0,Del Rio,0
+jax,2008,Jacksonville Jaguars,1,DelRJa0,Del Rio,0
+jax,2009,Jacksonville Jaguars,1,DelRJa0,Del Rio,0
+jax,2010,Jacksonville Jaguars,1,DelRJa0,Del Rio,0
+jax,2011,Jacksonville Jaguars,2,DelRJa0|TuckMe0,Del Rio|Tucker,1
+jax,2012,Jacksonville Jaguars,1,MulaMi0,Mularkey,0
+jax,2013,Jacksonville Jaguars,1,BradGu0,Bradley,0
+jax,2014,Jacksonville Jaguars,1,BradGu0,Bradley,0
+jax,2015,Jacksonville Jaguars,1,BradGu0,Bradley,0
+jax,2016,Jacksonville Jaguars,2,BradGu0|MarrDo0,Bradley|Marrone,1
+jax,2017,Jacksonville Jaguars,1,MarrDo0,Marrone,0
+jax,2018,Jacksonville Jaguars,1,MarrDo0,Marrone,0
+jax,2019,Jacksonville Jaguars,1,MarrDo0,Marrone,0
+jax,2020,Jacksonville Jaguars,1,MarrDo0,Marrone,0
+jax,2021,Jacksonville Jaguars,2,MeyeUr0|BeveDa0,Meyer|Bevell,1
+jax,2022,Jacksonville Jaguars,1,PedeDo0,Pederson,0
+jax,2023,Jacksonville Jaguars,1,PedeDo0,Pederson,0
+jax,2024,Jacksonville Jaguars,1,PedeDo0,Pederson,0
+jax,2025,Jacksonville Jaguars,1,CoenLi0,Coen,0
+jax,2026,Jacksonville Jaguars,1,CoenLi0,Coen,0
+kan,1960,Dallas Texans,1,StraHa0,Stram,0
+kan,1961,Dallas Texans,1,StraHa0,Stram,0
+kan,1962,Dallas Texans,1,StraHa0,Stram,0
+kan,1963,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1964,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1965,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1966,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1967,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1968,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1969,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1970,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1971,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1972,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1973,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1974,Kansas City Chiefs,1,StraHa0,Stram,0
+kan,1975,Kansas City Chiefs,1,WiggPa0,Wiggin,0
+kan,1976,Kansas City Chiefs,1,WiggPa0,Wiggin,0
+kan,1977,Kansas City Chiefs,2,WiggPa0|BettTo0,Wiggin|Bettis,1
+kan,1978,Kansas City Chiefs,1,LevyMa0,Levy,0
+kan,1979,Kansas City Chiefs,1,LevyMa0,Levy,0
+kan,1980,Kansas City Chiefs,1,LevyMa0,Levy,0
+kan,1981,Kansas City Chiefs,1,LevyMa0,Levy,0
+kan,1982,Kansas City Chiefs,1,LevyMa0,Levy,0
+kan,1983,Kansas City Chiefs,1,MackJo0,Mackovic,0
+kan,1984,Kansas City Chiefs,1,MackJo0,Mackovic,0
+kan,1985,Kansas City Chiefs,1,MackJo0,Mackovic,0
+kan,1986,Kansas City Chiefs,1,MackJo0,Mackovic,0
+kan,1987,Kansas City Chiefs,1,GanzFr0,Gansz,0
+kan,1988,Kansas City Chiefs,1,GanzFr0,Gansz,0
+kan,1989,Kansas City Chiefs,1,SchoMa0,Schottenheimer,0
+kan,1990,Kansas City Chiefs,1,SchoMa0,Schottenheimer,0
+kan,1991,Kansas City Chiefs,1,SchoMa0,Schottenheimer,0
+kan,1992,Kansas City Chiefs,1,SchoMa0,Schottenheimer,0
+kan,1993,Kansas City Chiefs,1,SchoMa0,Schottenheimer,0
+kan,1994,Kansas City Chiefs,1,SchoMa0,Schottenheimer,0
+kan,1995,Kansas City Chiefs,1,SchoMa0,Schottenheimer,0
+kan,1996,Kansas City Chiefs,1,SchoMa0,Schottenheimer,0
+kan,1997,Kansas City Chiefs,1,SchoMa0,Schottenheimer,0
+kan,1998,Kansas City Chiefs,1,SchoMa0,Schottenheimer,0
+kan,1999,Kansas City Chiefs,1,CunnGu0,Cunningham,0
+kan,2000,Kansas City Chiefs,1,CunnGu0,Cunningham,0
+kan,2001,Kansas City Chiefs,1,VermDi0,Vermeil,0
+kan,2002,Kansas City Chiefs,1,VermDi0,Vermeil,0
+kan,2003,Kansas City Chiefs,1,VermDi0,Vermeil,0
+kan,2004,Kansas City Chiefs,1,VermDi0,Vermeil,0
+kan,2005,Kansas City Chiefs,1,VermDi0,Vermeil,0
+kan,2006,Kansas City Chiefs,1,EdwaHe0,Edwards,0
+kan,2007,Kansas City Chiefs,1,EdwaHe0,Edwards,0
+kan,2008,Kansas City Chiefs,1,EdwaHe0,Edwards,0
+kan,2009,Kansas City Chiefs,1,HaleTo0,Haley,0
+kan,2010,Kansas City Chiefs,1,HaleTo0,Haley,0
+kan,2011,Kansas City Chiefs,2,HaleTo0|CrenRo0,Haley|Crennel,1
+kan,2012,Kansas City Chiefs,1,CrenRo0,Crennel,0
+kan,2013,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2014,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2015,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2016,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2017,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2018,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2019,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2020,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2021,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2022,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2023,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2024,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2025,Kansas City Chiefs,1,ReidAn0,Reid,0
+kan,2026,Kansas City Chiefs,1,ReidAn0,Reid,0
+mia,1966,Miami Dolphins,1,WilsGe0,Wilson,0
+mia,1967,Miami Dolphins,1,WilsGe0,Wilson,0
+mia,1968,Miami Dolphins,1,WilsGe0,Wilson,0
+mia,1969,Miami Dolphins,1,WilsGe0,Wilson,0
+mia,1970,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1971,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1972,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1973,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1974,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1975,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1976,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1977,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1978,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1979,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1980,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1981,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1982,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1983,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1984,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1985,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1986,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1987,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1988,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1989,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1990,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1991,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1992,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1993,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1994,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1995,Miami Dolphins,1,ShulDo0,Shula,0
+mia,1996,Miami Dolphins,1,JohnJi0,Johnson,0
+mia,1997,Miami Dolphins,1,JohnJi0,Johnson,0
+mia,1998,Miami Dolphins,1,JohnJi0,Johnson,0
+mia,1999,Miami Dolphins,1,JohnJi0,Johnson,0
+mia,2000,Miami Dolphins,1,WannDa0,Wannstedt,0
+mia,2001,Miami Dolphins,1,WannDa0,Wannstedt,0
+mia,2002,Miami Dolphins,1,WannDa0,Wannstedt,0
+mia,2003,Miami Dolphins,1,WannDa0,Wannstedt,0
+mia,2004,Miami Dolphins,2,BateJi0|WannDa0,Bates|Wannstedt,1
+mia,2005,Miami Dolphins,1,SabaNi0,Saban,0
+mia,2006,Miami Dolphins,1,SabaNi0,Saban,0
+mia,2007,Miami Dolphins,1,CameCa0,Cameron,0
+mia,2008,Miami Dolphins,1,SparTo0,Sparano,0
+mia,2009,Miami Dolphins,1,SparTo0,Sparano,0
+mia,2010,Miami Dolphins,1,SparTo0,Sparano,0
+mia,2011,Miami Dolphins,2,SparTo0|BowlTo0,Sparano|Bowles,1
+mia,2012,Miami Dolphins,1,PhilJo0,Philbin,0
+mia,2013,Miami Dolphins,1,PhilJo0,Philbin,0
+mia,2014,Miami Dolphins,1,PhilJo0,Philbin,0
+mia,2015,Miami Dolphins,2,CampDa1|PhilJo0,Campbell|Philbin,1
+mia,2016,Miami Dolphins,1,GaseAd0,Gase,0
+mia,2017,Miami Dolphins,1,GaseAd0,Gase,0
+mia,2018,Miami Dolphins,1,GaseAd0,Gase,0
+mia,2019,Miami Dolphins,1,FlorBr0,Flores,0
+mia,2020,Miami Dolphins,1,FlorBr0,Flores,0
+mia,2021,Miami Dolphins,1,FlorBr0,Flores,0
+mia,2022,Miami Dolphins,1,McDaMi0,McDaniel,0
+mia,2023,Miami Dolphins,1,McDaMi0,McDaniel,0
+mia,2024,Miami Dolphins,1,McDaMi0,McDaniel,0
+mia,2025,Miami Dolphins,1,McDaMi0,McDaniel,0
+mia,2026,Miami Dolphins,1,HaflJe0,Hafley,0
+min,1961,Minnesota Vikings,1,VanBNo0,Van Brocklin,0
+min,1962,Minnesota Vikings,1,VanBNo0,Van Brocklin,0
+min,1963,Minnesota Vikings,1,VanBNo0,Van Brocklin,0
+min,1964,Minnesota Vikings,1,VanBNo0,Van Brocklin,0
+min,1965,Minnesota Vikings,1,VanBNo0,Van Brocklin,0
+min,1966,Minnesota Vikings,1,VanBNo0,Van Brocklin,0
+min,1967,Minnesota Vikings,1,GranBu0,Grant,0
+min,1968,Minnesota Vikings,1,GranBu0,Grant,0
+min,1969,Minnesota Vikings,1,GranBu0,Grant,0
+min,1970,Minnesota Vikings,1,GranBu0,Grant,0
+min,1971,Minnesota Vikings,1,GranBu0,Grant,0
+min,1972,Minnesota Vikings,1,GranBu0,Grant,0
+min,1973,Minnesota Vikings,1,GranBu0,Grant,0
+min,1974,Minnesota Vikings,1,GranBu0,Grant,0
+min,1975,Minnesota Vikings,1,GranBu0,Grant,0
+min,1976,Minnesota Vikings,1,GranBu0,Grant,0
+min,1977,Minnesota Vikings,1,GranBu0,Grant,0
+min,1978,Minnesota Vikings,1,GranBu0,Grant,0
+min,1979,Minnesota Vikings,1,GranBu0,Grant,0
+min,1980,Minnesota Vikings,1,GranBu0,Grant,0
+min,1981,Minnesota Vikings,1,GranBu0,Grant,0
+min,1982,Minnesota Vikings,1,GranBu0,Grant,0
+min,1983,Minnesota Vikings,1,GranBu0,Grant,0
+min,1984,Minnesota Vikings,1,StecLe0,Steckel,0
+min,1985,Minnesota Vikings,1,GranBu0,Grant,0
+min,1986,Minnesota Vikings,1,BurnJe0,Burns,0
+min,1987,Minnesota Vikings,1,BurnJe0,Burns,0
+min,1988,Minnesota Vikings,1,BurnJe0,Burns,0
+min,1989,Minnesota Vikings,1,BurnJe0,Burns,0
+min,1990,Minnesota Vikings,1,BurnJe0,Burns,0
+min,1991,Minnesota Vikings,1,BurnJe0,Burns,0
+min,1992,Minnesota Vikings,1,GreeDe0,Green,0
+min,1993,Minnesota Vikings,1,GreeDe0,Green,0
+min,1994,Minnesota Vikings,1,GreeDe0,Green,0
+min,1995,Minnesota Vikings,1,GreeDe0,Green,0
+min,1996,Minnesota Vikings,1,GreeDe0,Green,0
+min,1997,Minnesota Vikings,1,GreeDe0,Green,0
+min,1998,Minnesota Vikings,1,GreeDe0,Green,0
+min,1999,Minnesota Vikings,1,GreeDe0,Green,0
+min,2000,Minnesota Vikings,1,GreeDe0,Green,0
+min,2001,Minnesota Vikings,2,GreeDe0|TiceMi0,Green|Tice,1
+min,2002,Minnesota Vikings,1,TiceMi0,Tice,0
+min,2003,Minnesota Vikings,1,TiceMi0,Tice,0
+min,2004,Minnesota Vikings,1,TiceMi0,Tice,0
+min,2005,Minnesota Vikings,1,TiceMi0,Tice,0
+min,2006,Minnesota Vikings,1,ChilBr0,Childress,0
+min,2007,Minnesota Vikings,1,ChilBr0,Childress,0
+min,2008,Minnesota Vikings,1,ChilBr0,Childress,0
+min,2009,Minnesota Vikings,1,ChilBr0,Childress,0
+min,2010,Minnesota Vikings,2,FrazLe0|ChilBr0,Frazier|Childress,1
+min,2011,Minnesota Vikings,1,FrazLe0,Frazier,0
+min,2012,Minnesota Vikings,1,FrazLe0,Frazier,0
+min,2013,Minnesota Vikings,1,FrazLe0,Frazier,0
+min,2014,Minnesota Vikings,1,ZimmMi0,Zimmer,0
+min,2015,Minnesota Vikings,1,ZimmMi0,Zimmer,0
+min,2016,Minnesota Vikings,1,ZimmMi0,Zimmer,0
+min,2017,Minnesota Vikings,1,ZimmMi0,Zimmer,0
+min,2018,Minnesota Vikings,1,ZimmMi0,Zimmer,0
+min,2019,Minnesota Vikings,1,ZimmMi0,Zimmer,0
+min,2020,Minnesota Vikings,1,ZimmMi0,Zimmer,0
+min,2021,Minnesota Vikings,1,ZimmMi0,Zimmer,0
+min,2022,Minnesota Vikings,1,OConKe0,O'Connell,0
+min,2023,Minnesota Vikings,1,OConKe0,O'Connell,0
+min,2024,Minnesota Vikings,1,OConKe0,O'Connell,0
+min,2025,Minnesota Vikings,1,OConKe0,O'Connell,0
+min,2026,Minnesota Vikings,1,OConKe0,O'Connell,0
+nor,1967,New Orleans Saints,1,FearTo0,Fears,0
+nor,1968,New Orleans Saints,1,FearTo0,Fears,0
+nor,1969,New Orleans Saints,1,FearTo0,Fears,0
+nor,1970,New Orleans Saints,1,FearTo0,Fears,0
+nor,1971,New Orleans Saints,1,,Roberts,0
+nor,1972,New Orleans Saints,1,,Roberts,0
+nor,1973,New Orleans Saints,1,NortJo0,North,0
+nor,1974,New Orleans Saints,1,NortJo0,North,0
+nor,1975,New Orleans Saints,2,NortJo0|HeffEr0,North|Hefferle,1
+nor,1976,New Orleans Saints,1,StraHa0,Stram,0
+nor,1977,New Orleans Saints,1,StraHa0,Stram,0
+nor,1978,New Orleans Saints,1,NolaDi0,Nolan,0
+nor,1979,New Orleans Saints,1,NolaDi0,Nolan,0
+nor,1980,New Orleans Saints,2,StanDi0|NolaDi0,Stanfel|Nolan,1
+nor,1981,New Orleans Saints,1,PhilBu0,Phillips,0
+nor,1982,New Orleans Saints,1,PhilBu0,Phillips,0
+nor,1983,New Orleans Saints,1,PhilBu0,Phillips,0
+nor,1984,New Orleans Saints,1,PhilBu0,Phillips,0
+nor,1985,New Orleans Saints,2,PhilBu0|PhilWa0,Phillips|Phillips,1
+nor,1986,New Orleans Saints,1,MoraJi0,Mora,0
+nor,1987,New Orleans Saints,1,MoraJi0,Mora,0
+nor,1988,New Orleans Saints,1,MoraJi0,Mora,0
+nor,1989,New Orleans Saints,1,MoraJi0,Mora,0
+nor,1990,New Orleans Saints,1,MoraJi0,Mora,0
+nor,1991,New Orleans Saints,1,MoraJi0,Mora,0
+nor,1992,New Orleans Saints,1,MoraJi0,Mora,0
+nor,1993,New Orleans Saints,1,MoraJi0,Mora,0
+nor,1994,New Orleans Saints,1,MoraJi0,Mora,0
+nor,1995,New Orleans Saints,1,MoraJi0,Mora,0
+nor,1996,New Orleans Saints,2,MoraJi0|VentRi0,Mora|Venturi,1
+nor,1997,New Orleans Saints,1,DitkMi0,Ditka,0
+nor,1998,New Orleans Saints,1,DitkMi0,Ditka,0
+nor,1999,New Orleans Saints,1,DitkMi0,Ditka,0
+nor,2000,New Orleans Saints,1,HaslJi0,Haslett,0
+nor,2001,New Orleans Saints,1,HaslJi0,Haslett,0
+nor,2002,New Orleans Saints,1,HaslJi0,Haslett,0
+nor,2003,New Orleans Saints,1,HaslJi0,Haslett,0
+nor,2004,New Orleans Saints,1,HaslJi0,Haslett,0
+nor,2005,New Orleans Saints,1,HaslJi0,Haslett,0
+nor,2006,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2007,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2008,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2009,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2010,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2011,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2012,New Orleans Saints,2,VittJo0|KromAa0,Vitt|Kromer,1
+nor,2013,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2014,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2015,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2016,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2017,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2018,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2019,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2020,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2021,New Orleans Saints,1,PaytSe0,Payton,0
+nor,2022,New Orleans Saints,1,AlleDe0,Allen,0
+nor,2023,New Orleans Saints,1,AlleDe0,Allen,0
+nor,2024,New Orleans Saints,2,RizzDa0|AlleDe0,Rizzi|Allen,1
+nor,2025,New Orleans Saints,1,MoorKe0,Moore,0
+nor,2026,New Orleans Saints,1,MoorKe0,Moore,0
+nwe,1960,Boston Patriots,1,SabaLo0,Saban,0
+nwe,1961,Boston Patriots,2,HoloMi0|SabaLo0,Holovak|Saban,1
+nwe,1962,Boston Patriots,1,HoloMi0,Holovak,0
+nwe,1963,Boston Patriots,1,HoloMi0,Holovak,0
+nwe,1964,Boston Patriots,1,HoloMi0,Holovak,0
+nwe,1965,Boston Patriots,1,HoloMi0,Holovak,0
+nwe,1966,Boston Patriots,1,HoloMi0,Holovak,0
+nwe,1967,Boston Patriots,1,HoloMi0,Holovak,0
+nwe,1968,Boston Patriots,1,HoloMi0,Holovak,0
+nwe,1969,Boston Patriots,1,RushCl0,Rush,0
+nwe,1970,Boston Patriots,2,RushCl0|MazuJo0,Rush|Mazur,1
+nwe,1971,New England Patriots,1,MazuJo0,Mazur,0
+nwe,1972,New England Patriots,2,MazuJo0|BengPh0,Mazur|Bengtson,1
+nwe,1973,New England Patriots,1,FairCh0,Fairbanks,0
+nwe,1974,New England Patriots,1,FairCh0,Fairbanks,0
+nwe,1975,New England Patriots,1,FairCh0,Fairbanks,0
+nwe,1976,New England Patriots,1,FairCh0,Fairbanks,0
+nwe,1977,New England Patriots,1,FairCh0,Fairbanks,0
+nwe,1978,New England Patriots,3,FairCh0|ErhaRo0|BullHa0,Fairbanks|Erhardt|Bullough,1
+nwe,1979,New England Patriots,1,ErhaRo0,Erhardt,0
+nwe,1980,New England Patriots,1,ErhaRo0,Erhardt,0
+nwe,1981,New England Patriots,1,ErhaRo0,Erhardt,0
+nwe,1982,New England Patriots,1,MeyeRo0,Meyer,0
+nwe,1983,New England Patriots,1,MeyeRo0,Meyer,0
+nwe,1984,New England Patriots,2,MeyeRo0|BerrRa0,Meyer|Berry,1
+nwe,1985,New England Patriots,1,BerrRa0,Berry,0
+nwe,1986,New England Patriots,1,BerrRa0,Berry,0
+nwe,1987,New England Patriots,1,BerrRa0,Berry,0
+nwe,1988,New England Patriots,1,BerrRa0,Berry,0
+nwe,1989,New England Patriots,1,BerrRa0,Berry,0
+nwe,1990,New England Patriots,1,RustRo0,Rust,0
+nwe,1991,New England Patriots,1,McPhDi0,MacPherson,0
+nwe,1992,New England Patriots,1,McPhDi0,MacPherson,0
+nwe,1993,New England Patriots,1,ParcBi0,Parcells,0
+nwe,1994,New England Patriots,1,ParcBi0,Parcells,0
+nwe,1995,New England Patriots,1,ParcBi0,Parcells,0
+nwe,1996,New England Patriots,1,ParcBi0,Parcells,0
+nwe,1997,New England Patriots,1,CarrPe0,Carroll,0
+nwe,1998,New England Patriots,1,CarrPe0,Carroll,0
+nwe,1999,New England Patriots,1,CarrPe0,Carroll,0
+nwe,2000,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2001,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2002,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2003,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2004,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2005,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2006,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2007,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2008,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2009,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2010,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2011,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2012,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2013,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2014,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2015,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2016,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2017,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2018,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2019,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2020,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2021,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2022,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2023,New England Patriots,1,BeliBi0,Belichick,0
+nwe,2024,New England Patriots,1,MayoJe0,Mayo,0
+nwe,2025,New England Patriots,1,VrabMi0,Vrabel,0
+nwe,2026,New England Patriots,1,VrabMi0,Vrabel,0
+nyg,1925,New York Giants,1,FolwBo0,Folwell,0
+nyg,1926,New York Giants,1,AlexDo0,Alexander,0
+nyg,1927,New York Giants,1,PottEa0,Potteiger,0
+nyg,1928,New York Giants,1,PottEa0,Potteiger,0
+nyg,1929,New York Giants,1,AndrRo0,Andrews,0
+nyg,1930,New York Giants,3,AndrRo0|OwenSt0|FrieBe0,Andrews|Owen|Friedman,1
+nyg,1931,New York Giants,1,OwenSt0,Owen,0
+nyg,1932,New York Giants,1,OwenSt0,Owen,0
+nyg,1933,New York Giants,1,OwenSt0,Owen,0
+nyg,1934,New York Giants,1,OwenSt0,Owen,0
+nyg,1935,New York Giants,1,OwenSt0,Owen,0
+nyg,1936,New York Giants,1,OwenSt0,Owen,0
+nyg,1937,New York Giants,1,OwenSt0,Owen,0
+nyg,1938,New York Giants,1,OwenSt0,Owen,0
+nyg,1939,New York Giants,1,OwenSt0,Owen,0
+nyg,1940,New York Giants,1,OwenSt0,Owen,0
+nyg,1941,New York Giants,1,OwenSt0,Owen,0
+nyg,1942,New York Giants,1,OwenSt0,Owen,0
+nyg,1943,New York Giants,1,OwenSt0,Owen,0
+nyg,1944,New York Giants,1,OwenSt0,Owen,0
+nyg,1945,New York Giants,1,OwenSt0,Owen,0
+nyg,1946,New York Giants,1,OwenSt0,Owen,0
+nyg,1947,New York Giants,1,OwenSt0,Owen,0
+nyg,1948,New York Giants,1,OwenSt0,Owen,0
+nyg,1949,New York Giants,1,OwenSt0,Owen,0
+nyg,1950,New York Giants,1,OwenSt0,Owen,0
+nyg,1951,New York Giants,1,OwenSt0,Owen,0
+nyg,1952,New York Giants,1,OwenSt0,Owen,0
+nyg,1953,New York Giants,1,OwenSt0,Owen,0
+nyg,1954,New York Giants,1,HoweJi0,Howell,0
+nyg,1955,New York Giants,1,HoweJi0,Howell,0
+nyg,1956,New York Giants,1,HoweJi0,Howell,0
+nyg,1957,New York Giants,1,HoweJi0,Howell,0
+nyg,1958,New York Giants,1,HoweJi0,Howell,0
+nyg,1959,New York Giants,1,HoweJi0,Howell,0
+nyg,1960,New York Giants,1,HoweJi0,Howell,0
+nyg,1961,New York Giants,1,SherAl0,Sherman,0
+nyg,1962,New York Giants,1,SherAl0,Sherman,0
+nyg,1963,New York Giants,1,SherAl0,Sherman,0
+nyg,1964,New York Giants,1,SherAl0,Sherman,0
+nyg,1965,New York Giants,1,SherAl0,Sherman,0
+nyg,1966,New York Giants,1,SherAl0,Sherman,0
+nyg,1967,New York Giants,1,SherAl0,Sherman,0
+nyg,1968,New York Giants,1,SherAl0,Sherman,0
+nyg,1969,New York Giants,1,WebsAl0,Webster,0
+nyg,1970,New York Giants,1,WebsAl0,Webster,0
+nyg,1971,New York Giants,1,WebsAl0,Webster,0
+nyg,1972,New York Giants,1,WebsAl0,Webster,0
+nyg,1973,New York Giants,1,WebsAl0,Webster,0
+nyg,1974,New York Giants,1,ArnsBi0,Arnsparger,0
+nyg,1975,New York Giants,1,ArnsBi0,Arnsparger,0
+nyg,1976,New York Giants,2,McVaJo0|ArnsBi0,McVay|Arnsparger,1
+nyg,1977,New York Giants,1,McVaJo0,McVay,0
+nyg,1978,New York Giants,1,McVaJo0,McVay,0
+nyg,1979,New York Giants,1,PerkRa0,Perkins,0
+nyg,1980,New York Giants,1,PerkRa0,Perkins,0
+nyg,1981,New York Giants,1,PerkRa0,Perkins,0
+nyg,1982,New York Giants,1,PerkRa0,Perkins,0
+nyg,1983,New York Giants,1,ParcBi0,Parcells,0
+nyg,1984,New York Giants,1,ParcBi0,Parcells,0
+nyg,1985,New York Giants,1,ParcBi0,Parcells,0
+nyg,1986,New York Giants,1,ParcBi0,Parcells,0
+nyg,1987,New York Giants,1,ParcBi0,Parcells,0
+nyg,1988,New York Giants,1,ParcBi0,Parcells,0
+nyg,1989,New York Giants,1,ParcBi0,Parcells,0
+nyg,1990,New York Giants,1,ParcBi0,Parcells,0
+nyg,1991,New York Giants,1,HandRa0,Handley,0
+nyg,1992,New York Giants,1,HandRa0,Handley,0
+nyg,1993,New York Giants,1,ReevDa0,Reeves,0
+nyg,1994,New York Giants,1,ReevDa0,Reeves,0
+nyg,1995,New York Giants,1,ReevDa0,Reeves,0
+nyg,1996,New York Giants,1,ReevDa0,Reeves,0
+nyg,1997,New York Giants,1,FassJi0,Fassel,0
+nyg,1998,New York Giants,1,FassJi0,Fassel,0
+nyg,1999,New York Giants,1,FassJi0,Fassel,0
+nyg,2000,New York Giants,1,FassJi0,Fassel,0
+nyg,2001,New York Giants,1,FassJi0,Fassel,0
+nyg,2002,New York Giants,1,FassJi0,Fassel,0
+nyg,2003,New York Giants,1,FassJi0,Fassel,0
+nyg,2004,New York Giants,1,CougTo0,Coughlin,0
+nyg,2005,New York Giants,1,CougTo0,Coughlin,0
+nyg,2006,New York Giants,1,CougTo0,Coughlin,0
+nyg,2007,New York Giants,1,CougTo0,Coughlin,0
+nyg,2008,New York Giants,1,CougTo0,Coughlin,0
+nyg,2009,New York Giants,1,CougTo0,Coughlin,0
+nyg,2010,New York Giants,1,CougTo0,Coughlin,0
+nyg,2011,New York Giants,1,CougTo0,Coughlin,0
+nyg,2012,New York Giants,1,CougTo0,Coughlin,0
+nyg,2013,New York Giants,1,CougTo0,Coughlin,0
+nyg,2014,New York Giants,1,CougTo0,Coughlin,0
+nyg,2015,New York Giants,1,CougTo0,Coughlin,0
+nyg,2016,New York Giants,1,McAdBe0,McAdoo,0
+nyg,2017,New York Giants,2,McAdBe0|SpagSt0,McAdoo|Spagnuolo,1
+nyg,2018,New York Giants,1,ShurPa0,Shurmur,0
+nyg,2019,New York Giants,1,ShurPa0,Shurmur,0
+nyg,2020,New York Giants,1,JudgJo0,Judge,0
+nyg,2021,New York Giants,1,JudgJo0,Judge,0
+nyg,2022,New York Giants,1,DaboBr0,Daboll,0
+nyg,2023,New York Giants,1,DaboBr0,Daboll,0
+nyg,2024,New York Giants,1,DaboBr0,Daboll,0
+nyg,2025,New York Giants,2,KafkMi0|DaboBr0,Kafka|Daboll,1
+nyg,2026,New York Giants,1,HarbJo0,Harbaugh,0
+nyj,1960,New York Titans,1,BaugSa0,Baugh,0
+nyj,1961,New York Titans,1,BaugSa0,Baugh,0
+nyj,1962,New York Titans,1,TurnCl0,Turner,0
+nyj,1963,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1964,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1965,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1966,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1967,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1968,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1969,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1970,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1971,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1972,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1973,New York Jets,1,EwbaWe0,Ewbank,0
+nyj,1974,New York Jets,1,WinnCh0,Winner,0
+nyj,1975,New York Jets,2,WinnCh0|ShipKe0,Winner|Shipp,1
+nyj,1976,New York Jets,2,HoltLo0|HoloMi0,Holtz|Holovak,1
+nyj,1977,New York Jets,1,MichWa0,Michaels,0
+nyj,1978,New York Jets,1,MichWa0,Michaels,0
+nyj,1979,New York Jets,1,MichWa0,Michaels,0
+nyj,1980,New York Jets,1,MichWa0,Michaels,0
+nyj,1981,New York Jets,1,MichWa0,Michaels,0
+nyj,1982,New York Jets,1,MichWa0,Michaels,0
+nyj,1983,New York Jets,1,WaltJo0,Walton,0
+nyj,1984,New York Jets,1,WaltJo0,Walton,0
+nyj,1985,New York Jets,1,WaltJo0,Walton,0
+nyj,1986,New York Jets,1,WaltJo0,Walton,0
+nyj,1987,New York Jets,1,WaltJo0,Walton,0
+nyj,1988,New York Jets,1,WaltJo0,Walton,0
+nyj,1989,New York Jets,1,WaltJo0,Walton,0
+nyj,1990,New York Jets,1,CoslBr0,Coslet,0
+nyj,1991,New York Jets,1,CoslBr0,Coslet,0
+nyj,1992,New York Jets,1,CoslBr0,Coslet,0
+nyj,1993,New York Jets,1,CoslBr0,Coslet,0
+nyj,1994,New York Jets,1,CarrPe0,Carroll,0
+nyj,1995,New York Jets,1,KotiRi0,Kotite,0
+nyj,1996,New York Jets,1,KotiRi0,Kotite,0
+nyj,1997,New York Jets,1,ParcBi0,Parcells,0
+nyj,1998,New York Jets,1,ParcBi0,Parcells,0
+nyj,1999,New York Jets,1,ParcBi0,Parcells,0
+nyj,2000,New York Jets,1,GrohAl0,Groh,0
+nyj,2001,New York Jets,1,EdwaHe0,Edwards,0
+nyj,2002,New York Jets,1,EdwaHe0,Edwards,0
+nyj,2003,New York Jets,1,EdwaHe0,Edwards,0
+nyj,2004,New York Jets,1,EdwaHe0,Edwards,0
+nyj,2005,New York Jets,1,EdwaHe0,Edwards,0
+nyj,2006,New York Jets,1,MangEr0,Mangini,0
+nyj,2007,New York Jets,1,MangEr0,Mangini,0
+nyj,2008,New York Jets,1,MangEr0,Mangini,0
+nyj,2009,New York Jets,1,RyanRe0,Ryan,0
+nyj,2010,New York Jets,1,RyanRe0,Ryan,0
+nyj,2011,New York Jets,1,RyanRe0,Ryan,0
+nyj,2012,New York Jets,1,RyanRe0,Ryan,0
+nyj,2013,New York Jets,1,RyanRe0,Ryan,0
+nyj,2014,New York Jets,1,RyanRe0,Ryan,0
+nyj,2015,New York Jets,1,BowlTo0,Bowles,0
+nyj,2016,New York Jets,1,BowlTo0,Bowles,0
+nyj,2017,New York Jets,1,BowlTo0,Bowles,0
+nyj,2018,New York Jets,1,BowlTo0,Bowles,0
+nyj,2019,New York Jets,1,GaseAd0,Gase,0
+nyj,2020,New York Jets,1,GaseAd0,Gase,0
+nyj,2021,New York Jets,1,SaleRo0,Saleh,0
+nyj,2022,New York Jets,1,SaleRo0,Saleh,0
+nyj,2023,New York Jets,1,SaleRo0,Saleh,0
+nyj,2024,New York Jets,2,UlbrJe0|SaleRo0,Ulbrich|Saleh,1
+nyj,2025,New York Jets,1,GlenAa0,Glenn,0
+nyj,2026,New York Jets,1,GlenAa0,Glenn,0
+oti,1960,Houston Oilers,1,RymkLo0,Rymkus,0
+oti,1961,Houston Oilers,2,LemmWa0|RymkLo0,Lemm|Rymkus,1
+oti,1962,Houston Oilers,1,IvyxPo0,Ivy,0
+oti,1963,Houston Oilers,1,IvyxPo0,Ivy,0
+oti,1964,Houston Oilers,1,BaugSa0,Baugh,0
+oti,1965,Houston Oilers,1,TaylHu0,Taylor,0
+oti,1966,Houston Oilers,1,LemmWa0,Lemm,0
+oti,1967,Houston Oilers,1,LemmWa0,Lemm,0
+oti,1968,Houston Oilers,1,LemmWa0,Lemm,0
+oti,1969,Houston Oilers,1,LemmWa0,Lemm,0
+oti,1970,Houston Oilers,1,LemmWa0,Lemm,0
+oti,1971,Houston Oilers,1,HughEd0,Hughes,0
+oti,1972,Houston Oilers,1,PeteBi0,Peterson,0
+oti,1973,Houston Oilers,2,GillSi0|PeteBi0,Gillman|Peterson,1
+oti,1974,Houston Oilers,1,GillSi0,Gillman,0
+oti,1975,Houston Oilers,1,PhilBu0,Phillips,0
+oti,1976,Houston Oilers,1,PhilBu0,Phillips,0
+oti,1977,Houston Oilers,1,PhilBu0,Phillips,0
+oti,1978,Houston Oilers,1,PhilBu0,Phillips,0
+oti,1979,Houston Oilers,1,PhilBu0,Phillips,0
+oti,1980,Houston Oilers,1,PhilBu0,Phillips,0
+oti,1981,Houston Oilers,1,BileEd0,Biles,0
+oti,1982,Houston Oilers,1,BileEd0,Biles,0
+oti,1983,Houston Oilers,2,StudCh0|BileEd0,Studley|Biles,1
+oti,1984,Houston Oilers,1,CampHu0,Campbell,0
+oti,1985,Houston Oilers,2,CampHu0|GlanJe0,Campbell|Glanville,1
+oti,1986,Houston Oilers,1,GlanJe0,Glanville,0
+oti,1987,Houston Oilers,1,GlanJe0,Glanville,0
+oti,1988,Houston Oilers,1,GlanJe0,Glanville,0
+oti,1989,Houston Oilers,1,GlanJe0,Glanville,0
+oti,1990,Houston Oilers,1,PardJa0,Pardee,0
+oti,1991,Houston Oilers,1,PardJa0,Pardee,0
+oti,1992,Houston Oilers,1,PardJa0,Pardee,0
+oti,1993,Houston Oilers,1,PardJa0,Pardee,0
+oti,1994,Houston Oilers,2,PardJa0|FishJe0,Pardee|Fisher,1
+oti,1995,Houston Oilers,1,FishJe0,Fisher,0
+oti,1996,Houston Oilers,1,FishJe0,Fisher,0
+oti,1997,Tennessee Oilers,1,FishJe0,Fisher,0
+oti,1998,Tennessee Oilers,1,FishJe0,Fisher,0
+oti,1999,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2000,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2001,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2002,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2003,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2004,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2005,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2006,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2007,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2008,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2009,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2010,Tennessee Titans,1,FishJe0,Fisher,0
+oti,2011,Tennessee Titans,1,MuncMi0,Munchak,0
+oti,2012,Tennessee Titans,1,MuncMi0,Munchak,0
+oti,2013,Tennessee Titans,1,MuncMi0,Munchak,0
+oti,2014,Tennessee Titans,1,WhisKe0,Whisenhunt,0
+oti,2015,Tennessee Titans,2,MulaMi0|WhisKe0,Mularkey|Whisenhunt,1
+oti,2016,Tennessee Titans,1,MulaMi0,Mularkey,0
+oti,2017,Tennessee Titans,1,MulaMi0,Mularkey,0
+oti,2018,Tennessee Titans,1,VrabMi0,Vrabel,0
+oti,2019,Tennessee Titans,1,VrabMi0,Vrabel,0
+oti,2020,Tennessee Titans,1,VrabMi0,Vrabel,0
+oti,2021,Tennessee Titans,1,VrabMi0,Vrabel,0
+oti,2022,Tennessee Titans,1,VrabMi0,Vrabel,0
+oti,2023,Tennessee Titans,1,VrabMi0,Vrabel,0
+oti,2024,Tennessee Titans,1,CallBr0,Callahan,0
+oti,2025,Tennessee Titans,2,McCoMi1|CallBr0,McCoy|Callahan,1
+oti,2026,Tennessee Titans,1,SaleRo0,Saleh,0
+phi,1933,Philadelphia Eagles,1,WrayLu0,Wray,0
+phi,1934,Philadelphia Eagles,1,WrayLu0,Wray,0
+phi,1935,Philadelphia Eagles,1,WrayLu0,Wray,0
+phi,1936,Philadelphia Eagles,1,BellBe0,Bell,0
+phi,1937,Philadelphia Eagles,1,BellBe0,Bell,0
+phi,1938,Philadelphia Eagles,1,BellBe0,Bell,0
+phi,1939,Philadelphia Eagles,1,BellBe0,Bell,0
+phi,1940,Philadelphia Eagles,1,BellBe0,Bell,0
+phi,1941,Philadelphia Eagles,1,NealGr0,Neale,0
+phi,1942,Philadelphia Eagles,1,NealGr0,Neale,0
+phi,1943,Phi/Pit Eagles/Steelers,2,NealGr0|KiesWa0,Neale|Kiesling,1
+phi,1944,Philadelphia Eagles,1,NealGr0,Neale,0
+phi,1945,Philadelphia Eagles,1,NealGr0,Neale,0
+phi,1946,Philadelphia Eagles,1,NealGr0,Neale,0
+phi,1947,Philadelphia Eagles,1,NealGr0,Neale,0
+phi,1948,Philadelphia Eagles,1,NealGr0,Neale,0
+phi,1949,Philadelphia Eagles,1,NealGr0,Neale,0
+phi,1950,Philadelphia Eagles,1,NealGr0,Neale,0
+phi,1951,Philadelphia Eagles,2,MillWa0|McMiAl0,Millner|McMillin,1
+phi,1952,Philadelphia Eagles,1,TrimJi0,Trimble,0
+phi,1953,Philadelphia Eagles,1,TrimJi0,Trimble,0
+phi,1954,Philadelphia Eagles,1,TrimJi0,Trimble,0
+phi,1955,Philadelphia Eagles,1,TrimJi0,Trimble,0
+phi,1956,Philadelphia Eagles,1,DevoHu0,Devore,0
+phi,1957,Philadelphia Eagles,1,DevoHu0,Devore,0
+phi,1958,Philadelphia Eagles,1,ShawLa0,Shaw,0
+phi,1959,Philadelphia Eagles,1,ShawLa0,Shaw,0
+phi,1960,Philadelphia Eagles,1,ShawLa0,Shaw,0
+phi,1961,Philadelphia Eagles,1,SkorNi0,Skorich,0
+phi,1962,Philadelphia Eagles,1,SkorNi0,Skorich,0
+phi,1963,Philadelphia Eagles,1,SkorNi0,Skorich,0
+phi,1964,Philadelphia Eagles,1,KuhaJo0,Kuharich,0
+phi,1965,Philadelphia Eagles,1,KuhaJo0,Kuharich,0
+phi,1966,Philadelphia Eagles,1,KuhaJo0,Kuharich,0
+phi,1967,Philadelphia Eagles,1,KuhaJo0,Kuharich,0
+phi,1968,Philadelphia Eagles,1,KuhaJo0,Kuharich,0
+phi,1969,Philadelphia Eagles,1,WillJe0,Williams,0
+phi,1970,Philadelphia Eagles,1,WillJe0,Williams,0
+phi,1971,Philadelphia Eagles,2,KhayEd0|WillJe0,Khayat|Williams,1
+phi,1972,Philadelphia Eagles,1,KhayEd0,Khayat,0
+phi,1973,Philadelphia Eagles,1,McCoMi0,McCormack,0
+phi,1974,Philadelphia Eagles,1,McCoMi0,McCormack,0
+phi,1975,Philadelphia Eagles,1,McCoMi0,McCormack,0
+phi,1976,Philadelphia Eagles,1,VermDi0,Vermeil,0
+phi,1977,Philadelphia Eagles,1,VermDi0,Vermeil,0
+phi,1978,Philadelphia Eagles,1,VermDi0,Vermeil,0
+phi,1979,Philadelphia Eagles,1,VermDi0,Vermeil,0
+phi,1980,Philadelphia Eagles,1,VermDi0,Vermeil,0
+phi,1981,Philadelphia Eagles,1,VermDi0,Vermeil,0
+phi,1982,Philadelphia Eagles,1,VermDi0,Vermeil,0
+phi,1983,Philadelphia Eagles,1,CampMa0,Campbell,0
+phi,1984,Philadelphia Eagles,1,CampMa0,Campbell,0
+phi,1985,Philadelphia Eagles,2,CampMa0|BrunFr0,Campbell|Bruney,1
+phi,1986,Philadelphia Eagles,1,RyanBu0,Ryan,0
+phi,1987,Philadelphia Eagles,1,RyanBu0,Ryan,0
+phi,1988,Philadelphia Eagles,1,RyanBu0,Ryan,0
+phi,1989,Philadelphia Eagles,1,RyanBu0,Ryan,0
+phi,1990,Philadelphia Eagles,1,RyanBu0,Ryan,0
+phi,1991,Philadelphia Eagles,1,KotiRi0,Kotite,0
+phi,1992,Philadelphia Eagles,1,KotiRi0,Kotite,0
+phi,1993,Philadelphia Eagles,1,KotiRi0,Kotite,0
+phi,1994,Philadelphia Eagles,1,KotiRi0,Kotite,0
+phi,1995,Philadelphia Eagles,1,RhodRa0,Rhodes,0
+phi,1996,Philadelphia Eagles,1,RhodRa0,Rhodes,0
+phi,1997,Philadelphia Eagles,1,RhodRa0,Rhodes,0
+phi,1998,Philadelphia Eagles,1,RhodRa0,Rhodes,0
+phi,1999,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2000,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2001,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2002,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2003,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2004,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2005,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2006,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2007,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2008,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2009,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2010,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2011,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2012,Philadelphia Eagles,1,ReidAn0,Reid,0
+phi,2013,Philadelphia Eagles,1,KellCh0,Kelly,0
+phi,2014,Philadelphia Eagles,1,KellCh0,Kelly,0
+phi,2015,Philadelphia Eagles,2,KellCh0|ShurPa0,Kelly|Shurmur,1
+phi,2016,Philadelphia Eagles,1,PedeDo0,Pederson,0
+phi,2017,Philadelphia Eagles,1,PedeDo0,Pederson,0
+phi,2018,Philadelphia Eagles,1,PedeDo0,Pederson,0
+phi,2019,Philadelphia Eagles,1,PedeDo0,Pederson,0
+phi,2020,Philadelphia Eagles,1,PedeDo0,Pederson,0
+phi,2021,Philadelphia Eagles,1,SiriNi0,Sirianni,0
+phi,2022,Philadelphia Eagles,1,SiriNi0,Sirianni,0
+phi,2023,Philadelphia Eagles,1,SiriNi0,Sirianni,0
+phi,2024,Philadelphia Eagles,1,SiriNi0,Sirianni,0
+phi,2025,Philadelphia Eagles,1,SiriNi0,Sirianni,0
+phi,2026,Philadelphia Eagles,1,SiriNi0,Sirianni,0
+pit,1933,Pittsburgh Pirates,1,DoudJa0,Douds,0
+pit,1934,Pittsburgh Pirates,1,DiMeLu0,DiMeolo,0
+pit,1935,Pittsburgh Pirates,1,BachJo0,Bach,0
+pit,1936,Pittsburgh Pirates,1,BachJo0,Bach,0
+pit,1937,Pittsburgh Pirates,1,BlooJo0,Blood,0
+pit,1938,Pittsburgh Pirates,1,BlooJo0,Blood,0
+pit,1939,Pittsburgh Pirates,2,KiesWa0|BlooJo0,Kiesling|Blood,1
+pit,1940,Pittsburgh Steelers,1,KiesWa0,Kiesling,0
+pit,1941,Pittsburgh Steelers,3,KiesWa0|DoneAl0|BellBe0,Kiesling|Donelli|Bell,1
+pit,1942,Pittsburgh Steelers,1,KiesWa0,Kiesling,0
+pit,1945,Pittsburgh Steelers,1,LeonJi0,Leonard,0
+pit,1946,Pittsburgh Steelers,1,SuthJo0,Sutherland,0
+pit,1947,Pittsburgh Steelers,1,SuthJo0,Sutherland,0
+pit,1948,Pittsburgh Steelers,1,MichJo0,Michelosen,0
+pit,1949,Pittsburgh Steelers,1,MichJo0,Michelosen,0
+pit,1950,Pittsburgh Steelers,1,MichJo0,Michelosen,0
+pit,1951,Pittsburgh Steelers,1,MichJo0,Michelosen,0
+pit,1952,Pittsburgh Steelers,1,BachJo0,Bach,0
+pit,1953,Pittsburgh Steelers,1,BachJo0,Bach,0
+pit,1954,Pittsburgh Steelers,1,KiesWa0,Kiesling,0
+pit,1955,Pittsburgh Steelers,1,KiesWa0,Kiesling,0
+pit,1956,Pittsburgh Steelers,1,KiesWa0,Kiesling,0
+pit,1957,Pittsburgh Steelers,1,ParkRa0,Parker,0
+pit,1958,Pittsburgh Steelers,1,ParkRa0,Parker,0
+pit,1959,Pittsburgh Steelers,1,ParkRa0,Parker,0
+pit,1960,Pittsburgh Steelers,1,ParkRa0,Parker,0
+pit,1961,Pittsburgh Steelers,1,ParkRa0,Parker,0
+pit,1962,Pittsburgh Steelers,1,ParkRa0,Parker,0
+pit,1963,Pittsburgh Steelers,1,ParkRa0,Parker,0
+pit,1964,Pittsburgh Steelers,1,ParkRa0,Parker,0
+pit,1965,Pittsburgh Steelers,1,NixoMi0,Nixon,0
+pit,1966,Pittsburgh Steelers,1,AustBi0,Austin,0
+pit,1967,Pittsburgh Steelers,1,AustBi0,Austin,0
+pit,1968,Pittsburgh Steelers,1,AustBi0,Austin,0
+pit,1969,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1970,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1971,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1972,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1973,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1974,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1975,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1976,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1977,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1978,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1979,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1980,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1981,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1982,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1983,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1984,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1985,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1986,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1987,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1988,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1989,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1990,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1991,Pittsburgh Steelers,1,NollCh0,Noll,0
+pit,1992,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,1993,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,1994,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,1995,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,1996,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,1997,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,1998,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,1999,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,2000,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,2001,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,2002,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,2003,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,2004,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,2005,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,2006,Pittsburgh Steelers,1,CowhBi0,Cowher,0
+pit,2007,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2008,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2009,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2010,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2011,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2012,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2013,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2014,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2015,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2016,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2017,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2018,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2019,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2020,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2021,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2022,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2023,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2024,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2025,Pittsburgh Steelers,1,TomlMi0,Tomlin,0
+pit,2026,Pittsburgh Steelers,1,McCaMi0,McCarthy,0
+rai,1960,Oakland Raiders,1,ErdeEd0,Erdelatz,0
+rai,1961,Oakland Raiders,2,FeldMa0|ErdeEd0,Feldman|Erdelatz,1
+rai,1962,Oakland Raiders,2,ConkRe0|FeldMa0,Conkright|Feldman,1
+rai,1963,Oakland Raiders,1,DaviAl0,Davis,0
+rai,1964,Oakland Raiders,1,DaviAl0,Davis,0
+rai,1965,Oakland Raiders,1,DaviAl0,Davis,0
+rai,1966,Oakland Raiders,1,RaucJo0,Rauch,0
+rai,1967,Oakland Raiders,1,RaucJo0,Rauch,0
+rai,1968,Oakland Raiders,1,RaucJo0,Rauch,0
+rai,1969,Oakland Raiders,1,MaddJo0,Madden,0
+rai,1970,Oakland Raiders,1,MaddJo0,Madden,0
+rai,1971,Oakland Raiders,1,MaddJo0,Madden,0
+rai,1972,Oakland Raiders,1,MaddJo0,Madden,0
+rai,1973,Oakland Raiders,1,MaddJo0,Madden,0
+rai,1974,Oakland Raiders,1,MaddJo0,Madden,0
+rai,1975,Oakland Raiders,1,MaddJo0,Madden,0
+rai,1976,Oakland Raiders,1,MaddJo0,Madden,0
+rai,1977,Oakland Raiders,1,MaddJo0,Madden,0
+rai,1978,Oakland Raiders,1,MaddJo0,Madden,0
+rai,1979,Oakland Raiders,1,FlorTo0,Flores,0
+rai,1980,Oakland Raiders,1,FlorTo0,Flores,0
+rai,1981,Oakland Raiders,1,FlorTo0,Flores,0
+rai,1982,Los Angeles Raiders,1,FlorTo0,Flores,0
+rai,1983,Los Angeles Raiders,1,FlorTo0,Flores,0
+rai,1984,Los Angeles Raiders,1,FlorTo0,Flores,0
+rai,1985,Los Angeles Raiders,1,FlorTo0,Flores,0
+rai,1986,Los Angeles Raiders,1,FlorTo0,Flores,0
+rai,1987,Los Angeles Raiders,1,FlorTo0,Flores,0
+rai,1988,Los Angeles Raiders,1,ShanMi0,Shanahan,0
+rai,1989,Los Angeles Raiders,2,ShelAr0|ShanMi0,Shell|Shanahan,1
+rai,1990,Los Angeles Raiders,1,ShelAr0,Shell,0
+rai,1991,Los Angeles Raiders,1,ShelAr0,Shell,0
+rai,1992,Los Angeles Raiders,1,ShelAr0,Shell,0
+rai,1993,Los Angeles Raiders,1,ShelAr0,Shell,0
+rai,1994,Los Angeles Raiders,1,ShelAr0,Shell,0
+rai,1995,Oakland Raiders,1,WhitMi0,White,0
+rai,1996,Oakland Raiders,1,WhitMi0,White,0
+rai,1997,Oakland Raiders,1,BugeJo0,Bugel,0
+rai,1998,Oakland Raiders,1,GrudJo0,Gruden,0
+rai,1999,Oakland Raiders,1,GrudJo0,Gruden,0
+rai,2000,Oakland Raiders,1,GrudJo0,Gruden,0
+rai,2001,Oakland Raiders,1,GrudJo0,Gruden,0
+rai,2002,Oakland Raiders,1,CallBi0,Callahan,0
+rai,2003,Oakland Raiders,1,CallBi0,Callahan,0
+rai,2004,Oakland Raiders,1,TurnNo0,Turner,0
+rai,2005,Oakland Raiders,1,TurnNo0,Turner,0
+rai,2006,Oakland Raiders,1,ShelAr0,Shell,0
+rai,2007,Oakland Raiders,1,KiffLa0,Kiffin,0
+rai,2008,Oakland Raiders,2,CablTo0|KiffLa0,Cable|Kiffin,1
+rai,2009,Oakland Raiders,1,CablTo0,Cable,0
+rai,2010,Oakland Raiders,1,CablTo0,Cable,0
+rai,2011,Oakland Raiders,1,JackHu0,Jackson,0
+rai,2012,Oakland Raiders,1,AlleDe0,Allen,0
+rai,2013,Oakland Raiders,1,AlleDe0,Allen,0
+rai,2014,Oakland Raiders,2,SparTo0|AlleDe0,Sparano|Allen,1
+rai,2015,Oakland Raiders,1,DelRJa0,Del Rio,0
+rai,2016,Oakland Raiders,1,DelRJa0,Del Rio,0
+rai,2017,Oakland Raiders,1,DelRJa0,Del Rio,0
+rai,2018,Oakland Raiders,1,GrudJo0,Gruden,0
+rai,2019,Oakland Raiders,1,GrudJo0,Gruden,0
+rai,2020,Las Vegas Raiders,1,GrudJo0,Gruden,0
+rai,2021,Las Vegas Raiders,2,BisaRi0|GrudJo0,Bisaccia|Gruden,1
+rai,2022,Las Vegas Raiders,1,McDaJo0,McDaniels,0
+rai,2023,Las Vegas Raiders,2,PierAn0|McDaJo0,Pierce|McDaniels,1
+rai,2024,Las Vegas Raiders,1,PierAn0,Pierce,0
+rai,2025,Las Vegas Raiders,1,CarrPe0,Carroll,0
+rai,2026,Las Vegas Raiders,1,KubiKl0,Kubiak,0
+ram,1937,Cleveland Rams,1,BezdHu0,Bezdek,0
+ram,1938,Cleveland Rams,2,LewiAr0|BezdHu0,Lewis|Bezdek,1
+ram,1939,Cleveland Rams,1,ClarDu0,Clark,0
+ram,1940,Cleveland Rams,1,ClarDu0,Clark,0
+ram,1941,Cleveland Rams,1,ClarDu0,Clark,0
+ram,1942,Cleveland Rams,1,ClarDu0,Clark,0
+ram,1944,Cleveland Rams,1,DoneAl0,Donelli,0
+ram,1945,Cleveland Rams,1,WalsAd0,Walsh,0
+ram,1946,Los Angeles Rams,1,WalsAd0,Walsh,0
+ram,1947,Los Angeles Rams,1,SnydBo0,Snyder,0
+ram,1948,Los Angeles Rams,1,ShauCl0,Shaughnessy,0
+ram,1949,Los Angeles Rams,1,ShauCl0,Shaughnessy,0
+ram,1950,Los Angeles Rams,1,StydJo0,Stydahar,0
+ram,1951,Los Angeles Rams,1,StydJo0,Stydahar,0
+ram,1952,Los Angeles Rams,2,PoolHa0|StydJo0,Pool|Stydahar,1
+ram,1953,Los Angeles Rams,1,PoolHa0,Pool,0
+ram,1954,Los Angeles Rams,1,PoolHa0,Pool,0
+ram,1955,Los Angeles Rams,1,GillSi0,Gillman,0
+ram,1956,Los Angeles Rams,1,GillSi0,Gillman,0
+ram,1957,Los Angeles Rams,1,GillSi0,Gillman,0
+ram,1958,Los Angeles Rams,1,GillSi0,Gillman,0
+ram,1959,Los Angeles Rams,1,GillSi0,Gillman,0
+ram,1960,Los Angeles Rams,1,WateBo0,Waterfield,0
+ram,1961,Los Angeles Rams,1,WateBo0,Waterfield,0
+ram,1962,Los Angeles Rams,2,WateBo0|SvarHa0,Waterfield|Svare,1
+ram,1963,Los Angeles Rams,1,SvarHa0,Svare,0
+ram,1964,Los Angeles Rams,1,SvarHa0,Svare,0
+ram,1965,Los Angeles Rams,1,SvarHa0,Svare,0
+ram,1966,Los Angeles Rams,1,AlleGe0,Allen,0
+ram,1967,Los Angeles Rams,1,AlleGe0,Allen,0
+ram,1968,Los Angeles Rams,1,AlleGe0,Allen,0
+ram,1969,Los Angeles Rams,1,AlleGe0,Allen,0
+ram,1970,Los Angeles Rams,1,AlleGe0,Allen,0
+ram,1971,Los Angeles Rams,1,ProtTo0,Prothro,0
+ram,1972,Los Angeles Rams,1,ProtTo0,Prothro,0
+ram,1973,Los Angeles Rams,1,KnoxCh0,Knox,0
+ram,1974,Los Angeles Rams,1,KnoxCh0,Knox,0
+ram,1975,Los Angeles Rams,1,KnoxCh0,Knox,0
+ram,1976,Los Angeles Rams,1,KnoxCh0,Knox,0
+ram,1977,Los Angeles Rams,1,KnoxCh0,Knox,0
+ram,1978,Los Angeles Rams,1,MalaRa0,Malavasi,0
+ram,1979,Los Angeles Rams,1,MalaRa0,Malavasi,0
+ram,1980,Los Angeles Rams,1,MalaRa0,Malavasi,0
+ram,1981,Los Angeles Rams,1,MalaRa0,Malavasi,0
+ram,1982,Los Angeles Rams,1,MalaRa0,Malavasi,0
+ram,1983,Los Angeles Rams,1,RobiJo0,Robinson,0
+ram,1984,Los Angeles Rams,1,RobiJo0,Robinson,0
+ram,1985,Los Angeles Rams,1,RobiJo0,Robinson,0
+ram,1986,Los Angeles Rams,1,RobiJo0,Robinson,0
+ram,1987,Los Angeles Rams,1,RobiJo0,Robinson,0
+ram,1988,Los Angeles Rams,1,RobiJo0,Robinson,0
+ram,1989,Los Angeles Rams,1,RobiJo0,Robinson,0
+ram,1990,Los Angeles Rams,1,RobiJo0,Robinson,0
+ram,1991,Los Angeles Rams,1,RobiJo0,Robinson,0
+ram,1992,Los Angeles Rams,1,KnoxCh0,Knox,0
+ram,1993,Los Angeles Rams,1,KnoxCh0,Knox,0
+ram,1994,Los Angeles Rams,1,KnoxCh0,Knox,0
+ram,1995,St. Louis Rams,1,BrooRi0,Brooks,0
+ram,1996,St. Louis Rams,1,BrooRi0,Brooks,0
+ram,1997,St. Louis Rams,1,VermDi0,Vermeil,0
+ram,1998,St. Louis Rams,1,VermDi0,Vermeil,0
+ram,1999,St. Louis Rams,1,VermDi0,Vermeil,0
+ram,2000,St. Louis Rams,1,MartMi0,Martz,0
+ram,2001,St. Louis Rams,1,MartMi0,Martz,0
+ram,2002,St. Louis Rams,1,MartMi0,Martz,0
+ram,2003,St. Louis Rams,1,MartMi0,Martz,0
+ram,2004,St. Louis Rams,1,MartMi0,Martz,0
+ram,2005,St. Louis Rams,2,VittJo0|MartMi0,Vitt|Martz,1
+ram,2006,St. Louis Rams,1,LineSc0,Linehan,0
+ram,2007,St. Louis Rams,1,LineSc0,Linehan,0
+ram,2008,St. Louis Rams,2,HaslJi0|LineSc0,Haslett|Linehan,1
+ram,2009,St. Louis Rams,1,SpagSt0,Spagnuolo,0
+ram,2010,St. Louis Rams,1,SpagSt0,Spagnuolo,0
+ram,2011,St. Louis Rams,1,SpagSt0,Spagnuolo,0
+ram,2012,St. Louis Rams,1,FishJe0,Fisher,0
+ram,2013,St. Louis Rams,1,FishJe0,Fisher,0
+ram,2014,St. Louis Rams,1,FishJe0,Fisher,0
+ram,2015,St. Louis Rams,1,FishJe0,Fisher,0
+ram,2016,Los Angeles Rams,2,FishJe0|FassJo0,Fisher|Fassel,1
+ram,2017,Los Angeles Rams,1,McVaSe0,McVay,0
+ram,2018,Los Angeles Rams,1,McVaSe0,McVay,0
+ram,2019,Los Angeles Rams,1,McVaSe0,McVay,0
+ram,2020,Los Angeles Rams,1,McVaSe0,McVay,0
+ram,2021,Los Angeles Rams,1,McVaSe0,McVay,0
+ram,2022,Los Angeles Rams,1,McVaSe0,McVay,0
+ram,2023,Los Angeles Rams,1,McVaSe0,McVay,0
+ram,2024,Los Angeles Rams,1,McVaSe0,McVay,0
+ram,2025,Los Angeles Rams,1,McVaSe0,McVay,0
+ram,2026,Los Angeles Rams,1,McVaSe0,McVay,0
+rav,1996,Baltimore Ravens,1,MarcTe0,Marchibroda,0
+rav,1997,Baltimore Ravens,1,MarcTe0,Marchibroda,0
+rav,1998,Baltimore Ravens,1,MarcTe0,Marchibroda,0
+rav,1999,Baltimore Ravens,1,BillBr0,Billick,0
+rav,2000,Baltimore Ravens,1,BillBr0,Billick,0
+rav,2001,Baltimore Ravens,1,BillBr0,Billick,0
+rav,2002,Baltimore Ravens,1,BillBr0,Billick,0
+rav,2003,Baltimore Ravens,1,BillBr0,Billick,0
+rav,2004,Baltimore Ravens,1,BillBr0,Billick,0
+rav,2005,Baltimore Ravens,1,BillBr0,Billick,0
+rav,2006,Baltimore Ravens,1,BillBr0,Billick,0
+rav,2007,Baltimore Ravens,1,BillBr0,Billick,0
+rav,2008,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2009,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2010,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2011,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2012,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2013,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2014,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2015,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2016,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2017,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2018,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2019,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2020,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2021,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2022,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2023,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2024,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2025,Baltimore Ravens,1,HarbJo0,Harbaugh,0
+rav,2026,Baltimore Ravens,1,MintJe0,Minter,0
+sdg,1960,Los Angeles Chargers,1,GillSi0,Gillman,0
+sdg,1961,San Diego Chargers,1,GillSi0,Gillman,0
+sdg,1962,San Diego Chargers,1,GillSi0,Gillman,0
+sdg,1963,San Diego Chargers,1,GillSi0,Gillman,0
+sdg,1964,San Diego Chargers,1,GillSi0,Gillman,0
+sdg,1965,San Diego Chargers,1,GillSi0,Gillman,0
+sdg,1966,San Diego Chargers,1,GillSi0,Gillman,0
+sdg,1967,San Diego Chargers,1,GillSi0,Gillman,0
+sdg,1968,San Diego Chargers,1,GillSi0,Gillman,0
+sdg,1969,San Diego Chargers,2,WallCh0|GillSi0,Waller|Gillman,1
+sdg,1970,San Diego Chargers,1,WallCh0,Waller,0
+sdg,1971,San Diego Chargers,2,GillSi0|SvarHa0,Gillman|Svare,1
+sdg,1972,San Diego Chargers,1,SvarHa0,Svare,0
+sdg,1973,San Diego Chargers,2,WallRo0|SvarHa0,Waller|Svare,1
+sdg,1974,San Diego Chargers,1,ProtTo0,Prothro,0
+sdg,1975,San Diego Chargers,1,ProtTo0,Prothro,0
+sdg,1976,San Diego Chargers,1,ProtTo0,Prothro,0
+sdg,1977,San Diego Chargers,1,ProtTo0,Prothro,0
+sdg,1978,San Diego Chargers,2,CoryDo0|ProtTo0,Coryell|Prothro,1
+sdg,1979,San Diego Chargers,1,CoryDo0,Coryell,0
+sdg,1980,San Diego Chargers,1,CoryDo0,Coryell,0
+sdg,1981,San Diego Chargers,1,CoryDo0,Coryell,0
+sdg,1982,San Diego Chargers,1,CoryDo0,Coryell,0
+sdg,1983,San Diego Chargers,1,CoryDo0,Coryell,0
+sdg,1984,San Diego Chargers,1,CoryDo0,Coryell,0
+sdg,1985,San Diego Chargers,1,CoryDo0,Coryell,0
+sdg,1986,San Diego Chargers,2,SaunAl0|CoryDo0,Saunders|Coryell,1
+sdg,1987,San Diego Chargers,1,SaunAl0,Saunders,0
+sdg,1988,San Diego Chargers,1,SaunAl0,Saunders,0
+sdg,1989,San Diego Chargers,1,HennDa0,Henning,0
+sdg,1990,San Diego Chargers,1,HennDa0,Henning,0
+sdg,1991,San Diego Chargers,1,HennDa0,Henning,0
+sdg,1992,San Diego Chargers,1,RossBo0,Ross,0
+sdg,1993,San Diego Chargers,1,RossBo0,Ross,0
+sdg,1994,San Diego Chargers,1,RossBo0,Ross,0
+sdg,1995,San Diego Chargers,1,RossBo0,Ross,0
+sdg,1996,San Diego Chargers,1,RossBo0,Ross,0
+sdg,1997,San Diego Chargers,1,GilbKe0,Gilbride,0
+sdg,1998,San Diego Chargers,2,JoneJu0|GilbKe0,Jones|Gilbride,1
+sdg,1999,San Diego Chargers,1,RileMi0,Riley,0
+sdg,2000,San Diego Chargers,1,RileMi0,Riley,0
+sdg,2001,San Diego Chargers,1,RileMi0,Riley,0
+sdg,2002,San Diego Chargers,1,SchoMa0,Schottenheimer,0
+sdg,2003,San Diego Chargers,1,SchoMa0,Schottenheimer,0
+sdg,2004,San Diego Chargers,1,SchoMa0,Schottenheimer,0
+sdg,2005,San Diego Chargers,1,SchoMa0,Schottenheimer,0
+sdg,2006,San Diego Chargers,1,SchoMa0,Schottenheimer,0
+sdg,2007,San Diego Chargers,1,TurnNo0,Turner,0
+sdg,2008,San Diego Chargers,1,TurnNo0,Turner,0
+sdg,2009,San Diego Chargers,1,TurnNo0,Turner,0
+sdg,2010,San Diego Chargers,1,TurnNo0,Turner,0
+sdg,2011,San Diego Chargers,1,TurnNo0,Turner,0
+sdg,2012,San Diego Chargers,1,TurnNo0,Turner,0
+sdg,2013,San Diego Chargers,1,McCoMi1,McCoy,0
+sdg,2014,San Diego Chargers,1,McCoMi1,McCoy,0
+sdg,2015,San Diego Chargers,1,McCoMi1,McCoy,0
+sdg,2016,San Diego Chargers,1,McCoMi1,McCoy,0
+sdg,2017,Los Angeles Chargers,1,LynnAn0,Lynn,0
+sdg,2018,Los Angeles Chargers,1,LynnAn0,Lynn,0
+sdg,2019,Los Angeles Chargers,1,LynnAn0,Lynn,0
+sdg,2020,Los Angeles Chargers,1,LynnAn0,Lynn,0
+sdg,2021,Los Angeles Chargers,1,StalBr0,Staley,0
+sdg,2022,Los Angeles Chargers,1,StalBr0,Staley,0
+sdg,2023,Los Angeles Chargers,2,StalBr0|SmitGi0,Staley|Smith,1
+sdg,2024,Los Angeles Chargers,1,HarbJi0,Harbaugh,0
+sdg,2025,Los Angeles Chargers,1,HarbJi0,Harbaugh,0
+sdg,2026,Los Angeles Chargers,1,HarbJi0,Harbaugh,0
+sea,1976,Seattle Seahawks,1,PateJa0,Patera,0
+sea,1977,Seattle Seahawks,1,PateJa0,Patera,0
+sea,1978,Seattle Seahawks,1,PateJa0,Patera,0
+sea,1979,Seattle Seahawks,1,PateJa0,Patera,0
+sea,1980,Seattle Seahawks,1,PateJa0,Patera,0
+sea,1981,Seattle Seahawks,1,PateJa0,Patera,0
+sea,1982,Seattle Seahawks,2,McCoMi0|PateJa0,McCormack|Patera,1
+sea,1983,Seattle Seahawks,1,KnoxCh0,Knox,0
+sea,1984,Seattle Seahawks,1,KnoxCh0,Knox,0
+sea,1985,Seattle Seahawks,1,KnoxCh0,Knox,0
+sea,1986,Seattle Seahawks,1,KnoxCh0,Knox,0
+sea,1987,Seattle Seahawks,1,KnoxCh0,Knox,0
+sea,1988,Seattle Seahawks,1,KnoxCh0,Knox,0
+sea,1989,Seattle Seahawks,1,KnoxCh0,Knox,0
+sea,1990,Seattle Seahawks,1,KnoxCh0,Knox,0
+sea,1991,Seattle Seahawks,1,KnoxCh0,Knox,0
+sea,1992,Seattle Seahawks,1,FlorTo0,Flores,0
+sea,1993,Seattle Seahawks,1,FlorTo0,Flores,0
+sea,1994,Seattle Seahawks,1,FlorTo0,Flores,0
+sea,1995,Seattle Seahawks,1,EricDe0,Erickson,0
+sea,1996,Seattle Seahawks,1,EricDe0,Erickson,0
+sea,1997,Seattle Seahawks,1,EricDe0,Erickson,0
+sea,1998,Seattle Seahawks,1,EricDe0,Erickson,0
+sea,1999,Seattle Seahawks,1,HolmMi0,Holmgren,0
+sea,2000,Seattle Seahawks,1,HolmMi0,Holmgren,0
+sea,2001,Seattle Seahawks,1,HolmMi0,Holmgren,0
+sea,2002,Seattle Seahawks,1,HolmMi0,Holmgren,0
+sea,2003,Seattle Seahawks,1,HolmMi0,Holmgren,0
+sea,2004,Seattle Seahawks,1,HolmMi0,Holmgren,0
+sea,2005,Seattle Seahawks,1,HolmMi0,Holmgren,0
+sea,2006,Seattle Seahawks,1,HolmMi0,Holmgren,0
+sea,2007,Seattle Seahawks,1,HolmMi0,Holmgren,0
+sea,2008,Seattle Seahawks,1,HolmMi0,Holmgren,0
+sea,2009,Seattle Seahawks,1,MoraJi1,Mora,0
+sea,2010,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2011,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2012,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2013,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2014,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2015,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2016,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2017,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2018,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2019,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2020,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2021,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2022,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2023,Seattle Seahawks,1,CarrPe0,Carroll,0
+sea,2024,Seattle Seahawks,1,MacdMi0,Macdonald,0
+sea,2025,Seattle Seahawks,1,MacdMi0,Macdonald,0
+sea,2026,Seattle Seahawks,1,MacdMi0,Macdonald,0
+sfo,1946,San Francisco 49ers,1,ShawLa0,Shaw,0
+sfo,1947,San Francisco 49ers,1,ShawLa0,Shaw,0
+sfo,1948,San Francisco 49ers,1,ShawLa0,Shaw,0
+sfo,1949,San Francisco 49ers,1,ShawLa0,Shaw,0
+sfo,1950,San Francisco 49ers,1,ShawLa0,Shaw,0
+sfo,1951,San Francisco 49ers,1,ShawLa0,Shaw,0
+sfo,1952,San Francisco 49ers,1,ShawLa0,Shaw,0
+sfo,1953,San Francisco 49ers,1,ShawLa0,Shaw,0
+sfo,1954,San Francisco 49ers,1,ShawLa0,Shaw,0
+sfo,1955,San Francisco 49ers,1,StraNo0,Strader,0
+sfo,1956,San Francisco 49ers,1,AlbeFr0,Albert,0
+sfo,1957,San Francisco 49ers,1,AlbeFr0,Albert,0
+sfo,1958,San Francisco 49ers,1,AlbeFr0,Albert,0
+sfo,1959,San Francisco 49ers,1,HickHo0,Hickey,0
+sfo,1960,San Francisco 49ers,1,HickHo0,Hickey,0
+sfo,1961,San Francisco 49ers,1,HickHo0,Hickey,0
+sfo,1962,San Francisco 49ers,1,HickHo0,Hickey,0
+sfo,1963,San Francisco 49ers,2,ChriJa0|HickHo0,Christiansen|Hickey,1
+sfo,1964,San Francisco 49ers,1,ChriJa0,Christiansen,0
+sfo,1965,San Francisco 49ers,1,ChriJa0,Christiansen,0
+sfo,1966,San Francisco 49ers,1,ChriJa0,Christiansen,0
+sfo,1967,San Francisco 49ers,1,ChriJa0,Christiansen,0
+sfo,1968,San Francisco 49ers,1,NolaDi0,Nolan,0
+sfo,1969,San Francisco 49ers,1,NolaDi0,Nolan,0
+sfo,1970,San Francisco 49ers,1,NolaDi0,Nolan,0
+sfo,1971,San Francisco 49ers,1,NolaDi0,Nolan,0
+sfo,1972,San Francisco 49ers,1,NolaDi0,Nolan,0
+sfo,1973,San Francisco 49ers,1,NolaDi0,Nolan,0
+sfo,1974,San Francisco 49ers,1,NolaDi0,Nolan,0
+sfo,1975,San Francisco 49ers,1,NolaDi0,Nolan,0
+sfo,1976,San Francisco 49ers,1,ClarMo0,Clark,0
+sfo,1977,San Francisco 49ers,1,MeyeKe0,Meyer,0
+sfo,1978,San Francisco 49ers,2,OConFr0|McCuPe0,O'Connor|McCulley,1
+sfo,1979,San Francisco 49ers,1,WalsBi0,Walsh,0
+sfo,1980,San Francisco 49ers,1,WalsBi0,Walsh,0
+sfo,1981,San Francisco 49ers,1,WalsBi0,Walsh,0
+sfo,1982,San Francisco 49ers,1,WalsBi0,Walsh,0
+sfo,1983,San Francisco 49ers,1,WalsBi0,Walsh,0
+sfo,1984,San Francisco 49ers,1,WalsBi0,Walsh,0
+sfo,1985,San Francisco 49ers,1,WalsBi0,Walsh,0
+sfo,1986,San Francisco 49ers,1,WalsBi0,Walsh,0
+sfo,1987,San Francisco 49ers,1,WalsBi0,Walsh,0
+sfo,1988,San Francisco 49ers,1,WalsBi0,Walsh,0
+sfo,1989,San Francisco 49ers,1,SeifGe0,Seifert,0
+sfo,1990,San Francisco 49ers,1,SeifGe0,Seifert,0
+sfo,1991,San Francisco 49ers,1,SeifGe0,Seifert,0
+sfo,1992,San Francisco 49ers,1,SeifGe0,Seifert,0
+sfo,1993,San Francisco 49ers,1,SeifGe0,Seifert,0
+sfo,1994,San Francisco 49ers,1,SeifGe0,Seifert,0
+sfo,1995,San Francisco 49ers,1,SeifGe0,Seifert,0
+sfo,1996,San Francisco 49ers,1,SeifGe0,Seifert,0
+sfo,1997,San Francisco 49ers,1,MariSt0,Mariucci,0
+sfo,1998,San Francisco 49ers,1,MariSt0,Mariucci,0
+sfo,1999,San Francisco 49ers,1,MariSt0,Mariucci,0
+sfo,2000,San Francisco 49ers,1,MariSt0,Mariucci,0
+sfo,2001,San Francisco 49ers,1,MariSt0,Mariucci,0
+sfo,2002,San Francisco 49ers,1,MariSt0,Mariucci,0
+sfo,2003,San Francisco 49ers,1,EricDe0,Erickson,0
+sfo,2004,San Francisco 49ers,1,EricDe0,Erickson,0
+sfo,2005,San Francisco 49ers,1,NolaMi0,Nolan,0
+sfo,2006,San Francisco 49ers,1,NolaMi0,Nolan,0
+sfo,2007,San Francisco 49ers,1,NolaMi0,Nolan,0
+sfo,2008,San Francisco 49ers,2,SingMi0|NolaMi0,Singletary|Nolan,1
+sfo,2009,San Francisco 49ers,1,SingMi0,Singletary,0
+sfo,2010,San Francisco 49ers,2,SingMi0|TomsJi0,Singletary|Tomsula,1
+sfo,2011,San Francisco 49ers,1,HarbJi0,Harbaugh,0
+sfo,2012,San Francisco 49ers,1,HarbJi0,Harbaugh,0
+sfo,2013,San Francisco 49ers,1,HarbJi0,Harbaugh,0
+sfo,2014,San Francisco 49ers,1,HarbJi0,Harbaugh,0
+sfo,2015,San Francisco 49ers,1,TomsJi0,Tomsula,0
+sfo,2016,San Francisco 49ers,1,KellCh0,Kelly,0
+sfo,2017,San Francisco 49ers,1,ShanKy0,Shanahan,0
+sfo,2018,San Francisco 49ers,1,ShanKy0,Shanahan,0
+sfo,2019,San Francisco 49ers,1,ShanKy0,Shanahan,0
+sfo,2020,San Francisco 49ers,1,ShanKy0,Shanahan,0
+sfo,2021,San Francisco 49ers,1,ShanKy0,Shanahan,0
+sfo,2022,San Francisco 49ers,1,ShanKy0,Shanahan,0
+sfo,2023,San Francisco 49ers,1,ShanKy0,Shanahan,0
+sfo,2024,San Francisco 49ers,1,ShanKy0,Shanahan,0
+sfo,2025,San Francisco 49ers,1,ShanKy0,Shanahan,0
+sfo,2026,San Francisco 49ers,1,ShanKy0,Shanahan,0
+tam,1976,Tampa Bay Buccaneers,1,McKaJo0,McKay,0
+tam,1977,Tampa Bay Buccaneers,1,McKaJo0,McKay,0
+tam,1978,Tampa Bay Buccaneers,1,McKaJo0,McKay,0
+tam,1979,Tampa Bay Buccaneers,1,McKaJo0,McKay,0
+tam,1980,Tampa Bay Buccaneers,1,McKaJo0,McKay,0
+tam,1981,Tampa Bay Buccaneers,1,McKaJo0,McKay,0
+tam,1982,Tampa Bay Buccaneers,1,McKaJo0,McKay,0
+tam,1983,Tampa Bay Buccaneers,1,McKaJo0,McKay,0
+tam,1984,Tampa Bay Buccaneers,1,McKaJo0,McKay,0
+tam,1985,Tampa Bay Buccaneers,1,BennLe0,Bennett,0
+tam,1986,Tampa Bay Buccaneers,1,BennLe0,Bennett,0
+tam,1987,Tampa Bay Buccaneers,1,PerkRa0,Perkins,0
+tam,1988,Tampa Bay Buccaneers,1,PerkRa0,Perkins,0
+tam,1989,Tampa Bay Buccaneers,1,PerkRa0,Perkins,0
+tam,1990,Tampa Bay Buccaneers,2,PerkRa0|WillRi0,Perkins|Williamson,1
+tam,1991,Tampa Bay Buccaneers,1,WillRi0,Williamson,0
+tam,1992,Tampa Bay Buccaneers,1,WychSa0,Wyche,0
+tam,1993,Tampa Bay Buccaneers,1,WychSa0,Wyche,0
+tam,1994,Tampa Bay Buccaneers,1,WychSa0,Wyche,0
+tam,1995,Tampa Bay Buccaneers,1,WychSa0,Wyche,0
+tam,1996,Tampa Bay Buccaneers,1,DungTo0,Dungy,0
+tam,1997,Tampa Bay Buccaneers,1,DungTo0,Dungy,0
+tam,1998,Tampa Bay Buccaneers,1,DungTo0,Dungy,0
+tam,1999,Tampa Bay Buccaneers,1,DungTo0,Dungy,0
+tam,2000,Tampa Bay Buccaneers,1,DungTo0,Dungy,0
+tam,2001,Tampa Bay Buccaneers,1,DungTo0,Dungy,0
+tam,2002,Tampa Bay Buccaneers,1,GrudJo0,Gruden,0
+tam,2003,Tampa Bay Buccaneers,1,GrudJo0,Gruden,0
+tam,2004,Tampa Bay Buccaneers,1,GrudJo0,Gruden,0
+tam,2005,Tampa Bay Buccaneers,1,GrudJo0,Gruden,0
+tam,2006,Tampa Bay Buccaneers,1,GrudJo0,Gruden,0
+tam,2007,Tampa Bay Buccaneers,1,GrudJo0,Gruden,0
+tam,2008,Tampa Bay Buccaneers,1,GrudJo0,Gruden,0
+tam,2009,Tampa Bay Buccaneers,1,MorrRa0,Morris,0
+tam,2010,Tampa Bay Buccaneers,1,MorrRa0,Morris,0
+tam,2011,Tampa Bay Buccaneers,1,MorrRa0,Morris,0
+tam,2012,Tampa Bay Buccaneers,1,SchiGr0,Schiano,0
+tam,2013,Tampa Bay Buccaneers,1,SchiGr0,Schiano,0
+tam,2014,Tampa Bay Buccaneers,1,SmitLo0,Smith,0
+tam,2015,Tampa Bay Buccaneers,1,SmitLo0,Smith,0
+tam,2016,Tampa Bay Buccaneers,1,KoetDi0,Koetter,0
+tam,2017,Tampa Bay Buccaneers,1,KoetDi0,Koetter,0
+tam,2018,Tampa Bay Buccaneers,1,KoetDi0,Koetter,0
+tam,2019,Tampa Bay Buccaneers,1,AriaBr0,Arians,0
+tam,2020,Tampa Bay Buccaneers,1,AriaBr0,Arians,0
+tam,2021,Tampa Bay Buccaneers,1,AriaBr0,Arians,0
+tam,2022,Tampa Bay Buccaneers,1,BowlTo0,Bowles,0
+tam,2023,Tampa Bay Buccaneers,1,BowlTo0,Bowles,0
+tam,2024,Tampa Bay Buccaneers,1,BowlTo0,Bowles,0
+tam,2025,Tampa Bay Buccaneers,1,BowlTo0,Bowles,0
+tam,2026,Tampa Bay Buccaneers,1,BowlTo0,Bowles,0
+was,1932,Boston Braves,1,WrayLu0,Wray,0
+was,1933,Boston Redskins,1,DietLo0,Dietz,0
+was,1934,Boston Redskins,1,DietLo0,Dietz,0
+was,1935,Boston Redskins,1,CaseEd0,Casey,0
+was,1936,Boston Redskins,1,FlahRa0,Flaherty,0
+was,1937,Washington Redskins,1,FlahRa0,Flaherty,0
+was,1938,Washington Redskins,1,FlahRa0,Flaherty,0
+was,1939,Washington Redskins,1,FlahRa0,Flaherty,0
+was,1940,Washington Redskins,1,FlahRa0,Flaherty,0
+was,1941,Washington Redskins,1,FlahRa0,Flaherty,0
+was,1942,Washington Redskins,1,FlahRa0,Flaherty,0
+was,1943,Washington Redskins,1,BergDu0,Bergman,0
+was,1944,Washington Redskins,1,DeGrDu0,DeGroot,0
+was,1945,Washington Redskins,1,DeGrDu0,DeGroot,0
+was,1946,Washington Redskins,1,EdwaTu0,Edwards,0
+was,1947,Washington Redskins,1,EdwaTu0,Edwards,0
+was,1948,Washington Redskins,1,EdwaTu0,Edwards,0
+was,1949,Washington Redskins,2,WhelJo0|BallHe0,Whelchel|Ball,1
+was,1950,Washington Redskins,1,BallHe0,Ball,0
+was,1951,Washington Redskins,2,ToddDi0|BallHe0,Todd|Ball,1
+was,1952,Washington Redskins,1,LambCu0,Lambeau,0
+was,1953,Washington Redskins,1,LambCu0,Lambeau,0
+was,1954,Washington Redskins,1,KuhaJo0,Kuharich,0
+was,1955,Washington Redskins,1,KuhaJo0,Kuharich,0
+was,1956,Washington Redskins,1,KuhaJo0,Kuharich,0
+was,1957,Washington Redskins,1,KuhaJo0,Kuharich,0
+was,1958,Washington Redskins,1,KuhaJo0,Kuharich,0
+was,1959,Washington Redskins,1,NixoMi0,Nixon,0
+was,1960,Washington Redskins,1,NixoMi0,Nixon,0
+was,1961,Washington Redskins,1,McPeBi0,McPeak,0
+was,1962,Washington Redskins,1,McPeBi0,McPeak,0
+was,1963,Washington Redskins,1,McPeBi0,McPeak,0
+was,1964,Washington Redskins,1,McPeBi0,McPeak,0
+was,1965,Washington Redskins,1,McPeBi0,McPeak,0
+was,1966,Washington Redskins,1,GrahOt0,Graham,0
+was,1967,Washington Redskins,1,GrahOt0,Graham,0
+was,1968,Washington Redskins,1,GrahOt0,Graham,0
+was,1969,Washington Redskins,1,LombVi0,Lombardi,0
+was,1970,Washington Redskins,1,AustBi0,Austin,0
+was,1971,Washington Redskins,1,AlleGe0,Allen,0
+was,1972,Washington Redskins,1,AlleGe0,Allen,0
+was,1973,Washington Redskins,1,AlleGe0,Allen,0
+was,1974,Washington Redskins,1,AlleGe0,Allen,0
+was,1975,Washington Redskins,1,AlleGe0,Allen,0
+was,1976,Washington Redskins,1,AlleGe0,Allen,0
+was,1977,Washington Redskins,1,AlleGe0,Allen,0
+was,1978,Washington Redskins,1,PardJa0,Pardee,0
+was,1979,Washington Redskins,1,PardJa0,Pardee,0
+was,1980,Washington Redskins,1,PardJa0,Pardee,0
+was,1981,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1982,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1983,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1984,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1985,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1986,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1987,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1988,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1989,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1990,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1991,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1992,Washington Redskins,1,GibbJo0,Gibbs,0
+was,1993,Washington Redskins,1,PetiRi0,Petitbon,0
+was,1994,Washington Redskins,1,TurnNo0,Turner,0
+was,1995,Washington Redskins,1,TurnNo0,Turner,0
+was,1996,Washington Redskins,1,TurnNo0,Turner,0
+was,1997,Washington Redskins,1,TurnNo0,Turner,0
+was,1998,Washington Redskins,1,TurnNo0,Turner,0
+was,1999,Washington Redskins,1,TurnNo0,Turner,0
+was,2000,Washington Redskins,2,TurnNo0|RobiTe0,Turner|Robiskie,1
+was,2001,Washington Redskins,1,SchoMa0,Schottenheimer,0
+was,2002,Washington Redskins,1,SpurSt0,Spurrier,0
+was,2003,Washington Redskins,1,SpurSt0,Spurrier,0
+was,2004,Washington Redskins,1,GibbJo0,Gibbs,0
+was,2005,Washington Redskins,1,GibbJo0,Gibbs,0
+was,2006,Washington Redskins,1,GibbJo0,Gibbs,0
+was,2007,Washington Redskins,1,GibbJo0,Gibbs,0
+was,2008,Washington Redskins,1,ZornJi0,Zorn,0
+was,2009,Washington Redskins,1,ZornJi0,Zorn,0
+was,2010,Washington Redskins,1,ShanMi0,Shanahan,0
+was,2011,Washington Redskins,1,ShanMi0,Shanahan,0
+was,2012,Washington Redskins,1,ShanMi0,Shanahan,0
+was,2013,Washington Redskins,1,ShanMi0,Shanahan,0
+was,2014,Washington Redskins,1,GrudJa0,Gruden,0
+was,2015,Washington Redskins,1,GrudJa0,Gruden,0
+was,2016,Washington Redskins,1,GrudJa0,Gruden,0
+was,2017,Washington Redskins,1,GrudJa0,Gruden,0
+was,2018,Washington Redskins,1,GrudJa0,Gruden,0
+was,2019,Washington Redskins,2,CallBi0|GrudJa0,Callahan|Gruden,1
+was,2020,Washington Football Team,1,RiveRo0,Rivera,0
+was,2021,Washington Football Team,1,RiveRo0,Rivera,0
+was,2022,Washington Commanders,1,RiveRo0,Rivera,0
+was,2023,Washington Commanders,1,RiveRo0,Rivera,0
+was,2024,Washington Commanders,1,QuinDa0,Quinn,0
+was,2025,Washington Commanders,1,QuinDa0,Quinn,0
+was,2026,Washington Commanders,1,QuinDa0,Quinn,0

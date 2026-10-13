@@ -1,0 +1,74 @@
+stars in 2002-2012: 260
+todo: 250, done: 10
+[6/250] Alan Faneca 2002: no snapshot
+[10/250] checkpoint: 201 rows
+[14/250] Barret Robbins 2003: no snapshot
+[16/250] Ricky Williams 2003: no snapshot
+[20/250] checkpoint: 324 rows
+[26/250] Derrick Brooks 2003: no snapshot
+[28/250] Alan Faneca 2003: no snapshot
+[30/250] checkpoint: 435 rows
+[37/250] Zach Thomas 2004: no snapshot
+[40/250] checkpoint: 553 rows
+[50/250] checkpoint: 668 rows
+[52/250] Dante Hall 2004: no snapshot
+[53/250] Randy Moss 2004: no snapshot
+[54/250] Keith Bulluck 2004: no snapshot
+[60/250] checkpoint: 771 rows
+[61/250] LaDainian Tomlinson 2005: no snapshot
+[62/250] William Henderson 2005: no snapshot
+[65/250] Jeff Hartings 2005: no snapshot
+[67/250] Ronde Barber 2005: no snapshot
+[70/250] checkpoint: 844 rows
+[71/250] Ed Reed 2005: no snapshot
+[73/250] Kevin Williams 2005: no snapshot
+[75/250] Champ Bailey 2005: no snapshot
+[80/250] Dwight Freeney 2005: no snapshot
+[88/250] Brian Waters 2006: no snapshot
+[90/250] Walter Jones 2006: no snapshot
+[96/250] Champ Bailey 2006: no snapshot
+[100/250] checkpoint: 1134 rows
+[103/250] Lance Briggs 2006: no snapshot
+[104/250] Tiki Barber 2006: no snapshot
+[106/250] Jamal Williams 2006: no snapshot
+[110/250] checkpoint: 1228 rows
+[120/250] checkpoint: 1355 rows
+[130/250] checkpoint: 1498 rows
+[140/250] checkpoint: 1633 rows
+[150/250] DeMarcus Ware 2008: no snapshot
+[153/250] Patrick Willis 2008: no snapshot
+[157/250] Ed Reed 2008: no snapshot
+[160/250] checkpoint: 1869 rows
+[164/250] Jordan Gross 2009: no snapshot
+[167/250] Chris Snee 2009: no snapshot
+[169/250] Justin Tuck 2009: no snapshot
+[170/250] checkpoint: 1981 rows
+[171/250] Albert Haynesworth 2009: no snapshot
+[172/250] Kevin Williams 2009: no snapshot
+[174/250] DeMarcus Ware 2009: no snapshot
+[175/250] Jon Beason 2009: no snapshot
+[179/250] Ed Reed 2009: no snapshot
+[180/250] checkpoint: 2047 rows
+[182/250] Adrian Peterson 2010: no snapshot
+[183/250] Leonard Weaver 2010: no snapshot
+[186/250] Dallas Clark 2010: no snapshot
+[190/250] checkpoint: 2150 rows
+[192/250] Dwight Freeney 2010: no snapshot
+[194/250] Kevin Williams 2010: no snapshot
+[196/250] DeMarcus Ware 2010: no snapshot
+[200/250] Darrelle Revis 2010: no snapshot
+[202/250] Darren Sharper 2010: no snapshot
+[204/250] Jamaal Charles 2011: no snapshot
+[209/250] Jason Witten 2011: no snapshot
+[210/250] checkpoint: 2336 rows
+[215/250] Julius Peppers 2011: no snapshot
+[220/250] checkpoint: 2468 rows
+[223/250] Darrelle Revis 2011: no snapshot
+[230/250] checkpoint: 2593 rows
+[237/250] Maurkice Pouncey 2012: no snapshot
+[240/250] checkpoint: 2705 rows
+[242/250] DeMarcus Ware 2012: no snapshot
+[246/250] Patrick Willis 2012: no snapshot
+[247/250] Darrelle Revis 2012: no snapshot
+[250/250] checkpoint: 2789 rows
+done: ok=200 no_snapshot=50 errors=0; wrote /home/hatch/workspace/nfl-score-predictor/research/star_nonqb_absence/star_gameweeks_wb.csv (2789 rows)

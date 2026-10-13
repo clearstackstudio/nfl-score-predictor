@@ -1,0 +1,462 @@
+{
+  "arm0": {
+    "label": "Baseline (weight 0, current code)",
+    "overall": {
+      "games": 1107,
+      "su_pct": 0.6260162601626016,
+      "margin_rmse_ours": 14.44391015835516,
+      "margin_rmse_line": 12.725943527418833,
+      "ats_wlp": [
+        399,
+        441,
+        26
+      ],
+      "ats_picks": 866,
+      "ats_pct": 0.475,
+      "total_rmse_ours": 15.169132813108973,
+      "total_rmse_line": 13.076688195579502,
+      "ou_wlp": [
+        376,
+        386,
+        13
+      ],
+      "ou_picks": 775,
+      "ou_pct": 0.49343832020997375
+    },
+    "per_season": {
+      "2021": {
+        "games": 253,
+        "su_pct": 0.5731225296442688,
+        "margin_rmse_ours": 16.517518822405655,
+        "margin_rmse_line": 13.480186015770066,
+        "ats_wlp": [
+          88,
+          115,
+          3
+        ],
+        "ats_picks": 206,
+        "ats_pct": 0.43349753694581283,
+        "total_rmse_ours": 15.90526465133894,
+        "total_rmse_line": 13.408893279176027,
+        "ou_wlp": [
+          88,
+          80,
+          3
+        ],
+        "ou_picks": 171,
+        "ou_pct": 0.5238095238095238
+      },
+      "2022": {
+        "games": 284,
+        "su_pct": 0.6338028169014085,
+        "margin_rmse_ours": 12.771799126747325,
+        "margin_rmse_line": 11.45705391918194,
+        "ats_wlp": [
+          96,
+          111,
+          5
+        ],
+        "ats_picks": 212,
+        "ats_pct": 0.463768115942029,
+        "total_rmse_ours": 14.951722219258249,
+        "total_rmse_line": 13.225695221216426,
+        "ou_wlp": [
+          98,
+          97,
+          2
+        ],
+        "ou_picks": 197,
+        "ou_pct": 0.5025641025641026
+      },
+      "2023": {
+        "games": 285,
+        "su_pct": 0.6140350877192983,
+        "margin_rmse_ours": 14.65826571409754,
+        "margin_rmse_line": 13.260480793590894,
+        "ats_wlp": [
+          106,
+          105,
+          10
+        ],
+        "ats_picks": 221,
+        "ats_pct": 0.5023696682464455,
+        "total_rmse_ours": 15.779939236044111,
+        "total_rmse_line": 13.122533185059295,
+        "ou_wlp": [
+          94,
+          124,
+          3
+        ],
+        "ou_picks": 221,
+        "ou_pct": 0.43119266055045874
+      },
+      "2024": {
+        "games": 285,
+        "su_pct": 0.6771929824561403,
+        "margin_rmse_ours": 13.810976967444976,
+        "margin_rmse_line": 12.692137364415537,
+        "ats_wlp": [
+          109,
+          110,
+          8
+        ],
+        "ats_picks": 227,
+        "ats_pct": 0.4977168949771689,
+        "total_rmse_ours": 14.050546787496234,
+        "total_rmse_line": 12.57308459131453,
+        "ou_wlp": [
+          96,
+          85,
+          5
+        ],
+        "ou_picks": 186,
+        "ou_pct": 0.5303867403314917
+      }
+    }
+  },
+  "arm1": {
+    "label": "Penalty EPA at 100%, denominators unchanged",
+    "overall": {
+      "games": 1107,
+      "su_pct": 0.6260162601626016,
+      "margin_rmse_ours": 14.510731169642936,
+      "margin_rmse_line": 12.725943527418833,
+      "ats_wlp": [
+        406,
+        431,
+        27
+      ],
+      "ats_picks": 864,
+      "ats_pct": 0.4850657108721625,
+      "total_rmse_ours": 15.20201350874606,
+      "total_rmse_line": 13.076688195579502,
+      "ou_wlp": [
+        370,
+        398,
+        13
+      ],
+      "ou_picks": 781,
+      "ou_pct": 0.4817708333333333
+    },
+    "per_season": {
+      "2021": {
+        "games": 253,
+        "su_pct": 0.5889328063241107,
+        "margin_rmse_ours": 16.62514695904945,
+        "margin_rmse_line": 13.480186015770066,
+        "ats_wlp": [
+          88,
+          114,
+          3
+        ],
+        "ats_picks": 205,
+        "ats_pct": 0.43564356435643564,
+        "total_rmse_ours": 16.094693226763717,
+        "total_rmse_line": 13.408893279176027,
+        "ou_wlp": [
+          80,
+          88,
+          3
+        ],
+        "ou_picks": 171,
+        "ou_pct": 0.47619047619047616
+      },
+      "2022": {
+        "games": 284,
+        "su_pct": 0.6408450704225352,
+        "margin_rmse_ours": 12.843714248721678,
+        "margin_rmse_line": 11.45705391918194,
+        "ats_wlp": [
+          99,
+          108,
+          5
+        ],
+        "ats_picks": 212,
+        "ats_pct": 0.4782608695652174,
+        "total_rmse_ours": 14.941898482762097,
+        "total_rmse_line": 13.225695221216426,
+        "ou_wlp": [
+          99,
+          99,
+          2
+        ],
+        "ou_picks": 200,
+        "ou_pct": 0.5
+      },
+      "2023": {
+        "games": 285,
+        "su_pct": 0.5964912280701754,
+        "margin_rmse_ours": 14.677893337079487,
+        "margin_rmse_line": 13.260480793590894,
+        "ats_wlp": [
+          104,
+          102,
+          11
+        ],
+        "ats_picks": 217,
+        "ats_pct": 0.5048543689320388,
+        "total_rmse_ours": 15.729599519641264,
+        "total_rmse_line": 13.122533185059295,
+        "ou_wlp": [
+          94,
+          120,
+          3
+        ],
+        "ou_picks": 217,
+        "ou_pct": 0.4392523364485981
+      },
+      "2024": {
+        "games": 285,
+        "su_pct": 0.6736842105263158,
+        "margin_rmse_ours": 13.880926646407964,
+        "margin_rmse_line": 12.692137364415537,
+        "ats_wlp": [
+          115,
+          107,
+          8
+        ],
+        "ats_picks": 230,
+        "ats_pct": 0.5180180180180181,
+        "total_rmse_ours": 14.063941716672616,
+        "total_rmse_line": 12.57308459131453,
+        "ou_wlp": [
+          97,
+          91,
+          5
+        ],
+        "ou_picks": 193,
+        "ou_pct": 0.5159574468085106
+      }
+    }
+  },
+  "arm2": {
+    "label": "Penalty EPA at 50%, denominators unchanged",
+    "overall": {
+      "games": 1107,
+      "su_pct": 0.6242095754290876,
+      "margin_rmse_ours": 14.46072195817751,
+      "margin_rmse_line": 12.725943527418833,
+      "ats_wlp": [
+        405,
+        437,
+        27
+      ],
+      "ats_picks": 869,
+      "ats_pct": 0.4809976247030879,
+      "total_rmse_ours": 15.16823343216901,
+      "total_rmse_line": 13.076688195579502,
+      "ou_wlp": [
+        377,
+        390,
+        13
+      ],
+      "ou_picks": 780,
+      "ou_pct": 0.4915254237288136
+    },
+    "per_season": {
+      "2021": {
+        "games": 253,
+        "su_pct": 0.5770750988142292,
+        "margin_rmse_ours": 16.547394829299684,
+        "margin_rmse_line": 13.480186015770066,
+        "ats_wlp": [
+          88,
+          111,
+          3
+        ],
+        "ats_picks": 202,
+        "ats_pct": 0.44221105527638194,
+        "total_rmse_ours": 15.966984471931989,
+        "total_rmse_line": 13.408893279176027,
+        "ou_wlp": [
+          88,
+          83,
+          3
+        ],
+        "ou_picks": 174,
+        "ou_pct": 0.5146198830409356
+      },
+      "2022": {
+        "games": 284,
+        "su_pct": 0.6338028169014085,
+        "margin_rmse_ours": 12.79616054755645,
+        "margin_rmse_line": 11.45705391918194,
+        "ats_wlp": [
+          99,
+          109,
+          5
+        ],
+        "ats_picks": 213,
+        "ats_pct": 0.47596153846153844,
+        "total_rmse_ours": 14.935576342251732,
+        "total_rmse_line": 13.225695221216426,
+        "ou_wlp": [
+          99,
+          98,
+          2
+        ],
+        "ou_picks": 199,
+        "ou_pct": 0.5025380710659898
+      },
+      "2023": {
+        "games": 285,
+        "su_pct": 0.6070175438596491,
+        "margin_rmse_ours": 14.657090134750423,
+        "margin_rmse_line": 13.260480793590894,
+        "ats_wlp": [
+          107,
+          105,
+          11
+        ],
+        "ats_picks": 223,
+        "ats_pct": 0.5047169811320755,
+        "total_rmse_ours": 15.744005995615838,
+        "total_rmse_line": 13.122533185059295,
+        "ou_wlp": [
+          95,
+          125,
+          3
+        ],
+        "ou_picks": 223,
+        "ou_pct": 0.4318181818181818
+      },
+      "2024": {
+        "games": 285,
+        "su_pct": 0.6736842105263158,
+        "margin_rmse_ours": 13.826330626483756,
+        "margin_rmse_line": 12.692137364415537,
+        "ats_wlp": [
+          111,
+          112,
+          8
+        ],
+        "ats_picks": 231,
+        "ats_pct": 0.4977578475336323,
+        "total_rmse_ours": 14.042052176480395,
+        "total_rmse_line": 12.57308459131453,
+        "ou_wlp": [
+          95,
+          84,
+          5
+        ],
+        "ou_picks": 184,
+        "ou_pct": 0.5307262569832403
+      }
+    }
+  },
+  "armR": {
+    "label": "ROBUSTNESS: 100% + penalty plays in denominators",
+    "overall": {
+      "games": 1107,
+      "su_pct": 0.6251129177958447,
+      "margin_rmse_ours": 14.539035160283273,
+      "margin_rmse_line": 12.725943527418833,
+      "ats_wlp": [
+        410,
+        431,
+        27
+      ],
+      "ats_picks": 868,
+      "ats_pct": 0.4875148632580262,
+      "total_rmse_ours": 15.215451998153515,
+      "total_rmse_line": 13.076688195579502,
+      "ou_wlp": [
+        373,
+        403,
+        13
+      ],
+      "ou_picks": 789,
+      "ou_pct": 0.4806701030927835
+    },
+    "per_season": {
+      "2021": {
+        "games": 253,
+        "su_pct": 0.5968379446640316,
+        "margin_rmse_ours": 16.621256134756052,
+        "margin_rmse_line": 13.480186015770066,
+        "ats_wlp": [
+          87,
+          114,
+          3
+        ],
+        "ats_picks": 204,
+        "ats_pct": 0.43283582089552236,
+        "total_rmse_ours": 16.100655682570164,
+        "total_rmse_line": 13.408893279176027,
+        "ou_wlp": [
+          80,
+          89,
+          3
+        ],
+        "ou_picks": 172,
+        "ou_pct": 0.47337278106508873
+      },
+      "2022": {
+        "games": 284,
+        "su_pct": 0.6373239436619719,
+        "margin_rmse_ours": 12.888718884812244,
+        "margin_rmse_line": 11.45705391918194,
+        "ats_wlp": [
+          101,
+          108,
+          5
+        ],
+        "ats_picks": 214,
+        "ats_pct": 0.48325358851674644,
+        "total_rmse_ours": 14.971057563743253,
+        "total_rmse_line": 13.225695221216426,
+        "ou_wlp": [
+          100,
+          100,
+          2
+        ],
+        "ou_picks": 202,
+        "ou_pct": 0.5
+      },
+      "2023": {
+        "games": 285,
+        "su_pct": 0.5929824561403508,
+        "margin_rmse_ours": 14.7278136847867,
+        "margin_rmse_line": 13.260480793590894,
+        "ats_wlp": [
+          106,
+          103,
+          11
+        ],
+        "ats_picks": 220,
+        "ats_pct": 0.507177033492823,
+        "total_rmse_ours": 15.721380154533936,
+        "total_rmse_line": 13.122533185059295,
+        "ou_wlp": [
+          96,
+          124,
+          3
+        ],
+        "ou_picks": 223,
+        "ou_pct": 0.43636363636363634
+      },
+      "2024": {
+        "games": 285,
+        "su_pct": 0.6701754385964912,
+        "margin_rmse_ours": 13.905635194627983,
+        "margin_rmse_line": 12.692137364415537,
+        "ats_wlp": [
+          116,
+          106,
+          8
+        ],
+        "ats_picks": 230,
+        "ats_pct": 0.5225225225225225,
+        "total_rmse_ours": 14.092590563301206,
+        "total_rmse_line": 12.57308459131453,
+        "ou_wlp": [
+          97,
+          90,
+          5
+        ],
+        "ou_picks": 192,
+        "ou_pct": 0.5187165775401069
+      }
+    }
+  }
+}

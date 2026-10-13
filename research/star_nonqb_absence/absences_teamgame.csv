@@ -1,0 +1,1485 @@
+season,week,team,gid,n_stars_out,min_streak,resid,pos_groups,players,early
+1980,1,Houston Oilers,1980_1_Pittsburgh Steelers_vs_Houston Oilers,1,1,-11.8,ol,Bob Young,1
+1980,3,Pittsburgh Steelers,1980_3_Cincinnati Bengals_vs_Pittsburgh Steelers,1,1,-0.9043371042073796,skill,John Stallworth,1
+1980,4,Houston Oilers,1980_4_Cincinnati Bengals_vs_Houston Oilers,1,1,4.689398849869085,skill,Earl Campbell,1
+1980,4,Pittsburgh Steelers,1980_4_Pittsburgh Steelers_vs_Chicago Bears,1,2,31.813099340077496,skill,John Stallworth,1
+1980,5,Pittsburgh Steelers,1980_5_Minnesota Vikings_vs_Pittsburgh Steelers,1,3,6.397927684377364,skill,John Stallworth,1
+1980,6,Pittsburgh Steelers,1980_6_Pittsburgh Steelers_vs_Cincinnati Bengals,1,4,-5.488862170604598,skill,John Stallworth,1
+1980,7,Pittsburgh Steelers,1980_7_Pittsburgh Steelers_vs_Oakland Raiders,1,5,-14.580569256824928,skill,John Stallworth,0
+1980,8,Pittsburgh Steelers,1980_8_Cleveland Browns_vs_Pittsburgh Steelers,2,1,0.9342390215736125,defense|skill,Jack Lambert|John Stallworth,1
+1980,9,Pittsburgh Steelers,1980_9_Pittsburgh Steelers_vs_Green Bay Packers,2,2,-2.283255235412171,defense|skill,Jack Lambert|John Stallworth,1
+1980,11,Pittsburgh Steelers,1980_11_Pittsburgh Steelers_vs_Cleveland Browns,1,1,0.845072263259099,skill,John Stallworth,1
+1980,12,Denver Broncos,1980_12_Denver Broncos_vs_Seattle Seahawks,1,1,12.754290487612879,defense,Louis Wright,1
+1980,12,Pittsburgh Steelers,1980_12_Buffalo Bills_vs_Pittsburgh Steelers,1,2,-12.131815937622651,skill,John Stallworth,1
+1980,13,Pittsburgh Steelers,1980_13_Pittsburgh Steelers_vs_Miami Dolphins,1,3,9.62714815006034,skill,John Stallworth,1
+1980,14,New York Jets,1980_14_Cleveland Browns_vs_New York Jets,1,1,3.371677746743053,ol,Marvin Powell,1
+1980,14,Pittsburgh Steelers,1980_14_Houston Oilers_vs_Pittsburgh Steelers,1,4,-4.286431240733764,skill,John Stallworth,1
+1980,15,Houston Oilers,1980_15_Green Bay Packers_vs_Houston Oilers,1,1,18.011594793230497,ol,Leon Gray,1
+1980,15,Pittsburgh Steelers,1980_15_Pittsburgh Steelers_vs_Kansas City Chiefs,1,5,1.461271867421019,skill,John Stallworth,0
+1980,16,Houston Oilers,1980_16_Houston Oilers_vs_Minnesota Vikings,1,2,1.1889550144401801,ol,Leon Gray,1
+1980,16,Pittsburgh Steelers,1980_16_San Diego Chargers_vs_Pittsburgh Steelers,1,6,-6.050590884204766,skill,John Stallworth,0
+1980,16,Washington Redskins,1980_16_St. Louis Cardinals_vs_Washington Redskins,1,1,27.04332030456093,defense,Lemar Parrish,1
+1981,1,Green Bay Packers,1981_1_Chicago Bears_vs_Green Bay Packers,1,1,11.688226188113486,skill,John Jefferson,1
+1981,2,Green Bay Packers,1981_2_Green Bay Packers_vs_Atlanta Falcons,1,2,-11.95790884158845,skill,John Jefferson,1
+1981,2,San Diego Chargers,1981_2_San Diego Chargers_vs_Detroit Lions,1,1,1.3367432972256479,defense,Fred Dean,1
+1981,3,Cleveland Browns,1981_3_Cincinnati Bengals_vs_Cleveland Browns,1,1,4.827299001040119,defense,Lyle Alzado,1
+1981,3,Green Bay Packers,1981_3_Los Angeles Rams_vs_Green Bay Packers,1,3,-6.703230525309891,skill,John Jefferson,1
+1981,7,Pittsburgh Steelers,1981_7_Cincinnati Bengals_vs_Pittsburgh Steelers,1,1,-26.158014375564242,defense,Donnie Shell,1
+1981,8,Los Angeles Rams,1981_8_San Francisco 49ers_vs_Los Angeles Rams,1,1,-2.091330146550681,defense,Pat Thomas,1
+1981,8,Pittsburgh Steelers,1981_8_Pittsburgh Steelers_vs_Houston Oilers,1,2,10.791003367834792,defense,Donnie Shell,1
+1981,9,Los Angeles Rams,1981_9_Los Angeles Rams_vs_Detroit Lions,1,2,3.9438685317256112,defense,Pat Thomas,1
+1981,14,Los Angeles Rams,1981_14_New York Giants_vs_Los Angeles Rams,1,1,-2.937162528718227,defense,Pat Thomas,1
+1981,15,Los Angeles Rams,1981_15_Los Angeles Rams_vs_Atlanta Falcons,1,2,5.010311132905745,defense,Pat Thomas,1
+1982,1,Denver Broncos,1982_1_Denver Broncos_vs_San Diego Chargers,1,1,-21.10373007761744,defense,Bob Swenson,1
+1982,2,Dallas Cowboys,1982_2_St. Louis Cardinals_vs_Dallas Cowboys,1,2,15.690757452369361,ol,Herbert Scott,1
+1982,2,Denver Broncos,1982_2_Denver Broncos_vs_San Francisco 49ers,1,2,2.7617146552658416,defense,Bob Swenson,1
+1982,2,New Orleans Saints,1982_2_Chicago Bears_vs_New Orleans Saints,1,1,15.63997609360985,skill,George Rogers,1
+1982,11,Dallas Cowboys,1982_11_Dallas Cowboys_vs_Tampa Bay Buccaneers,1,3,-1.3086345142433125,ol,Herbert Scott,1
+1982,11,Denver Broncos,1982_11_Denver Broncos_vs_Seattle Seahawks,1,3,-11.8099599255476,defense,Bob Swenson,1
+1982,11,New York Jets,1982_11_New York Jets_vs_Baltimore Colts,1,1,29.516284582197333,defense,Joe Klecko,1
+1982,12,Denver Broncos,1982_12_San Diego Chargers_vs_Denver Broncos,1,4,-5.68311041203121,defense,Bob Swenson,1
+1982,12,New England Patriots,1982_12_New England Patriots_vs_Houston Oilers,1,1,5.8893720432193915,ol,John Hannah,1
+1982,12,New York Jets,1982_12_New York Jets_vs_Green Bay Packers,1,2,-1.2207088326345183,defense,Joe Klecko,1
+1982,13,Denver Broncos,1982_13_Denver Broncos_vs_Atlanta Falcons,1,5,-8.03394313010741,defense,Bob Swenson,0
+1982,13,New York Jets,1982_13_Detroit Lions_vs_New York Jets,1,3,16.95602005030616,defense,Joe Klecko,1
+1982,14,New York Jets,1982_14_New York Jets_vs_Tampa Bay Buccaneers,1,4,10.421510437667802,defense,Joe Klecko,1
+1982,15,New York Jets,1982_15_Miami Dolphins_vs_New York Jets,1,5,0.8892976002007251,defense,Joe Klecko,0
+1982,16,New Orleans Saints,1982_16_New Orleans Saints_vs_Washington Redskins,1,1,-13.869205854533867,skill,George Rogers,1
+1982,16,New York Jets,1982_16_Minnesota Vikings_vs_New York Jets,1,6,27.934230097386298,defense,Joe Klecko,0
+1982,17,New Orleans Saints,1982_17_New Orleans Saints_vs_Atlanta Falcons,1,2,32.296206462101516,skill,George Rogers,1
+1982,17,New York Jets,1982_17_Kansas City Chiefs_vs_New York Jets,2,1,-25.07938643772898,defense|ol,Joe Klecko|Marvin Powell,1
+1983,1,New York Giants,1983_1_New York Giants_vs_Los Angeles Rams,1,1,-13.23798265450544,defense,Mark Haynes,1
+1983,1,San Diego Chargers,1983_1_San Diego Chargers_vs_New York Jets,1,1,-14.2416328317841,ol,Doug Wilkerson,1
+1983,2,San Diego Chargers,1983_2_Kansas City Chiefs_vs_San Diego Chargers,1,2,4.18152293691388,ol,Doug Wilkerson,1
+1983,3,Cincinnati Bengals,1983_3_Cleveland Browns_vs_Cincinnati Bengals,1,1,-10.018419721147238,defense,Louis Breeden,1
+1983,3,San Diego Chargers,1983_3_Seattle Seahawks_vs_San Diego Chargers,1,3,-3.532039099621443,ol,Doug Wilkerson,1
+1983,4,Cincinnati Bengals,1983_4_Tampa Bay Buccaneers_vs_Cincinnati Bengals,1,2,6.356141779193249,defense,Louis Breeden,1
+1983,4,San Diego Chargers,1983_4_San Diego Chargers_vs_Cleveland Browns,1,4,-10.606622638444069,ol,Doug Wilkerson,1
+1983,5,New York Jets,1983_5_Buffalo Bills_vs_New York Jets,1,1,25.082808517994636,skill,Freeman McNeil,1
+1983,6,New York Jets,1983_6_Cleveland Browns_vs_New York Jets,1,2,-4.490777256959846,skill,Freeman McNeil,1
+1983,7,New York Jets,1983_7_New York Jets_vs_Miami Dolphins,1,3,-20.26485071064766,skill,Freeman McNeil,1
+1983,8,New York Jets,1983_8_New York Jets_vs_Atlanta Falcons,1,4,-10.276953115446295,skill,Freeman McNeil,1
+1983,8,Pittsburgh Steelers,1983_8_Seattle Seahawks_vs_Pittsburgh Steelers,1,1,5.196345638550111,defense,Jack Lambert,1
+1983,9,New York Jets,1983_9_San Francisco 49ers_vs_New York Jets,1,5,18.643181168821258,skill,Freeman McNeil,0
+1983,10,New York Jets,1983_10_New York Jets_vs_Baltimore Colts,1,6,-11.140651546888767,skill,Freeman McNeil,0
+1983,11,New York Jets,1983_11_New York Jets_vs_Buffalo Bills,1,7,-11.268661060156283,skill,Freeman McNeil,0
+1983,13,New York Jets,1983_13_New York Jets_vs_New England Patriots,1,1,19.119569386473987,ol,Joe Fields,1
+1983,14,New York Jets,1983_14_Baltimore Colts_vs_New York Jets,1,2,-0.3741473815784868,ol,Joe Fields,1
+1983,15,Detroit Lions,1983_15_Cincinnati Bengals_vs_Detroit Lions,1,1,-6.266051844029425,defense,Doug English,1
+1983,15,New York Jets,1983_15_New York Jets_vs_Pittsburgh Steelers,1,3,-29.6514293576175,ol,Joe Fields,1
+1983,16,New York Jets,1983_16_Miami Dolphins_vs_New York Jets,1,4,-14.499544284799477,ol,Joe Fields,1
+1984,2,Philadelphia Eagles,1984_2_Philadelphia Eagles_vs_Minnesota Vikings,1,1,-0.7642111236610254,skill,Mike Quick,1
+1984,2,Pittsburgh Steelers,1984_2_New York Jets_vs_Pittsburgh Steelers,1,1,8.63800231086263,defense,Jack Lambert,1
+1984,3,Pittsburgh Steelers,1984_3_Pittsburgh Steelers_vs_Los Angeles Rams,1,2,6.6810930901637136,defense,Jack Lambert,1
+1984,3,Washington Redskins,1984_3_Washington Redskins_vs_New York Giants,1,1,9.807956220613741,defense,Mark Murphy,1
+1984,4,Washington Redskins,1984_4_New England Patriots_vs_Washington Redskins,1,2,14.621585142945905,defense,Mark Murphy,1
+1984,5,Pittsburgh Steelers,1984_5_Pittsburgh Steelers_vs_Cincinnati Bengals,1,1,17.551623947668077,defense,Jack Lambert,1
+1984,5,Washington Redskins,1984_5_Washington Redskins_vs_Philadelphia Eagles,1,3,11.97876816020672,defense,Mark Murphy,1
+1984,6,Pittsburgh Steelers,1984_6_Pittsburgh Steelers_vs_Miami Dolphins,1,2,-22.429610343364985,defense,Jack Lambert,1
+1984,6,Washington Redskins,1984_6_Indianapolis Colts_vs_Washington Redskins,1,4,25.47770903820706,defense,Mark Murphy,1
+1984,7,Washington Redskins,1984_7_Washington Redskins_vs_Dallas Cowboys,1,5,15.343461908433756,defense,Mark Murphy,0
+1984,8,Pittsburgh Steelers,1984_8_Indianapolis Colts_vs_Pittsburgh Steelers,1,1,-0.8744227874136141,defense,Jack Lambert,1
+1984,8,Washington Redskins,1984_8_St. Louis Cardinals_vs_Washington Redskins,1,6,-4.598198424250149,defense,Mark Murphy,0
+1984,9,New England Patriots,1984_9_New England Patriots_vs_New York Jets,1,1,9.675689397394827,ol,John Hannah,1
+1984,9,Washington Redskins,1984_9_New York Giants_vs_Washington Redskins,1,7,-28.717239265988454,defense,Mark Murphy,0
+1984,10,Washington Redskins,1984_10_Washington Redskins_vs_Atlanta Falcons,1,8,4.794837127468099,defense,Mark Murphy,0
+1984,11,Pittsburgh Steelers,1984_11_Cincinnati Bengals_vs_Pittsburgh Steelers,1,1,-1.8131805446457112,defense,Jack Lambert,1
+1984,11,Washington Redskins,1984_11_Washington Redskins_vs_Detroit Lions,2,1,6.352835393540863,defense|skill,John Riggins|Mark Murphy,1
+1984,13,Washington Redskins,1984_13_Washington Redskins_vs_Buffalo Bills,1,1,16.155547090236304,defense,Dave Butz,1
+1984,14,Philadelphia Eagles,1984_14_Philadelphia Eagles_vs_Dallas Cowboys,1,1,-14.921872442917447,skill,Mike Quick,1
+1984,14,Washington Redskins,1984_14_Minnesota Vikings_vs_Washington Redskins,1,1,7.569435043442636,skill,John Riggins,1
+1984,15,Miami Dolphins,1984_15_Indianapolis Colts_vs_Miami Dolphins,1,1,10.69596189166955,defense,Bob Baumhower,1
+1984,15,Pittsburgh Steelers,1984_15_Pittsburgh Steelers_vs_Cleveland Browns,1,1,-2.394360722732463,defense,Jack Lambert,1
+1984,16,Pittsburgh Steelers,1984_16_Los Angeles Raiders_vs_Pittsburgh Steelers,1,2,12.29893286395869,defense,Jack Lambert,1
+1985,1,Los Angeles Rams,1985_1_Los Angeles Rams_vs_Denver Broncos,1,1,3.0273302457350657,skill,Eric Dickerson,1
+1985,1,New York Giants,1985_1_New York Giants_vs_Philadelphia Eagles,1,1,17.094470895592195,defense,Mark Haynes,1
+1985,2,Los Angeles Rams,1985_2_Philadelphia Eagles_vs_Los Angeles Rams,1,2,10.76639150877154,skill,Eric Dickerson,1
+1985,2,New York Giants,1985_2_Green Bay Packers_vs_New York Giants,1,2,-0.365247038846483,defense,Mark Haynes,1
+1985,3,New York Giants,1985_3_New York Giants_vs_St. Louis Cardinals,1,3,9.356618022273723,defense,Mark Haynes,1
+1985,4,New York Giants,1985_4_Philadelphia Eagles_vs_New York Giants,1,4,6.070141267636609,defense,Mark Haynes,1
+1985,5,New York Giants,1985_5_New York Giants_vs_Dallas Cowboys,1,5,-1.5896211533336373,defense,Mark Haynes,0
+1985,6,New York Giants,1985_6_Cincinnati Bengals_vs_New York Giants,1,6,-3.9780795230459534,defense,Mark Haynes,0
+1985,8,New York Giants,1985_8_New Orleans Saints_vs_New York Giants,1,8,7.016345339797599,defense,Mark Haynes,0
+1985,9,New York Giants,1985_9_New York Giants_vs_Tampa Bay Buccaneers,1,9,-6.234953498068744,defense,Mark Haynes,0
+1985,9,St. Louis Cardinals,1985_9_St. Louis Cardinals_vs_Dallas Cowboys,1,1,12.253638396038568,skill,Roy Green,1
+1985,9,Washington Redskins,1985_9_Atlanta Falcons_vs_Washington Redskins,1,1,30.723316034144627,ol,Joe Jacoby,1
+1985,10,St. Louis Cardinals,1985_10_Tampa Bay Buccaneers_vs_St. Louis Cardinals,1,2,-18.64972528194341,skill,Roy Green,1
+1985,10,Washington Redskins,1985_10_Washington Redskins_vs_Dallas Cowboys,1,2,-8.171697092602445,ol,Joe Jacoby,1
+1985,11,St. Louis Cardinals,1985_11_St. Louis Cardinals_vs_Philadelphia Eagles,1,3,-12.486806750346213,skill,Roy Green,1
+1985,11,Washington Redskins,1985_11_Washington Redskins_vs_New York Giants,1,3,-0.7508037264347238,ol,Joe Jacoby,1
+1985,12,Washington Redskins,1985_12_Pittsburgh Steelers_vs_Washington Redskins,1,4,8.640093627742363,ol,Joe Jacoby,1
+1985,14,Seattle Seahawks,1985_14_Seattle Seahawks_vs_Cleveland Browns,1,1,13.06545555553983,defense,Kenny Easley,1
+1985,15,New York Giants,1985_15_Dallas Cowboys_vs_New York Giants,1,1,-5.72826746255344,defense,Mark Haynes,1
+1985,15,Seattle Seahawks,1985_15_Los Angeles Raiders_vs_Seattle Seahawks,1,2,-7.372611096985956,defense,Kenny Easley,1
+1985,16,New York Giants,1985_16_New York Giants_vs_Pittsburgh Steelers,1,2,14.338803644024974,defense,Mark Haynes,1
+1985,16,Seattle Seahawks,1985_16_Seattle Seahawks_vs_Denver Broncos,1,3,-5.0908454531881215,defense,Kenny Easley,1
+1986,1,San Francisco 49ers,1986_1_Tampa Bay Buccaneers_vs_San Francisco 49ers,1,1,18.17725130415288,defense,Eric Wright,1
+1986,2,San Francisco 49ers,1986_2_Los Angeles Rams_vs_San Francisco 49ers,1,2,-3.9657896286792402,defense,Eric Wright,1
+1986,3,San Francisco 49ers,1986_3_San Francisco 49ers_vs_New Orleans Saints,1,3,-0.17787150176863165,defense,Eric Wright,1
+1986,4,Los Angeles Raiders,1986_4_Los Angeles Raiders_vs_San Diego Chargers,1,1,0.19320941550153314,skill,Marcus Allen,1
+1986,4,San Francisco 49ers,1986_4_Miami Dolphins_vs_San Francisco 49ers,1,4,15.215136556225152,defense,Eric Wright,1
+1986,5,Chicago Bears,1986_5_Chicago Bears_vs_Minnesota Vikings,1,1,13.764516312603757,defense,Richard Dent,1
+1986,5,Los Angeles Raiders,1986_5_Kansas City Chiefs_vs_Los Angeles Raiders,1,2,7.461785752869873,skill,Marcus Allen,1
+1986,5,Philadelphia Eagles,1986_5_Atlanta Falcons_vs_Philadelphia Eagles,1,1,18.678352296969216,defense,Wes Hopkins,1
+1986,6,Philadelphia Eagles,1986_6_New York Giants_vs_Philadelphia Eagles,1,2,-26.155864587861707,defense,Wes Hopkins,1
+1986,7,Los Angeles Raiders,1986_7_Miami Dolphins_vs_Los Angeles Raiders,1,1,3.199980823461392,defense,Mike Haynes,1
+1986,7,Philadelphia Eagles,1986_7_Philadelphia Eagles_vs_Dallas Cowboys,1,3,-1.370395786404606,defense,Wes Hopkins,1
+1986,7,San Francisco 49ers,1986_7_Atlanta Falcons_vs_San Francisco 49ers,1,1,-4.033144937900143,defense,Eric Wright,1
+1986,7,Seattle Seahawks,1986_7_Seattle Seahawks_vs_New York Giants,1,1,3.1216797322523053,defense,Kenny Easley,1
+1986,8,Chicago Bears,1986_8_Chicago Bears_vs_Detroit Lions,1,1,-4.353906207425952,defense,Mike Singletary,1
+1986,8,Los Angeles Raiders,1986_8_Houston Oilers_vs_Los Angeles Raiders,2,1,5.985671629009721,defense|skill,Marcus Allen|Mike Haynes,1
+1986,8,Philadelphia Eagles,1986_8_Philadelphia Eagles_vs_San Diego Chargers,1,4,14.428502957075352,defense,Wes Hopkins,1
+1986,8,San Francisco 49ers,1986_8_Green Bay Packers_vs_San Francisco 49ers,1,2,8.317572708511133,defense,Eric Wright,1
+1986,9,Los Angeles Raiders,1986_9_Los Angeles Raiders_vs_Denver Broncos,2,1,-12.087854296475971,defense,Howie Long|Mike Haynes,1
+1986,9,New York Jets,1986_9_Seattle Seahawks_vs_New York Jets,1,1,33.370219196514135,defense,Joe Klecko,1
+1986,9,Philadelphia Eagles,1986_9_St. Louis Cardinals_vs_Philadelphia Eagles,1,5,-3.463267340564207,defense,Wes Hopkins,0
+1986,9,San Francisco 49ers,1986_9_New Orleans Saints_vs_San Francisco 49ers,1,3,-18.42748202021731,defense,Eric Wright,1
+1986,10,Chicago Bears,1986_10_Tampa Bay Buccaneers_vs_Chicago Bears,1,1,10.471880026082562,defense,Mike Singletary,1
+1986,10,New England Patriots,1986_10_Indianapolis Colts_vs_New England Patriots,1,1,1.9370455470284194,defense,Andre Tippett,1
+1986,10,Philadelphia Eagles,1986_10_Philadelphia Eagles_vs_New York Giants,1,6,-0.42592228051049474,defense,Wes Hopkins,0
+1986,10,San Francisco 49ers,1986_10_San Francisco 49ers_vs_St. Louis Cardinals,1,4,15.58459578371634,defense,Eric Wright,1
+1986,11,Los Angeles Raiders,1986_11_Los Angeles Raiders_vs_Cleveland Browns,1,1,8.386009471746629,defense,Howie Long,1
+1986,11,New England Patriots,1986_11_Los Angeles Rams_vs_New England Patriots,1,2,1.62274579297502,defense,Andre Tippett,1
+1986,11,New York Jets,1986_11_New York Jets_vs_Indianapolis Colts,1,1,3.2334529221193673,defense,Joe Klecko,1
+1986,11,Philadelphia Eagles,1986_11_Philadelphia Eagles_vs_Detroit Lions,1,7,-5.43185013991646,defense,Wes Hopkins,0
+1986,11,San Francisco 49ers,1986_11_Washington Redskins_vs_San Francisco 49ers,1,5,-7.819886414882221,defense,Eric Wright,0
+1986,12,Los Angeles Raiders,1986_12_San Diego Chargers_vs_Los Angeles Raiders,1,2,3.570832481556836,defense,Howie Long,1
+1986,12,New England Patriots,1986_12_New England Patriots_vs_Buffalo Bills,1,3,-8.41452830624431,defense,Andre Tippett,1
+1986,12,New York Jets,1986_12_Miami Dolphins_vs_New York Jets,1,2,-42.288722394795705,defense,Joe Klecko,1
+1986,12,San Francisco 49ers,1986_12_San Francisco 49ers_vs_Atlanta Falcons,1,6,11.212526421721368,defense,Eric Wright,0
+1986,13,New England Patriots,1986_13_New Orleans Saints_vs_New England Patriots,1,4,-2.541080166266356,defense,Andre Tippett,1
+1986,13,New York Jets,1986_13_New York Jets_vs_Los Angeles Rams,1,3,-17.598145422240876,defense,Joe Klecko,1
+1986,13,Philadelphia Eagles,1986_13_Los Angeles Raiders_vs_Philadelphia Eagles,1,9,13.568138435249267,defense,Wes Hopkins,0
+1986,13,San Francisco 49ers,1986_13_San Francisco 49ers_vs_New York Giants,1,7,-7.016621633715458,defense,Eric Wright,0
+1986,13,Seattle Seahawks,1986_13_Dallas Cowboys_vs_Seattle Seahawks,1,2,20.641170982646454,defense,Kenny Easley,1
+1986,13,Washington Redskins,1986_13_St. Louis Cardinals_vs_Washington Redskins,1,1,-2.3996538016010254,ol,Russ Grimm,1
+1986,14,New England Patriots,1986_14_New England Patriots_vs_Cincinnati Bengals,1,5,-30.250551371197382,defense,Andre Tippett,0
+1986,14,Philadelphia Eagles,1986_14_Philadelphia Eagles_vs_St. Louis Cardinals,1,10,-4.564783693625323,defense,Wes Hopkins,0
+1986,14,San Francisco 49ers,1986_14_San Francisco 49ers_vs_New York Jets,1,8,9.791985910024186,defense,Eric Wright,0
+1986,14,Seattle Seahawks,1986_14_Seattle Seahawks_vs_Los Angeles Raiders,1,3,36.528295215557385,defense,Kenny Easley,1
+1986,15,Philadelphia Eagles,1986_15_Dallas Cowboys_vs_Philadelphia Eagles,1,11,6.677306412069493,defense,Wes Hopkins,0
+1986,15,San Francisco 49ers,1986_15_New England Patriots_vs_San Francisco 49ers,1,9,5.937230537975747,defense,Eric Wright,0
+1986,15,Seattle Seahawks,1986_15_San Diego Chargers_vs_Seattle Seahawks,1,4,9.107630030418413,defense,Kenny Easley,1
+1986,16,New York Jets,1986_16_Cincinnati Bengals_vs_New York Jets,1,1,-29.7336382994432,defense,Joe Klecko,1
+1986,16,Philadelphia Eagles,1986_16_Philadelphia Eagles_vs_Washington Redskins,1,12,-4.4909093344426125,defense,Wes Hopkins,0
+1986,16,San Francisco 49ers,1986_16_San Francisco 49ers_vs_Los Angeles Rams,1,10,5.088000405782505,defense,Eric Wright,0
+1986,16,Seattle Seahawks,1986_16_Seattle Seahawks_vs_Denver Broncos,1,5,23.91460132915591,defense,Kenny Easley,0
+1987,1,Cincinnati Bengals,1987_1_Indianapolis Colts_vs_Cincinnati Bengals,1,1,-0.08933392197480305,ol,Anthony Munoz,1
+1987,1,Washington Redskins,1987_1_Washington Redskins_vs_Philadelphia Eagles,1,1,2.0091067922671124,defense,Dexter Manley,1
+1987,8,Los Angeles Rams,1987_8_Los Angeles Rams_vs_San Francisco 49ers,2,1,-20.742699946864697,defense|ol,Dennis Harrah|LeRoy Irvin,1
+1987,9,Los Angeles Rams,1987_9_Los Angeles Rams_vs_New Orleans Saints,2,2,-19.061470125331116,defense|ol,Dennis Harrah|LeRoy Irvin,1
+1987,10,Seattle Seahawks,1987_10_Seattle Seahawks_vs_Green Bay Packers,1,1,2.724213975477724,skill,Bobby Joe Edmonds,1
+1987,11,New York Giants,1987_11_New Orleans Saints_vs_New York Giants,1,1,-10.390974239437956,skill,Joe Morris,1
+1987,12,New York Giants,1987_12_Washington Redskins_vs_New York Giants,1,1,-2.6868431992346995,defense,Lawrence Taylor,1
+1987,13,Chicago Bears,1987_13_Minnesota Vikings_vs_Chicago Bears,1,1,4.950512029155625,ol,Jimbo Covert,1
+1987,13,Kansas City Chiefs,1987_13_Cincinnati Bengals_vs_Kansas City Chiefs,1,1,0.3579516068910653,defense,Deron Cherry,1
+1987,13,Los Angeles Raiders,1987_13_Los Angeles Raiders_vs_Buffalo Bills,1,1,7.522480357718514,defense,Bill Pickel,1
+1987,14,Miami Dolphins,1987_14_Philadelphia Eagles_vs_Miami Dolphins,1,1,18.61085683260928,ol,Dwight Stephenson,1
+1987,15,Chicago Bears,1987_15_Chicago Bears_vs_Seattle Seahawks,1,1,-17.248115325551744,ol,Jimbo Covert,1
+1987,15,Kansas City Chiefs,1987_15_Denver Broncos_vs_Kansas City Chiefs,1,3,4.034692142847925,defense,Deron Cherry,1
+1987,15,Los Angeles Rams,1987_15_Los Angeles Rams_vs_Dallas Cowboys,1,1,-12.643504152917167,ol,Dennis Harrah,1
+1987,15,Miami Dolphins,1987_15_Miami Dolphins_vs_Washington Redskins,1,2,1.7550351737937582,ol,Dwight Stephenson,1
+1987,16,Chicago Bears,1987_16_Los Angeles Raiders_vs_Chicago Bears,1,2,1.7252067885234643,ol,Jimbo Covert,1
+1987,16,Kansas City Chiefs,1987_16_Kansas City Chiefs_vs_Seattle Seahawks,1,4,23.651042581780466,defense,Deron Cherry,1
+1987,16,Los Angeles Rams,1987_16_San Francisco 49ers_vs_Los Angeles Rams,1,2,-40.89031841020658,ol,Dennis Harrah,1
+1987,16,Miami Dolphins,1987_16_Miami Dolphins_vs_New England Patriots,1,3,-16.476783755530068,ol,Dwight Stephenson,1
+1988,1,Buffalo Bills,1988_1_Buffalo Bills_vs_Minnesota Vikings,1,1,4.25821582590881,defense,Bruce Smith,1
+1988,1,Indianapolis Colts,1988_1_Indianapolis Colts_vs_Houston Oilers,1,1,-5.235958039989491,defense,Fredd Young,1
+1988,2,Buffalo Bills,1988_2_Buffalo Bills_vs_Miami Dolphins,1,2,2.4585559605236176,defense,Bruce Smith,1
+1988,2,Los Angeles Rams,1988_2_Los Angeles Rams_vs_Detroit Lions,1,1,2.101307802569063,skill,Charles White,1
+1988,2,San Francisco 49ers,1988_2_New York Giants_vs_San Francisco 49ers,1,1,4.28187371086673,defense,Ronnie Lott,1
+1988,3,Buffalo Bills,1988_3_New England Patriots_vs_Buffalo Bills,1,3,6.571949079309079,defense,Bruce Smith,1
+1988,3,Los Angeles Rams,1988_3_Los Angeles Raiders_vs_Los Angeles Rams,1,2,6.521621582172047,skill,Charles White,1
+1988,3,San Francisco 49ers,1988_3_San Francisco 49ers_vs_Atlanta Falcons,1,2,-27.629340628272566,defense,Ronnie Lott,1
+1988,3,Washington Redskins,1988_3_Washington Redskins_vs_Philadelphia Eagles,1,1,1.7366106617128478,defense,Barry Wilburn,1
+1988,4,Buffalo Bills,1988_4_Buffalo Bills_vs_Pittsburgh Steelers,1,4,5.8478787930182445,defense,Bruce Smith,1
+1988,4,Los Angeles Rams,1988_4_New York Giants_vs_Los Angeles Rams,1,3,17.705187384702395,skill,Charles White,1
+1988,4,New England Patriots,1988_4_Houston Oilers_vs_New England Patriots,1,1,-25.694179066206797,defense,Andre Tippett,1
+1988,4,Washington Redskins,1988_4_Phoenix Cardinals_vs_Washington Redskins,1,2,-10.530911120815663,defense,Barry Wilburn,1
+1988,5,Los Angeles Rams,1988_5_Los Angeles Rams_vs_Phoenix Cardinals,1,4,-17.984618779062977,skill,Charles White,1
+1988,5,New England Patriots,1988_5_New England Patriots_vs_Indianapolis Colts,1,2,-0.35503465290868874,defense,Andre Tippett,1
+1988,5,Washington Redskins,1988_5_Washington Redskins_vs_New York Giants,1,3,-4.010096961705358,defense,Barry Wilburn,1
+1988,6,New England Patriots,1988_6_Green Bay Packers_vs_New England Patriots,1,3,-44.2029719905962,defense,Andre Tippett,1
+1988,6,Washington Redskins,1988_6_Dallas Cowboys_vs_Washington Redskins,1,4,16.76058237443039,defense,Barry Wilburn,1
+1988,7,New England Patriots,1988_7_New England Patriots_vs_Cincinnati Bengals,1,4,6.159698779943419,defense,Andre Tippett,1
+1988,7,New York Giants,1988_7_New York Giants_vs_Detroit Lions,1,1,12.604265897127098,defense,Carl Banks,1
+1988,7,Washington Redskins,1988_7_Washington Redskins_vs_Phoenix Cardinals,1,5,11.52837834447044,defense,Barry Wilburn,0
+1988,8,Washington Redskins,1988_8_Green Bay Packers_vs_Washington Redskins,1,6,-0.41959462838631234,defense,Barry Wilburn,0
+1988,13,New York Giants,1988_13_New Orleans Saints_vs_New York Giants,1,1,4.241319568626132,defense,Carl Banks,1
+1988,14,San Francisco 49ers,1988_14_Atlanta Falcons_vs_San Francisco 49ers,1,1,3.59138758141411,defense,Ronnie Lott,1
+1988,15,Atlanta Falcons,1988_15_Los Angeles Rams_vs_Atlanta Falcons,1,1,-7.151098265652836,ol,Bill Fralic,1
+1988,16,Atlanta Falcons,1988_16_New Orleans Saints_vs_Atlanta Falcons,1,2,7.364478927009749,ol,Bill Fralic,1
+1988,16,Cleveland Browns,1988_16_Cleveland Browns_vs_Houston Oilers,1,1,2.373377023771072,defense,Hanford Dixon,1
+1989,5,Philadelphia Eagles,1989_5_Philadelphia Eagles_vs_New York Giants,1,1,1.8635570550931788,skill,Keith Jackson,1
+1989,9,Indianapolis Colts,1989_9_Miami Dolphins_vs_Indianapolis Colts,1,1,-5.467011191373667,skill,Eric Dickerson,1
+1989,10,Philadelphia Eagles,1989_10_Philadelphia Eagles_vs_Washington Redskins,1,1,-10.878706387000065,skill,Keith Jackson,1
+1989,12,Buffalo Bills,1989_12_Buffalo Bills_vs_Cincinnati Bengals,1,1,14.755458394045736,defense,Cornelius Bennett,1
+1989,12,Los Angeles Rams,1989_12_New Orleans Saints_vs_Los Angeles Rams,1,1,4.862612523447215,skill,Henry Ellard,1
+1989,13,Buffalo Bills,1989_13_Seattle Seahawks_vs_Buffalo Bills,1,2,-2.118712919608088,defense,Cornelius Bennett,1
+1989,13,Los Angeles Rams,1989_13_Dallas Cowboys_vs_Los Angeles Rams,1,2,-2.1204706357523717,skill,Henry Ellard,1
+1989,14,Buffalo Bills,1989_14_Buffalo Bills_vs_New Orleans Saints,1,3,-5.888361706838505,defense,Cornelius Bennett,1
+1989,15,Buffalo Bills,1989_15_San Francisco 49ers_vs_Buffalo Bills,1,4,-4.136229681400473,defense,Cornelius Bennett,1
+1989,16,Kansas City Chiefs,1989_16_Miami Dolphins_vs_Kansas City Chiefs,1,1,4.542284273761543,defense,Deron Cherry,1
+1990,1,Kansas City Chiefs,1990_1_Kansas City Chiefs_vs_Minnesota Vikings,1,1,2.880494731215549,defense,Albert Lewis,1
+1990,1,Philadelphia Eagles,1990_1_New York Giants_vs_Philadelphia Eagles,1,1,-3.8917996932879944,skill,Keith Jackson,1
+1990,2,Philadelphia Eagles,1990_2_Philadelphia Eagles_vs_Phoenix Cardinals,1,2,-8.087098621200402,skill,Keith Jackson,1
+1990,4,Los Angeles Rams,1990_4_Los Angeles Rams_vs_Cincinnati Bengals,1,1,-5.308628345592769,ol,Tom Newberry,1
+1990,6,Minnesota Vikings,1990_6_Philadelphia Eagles_vs_Minnesota Vikings,1,1,-6.18302937754137,defense,Keith Millard,1
+1990,7,San Francisco 49ers,1990_7_San Francisco 49ers_vs_Pittsburgh Steelers,1,1,10.88308347751634,defense,Ronnie Lott,1
+1990,8,Chicago Bears,1990_8_Phoenix Cardinals_vs_Chicago Bears,1,1,6.947345850877591,ol,Jay Hilgenberg,1
+1990,8,Minnesota Vikings,1990_8_Green Bay Packers_vs_Minnesota Vikings,1,2,-15.099524641740963,defense,Keith Millard,1
+1990,9,Minnesota Vikings,1990_9_Minnesota Vikings_vs_Denver Broncos,1,3,3.519847167556491,defense,Keith Millard,1
+1990,10,Minnesota Vikings,1990_10_Detroit Lions_vs_Minnesota Vikings,1,4,9.365584428435522,defense,Keith Millard,1
+1990,11,Cincinnati Bengals,1990_11_Cincinnati Bengals_vs_Pittsburgh Steelers,1,1,21.774880787632654,defense,David Fulcher,1
+1990,11,Minnesota Vikings,1990_11_Seattle Seahawks_vs_Minnesota Vikings,1,5,3.309836997043667,defense,Keith Millard,0
+1990,12,Cincinnati Bengals,1990_12_Cincinnati Bengals_vs_Indianapolis Colts,1,2,-18.983974792957113,defense,David Fulcher,1
+1990,12,Minnesota Vikings,1990_12_Minnesota Vikings_vs_Chicago Bears,1,6,27.560698661177856,defense,Keith Millard,0
+1990,13,Cincinnati Bengals,1990_13_Pittsburgh Steelers_vs_Cincinnati Bengals,1,3,6.134449638689166,defense,David Fulcher,1
+1990,13,Minnesota Vikings,1990_13_Minnesota Vikings_vs_Green Bay Packers,1,7,10.841210554649514,defense,Keith Millard,0
+1990,14,Minnesota Vikings,1990_14_New York Giants_vs_Minnesota Vikings,1,8,-3.7901445704313668,defense,Keith Millard,0
+1990,14,San Francisco 49ers,1990_14_Cincinnati Bengals_vs_San Francisco 49ers,1,1,-0.8835097688771567,defense,Ronnie Lott,1
+1990,15,Kansas City Chiefs,1990_15_Kansas City Chiefs_vs_Houston Oilers,1,1,-20.25033453943972,skill,Christian Okoye,1
+1990,15,Minnesota Vikings,1990_15_Tampa Bay Buccaneers_vs_Minnesota Vikings,1,9,-17.562405390348367,defense,Keith Millard,0
+1990,15,San Francisco 49ers,1990_15_Los Angeles Rams_vs_San Francisco 49ers,1,2,11.718213461453814,defense,Ronnie Lott,1
+1990,16,Kansas City Chiefs,1990_16_San Diego Chargers_vs_Kansas City Chiefs,1,2,2.772299179574748,skill,Christian Okoye,1
+1990,16,Minnesota Vikings,1990_16_Minnesota Vikings_vs_Los Angeles Raiders,1,10,-6.001388376455716,defense,Keith Millard,0
+1990,16,San Francisco 49ers,1990_16_San Francisco 49ers_vs_New Orleans Saints,1,3,-11.972752086861446,defense,Ronnie Lott,1
+1990,17,Chicago Bears,1990_17_Chicago Bears_vs_Kansas City Chiefs,1,1,-13.222675823439486,ol,Jay Hilgenberg,1
+1990,17,Los Angeles Rams,1990_17_New Orleans Saints_vs_Los Angeles Rams,1,1,0.3100133807162546,ol,Tom Newberry,1
+1991,1,Buffalo Bills,1991_1_Buffalo Bills_vs_Miami Dolphins,1,1,-0.6177559113056486,defense,Bruce Smith,1
+1991,1,Detroit Lions,1991_1_Washington Redskins_vs_Detroit Lions,1,1,-37.39408179041539,skill,Barry Sanders,1
+1991,2,Buffalo Bills,1991_2_Buffalo Bills_vs_Pittsburgh Steelers,1,2,12.586990452156988,defense,Bruce Smith,1
+1991,2,Kansas City Chiefs,1991_2_Kansas City Chiefs_vs_New Orleans Saints,1,1,-10.232287361283325,defense,Albert Lewis,1
+1991,3,Buffalo Bills,1991_3_New York Jets_vs_Buffalo Bills,1,3,-1.5509834800895623,defense,Bruce Smith,1
+1991,3,Kansas City Chiefs,1991_3_Houston Oilers_vs_Kansas City Chiefs,1,2,-6.8753622881646965,defense,Albert Lewis,1
+1991,4,Buffalo Bills,1991_4_Tampa Bay Buccaneers_vs_Buffalo Bills,1,4,1.4878359437408646,defense,Bruce Smith,1
+1991,4,Kansas City Chiefs,1991_4_Kansas City Chiefs_vs_Seattle Seahawks,1,3,3.7603071250743234,defense,Albert Lewis,1
+1991,7,Buffalo Bills,1991_7_Buffalo Bills_vs_Indianapolis Colts,1,2,26.33945424079105,defense,Bruce Smith,1
+1991,8,Buffalo Bills,1991_8_Buffalo Bills_vs_Cincinnati Bengals,1,3,10.66574225459888,defense,Bruce Smith,1
+1991,8,Miami Dolphins,1991_8_Miami Dolphins_vs_Houston Oilers,1,2,-3.3989522871214195,defense,John Offerdahl,1
+1991,10,Buffalo Bills,1991_10_Buffalo Bills_vs_New England Patriots,1,4,-7.102585631644878,defense,Bruce Smith,1
+1991,10,Miami Dolphins,1991_10_Indianapolis Colts_vs_Miami Dolphins,1,3,1.9811867299550432,defense,John Offerdahl,1
+1991,11,Buffalo Bills,1991_11_Green Bay Packers_vs_Buffalo Bills,1,5,4.984185034857237,defense,Bruce Smith,0
+1991,11,Miami Dolphins,1991_11_Miami Dolphins_vs_New England Patriots,1,4,2.234374752941849,defense,John Offerdahl,1
+1991,11,Washington Redskins,1991_11_Washington Redskins_vs_Atlanta Falcons,1,1,29.59689790475627,ol,Jim Lachey,1
+1991,12,Minnesota Vikings,1991_12_Green Bay Packers_vs_Minnesota Vikings,1,1,12.930343125026674,defense,Joey Browner,1
+1991,12,San Francisco 49ers,1991_12_San Francisco 49ers_vs_Phoenix Cardinals,1,1,-6.895840331770142,defense,Charles Haley,1
+1991,13,Buffalo Bills,1991_13_New England Patriots_vs_Buffalo Bills,1,7,-11.95715765559603,defense,Bruce Smith,0
+1991,13,Miami Dolphins,1991_13_Chicago Bears_vs_Miami Dolphins,1,6,7.89862938332899,defense,John Offerdahl,0
+1991,13,Minnesota Vikings,1991_13_Minnesota Vikings_vs_Detroit Lions,1,2,-23.71363644054165,defense,Joey Browner,1
+1991,13,Pittsburgh Steelers,1991_13_Pittsburgh Steelers_vs_Houston Oilers,1,1,14.317897232508777,defense,Rod Woodson,1
+1991,14,Miami Dolphins,1991_14_Miami Dolphins_vs_Tampa Bay Buccaneers,1,7,11.067535124751913,defense,John Offerdahl,0
+1991,15,Kansas City Chiefs,1991_15_Kansas City Chiefs_vs_San Diego Chargers,1,1,-4.710719792352938,defense,Albert Lewis,1
+1991,15,San Francisco 49ers,1991_15_Seattle Seahawks_vs_San Francisco 49ers,1,1,-1.090240408972313,defense,Charles Haley,1
+1991,16,Cincinnati Bengals,1991_16_Pittsburgh Steelers_vs_Cincinnati Bengals,1,2,-2.391084057112921,ol,Anthony Munoz,1
+1991,16,Kansas City Chiefs,1991_16_San Francisco 49ers_vs_Kansas City Chiefs,1,2,-9.295121610602617,defense,Albert Lewis,1
+1991,16,Miami Dolphins,1991_16_San Diego Chargers_vs_Miami Dolphins,1,9,-9.280727272585363,defense,John Offerdahl,0
+1991,17,Buffalo Bills,1991_17_Buffalo Bills_vs_Detroit Lions,1,1,-9.755294853321711,skill,Thurman Thomas,1
+1991,17,Cincinnati Bengals,1991_17_Cincinnati Bengals_vs_New England Patriots,1,3,18.296901469787407,ol,Anthony Munoz,1
+1991,17,Kansas City Chiefs,1991_17_Los Angeles Raiders_vs_Kansas City Chiefs,1,3,6.966008697013931,defense,Albert Lewis,1
+1991,17,Miami Dolphins,1991_17_Miami Dolphins_vs_New York Jets,1,10,-7.379506882724627,defense,John Offerdahl,0
+1992,1,Denver Broncos,1992_1_Denver Broncos_vs_Los Angeles Raiders,1,1,1.0960259799571213,defense,Steve Atwater,1
+1992,1,Houston Oilers,1992_1_Houston Oilers_vs_Pittsburgh Steelers,1,1,-9.734335751260197,defense,Cris Dishman,1
+1992,3,Washington Redskins,1992_3_Washington Redskins_vs_Detroit Lions,1,1,-2.5892804433405487,defense,Darrell Green,1
+1992,5,Washington Redskins,1992_5_Phoenix Cardinals_vs_Washington Redskins,1,2,-10.172450454234848,defense,Darrell Green,1
+1992,6,Houston Oilers,1992_6_Cincinnati Bengals_vs_Houston Oilers,1,1,11.195316992073158,ol,Mike Munchak,1
+1992,6,Washington Redskins,1992_6_Washington Redskins_vs_Denver Broncos,1,3,25.996713717544907,defense,Darrell Green,1
+1992,7,Washington Redskins,1992_7_Washington Redskins_vs_Philadelphia Eagles,2,1,-0.06970157727390891,defense|ol,Darrell Green|Jim Lachey,1
+1992,8,Washington Redskins,1992_8_Minnesota Vikings_vs_Washington Redskins,2,2,0.3842463136380865,defense|ol,Darrell Green|Jim Lachey,1
+1992,9,Washington Redskins,1992_9_Washington Redskins_vs_New York Giants,2,3,-23.841270466888844,defense|ol,Darrell Green|Jim Lachey,1
+1992,10,Washington Redskins,1992_10_Seattle Seahawks_vs_Washington Redskins,2,4,7.567899971425049,defense|ol,Darrell Green|Jim Lachey,1
+1992,11,Washington Redskins,1992_11_Kansas City Chiefs_vs_Washington Redskins,2,5,-19.7975883595501,defense|ol,Darrell Green|Jim Lachey,0
+1992,12,Washington Redskins,1992_12_New Orleans Saints_vs_Washington Redskins,1,6,-15.92438025400994,ol,Jim Lachey,0
+1992,14,Detroit Lions,1992_14_Green Bay Packers_vs_Detroit Lions,1,1,-27.073019505808553,defense,Jerry Ball,1
+1992,15,Detroit Lions,1992_15_Detroit Lions_vs_Cleveland Browns,1,2,8.38511583610235,defense,Jerry Ball,1
+1992,16,Detroit Lions,1992_16_Detroit Lions_vs_Chicago Bears,1,3,11.217151896350742,defense,Jerry Ball,1
+1992,17,Detroit Lions,1992_17_San Francisco 49ers_vs_Detroit Lions,1,4,-7.734809944794032,defense,Jerry Ball,1
+1993,1,Atlanta Falcons,1993_1_Detroit Lions_vs_Atlanta Falcons,1,1,-14.366007648269616,defense,Deion Sanders,1
+1993,1,Dallas Cowboys,1993_1_Washington Redskins_vs_Dallas Cowboys,1,1,-17.978555476171795,skill,Emmitt Smith,1
+1993,1,Houston Oilers,1993_1_New Orleans Saints_vs_Houston Oilers,1,1,-9.327798546649792,defense,Wilber Marshall,1
+1993,1,San Francisco 49ers,1993_1_Pittsburgh Steelers_vs_San Francisco 49ers,1,1,8.82347865317578,ol,Harris Barton,1
+1993,2,Atlanta Falcons,1993_2_Atlanta Falcons_vs_New Orleans Saints,1,2,-0.6274171817423575,defense,Deion Sanders,1
+1993,2,Dallas Cowboys,1993_2_Dallas Cowboys_vs_Buffalo Bills,1,2,-5.902623869852706,skill,Emmitt Smith,1
+1993,2,Houston Oilers,1993_2_Houston Oilers_vs_Kansas City Chiefs,1,2,27.872581575765825,defense,Wilber Marshall,1
+1993,3,Atlanta Falcons,1993_3_San Francisco 49ers_vs_Atlanta Falcons,1,3,1.5599538067852698,defense,Deion Sanders,1
+1993,4,Atlanta Falcons,1993_4_Atlanta Falcons_vs_Pittsburgh Steelers,1,4,-28.643437432348072,defense,Deion Sanders,1
+1993,5,Atlanta Falcons,1993_5_Chicago Bears_vs_Atlanta Falcons,1,5,-2.014431857311601,defense,Deion Sanders,0
+1993,7,Houston Oilers,1993_7_New England Patriots_vs_Houston Oilers,1,1,9.710984867918224,defense,Wilber Marshall,1
+1993,8,Detroit Lions,1993_8_Los Angeles Rams_vs_Detroit Lions,1,1,3.1330670737525086,defense,Pat Swilling,1
+1993,8,Houston Oilers,1993_8_Houston Oilers_vs_Cincinnati Bengals,1,2,7.6627947505524485,defense,Wilber Marshall,1
+1993,10,Houston Oilers,1993_10_Houston Oilers_vs_Seattle Seahawks,1,3,3.4120182865635975,defense,Wilber Marshall,1
+1993,11,Houston Oilers,1993_11_Cincinnati Bengals_vs_Houston Oilers,1,4,30.173143592358436,defense,Wilber Marshall,1
+1993,12,Pittsburgh Steelers,1993_12_Denver Broncos_vs_Pittsburgh Steelers,1,1,-23.090207280763725,skill,Barry Foster,1
+1993,13,Pittsburgh Steelers,1993_13_Houston Oilers_vs_Pittsburgh Steelers,1,2,-16.758447665022786,skill,Barry Foster,1
+1993,14,Pittsburgh Steelers,1993_14_Pittsburgh Steelers_vs_New England Patriots,1,3,-6.764298053439042,skill,Barry Foster,1
+1993,15,Detroit Lions,1993_15_Phoenix Cardinals_vs_Detroit Lions,1,1,8.0638078010145,defense,Pat Swilling,1
+1993,15,Pittsburgh Steelers,1993_15_Miami Dolphins_vs_Pittsburgh Steelers,1,4,4.363382025347519,skill,Barry Foster,1
+1993,16,Pittsburgh Steelers,1993_16_Pittsburgh Steelers_vs_Houston Oilers,1,5,-9.106914271433888,skill,Barry Foster,0
+1993,17,Pittsburgh Steelers,1993_17_Seattle Seahawks_vs_Pittsburgh Steelers,1,6,-12.335072005444516,skill,Barry Foster,0
+1993,18,Pittsburgh Steelers,1993_18_Pittsburgh Steelers_vs_Cleveland Browns,1,7,2.9575898729517665,skill,Barry Foster,0
+1994,1,San Francisco 49ers,1994_1_San Francisco 49ers_vs_Los Angeles Raiders,1,1,23.763699618413646,defense,Deion Sanders,1
+1994,2,Denver Broncos,1994_2_New York Jets_vs_Denver Broncos,1,1,-1.4411566089370718,skill,Shannon Sharpe,1
+1994,2,San Francisco 49ers,1994_2_Kansas City Chiefs_vs_San Francisco 49ers,2,1,-7.224469866173404,defense|ol,Deion Sanders|Harris Barton,1
+1994,3,Green Bay Packers,1994_3_Philadelphia Eagles_vs_Green Bay Packers,1,1,-2.976191022039239,defense,LeRoy Butler,1
+1994,3,San Francisco 49ers,1994_3_Los Angeles Rams_vs_San Francisco 49ers,1,2,9.619561514665865,ol,Harris Barton,1
+1994,4,Green Bay Packers,1994_4_Green Bay Packers_vs_Tampa Bay Buccaneers,1,2,21.266470492899224,defense,LeRoy Butler,1
+1994,4,San Francisco 49ers,1994_4_San Francisco 49ers_vs_New Orleans Saints,1,3,4.043636179926024,ol,Harris Barton,1
+1994,5,Green Bay Packers,1994_5_New England Patriots_vs_Green Bay Packers,1,3,-2.096721883923874,defense,LeRoy Butler,1
+1994,5,San Francisco 49ers,1994_5_San Francisco 49ers_vs_Philadelphia Eagles,1,4,-37.66409504568374,ol,Harris Barton,1
+1994,5,Tampa Bay Buccaneers,1994_5_Tampa Bay Buccaneers_vs_Detroit Lions,1,1,11.17002577610584,defense,Hardy Nickerson,1
+1994,6,San Francisco 49ers,1994_6_Detroit Lions_vs_San Francisco 49ers,1,5,3.549178168889439,ol,Harris Barton,0
+1994,6,Tampa Bay Buccaneers,1994_6_Atlanta Falcons_vs_Tampa Bay Buccaneers,1,2,-16.648940310985317,defense,Hardy Nickerson,1
+1994,7,San Francisco 49ers,1994_7_Atlanta Falcons_vs_San Francisco 49ers,1,6,36.40069865035914,ol,Harris Barton,0
+1994,8,San Francisco 49ers,1994_8_San Francisco 49ers_vs_Tampa Bay Buccaneers,1,7,14.158714142810176,ol,Harris Barton,0
+1994,9,Dallas Cowboys,1994_9_Cincinnati Bengals_vs_Dallas Cowboys,1,1,-6.848134686608471,ol,Erik Williams,1
+1994,10,Dallas Cowboys,1994_10_Dallas Cowboys_vs_New York Giants,1,2,19.101181705137442,ol,Erik Williams,1
+1994,11,Dallas Cowboys,1994_11_San Francisco 49ers_vs_Dallas Cowboys,1,3,-6.587688859133323,ol,Erik Williams,1
+1994,12,Buffalo Bills,1994_12_Buffalo Bills_vs_Green Bay Packers,1,1,6.365728268462135,defense,Bruce Smith,1
+1994,12,Dallas Cowboys,1994_12_Dallas Cowboys_vs_Washington Redskins,1,4,12.876180845271728,ol,Erik Williams,1
+1994,12,Kansas City Chiefs,1994_12_Kansas City Chiefs_vs_Cleveland Browns,1,1,4.628195908508851,defense,Neil Smith,1
+1994,13,Dallas Cowboys,1994_13_Dallas Cowboys_vs_Green Bay Packers,1,5,3.2163310678644574,ol,Erik Williams,0
+1994,13,Kansas City Chiefs,1994_13_Seattle Seahawks_vs_Kansas City Chiefs,1,2,-2.8412932249700495,defense,Neil Smith,1
+1994,14,Dallas Cowboys,1994_14_Philadelphia Eagles_vs_Dallas Cowboys,1,6,8.711381091477124,ol,Erik Williams,0
+1994,15,Dallas Cowboys,1994_15_Dallas Cowboys_vs_Cleveland Browns,1,7,-13.12319081568974,ol,Erik Williams,0
+1994,16,Dallas Cowboys,1994_16_New Orleans Saints_vs_Dallas Cowboys,1,8,2.6851528801482623,ol,Erik Williams,0
+1994,17,Dallas Cowboys,1994_17_New York Giants_vs_Dallas Cowboys,2,1,-9.444093878592604,ol|skill,Emmitt Smith|Erik Williams,1
+1994,17,Pittsburgh Steelers,1994_17_San Diego Chargers_vs_Pittsburgh Steelers,2,1,-1.757520023668494,defense,Greg Lloyd|Rod Woodson,1
+1995,1,Dallas Cowboys,1995_1_New York Giants_vs_Dallas Cowboys,1,1,33.197585978403204,defense,Deion Sanders,1
+1995,2,Dallas Cowboys,1995_2_Dallas Cowboys_vs_Denver Broncos,1,2,2.5385782592326542,defense,Deion Sanders,1
+1995,2,Pittsburgh Steelers,1995_2_Houston Oilers_vs_Pittsburgh Steelers,1,1,15.963226825554656,defense,Rod Woodson,1
+1995,3,Dallas Cowboys,1995_3_Minnesota Vikings_vs_Dallas Cowboys,1,3,2.9888940686370553,defense,Deion Sanders,1
+1995,3,Pittsburgh Steelers,1995_3_Miami Dolphins_vs_Pittsburgh Steelers,1,2,-11.12590380708547,defense,Rod Woodson,1
+1995,4,Dallas Cowboys,1995_4_Dallas Cowboys_vs_Arizona Cardinals,1,4,4.938169604904289,defense,Deion Sanders,1
+1995,4,Pittsburgh Steelers,1995_4_Pittsburgh Steelers_vs_Minnesota Vikings,1,3,-24.392419932804906,defense,Rod Woodson,1
+1995,5,Dallas Cowboys,1995_5_Washington Redskins_vs_Dallas Cowboys,1,5,-10.28949003592793,defense,Deion Sanders,0
+1995,5,Pittsburgh Steelers,1995_5_Pittsburgh Steelers_vs_San Diego Chargers,1,4,13.161063436825788,defense,Rod Woodson,1
+1995,6,Dallas Cowboys,1995_6_Dallas Cowboys_vs_Green Bay Packers,1,6,3.9425940111554425,defense,Deion Sanders,0
+1995,6,Pittsburgh Steelers,1995_6_Jacksonville Jaguars_vs_Pittsburgh Steelers,1,5,-5.4646407032961,defense,Rod Woodson,0
+1995,7,Dallas Cowboys,1995_7_San Diego Chargers_vs_Dallas Cowboys,1,7,11.529370441923056,defense,Deion Sanders,0
+1995,8,Pittsburgh Steelers,1995_8_Pittsburgh Steelers_vs_Cincinnati Bengals,1,6,-26.17932495803634,defense,Rod Woodson,0
+1995,9,Pittsburgh Steelers,1995_9_Pittsburgh Steelers_vs_Jacksonville Jaguars,1,7,12.691427056127322,defense,Rod Woodson,0
+1995,10,Cleveland Browns,1995_10_Cleveland Browns_vs_Houston Oilers,1,1,-31.696320465371482,defense,Eric Turner,1
+1995,10,Pittsburgh Steelers,1995_10_Chicago Bears_vs_Pittsburgh Steelers,1,8,4.808801394532829,defense,Rod Woodson,0
+1995,12,Cleveland Browns,1995_12_Cleveland Browns_vs_Green Bay Packers,1,3,-10.7528671041327,defense,Eric Turner,1
+1995,12,Pittsburgh Steelers,1995_12_Cincinnati Bengals_vs_Pittsburgh Steelers,1,10,14.872938618844145,defense,Rod Woodson,0
+1995,14,Cleveland Browns,1995_14_San Diego Chargers_vs_Cleveland Browns,1,5,-14.30972163888131,defense,Eric Turner,0
+1995,14,Pittsburgh Steelers,1995_14_Pittsburgh Steelers_vs_Houston Oilers,1,12,8.390725954908149,defense,Rod Woodson,0
+1995,15,Cleveland Browns,1995_15_Minnesota Vikings_vs_Cleveland Browns,1,6,-11.26223020796757,defense,Eric Turner,0
+1995,15,Dallas Cowboys,1995_15_Philadelphia Eagles_vs_Dallas Cowboys,1,1,-6.699331769525361,defense,Charles Haley,1
+1995,15,Pittsburgh Steelers,1995_15_Oakland Raiders_vs_Pittsburgh Steelers,1,13,19.577320017692855,defense,Rod Woodson,0
+1995,16,Cleveland Browns,1995_16_Cleveland Browns_vs_Cincinnati Bengals,1,7,12.283236766909322,defense,Eric Turner,0
+1995,16,Dallas Cowboys,1995_16_Dallas Cowboys_vs_New York Giants,1,2,-7.92182640959064,defense,Charles Haley,1
+1995,16,Pittsburgh Steelers,1995_16_Pittsburgh Steelers_vs_New England Patriots,1,14,6.497228362273273,defense,Rod Woodson,0
+1995,17,Buffalo Bills,1995_17_Buffalo Bills_vs_Houston Oilers,1,1,-15.677385386237274,defense,Bruce Smith,1
+1995,17,Cleveland Browns,1995_17_Jacksonville Jaguars_vs_Cleveland Browns,1,8,-3.178934741236908,defense,Eric Turner,0
+1995,17,Dallas Cowboys,1995_17_Arizona Cardinals_vs_Dallas Cowboys,1,3,16.744481751946815,defense,Charles Haley,1
+1995,17,Pittsburgh Steelers,1995_17_Green Bay Packers_vs_Pittsburgh Steelers,1,15,-3.5312077584955386,defense,Rod Woodson,0
+1996,2,Pittsburgh Steelers,1996_2_Pittsburgh Steelers_vs_Baltimore Ravens,1,1,10.036196405047486,defense,Greg Lloyd,1
+1996,3,Pittsburgh Steelers,1996_3_Pittsburgh Steelers_vs_Buffalo Bills,1,2,14.6313831934038,defense,Greg Lloyd,1
+1996,5,Pittsburgh Steelers,1996_5_Pittsburgh Steelers_vs_Houston Oilers,1,3,9.410977395676074,defense,Greg Lloyd,1
+1996,6,Pittsburgh Steelers,1996_6_Kansas City Chiefs_vs_Pittsburgh Steelers,1,4,12.67806762735604,defense,Greg Lloyd,1
+1996,7,Pittsburgh Steelers,1996_7_Pittsburgh Steelers_vs_Cincinnati Bengals,1,5,1.502515924134487,defense,Greg Lloyd,0
+1996,8,Pittsburgh Steelers,1996_8_Houston Oilers_vs_Pittsburgh Steelers,1,6,-10.839461382332802,defense,Greg Lloyd,0
+1996,9,Pittsburgh Steelers,1996_9_Atlanta Falcons_vs_Pittsburgh Steelers,1,7,-0.7401849520283847,defense,Greg Lloyd,0
+1996,10,Pittsburgh Steelers,1996_10_Pittsburgh Steelers_vs_St. Louis Rams,1,8,27.268280585888732,defense,Greg Lloyd,0
+1996,11,New Orleans Saints,1996_11_New Orleans Saints_vs_Houston Oilers,1,1,-16.219520757753152,ol,Willie Roaf,1
+1996,11,Pittsburgh Steelers,1996_11_Cincinnati Bengals_vs_Pittsburgh Steelers,1,9,-14.0671582012422,defense,Greg Lloyd,0
+1996,12,Buffalo Bills,1996_12_Buffalo Bills_vs_Cincinnati Bengals,1,1,8.261978651476747,defense,Bryce Paup,1
+1996,12,New Orleans Saints,1996_12_Atlanta Falcons_vs_New Orleans Saints,1,2,-0.4941525547739911,ol,Willie Roaf,1
+1996,12,Pittsburgh Steelers,1996_12_Pittsburgh Steelers_vs_Jacksonville Jaguars,1,10,16.98105658404209,defense,Greg Lloyd,0
+1996,13,Buffalo Bills,1996_13_Buffalo Bills_vs_New York Jets,1,2,15.27082235227198,defense,Bryce Paup,1
+1996,13,New Orleans Saints,1996_13_Tampa Bay Buccaneers_vs_New Orleans Saints,1,3,-4.438687847142692,ol,Willie Roaf,1
+1996,13,Pittsburgh Steelers,1996_13_Miami Dolphins_vs_Pittsburgh Steelers,1,11,7.107483307191141,defense,Greg Lloyd,0
+1996,14,Buffalo Bills,1996_14_Indianapolis Colts_vs_Buffalo Bills,1,3,-4.206260565553366,defense,Bryce Paup,1
+1996,14,Pittsburgh Steelers,1996_14_Baltimore Ravens_vs_Pittsburgh Steelers,1,12,-17.730295859960023,defense,Greg Lloyd,0
+1996,15,Buffalo Bills,1996_15_Seattle Seahawks_vs_Buffalo Bills,1,4,-8.88930346110541,defense,Bryce Paup,1
+1996,15,Pittsburgh Steelers,1996_15_Pittsburgh Steelers_vs_San Diego Chargers,1,13,7.041936899716347,defense,Greg Lloyd,0
+1996,16,Pittsburgh Steelers,1996_16_Pittsburgh Steelers_vs_San Francisco 49ers,1,14,-10.043258666087459,defense,Greg Lloyd,0
+1996,17,Dallas Cowboys,1996_17_Washington Redskins_vs_Dallas Cowboys,1,1,-31.020977268966398,skill,Emmitt Smith,1
+1996,17,Pittsburgh Steelers,1996_17_Carolina Panthers_vs_Pittsburgh Steelers,1,15,-2.073895606352799,defense,Greg Lloyd,0
+1997,1,Denver Broncos,1997_1_Denver Broncos_vs_Kansas City Chiefs,1,1,12.85790148993422,ol,Gary Zimmerman,1
+1997,1,San Diego Chargers,1997_1_New England Patriots_vs_San Diego Chargers,1,1,-29.73159135557218,defense,Junior Seau,1
+1997,2,Denver Broncos,1997_2_Seattle Seahawks_vs_Denver Broncos,1,2,18.797978498694967,ol,Gary Zimmerman,1
+1997,2,San Francisco 49ers,1997_2_St. Louis Rams_vs_San Francisco 49ers,2,1,0.2244334799651,defense|skill,Jerry Rice|Kevin Greene,1
+1997,3,San Francisco 49ers,1997_3_San Francisco 49ers_vs_New Orleans Saints,1,2,16.40568388769303,skill,Jerry Rice,1
+1997,4,San Francisco 49ers,1997_4_San Francisco 49ers_vs_Atlanta Falcons,2,1,17.38420145232284,defense|skill,Jerry Rice|Kevin Greene,1
+1997,5,San Francisco 49ers,1997_5_Carolina Panthers_vs_San Francisco 49ers,1,4,12.407842435966677,skill,Jerry Rice,1
+1997,6,Arizona Cardinals,1997_6_Arizona Cardinals_vs_Minnesota Vikings,1,1,-0.15863001840157265,skill,Larry Centers,1
+1997,7,San Francisco 49ers,1997_7_San Francisco 49ers_vs_St. Louis Rams,1,5,11.098692041858111,skill,Jerry Rice,0
+1997,8,San Francisco 49ers,1997_8_Atlanta Falcons_vs_San Francisco 49ers,1,6,0.6743264336032917,skill,Jerry Rice,0
+1997,9,Dallas Cowboys,1997_9_Philadelphia Eagles_vs_Dallas Cowboys,1,1,-2.290607778129206,defense,Darren Woodson,1
+1997,9,San Francisco 49ers,1997_9_New Orleans Saints_vs_San Francisco 49ers,2,1,16.092447067162293,defense|skill,Bryant Young|Jerry Rice,1
+1997,10,San Francisco 49ers,1997_10_San Francisco 49ers_vs_Dallas Cowboys,2,2,2.7339199174854727,defense|skill,Bryant Young|Jerry Rice,1
+1997,11,San Francisco 49ers,1997_11_Philadelphia Eagles_vs_San Francisco 49ers,2,3,8.311170653932322,defense|skill,Bryant Young|Jerry Rice,1
+1997,12,Dallas Cowboys,1997_12_Dallas Cowboys_vs_Washington Redskins,1,1,-1.2617632639762268,ol,Erik Williams,1
+1997,12,San Francisco 49ers,1997_12_San Francisco 49ers_vs_Carolina Panthers,1,10,1.0154661598229264,skill,Jerry Rice,0
+1997,13,San Francisco 49ers,1997_13_San Francisco 49ers_vs_San Diego Chargers,1,11,-3.6590656992977895,skill,Jerry Rice,0
+1997,14,Dallas Cowboys,1997_14_Dallas Cowboys_vs_Tennessee Oilers,1,1,-17.911150573045106,defense,Darren Woodson,1
+1997,14,San Francisco 49ers,1997_14_Kansas City Chiefs_vs_San Francisco 49ers,1,12,-36.33208826207449,skill,Jerry Rice,0
+1997,15,Dallas Cowboys,1997_15_Dallas Cowboys_vs_Carolina Panthers,1,1,-13.625300759923766,defense,Deion Sanders,1
+1997,15,San Francisco 49ers,1997_15_San Francisco 49ers_vs_Minnesota Vikings,1,13,3.874979213909219,skill,Jerry Rice,0
+1997,16,Dallas Cowboys,1997_16_Cincinnati Bengals_vs_Dallas Cowboys,1,2,-8.492625317305565,defense,Deion Sanders,1
+1997,16,Seattle Seahawks,1997_16_Oakland Raiders_vs_Seattle Seahawks,1,1,3.032029446986708,defense,Chad Brown,1
+1997,17,Dallas Cowboys,1997_17_Dallas Cowboys_vs_New York Giants,1,3,-16.503591465650516,defense,Deion Sanders,1
+1997,17,Denver Broncos,1997_17_Denver Broncos_vs_San Diego Chargers,1,1,24.739407010997056,skill,Terrell Davis,1
+1997,17,Pittsburgh Steelers,1997_17_Tennessee Oilers_vs_Pittsburgh Steelers,1,1,-11.361819517688527,skill,Jerome Bettis,1
+1997,17,San Francisco 49ers,1997_17_Seattle Seahawks_vs_San Francisco 49ers,2,1,-33.95003745938742,defense|skill,Bryant Young|Jerry Rice,1
+1998,1,Buffalo Bills,1998_1_San Diego Chargers_vs_Buffalo Bills,1,1,-1.0182180084710488,defense,Bruce Smith,1
+1998,2,Kansas City Chiefs,1998_2_Jacksonville Jaguars_vs_Kansas City Chiefs,1,1,-5.197431230224711,ol,Dave Szott,1
+1998,3,Kansas City Chiefs,1998_3_Kansas City Chiefs_vs_San Diego Chargers,1,2,8.79183722422572,ol,Dave Szott,1
+1998,4,Kansas City Chiefs,1998_4_Philadelphia Eagles_vs_Kansas City Chiefs,1,3,-0.5791901412717562,ol,Dave Szott,1
+1998,5,Kansas City Chiefs,1998_5_Kansas City Chiefs_vs_Seattle Seahawks,1,4,6.757228691323762,ol,Dave Szott,1
+1998,6,Kansas City Chiefs,1998_6_New England Patriots_vs_Kansas City Chiefs,1,5,-28.948411674159168,ol,Dave Szott,0
+1998,8,Kansas City Chiefs,1998_8_Kansas City Chiefs_vs_Pittsburgh Steelers,1,6,-10.266861761246291,ol,Dave Szott,0
+1998,9,Kansas City Chiefs,1998_9_Kansas City Chiefs_vs_New York Jets,1,7,-7.958744884883263,ol,Dave Szott,0
+1998,9,Washington Redskins,1998_9_Washington Redskins_vs_New York Giants,1,1,7.278740623721315,defense,Dana Stubblefield,1
+1998,10,Kansas City Chiefs,1998_10_Seattle Seahawks_vs_Kansas City Chiefs,1,8,-11.483346122605262,ol,Dave Szott,0
+1998,10,Washington Redskins,1998_10_Arizona Cardinals_vs_Washington Redskins,1,2,-0.5125493944842856,defense,Dana Stubblefield,1
+1998,11,Kansas City Chiefs,1998_11_Kansas City Chiefs_vs_Denver Broncos,1,9,-20.47219250552355,ol,Dave Szott,0
+1998,11,Washington Redskins,1998_11_Washington Redskins_vs_Philadelphia Eagles,1,3,21.992317084062687,defense,Dana Stubblefield,1
+1998,12,Kansas City Chiefs,1998_12_San Diego Chargers_vs_Kansas City Chiefs,1,10,-3.372223041317702,ol,Dave Szott,0
+1998,12,Washington Redskins,1998_12_Washington Redskins_vs_Arizona Cardinals,1,4,-6.376442910019432,defense,Dana Stubblefield,1
+1998,13,Dallas Cowboys,1998_13_Dallas Cowboys_vs_Minnesota Vikings,1,1,-11.564164655449103,defense,Deion Sanders,1
+1998,13,Kansas City Chiefs,1998_13_Kansas City Chiefs_vs_Arizona Cardinals,1,11,3.7739702426763326,ol,Dave Szott,0
+1998,13,Tampa Bay Buccaneers,1998_13_Chicago Bears_vs_Tampa Bay Buccaneers,1,2,13.693021283868784,defense,Hardy Nickerson,1
+1998,13,Washington Redskins,1998_13_Oakland Raiders_vs_Washington Redskins,1,5,13.867050716930235,defense,Dana Stubblefield,0
+1998,14,Dallas Cowboys,1998_14_New Orleans Saints_vs_Dallas Cowboys,1,2,-22.703842073415927,defense,Deion Sanders,1
+1998,14,Jacksonville Jaguars,1998_14_Jacksonville Jaguars_vs_Detroit Lions,1,1,9.8838114624626,ol,Tony Boselli,1
+1998,14,Kansas City Chiefs,1998_14_Denver Broncos_vs_Kansas City Chiefs,1,12,4.500107311366518,ol,Dave Szott,0
+1998,14,Tampa Bay Buccaneers,1998_14_Tampa Bay Buccaneers_vs_Green Bay Packers,1,3,6.137767204448819,defense,Hardy Nickerson,1
+1998,14,Washington Redskins,1998_14_Washington Redskins_vs_San Diego Chargers,1,6,0.2527867364273697,defense,Dana Stubblefield,0
+1998,15,Baltimore Ravens,1998_15_Baltimore Ravens_vs_Minnesota Vikings,1,1,-5.532254548475985,ol,Jonathan Ogden,1
+1998,15,Tampa Bay Buccaneers,1998_15_Tampa Bay Buccaneers_vs_Pittsburgh Steelers,1,4,12.7599550119788,defense,Hardy Nickerson,1
+1998,15,Washington Redskins,1998_15_Carolina Panthers_vs_Washington Redskins,1,7,4.34785566792877,defense,Dana Stubblefield,0
+1998,16,Baltimore Ravens,1998_16_Chicago Bears_vs_Baltimore Ravens,1,2,-21.16519893561567,ol,Jonathan Ogden,1
+1998,16,Dallas Cowboys,1998_16_Dallas Cowboys_vs_Philadelphia Eagles,1,4,-4.775169751684297,defense,Deion Sanders,1
+1998,16,Kansas City Chiefs,1998_16_New York Giants_vs_Kansas City Chiefs,1,14,-21.029551266576473,ol,Dave Szott,0
+1998,17,Baltimore Ravens,1998_17_Baltimore Ravens_vs_Detroit Lions,1,3,8.500135700272459,ol,Jonathan Ogden,1
+1998,17,Kansas City Chiefs,1998_17_Oakland Raiders_vs_Kansas City Chiefs,1,15,6.828000795549324,ol,Dave Szott,0
+1998,17,Tampa Bay Buccaneers,1998_17_Cincinnati Bengals_vs_Tampa Bay Buccaneers,1,6,33.170954038607725,defense,Hardy Nickerson,0
+1999,1,Dallas Cowboys,1999_1_Washington Redskins_vs_Dallas Cowboys,1,1,5.997848061557971,defense,Deion Sanders,1
+1999,2,Dallas Cowboys,1999_2_Dallas Cowboys_vs_Atlanta Falcons,1,2,15.299147363613974,defense,Deion Sanders,1
+1999,2,Seattle Seahawks,1999_2_Chicago Bears_vs_Seattle Seahawks,1,1,0.5963721254591656,defense,Chad Brown,1
+1999,3,Atlanta Falcons,1999_3_St. Louis Rams_vs_Atlanta Falcons,1,1,-29.403417197929738,skill,Jamal Anderson,1
+1999,4,Atlanta Falcons,1999_4_Atlanta Falcons_vs_Baltimore Ravens,1,2,-10.932862707670857,skill,Jamal Anderson,1
+1999,5,Atlanta Falcons,1999_5_New Orleans Saints_vs_Atlanta Falcons,1,3,2.8111572360984063,skill,Jamal Anderson,1
+1999,5,Denver Broncos,1999_5_Oakland Raiders_vs_Denver Broncos,1,1,0.9205562609446498,skill,Terrell Davis,1
+1999,6,Atlanta Falcons,1999_6_Atlanta Falcons_vs_St. Louis Rams,1,4,-30.390923228801213,skill,Jamal Anderson,1
+1999,6,Denver Broncos,1999_6_Denver Broncos_vs_Green Bay Packers,2,1,19.003697098273534,skill,Shannon Sharpe|Terrell Davis,1
+1999,7,Denver Broncos,1999_7_New England Patriots_vs_Denver Broncos,2,2,-1.5959739148328573,skill,Shannon Sharpe|Terrell Davis,1
+1999,7,San Diego Chargers,1999_7_San Diego Chargers_vs_Green Bay Packers,1,1,-25.672384358324088,defense,Rodney Harrison,1
+1999,8,Atlanta Falcons,1999_8_Atlanta Falcons_vs_Carolina Panthers,1,6,3.523496008875254,skill,Jamal Anderson,0
+1999,8,Denver Broncos,1999_8_Denver Broncos_vs_Minnesota Vikings,2,3,-5.216342110485202,skill,Shannon Sharpe|Terrell Davis,1
+1999,8,San Diego Chargers,1999_8_Kansas City Chiefs_vs_San Diego Chargers,1,2,-27.845637578946363,defense,Rodney Harrison,1
+1999,9,Atlanta Falcons,1999_9_Atlanta Falcons_vs_Jacksonville Jaguars,1,7,-20.6063508568227,skill,Jamal Anderson,0
+1999,9,Pittsburgh Steelers,1999_9_San Francisco 49ers_vs_Pittsburgh Steelers,1,2,24.04450594041771,ol,Dermontti Dawson,1
+1999,10,Denver Broncos,1999_10_Seattle Seahawks_vs_Denver Broncos,2,5,-2.575436500383521,skill,Shannon Sharpe|Terrell Davis,0
+1999,10,Pittsburgh Steelers,1999_10_Pittsburgh Steelers_vs_Cleveland Browns,1,3,-8.96739959751485,ol,Dermontti Dawson,1
+1999,10,San Diego Chargers,1999_10_Oakland Raiders_vs_San Diego Chargers,1,4,-14.82939756962378,defense,Rodney Harrison,1
+1999,11,Atlanta Falcons,1999_11_Tampa Bay Buccaneers_vs_Atlanta Falcons,1,8,-4.977745825346228,skill,Jamal Anderson,0
+1999,11,Dallas Cowboys,1999_11_Arizona Cardinals_vs_Dallas Cowboys,1,1,-6.951708822722903,ol,Larry Allen,1
+1999,11,Denver Broncos,1999_11_Denver Broncos_vs_Oakland Raiders,2,6,-0.5399332814040188,skill,Shannon Sharpe|Terrell Davis,0
+1999,11,Pittsburgh Steelers,1999_11_Tennessee Titans_vs_Pittsburgh Steelers,1,4,-4.236858779338754,ol,Dermontti Dawson,1
+1999,11,San Diego Chargers,1999_11_San Diego Chargers_vs_Chicago Bears,1,5,-4.995844999673591,defense,Rodney Harrison,0
+1999,12,Atlanta Falcons,1999_12_Carolina Panthers_vs_Atlanta Falcons,1,9,-4.140555980616655,skill,Jamal Anderson,0
+1999,12,Dallas Cowboys,1999_12_Dallas Cowboys_vs_Miami Dolphins,1,2,18.35442660644946,ol,Larry Allen,1
+1999,12,Pittsburgh Steelers,1999_12_Pittsburgh Steelers_vs_Cincinnati Bengals,1,5,-17.340504289651697,ol,Dermontti Dawson,0
+1999,12,San Diego Chargers,1999_12_Minnesota Vikings_vs_San Diego Chargers,1,6,2.297252673319065,defense,Rodney Harrison,0
+1999,13,Atlanta Falcons,1999_13_Atlanta Falcons_vs_New Orleans Saints,1,10,18.49623792227414,skill,Jamal Anderson,0
+1999,13,Dallas Cowboys,1999_13_New England Patriots_vs_Dallas Cowboys,1,3,-6.170936760468894,ol,Larry Allen,1
+1999,13,Denver Broncos,1999_13_Denver Broncos_vs_Kansas City Chiefs,2,7,-10.731685388602553,skill,Shannon Sharpe|Terrell Davis,0
+1999,13,Pittsburgh Steelers,1999_13_Jacksonville Jaguars_vs_Pittsburgh Steelers,1,6,-7.158994533941259,ol,Dermontti Dawson,0
+1999,13,San Diego Chargers,1999_13_San Diego Chargers_vs_Cleveland Browns,2,1,9.612917016162582,defense,Junior Seau|Rodney Harrison,1
+1999,14,Atlanta Falcons,1999_14_San Francisco 49ers_vs_Atlanta Falcons,1,11,-17.34654891146948,skill,Jamal Anderson,0
+1999,14,Baltimore Ravens,1999_14_Pittsburgh Steelers_vs_Baltimore Ravens,1,1,10.647138733284773,skill,Jermaine Lewis,1
+1999,14,Dallas Cowboys,1999_14_Dallas Cowboys_vs_Philadelphia Eagles,1,4,0.4293383528234447,ol,Larry Allen,1
+1999,14,Denver Broncos,1999_14_Jacksonville Jaguars_vs_Denver Broncos,2,8,1.1046972943063613,skill,Shannon Sharpe|Terrell Davis,0
+1999,14,San Diego Chargers,1999_14_Seattle Seahawks_vs_San Diego Chargers,1,8,10.506285076130107,defense,Rodney Harrison,0
+1999,15,Atlanta Falcons,1999_15_Tennessee Titans_vs_Atlanta Falcons,1,12,-8.370310893657742,skill,Jamal Anderson,0
+1999,15,Dallas Cowboys,1999_15_Dallas Cowboys_vs_New York Jets,1,5,-4.49758073360199,ol,Larry Allen,0
+1999,15,Denver Broncos,1999_15_Denver Broncos_vs_Seattle Seahawks,2,9,2.039417434012484,skill,Shannon Sharpe|Terrell Davis,0
+1999,15,New England Patriots,1999_15_Philadelphia Eagles_vs_New England Patriots,1,1,-19.31822746937546,defense,Ty Law,1
+1999,15,Pittsburgh Steelers,1999_15_Kansas City Chiefs_vs_Pittsburgh Steelers,1,1,-11.731609015953017,ol,Dermontti Dawson,1
+1999,16,Atlanta Falcons,1999_16_Atlanta Falcons_vs_Arizona Cardinals,1,13,19.72659544560759,skill,Jamal Anderson,0
+1999,16,Denver Broncos,1999_16_Detroit Lions_vs_Denver Broncos,2,10,8.291025285972063,skill,Shannon Sharpe|Terrell Davis,0
+1999,16,New England Patriots,1999_16_New England Patriots_vs_Buffalo Bills,1,2,-3.6941067066687445,defense,Ty Law,1
+1999,16,Pittsburgh Steelers,1999_16_Pittsburgh Steelers_vs_Carolina Panthers,1,2,7.21591793947031,ol,Dermontti Dawson,1
+1999,16,San Diego Chargers,1999_16_San Diego Chargers_vs_Oakland Raiders,1,1,4.444922814501696,defense,Rodney Harrison,1
+1999,17,Atlanta Falcons,1999_17_Atlanta Falcons_vs_San Francisco 49ers,1,14,2.3022333211717525,skill,Jamal Anderson,0
+1999,17,New England Patriots,1999_17_New England Patriots_vs_Baltimore Ravens,1,3,14.588722583987074,defense,Ty Law,1
+1999,17,Pittsburgh Steelers,1999_17_Pittsburgh Steelers_vs_Tennessee Titans,1,3,-11.050781507018346,ol,Dermontti Dawson,1
+2000,5,Miami Dolphins,2000_5_Cincinnati Bengals_vs_Miami Dolphins,1,1,10.762804322206748,defense,Zach Thomas,1
+2000,9,Miami Dolphins,2000_9_Miami Dolphins_vs_Green Bay Packers,1,1,5.662376948628335,defense,Zach Thomas,1
+2000,10,Miami Dolphins,2000_10_Detroit Lions_vs_Miami Dolphins,1,2,15.057884978654783,defense,Zach Thomas,1
+2000,10,St. Louis Rams,2000_10_St. Louis Rams_vs_Carolina Panthers,1,1,-9.88237748403285,skill,Marshall Faulk,1
+2000,11,Miami Dolphins,2000_11_San Diego Chargers_vs_Miami Dolphins,1,3,5.780596733539551,defense,Zach Thomas,1
+2000,11,St. Louis Rams,2000_11_New York Giants_vs_St. Louis Rams,1,2,12.988843942399509,skill,Marshall Faulk,1
+2000,12,Miami Dolphins,2000_12_Miami Dolphins_vs_New York Jets,1,4,-20.433661378765983,defense,Zach Thomas,1
+2000,13,Tampa Bay Buccaneers,2000_13_Tampa Bay Buccaneers_vs_Buffalo Bills,1,1,11.229829855171275,skill,Mike Alstott,1
+2000,14,Tampa Bay Buccaneers,2000_14_Tampa Bay Buccaneers_vs_Dallas Cowboys,1,2,13.614644423378186,skill,Mike Alstott,1
+2000,15,Tampa Bay Buccaneers,2000_15_Miami Dolphins_vs_Tampa Bay Buccaneers,1,3,5.005820217995242,skill,Mike Alstott,1
+2001,5,Tennessee Titans,2001_5_Tennessee Titans_vs_Tampa Bay Buccaneers,2,1,1.3333270471717698,defense|skill,Derrick Mason|Samari Rolle,1
+2001,6,St. Louis Rams,2001_6_New York Jets_vs_St. Louis Rams,1,1,18.92370697203135,skill,Marshall Faulk,1
+2001,6,Tennessee Titans,2001_6_Detroit Lions_vs_Tennessee Titans,1,2,1.3563883597401127,defense,Samari Rolle,1
+2001,7,St. Louis Rams,2001_7_St. Louis Rams_vs_New Orleans Saints,1,2,-10.077894225189548,skill,Marshall Faulk,1
+2001,10,Miami Dolphins,2001_10_Miami Dolphins_vs_New York Jets,1,1,-27.410339152561246,defense,Sam Madison,1
+2001,11,Miami Dolphins,2001_11_Buffalo Bills_vs_Miami Dolphins,1,2,5.067177083049973,defense,Sam Madison,1
+2001,12,Miami Dolphins,2001_12_Miami Dolphins_vs_Denver Broncos,1,3,8.591667702329678,defense,Sam Madison,1
+2001,17,Philadelphia Eagles,2001_17_Tampa Bay Buccaneers_vs_Philadelphia Eagles,1,1,6.007102677582697,defense,Hugh Douglas,1
+2002,1,New York Giants,2002_1_New York Giants_vs_San Francisco 49ers,1,1,-2.826439872169158,defense,Michael Strahan,1
+2002,1,Seattle Seahawks,2002_1_Oakland Raiders_vs_Seattle Seahawks,1,1,-8.839883216160807,ol,Walter Jones,1
+2002,2,New York Giants,2002_2_St. Louis Rams_vs_New York Giants,1,2,11.643889833931626,defense,Michael Strahan,1
+2002,2,New York Jets,2002_2_New York Jets_vs_New England Patriots,1,1,-37.93249905504713,defense,John Abraham,1
+2002,2,Seattle Seahawks,2002_2_Seattle Seahawks_vs_Arizona Cardinals,1,2,-15.636045655420048,ol,Walter Jones,1
+2002,2,Tampa Bay Buccaneers,2002_2_Baltimore Ravens_vs_Tampa Bay Buccaneers,1,1,28.297531481435406,defense,Warren Sapp,1
+2002,3,Chicago Bears,2002_3_Chicago Bears_vs_New Orleans Saints,1,1,-10.103754651491982,defense,Ted Washington,1
+2002,3,Dallas Cowboys,2002_3_Philadelphia Eagles_vs_Dallas Cowboys,1,1,-23.317802775079517,ol,Larry Allen,1
+2002,3,New York Jets,2002_3_Miami Dolphins_vs_New York Jets,1,2,-22.929531541837285,defense,John Abraham,1
+2002,4,Chicago Bears,2002_4_Buffalo Bills_vs_Chicago Bears,1,2,-7.103833993041117,defense,Ted Washington,1
+2002,4,New York Jets,2002_4_Jacksonville Jaguars_vs_New York Jets,1,3,-22.03222758017483,defense,John Abraham,1
+2002,4,St. Louis Rams,2002_4_St. Louis Rams_vs_Dallas Cowboys,1,1,-11.026744758748018,ol,Orlando Pace,1
+2002,5,Chicago Bears,2002_5_Chicago Bears_vs_Green Bay Packers,1,3,-13.381757129913494,defense,Ted Washington,1
+2002,5,St. Louis Rams,2002_5_San Francisco 49ers_vs_St. Louis Rams,2,1,-23.295808805238412,defense|ol,Aeneas Williams|Orlando Pace,1
+2002,6,Baltimore Ravens,2002_6_Indianapolis Colts_vs_Baltimore Ravens,1,1,-0.9834534019605143,defense,Ray Lewis,1
+2002,6,St. Louis Rams,2002_6_St. Louis Rams_vs_Oakland Raiders,1,3,14.645926666002678,ol,Orlando Pace,1
+2002,7,Baltimore Ravens,2002_7_Baltimore Ravens_vs_Jacksonville Jaguars,1,2,3.961834384252852,defense,Ray Lewis,1
+2002,7,Chicago Bears,2002_7_Detroit Lions_vs_Chicago Bears,1,4,-4.70385782741736,defense,Ted Washington,1
+2002,7,Dallas Cowboys,2002_7_Arizona Cardinals_vs_Dallas Cowboys,1,1,-0.7399882747909761,ol,Larry Allen,1
+2002,7,New York Jets,2002_7_New York Jets_vs_Minnesota Vikings,1,1,9.935477612658442,defense,John Abraham,1
+2002,8,Baltimore Ravens,2002_8_Baltimore Ravens_vs_Pittsburgh Steelers,1,3,-14.581060080487996,defense,Ray Lewis,1
+2002,8,Chicago Bears,2002_8_Minnesota Vikings_vs_Chicago Bears,1,5,-18.069083524758863,defense,Ted Washington,0
+2002,8,Dallas Cowboys,2002_8_Dallas Cowboys_vs_Seattle Seahawks,1,2,-4.181814177787846,ol,Larry Allen,1
+2002,9,Baltimore Ravens,2002_9_Atlanta Falcons_vs_Baltimore Ravens,1,4,-3.4724943341027483,defense,Ray Lewis,1
+2002,9,Chicago Bears,2002_9_Chicago Bears_vs_Philadelphia Eagles,1,6,-2.964068763109617,defense,Ted Washington,0
+2002,9,Dallas Cowboys,2002_9_Detroit Lions_vs_Dallas Cowboys,1,3,-0.9429707681752098,ol,Larry Allen,1
+2002,9,New York Jets,2002_9_San Diego Chargers_vs_New York Jets,1,1,34.428987591066424,defense,John Abraham,1
+2002,9,St. Louis Rams,2002_9_Arizona Cardinals_vs_St. Louis Rams,1,1,9.740599605408043,defense,Aeneas Williams,1
+2002,10,Arizona Cardinals,2002_10_Arizona Cardinals_vs_Seattle Seahawks,1,1,-22.285811322550536,skill,David Boston,1
+2002,10,Baltimore Ravens,2002_10_Baltimore Ravens_vs_Cincinnati Bengals,1,5,2.5212020671869873,defense,Ray Lewis,0
+2002,10,Chicago Bears,2002_10_Chicago Bears_vs_New England Patriots,1,7,-1.5843105881026167,defense,Ted Washington,0
+2002,10,St. Louis Rams,2002_10_St. Louis Rams_vs_San Diego Chargers,1,2,-2.7241558060842905,defense,Aeneas Williams,1
+2002,11,Arizona Cardinals,2002_11_Philadelphia Eagles_vs_Arizona Cardinals,1,2,-14.729538461656448,skill,David Boston,1
+2002,11,Dallas Cowboys,2002_11_Indianapolis Colts_vs_Dallas Cowboys,1,4,-11.340289962471825,ol,Larry Allen,1
+2002,11,New York Jets,2002_11_Detroit Lions_vs_New York Jets,1,1,15.178231744549384,defense,John Abraham,1
+2002,11,Tampa Bay Buccaneers,2002_11_Tampa Bay Buccaneers_vs_Carolina Panthers,1,1,3.678511877472756,defense,Warren Sapp,1
+2002,12,Arizona Cardinals,2002_12_Arizona Cardinals_vs_Oakland Raiders,1,3,-15.922995832811003,skill,David Boston,1
+2002,12,Baltimore Ravens,2002_12_Baltimore Ravens_vs_Tennessee Titans,1,1,-1.2786765968455893,defense,Ray Lewis,1
+2002,12,Carolina Panthers,2002_12_Carolina Panthers_vs_Atlanta Falcons,1,1,-40.0969711631209,skill,Steve Smith Sr.,1
+2002,12,Chicago Bears,2002_12_Chicago Bears_vs_Detroit Lions,1,9,-2.2360904840204334,defense,Ted Washington,0
+2002,12,Dallas Cowboys,2002_12_Dallas Cowboys_vs_Jacksonville Jaguars,1,5,3.665740701919667,ol,Larry Allen,0
+2002,12,New York Jets,2002_12_New York Jets_vs_Buffalo Bills,1,2,12.973810094017708,defense,John Abraham,1
+2002,12,St. Louis Rams,2002_12_Washington Redskins_vs_St. Louis Rams,2,2,-5.760153709127344,defense|skill,Aeneas Williams|Marshall Faulk,1
+2002,12,Tampa Bay Buccaneers,2002_12_Tampa Bay Buccaneers_vs_Green Bay Packers,1,2,12.112514559365355,defense,Warren Sapp,1
+2002,13,Arizona Cardinals,2002_13_Kansas City Chiefs_vs_Arizona Cardinals,1,4,-42.96630680861789,skill,David Boston,1
+2002,13,Baltimore Ravens,2002_13_Cincinnati Bengals_vs_Baltimore Ravens,1,2,-0.460429884681953,defense,Ray Lewis,1
+2002,13,Chicago Bears,2002_13_Green Bay Packers_vs_Chicago Bears,1,10,-3.041837032280318,defense,Ted Washington,0
+2002,13,Dallas Cowboys,2002_13_Dallas Cowboys_vs_Washington Redskins,1,6,6.896478027940011,ol,Larry Allen,0
+2002,13,St. Louis Rams,2002_13_Philadelphia Eagles_vs_St. Louis Rams,1,5,-3.651004021908948,defense,Aeneas Williams,0
+2002,13,Tampa Bay Buccaneers,2002_13_New Orleans Saints_vs_Tampa Bay Buccaneers,1,3,-4.915123198519159,defense,Warren Sapp,1
+2002,14,Arizona Cardinals,2002_14_Arizona Cardinals_vs_Detroit Lions,1,5,0.6988162493243637,skill,David Boston,0
+2002,14,Baltimore Ravens,2002_14_Baltimore Ravens_vs_New Orleans Saints,1,3,-15.076831643419382,defense,Ray Lewis,1
+2002,14,Chicago Bears,2002_14_Miami Dolphins_vs_Chicago Bears,1,11,-12.658303681493454,defense,Ted Washington,0
+2002,14,Dallas Cowboys,2002_14_Dallas Cowboys_vs_San Francisco 49ers,1,7,-1.4590919469248642,ol,Larry Allen,0
+2002,14,New York Giants,2002_14_Washington Redskins_vs_New York Giants,1,1,7.319555800736935,defense,Michael Strahan,1
+2002,14,St. Louis Rams,2002_14_Kansas City Chiefs_vs_St. Louis Rams,2,1,-39.61266132137595,defense|ol,Aeneas Williams|Orlando Pace,1
+2002,14,Tampa Bay Buccaneers,2002_14_Tampa Bay Buccaneers_vs_Atlanta Falcons,1,4,18.570360996921917,defense,Warren Sapp,1
+2002,15,Baltimore Ravens,2002_15_Houston Texans_vs_Baltimore Ravens,1,4,2.698965621912048,defense,Ray Lewis,1
+2002,15,Chicago Bears,2002_15_Chicago Bears_vs_New York Jets,1,12,7.638360444772515,defense,Ted Washington,0
+2002,15,Tampa Bay Buccaneers,2002_15_Detroit Lions_vs_Tampa Bay Buccaneers,1,5,-3.9702927983806697,defense,Warren Sapp,0
+2002,16,Baltimore Ravens,2002_16_Baltimore Ravens_vs_Cleveland Browns,1,5,-5.8628755127253225,defense,Ray Lewis,0
+2002,16,Chicago Bears,2002_16_Carolina Panthers_vs_Chicago Bears,1,13,-10.538709095673248,defense,Ted Washington,0
+2002,16,Dallas Cowboys,2002_16_Dallas Cowboys_vs_Philadelphia Eagles,1,9,-17.480243280139494,ol,Larry Allen,0
+2002,16,Kansas City Chiefs,2002_16_Kansas City Chiefs_vs_San Diego Chargers,1,1,-3.382008694168971,skill,Priest Holmes,1
+2002,16,New York Giants,2002_16_Indianapolis Colts_vs_New York Giants,1,3,20.042667874125748,defense,Michael Strahan,1
+2002,16,St. Louis Rams,2002_16_Seattle Seahawks_vs_St. Louis Rams,2,3,-21.47440205007053,defense|ol,Aeneas Williams|Orlando Pace,1
+2002,16,Tampa Bay Buccaneers,2002_16_Tampa Bay Buccaneers_vs_Pittsburgh Steelers,1,6,-14.073970847489317,defense,Warren Sapp,0
+2002,17,Arizona Cardinals,2002_17_Denver Broncos_vs_Arizona Cardinals,1,8,-21.814994210758233,skill,David Boston,0
+2002,17,Baltimore Ravens,2002_17_Pittsburgh Steelers_vs_Baltimore Ravens,1,6,1.602473078827825,defense,Ray Lewis,0
+2002,17,Dallas Cowboys,2002_17_Washington Redskins_vs_Dallas Cowboys,1,10,-1.4047481081759265,ol,Larry Allen,0
+2002,17,Kansas City Chiefs,2002_17_Oakland Raiders_vs_Kansas City Chiefs,1,2,-18.52998492466181,skill,Priest Holmes,1
+2002,17,New York Giants,2002_17_New York Giants_vs_Philadelphia Eagles,1,4,5.34465373837771,defense,Michael Strahan,1
+2002,17,New York Jets,2002_17_New York Jets_vs_Green Bay Packers,1,1,25.815410491328223,defense,John Abraham,1
+2003,1,Pittsburgh Steelers,2003_1_Pittsburgh Steelers_vs_Baltimore Ravens,1,1,15.066939333525406,defense,Joey Porter,1
+2003,2,Oakland Raiders,2003_2_Oakland Raiders_vs_Cincinnati Bengals,1,1,-7.179475634802538,defense,Rod Woodson,1
+2003,2,Philadelphia Eagles,2003_2_Philadelphia Eagles_vs_New England Patriots,1,1,-25.428664283088693,defense,Brian Dawkins,1
+2003,2,Pittsburgh Steelers,2003_2_Kansas City Chiefs_vs_Pittsburgh Steelers,1,2,-20.248701855994987,defense,Joey Porter,1
+2003,4,Oakland Raiders,2003_4_Oakland Raiders_vs_San Diego Chargers,1,1,-4.711307010989476,ol,Lincoln Kennedy,1
+2003,4,Philadelphia Eagles,2003_4_Buffalo Bills_vs_Philadelphia Eagles,1,2,10.508273247866383,defense,Brian Dawkins,1
+2003,5,New Orleans Saints,2003_5_Carolina Panthers_vs_New Orleans Saints,1,1,-3.488983441784312,skill,Michael Lewis,1
+2003,5,Oakland Raiders,2003_5_Chicago Bears_vs_Oakland Raiders,1,2,-6.43015935452614,ol,Lincoln Kennedy,1
+2003,5,Philadelphia Eagles,2003_5_Philadelphia Eagles_vs_Washington Redskins,2,1,-2.8699328652891563,defense,Brian Dawkins|Troy Vincent,1
+2003,6,New Orleans Saints,2003_6_New Orleans Saints_vs_Chicago Bears,1,2,3.8556832318185297,skill,Michael Lewis,1
+2003,6,Oakland Raiders,2003_6_Cleveland Browns_vs_Oakland Raiders,1,3,-7.306922047724766,ol,Lincoln Kennedy,1
+2003,6,Philadelphia Eagles,2003_6_Dallas Cowboys_vs_Philadelphia Eagles,1,4,-4.164619512076278,defense,Brian Dawkins,1
+2003,7,Philadelphia Eagles,2003_7_New York Giants_vs_Philadelphia Eagles,1,5,4.277667379686381,defense,Brian Dawkins,0
+2003,8,Philadelphia Eagles,2003_8_Philadelphia Eagles_vs_New York Jets,1,6,3.280332367082001,defense,Brian Dawkins,0
+2003,9,Philadelphia Eagles,2003_9_Atlanta Falcons_vs_Philadelphia Eagles,1,7,3.725247706380787,defense,Brian Dawkins,0
+2003,10,Miami Dolphins,2003_10_Tennessee Titans_vs_Miami Dolphins,2,1,-21.05763652169554,defense,Patrick Surtain|Zach Thomas,1
+2003,10,Philadelphia Eagles,2003_10_Green Bay Packers_vs_Philadelphia Eagles,1,8,4.17867537080424,defense,Brian Dawkins,0
+2003,11,Indianapolis Colts,2003_11_Indianapolis Colts_vs_New York Jets,1,1,3.0711063527849,skill,Marvin Harrison,1
+2003,11,New York Giants,2003_11_Philadelphia Eagles_vs_New York Giants,1,1,-12.6223577323909,skill,Jeremy Shockey,1
+2003,12,New York Giants,2003_12_Tampa Bay Buccaneers_vs_New York Giants,1,2,0.42376940276652064,skill,Jeremy Shockey,1
+2003,12,Philadelphia Eagles,2003_12_Philadelphia Eagles_vs_New Orleans Saints,1,1,6.830594445150227,defense,Brian Dawkins,1
+2003,13,New Orleans Saints,2003_13_Washington Redskins_vs_New Orleans Saints,1,1,5.259391885922687,skill,Michael Lewis,1
+2003,13,New York Giants,2003_13_New York Giants_vs_Buffalo Bills,1,3,-20.103008929826682,skill,Jeremy Shockey,1
+2003,13,Oakland Raiders,2003_13_Oakland Raiders_vs_Denver Broncos,1,1,-15.771394315248099,defense,Rod Woodson,1
+2003,14,New York Giants,2003_14_New York Giants_vs_Washington Redskins,1,4,-15.93281266312977,skill,Jeremy Shockey,1
+2003,14,Oakland Raiders,2003_14_Pittsburgh Steelers_vs_Oakland Raiders,1,2,-18.788169840211395,defense,Rod Woodson,1
+2003,15,New York Giants,2003_15_New Orleans Saints_vs_New York Giants,1,5,-34.77616041657473,skill,Jeremy Shockey,0
+2003,15,Oakland Raiders,2003_15_Oakland Raiders_vs_Baltimore Ravens,1,3,7.855672575702165,defense,Rod Woodson,1
+2003,15,Tampa Bay Buccaneers,2003_15_Tampa Bay Buccaneers_vs_Houston Texans,1,1,2.6670201276518473,defense,Warren Sapp,1
+2003,16,New York Giants,2003_16_Dallas Cowboys_vs_New York Giants,1,6,-12.030583329606388,skill,Jeremy Shockey,0
+2003,16,Oakland Raiders,2003_16_Oakland Raiders_vs_Green Bay Packers,1,4,-33.88152430200654,defense,Rod Woodson,1
+2003,16,Philadelphia Eagles,2003_16_Philadelphia Eagles_vs_San Francisco 49ers,1,1,-9.213561929249499,defense,Troy Vincent,1
+2003,17,New York Giants,2003_17_New York Giants_vs_Carolina Panthers,1,7,-13.68849498098377,skill,Jeremy Shockey,0
+2003,17,Oakland Raiders,2003_17_San Diego Chargers_vs_Oakland Raiders,2,1,-8.478116243988106,defense|ol,Lincoln Kennedy|Rod Woodson,1
+2003,17,Philadelphia Eagles,2003_17_Washington Redskins_vs_Philadelphia Eagles,1,2,19.28649096812471,defense,Troy Vincent,1
+2003,17,San Francisco 49ers,2003_17_San Francisco 49ers_vs_Seattle Seahawks,1,1,-9.737988259083103,skill,Terrell Owens,1
+2004,1,Baltimore Ravens,2004_1_Cleveland Browns_vs_Baltimore Ravens,1,1,-18.207774883659848,ol,Jonathan Ogden,1
+2004,6,Carolina Panthers,2004_6_Philadelphia Eagles_vs_Carolina Panthers,1,1,-15.199811333118987,defense,Kris Jenkins,1
+2004,6,San Francisco 49ers,2004_6_New York Jets_vs_San Francisco 49ers,1,1,-3.552013772657892,defense,Julian Peterson,1
+2004,7,Baltimore Ravens,2004_7_Baltimore Ravens_vs_Buffalo Bills,1,1,8.406636244987695,skill,Jamal Lewis,1
+2004,7,Carolina Panthers,2004_7_Carolina Panthers_vs_San Diego Chargers,1,2,-14.159082250473258,defense,Kris Jenkins,1
+2004,8,Baltimore Ravens,2004_8_Philadelphia Eagles_vs_Baltimore Ravens,2,1,-0.2501644328585284,ol|skill,Jamal Lewis|Jonathan Ogden,1
+2004,8,Carolina Panthers,2004_8_Seattle Seahawks_vs_Carolina Panthers,1,3,-1.6043849774426064,defense,Kris Jenkins,1
+2004,8,San Francisco 49ers,2004_8_Chicago Bears_vs_San Francisco 49ers,1,2,-8.834930903893282,defense,Julian Peterson,1
+2004,9,Baltimore Ravens,2004_9_Baltimore Ravens_vs_Cleveland Browns,1,2,8.033453514621652,ol,Jonathan Ogden,1
+2004,9,Carolina Panthers,2004_9_Carolina Panthers_vs_Oakland Raiders,1,4,-6.550735308162776,defense,Kris Jenkins,1
+2004,9,New England Patriots,2004_9_St. Louis Rams_vs_New England Patriots,1,1,17.390389127215368,defense,Ty Law,1
+2004,9,San Francisco 49ers,2004_9_San Francisco 49ers_vs_Seattle Seahawks,1,3,-14.465084821999945,defense,Julian Peterson,1
+2004,10,Baltimore Ravens,2004_10_New York Jets_vs_Baltimore Ravens,1,3,4.569987500578746,ol,Jonathan Ogden,1
+2004,10,Kansas City Chiefs,2004_10_New Orleans Saints_vs_Kansas City Chiefs,1,1,-8.369595910933986,skill,Priest Holmes,1
+2004,10,New England Patriots,2004_10_New England Patriots_vs_Buffalo Bills,1,2,14.786297510163632,defense,Ty Law,1
+2004,10,New York Giants,2004_10_Arizona Cardinals_vs_New York Giants,1,1,-4.078621180555947,defense,Michael Strahan,1
+2004,11,Baltimore Ravens,2004_11_Baltimore Ravens_vs_Dallas Cowboys,1,1,12.445845038510825,defense,Chris McAlister,1
+2004,11,Carolina Panthers,2004_11_Carolina Panthers_vs_Arizona Cardinals,1,6,20.13683327834198,defense,Kris Jenkins,0
+2004,11,New York Giants,2004_11_New York Giants_vs_Atlanta Falcons,1,2,-5.208552009882679,defense,Michael Strahan,1
+2004,11,San Francisco 49ers,2004_11_Tampa Bay Buccaneers_vs_San Francisco 49ers,1,5,-26.32860249685379,defense,Julian Peterson,0
+2004,12,Carolina Panthers,2004_12_Carolina Panthers_vs_Tampa Bay Buccaneers,1,7,7.011590646593258,defense,Kris Jenkins,0
+2004,12,Kansas City Chiefs,2004_12_Kansas City Chiefs_vs_San Diego Chargers,1,3,-6.034325101279338,skill,Priest Holmes,1
+2004,12,New York Giants,2004_12_New York Giants_vs_Philadelphia Eagles,1,3,-16.97476011959504,defense,Michael Strahan,1
+2004,12,San Francisco 49ers,2004_12_San Francisco 49ers_vs_Miami Dolphins,1,6,-6.92481173594665,defense,Julian Peterson,0
+2004,13,Baltimore Ravens,2004_13_Baltimore Ravens_vs_Cincinnati Bengals,1,2,-7.575628609933401,skill,Jamal Lewis,1
+2004,13,Carolina Panthers,2004_13_New Orleans Saints_vs_Carolina Panthers,1,8,11.510646624030905,defense,Kris Jenkins,0
+2004,13,Kansas City Chiefs,2004_13_Oakland Raiders_vs_Kansas City Chiefs,1,4,5.68561080079975,skill,Priest Holmes,1
+2004,13,New England Patriots,2004_13_Cleveland Browns_vs_New England Patriots,1,5,20.22391503828644,defense,Ty Law,0
+2004,13,New York Giants,2004_13_Washington Redskins_vs_New York Giants,1,4,-23.14157403791022,defense,Michael Strahan,1
+2004,13,San Francisco 49ers,2004_13_St. Louis Rams_vs_San Francisco 49ers,1,7,-4.232171341889861,defense,Julian Peterson,0
+2004,14,Carolina Panthers,2004_14_Carolina Panthers_vs_St. Louis Rams,1,9,11.201421443513654,defense,Kris Jenkins,0
+2004,14,Kansas City Chiefs,2004_14_Tennessee Titans_vs_Kansas City Chiefs,1,5,12.619879617266442,skill,Priest Holmes,0
+2004,14,New England Patriots,2004_14_New England Patriots_vs_Cincinnati Bengals,1,6,-3.369892039872621,defense,Ty Law,0
+2004,14,New York Giants,2004_14_Baltimore Ravens_vs_New York Giants,1,5,-16.131577150251896,defense,Michael Strahan,0
+2004,14,San Francisco 49ers,2004_14_Arizona Cardinals_vs_San Francisco 49ers,1,8,3.7588734329393265,defense,Julian Peterson,0
+2004,15,Carolina Panthers,2004_15_Atlanta Falcons_vs_Carolina Panthers,1,10,-1.0537404410029192,defense,Kris Jenkins,0
+2004,15,Kansas City Chiefs,2004_15_Kansas City Chiefs_vs_Denver Broncos,1,6,26.416813407549327,skill,Priest Holmes,0
+2004,15,New England Patriots,2004_15_Miami Dolphins_vs_New England Patriots,1,7,-6.2843110452992095,defense,Ty Law,0
+2004,15,New York Giants,2004_15_New York Giants_vs_Pittsburgh Steelers,1,6,1.2420975893366721,defense,Michael Strahan,0
+2004,15,San Francisco 49ers,2004_15_San Francisco 49ers_vs_Washington Redskins,1,9,-11.412422737275191,defense,Julian Peterson,0
+2004,16,Carolina Panthers,2004_16_Tampa Bay Buccaneers_vs_Carolina Panthers,1,11,20.04968613047572,defense,Kris Jenkins,0
+2004,16,Kansas City Chiefs,2004_16_Kansas City Chiefs_vs_Oakland Raiders,1,7,-6.665776598893654,skill,Priest Holmes,0
+2004,16,New England Patriots,2004_16_New York Jets_vs_New England Patriots,1,8,14.302684118452607,defense,Ty Law,0
+2004,16,New York Giants,2004_16_Cincinnati Bengals_vs_New York Giants,1,7,1.7778981561666298,defense,Michael Strahan,0
+2004,16,San Francisco 49ers,2004_16_San Francisco 49ers_vs_Buffalo Bills,1,10,-30.615756897886058,defense,Julian Peterson,0
+2004,17,Baltimore Ravens,2004_17_Baltimore Ravens_vs_Miami Dolphins,1,1,2.181526597198326,defense,Ray Lewis,1
+2004,17,Carolina Panthers,2004_17_Carolina Panthers_vs_New Orleans Saints,1,12,-7.31885494254142,defense,Kris Jenkins,0
+2004,17,Kansas City Chiefs,2004_17_San Diego Chargers_vs_Kansas City Chiefs,1,8,-5.762437507838013,skill,Priest Holmes,0
+2004,17,New York Giants,2004_17_New York Giants_vs_Dallas Cowboys,1,8,2.089586175121476,defense,Michael Strahan,0
+2005,1,San Diego Chargers,2005_1_San Diego Chargers_vs_Dallas Cowboys,1,1,-9.257116876725458,skill,Antonio Gates,1
+2005,2,Kansas City Chiefs,2005_2_Oakland Raiders_vs_Kansas City Chiefs,1,1,3.7781263549838697,ol,Willie Roaf,1
+2005,3,Kansas City Chiefs,2005_3_Denver Broncos_vs_Kansas City Chiefs,1,2,-18.93437568609913,ol,Willie Roaf,1
+2005,4,Buffalo Bills,2005_4_New Orleans Saints_vs_Buffalo Bills,1,1,-14.193873968808093,defense,Takeo Spikes,1
+2005,4,Kansas City Chiefs,2005_4_Kansas City Chiefs_vs_Philadelphia Eagles,1,3,-6.374705218036224,ol,Willie Roaf,1
+2005,5,Buffalo Bills,2005_5_Buffalo Bills_vs_Miami Dolphins,1,2,3.5179766047615066,defense,Takeo Spikes,1
+2005,5,New England Patriots,2005_5_Atlanta Falcons_vs_New England Patriots,1,1,2.04070706266959,defense,Richard Seymour,1
+2005,6,Buffalo Bills,2005_6_Buffalo Bills_vs_New York Jets,1,3,7.702893028991166,defense,Takeo Spikes,1
+2005,6,Detroit Lions,2005_6_Detroit Lions_vs_Carolina Panthers,1,1,-0.06287758253312858,skill,Eddie Drummond,1
+2005,6,New England Patriots,2005_6_Denver Broncos_vs_New England Patriots,1,2,-7.9679416203271645,defense,Richard Seymour,1
+2005,7,Buffalo Bills,2005_7_Oakland Raiders_vs_Buffalo Bills,1,4,-22.609013578825607,defense,Takeo Spikes,1
+2005,7,Detroit Lions,2005_7_Cleveland Browns_vs_Detroit Lions,1,2,4.623979846291668,skill,Eddie Drummond,1
+2005,8,Baltimore Ravens,2005_8_Pittsburgh Steelers_vs_Baltimore Ravens,1,1,4.89593931112031,defense,Ray Lewis,1
+2005,9,Baltimore Ravens,2005_9_Baltimore Ravens_vs_Cincinnati Bengals,1,2,-13.058763787121396,defense,Ray Lewis,1
+2005,9,Kansas City Chiefs,2005_9_Kansas City Chiefs_vs_Oakland Raiders,1,1,-1.5828772757937077,ol,Willie Roaf,1
+2005,9,New England Patriots,2005_9_New England Patriots_vs_Indianapolis Colts,1,4,-19.651915061165575,defense,Richard Seymour,1
+2005,9,Philadelphia Eagles,2005_9_Washington Redskins_vs_Philadelphia Eagles,1,1,-8.642801144691939,skill,Terrell Owens,1
+2005,10,Baltimore Ravens,2005_10_Jacksonville Jaguars_vs_Baltimore Ravens,1,3,-24.441930796019033,defense,Ray Lewis,1
+2005,10,Philadelphia Eagles,2005_10_Philadelphia Eagles_vs_Dallas Cowboys,1,2,-5.825208006512285,skill,Terrell Owens,1
+2005,10,Pittsburgh Steelers,2005_10_Pittsburgh Steelers_vs_Cleveland Browns,1,1,3.4272996139408036,defense,James Farrior,1
+2005,11,Buffalo Bills,2005_11_San Diego Chargers_vs_Buffalo Bills,1,7,-33.65967980261394,defense,Takeo Spikes,0
+2005,11,Kansas City Chiefs,2005_11_Houston Texans_vs_Kansas City Chiefs,1,3,24.95873285956177,ol,Willie Roaf,1
+2005,11,Philadelphia Eagles,2005_11_New York Giants_vs_Philadelphia Eagles,1,3,-9.355766528355197,skill,Terrell Owens,1
+2005,12,Baltimore Ravens,2005_12_Cincinnati Bengals_vs_Baltimore Ravens,1,5,-8.583269865179055,defense,Ray Lewis,0
+2005,12,Buffalo Bills,2005_12_Buffalo Bills_vs_Carolina Panthers,1,8,-3.729872255966966,defense,Takeo Spikes,0
+2005,12,Philadelphia Eagles,2005_12_Philadelphia Eagles_vs_Green Bay Packers,2,1,2.0707903535917467,defense|skill,Lito Sheppard|Terrell Owens,1
+2005,13,Baltimore Ravens,2005_13_Baltimore Ravens_vs_Houston Texans,1,6,-4.778103582516888,defense,Ray Lewis,0
+2005,13,Buffalo Bills,2005_13_Miami Dolphins_vs_Buffalo Bills,1,9,0.4512625694496728,defense,Takeo Spikes,0
+2005,13,Philadelphia Eagles,2005_13_Philadelphia Eagles_vs_Seattle Seahawks,2,2,-43.86582653272416,defense|skill,Lito Sheppard|Terrell Owens,1
+2005,14,Baltimore Ravens,2005_14_Denver Broncos_vs_Baltimore Ravens,1,7,5.223829408200243,defense,Ray Lewis,0
+2005,14,Buffalo Bills,2005_14_Buffalo Bills_vs_New England Patriots,1,10,-25.795209657699417,defense,Takeo Spikes,0
+2005,14,Detroit Lions,2005_14_Green Bay Packers_vs_Detroit Lions,1,1,3.0358251593158094,skill,Eddie Drummond,1
+2005,14,New York Jets,2005_14_New York Jets_vs_Oakland Raiders,1,1,12.809495419360237,skill,Curtis Martin,1
+2005,14,Philadelphia Eagles,2005_14_Philadelphia Eagles_vs_New York Giants,2,3,-4.8693903919036075,defense|skill,Lito Sheppard|Terrell Owens,1
+2005,15,Baltimore Ravens,2005_15_Baltimore Ravens_vs_Green Bay Packers,1,8,44.19471886364429,defense,Ray Lewis,0
+2005,15,Buffalo Bills,2005_15_Buffalo Bills_vs_Denver Broncos,1,11,-7.914571369844152,defense,Takeo Spikes,0
+2005,15,Detroit Lions,2005_15_Detroit Lions_vs_Cincinnati Bengals,1,2,-20.1797299276735,skill,Eddie Drummond,1
+2005,15,New York Jets,2005_15_Miami Dolphins_vs_New York Jets,1,2,-1.2176938524708656,skill,Curtis Martin,1
+2005,15,Philadelphia Eagles,2005_15_St. Louis Rams_vs_Philadelphia Eagles,2,4,0.8222779963524227,defense|skill,Lito Sheppard|Terrell Owens,1
+2005,16,Baltimore Ravens,2005_16_Baltimore Ravens_vs_Minnesota Vikings,1,9,4.396824863163019,defense,Ray Lewis,0
+2005,16,Buffalo Bills,2005_16_Cincinnati Bengals_vs_Buffalo Bills,1,12,16.459087322271134,defense,Takeo Spikes,0
+2005,16,New York Jets,2005_16_New York Jets_vs_New England Patriots,1,3,-5.649518973241075,skill,Curtis Martin,1
+2005,16,Philadelphia Eagles,2005_16_Arizona Cardinals_vs_Philadelphia Eagles,2,5,-8.48527529043854,defense|skill,Lito Sheppard|Terrell Owens,0
+2005,17,Baltimore Ravens,2005_17_Cleveland Browns_vs_Baltimore Ravens,1,10,-5.681885765329762,defense,Ray Lewis,0
+2005,17,Chicago Bears,2005_17_Minnesota Vikings_vs_Chicago Bears,1,1,-23.19187482201598,skill,Muhsin Muhammad,1
+2005,17,Philadelphia Eagles,2005_17_Philadelphia Eagles_vs_Washington Redskins,2,6,-12.82324496207485,defense|skill,Lito Sheppard|Terrell Owens,0
+2006,1,Carolina Panthers,2006_1_Carolina Panthers_vs_Atlanta Falcons,1,1,-18.912950309223596,skill,Steve Smith Sr.,1
+2006,1,Houston Texans,2006_1_Houston Texans_vs_Philadelphia Eagles,1,1,-13.040930753322819,skill,Jerome Mathis,1
+2006,2,Carolina Panthers,2006_2_Minnesota Vikings_vs_Carolina Panthers,1,2,-2.605126001773251,skill,Steve Smith Sr.,1
+2006,2,Houston Texans,2006_2_Indianapolis Colts_vs_Houston Texans,1,2,-8.318258119948432,skill,Jerome Mathis,1
+2006,3,Houston Texans,2006_3_Houston Texans_vs_Washington Redskins,1,3,-14.20761942191899,skill,Jerome Mathis,1
+2006,3,Indianapolis Colts,2006_3_Indianapolis Colts_vs_Jacksonville Jaguars,1,1,1.693361586325227,defense,Bob Sanders,1
+2006,4,Houston Texans,2006_4_Houston Texans_vs_Miami Dolphins,1,4,3.8472238542703323,skill,Jerome Mathis,1
+2006,4,Indianapolis Colts,2006_4_New York Jets_vs_Indianapolis Colts,1,2,-0.3073072999658235,defense,Bob Sanders,1
+2006,4,Seattle Seahawks,2006_4_Chicago Bears_vs_Seattle Seahawks,1,1,-30.987976224101814,skill,Shaun Alexander,1
+2006,5,Indianapolis Colts,2006_5_Indianapolis Colts_vs_Tennessee Titans,1,3,-10.12845008937581,defense,Bob Sanders,1
+2006,6,Houston Texans,2006_6_Dallas Cowboys_vs_Houston Texans,1,5,-21.40008540118364,skill,Jerome Mathis,0
+2006,6,Seattle Seahawks,2006_6_St. Louis Rams_vs_Seattle Seahawks,1,2,0.8497974188130046,skill,Shaun Alexander,1
+2006,7,Houston Texans,2006_7_Houston Texans_vs_Jacksonville Jaguars,1,6,24.47036702487224,skill,Jerome Mathis,0
+2006,7,Indianapolis Colts,2006_7_Indianapolis Colts_vs_Washington Redskins,1,4,6.536732039932404,defense,Bob Sanders,1
+2006,7,Seattle Seahawks,2006_7_Seattle Seahawks_vs_Minnesota Vikings,1,3,-22.835370643320683,skill,Shaun Alexander,1
+2006,8,Houston Texans,2006_8_Tennessee Titans_vs_Houston Texans,1,7,-3.401963299625377,skill,Jerome Mathis,0
+2006,8,Indianapolis Colts,2006_8_Denver Broncos_vs_Indianapolis Colts,1,5,4.018649723007856,defense,Bob Sanders,0
+2006,8,New York Giants,2006_8_New York Giants_vs_Tampa Bay Buccaneers,1,1,9.443703542541488,defense,Osi Umenyiora,1
+2006,8,Seattle Seahawks,2006_8_Kansas City Chiefs_vs_Seattle Seahawks,1,4,-5.266732842573865,skill,Shaun Alexander,1
+2006,9,Seattle Seahawks,2006_9_Seattle Seahawks_vs_Oakland Raiders,1,5,8.464469984165962,skill,Shaun Alexander,0
+2006,10,Houston Texans,2006_10_Jacksonville Jaguars_vs_Houston Texans,1,9,11.407957352975982,skill,Jerome Mathis,0
+2006,10,Indianapolis Colts,2006_10_Indianapolis Colts_vs_Buffalo Bills,1,1,-8.629251183790547,defense,Bob Sanders,1
+2006,10,New York Giants,2006_10_New York Giants_vs_Chicago Bears,1,3,-19.964415354281183,defense,Osi Umenyiora,1
+2006,10,Seattle Seahawks,2006_10_Seattle Seahawks_vs_St. Louis Rams,1,6,-3.8471883339409123,skill,Shaun Alexander,0
+2006,11,Houston Texans,2006_11_Houston Texans_vs_Buffalo Bills,1,10,-2.6749594278723907,skill,Jerome Mathis,0
+2006,11,Indianapolis Colts,2006_11_Dallas Cowboys_vs_Indianapolis Colts,1,2,-9.868092985789627,defense,Bob Sanders,1
+2006,11,New York Giants,2006_11_Jacksonville Jaguars_vs_New York Giants,1,4,-13.715632117432769,defense,Osi Umenyiora,1
+2006,12,Houston Texans,2006_12_New York Jets_vs_Houston Texans,1,11,-9.995401007964556,skill,Jerome Mathis,0
+2006,12,Indianapolis Colts,2006_12_Indianapolis Colts_vs_Philadelphia Eagles,1,3,16.315727806632786,defense,Bob Sanders,1
+2006,12,New York Giants,2006_12_Tennessee Titans_vs_New York Giants,1,5,-4.943866433470038,defense,Osi Umenyiora,0
+2006,13,Pittsburgh Steelers,2006_13_Pittsburgh Steelers_vs_Tampa Bay Buccaneers,1,1,9.975025760117006,defense,Troy Polamalu,1
+2006,14,Indianapolis Colts,2006_14_Jacksonville Jaguars_vs_Indianapolis Colts,1,1,-28.155732281012398,defense,Bob Sanders,1
+2006,14,Pittsburgh Steelers,2006_14_Pittsburgh Steelers_vs_Cleveland Browns,1,2,11.532581346147253,defense,Troy Polamalu,1
+2006,15,Houston Texans,2006_15_New England Patriots_vs_Houston Texans,1,1,-21.522919121359628,skill,Jerome Mathis,1
+2006,15,Indianapolis Colts,2006_15_Indianapolis Colts_vs_Cincinnati Bengals,1,2,13.220283696251236,defense,Bob Sanders,1
+2006,15,Pittsburgh Steelers,2006_15_Carolina Panthers_vs_Pittsburgh Steelers,1,3,34.02351062076334,defense,Troy Polamalu,1
+2006,17,Denver Broncos,2006_17_Denver Broncos_vs_San Francisco 49ers,1,1,-13.367488084006464,defense,Al Wilson,1
+2006,17,Houston Texans,2006_17_Houston Texans_vs_Cleveland Browns,1,3,5.878552447435413,skill,Jerome Mathis,1
+2006,17,Indianapolis Colts,2006_17_Indianapolis Colts_vs_Miami Dolphins,1,4,-2.5643635975231795,defense,Bob Sanders,1
+2007,3,Miami Dolphins,2007_3_New York Jets_vs_Miami Dolphins,1,1,-0.5201993893697816,defense,Zach Thomas,1
+2007,3,Philadelphia Eagles,2007_3_Philadelphia Eagles_vs_Detroit Lions,1,1,29.82374418935493,defense,Brian Dawkins,1
+2007,4,Miami Dolphins,2007_4_Miami Dolphins_vs_Oakland Raiders,1,2,-23.310934952588305,defense,Zach Thomas,1
+2007,4,Philadelphia Eagles,2007_4_New York Giants_vs_Philadelphia Eagles,1,2,-12.592346955263238,defense,Brian Dawkins,1
+2007,5,Indianapolis Colts,2007_5_Indianapolis Colts_vs_Tampa Bay Buccaneers,1,1,10.897473244521635,skill,Marvin Harrison,1
+2007,6,Cincinnati Bengals,2007_6_Kansas City Chiefs_vs_Cincinnati Bengals,1,1,-4.388470523620544,ol,Willie Anderson,1
+2007,6,Philadelphia Eagles,2007_6_New York Jets_vs_Philadelphia Eagles,1,3,7.392693506292362,defense,Brian Dawkins,1
+2007,7,Denver Broncos,2007_7_Denver Broncos_vs_Pittsburgh Steelers,1,1,4.115705266701925,defense,Champ Bailey,1
+2007,7,Philadelphia Eagles,2007_7_Philadelphia Eagles_vs_Chicago Bears,1,4,-5.027971004379024,defense,Brian Dawkins,1
+2007,8,Cincinnati Bengals,2007_8_Cincinnati Bengals_vs_Pittsburgh Steelers,1,1,-9.895807396696481,ol,Willie Anderson,1
+2007,8,Indianapolis Colts,2007_8_Carolina Panthers_vs_Indianapolis Colts,1,1,20.931922176263452,skill,Marvin Harrison,1
+2007,8,Miami Dolphins,2007_8_Miami Dolphins_vs_New York Giants,1,1,0.99139414719285,defense,Zach Thomas,1
+2007,8,Philadelphia Eagles,2007_8_Minnesota Vikings_vs_Philadelphia Eagles,1,5,7.184542682580232,defense,Brian Dawkins,0
+2007,8,San Diego Chargers,2007_8_San Diego Chargers_vs_Houston Texans,1,1,16.57318466384848,defense,Jamal Williams,1
+2007,9,Cincinnati Bengals,2007_9_Buffalo Bills_vs_Cincinnati Bengals,1,2,-9.96676783758524,ol,Willie Anderson,1
+2007,9,Indianapolis Colts,2007_9_Indianapolis Colts_vs_New England Patriots,1,2,-5.512826023451435,skill,Marvin Harrison,1
+2007,10,Cincinnati Bengals,2007_10_Baltimore Ravens_vs_Cincinnati Bengals,1,3,18.343665054833,ol,Willie Anderson,1
+2007,10,Indianapolis Colts,2007_10_San Diego Chargers_vs_Indianapolis Colts,1,3,-2.9461354758452307,skill,Marvin Harrison,1
+2007,10,Kansas City Chiefs,2007_10_Kansas City Chiefs_vs_Denver Broncos,1,1,-19.491220075123447,skill,Larry Johnson,1
+2007,10,Miami Dolphins,2007_10_Miami Dolphins_vs_Buffalo Bills,1,2,-2.060757606952484,defense,Zach Thomas,1
+2007,11,Cincinnati Bengals,2007_11_Cincinnati Bengals_vs_Arizona Cardinals,1,4,-12.636448869477626,ol,Willie Anderson,1
+2007,11,Miami Dolphins,2007_11_Philadelphia Eagles_vs_Miami Dolphins,1,3,-3.8135929397239305,defense,Zach Thomas,1
+2007,11,New Orleans Saints,2007_11_Houston Texans_vs_New Orleans Saints,1,1,-12.859702369904026,ol,Jammal Brown,1
+2007,12,Cincinnati Bengals,2007_12_Cincinnati Bengals_vs_Tennessee Titans,1,5,26.489330897162283,ol,Willie Anderson,0
+2007,12,Indianapolis Colts,2007_12_Atlanta Falcons_vs_Indianapolis Colts,1,5,10.70803631340894,skill,Marvin Harrison,0
+2007,12,Jacksonville Jaguars,2007_12_Jacksonville Jaguars_vs_Buffalo Bills,1,1,16.877221950591576,defense,Rashean Mathis,1
+2007,12,Kansas City Chiefs,2007_12_Kansas City Chiefs_vs_Oakland Raiders,1,3,-10.071013705795878,skill,Larry Johnson,1
+2007,12,Miami Dolphins,2007_12_Pittsburgh Steelers_vs_Miami Dolphins,1,4,7.053733368199692,defense,Zach Thomas,1
+2007,13,Cincinnati Bengals,2007_13_Pittsburgh Steelers_vs_Cincinnati Bengals,1,6,-7.681161485736402,ol,Willie Anderson,0
+2007,13,Indianapolis Colts,2007_13_Indianapolis Colts_vs_Jacksonville Jaguars,1,6,-3.0515319158376952,skill,Marvin Harrison,0
+2007,13,Kansas City Chiefs,2007_13_Kansas City Chiefs_vs_San Diego Chargers,1,4,-12.05487008050357,skill,Larry Johnson,1
+2007,13,Miami Dolphins,2007_13_Miami Dolphins_vs_New York Jets,1,5,-28.194813022436403,defense,Zach Thomas,0
+2007,14,Cincinnati Bengals,2007_14_Cincinnati Bengals_vs_St. Louis Rams,1,7,3.856850235993843,ol,Willie Anderson,0
+2007,14,Indianapolis Colts,2007_14_Baltimore Ravens_vs_Indianapolis Colts,1,7,19.542267059835257,skill,Marvin Harrison,0
+2007,14,Kansas City Chiefs,2007_14_Denver Broncos_vs_Kansas City Chiefs,1,5,-31.329361202128055,skill,Larry Johnson,0
+2007,14,Miami Dolphins,2007_14_Buffalo Bills_vs_Miami Dolphins,1,6,-15.024638254158381,defense,Zach Thomas,0
+2007,15,Cincinnati Bengals,2007_15_San Francisco 49ers_vs_Cincinnati Bengals,1,8,-10.693322615503721,ol,Willie Anderson,0
+2007,15,Indianapolis Colts,2007_15_Oakland Raiders_vs_Indianapolis Colts,1,8,-2.6313964805407526,skill,Marvin Harrison,0
+2007,15,Kansas City Chiefs,2007_15_Kansas City Chiefs_vs_Tennessee Titans,1,6,-10.909315556216116,skill,Larry Johnson,0
+2007,15,Miami Dolphins,2007_15_Miami Dolphins_vs_Baltimore Ravens,1,7,8.343604654287155,defense,Zach Thomas,0
+2007,15,San Diego Chargers,2007_15_San Diego Chargers_vs_Detroit Lions,2,1,27.36850801075641,defense|skill,Lorenzo Neal|Shawne Merriman,1
+2007,16,Carolina Panthers,2007_16_Carolina Panthers_vs_Dallas Cowboys,1,1,-3.7869481172607995,defense,Julius Peppers,1
+2007,16,Indianapolis Colts,2007_16_Indianapolis Colts_vs_Houston Texans,1,9,12.04869284441007,skill,Marvin Harrison,0
+2007,16,Kansas City Chiefs,2007_16_Detroit Lions_vs_Kansas City Chiefs,1,7,-4.183117234255397,skill,Larry Johnson,0
+2007,16,Miami Dolphins,2007_16_New England Patriots_vs_Miami Dolphins,1,8,-5.207491233201935,defense,Zach Thomas,0
+2007,16,Philadelphia Eagles,2007_16_New Orleans Saints_vs_Philadelphia Eagles,1,1,17.177237292262596,ol,Shawn Andrews,1
+2007,16,San Diego Chargers,2007_16_San Diego Chargers_vs_Denver Broncos,2,1,12.827555024769318,defense|skill,Jamal Williams|Lorenzo Neal,1
+2007,17,Carolina Panthers,2007_17_Tampa Bay Buccaneers_vs_Carolina Panthers,1,2,12.027543807976981,defense,Julius Peppers,1
+2007,17,Indianapolis Colts,2007_17_Indianapolis Colts_vs_Tennessee Titans,1,10,-16.5650800456442,skill,Marvin Harrison,0
+2007,17,Jacksonville Jaguars,2007_17_Houston Texans_vs_Jacksonville Jaguars,1,1,-17.25051233116025,defense,Rashean Mathis,1
+2007,17,Kansas City Chiefs,2007_17_New York Jets_vs_Kansas City Chiefs,1,8,-0.8359970241447989,skill,Larry Johnson,0
+2007,17,Miami Dolphins,2007_17_Miami Dolphins_vs_Cincinnati Bengals,1,9,-10.576366538448628,defense,Zach Thomas,0
+2007,17,Philadelphia Eagles,2007_17_Philadelphia Eagles_vs_Buffalo Bills,1,1,3.307577512700636,defense,Brian Dawkins,1
+2007,17,San Diego Chargers,2007_17_Oakland Raiders_vs_San Diego Chargers,2,2,5.279537408674759,defense|skill,Jamal Williams|Lorenzo Neal,1
+2008,1,Indianapolis Colts,2008_1_Indianapolis Colts_vs_Chicago Bears,1,1,-21.99187552367034,ol,Jeff Saturday,1
+2008,2,Indianapolis Colts,2008_2_Minnesota Vikings_vs_Indianapolis Colts,1,2,1.201476009050175,ol,Jeff Saturday,1
+2008,3,Indianapolis Colts,2008_3_Indianapolis Colts_vs_Jacksonville Jaguars,1,1,-6.692321085899075,defense,Bob Sanders,1
+2008,5,Indianapolis Colts,2008_5_Houston Texans_vs_Indianapolis Colts,1,2,0.7777558704179501,defense,Bob Sanders,1
+2008,6,Indianapolis Colts,2008_6_Indianapolis Colts_vs_Baltimore Ravens,1,3,21.654346798664854,defense,Bob Sanders,1
+2008,7,Indianapolis Colts,2008_7_Green Bay Packers_vs_Indianapolis Colts,1,4,-20.32265600236903,defense,Bob Sanders,1
+2008,8,Indianapolis Colts,2008_8_Tennessee Titans_vs_Indianapolis Colts,1,5,-9.345669556338889,defense,Bob Sanders,0
+2008,9,Seattle Seahawks,2008_9_Seattle Seahawks_vs_Philadelphia Eagles,2,1,-19.390259402497286,defense,Lofa Tatupu|Patrick Kerney,1
+2008,10,Seattle Seahawks,2008_10_Miami Dolphins_vs_Seattle Seahawks,1,2,-1.4122682847943633,defense,Patrick Kerney,1
+2008,11,Indianapolis Colts,2008_11_Indianapolis Colts_vs_Houston Texans,1,1,-2.0255721527013524,defense,Bob Sanders,1
+2008,11,Seattle Seahawks,2008_11_Seattle Seahawks_vs_Arizona Cardinals,1,3,-7.015048539043883,defense,Patrick Kerney,1
+2008,12,Indianapolis Colts,2008_12_San Diego Chargers_vs_Indianapolis Colts,1,2,4.368161286793484,defense,Bob Sanders,1
+2008,12,Seattle Seahawks,2008_12_Seattle Seahawks_vs_Washington Redskins,1,4,-3.6607976687040082,defense,Patrick Kerney,1
+2008,13,Indianapolis Colts,2008_13_Cleveland Browns_vs_Indianapolis Colts,2,1,0.4037301388871759,defense|ol,Bob Sanders|Jeff Saturday,1
+2008,13,Philadelphia Eagles,2008_13_Philadelphia Eagles_vs_Arizona Cardinals,1,1,24.781730374865273,defense,Asante Samuel,1
+2008,13,Seattle Seahawks,2008_13_Dallas Cowboys_vs_Seattle Seahawks,1,5,-19.073728639232776,defense,Patrick Kerney,0
+2008,14,Indianapolis Colts,2008_14_Indianapolis Colts_vs_Cincinnati Bengals,1,2,21.653712351055464,ol,Jeff Saturday,1
+2008,14,Seattle Seahawks,2008_14_Seattle Seahawks_vs_New England Patriots,2,1,1.4486741239709042,defense|ol,Patrick Kerney|Walter Jones,1
+2008,15,Indianapolis Colts,2008_15_Indianapolis Colts_vs_Detroit Lions,1,1,-3.6427452529716895,defense,Bob Sanders,1
+2008,15,Seattle Seahawks,2008_15_St. Louis Rams_vs_Seattle Seahawks,2,2,0.5354943621375239,defense|ol,Patrick Kerney|Walter Jones,1
+2008,16,Seattle Seahawks,2008_16_Seattle Seahawks_vs_New York Jets,2,3,9.986708641097412,defense|ol,Patrick Kerney|Walter Jones,1
+2008,16,Tennessee Titans,2008_16_Tennessee Titans_vs_Pittsburgh Steelers,1,1,16.740577998545376,defense,Albert Haynesworth,1
+2008,17,Seattle Seahawks,2008_17_Arizona Cardinals_vs_Seattle Seahawks,2,4,-10.543121640861246,defense|ol,Patrick Kerney|Walter Jones,1
+2009,2,Pittsburgh Steelers,2009_2_Chicago Bears_vs_Pittsburgh Steelers,1,1,-4.279384183244037,defense,Troy Polamalu,1
+2009,3,Pittsburgh Steelers,2009_3_Cincinnati Bengals_vs_Pittsburgh Steelers,1,2,-6.297542285782374,defense,Troy Polamalu,1
+2009,4,Pittsburgh Steelers,2009_4_Pittsburgh Steelers_vs_San Diego Chargers,1,3,6.974778878206708,defense,Troy Polamalu,1
+2009,4,Tennessee Titans,2009_4_Jacksonville Jaguars_vs_Tennessee Titans,1,1,-19.83324742347113,defense,Cortland Finnegan,1
+2009,5,Pittsburgh Steelers,2009_5_Detroit Lions_vs_Pittsburgh Steelers,1,4,0.8196678106558739,defense,Troy Polamalu,1
+2009,5,Tennessee Titans,2009_5_Tennessee Titans_vs_Indianapolis Colts,1,2,-20.277445218419334,defense,Cortland Finnegan,1
+2009,6,Tennessee Titans,2009_6_New England Patriots_vs_Tennessee Titans,1,3,-52.95652386569389,defense,Cortland Finnegan,1
+2009,11,Atlanta Falcons,2009_11_New York Giants_vs_Atlanta Falcons,1,1,0.6838638662517038,skill,Michael Turner,1
+2009,11,Pittsburgh Steelers,2009_11_Kansas City Chiefs_vs_Pittsburgh Steelers,1,1,-10.115079490329016,defense,Troy Polamalu,1
+2009,12,Pittsburgh Steelers,2009_12_Baltimore Ravens_vs_Pittsburgh Steelers,1,2,-2.0934014739012037,defense,Troy Polamalu,1
+2009,13,Atlanta Falcons,2009_13_Atlanta Falcons_vs_Philadelphia Eagles,1,1,-26.574091211659198,skill,Michael Turner,1
+2009,13,Pittsburgh Steelers,2009_13_Pittsburgh Steelers_vs_Oakland Raiders,1,3,-14.699646219229937,defense,Troy Polamalu,1
+2009,14,Atlanta Falcons,2009_14_Atlanta Falcons_vs_New Orleans Saints,1,2,0.4478381097939841,skill,Michael Turner,1
+2009,14,Pittsburgh Steelers,2009_14_Cleveland Browns_vs_Pittsburgh Steelers,1,4,-13.959694170763532,defense,Troy Polamalu,1
+2009,15,Pittsburgh Steelers,2009_15_Pittsburgh Steelers_vs_Green Bay Packers,1,5,-1.9568759456844145,defense,Troy Polamalu,0
+2009,16,Atlanta Falcons,2009_16_Atlanta Falcons_vs_Buffalo Bills,1,1,23.484097471682063,skill,Michael Turner,1
+2009,16,Pittsburgh Steelers,2009_16_Pittsburgh Steelers_vs_Baltimore Ravens,1,6,0.7354717066065133,defense,Troy Polamalu,0
+2009,17,Atlanta Falcons,2009_17_Tampa Bay Buccaneers_vs_Atlanta Falcons,1,2,8.672397798581942,skill,Michael Turner,1
+2009,17,Pittsburgh Steelers,2009_17_Miami Dolphins_vs_Pittsburgh Steelers,1,7,3.514325833304665,defense,Troy Polamalu,0
+2010,4,Houston Texans,2010_4_Oakland Raiders_vs_Houston Texans,1,1,4.163420383216508,skill,Andre Johnson,1
+2010,13,Minnesota Vikings,2010_13_Minnesota Vikings_vs_Buffalo Bills,1,1,18.131884840799575,ol,Steve Hutchinson,1
+2010,14,Minnesota Vikings,2010_14_Minnesota Vikings_vs_New York Giants,1,2,-17.241467711170728,ol,Steve Hutchinson,1
+2010,15,Minnesota Vikings,2010_15_Minnesota Vikings_vs_Chicago Bears,1,3,-28.052105721122498,ol,Steve Hutchinson,1
+2010,16,Houston Texans,2010_16_Denver Broncos_vs_Houston Texans,1,1,-1.961493693536795,skill,Andre Johnson,1
+2010,16,Minnesota Vikings,2010_16_Philadelphia Eagles_vs_Minnesota Vikings,1,4,16.54457012055591,ol,Steve Hutchinson,1
+2010,17,Houston Texans,2010_17_Houston Texans_vs_Jacksonville Jaguars,1,2,14.498161504456256,skill,Andre Johnson,1
+2010,17,Minnesota Vikings,2010_17_Detroit Lions_vs_Minnesota Vikings,1,5,-9.632706165440132,ol,Steve Hutchinson,0
+2010,17,New England Patriots,2010_17_New England Patriots_vs_Miami Dolphins,1,1,20.933894752738823,skill,Wes Welker,1
+2010,17,San Francisco 49ers,2010_17_San Francisco 49ers_vs_Arizona Cardinals,1,1,28.380513068380587,defense,Patrick Willis,1
+2011,1,Houston Texans,2011_1_Houston Texans_vs_Indianapolis Colts,1,1,27.65626070469053,skill,Arian Foster,1
+2011,3,Houston Texans,2011_3_New Orleans Saints_vs_Houston Texans,1,1,-2.664409423574752,skill,Arian Foster,1
+2011,3,New York Jets,2011_3_Oakland Raiders_vs_New York Jets,1,1,-11.717087567416675,ol,Nick Mangold,1
+2011,4,New York Jets,2011_4_Baltimore Ravens_vs_New York Jets,1,2,-13.58413680507524,ol,Nick Mangold,1
+2011,5,Atlanta Falcons,2011_5_Atlanta Falcons_vs_Green Bay Packers,1,1,-9.3851174291999,defense,John Abraham,1
+2011,5,New England Patriots,2011_5_New England Patriots_vs_New York Jets,1,1,3.767302725753252,defense,Jerod Mayo,1
+2011,5,Pittsburgh Steelers,2011_5_Pittsburgh Steelers_vs_Tennessee Titans,1,1,16.970248745289755,defense,James Harrison,1
+2011,6,New England Patriots,2011_6_New England Patriots_vs_Dallas Cowboys,1,2,-3.2099333786780146,defense,Jerod Mayo,1
+2011,6,Pittsburgh Steelers,2011_6_Pittsburgh Steelers_vs_Jacksonville Jaguars,1,2,-4.09566586685488,defense,James Harrison,1
+2011,7,Pittsburgh Steelers,2011_7_Arizona Cardinals_vs_Pittsburgh Steelers,1,3,7.681070951478104,defense,James Harrison,1
+2011,8,Pittsburgh Steelers,2011_8_Pittsburgh Steelers_vs_New England Patriots,1,4,7.6464823879583586,defense,James Harrison,1
+2011,13,Detroit Lions,2011_13_New Orleans Saints_vs_Detroit Lions,1,1,-6.74643680454732,defense,Ndamukong Suh,1
+2011,14,Detroit Lions,2011_14_Detroit Lions_vs_Minnesota Vikings,1,2,2.328772095290287,defense,Ndamukong Suh,1
+2011,14,San Francisco 49ers,2011_14_Arizona Cardinals_vs_San Francisco 49ers,1,1,-4.4270156051511,defense,Patrick Willis,1
+2011,15,Miami Dolphins,2011_15_Buffalo Bills_vs_Miami Dolphins,1,1,7.310105172554676,ol,Jake Long,1
+2011,16,San Francisco 49ers,2011_16_Seattle Seahawks_vs_San Francisco 49ers,1,3,0.696053504504589,defense,Patrick Willis,1
+2011,17,Green Bay Packers,2011_17_Green Bay Packers_vs_Detroit Lions,1,1,-5.086692563237566,defense,Clay Matthews,1
+2011,17,Houston Texans,2011_17_Houston Texans_vs_Tennessee Titans,1,1,-5.577924998870321,skill,Arian Foster,1
+2011,17,Miami Dolphins,2011_17_Miami Dolphins_vs_New York Jets,1,1,2.0745359870157425,ol,Jake Long,1
+2011,17,New England Patriots,2011_17_New England Patriots_vs_Buffalo Bills,1,1,16.331430931178463,ol,Logan Mankins,1
+2012,1,Baltimore Ravens,2012_1_Baltimore Ravens_vs_Cincinnati Bengals,1,1,25.197326684640004,defense,Terrell Suggs,1
+2012,2,Baltimore Ravens,2012_2_Philadelphia Eagles_vs_Baltimore Ravens,1,2,-0.4679682200335811,defense,Terrell Suggs,1
+2012,2,Pittsburgh Steelers,2012_2_Pittsburgh Steelers_vs_New York Jets,1,1,13.875754182409237,defense,Troy Polamalu,1
+2012,3,Baltimore Ravens,2012_3_Baltimore Ravens_vs_New England Patriots,1,3,0.36051254550100564,defense,Terrell Suggs,1
+2012,3,Pittsburgh Steelers,2012_3_Oakland Raiders_vs_Pittsburgh Steelers,1,2,-5.601561616827157,defense,Troy Polamalu,1
+2012,4,Baltimore Ravens,2012_4_Baltimore Ravens_vs_Cleveland Browns,1,4,-2.37414640544047,defense,Terrell Suggs,1
+2012,5,Baltimore Ravens,2012_5_Kansas City Chiefs_vs_Baltimore Ravens,1,5,-1.6316647407820621,defense,Terrell Suggs,0
+2012,6,Baltimore Ravens,2012_6_Baltimore Ravens_vs_Dallas Cowboys,1,6,-4.662688579048608,defense,Terrell Suggs,0
+2012,6,Pittsburgh Steelers,2012_6_Tennessee Titans_vs_Pittsburgh Steelers,1,1,-5.0334583839848985,defense,Troy Polamalu,1
+2012,7,Pittsburgh Steelers,2012_7_Cincinnati Bengals_vs_Pittsburgh Steelers,1,2,6.435568329242278,defense,Troy Polamalu,1
+2012,8,Pittsburgh Steelers,2012_8_Pittsburgh Steelers_vs_Washington Redskins,1,3,7.926734038583991,defense,Troy Polamalu,1
+2012,9,Green Bay Packers,2012_9_Green Bay Packers_vs_Arizona Cardinals,1,2,5.05951671456557,defense,Charles Woodson,1
+2012,9,Jacksonville Jaguars,2012_9_Jacksonville Jaguars_vs_Detroit Lions,1,2,-15.560422766454085,skill,Maurice Jones-Drew,1
+2012,9,Pittsburgh Steelers,2012_9_New York Giants_vs_Pittsburgh Steelers,1,4,7.194606572913562,defense,Troy Polamalu,1
+2012,9,Tampa Bay Buccaneers,2012_9_Oakland Raiders_vs_Tampa Bay Buccaneers,1,1,12.354686013675154,ol,Carl Nicks,1
+2012,10,Baltimore Ravens,2012_10_Baltimore Ravens_vs_Oakland Raiders,1,1,26.712241630197497,defense,Haloti Ngata,1
+2012,10,Jacksonville Jaguars,2012_10_Jacksonville Jaguars_vs_Indianapolis Colts,1,3,-16.54029187172596,skill,Maurice Jones-Drew,1
+2012,10,Pittsburgh Steelers,2012_10_Pittsburgh Steelers_vs_Kansas City Chiefs,1,5,-6.923721115364216,defense,Troy Polamalu,0
+2012,10,Tampa Bay Buccaneers,2012_10_Tampa Bay Buccaneers_vs_San Diego Chargers,1,2,10.98650209463979,ol,Carl Nicks,1
+2012,11,Green Bay Packers,2012_11_Detroit Lions_vs_Green Bay Packers,1,3,0.88467312462436,defense,Charles Woodson,1
+2012,11,Jacksonville Jaguars,2012_11_Houston Texans_vs_Jacksonville Jaguars,1,4,5.4515360888745,skill,Maurice Jones-Drew,1
+2012,11,Pittsburgh Steelers,2012_11_Pittsburgh Steelers_vs_Baltimore Ravens,1,6,-4.536158761991455,defense,Troy Polamalu,0
+2012,11,Tampa Bay Buccaneers,2012_11_Carolina Panthers_vs_Tampa Bay Buccaneers,1,3,6.4296207007805695,ol,Carl Nicks,1
+2012,12,Green Bay Packers,2012_12_New York Giants_vs_Green Bay Packers,1,4,-28.19935473410931,defense,Charles Woodson,1
+2012,12,Jacksonville Jaguars,2012_12_Jacksonville Jaguars_vs_Tennessee Titans,1,5,6.720366029243951,skill,Maurice Jones-Drew,0
+2012,12,New England Patriots,2012_12_New York Jets_vs_New England Patriots,1,1,25.300562070171516,skill,Rob Gronkowski,1
+2012,12,Philadelphia Eagles,2012_12_Philadelphia Eagles_vs_Carolina Panthers,1,1,-12.625442535628864,skill,LeSean McCoy,1
+2012,12,Pittsburgh Steelers,2012_12_Cleveland Browns_vs_Pittsburgh Steelers,1,7,-10.548016838559606,defense,Troy Polamalu,0
+2012,12,Tampa Bay Buccaneers,2012_12_Tampa Bay Buccaneers_vs_Atlanta Falcons,1,4,1.7078944882102496,ol,Carl Nicks,1
+2012,13,Green Bay Packers,2012_13_Green Bay Packers_vs_Minnesota Vikings,1,5,0.762902073688938,defense,Charles Woodson,0
+2012,13,Jacksonville Jaguars,2012_13_Buffalo Bills_vs_Jacksonville Jaguars,1,6,-11.48795166547292,skill,Maurice Jones-Drew,0
+2012,13,New England Patriots,2012_13_Miami Dolphins_vs_New England Patriots,1,2,1.431855919065038,skill,Rob Gronkowski,1
+2012,13,Philadelphia Eagles,2012_13_Dallas Cowboys_vs_Philadelphia Eagles,1,2,-1.7050773362468408,skill,LeSean McCoy,1
+2012,13,Tampa Bay Buccaneers,2012_13_Denver Broncos_vs_Tampa Bay Buccaneers,1,5,-3.1748304587776603,ol,Carl Nicks,0
+2012,14,Baltimore Ravens,2012_14_Washington Redskins_vs_Baltimore Ravens,1,1,-6.4099277143543985,defense,Terrell Suggs,1
+2012,14,Green Bay Packers,2012_14_Green Bay Packers_vs_Detroit Lions,1,6,-0.5984627289716533,defense,Charles Woodson,0
+2012,14,Jacksonville Jaguars,2012_14_Jacksonville Jaguars_vs_New York Jets,1,7,-5.08497966377864,skill,Maurice Jones-Drew,0
+2012,14,New England Patriots,2012_14_New England Patriots_vs_Houston Texans,1,3,23.61926055079678,skill,Rob Gronkowski,1
+2012,15,Green Bay Packers,2012_15_Chicago Bears_vs_Green Bay Packers,1,7,7.412224366201726,defense,Charles Woodson,0
+2012,15,Jacksonville Jaguars,2012_15_Miami Dolphins_vs_Jacksonville Jaguars,1,8,-14.720749350078187,skill,Maurice Jones-Drew,0
+2012,15,New England Patriots,2012_15_New England Patriots_vs_San Francisco 49ers,1,4,-12.34649115026371,skill,Rob Gronkowski,1
+2012,15,Philadelphia Eagles,2012_15_Philadelphia Eagles_vs_Cincinnati Bengals,1,4,-21.055241150490446,skill,LeSean McCoy,1
+2012,15,Tampa Bay Buccaneers,2012_15_New Orleans Saints_vs_Tampa Bay Buccaneers,1,7,-34.9214284583528,ol,Carl Nicks,0
+2012,16,Green Bay Packers,2012_16_Green Bay Packers_vs_Tennessee Titans,1,8,38.89673675987755,defense,Charles Woodson,0
+2012,16,San Francisco 49ers,2012_16_Seattle Seahawks_vs_San Francisco 49ers,1,1,-29.79161390884009,defense,Justin Smith,1
+2012,16,Tampa Bay Buccaneers,2012_16_Tampa Bay Buccaneers_vs_St. Louis Rams,1,8,-19.23544524096962,ol,Carl Nicks,0
+2012,17,Baltimore Ravens,2012_17_Cincinnati Bengals_vs_Baltimore Ravens,2,1,-5.818980768356551,defense,Haloti Ngata|Terrell Suggs,1
+2012,17,Green Bay Packers,2012_17_Minnesota Vikings_vs_Green Bay Packers,1,9,-6.4488821227901365,defense,Charles Woodson,0
+2012,17,Jacksonville Jaguars,2012_17_Tennessee Titans_vs_Jacksonville Jaguars,1,10,-12.166580699021797,skill,Maurice Jones-Drew,0
+2012,17,San Francisco 49ers,2012_17_San Francisco 49ers_vs_Arizona Cardinals,1,2,4.629813705592795,defense,Justin Smith,1
+2012,17,Tampa Bay Buccaneers,2012_17_Atlanta Falcons_vs_Tampa Bay Buccaneers,1,9,14.930258863853288,ol,Carl Nicks,0
+2013,1,Denver Broncos,2013_1_Denver Broncos_vs_Baltimore Ravens,1,1,21.573065306732413,defense,Von Miller,1
+2013,2,Denver Broncos,2013_2_New York Giants_vs_Denver Broncos,1,2,19.431775046989888,defense,Von Miller,1
+2013,3,Denver Broncos,2013_3_Denver Broncos_vs_Oakland Raiders,2,1,7.674664555780437,defense|ol,Ryan Clady|Von Miller,1
+2013,3,Houston Texans,2013_3_Baltimore Ravens_vs_Houston Texans,1,1,-18.624943832172846,ol,Duane Brown,1
+2013,3,New Orleans Saints,2013_3_New Orleans Saints_vs_Arizona Cardinals,1,1,17.346466885679373,ol,Jahri Evans,1
+2013,4,Denver Broncos,2013_4_Denver Broncos_vs_Philadelphia Eagles,2,2,23.987050296724966,defense|ol,Ryan Clady|Von Miller,1
+2013,4,Miami Dolphins,2013_4_New Orleans Saints_vs_Miami Dolphins,1,1,-16.6243428444631,defense,Cameron Wake,1
+2013,4,San Francisco 49ers,2013_4_St. Louis Rams_vs_San Francisco 49ers,2,1,21.453773167052333,defense,Aldon Smith|Patrick Willis,1
+2013,5,Denver Broncos,2013_5_Dallas Cowboys_vs_Denver Broncos,2,3,1.3417114752264845,defense|ol,Ryan Clady|Von Miller,1
+2013,5,Detroit Lions,2013_5_Green Bay Packers_vs_Detroit Lions,1,1,-7.026380179174357,skill,Calvin Johnson,1
+2013,5,New England Patriots,2013_5_Cincinnati Bengals_vs_New England Patriots,1,1,-9.215965534321322,defense,Vince Wilfork,1
+2013,5,San Francisco 49ers,2013_5_San Francisco 49ers_vs_Houston Texans,2,2,28.14538381661081,defense,Aldon Smith|Patrick Willis,1
+2013,5,Seattle Seahawks,2013_5_Indianapolis Colts_vs_Seattle Seahawks,1,2,-6.386131787200793,ol,Max Unger,1
+2013,6,Chicago Bears,2013_6_Chicago Bears_vs_New York Giants,1,1,0.940778394435501,defense,Charles Tillman,1
+2013,6,Denver Broncos,2013_6_Denver Broncos_vs_Jacksonville Jaguars,2,4,3.1946168400781314,defense|ol,Ryan Clady|Von Miller,1
+2013,6,New England Patriots,2013_6_New England Patriots_vs_New Orleans Saints,1,2,-0.9061669541229822,defense,Vince Wilfork,1
+2013,6,San Francisco 49ers,2013_6_San Francisco 49ers_vs_Arizona Cardinals,1,3,4.927799049816494,defense,Aldon Smith,1
+2013,7,Denver Broncos,2013_7_Indianapolis Colts_vs_Denver Broncos,1,5,-7.1492974320525535,ol,Ryan Clady,0
+2013,7,New England Patriots,2013_7_New York Jets_vs_New England Patriots,1,3,-8.014302702652866,defense,Vince Wilfork,1
+2013,7,San Francisco 49ers,2013_7_Tennessee Titans_vs_San Francisco 49ers,1,4,12.021386643470478,defense,Aldon Smith,1
+2013,8,Denver Broncos,2013_8_Denver Broncos_vs_Washington Redskins,1,6,16.894827033888795,ol,Ryan Clady,0
+2013,8,New England Patriots,2013_8_New England Patriots_vs_Miami Dolphins,1,4,2.3502956421180077,defense,Vince Wilfork,1
+2013,8,San Francisco 49ers,2013_8_Jacksonville Jaguars_vs_San Francisco 49ers,1,5,21.25232930127577,defense,Aldon Smith,0
+2013,8,Tampa Bay Buccaneers,2013_8_Tampa Bay Buccaneers_vs_Carolina Panthers,1,1,-16.658884846227448,defense,Dashon Goldson,1
+2013,9,New England Patriots,2013_9_New England Patriots_vs_Pittsburgh Steelers,1,5,16.836742132560502,defense,Vince Wilfork,0
+2013,9,Tampa Bay Buccaneers,2013_9_Seattle Seahawks_vs_Tampa Bay Buccaneers,1,2,6.705632885978838,defense,Dashon Goldson,1
+2013,10,Cincinnati Bengals,2013_10_Baltimore Ravens_vs_Cincinnati Bengals,1,1,-0.6586695274714018,defense,Geno Atkins,1
+2013,10,Denver Broncos,2013_10_San Diego Chargers_vs_Denver Broncos,1,7,6.274517797379503,ol,Ryan Clady,0
+2013,10,Seattle Seahawks,2013_10_Atlanta Falcons_vs_Seattle Seahawks,1,1,22.150511200438405,ol,Max Unger,1
+2013,11,Chicago Bears,2013_11_Chicago Bears_vs_Baltimore Ravens,1,1,1.6646292170548986,defense,Charles Tillman,1
+2013,11,Cincinnati Bengals,2013_11_Cincinnati Bengals_vs_Cleveland Browns,1,2,14.140738955559828,defense,Geno Atkins,1
+2013,11,Denver Broncos,2013_11_Denver Broncos_vs_Kansas City Chiefs,1,8,2.8921740609587507,ol,Ryan Clady,0
+2013,11,New England Patriots,2013_11_Carolina Panthers_vs_New England Patriots,1,6,-5.4679533871200325,defense,Vince Wilfork,0
+2013,12,Chicago Bears,2013_12_St. Louis Rams_vs_Chicago Bears,1,2,-22.668018849648714,defense,Charles Tillman,1
+2013,12,New Orleans Saints,2013_12_Atlanta Falcons_vs_New Orleans Saints,1,1,2.0230900717008993,ol,Jahri Evans,1
+2013,12,San Francisco 49ers,2013_12_Washington Redskins_vs_San Francisco 49ers,1,1,17.930628162771026,ol,Mike Iupati,1
+2013,12,Tampa Bay Buccaneers,2013_12_Detroit Lions_vs_Tampa Bay Buccaneers,1,1,7.63354737617462,defense,Dashon Goldson,1
+2013,13,Chicago Bears,2013_13_Minnesota Vikings_vs_Chicago Bears,1,3,-4.166433230689672,defense,Charles Tillman,1
+2013,13,Cincinnati Bengals,2013_13_San Diego Chargers_vs_Cincinnati Bengals,1,3,6.824918066643541,defense,Geno Atkins,1
+2013,13,Denver Broncos,2013_13_Kansas City Chiefs_vs_Denver Broncos,1,10,3.834699093621948,ol,Ryan Clady,0
+2013,13,New England Patriots,2013_13_Houston Texans_vs_New England Patriots,1,8,-1.4916737698619,defense,Vince Wilfork,0
+2013,13,San Francisco 49ers,2013_13_San Francisco 49ers_vs_St. Louis Rams,1,2,2.4490860760290705,ol,Mike Iupati,1
+2013,14,Chicago Bears,2013_14_Chicago Bears_vs_Dallas Cowboys,1,4,14.483723494388688,defense,Charles Tillman,1
+2013,14,Cincinnati Bengals,2013_14_Cincinnati Bengals_vs_Indianapolis Colts,1,4,9.059894188985599,defense,Geno Atkins,1
+2013,14,Denver Broncos,2013_14_Denver Broncos_vs_Tennessee Titans,1,11,14.543224227688807,ol,Ryan Clady,0
+2013,14,New England Patriots,2013_14_New England Patriots_vs_Cleveland Browns,1,9,-10.479630782130506,defense,Vince Wilfork,0
+2013,14,San Francisco 49ers,2013_14_San Francisco 49ers_vs_Seattle Seahawks,1,3,0.9993790664309108,ol,Mike Iupati,1
+2013,15,Chicago Bears,2013_15_Cleveland Browns_vs_Chicago Bears,1,5,4.040643471774856,defense,Charles Tillman,0
+2013,15,Cincinnati Bengals,2013_15_Pittsburgh Steelers_vs_Cincinnati Bengals,1,5,-10.339534730504784,defense,Geno Atkins,0
+2013,15,Denver Broncos,2013_15_Denver Broncos_vs_San Diego Chargers,1,12,-13.981321562005125,ol,Ryan Clady,0
+2013,15,Minnesota Vikings,2013_15_Minnesota Vikings_vs_Philadelphia Eagles,1,1,17.898260947706866,skill,Adrian Peterson,1
+2013,15,New England Patriots,2013_15_Miami Dolphins_vs_New England Patriots,1,10,-7.081273860775337,defense,Vince Wilfork,0
+2013,15,San Francisco 49ers,2013_15_Tampa Bay Buccaneers_vs_San Francisco 49ers,1,4,14.330205553813094,ol,Mike Iupati,1
+2013,16,Chicago Bears,2013_16_Philadelphia Eagles_vs_Chicago Bears,1,6,-43.01294205458492,defense,Charles Tillman,0
+2013,16,Cincinnati Bengals,2013_16_Cincinnati Bengals_vs_Minnesota Vikings,1,6,21.72235243314226,defense,Geno Atkins,0
+2013,16,Denver Broncos,2013_16_Houston Texans_vs_Denver Broncos,1,13,19.256407776167308,ol,Ryan Clady,0
+2013,16,New England Patriots,2013_16_Baltimore Ravens_vs_New England Patriots,1,11,33.942558417662546,defense,Vince Wilfork,0
+2013,17,Chicago Bears,2013_17_Chicago Bears_vs_Green Bay Packers,1,7,-6.180652719710406,defense,Charles Tillman,0
+2013,17,Cincinnati Bengals,2013_17_Cincinnati Bengals_vs_Baltimore Ravens,1,7,13.852956789195467,defense,Geno Atkins,0
+2013,17,Denver Broncos,2013_17_Oakland Raiders_vs_Denver Broncos,2,1,11.671607448148052,defense|ol,Ryan Clady|Von Miller,1
+2013,17,New England Patriots,2013_17_New England Patriots_vs_Buffalo Bills,1,12,3.2592860460534965,defense,Vince Wilfork,0
+2014,1,Cleveland Browns,2014_1_Pittsburgh Steelers_vs_Cleveland Browns,1,1,3.248775264277265,skill,Josh Gordon,1
+2014,2,Cleveland Browns,2014_2_Cleveland Browns_vs_New Orleans Saints,1,2,5.036531235270468,skill,Josh Gordon,1
+2014,2,Philadelphia Eagles,2014_2_Indianapolis Colts_vs_Philadelphia Eagles,1,1,4.886420797012669,ol,Evan Mathis,1
+2014,3,Cleveland Browns,2014_3_Cleveland Browns_vs_Baltimore Ravens,1,3,0.03147198067733381,skill,Josh Gordon,1
+2014,3,Kansas City Chiefs,2014_3_Miami Dolphins_vs_Kansas City Chiefs,2,1,21.745038171639706,defense|skill,Eric Berry|Jamaal Charles,1
+2014,3,Philadelphia Eagles,2014_3_Philadelphia Eagles_vs_Washington Redskins,1,2,-2.5395941654801844,ol,Evan Mathis,1
+2014,3,Tampa Bay Buccaneers,2014_3_Atlanta Falcons_vs_Tampa Bay Buccaneers,1,1,-37.59624036754034,defense,Gerald McCoy,1
+2014,4,Carolina Panthers,2014_4_Baltimore Ravens_vs_Carolina Panthers,1,1,-25.81885109681499,skill,Mike Tolbert,1
+2014,4,Kansas City Chiefs,2014_4_Kansas City Chiefs_vs_New England Patriots,1,2,29.49752157523795,defense,Eric Berry,1
+2014,4,Philadelphia Eagles,2014_4_San Francisco 49ers_vs_Philadelphia Eagles,1,3,-0.5513470660934221,ol,Evan Mathis,1
+2014,5,Carolina Panthers,2014_5_Carolina Panthers_vs_Chicago Bears,1,2,3.9379807274732412,skill,Mike Tolbert,1
+2014,5,Cleveland Browns,2014_5_Tennessee Titans_vs_Cleveland Browns,1,4,4.374123167489788,skill,Josh Gordon,1
+2014,5,Kansas City Chiefs,2014_5_San Francisco 49ers_vs_Kansas City Chiefs,1,3,0.07061401189004712,defense,Eric Berry,1
+2014,5,Philadelphia Eagles,2014_5_Philadelphia Eagles_vs_St. Louis Rams,1,4,1.109597734160352,ol,Evan Mathis,1
+2014,6,Carolina Panthers,2014_6_Cincinnati Bengals_vs_Carolina Panthers,1,3,3.4995474312836814,skill,Mike Tolbert,1
+2014,6,Cleveland Browns,2014_6_Cleveland Browns_vs_Pittsburgh Steelers,1,5,22.92398331806662,skill,Josh Gordon,0
+2014,6,Detroit Lions,2014_6_Minnesota Vikings_vs_Detroit Lions,1,1,14.825628549772746,skill,Calvin Johnson,1
+2014,6,Philadelphia Eagles,2014_6_Philadelphia Eagles_vs_New York Giants,1,5,24.12677613288739,ol,Evan Mathis,0
+2014,7,Carolina Panthers,2014_7_Green Bay Packers_vs_Carolina Panthers,1,4,-17.79333950274773,skill,Mike Tolbert,1
+2014,7,Cleveland Browns,2014_7_Jacksonville Jaguars_vs_Cleveland Browns,1,6,-20.22332688734692,skill,Josh Gordon,0
+2014,7,Detroit Lions,2014_7_Detroit Lions_vs_New Orleans Saints,1,2,-0.22343743828337193,skill,Calvin Johnson,1
+2014,7,Kansas City Chiefs,2014_7_San Diego Chargers_vs_Kansas City Chiefs,1,4,7.377556650401111,defense,Eric Berry,1
+2014,8,Carolina Panthers,2014_8_Carolina Panthers_vs_Seattle Seahawks,1,5,-2.360784018541863,skill,Mike Tolbert,0
+2014,8,Cleveland Browns,2014_8_Cleveland Browns_vs_Oakland Raiders,1,7,5.075597439156863,skill,Josh Gordon,0
+2014,8,Detroit Lions,2014_8_Atlanta Falcons_vs_Detroit Lions,1,3,-1.3138113180599795,skill,Calvin Johnson,1
+2014,8,Kansas City Chiefs,2014_8_Kansas City Chiefs_vs_St. Louis Rams,1,5,21.95709538814438,defense,Eric Berry,0
+2014,8,Philadelphia Eagles,2014_8_Arizona Cardinals_vs_Philadelphia Eagles,1,6,-2.118084652023163,ol,Evan Mathis,0
+2014,9,Carolina Panthers,2014_9_Carolina Panthers_vs_New Orleans Saints,1,6,-18.478368079700093,skill,Mike Tolbert,0
+2014,9,Cleveland Browns,2014_9_Cleveland Browns_vs_Tampa Bay Buccaneers,1,8,1.110046708220088,skill,Josh Gordon,0
+2014,9,Philadelphia Eagles,2014_9_Houston Texans_vs_Philadelphia Eagles,1,7,9.457702307320979,ol,Evan Mathis,0
+2014,10,Carolina Panthers,2014_10_Philadelphia Eagles_vs_Carolina Panthers,1,7,-19.712105544370505,skill,Mike Tolbert,0
+2014,10,Cleveland Browns,2014_10_Cincinnati Bengals_vs_Cleveland Browns,1,9,27.556452627371264,skill,Josh Gordon,0
+2014,11,Carolina Panthers,2014_11_Carolina Panthers_vs_Atlanta Falcons,1,8,-4.723800515536013,skill,Mike Tolbert,0
+2014,11,Cleveland Browns,2014_11_Cleveland Browns_vs_Houston Texans,1,10,-18.360263968144935,skill,Josh Gordon,0
+2014,12,Tampa Bay Buccaneers,2014_12_Chicago Bears_vs_Tampa Bay Buccaneers,1,1,-2.778522220607665,defense,Lavonte David,1
+2014,13,Kansas City Chiefs,2014_13_Kansas City Chiefs_vs_Denver Broncos,1,1,-12.487467394288423,defense,Eric Berry,1
+2014,13,Tampa Bay Buccaneers,2014_13_Tampa Bay Buccaneers_vs_Cincinnati Bengals,1,2,3.25365616419519,defense,Lavonte David,1
+2014,14,Kansas City Chiefs,2014_14_Arizona Cardinals_vs_Kansas City Chiefs,1,2,-0.1886847208432756,defense,Eric Berry,1
+2014,15,Kansas City Chiefs,2014_15_Kansas City Chiefs_vs_Oakland Raiders,1,3,8.73182579586527,defense,Eric Berry,1
+2014,16,Kansas City Chiefs,2014_16_Pittsburgh Steelers_vs_Kansas City Chiefs,1,4,-4.504276011293314,defense,Eric Berry,1
+2014,16,Tampa Bay Buccaneers,2014_16_Tampa Bay Buccaneers_vs_Green Bay Packers,1,1,-10.86303859268738,defense,Gerald McCoy,1
+2014,17,Cleveland Browns,2014_17_Baltimore Ravens_vs_Cleveland Browns,1,1,-1.8166665378227123,skill,Josh Gordon,1
+2014,17,Kansas City Chiefs,2014_17_Kansas City Chiefs_vs_San Diego Chargers,1,5,9.879444509917466,defense,Eric Berry,0
+2014,17,Tampa Bay Buccaneers,2014_17_Tampa Bay Buccaneers_vs_New Orleans Saints,1,2,0.315366690263581,defense,Gerald McCoy,1
+2015,1,Buffalo Bills,2015_1_Buffalo Bills_vs_Indianapolis Colts,1,1,12.364970579544025,defense,Marcell Dareus,1
+2015,1,Pittsburgh Steelers,2015_1_New England Patriots_vs_Pittsburgh Steelers,1,1,0.06399131564685412,skill,Le'Veon Bell,1
+2015,2,Carolina Panthers,2015_2_Carolina Panthers_vs_Houston Texans,1,1,3.34314063323086,defense,Luke Kuechly,1
+2015,2,Dallas Cowboys,2015_2_Philadelphia Eagles_vs_Dallas Cowboys,1,1,11.131482235917865,skill,Dez Bryant,1
+2015,2,Pittsburgh Steelers,2015_2_Pittsburgh Steelers_vs_San Francisco 49ers,1,2,23.135334475919425,skill,Le'Veon Bell,1
+2015,3,Carolina Panthers,2015_3_Carolina Panthers_vs_New Orleans Saints,1,2,1.1832827525160794,defense,Luke Kuechly,1
+2015,3,Dallas Cowboys,2015_3_Dallas Cowboys_vs_Atlanta Falcons,1,2,-16.315439684485053,skill,Dez Bryant,1
+2015,3,Philadelphia Eagles,2015_3_New York Jets_vs_Philadelphia Eagles,1,1,7.228674251684506,skill,DeMarco Murray,1
+2015,4,Carolina Panthers,2015_4_Tampa Bay Buccaneers_vs_Carolina Panthers,1,3,10.555591001732582,defense,Luke Kuechly,1
+2015,4,Dallas Cowboys,2015_4_New Orleans Saints_vs_Dallas Cowboys,1,3,-6.402304563738198,skill,Dez Bryant,1
+2015,5,Dallas Cowboys,2015_5_Dallas Cowboys_vs_New England Patriots,1,4,-22.27519279379171,skill,Dez Bryant,1
+2015,6,Seattle Seahawks,2015_6_Seattle Seahawks_vs_Carolina Panthers,1,1,-8.782842052195747,defense,Bobby Wagner,1
+2015,7,Dallas Cowboys,2015_7_New York Giants_vs_Dallas Cowboys,1,5,-6.209560402388706,skill,Dez Bryant,0
+2015,7,San Diego Chargers,2015_7_San Diego Chargers_vs_Oakland Raiders,1,1,-14.094323022550952,defense,Eric Weddle,1
+2015,8,San Diego Chargers,2015_8_Baltimore Ravens_vs_San Diego Chargers,1,2,0.808096567264438,defense,Eric Weddle,1
+2015,9,Pittsburgh Steelers,2015_9_Pittsburgh Steelers_vs_Oakland Raiders,1,1,-4.512184693349099,skill,Le'Veon Bell,1
+2015,10,Pittsburgh Steelers,2015_10_Pittsburgh Steelers_vs_Cleveland Browns,1,2,12.779579377133286,skill,Le'Veon Bell,1
+2015,12,Buffalo Bills,2015_12_Kansas City Chiefs_vs_Buffalo Bills,1,1,-3.707959870217228,defense,Mario Williams,1
+2015,12,New York Jets,2015_12_New York Jets_vs_Miami Dolphins,1,1,16.523397877112938,defense,Darrelle Revis,1
+2015,12,Pittsburgh Steelers,2015_12_Seattle Seahawks_vs_Pittsburgh Steelers,1,3,-4.670668907370909,skill,Le'Veon Bell,1
+2015,13,Kansas City Chiefs,2015_13_Oakland Raiders_vs_Kansas City Chiefs,1,1,9.581848223236111,defense,Justin Houston,1
+2015,13,New England Patriots,2015_13_New England Patriots_vs_Philadelphia Eagles,1,1,-16.66325462679711,skill,Rob Gronkowski,1
+2015,13,New York Jets,2015_13_New York Giants_vs_New York Jets,1,2,6.377626301946711,defense,Darrelle Revis,1
+2015,13,Pittsburgh Steelers,2015_13_Pittsburgh Steelers_vs_Indianapolis Colts,1,4,31.80467844119803,skill,Le'Veon Bell,1
+2015,14,Kansas City Chiefs,2015_14_Kansas City Chiefs_vs_San Diego Chargers,1,2,-0.4575213768213233,defense,Justin Houston,1
+2015,14,Pittsburgh Steelers,2015_14_Cincinnati Bengals_vs_Pittsburgh Steelers,1,5,16.496228271312795,skill,Le'Veon Bell,0
+2015,15,Kansas City Chiefs,2015_15_Baltimore Ravens_vs_Kansas City Chiefs,1,3,19.088503338110502,defense,Justin Houston,1
+2015,15,Pittsburgh Steelers,2015_15_Pittsburgh Steelers_vs_Denver Broncos,1,6,5.860334819205191,skill,Le'Veon Bell,0
+2015,16,Dallas Cowboys,2015_16_Buffalo Bills_vs_Dallas Cowboys,1,1,-7.33465083960984,skill,Dez Bryant,1
+2015,16,Kansas City Chiefs,2015_16_Kansas City Chiefs_vs_Cleveland Browns,1,4,-6.58256035170062,defense,Justin Houston,1
+2015,16,Pittsburgh Steelers,2015_16_Baltimore Ravens_vs_Pittsburgh Steelers,1,7,-4.957712352514645,skill,Le'Veon Bell,0
+2015,17,Dallas Cowboys,2015_17_Dallas Cowboys_vs_Washington Redskins,1,2,-14.278950030350025,skill,Dez Bryant,1
+2015,17,Kansas City Chiefs,2015_17_Kansas City Chiefs_vs_Oakland Raiders,1,5,-3.992732076322836,defense,Justin Houston,0
+2015,17,Pittsburgh Steelers,2015_17_Cleveland Browns_vs_Pittsburgh Steelers,1,8,10.144454751696895,skill,Le'Veon Bell,0
+2015,17,San Diego Chargers,2015_17_Denver Broncos_vs_San Diego Chargers,1,1,1.5842768235353386,defense,Eric Weddle,1
+2016,1,New England Patriots,2016_1_Arizona Cardinals_vs_New England Patriots,1,1,2.9935557904543204,skill,Rob Gronkowski,1
+2016,2,New England Patriots,2016_2_New England Patriots_vs_Miami Dolphins,1,2,-1.0104240282807488,skill,Rob Gronkowski,1
+2016,3,Minnesota Vikings,2016_3_Carolina Panthers_vs_Minnesota Vikings,1,1,16.47659650164711,skill,Adrian Peterson,1
+2016,3,Tampa Bay Buccaneers,2016_3_Tampa Bay Buccaneers_vs_Los Angeles Rams,1,1,-4.69228633273121,skill,Doug Martin,1
+2016,4,Houston Texans,2016_4_Houston Texans_vs_Tennessee Titans,1,1,0.12008531765439301,defense,J.J. Watt,1
+2016,4,Minnesota Vikings,2016_4_Minnesota Vikings_vs_New York Giants,1,2,9.024354449123075,skill,Adrian Peterson,1
+2016,4,Tampa Bay Buccaneers,2016_4_Tampa Bay Buccaneers_vs_Denver Broncos,1,2,-14.491609413937422,skill,Doug Martin,1
+2016,5,San Francisco 49ers,2016_5_San Francisco 49ers_vs_Arizona Cardinals,1,1,-10.336544428043835,defense,NaVorro Bowman,1
+2016,5,Tampa Bay Buccaneers,2016_5_Carolina Panthers_vs_Tampa Bay Buccaneers,1,3,11.398549895725255,skill,Doug Martin,1
+2016,6,Baltimore Ravens,2016_6_New York Giants_vs_Baltimore Ravens,1,1,-2.8754626219168493,ol,Marshal Yanda,1
+2016,6,Houston Texans,2016_6_Houston Texans_vs_Indianapolis Colts,1,3,0.2823357958723678,defense,J.J. Watt,1
+2016,6,San Francisco 49ers,2016_6_Buffalo Bills_vs_San Francisco 49ers,1,2,-23.313551262479724,defense,NaVorro Bowman,1
+2016,7,Baltimore Ravens,2016_7_New York Jets_vs_Baltimore Ravens,1,2,-6.915995093674628,ol,Marshal Yanda,1
+2016,7,Houston Texans,2016_7_Denver Broncos_vs_Houston Texans,1,4,-11.688665165744833,defense,J.J. Watt,1
+2016,7,Minnesota Vikings,2016_7_Philadelphia Eagles_vs_Minnesota Vikings,1,4,-10.6833687920202,skill,Adrian Peterson,1
+2016,8,Houston Texans,2016_8_Houston Texans_vs_Detroit Lions,1,5,5.109949824447885,defense,J.J. Watt,0
+2016,8,Minnesota Vikings,2016_8_Chicago Bears_vs_Minnesota Vikings,1,5,-13.511079446087761,skill,Adrian Peterson,0
+2016,8,Tampa Bay Buccaneers,2016_8_Tampa Bay Buccaneers_vs_Oakland Raiders,1,5,-7.4697345299850895,skill,Doug Martin,0
+2016,9,Carolina Panthers,2016_9_Los Angeles Rams_vs_Carolina Panthers,1,1,1.9030660378177071,ol,Ryan Kalil,1
+2016,9,Minnesota Vikings,2016_9_Minnesota Vikings_vs_Detroit Lions,1,6,-10.401477038182248,skill,Adrian Peterson,0
+2016,9,San Francisco 49ers,2016_9_San Francisco 49ers_vs_New Orleans Saints,1,4,-18.252484441454534,defense,NaVorro Bowman,1
+2016,9,Tampa Bay Buccaneers,2016_9_Tampa Bay Buccaneers_vs_Atlanta Falcons,1,6,-13.59954817821268,skill,Doug Martin,0
+2016,10,Baltimore Ravens,2016_10_Baltimore Ravens_vs_Cleveland Browns,1,1,13.424376900722036,ol,Marshal Yanda,1
+2016,10,Carolina Panthers,2016_10_Carolina Panthers_vs_Kansas City Chiefs,1,2,-4.186304071471304,ol,Ryan Kalil,1
+2016,10,Houston Texans,2016_10_Jacksonville Jaguars_vs_Houston Texans,1,6,0.3865610977940559,defense,J.J. Watt,0
+2016,10,Minnesota Vikings,2016_10_Washington Redskins_vs_Minnesota Vikings,1,7,-6.3165523524846865,skill,Adrian Peterson,0
+2016,11,Houston Texans,2016_11_Oakland Raiders_vs_Houston Texans,1,7,-8.1007877322663,defense,J.J. Watt,0
+2016,12,Carolina Panthers,2016_12_Oakland Raiders_vs_Carolina Panthers,2,1,-4.049084328614117,defense|ol,Luke Kuechly|Ryan Kalil,1
+2016,12,Houston Texans,2016_12_Houston Texans_vs_San Diego Chargers,1,8,-11.200568429805816,defense,J.J. Watt,0
+2016,12,Minnesota Vikings,2016_12_Detroit Lions_vs_Minnesota Vikings,1,9,-2.084919163855202,skill,Adrian Peterson,0
+2016,12,San Francisco 49ers,2016_12_Miami Dolphins_vs_San Francisco 49ers,1,7,-1.3107523768473222,defense,NaVorro Bowman,0
+2016,13,Arizona Cardinals,2016_13_Arizona Cardinals_vs_Washington Redskins,1,1,3.610967063307089,defense,Tyrann Mathieu,1
+2016,13,Carolina Panthers,2016_13_Seattle Seahawks_vs_Carolina Panthers,2,2,-28.270525981151742,defense|ol,Luke Kuechly|Ryan Kalil,1
+2016,13,Houston Texans,2016_13_Green Bay Packers_vs_Houston Texans,1,9,-4.018978908843556,defense,J.J. Watt,0
+2016,13,Minnesota Vikings,2016_13_Minnesota Vikings_vs_Dallas Cowboys,1,10,-2.9049095438985932,skill,Adrian Peterson,0
+2016,13,New England Patriots,2016_13_New England Patriots_vs_Los Angeles Rams,1,1,6.284859256640576,skill,Rob Gronkowski,1
+2016,13,San Francisco 49ers,2016_13_Chicago Bears_vs_San Francisco 49ers,1,8,-17.61328096346083,defense,NaVorro Bowman,0
+2016,14,Arizona Cardinals,2016_14_Miami Dolphins_vs_Arizona Cardinals,1,2,-4.027965233207733,defense,Tyrann Mathieu,1
+2016,14,Atlanta Falcons,2016_14_Los Angeles Rams_vs_Atlanta Falcons,1,1,27.028608529425956,skill,Julio Jones,1
+2016,14,Carolina Panthers,2016_14_Carolina Panthers_vs_San Diego Chargers,2,3,6.7811440455159575,defense|ol,Luke Kuechly|Ryan Kalil,1
+2016,14,Houston Texans,2016_14_Indianapolis Colts_vs_Houston Texans,1,10,7.936877844476421,defense,J.J. Watt,0
+2016,14,Minnesota Vikings,2016_14_Jacksonville Jaguars_vs_Minnesota Vikings,1,11,4.592263834327114,skill,Adrian Peterson,0
+2016,14,New England Patriots,2016_14_New England Patriots_vs_Baltimore Ravens,1,2,-0.5157302945897388,skill,Rob Gronkowski,1
+2016,14,San Francisco 49ers,2016_14_San Francisco 49ers_vs_New York Jets,1,9,-5.973704463653412,defense,NaVorro Bowman,0
+2016,15,Carolina Panthers,2016_15_Washington Redskins_vs_Carolina Panthers,2,4,10.940847851256322,defense|ol,Luke Kuechly|Ryan Kalil,1
+2016,15,Houston Texans,2016_15_Houston Texans_vs_Jacksonville Jaguars,1,11,-6.383405070720655,defense,J.J. Watt,0
+2016,15,New England Patriots,2016_15_Denver Broncos_vs_New England Patriots,1,3,12.899451288613545,skill,Rob Gronkowski,1
+2016,16,Arizona Cardinals,2016_16_Seattle Seahawks_vs_Arizona Cardinals,1,1,8.505764442980489,defense,Tyrann Mathieu,1
+2016,16,Carolina Panthers,2016_16_Carolina Panthers_vs_Atlanta Falcons,2,5,-19.347077586157102,defense|ol,Luke Kuechly|Ryan Kalil,0
+2016,16,Houston Texans,2016_16_Houston Texans_vs_Cincinnati Bengals,1,12,1.6186609623846835,defense,J.J. Watt,0
+2016,16,Minnesota Vikings,2016_16_Green Bay Packers_vs_Minnesota Vikings,1,1,-8.7230550970468,skill,Adrian Peterson,1
+2016,16,New England Patriots,2016_16_New England Patriots_vs_New York Jets,1,4,26.219428658148964,skill,Rob Gronkowski,1
+2016,16,San Francisco 49ers,2016_16_Los Angeles Rams_vs_San Francisco 49ers,1,11,5.691842069154145,defense,NaVorro Bowman,0
+2016,16,Tampa Bay Buccaneers,2016_16_New Orleans Saints_vs_Tampa Bay Buccaneers,1,1,-3.919018565915658,skill,Doug Martin,1
+2016,17,Arizona Cardinals,2016_17_Los Angeles Rams_vs_Arizona Cardinals,1,2,35.374154558244555,defense,Tyrann Mathieu,1
+2016,17,Houston Texans,2016_17_Tennessee Titans_vs_Houston Texans,1,13,-7.876454357702659,defense,J.J. Watt,0
+2016,17,Minnesota Vikings,2016_17_Minnesota Vikings_vs_Chicago Bears,1,2,21.387645651877794,skill,Adrian Peterson,1
+2016,17,New England Patriots,2016_17_Miami Dolphins_vs_New England Patriots,1,5,16.395465616635367,skill,Rob Gronkowski,0
+2016,17,Pittsburgh Steelers,2016_17_Pittsburgh Steelers_vs_Cleveland Browns,1,1,-9.811407836078397,skill,Antonio Brown,1
+2016,17,San Francisco 49ers,2016_17_San Francisco 49ers_vs_Seattle Seahawks,1,12,5.477024544725181,defense,NaVorro Bowman,0
+2017,1,Los Angeles Rams,2017_1_Los Angeles Rams_vs_Indianapolis Colts,1,1,37.569937536652596,defense,Aaron Donald,1
+2017,2,Arizona Cardinals,2017_2_Indianapolis Colts_vs_Arizona Cardinals,1,1,3.086171302968933,skill,David Johnson,1
+2017,2,Kansas City Chiefs,2017_2_Kansas City Chiefs_vs_Philadelphia Eagles,1,1,1.748284025076246,defense,Eric Berry,1
+2017,3,Arizona Cardinals,2017_3_Arizona Cardinals_vs_Dallas Cowboys,1,2,-13.311007853538221,skill,David Johnson,1
+2017,3,Atlanta Falcons,2017_3_Detroit Lions_vs_Atlanta Falcons,1,1,3.6914618811348374,defense,Vic Beasley,1
+2017,3,Kansas City Chiefs,2017_3_Los Angeles Chargers_vs_Kansas City Chiefs,1,2,11.940305857918975,defense,Eric Berry,1
+2017,4,Arizona Cardinals,2017_4_Arizona Cardinals_vs_San Francisco 49ers,1,3,-4.483362296727073,skill,David Johnson,1
+2017,4,Atlanta Falcons,2017_4_Atlanta Falcons_vs_Buffalo Bills,1,2,-11.313115158939718,defense,Vic Beasley,1
+2017,4,Dallas Cowboys,2017_4_Dallas Cowboys_vs_Los Angeles Rams,1,1,-10.756814260164273,defense,Sean Lee,1
+2017,4,Kansas City Chiefs,2017_4_Kansas City Chiefs_vs_Washington Redskins,1,3,2.4986605078416053,defense,Eric Berry,1
+2017,5,Arizona Cardinals,2017_5_Philadelphia Eagles_vs_Arizona Cardinals,1,4,-25.039328880101856,skill,David Johnson,1
+2017,5,Dallas Cowboys,2017_5_Dallas Cowboys_vs_Green Bay Packers,1,2,-5.172946538647539,defense,Sean Lee,1
+2017,5,Kansas City Chiefs,2017_5_Houston Texans_vs_Kansas City Chiefs,1,4,5.566682964972861,defense,Eric Berry,1
+2017,6,Arizona Cardinals,2017_6_Arizona Cardinals_vs_Tampa Bay Buccaneers,1,5,1.3127814634599329,skill,David Johnson,0
+2017,6,Kansas City Chiefs,2017_6_Kansas City Chiefs_vs_Pittsburgh Steelers,1,5,-10.585974540202606,defense,Eric Berry,0
+2017,7,Arizona Cardinals,2017_7_Los Angeles Rams_vs_Arizona Cardinals,1,6,-34.751139789034056,skill,David Johnson,0
+2017,7,Kansas City Chiefs,2017_7_Oakland Raiders_vs_Kansas City Chiefs,1,6,-4.051687511108648,defense,Eric Berry,0
+2017,8,Kansas City Chiefs,2017_8_Kansas City Chiefs_vs_Denver Broncos,1,7,4.869338537813783,defense,Eric Berry,0
+2017,9,Arizona Cardinals,2017_9_San Francisco 49ers_vs_Arizona Cardinals,1,7,7.137438828082876,skill,David Johnson,0
+2017,9,Kansas City Chiefs,2017_9_Dallas Cowboys_vs_Kansas City Chiefs,1,8,-10.955789108323843,defense,Eric Berry,0
+2017,10,Arizona Cardinals,2017_10_Arizona Cardinals_vs_Seattle Seahawks,1,8,-4.695221447544909,skill,David Johnson,0
+2017,10,Dallas Cowboys,2017_10_Atlanta Falcons_vs_Dallas Cowboys,2,1,-18.075305851229185,ol|skill,Ezekiel Elliott|Tyron Smith,1
+2017,11,Arizona Cardinals,2017_11_Houston Texans_vs_Arizona Cardinals,1,9,-8.600386543617196,skill,David Johnson,0
+2017,11,Dallas Cowboys,2017_11_Dallas Cowboys_vs_Philadelphia Eagles,3,1,-29.514546960519166,defense|ol|skill,Ezekiel Elliott|Sean Lee|Tyron Smith,1
+2017,11,Kansas City Chiefs,2017_11_New York Giants_vs_Kansas City Chiefs,1,9,-7.557826654432319,defense,Eric Berry,0
+2017,12,Arizona Cardinals,2017_12_Arizona Cardinals_vs_Jacksonville Jaguars,1,10,1.5364229292433993,skill,David Johnson,0
+2017,12,Dallas Cowboys,2017_12_Dallas Cowboys_vs_Los Angeles Chargers,2,2,-24.995735678119544,defense|skill,Ezekiel Elliott|Sean Lee,1
+2017,12,Kansas City Chiefs,2017_12_Kansas City Chiefs_vs_Buffalo Bills,1,10,-13.10249325314534,defense,Eric Berry,0
+2017,13,Arizona Cardinals,2017_13_Arizona Cardinals_vs_Los Angeles Rams,1,11,-16.378376554575024,skill,David Johnson,0
+2017,13,Dallas Cowboys,2017_13_Dallas Cowboys_vs_Washington Redskins,2,3,20.493754223273026,defense|skill,Ezekiel Elliott|Sean Lee,1
+2017,13,Denver Broncos,2017_13_Miami Dolphins_vs_Denver Broncos,1,1,-26.028758704321945,defense,Aqib Talib,1
+2017,13,Kansas City Chiefs,2017_13_New York Jets_vs_Kansas City Chiefs,1,11,-10.390694228531238,defense,Eric Berry,0
+2017,14,Arizona Cardinals,2017_14_Arizona Cardinals_vs_Tennessee Titans,1,12,2.8381544317771477,skill,David Johnson,0
+2017,14,Dallas Cowboys,2017_14_New York Giants_vs_Dallas Cowboys,1,5,18.193035574121513,skill,Ezekiel Elliott,0
+2017,14,Kansas City Chiefs,2017_14_Kansas City Chiefs_vs_Oakland Raiders,2,1,5.12791075063773,defense,Eric Berry|Marcus Peters,1
+2017,15,Arizona Cardinals,2017_15_Washington Redskins_vs_Arizona Cardinals,1,13,-3.540800561516071,skill,David Johnson,0
+2017,15,Dallas Cowboys,2017_15_Oakland Raiders_vs_Dallas Cowboys,1,6,2.676407379226921,skill,Ezekiel Elliott,0
+2017,15,Kansas City Chiefs,2017_15_Kansas City Chiefs_vs_Los Angeles Chargers,1,13,13.372894906239845,defense,Eric Berry,0
+2017,16,Arizona Cardinals,2017_16_Arizona Cardinals_vs_New York Giants,1,14,18.29034553315533,skill,David Johnson,0
+2017,16,Kansas City Chiefs,2017_16_Kansas City Chiefs_vs_Miami Dolphins,1,14,8.263214302005025,defense,Eric Berry,0
+2017,16,Pittsburgh Steelers,2017_16_Houston Texans_vs_Pittsburgh Steelers,1,1,23.518640674640473,skill,Antonio Brown,1
+2017,17,Arizona Cardinals,2017_17_Seattle Seahawks_vs_Arizona Cardinals,1,15,7.869659151348405,skill,David Johnson,0
+2017,17,Dallas Cowboys,2017_17_Philadelphia Eagles_vs_Dallas Cowboys,1,1,11.145973148765378,ol,Tyron Smith,1
+2017,17,Kansas City Chiefs,2017_17_Denver Broncos_vs_Kansas City Chiefs,3,1,0.415875696649755,defense|skill,Eric Berry|Marcus Peters|Travis Kelce,1
+2017,17,Los Angeles Rams,2017_17_Los Angeles Rams_vs_San Francisco 49ers,1,1,-30.19706409775423,defense,Aaron Donald,1
+2017,17,New York Giants,2017_17_New York Giants_vs_Washington Redskins,1,1,9.005314988818164,defense,Landon Collins,1
+2017,17,Pittsburgh Steelers,2017_17_Pittsburgh Steelers_vs_Cleveland Browns,1,2,-10.875299471867477,skill,Antonio Brown,1
+2018,2,Pittsburgh Steelers,2018_2_Pittsburgh Steelers_vs_Kansas City Chiefs,1,1,-7.0678183955686205,ol,David DeCastro,1
+2018,2,Seattle Seahawks,2018_2_Chicago Bears_vs_Seattle Seahawks,1,1,-8.712928820843281,defense,Bobby Wagner,1
+2018,3,Pittsburgh Steelers,2018_3_Tampa Bay Buccaneers_vs_Pittsburgh Steelers,1,2,2.014596059055648,ol,David DeCastro,1
+2018,7,New England Patriots,2018_7_Chicago Bears_vs_New England Patriots,1,1,3.5341394519616824,skill,Rob Gronkowski,1
+2018,8,Minnesota Vikings,2018_8_Minnesota Vikings_vs_New Orleans Saints,1,1,-11.533793694005736,defense,Xavier Rhodes,1
+2018,9,New England Patriots,2018_9_New England Patriots_vs_Green Bay Packers,1,1,6.169631123599056,skill,Rob Gronkowski,1
+2018,10,Detroit Lions,2018_10_Chicago Bears_vs_Detroit Lions,1,1,-9.25534514061168,defense,Darius Slay,1
+2018,10,New England Patriots,2018_10_Tennessee Titans_vs_New England Patriots,1,2,-28.127101776262588,skill,Rob Gronkowski,1
+2018,10,Philadelphia Eagles,2018_10_Philadelphia Eagles_vs_Dallas Cowboys,1,1,-12.041101555452741,ol,Lane Johnson,1
+2018,13,Jacksonville Jaguars,2018_13_Jacksonville Jaguars_vs_Indianapolis Colts,1,1,4.387075223347811,ol,Andrew Norwell,1
+2018,14,Jacksonville Jaguars,2018_14_Tennessee Titans_vs_Jacksonville Jaguars,1,2,-18.95504710181286,ol,Andrew Norwell,1
+2018,15,Jacksonville Jaguars,2018_15_Jacksonville Jaguars_vs_Washington Redskins,1,3,-5.597603477889679,ol,Andrew Norwell,1
+2018,16,Jacksonville Jaguars,2018_16_Miami Dolphins_vs_Jacksonville Jaguars,1,4,11.406741340413728,ol,Andrew Norwell,1
+2018,16,Los Angeles Rams,2018_16_Arizona Cardinals_vs_Los Angeles Rams,1,1,16.57257572320941,skill,Todd Gurley,1
+2018,17,Jacksonville Jaguars,2018_17_Houston Texans_vs_Jacksonville Jaguars,1,5,-13.45757600129632,ol,Andrew Norwell,0
+2018,17,Los Angeles Rams,2018_17_Los Angeles Rams_vs_San Francisco 49ers,1,2,6.225460345256042,skill,Todd Gurley,1
+2018,17,Minnesota Vikings,2018_17_Minnesota Vikings_vs_Chicago Bears,1,1,-17.020911899646727,defense,Xavier Rhodes,1
+2018,17,Pittsburgh Steelers,2018_17_Pittsburgh Steelers_vs_Cincinnati Bengals,1,1,-5.484312003293335,skill,Antonio Brown,1
+2019,1,Los Angeles Chargers,2019_1_Los Angeles Chargers_vs_Indianapolis Colts,1,1,2.2178301814994392,defense,Derwin James,1
+2019,2,Kansas City Chiefs,2019_2_Oakland Raiders_vs_Kansas City Chiefs,1,1,14.000701519833283,skill,Tyreek Hill,1
+2019,2,Los Angeles Chargers,2019_2_Detroit Lions_vs_Los Angeles Chargers,1,2,-3.7031842072525434,defense,Derwin James,1
+2019,3,Indianapolis Colts,2019_3_Indianapolis Colts_vs_Atlanta Falcons,1,1,0.8909959168589192,defense,Shaquille Leonard,1
+2019,3,Kansas City Chiefs,2019_3_Kansas City Chiefs_vs_Baltimore Ravens,1,2,1.792957351116729,skill,Tyreek Hill,1
+2019,3,Los Angeles Chargers,2019_3_Los Angeles Chargers_vs_Houston Texans,1,3,-11.53016536507981,defense,Derwin James,1
+2019,4,Indianapolis Colts,2019_4_Indianapolis Colts_vs_Oakland Raiders,1,2,-13.434332620696605,defense,Shaquille Leonard,1
+2019,4,Kansas City Chiefs,2019_4_Detroit Lions_vs_Kansas City Chiefs,1,3,2.1012632097547614,skill,Tyreek Hill,1
+2019,4,Los Angeles Chargers,2019_4_Miami Dolphins_vs_Los Angeles Chargers,1,4,15.973796087431001,defense,Derwin James,1
+2019,5,Los Angeles Chargers,2019_5_Los Angeles Chargers_vs_Denver Broncos,1,5,-13.481636066555556,defense,Derwin James,0
+2019,6,Los Angeles Chargers,2019_6_Los Angeles Chargers_vs_Pittsburgh Steelers,1,6,-9.503392834203577,defense,Derwin James,0
+2019,6,Los Angeles Rams,2019_6_Los Angeles Rams_vs_San Francisco 49ers,1,1,-18.435072743079246,skill,Todd Gurley,1
+2019,7,Los Angeles Chargers,2019_7_Tennessee Titans_vs_Los Angeles Chargers,1,7,-2.69391150980191,defense,Derwin James,0
+2019,8,Los Angeles Chargers,2019_8_Chicago Bears_vs_Los Angeles Chargers,1,8,3.2066047762161816,defense,Derwin James,0
+2019,9,Houston Texans,2019_9_Jacksonville Jaguars_vs_Houston Texans,1,1,21.422972119206243,defense,J.J. Watt,1
+2019,9,Los Angeles Chargers,2019_9_Los Angeles Chargers_vs_Green Bay Packers,1,9,12.513487170567041,defense,Derwin James,0
+2019,10,Los Angeles Chargers,2019_10_Oakland Raiders_vs_Los Angeles Chargers,1,10,-4.447739982304283,defense,Derwin James,0
+2019,11,Houston Texans,2019_11_Baltimore Ravens_vs_Houston Texans,1,2,-29.037896602406654,defense,J.J. Watt,1
+2019,11,Los Angeles Chargers,2019_11_Los Angeles Chargers_vs_Kansas City Chiefs,1,11,-4.97175697309266,defense,Derwin James,0
+2019,12,Houston Texans,2019_12_Houston Texans_vs_Indianapolis Colts,1,3,1.126873512197135,defense,J.J. Watt,1
+2019,13,Houston Texans,2019_13_Houston Texans_vs_New England Patriots,1,4,9.255299849049852,defense,J.J. Watt,1
+2019,14,Houston Texans,2019_14_Houston Texans_vs_Denver Broncos,1,5,-19.435049934599682,defense,J.J. Watt,0
+2019,15,Houston Texans,2019_15_Tennessee Titans_vs_Houston Texans,1,6,5.936820114920956,defense,J.J. Watt,0
+2019,15,Los Angeles Chargers,2019_15_Los Angeles Chargers_vs_Minnesota Vikings,1,1,-29.94556413567817,defense,Desmond King,1
+2019,16,Houston Texans,2019_16_Tampa Bay Buccaneers_vs_Houston Texans,1,7,3.6829723827248744,defense,J.J. Watt,0
+2019,17,Houston Texans,2019_17_Houston Texans_vs_Tennessee Titans,2,1,-23.572062044103788,defense|skill,DeAndre Hopkins|J.J. Watt,1
+2020,2,New Orleans Saints,2020_2_Las Vegas Raiders_vs_New Orleans Saints,1,1,-11.287744237701144,skill,Michael Thomas,1
+2020,2,San Francisco 49ers,2020_2_New York Jets_vs_San Francisco 49ers,1,1,16.12237009383478,skill,George Kittle,1
+2020,3,Carolina Panthers,2020_3_Los Angeles Chargers_vs_Carolina Panthers,1,1,10.090690456180226,skill,Christian McCaffrey,1
+2020,3,New Orleans Saints,2020_3_New Orleans Saints_vs_Green Bay Packers,1,2,-10.457300122799488,skill,Michael Thomas,1
+2020,3,San Francisco 49ers,2020_3_New York Giants_vs_San Francisco 49ers,1,2,23.366157137316613,skill,George Kittle,1
+2020,4,Baltimore Ravens,2020_4_Washington Football Team_vs_Baltimore Ravens,1,1,11.111584975350352,ol,Ronnie Stanley,1
+2020,4,Carolina Panthers,2020_4_Carolina Panthers_vs_Arizona Cardinals,1,2,8.134990520952442,skill,Christian McCaffrey,1
+2020,4,New Orleans Saints,2020_4_Detroit Lions_vs_New Orleans Saints,1,3,2.769371370876197,skill,Michael Thomas,1
+2020,4,Seattle Seahawks,2020_4_Miami Dolphins_vs_Seattle Seahawks,1,1,4.485999496207751,defense,Jamal Adams,1
+2020,5,Buffalo Bills,2020_5_Tennessee Titans_vs_Buffalo Bills,1,1,-22.651667905933863,defense,Tre'Davious White,1
+2020,5,Carolina Panthers,2020_5_Atlanta Falcons_vs_Carolina Panthers,1,3,10.29862421697977,skill,Christian McCaffrey,1
+2020,5,New Orleans Saints,2020_5_New Orleans Saints_vs_Los Angeles Chargers,1,4,-2.631141473364096,skill,Michael Thomas,1
+2020,5,Seattle Seahawks,2020_5_Seattle Seahawks_vs_Minnesota Vikings,1,2,-2.814494397701828,defense,Jamal Adams,1
+2020,6,Arizona Cardinals,2020_6_Dallas Cowboys_vs_Arizona Cardinals,1,1,32.473743327034384,defense,Chandler Jones,1
+2020,6,Carolina Panthers,2020_6_Carolina Panthers_vs_Chicago Bears,1,4,-6.838852142041196,skill,Christian McCaffrey,1
+2020,7,Dallas Cowboys,2020_7_Washington Football Team_vs_Dallas Cowboys,1,1,-21.328350160259706,ol,Zack Martin,1
+2020,8,Carolina Panthers,2020_8_Carolina Panthers_vs_Atlanta Falcons,1,6,-8.931096024689005,skill,Christian McCaffrey,0
+2020,8,New England Patriots,2020_8_Buffalo Bills_vs_New England Patriots,1,1,-2.4627463513977,defense,Stephon Gilmore,1
+2020,8,New Orleans Saints,2020_8_Chicago Bears_vs_New Orleans Saints,1,6,2.683052250912742,skill,Michael Thomas,0
+2020,8,Seattle Seahawks,2020_8_Seattle Seahawks_vs_San Francisco 49ers,1,4,7.7871336372538185,defense,Jamal Adams,1
+2020,9,Arizona Cardinals,2020_9_Arizona Cardinals_vs_Miami Dolphins,1,3,-6.213267827928466,defense,Chandler Jones,1
+2020,9,Baltimore Ravens,2020_9_Indianapolis Colts_vs_Baltimore Ravens,2,1,12.712338242364893,defense|ol,Marlon Humphrey|Ronnie Stanley,1
+2020,9,New England Patriots,2020_9_New York Jets_vs_New England Patriots,1,2,-2.0227201251778935,defense,Stephon Gilmore,1
+2020,9,San Francisco 49ers,2020_9_San Francisco 49ers_vs_Green Bay Packers,1,1,-19.565365854902264,skill,George Kittle,1
+2020,10,Arizona Cardinals,2020_10_Arizona Cardinals_vs_Buffalo Bills,1,4,1.4675292339174757,defense,Chandler Jones,1
+2020,10,Carolina Panthers,2020_10_Carolina Panthers_vs_Tampa Bay Buccaneers,1,1,-21.797813561290504,skill,Christian McCaffrey,1
+2020,10,San Francisco 49ers,2020_10_New Orleans Saints_vs_San Francisco 49ers,1,2,-8.953444825757133,skill,George Kittle,1
+2020,11,Arizona Cardinals,2020_11_Seattle Seahawks_vs_Arizona Cardinals,1,5,-2.0156781753887394,defense,Chandler Jones,0
+2020,11,Baltimore Ravens,2020_11_Baltimore Ravens_vs_Tennessee Titans,1,3,-11.499192813937753,ol,Ronnie Stanley,1
+2020,11,Carolina Panthers,2020_11_Carolina Panthers_vs_Detroit Lions,1,2,18.20363444770697,skill,Christian McCaffrey,1
+2020,12,Arizona Cardinals,2020_12_New England Patriots_vs_Arizona Cardinals,1,6,1.7984771937072495,defense,Chandler Jones,0
+2020,12,Baltimore Ravens,2020_12_Pittsburgh Steelers_vs_Baltimore Ravens,1,4,-3.424595447328575,ol,Ronnie Stanley,1
+2020,12,Carolina Panthers,2020_12_Minnesota Vikings_vs_Carolina Panthers,1,3,4.817141297071475,skill,Christian McCaffrey,1
+2020,12,San Francisco 49ers,2020_12_Los Angeles Rams_vs_San Francisco 49ers,1,3,6.772409617795038,skill,George Kittle,1
+2020,13,Arizona Cardinals,2020_13_Arizona Cardinals_vs_Los Angeles Rams,1,7,-8.719250537595716,defense,Chandler Jones,0
+2020,13,Minnesota Vikings,2020_13_Minnesota Vikings_vs_Jacksonville Jaguars,1,1,-5.430718694440785,defense,Eric Kendricks,1
+2020,13,San Francisco 49ers,2020_13_San Francisco 49ers_vs_Buffalo Bills,1,4,-10.518140082869758,skill,George Kittle,1
+2020,14,Arizona Cardinals,2020_14_New York Giants_vs_Arizona Cardinals,1,8,19.21060187776672,defense,Chandler Jones,0
+2020,14,Baltimore Ravens,2020_14_Cleveland Browns_vs_Baltimore Ravens,1,6,1.9187124077582478,ol,Ronnie Stanley,0
+2020,14,Carolina Panthers,2020_14_Carolina Panthers_vs_Denver Broncos,1,4,-6.997115707038392,skill,Christian McCaffrey,1
+2020,14,Dallas Cowboys,2020_14_Cincinnati Bengals_vs_Dallas Cowboys,1,2,23.128715855412448,ol,Zack Martin,1
+2020,14,Minnesota Vikings,2020_14_Tampa Bay Buccaneers_vs_Minnesota Vikings,1,2,-9.855404300707978,defense,Eric Kendricks,1
+2020,14,San Francisco 49ers,2020_14_San Francisco 49ers_vs_Washington Football Team,1,5,-11.582992843523698,skill,George Kittle,0
+2020,15,Arizona Cardinals,2020_15_Arizona Cardinals_vs_Philadelphia Eagles,1,9,4.770026284247242,defense,Chandler Jones,0
+2020,15,Baltimore Ravens,2020_15_Baltimore Ravens_vs_Jacksonville Jaguars,2,1,13.542280064010548,defense|ol,Marcus Peters|Ronnie Stanley,1
+2020,15,Carolina Panthers,2020_15_Green Bay Packers_vs_Carolina Panthers,1,5,0.4801211633475031,skill,Christian McCaffrey,0
+2020,15,Minnesota Vikings,2020_15_Minnesota Vikings_vs_Chicago Bears,1,3,-9.080747449953241,defense,Eric Kendricks,1
+2020,15,New Orleans Saints,2020_15_New Orleans Saints_vs_Kansas City Chiefs,1,1,-3.7977722563104543,skill,Michael Thomas,1
+2020,16,Arizona Cardinals,2020_16_Arizona Cardinals_vs_San Francisco 49ers,1,10,-9.52688224922914,defense,Chandler Jones,0
+2020,16,Baltimore Ravens,2020_16_Baltimore Ravens_vs_New York Giants,2,2,2.6092725910041743,defense|ol,Marcus Peters|Ronnie Stanley,1
+2020,16,Carolina Panthers,2020_16_Washington Football Team_vs_Carolina Panthers,1,6,12.236243580364935,skill,Christian McCaffrey,0
+2020,16,Dallas Cowboys,2020_16_Dallas Cowboys_vs_Philadelphia Eagles,1,4,18.286696433834496,ol,Zack Martin,1
+2020,16,New England Patriots,2020_16_New England Patriots_vs_Buffalo Bills,1,1,-30.658977647916455,defense,Stephon Gilmore,1
+2020,17,Arizona Cardinals,2020_17_Los Angeles Rams_vs_Arizona Cardinals,1,11,-5.223683534581268,defense,Chandler Jones,0
+2020,17,Baltimore Ravens,2020_17_Cincinnati Bengals_vs_Baltimore Ravens,1,9,27.849565406593847,ol,Ronnie Stanley,0
+2020,17,Buffalo Bills,2020_17_Buffalo Bills_vs_Miami Dolphins,1,1,24.179946511531618,defense,Tre'Davious White,1
+2020,17,Dallas Cowboys,2020_17_New York Giants_vs_Dallas Cowboys,1,5,-5.45735766241195,ol,Zack Martin,0
+2020,17,Kansas City Chiefs,2020_17_Kansas City Chiefs_vs_Los Angeles Chargers,1,1,-28.016322153146668,defense,Tyrann Mathieu,1
+2020,17,Minnesota Vikings,2020_17_Detroit Lions_vs_Minnesota Vikings,1,5,-0.7368231257495701,defense,Eric Kendricks,0
+2020,17,New England Patriots,2020_17_New England Patriots_vs_New York Jets,1,2,4.692893883995913,defense,Stephon Gilmore,1
+2020,17,Pittsburgh Steelers,2020_17_Cleveland Browns_vs_Pittsburgh Steelers,2,1,-3.6620086109820114,defense,Cameron Heyward|T.J. Watt,1
+2021,1,Green Bay Packers,2021_1_New Orleans Saints_vs_Green Bay Packers,1,1,-34.348718800419576,ol,David Bakhtiari,1
+2021,1,Kansas City Chiefs,2021_1_Kansas City Chiefs_vs_Cleveland Browns,1,1,-2.465144510254131,defense,Tyrann Mathieu,1
+2021,2,Green Bay Packers,2021_2_Green Bay Packers_vs_Detroit Lions,1,2,10.02505127164639,ol,David Bakhtiari,1
+2021,3,Green Bay Packers,2021_3_San Francisco 49ers_vs_Green Bay Packers,1,3,2.7588307640039966,ol,David Bakhtiari,1
+2021,3,Pittsburgh Steelers,2021_3_Pittsburgh Steelers_vs_Cincinnati Bengals,1,1,-20.682425755197592,defense,T.J. Watt,1
+2021,4,Green Bay Packers,2021_4_Green Bay Packers_vs_Pittsburgh Steelers,1,4,5.874787202146063,ol,David Bakhtiari,1
+2021,4,Indianapolis Colts,2021_4_Miami Dolphins_vs_Indianapolis Colts,1,1,10.688638087323307,ol,Quenton Nelson,1
+2021,5,Green Bay Packers,2021_5_Cincinnati Bengals_vs_Green Bay Packers,1,5,-0.035474329354110434,ol,David Bakhtiari,0
+2021,5,Indianapolis Colts,2021_5_Baltimore Ravens_vs_Indianapolis Colts,1,2,-0.5814340804112819,ol,Quenton Nelson,1
+2021,5,Washington Football Team,2021_5_Washington Football Team_vs_New Orleans Saints,1,1,-8.56986850899868,ol,Brandon Scherff,1
+2021,6,Cleveland Browns,2021_6_Cleveland Browns_vs_Arizona Cardinals,1,1,-24.13334384252712,ol,Jack Conklin,1
+2021,6,Green Bay Packers,2021_6_Chicago Bears_vs_Green Bay Packers,1,6,9.078541155244302,ol,David Bakhtiari,0
+2021,6,Indianapolis Colts,2021_6_Indianapolis Colts_vs_Houston Texans,1,3,22.548257853570576,ol,Quenton Nelson,1
+2021,6,Miami Dolphins,2021_6_Jacksonville Jaguars_vs_Miami Dolphins,1,1,-6.808003616450415,defense,Xavien Howard,1
+2021,6,Washington Football Team,2021_6_Washington Football Team_vs_Kansas City Chiefs,1,2,-15.885479438288112,ol,Brandon Scherff,1
+2021,7,Cleveland Browns,2021_7_Cleveland Browns_vs_Denver Broncos,1,2,-0.9872575662150118,ol,Jack Conklin,1
+2021,8,Green Bay Packers,2021_8_Arizona Cardinals_vs_Green Bay Packers,2,1,4.29906906840446,ol|skill,Davante Adams|David Bakhtiari,1
+2021,8,Washington Football Team,2021_8_Denver Broncos_vs_Washington Football Team,1,4,-5.170892075096026,ol,Brandon Scherff,1
+2021,9,Cleveland Browns,2021_9_Cincinnati Bengals_vs_Cleveland Browns,1,1,26.461883008349425,ol,Jack Conklin,1
+2021,9,Green Bay Packers,2021_9_Kansas City Chiefs_vs_Green Bay Packers,1,9,-4.553916477543234,ol,David Bakhtiari,0
+2021,9,Tennessee Titans,2021_9_Los Angeles Rams_vs_Tennessee Titans,1,1,15.574312437576236,skill,Derrick Henry,1
+2021,10,Cleveland Browns,2021_10_New England Patriots_vs_Cleveland Browns,1,2,-34.69938779774864,ol,Jack Conklin,1
+2021,10,Green Bay Packers,2021_10_Green Bay Packers_vs_Seattle Seahawks,1,10,12.69779284994701,ol,David Bakhtiari,0
+2021,10,Tennessee Titans,2021_10_Tennessee Titans_vs_New Orleans Saints,1,2,1.4188138550654275,skill,Derrick Henry,1
+2021,11,Cleveland Browns,2021_11_Cleveland Browns_vs_Detroit Lions,1,3,-5.005435649467781,ol,Jack Conklin,1
+2021,11,Green Bay Packers,2021_11_Minnesota Vikings_vs_Green Bay Packers,1,11,-4.465744268782864,ol,David Bakhtiari,0
+2021,11,Pittsburgh Steelers,2021_11_Los Angeles Chargers_vs_Pittsburgh Steelers,2,1,-3.3295336289891746,defense,Minkah Fitzpatrick|T.J. Watt,1
+2021,11,Tennessee Titans,2021_11_Tennessee Titans_vs_Houston Texans,1,3,-18.548987843365595,skill,Derrick Henry,1
+2021,12,Green Bay Packers,2021_12_Green Bay Packers_vs_Los Angeles Rams,1,12,4.56867008970049,ol,David Bakhtiari,0
+2021,12,Tennessee Titans,2021_12_New England Patriots_vs_Tennessee Titans,1,4,-20.46671133922947,skill,Derrick Henry,1
+2021,13,San Francisco 49ers,2021_13_Seattle Seahawks_vs_San Francisco 49ers,1,1,-5.366312381351927,defense,Fred Warner,1
+2021,14,Cleveland Browns,2021_14_Cleveland Browns_vs_Baltimore Ravens,1,1,3.3769427139094117,ol,Jack Conklin,1
+2021,14,Green Bay Packers,2021_14_Green Bay Packers_vs_Chicago Bears,1,13,6.8545131310947,ol,David Bakhtiari,0
+2021,14,Los Angeles Rams,2021_14_Arizona Cardinals_vs_Los Angeles Rams,1,1,9.544810833006341,defense,Jalen Ramsey,1
+2021,14,Tennessee Titans,2021_14_Tennessee Titans_vs_Jacksonville Jaguars,1,5,9.00780123255503,skill,Derrick Henry,0
+2021,15,Cleveland Browns,2021_15_Cleveland Browns_vs_Las Vegas Raiders,1,2,-6.165270370297549,ol,Jack Conklin,1
+2021,15,Green Bay Packers,2021_15_Baltimore Ravens_vs_Green Bay Packers,1,14,2.0043792963414395,ol,David Bakhtiari,0
+2021,15,Tennessee Titans,2021_15_Pittsburgh Steelers_vs_Tennessee Titans,1,6,-6.105463605465684,skill,Derrick Henry,0
+2021,15,Washington Football Team,2021_15_Philadelphia Eagles_vs_Washington Football Team,1,1,-6.610455927024032,ol,Brandon Scherff,1
+2021,16,Indianapolis Colts,2021_16_Arizona Cardinals_vs_Indianapolis Colts,2,1,6.808562593997886,defense|ol,Quenton Nelson|Shaquille Leonard,1
+2021,16,Kansas City Chiefs,2021_16_Kansas City Chiefs_vs_Pittsburgh Steelers,1,1,18.83226826051452,skill,Travis Kelce,1
+2021,16,Los Angeles Chargers,2021_16_Houston Texans_vs_Los Angeles Chargers,1,1,-14.589347987368338,ol,Corey Linsley,1
+2021,16,Tennessee Titans,2021_16_Tennessee Titans_vs_San Francisco 49ers,1,7,0.22228511546887608,skill,Derrick Henry,0
+2021,16,Washington Football Team,2021_16_Dallas Cowboys_vs_Washington Football Team,1,2,-36.38003348580319,ol,Brandon Scherff,1
+2021,17,Cleveland Browns,2021_17_Pittsburgh Steelers_vs_Cleveland Browns,1,4,-9.4638283580828,ol,Jack Conklin,1
+2021,17,Green Bay Packers,2021_17_Green Bay Packers_vs_Minnesota Vikings,1,16,20.68182425629646,ol,David Bakhtiari,0
+2021,17,Tennessee Titans,2021_17_Tennessee Titans_vs_Miami Dolphins,1,8,26.75904846606368,skill,Derrick Henry,0
+2021,18,Cleveland Browns,2021_18_Cleveland Browns_vs_Cincinnati Bengals,1,5,3.6775732776014047,ol,Jack Conklin,0
+2021,18,Seattle Seahawks,2021_18_Arizona Cardinals_vs_Seattle Seahawks,1,1,10.79252706490729,defense,Bobby Wagner,1
+2021,18,Tennessee Titans,2021_18_Houston Texans_vs_Tennessee Titans,1,9,-1.8405064707808103,skill,Derrick Henry,0
+2022,1,Indianapolis Colts,2022_1_Houston Texans_vs_Indianapolis Colts,1,1,-2.400900275535441,defense,Shaquille Leonard,1
+2022,2,Indianapolis Colts,2022_2_Jacksonville Jaguars_vs_Indianapolis Colts,1,2,-28.314037365760285,defense,Shaquille Leonard,1
+2022,2,Pittsburgh Steelers,2022_2_Pittsburgh Steelers_vs_New England Patriots,1,1,-4.566330154026855,defense,T.J. Watt,1
+2022,3,Buffalo Bills,2022_3_Miami Dolphins_vs_Buffalo Bills,1,1,-4.051551911387187,defense,Jordan Poyer,1
+2022,3,Indianapolis Colts,2022_3_Indianapolis Colts_vs_Kansas City Chiefs,1,3,4.690155146560801,defense,Shaquille Leonard,1
+2022,3,Pittsburgh Steelers,2022_3_Cleveland Browns_vs_Pittsburgh Steelers,1,2,-10.332787044409507,defense,T.J. Watt,1
+2022,4,Cleveland Browns,2022_4_Atlanta Falcons_vs_Cleveland Browns,1,1,-2.757555014929494,defense,Myles Garrett,1
+2022,4,Pittsburgh Steelers,2022_4_Pittsburgh Steelers_vs_New York Jets,1,3,-11.015635577217491,defense,T.J. Watt,1
+2022,4,San Francisco 49ers,2022_4_San Francisco 49ers_vs_Los Angeles Rams,1,1,14.096880621693135,ol,Trent Williams,1
+2022,5,Indianapolis Colts,2022_5_Denver Broncos_vs_Indianapolis Colts,2,1,3.0901211020094252,defense|skill,Jonathan Taylor|Shaquille Leonard,1
+2022,5,San Francisco 49ers,2022_5_Carolina Panthers_vs_San Francisco 49ers,1,2,19.366980150463668,ol,Trent Williams,1
+2022,6,Indianapolis Colts,2022_6_Indianapolis Colts_vs_Jacksonville Jaguars,2,2,0.4607710319830858,defense|skill,Jonathan Taylor|Shaquille Leonard,1
+2022,6,Pittsburgh Steelers,2022_6_Pittsburgh Steelers_vs_Tampa Bay Buccaneers,1,5,4.669342573341655,defense,T.J. Watt,0
+2022,6,San Francisco 49ers,2022_6_Atlanta Falcons_vs_San Francisco 49ers,1,3,-16.11664653997397,ol,Trent Williams,1
+2022,7,Indianapolis Colts,2022_7_Tennessee Titans_vs_Indianapolis Colts,1,3,-6.100475791029503,defense,Shaquille Leonard,1
+2022,7,Pittsburgh Steelers,2022_7_Miami Dolphins_vs_Pittsburgh Steelers,1,6,-3.727321873518822,defense,T.J. Watt,0
+2022,8,Pittsburgh Steelers,2022_8_Philadelphia Eagles_vs_Pittsburgh Steelers,1,7,-16.78024109015375,defense,T.J. Watt,0
+2022,8,San Francisco 49ers,2022_8_Los Angeles Rams_vs_San Francisco 49ers,1,1,19.89265838283911,skill,Deebo Samuel,1
+2022,9,Baltimore Ravens,2022_9_New Orleans Saints_vs_Baltimore Ravens,1,1,15.589082731517365,skill,Mark Andrews,1
+2022,9,Buffalo Bills,2022_9_New York Jets_vs_Buffalo Bills,1,1,-9.633725074415732,defense,Jordan Poyer,1
+2022,9,Green Bay Packers,2022_9_Detroit Lions_vs_Green Bay Packers,1,1,-9.905771968632589,defense,De'Vondre Campbell,1
+2022,9,Indianapolis Colts,2022_9_New England Patriots_vs_Indianapolis Colts,1,1,-20.035516881206558,skill,Jonathan Taylor,1
+2022,10,Buffalo Bills,2022_10_Buffalo Bills_vs_Minnesota Vikings,1,2,-9.04210281426208,defense,Jordan Poyer,1
+2022,10,Green Bay Packers,2022_10_Green Bay Packers_vs_Dallas Cowboys,1,2,2.568835228042235,defense,De'Vondre Campbell,1
+2022,10,Indianapolis Colts,2022_10_Las Vegas Raiders_vs_Indianapolis Colts,1,1,5.482933597571264,defense,Shaquille Leonard,1
+2022,11,Green Bay Packers,2022_11_Green Bay Packers_vs_Tennessee Titans,1,3,-11.203624267169324,defense,De'Vondre Campbell,1
+2022,11,Indianapolis Colts,2022_11_Indianapolis Colts_vs_Philadelphia Eagles,1,2,-1.2746686825186133,defense,Shaquille Leonard,1
+2022,11,Los Angeles Rams,2022_11_New Orleans Saints_vs_Los Angeles Rams,1,1,-5.141451935634613,skill,Cooper Kupp,1
+2022,12,Green Bay Packers,2022_12_Philadelphia Eagles_vs_Green Bay Packers,1,4,-3.277075629337496,defense,De'Vondre Campbell,1
+2022,12,Indianapolis Colts,2022_12_Indianapolis Colts_vs_Pittsburgh Steelers,1,3,-10.621912475933076,defense,Shaquille Leonard,1
+2022,12,Los Angeles Rams,2022_12_Kansas City Chiefs_vs_Los Angeles Rams,1,2,-8.509198921539827,skill,Cooper Kupp,1
+2022,13,Indianapolis Colts,2022_13_Dallas Cowboys_vs_Indianapolis Colts,1,4,-28.655919925236795,defense,Shaquille Leonard,1
+2022,13,Los Angeles Rams,2022_13_Los Angeles Rams_vs_Seattle Seahawks,2,1,-5.1543154921360195,defense|skill,Aaron Donald|Cooper Kupp,1
+2022,13,Tampa Bay Buccaneers,2022_13_Tampa Bay Buccaneers_vs_New Orleans Saints,1,1,-3.6065046298088053,ol,Tristan Wirfs,1
+2022,14,Los Angeles Rams,2022_14_Los Angeles Rams_vs_Las Vegas Raiders,2,2,-2.07391193759965,defense|skill,Aaron Donald|Cooper Kupp,1
+2022,14,Tampa Bay Buccaneers,2022_14_San Francisco 49ers_vs_Tampa Bay Buccaneers,1,2,-25.12060251332202,ol,Tristan Wirfs,1
+2022,15,Indianapolis Colts,2022_15_Minnesota Vikings_vs_Indianapolis Colts,1,5,0.8938937642774358,defense,Shaquille Leonard,0
+2022,15,Los Angeles Rams,2022_15_Green Bay Packers_vs_Los Angeles Rams,2,3,-8.829135974279652,defense|skill,Aaron Donald|Cooper Kupp,1
+2022,15,San Francisco 49ers,2022_15_Seattle Seahawks_vs_San Francisco 49ers,1,1,7.151026027598291,skill,Deebo Samuel,1
+2022,15,Tampa Bay Buccaneers,2022_15_Tampa Bay Buccaneers_vs_Cincinnati Bengals,1,3,-13.153128571425096,ol,Tristan Wirfs,1
+2022,16,Indianapolis Colts,2022_16_Indianapolis Colts_vs_Los Angeles Chargers,2,1,-18.714346410755788,defense|skill,Jonathan Taylor|Shaquille Leonard,1
+2022,16,Los Angeles Rams,2022_16_Los Angeles Rams_vs_Denver Broncos,2,4,32.318045293215405,defense|skill,Aaron Donald|Cooper Kupp,1
+2022,16,San Francisco 49ers,2022_16_San Francisco 49ers_vs_Washington Commanders,1,2,10.0647571761141,skill,Deebo Samuel,1
+2022,17,Indianapolis Colts,2022_17_New York Giants_vs_Indianapolis Colts,2,2,-27.34247779343159,defense|skill,Jonathan Taylor|Shaquille Leonard,1
+2022,17,Los Angeles Rams,2022_17_Los Angeles Chargers_vs_Los Angeles Rams,2,5,-18.886574475529443,defense|skill,Aaron Donald|Cooper Kupp,0
+2022,17,San Francisco 49ers,2022_17_Las Vegas Raiders_vs_San Francisco 49ers,1,3,-0.4976082553175094,skill,Deebo Samuel,1
+2022,18,Baltimore Ravens,2022_18_Cincinnati Bengals_vs_Baltimore Ravens,1,1,-7.970153526604863,skill,Mark Andrews,1
+2022,18,Indianapolis Colts,2022_18_Indianapolis Colts_vs_Houston Texans,2,3,-6.999322122338826,defense|skill,Jonathan Taylor|Shaquille Leonard,1
+2022,18,Los Angeles Rams,2022_18_Seattle Seahawks_vs_Los Angeles Rams,2,6,0.27443495320386324,defense|skill,Aaron Donald|Cooper Kupp,0
+2022,18,Tampa Bay Buccaneers,2022_18_Atlanta Falcons_vs_Tampa Bay Buccaneers,1,1,-15.377817861596323,ol,Tristan Wirfs,1
+2023,1,Kansas City Chiefs,2023_1_Kansas City Chiefs_vs_Detroit Lions,2,1,-11.929730028115154,defense|skill,Chris Jones|Travis Kelce,1
+2023,3,Dallas Cowboys,2023_3_Arizona Cardinals_vs_Dallas Cowboys,1,1,-15.865360100319666,ol,Zack Martin,1
+2023,6,Buffalo Bills,2023_6_Buffalo Bills_vs_New York Giants,1,1,-5.593088038970064,defense,Matt Milano,1
+2023,6,Cleveland Browns,2023_6_Cleveland Browns_vs_San Francisco 49ers,1,1,5.402774941378802,ol,Joel Bitonio,1
+2023,6,Minnesota Vikings,2023_6_Chicago Bears_vs_Minnesota Vikings,1,1,4.867386258645638,skill,Justin Jefferson,1
+2023,6,New York Jets,2023_6_New York Jets_vs_Philadelphia Eagles,1,1,10.452244556430315,defense,Sauce Gardner,1
+2023,7,Buffalo Bills,2023_7_New England Patriots_vs_Buffalo Bills,1,2,-8.354582645144319,defense,Matt Milano,1
+2023,8,Buffalo Bills,2023_8_Buffalo Bills_vs_Tampa Bay Buccaneers,1,3,-0.6439970913559048,defense,Matt Milano,1
+2023,8,Minnesota Vikings,2023_8_Green Bay Packers_vs_Minnesota Vikings,1,3,16.38642420489654,skill,Justin Jefferson,1
+2023,8,San Francisco 49ers,2023_8_San Francisco 49ers_vs_Cincinnati Bengals,1,2,-19.25347401552671,ol,Trent Williams,1
+2023,9,Buffalo Bills,2023_9_Cincinnati Bengals_vs_Buffalo Bills,1,4,-6.258782878567217,defense,Matt Milano,1
+2023,9,Minnesota Vikings,2023_9_Atlanta Falcons_vs_Minnesota Vikings,1,4,2.2526407033269695,skill,Justin Jefferson,1
+2023,9,Pittsburgh Steelers,2023_9_Pittsburgh Steelers_vs_Tennessee Titans,1,1,1.9413751302112998,defense,Minkah Fitzpatrick,1
+2023,10,Buffalo Bills,2023_10_Buffalo Bills_vs_Denver Broncos,1,5,-11.547951814403332,defense,Matt Milano,0
+2023,10,Minnesota Vikings,2023_10_Minnesota Vikings_vs_New Orleans Saints,1,5,5.6517130163770615,skill,Justin Jefferson,0
+2023,10,Pittsburgh Steelers,2023_10_Pittsburgh Steelers_vs_Green Bay Packers,1,2,2.505491808541874,defense,Minkah Fitzpatrick,1
+2023,11,Buffalo Bills,2023_11_Buffalo Bills_vs_New York Jets,1,6,16.770653353459302,defense,Matt Milano,0
+2023,11,Minnesota Vikings,2023_11_Denver Broncos_vs_Minnesota Vikings,1,6,-2.7522962310846193,skill,Justin Jefferson,0
+2023,11,Pittsburgh Steelers,2023_11_Cleveland Browns_vs_Pittsburgh Steelers,1,3,-0.046159684894028,defense,Minkah Fitzpatrick,1
+2023,12,Minnesota Vikings,2023_12_Minnesota Vikings_vs_Chicago Bears,1,7,-9.154961682412285,skill,Justin Jefferson,0
+2023,12,Pittsburgh Steelers,2023_12_Cincinnati Bengals_vs_Pittsburgh Steelers,1,4,10.49776717458867,defense,Minkah Fitzpatrick,1
+2023,12,San Francisco 49ers,2023_12_Seattle Seahawks_vs_San Francisco 49ers,1,1,15.506115868169008,defense,Talanoa Hufanga,1
+2023,13,San Francisco 49ers,2023_13_Philadelphia Eagles_vs_San Francisco 49ers,1,2,24.5596699492316,defense,Talanoa Hufanga,1
+2023,14,Buffalo Bills,2023_14_Kansas City Chiefs_vs_Buffalo Bills,1,8,5.62303168801991,defense,Matt Milano,0
+2023,14,San Francisco 49ers,2023_14_San Francisco 49ers_vs_Seattle Seahawks,1,3,3.2247379999027093,defense,Talanoa Hufanga,1
+2023,15,Buffalo Bills,2023_15_Buffalo Bills_vs_Dallas Cowboys,1,9,19.48521289951299,defense,Matt Milano,0
+2023,15,Las Vegas Raiders,2023_15_Las Vegas Raiders_vs_Los Angeles Chargers,1,1,41.7272415246449,skill,Josh Jacobs,1
+2023,15,Miami Dolphins,2023_15_Miami Dolphins_vs_New York Jets,1,1,22.34289433164772,skill,Tyreek Hill,1
+2023,15,San Francisco 49ers,2023_15_Arizona Cardinals_vs_San Francisco 49ers,1,4,7.877173078136147,defense,Talanoa Hufanga,1
+2023,16,Buffalo Bills,2023_16_Los Angeles Chargers_vs_Buffalo Bills,1,10,-2.4940160586446742,defense,Matt Milano,0
+2023,16,Las Vegas Raiders,2023_16_Kansas City Chiefs_vs_Las Vegas Raiders,1,2,14.22379696150614,skill,Josh Jacobs,1
+2023,16,Pittsburgh Steelers,2023_16_Pittsburgh Steelers_vs_Cincinnati Bengals,1,1,24.559133409535434,defense,Minkah Fitzpatrick,1
+2023,16,San Francisco 49ers,2023_16_San Francisco 49ers_vs_Baltimore Ravens,1,5,-18.38721800247583,defense,Talanoa Hufanga,0
+2023,17,Buffalo Bills,2023_17_Buffalo Bills_vs_New England Patriots,1,11,-3.877769728410639,defense,Matt Milano,0
+2023,17,Las Vegas Raiders,2023_17_Indianapolis Colts_vs_Las Vegas Raiders,1,3,-1.5995619163823722,skill,Josh Jacobs,1
+2023,17,Pittsburgh Steelers,2023_17_Seattle Seahawks_vs_Pittsburgh Steelers,1,2,9.911865630347156,defense,Minkah Fitzpatrick,1
+2023,17,San Francisco 49ers,2023_17_Washington Commanders_vs_San Francisco 49ers,1,6,9.223887540305622,defense,Talanoa Hufanga,0
+2023,18,Buffalo Bills,2023_18_Miami Dolphins_vs_Buffalo Bills,1,12,5.975050946405909,defense,Matt Milano,0
+2023,18,Cleveland Browns,2023_18_Cincinnati Bengals_vs_Cleveland Browns,1,1,-14.21456730762885,ol,Joel Bitonio,1
+2023,18,Dallas Cowboys,2023_18_Washington Commanders_vs_Dallas Cowboys,1,1,21.572604556797707,ol,Zack Martin,1
+2023,18,Kansas City Chiefs,2023_18_Los Angeles Chargers_vs_Kansas City Chiefs,1,1,-3.3009553629142827,skill,Travis Kelce,1
+2023,18,Las Vegas Raiders,2023_18_Las Vegas Raiders_vs_Denver Broncos,1,4,9.998089309714196,skill,Josh Jacobs,1
+2023,18,San Francisco 49ers,2023_18_San Francisco 49ers_vs_Los Angeles Rams,1,7,-8.90092028427447,defense,Talanoa Hufanga,0
+2024,1,Dallas Cowboys,2024_1_Cleveland Browns_vs_Dallas Cowboys,1,1,14.962224099378327,defense,DaRon Bland,1
+2024,1,San Francisco 49ers,2024_1_San Francisco 49ers_vs_New York Jets,1,1,4.561678001364918,skill,Christian McCaffrey,1
+2024,2,Dallas Cowboys,2024_2_Dallas Cowboys_vs_New Orleans Saints,1,2,-29.248438578103578,defense,DaRon Bland,1
+2024,2,San Francisco 49ers,2024_2_Minnesota Vikings_vs_San Francisco 49ers,1,2,-7.7382029807655,skill,Christian McCaffrey,1
+2024,2,Tampa Bay Buccaneers,2024_2_Detroit Lions_vs_Tampa Bay Buccaneers,1,1,6.250993496127121,defense,Antoine Winfield Jr.,1
+2024,3,Dallas Cowboys,2024_3_Dallas Cowboys_vs_Baltimore Ravens,1,3,-4.6624139065351935,defense,DaRon Bland,1
+2024,3,San Francisco 49ers,2024_3_Los Angeles Rams_vs_San Francisco 49ers,2,1,-5.430368236883287,skill,Christian McCaffrey|George Kittle,1
+2024,3,Tampa Bay Buccaneers,2024_3_Tampa Bay Buccaneers_vs_Denver Broncos,1,2,-24.66544626861664,defense,Antoine Winfield Jr.,1
+2024,4,Dallas Cowboys,2024_4_New York Giants_vs_Dallas Cowboys,1,4,2.31123170688541,defense,DaRon Bland,1
+2024,4,San Francisco 49ers,2024_4_San Francisco 49ers_vs_New England Patriots,1,4,8.60909464956827,skill,Christian McCaffrey,1
+2024,4,Tampa Bay Buccaneers,2024_4_Tampa Bay Buccaneers_vs_Philadelphia Eagles,1,3,15.716803471288003,defense,Antoine Winfield Jr.,1
+2024,5,Dallas Cowboys,2024_5_Pittsburgh Steelers_vs_Dallas Cowboys,1,5,3.558771828411618,defense,DaRon Bland,0
+2024,5,San Francisco 49ers,2024_5_San Francisco 49ers_vs_Arizona Cardinals,1,5,-10.347339744700513,skill,Christian McCaffrey,0
+2024,5,Tampa Bay Buccaneers,2024_5_Atlanta Falcons_vs_Tampa Bay Buccaneers,1,4,-6.95801409593777,defense,Antoine Winfield Jr.,1
+2024,6,Dallas Cowboys,2024_6_Dallas Cowboys_vs_Detroit Lions,1,6,-41.24137603689843,defense,DaRon Bland,0
+2024,6,San Francisco 49ers,2024_6_Seattle Seahawks_vs_San Francisco 49ers,1,6,10.491037480786918,skill,Christian McCaffrey,0
+2024,7,San Francisco 49ers,2024_7_San Francisco 49ers_vs_Kansas City Chiefs,1,7,-11.338988354668672,skill,Christian McCaffrey,0
+2024,9,Dallas Cowboys,2024_9_Atlanta Falcons_vs_Dallas Cowboys,1,8,-6.5494204514477135,defense,DaRon Bland,0
+2024,10,Dallas Cowboys,2024_10_Dallas Cowboys_vs_Philadelphia Eagles,1,9,-28.462002166427126,defense,DaRon Bland,0
+2024,11,Dallas Cowboys,2024_11_Dallas Cowboys_vs_Houston Texans,1,10,-26.916767990854098,defense,DaRon Bland,0
+2024,11,San Francisco 49ers,2024_11_San Francisco 49ers_vs_Seattle Seahawks,1,1,-9.880601370067689,skill,George Kittle,1
+2024,12,Baltimore Ravens,2024_12_Los Angeles Chargers_vs_Baltimore Ravens,1,1,5.443726511692448,defense,Roquan Smith,1
+2024,12,Dallas Cowboys,2024_12_Washington Commanders_vs_Dallas Cowboys,1,1,10.163576222852498,ol,Zack Martin,1
+2024,12,San Francisco 49ers,2024_12_Green Bay Packers_vs_San Francisco 49ers,1,1,-27.468706430208723,ol,Trent Williams,1
+2024,13,Dallas Cowboys,2024_13_Dallas Cowboys_vs_New York Giants,1,2,0.47034057910811544,ol,Zack Martin,1
+2024,13,San Francisco 49ers,2024_13_Buffalo Bills_vs_San Francisco 49ers,1,2,-20.15178179192003,ol,Trent Williams,1
+2024,14,Dallas Cowboys,2024_14_Dallas Cowboys_vs_Cincinnati Bengals,1,3,-8.841201887910929,ol,Zack Martin,1
+2024,14,New York Jets,2024_14_Miami Dolphins_vs_New York Jets,1,1,-0.826983351480922,defense,Sauce Gardner,1
+2024,14,San Francisco 49ers,2024_14_San Francisco 49ers_vs_Chicago Bears,2,1,17.861971370964838,ol|skill,Christian McCaffrey|Trent Williams,1
+2024,15,Dallas Cowboys,2024_15_Carolina Panthers_vs_Dallas Cowboys,1,4,12.575099576349285,ol,Zack Martin,1
+2024,15,San Francisco 49ers,2024_15_San Francisco 49ers_vs_Los Angeles Rams,2,2,-11.144615137696455,ol|skill,Christian McCaffrey|Trent Williams,1
+2024,15,Tampa Bay Buccaneers,2024_15_Los Angeles Chargers_vs_Tampa Bay Buccaneers,1,1,24.47513539796665,defense,Antoine Winfield Jr.,1
+2024,16,San Francisco 49ers,2024_16_Miami Dolphins_vs_San Francisco 49ers,2,3,-12.712599111973395,ol|skill,Christian McCaffrey|Trent Williams,1
+2024,17,Dallas Cowboys,2024_17_Philadelphia Eagles_vs_Dallas Cowboys,2,1,-27.16482791709837,ol|skill,CeeDee Lamb|Zack Martin,1
+2024,17,Kansas City Chiefs,2024_17_Pittsburgh Steelers_vs_Kansas City Chiefs,1,1,16.716676786755606,defense,Chris Jones,1
+2024,17,San Francisco 49ers,2024_17_San Francisco 49ers_vs_Detroit Lions,2,4,-5.066140571694932,ol|skill,Christian McCaffrey|Trent Williams,1
+2024,17,Tampa Bay Buccaneers,2024_17_Tampa Bay Buccaneers_vs_Carolina Panthers,1,3,23.44991353068349,defense,Antoine Winfield Jr.,1
+2024,18,Dallas Cowboys,2024_18_Dallas Cowboys_vs_Washington Commanders,2,2,-5.837816318094383,ol|skill,CeeDee Lamb|Zack Martin,1
+2024,18,Kansas City Chiefs,2024_18_Denver Broncos_vs_Kansas City Chiefs,2,1,-41.83001160913236,defense,Chris Jones|Trent McDuffie,1
+2024,18,New York Jets,2024_18_New York Jets_vs_Miami Dolphins,1,1,14.015692368551736,defense,Sauce Gardner,1
+2024,18,San Francisco 49ers,2024_18_Arizona Cardinals_vs_San Francisco 49ers,2,5,-25.182541762374314,ol|skill,Christian McCaffrey|Trent Williams,0
+2024,18,Tampa Bay Buccaneers,2024_18_Tampa Bay Buccaneers_vs_New Orleans Saints,1,4,1.604352453551801,defense,Antoine Winfield Jr.,1

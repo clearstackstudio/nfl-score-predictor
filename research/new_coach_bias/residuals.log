@@ -1,0 +1,9 @@
+columns: ['schedule_date', 'schedule_season', 'schedule_week', 'schedule_playoff', 'team_home', 'score_home', 'score_away', 'team_away', 'team_favorite_id', 'spread_favorite', 'over_under_line', 'stadium', 'stadium_neutral', 'weather_temperature', 'weather_wind_mph', 'weather_humidity', 'weather_detail']
+seasons: 1980 - 2024
+Games: 11,352
+Our RMSE: 13.67 (published 13.67)
+Line RMSE: 13.32 (published 13.32)
+ATS: 3738-3436-201 = 52.1% (published 52.1%)
+FIDELITY GATE: PASS
+wrote /home/hatch/workspace/nfl-score-predictor/research/new_coach_bias/residuals.csv
+exit: 0
