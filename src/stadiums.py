@@ -29,6 +29,7 @@ STADIUMS: dict[str, tuple[float, float, str]] = {
     "LV": (36.090, -115.184, "dome"),          # Allegiant Stadium
     "LAC": (33.953, -118.339, "outdoor"),      # SoFi Stadium (open sides)
     "LAR": (33.953, -118.339, "outdoor"),      # SoFi Stadium (open sides)
+    "LA": (33.953, -118.339, "outdoor"),       # SoFi — nflverse/EPA key for the Rams (LAR above is the alias other sources use; both must exist, the pipeline looks up "LA")
     "MIA": (25.958, -80.239, "outdoor"),       # Hard Rock Stadium
     "MIN": (44.974, -93.258, "dome"),          # U.S. Bank Stadium
     "NE": (42.091, -71.264, "outdoor"),        # Gillette Stadium
