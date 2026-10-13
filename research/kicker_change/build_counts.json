@@ -1,0 +1,18 @@
+{
+  "games_total": 1139,
+  "team_games_total": 2278,
+  "null_kicker_id_plays_excluded": 6,
+  "within_game_primary_tie_games": 1,
+  "flag_status_counts": {
+    "same": 2009,
+    "change": 209,
+    "unflaggable_no_previous_primary": 32,
+    "unflaggable_zero_attempts": 28
+  },
+  "change_games_all_pbp": 209,
+  "change_quality_class_counts": {
+    "unclassified": 102,
+    "incoming_better": 60,
+    "incoming_worse": 47
+  }
+}

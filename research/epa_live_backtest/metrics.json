@@ -1,0 +1,305 @@
+{
+  "verification": {
+    "ok": true,
+    "replicated": {
+      "games": 1107,
+      "straight_up_pct": 0.6260162601626016,
+      "our_margin_rmse": 14.443910158355157,
+      "line_margin_rmse": 12.725943527418833,
+      "ats": [
+        399,
+        441,
+        26
+      ],
+      "our_total_rmse": 15.169132813108966,
+      "line_total_rmse": 13.076688195579502,
+      "ou": [
+        376,
+        386,
+        13
+      ]
+    },
+    "abs_diffs": {
+      "games": 0.0,
+      "straight_up_pct": 0.0,
+      "our_margin_rmse": 0.0,
+      "line_margin_rmse": 0.0,
+      "ats": 0,
+      "our_total_rmse": 0.0,
+      "line_total_rmse": 0.0,
+      "ou": 0
+    }
+  },
+  "wind_coverage": {
+    "outdoor_games": 766,
+    "covered": 766,
+    "pct": 1.0
+  },
+  "la_diagnostic": {
+    "la_home_games": 36,
+    "la_games_with_wind_over_10mph": 9,
+    "la_max_hindcast_hinge_pts": -8.0
+  },
+  "config_b_scope": "all games",
+  "config_a": {
+    "overall": {
+      "games": 1107,
+      "su_pct": 0.6260162601626016,
+      "margin_rmse_ours": 14.44391015835516,
+      "margin_rmse_line": 12.725943527418833,
+      "ats_wlp": [
+        399,
+        441,
+        26
+      ],
+      "ats_picks": 866,
+      "ats_pct": 0.475,
+      "total_rmse_ours": 15.169132813108973,
+      "total_rmse_line": 13.076688195579502,
+      "ou_wlp": [
+        376,
+        386,
+        13
+      ],
+      "ou_picks": 775,
+      "ou_pct": 0.49343832020997375,
+      "circuit_excluded": 0
+    },
+    "per_season": {
+      "2021": {
+        "games": 253,
+        "su_pct": 0.5731225296442688,
+        "margin_rmse_ours": 16.517518822405655,
+        "margin_rmse_line": 13.480186015770066,
+        "ats_wlp": [
+          88,
+          115,
+          3
+        ],
+        "ats_picks": 206,
+        "ats_pct": 0.43349753694581283,
+        "total_rmse_ours": 15.90526465133894,
+        "total_rmse_line": 13.408893279176027,
+        "ou_wlp": [
+          88,
+          80,
+          3
+        ],
+        "ou_picks": 171,
+        "ou_pct": 0.5238095238095238,
+        "circuit_excluded": 0
+      },
+      "2022": {
+        "games": 284,
+        "su_pct": 0.6338028169014085,
+        "margin_rmse_ours": 12.771799126747325,
+        "margin_rmse_line": 11.45705391918194,
+        "ats_wlp": [
+          96,
+          111,
+          5
+        ],
+        "ats_picks": 212,
+        "ats_pct": 0.463768115942029,
+        "total_rmse_ours": 14.951722219258249,
+        "total_rmse_line": 13.225695221216426,
+        "ou_wlp": [
+          98,
+          97,
+          2
+        ],
+        "ou_picks": 197,
+        "ou_pct": 0.5025641025641026,
+        "circuit_excluded": 0
+      },
+      "2023": {
+        "games": 285,
+        "su_pct": 0.6140350877192983,
+        "margin_rmse_ours": 14.65826571409754,
+        "margin_rmse_line": 13.260480793590894,
+        "ats_wlp": [
+          106,
+          105,
+          10
+        ],
+        "ats_picks": 221,
+        "ats_pct": 0.5023696682464455,
+        "total_rmse_ours": 15.779939236044111,
+        "total_rmse_line": 13.122533185059295,
+        "ou_wlp": [
+          94,
+          124,
+          3
+        ],
+        "ou_picks": 221,
+        "ou_pct": 0.43119266055045874,
+        "circuit_excluded": 0
+      },
+      "2024": {
+        "games": 285,
+        "su_pct": 0.6771929824561403,
+        "margin_rmse_ours": 13.810976967444976,
+        "margin_rmse_line": 12.692137364415537,
+        "ats_wlp": [
+          109,
+          110,
+          8
+        ],
+        "ats_picks": 227,
+        "ats_pct": 0.4977168949771689,
+        "total_rmse_ours": 14.050546787496234,
+        "total_rmse_line": 12.57308459131453,
+        "ou_wlp": [
+          96,
+          85,
+          5
+        ],
+        "ou_picks": 186,
+        "ou_pct": 0.5303867403314917,
+        "circuit_excluded": 0
+      }
+    }
+  },
+  "config_b": {
+    "overall": {
+      "games": 1107,
+      "su_pct": 0.6260162601626016,
+      "margin_rmse_ours": 14.44391015835516,
+      "margin_rmse_line": 12.725943527418833,
+      "ats_wlp": [
+        399,
+        441,
+        26
+      ],
+      "ats_picks": 866,
+      "ats_pct": 0.475,
+      "total_rmse_ours": 14.996694634129062,
+      "total_rmse_line": 13.076688195579502,
+      "ou_wlp": [
+        201,
+        176,
+        6
+      ],
+      "ou_picks": 383,
+      "ou_pct": 0.53315649867374,
+      "circuit_excluded": 388
+    },
+    "per_season": {
+      "2021": {
+        "games": 253,
+        "su_pct": 0.5731225296442688,
+        "margin_rmse_ours": 16.517518822405655,
+        "margin_rmse_line": 13.480186015770066,
+        "ats_wlp": [
+          88,
+          115,
+          3
+        ],
+        "ats_picks": 206,
+        "ats_pct": 0.43349753694581283,
+        "total_rmse_ours": 15.704790791691945,
+        "total_rmse_line": 13.408893279176027,
+        "ou_wlp": [
+          51,
+          41,
+          1
+        ],
+        "ou_picks": 93,
+        "ou_pct": 0.5543478260869565,
+        "circuit_excluded": 80
+      },
+      "2022": {
+        "games": 284,
+        "su_pct": 0.6338028169014085,
+        "margin_rmse_ours": 12.771799126747325,
+        "margin_rmse_line": 11.45705391918194,
+        "ats_wlp": [
+          96,
+          111,
+          5
+        ],
+        "ats_picks": 212,
+        "ats_pct": 0.463768115942029,
+        "total_rmse_ours": 14.770075443126466,
+        "total_rmse_line": 13.225695221216426,
+        "ou_wlp": [
+          56,
+          43,
+          1
+        ],
+        "ou_picks": 100,
+        "ou_pct": 0.5656565656565656,
+        "circuit_excluded": 94
+      },
+      "2023": {
+        "games": 285,
+        "su_pct": 0.6140350877192983,
+        "margin_rmse_ours": 14.65826571409754,
+        "margin_rmse_line": 13.260480793590894,
+        "ats_wlp": [
+          106,
+          105,
+          10
+        ],
+        "ats_picks": 221,
+        "ats_pct": 0.5023696682464455,
+        "total_rmse_ours": 15.489908027575707,
+        "total_rmse_line": 13.122533185059295,
+        "ou_wlp": [
+          47,
+          52,
+          1
+        ],
+        "ou_picks": 100,
+        "ou_pct": 0.47474747474747475,
+        "circuit_excluded": 114
+      },
+      "2024": {
+        "games": 285,
+        "su_pct": 0.6771929824561403,
+        "margin_rmse_ours": 13.810976967444976,
+        "margin_rmse_line": 12.692137364415537,
+        "ats_wlp": [
+          109,
+          110,
+          8
+        ],
+        "ats_picks": 227,
+        "ats_pct": 0.4977168949771689,
+        "total_rmse_ours": 14.045918818921981,
+        "total_rmse_line": 12.57308459131453,
+        "ou_wlp": [
+          47,
+          40,
+          3
+        ],
+        "ou_picks": 90,
+        "ou_pct": 0.5402298850574713,
+        "circuit_excluded": 100
+      }
+    },
+    "overall_no_circuit": {
+      "games": 1107,
+      "su_pct": 0.6260162601626016,
+      "margin_rmse_ours": 14.44391015835516,
+      "margin_rmse_line": 12.725943527418833,
+      "ats_wlp": [
+        399,
+        441,
+        26
+      ],
+      "ats_picks": 866,
+      "ats_pct": 0.475,
+      "total_rmse_ours": 14.996694634129062,
+      "total_rmse_line": 13.076688195579502,
+      "ou_wlp": [
+        384,
+        377,
+        10
+      ],
+      "ou_picks": 771,
+      "ou_pct": 0.5045992115637319,
+      "circuit_excluded": 0
+    }
+  }
+}

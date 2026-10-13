@@ -1,0 +1,2 @@
+[arm1] PRIMARY: ST EPA in sums, denominators unchanged
+[arm1] n=1107 marginRMSE=14.452 (line 12.726) ATS=0.4773 [420, 460, 25] totalRMSE=15.530 OU=0.4906 [391, 406, 11] [385s] — saved

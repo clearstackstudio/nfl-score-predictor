@@ -1,0 +1,77 @@
+{
+  "frame": "ST plays: play_type in {punt, kickoff, field_goal, extra_point}, epa populated, 2021-2024",
+  "st_plays_total": 30066,
+  "st_plays_per_season": {
+    "2021": 7496,
+    "2022": 7487,
+    "2023": 7535,
+    "2024": 7548
+  },
+  "st_plays_by_type": {
+    "extra_point": 5120,
+    "field_goal": 4454,
+    "kickoff": 11540,
+    "punt": 8952
+  },
+  "st_epa_null_rows": 0,
+  "st_penalty_flagged_rows": 1173,
+  "games_in_frame": 1139,
+  "team_games": 2278,
+  "st_plays_per_game_both_teams": 26.396839332748023,
+  "st_plays_per_team_game": {
+    "posteam_attributed_mean": 13.198419666374011,
+    "defteam_attributed_mean": 13.198419666374011,
+    "total_involvements_mean": 26.396839332748023
+  },
+  "abs_epa_share": {
+    "st_abs_epa": 13320.812207791616,
+    "pass_rush_abs_epa": 137852.33360337722,
+    "st_share_of_pool_abs_epa": 0.08811625991054464,
+    "pass_rush_plays": 143879
+  },
+  "st_epa_per_team_game": {
+    "mean_abs_off_attribution": 2.5842494153148645,
+    "mean_abs_def_attribution": 2.5842494153148645,
+    "mean_net_benefit_terms": 0.0,
+    "sd_net_benefit_terms": 4.607955738320265
+  },
+  "abs_st_epa_both_teams_per_game": {
+    "mean": 5.168498830629728,
+    "p95": 11.599532366476648
+  },
+  "persistence_net_st_epa_per_game": {
+    "correlations": {
+      "2021->2022": 0.2577373808645592,
+      "2022->2023": -0.048818722295722344,
+      "2023->2024": 0.13878424233550227,
+      "mean_consecutive_r": 0.11590096696811304
+    },
+    "off_component_correlations": {
+      "2021->2022": 0.22020770304133627,
+      "2022->2023": 0.12603371734842359,
+      "2023->2024": 0.12626528800527784,
+      "mean_consecutive_r": 0.15750223613167924
+    },
+    "def_benefit_component_correlations": {
+      "2021->2022": 0.2632979959495949,
+      "2022->2023": 0.04185487174189112,
+      "2023->2024": 0.4983838798527571,
+      "mean_consecutive_r": 0.2678455825147477
+    },
+    "team_season_net_st_epa_pg_sd": 1.286190027836991,
+    "team_season_net_st_epa_pg_range": [
+      -3.5013200775354556,
+      3.3424684203056856
+    ],
+    "best_team_season": {
+      "season": 2024,
+      "team": "PIT",
+      "net_st_epa_pg": 3.3424684203056856
+    },
+    "worst_team_season": {
+      "season": 2024,
+      "team": "SF",
+      "net_st_epa_pg": -3.5013200775354556
+    }
+  }
+}

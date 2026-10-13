@@ -1,0 +1,31 @@
+{
+  "split_half_fg_epa_per_attempt": {
+    "n_kickers": 45,
+    "r": 0.09182635567273491,
+    "mean_n_per_half": 47.599999999999994
+  },
+  "consecutive_season_fg_epa_per_attempt": {
+    "pairs": {
+      "2021->2022": {
+        "n_kickers": 30,
+        "r": -0.04665869904089697
+      },
+      "2022->2023": {
+        "n_kickers": 27,
+        "r": -0.4045491830496794
+      },
+      "2023->2024": {
+        "n_kickers": 29,
+        "r": 0.06785551665438831
+      }
+    },
+    "mean_consecutive_r": -0.1277841218120627
+  },
+  "volume": {
+    "fg_plays_total": 4454,
+    "xp_plays_total": 5114,
+    "distinct_kickers_fg": 69,
+    "fg_epa_per_attempt_overall": 0.09806605941112896,
+    "fg_epa_per_attempt_sd_across_kickers_min15": 0.27054064133351213
+  }
+}

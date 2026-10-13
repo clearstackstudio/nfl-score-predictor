@@ -373,8 +373,10 @@ def main() -> None:
 
     # EPA->points constant: combined offensive EPA/game ≈ 0, so the constant
     # is just the trailing average total. Calibrate on completed games.
+    # Uses the UNDAMPED sums (off_epa_raw): turnover damping applies to the
+    # ratings, not to this constant — the tested spec (2026-10-12 adoption).
     done = team_games[team_games["season"] == SEASON]
-    per_game_epa = done.groupby("game_id")["off_epa"].sum()
+    per_game_epa = done.groupby("game_id")["off_epa_raw"].sum()
     sched_done = sched[(sched["season"] == SEASON) & sched["home_score"].notna()]
     avg_total = (sched_done["home_score"] + sched_done["away_score"]).mean()
     epa_const = float(avg_total - per_game_epa.mean())

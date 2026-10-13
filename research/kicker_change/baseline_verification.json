@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "recomputed": {
+    "games": 1107,
+    "straight_up_pct": 0.6260162601626016,
+    "our_margin_rmse": 14.44391015835516,
+    "line_margin_rmse": 12.725943527418833,
+    "ats": [
+      399,
+      441,
+      26
+    ],
+    "our_total_rmse": 15.169132813108973,
+    "line_total_rmse": 13.076688195579502,
+    "ou": [
+      376,
+      386,
+      13
+    ]
+  },
+  "abs_diffs_vs_config_a": {
+    "games": 0,
+    "straight_up_pct": 0.0,
+    "our_margin_rmse": 3.552713678800501e-15,
+    "line_margin_rmse": 0.0,
+    "ats": 0,
+    "our_total_rmse": 7.105427357601002e-15,
+    "line_total_rmse": 0.0,
+    "ou": 0
+  },
+  "targets": {
+    "games": 1107,
+    "margin_rmse": 14.444,
+    "ats": [
+      399,
+      441,
+      26
+    ],
+    "ats_pct": 0.475,
+    "total_rmse": 15.169,
+    "ou": [
+      376,
+      386,
+      13
+    ],
+    "ou_pct": 0.4934
+  }
+}

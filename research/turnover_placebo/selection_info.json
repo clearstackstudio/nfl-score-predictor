@@ -1,0 +1,39 @@
+{
+  "pool_plays": 143879,
+  "turnover_plays": 2777,
+  "target_abs_epa": 12839.882024269242,
+  "nonto_pool_plays": 141102,
+  "nonto_abs_epa": 125012.45157910799,
+  "seeds": {
+    "1101": {
+      "n_selected": 14446,
+      "achieved_abs_epa": 12839.931973855973,
+      "match_pct": 100.00038901904735,
+      "within_pm2pct": true
+    },
+    "2202": {
+      "n_selected": 14472,
+      "achieved_abs_epa": 12840.054932987901,
+      "match_pct": 100.0013466534843,
+      "within_pm2pct": true
+    },
+    "3303": {
+      "n_selected": 14535,
+      "achieved_abs_epa": 12840.080344177248,
+      "match_pct": 100.00154456176179,
+      "within_pm2pct": true
+    },
+    "4404": {
+      "n_selected": 14524,
+      "achieved_abs_epa": 12840.941748914653,
+      "match_pct": 100.0082533830405,
+      "within_pm2pct": true
+    },
+    "5505": {
+      "n_selected": 14419,
+      "achieved_abs_epa": 12840.257975349377,
+      "match_pct": 100.00292799481666,
+      "within_pm2pct": true
+    }
+  }
+}

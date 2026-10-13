@@ -43,6 +43,21 @@ export default function Methodology() {
             than our edge.
           </p>
           <p>
+            One more, adopted in October 2026: turnover plays count at half
+            weight in the ratings. A defense that feasts on takeaways one year
+            rarely repeats it — turnover EPA barely persists season to season
+            (correlation ≈ 0.08) — so counting a few fluky interceptions and
+            fumble recoveries at full weight was crediting luck as skill. In a
+            pre-registered walk-forward test, halving turnover plays (inside
+            the quarterback adjustment too) cut the model&apos;s margin error
+            from 14.4 to 14.1 points across 2021–24 — and a placebo check,
+            damping equally large non-turnover plays instead, recovered only
+            about a third of that gain, confirming the improvement is
+            specific to turnovers rather than generic shrinkage. The honest
+            trade: our against-the-spread record in that window slipped from
+            47.5% to 47.3%, well within noise. We took the accuracy anyway.
+          </p>
+          <p>
             The betting line is <span className="font-semibold text-zinc-100 light:text-zinc-900">never</span> an
             input to the model. It is only the benchmark we measure against.
             Most “prediction” apps quietly feed the line in and echo it back —

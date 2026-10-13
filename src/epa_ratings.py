@@ -67,6 +67,28 @@ ABBR_TO_FULL = {
 }
 
 
+# Turnover plays count at half weight in the ratings and the QB pool.
+# Adopted 2026-10-12 (Bryant) from the pre-registered turnover-damping
+# study and its placebo tiebreaker: turnover EPA's season-to-season
+# persistence is ~+0.08 (mostly luck), and halving it improved
+# walk-forward margin RMSE 14.44 -> 14.13 (QB pool damped too) with
+# the specificity confirmed against |EPA|-mass-matched placebos
+# (research/turnover_damping, research/turnover_placebo). Play counts
+# are NOT scaled. The totals constant (epa_const) is still calibrated
+# on UNDAMPED sums, exactly as tested: load_team_games therefore also
+# carries off_epa_raw / def_epa_raw, used only for that calibration.
+TURNOVER_EPA_WEIGHT = 0.50
+
+
+def _scale_turnover_epa(plays: pd.DataFrame) -> pd.DataFrame:
+    """Scale EPA of turnover plays (interception==1 or fumble_lost==1)
+    by TURNOVER_EPA_WEIGHT. Mirrors the tested study construction."""
+    to = (plays["interception"] == 1) | (plays["fumble_lost"] == 1)
+    plays = plays.copy()
+    plays.loc[to, "epa"] = plays.loc[to, "epa"] * TURNOVER_EPA_WEIGHT
+    return plays
+
+
 def load_team_games(years: list[int] | None = None) -> pd.DataFrame:
     """One row per team-game: offensive and defensive EPA/play."""
     years = years or PBP_YEARS
@@ -76,13 +98,24 @@ def load_team_games(years: list[int] | None = None) -> pd.DataFrame:
             DATA / f"play_by_play_{year}.parquet",
             columns=["game_id", "week", "season", "posteam", "defteam",
                      "epa", "pass_attempt", "rush_attempt",
-                     "home_team", "away_team"],
+                     "home_team", "away_team",
+                     "interception", "fumble_lost"],
         )
         plays = pbp[
             ((pbp["pass_attempt"] == 1) | (pbp["rush_attempt"] == 1))
             & pbp["epa"].notna()
             & pbp["posteam"].notna()
         ]
+        # Undamped sums, kept only for the epa_const calibration.
+        off_raw = (plays.groupby(["game_id", "posteam"])["epa"]
+                   .sum().reset_index())
+        off_raw = off_raw.rename(columns={"posteam": "team",
+                                          "epa": "off_epa_raw"})
+        def_raw = (plays.groupby(["game_id", "defteam"])["epa"]
+                   .sum().reset_index())
+        def_raw = def_raw.rename(columns={"defteam": "team",
+                                          "epa": "def_epa_raw"})
+        plays = _scale_turnover_epa(plays)
         off = (plays.groupby(["game_id", "week", "season", "posteam",
                               "home_team", "away_team"])["epa"]
                .agg(["sum", "count"]).reset_index())
@@ -93,6 +126,8 @@ def load_team_games(years: list[int] | None = None) -> pd.DataFrame:
         deff = deff.rename(columns={"defteam": "team", "sum": "def_epa",
                                     "count": "def_plays"})
         g = off.merge(deff, on=["game_id", "team"], how="outer")
+        g = g.merge(off_raw, on=["game_id", "team"], how="left")
+        g = g.merge(def_raw, on=["game_id", "team"], how="left")
         g["off_epa_play"] = g["off_epa"] / g["off_plays"]
         g["def_epa_play"] = g["def_epa"] / g["def_plays"]
         # opponent = the other team in the game
@@ -112,10 +147,14 @@ def load_qb_plays(years: list[int] | None = None) -> pd.DataFrame:
         pbp = pd.read_parquet(
             DATA / f"play_by_play_{year}.parquet",
             columns=["game_id", "week", "season", "posteam", "passer",
-                     "passer_id", "pass_attempt", "sack", "epa"],
+                     "passer_id", "pass_attempt", "sack", "epa",
+                     "interception", "fumble_lost"],
         )
         q = pbp[pbp["passer_id"].notna() & pbp["epa"].notna()
                 & ((pbp["pass_attempt"] == 1) | (pbp["sack"] == 1))]
+        # QB-inclusive variant (adopted 2026-10-12): the QB pool is
+        # turnover-damped too, exactly as the tested robustness arm.
+        q = _scale_turnover_epa(q)
         frames.append(
             q[["game_id", "week", "season", "posteam", "passer_id", "epa"]])
     qb = pd.concat(frames, ignore_index=True)
@@ -371,7 +410,8 @@ def run_backtest() -> dict:
                 ou[1] += 1
         n += 1
         # calibrate the EPA->points constant from this game's combined EPA
-        game_epa = team_games.iloc[idxs]["off_epa"].sum()
+        # (undamped sums: the tested spec holds epa_const on the raw basis)
+        game_epa = team_games.iloc[idxs]["off_epa_raw"].sum()
         epa_const_hist.append(actual_total - game_epa)
 
         # learn: refresh season-final ratings including this game
