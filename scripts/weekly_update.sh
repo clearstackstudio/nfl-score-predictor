@@ -18,7 +18,7 @@ $PY src/grade_week.py
 (cd site && npx tsc --noEmit)
 
 GIT_ID="-c user.name=clearstackstudio -c user.email=334314751+clearstackstudio@users.noreply.github.com"
-git $GIT_ID add site/data/picks.json "site/data/season_2026.json"
+git $GIT_ID add site/data/picks.json "site/data/season_2026.json" site/data/power_rankings.json
 
 if git diff --cached --quiet; then
   echo "weekly_update: no changes to commit"
