@@ -3,6 +3,7 @@
   "season": 2026,
   "week": 6,
   "generated": "2026-10-09 12:00 PDT",
+  "stale_notice": "No new college picks this week \u2014 our college data feed hit its monthly limit, so this board stays on Week 6 (generated Oct 9) and Week 7 games were not picked. Nothing below has been edited after the fact: every Week 6 pick is shown with its graded result. College picks resume when the feed resets, expected Nov 1. NFL, NBA and NCAAB picks are unaffected.",
   "disclaimer": "Model probabilities for entertainment. Our backtest shows no proven edge vs the closing line \u2014 track record published openly.",
   "parlay": {
     "legs": [

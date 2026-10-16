@@ -23,6 +23,7 @@ type Pick = {
 type PicksFile = {
   sport: string; season: number; week: number | null;
   generated: string | null; disclaimer: string;
+  stale_notice?: string;
   pending?: boolean; pending_reason?: string;
   parlay?: Parlay | null; picks: Pick[];
 };
@@ -38,6 +39,7 @@ type SeasonLog = { sport: string; season: number; weeks: Record<string, WeekLog>
 type WeekView = {
   week: number | null; season: number; generated: string | null;
   picks: Pick[]; parlay: Parlay; disclaimer: string;
+  staleNotice?: string;
   pending?: boolean; pending_reason?: string;
   isCurrent: boolean; complete: boolean;
 };
@@ -49,6 +51,7 @@ const currentWeek: WeekView = {
   picks: data.picks,
   parlay: data.parlay ?? null,
   disclaimer: data.disclaimer,
+  staleNotice: data.stale_notice,
   pending: data.pending,
   pending_reason: data.pending_reason,
   isCurrent: true,
@@ -341,7 +344,7 @@ export default function CfbHome() {
                     : "border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200 light:border-zinc-200 light:bg-white light:text-zinc-600 light:hover:border-zinc-400"
                 }`}
               >
-                {w.isCurrent ? `Week ${w.week} · current` : `Week ${w.week}`}
+                {w.isCurrent ? (w.staleNotice ? `Week ${w.week} · last published` : `Week ${w.week} · current`) : `Week ${w.week}`}
               </button>
             ))}
           </div>
@@ -365,11 +368,17 @@ export default function CfbHome() {
               ))}
             </div>
             <p className="mt-5 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90 light:text-amber-800">
-              {wv.isCurrent ? wv.disclaimer : "Graded results — every pick marked won, lost, or push. Nothing hidden, nothing rewritten."}
+              {wv.isCurrent && !wv.staleNotice ? wv.disclaimer : "Graded results — every pick marked won, lost, or push. Nothing hidden, nothing rewritten."}
             </p>
           </>
         )}
       </div>
+
+      {wv.isCurrent && wv.staleNotice && (
+        <div className="mb-8 max-w-2xl rounded-xl border border-amber-400/40 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90 light:text-amber-800" role="note">
+          {wv.staleNotice}
+        </div>
+      )}
 
       {!wv.pending && <SeasonRecord weeks={allWeeks} href="/cfb/track-record" />}
 
