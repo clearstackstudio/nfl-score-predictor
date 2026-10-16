@@ -67,7 +67,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Bo Nix",
-      "away_qb": "Sam Darnold"
+      "away_qb": "Sam Darnold",
+      "result": {
+        "home_score": 17,
+        "away_score": 14,
+        "ats": "loss"
+      }
     },
     {
       "away": "Houston Texans",
