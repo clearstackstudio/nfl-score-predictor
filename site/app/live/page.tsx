@@ -76,48 +76,134 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
   );
 }
 
-function GameCard({ g, selected, onSelect }: { g: LiveGame; selected: boolean; onSelect: () => void }) {
+function BallIcon({ size = 13 }: { size?: number }) {
+  return (
+    <svg aria-label="Possession" role="img" width={size} height={size} viewBox="0 0 16 16" className="shrink-0 text-amber-400 light:text-amber-600">
+      <ellipse cx="8" cy="8" rx="7" ry="4.6" transform="rotate(-30 8 8)" fill="currentColor" />
+      <line x1="6.2" y1="6.4" x2="9.8" y2="9.6" stroke="#09090b" strokeWidth="1.1" strokeLinecap="round" transform="rotate(-30 8 8)" />
+      <line x1="8" y1="4.6" x2="8" y2="6.2" stroke="#09090b" strokeWidth="1" strokeLinecap="round" transform="rotate(-30 8 8)" />
+      <line x1="8" y1="9.8" x2="8" y2="11.4" stroke="#09090b" strokeWidth="1" strokeLinecap="round" transform="rotate(-30 8 8)" />
+    </svg>
+  );
+}
+
+/** Column header for period i (0-based): Q1..Q4, then OT, 2OT… (basketball: P1, P2…). */
+function periodLabel(i: number, football: boolean): string {
+  if (!football) return `P${i + 1}`;
+  return i < 4 ? `Q${i + 1}` : i === 4 ? "OT" : `${i - 3}OT`;
+}
+
+/** One game in the ESPN-style scoreboard list: status rail + team rows + linescore. */
+function ScoreboardRow({ g, selected, onSelect, football }: { g: LiveGame; selected: boolean; onSelect: () => void; football: boolean }) {
+  const teams = [
+    { abbr: g.awayAbbr, score: g.awayScore, logo: g.awayLogo, record: g.awayRecord, lines: g.awayLinescores },
+    { abbr: g.homeAbbr, score: g.homeScore, logo: g.homeLogo, record: g.homeRecord, lines: g.homeLinescores },
+  ];
+  const periods = Math.max(g.awayLinescores.length, g.homeLinescores.length);
   return (
     <button
       onClick={onSelect}
-      className={`w-64 shrink-0 snap-start rounded-xl border p-3.5 text-left transition ${
+      aria-pressed={selected}
+      className={`block w-full text-left transition ${
         selected
-          ? "border-amber-400/60 bg-amber-400/[0.08] light:bg-amber-400/15"
-          : "border-white/15 bg-zinc-800/60 hover:border-white/30 light:border-zinc-200 light:bg-white light:hover:border-zinc-300"
+          ? "bg-amber-400/[0.08] light:bg-amber-400/15"
+          : "hover:bg-white/[0.04] light:hover:bg-zinc-50"
       }`}
     >
-      <div className="flex items-center justify-between">
-        <span className={`text-[11px] font-bold uppercase tracking-wider ${g.state === "in" ? "text-amber-400 light:text-amber-600" : "text-zinc-400 light:text-zinc-500"}`}>
-          {g.state === "in" ? "● Live" : g.state === "post" ? "Final" : "Upcoming"}
-        </span>
-        <span className="text-[11px] text-zinc-400 light:text-zinc-500">{g.detail}</span>
-      </div>
-      <div className="mt-2.5 space-y-1.5">
-        {[
-          { abbr: g.awayAbbr, name: g.awayName, score: g.awayScore, logo: g.awayLogo },
-          { abbr: g.homeAbbr, name: g.homeName, score: g.homeScore, logo: g.homeLogo },
-        ].map((t) => {
-          const hasBall = g.state === "in" && g.possessionAbbr === t.abbr;
-          return (
-            <div key={t.abbr} className="flex items-center gap-2">
-              <TeamMark logo={t.logo} abbr={t.abbr} size={22} />
-              <span className="flex flex-1 items-center gap-1.5 truncate text-sm font-semibold text-zinc-100 light:text-zinc-900">
-                {t.abbr}
-                {hasBall && (
-                  <svg aria-label="Possession" role="img" width="13" height="13" viewBox="0 0 16 16" className="shrink-0 text-amber-400 light:text-amber-600">
-                    <ellipse cx="8" cy="8" rx="7" ry="4.6" transform="rotate(-30 8 8)" fill="currentColor" />
-                    <line x1="6.2" y1="6.4" x2="9.8" y2="9.6" stroke="#09090b" strokeWidth="1.1" strokeLinecap="round" transform="rotate(-30 8 8)" />
-                    <line x1="8" y1="4.6" x2="8" y2="6.2" stroke="#09090b" strokeWidth="1" strokeLinecap="round" transform="rotate(-30 8 8)" />
-                    <line x1="8" y1="9.8" x2="8" y2="11.4" stroke="#09090b" strokeWidth="1" strokeLinecap="round" transform="rotate(-30 8 8)" />
-                  </svg>
-                )}
-              </span>
-              <span className="tnum font-mono text-sm font-bold text-white light:text-zinc-900">{t.score}</span>
+      <div className="flex">
+        <div className="flex w-[92px] shrink-0 flex-col justify-center border-r border-white/10 px-3 py-2.5 light:border-zinc-200">
+          <span className={`text-[11px] font-bold uppercase tracking-wider ${g.state === "in" ? "text-amber-400 light:text-amber-600" : "text-zinc-400 light:text-zinc-500"}`}>
+            {g.state === "in" ? "● Live" : g.state === "post" ? "Final" : "Upcoming"}
+          </span>
+          {g.detail && (
+            <span className="tnum mt-0.5 text-[11px] leading-tight text-zinc-400 light:text-zinc-500">{g.detail}</span>
+          )}
+        </div>
+        <div className="min-w-0 flex-1 py-1">
+          {periods > 0 && (
+            <div className="hidden items-center px-3 pt-1 sm:flex" aria-hidden="true">
+              <span className="flex-1" />
+              {Array.from({ length: periods }, (_, i) => (
+                <span key={i} className="w-7 text-right text-[10px] font-semibold uppercase tracking-wider text-zinc-500 light:text-zinc-400">
+                  {periodLabel(i, football)}
+                </span>
+              ))}
+              <span className="w-9 text-right text-[10px] font-semibold uppercase tracking-wider text-zinc-500 light:text-zinc-400">T</span>
             </div>
-          );
-        })}
+          )}
+          {teams.map((t) => {
+            const hasBall = g.state === "in" && g.possessionAbbr === t.abbr;
+            return (
+              <div key={t.abbr} className="flex items-center gap-2 px-3 py-1.5">
+                <TeamMark logo={t.logo} abbr={t.abbr} size={22} />
+                <span className="flex min-w-0 items-center gap-1.5 text-sm font-semibold text-zinc-100 light:text-zinc-900">
+                  {t.abbr}
+                  {hasBall && (football ? <BallIcon /> : <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400 light:bg-amber-600" aria-label="Possession" />)}
+                  {t.record && <span className="truncate text-[11px] font-normal text-zinc-500 light:text-zinc-400">{t.record}</span>}
+                </span>
+                <span className="ml-auto flex items-baseline">
+                  {t.lines.map((ls, i) => (
+                    <span key={i} className="tnum hidden w-7 text-right font-mono text-xs text-zinc-400 sm:inline-block light:text-zinc-500">
+                      {ls}
+                    </span>
+                  ))}
+                  <span className="tnum w-9 text-right font-mono text-sm font-bold text-white light:text-zinc-900">{t.score}</span>
+                </span>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </button>
+  );
+}
+
+interface LinescoreTeam {
+  abbr: string;
+  name: string;
+  logo: string;
+  record: string;
+  lines: string[];
+  total: string;
+}
+
+/** Gamecast-style linescore table: team rows × period columns + total. */
+function LinescoreTable({ teams, periods, football }: { teams: LinescoreTeam[]; periods: number; football: boolean }) {
+  return (
+    <table className="w-full border-collapse">
+      <thead>
+        <tr className="border-b border-white/10 light:border-zinc-200">
+          <th className="pb-2 text-left text-[11px] font-semibold uppercase tracking-wider text-zinc-400 light:text-zinc-500">Team</th>
+          {Array.from({ length: periods }, (_, i) => (
+            <th key={i} className="tnum hidden w-9 pb-2 text-right font-mono text-[11px] font-semibold uppercase tracking-wider text-zinc-400 sm:table-cell light:text-zinc-500">
+              {periodLabel(i, football)}
+            </th>
+          ))}
+          <th className="tnum w-12 pb-2 text-right font-mono text-[11px] font-semibold uppercase tracking-wider text-zinc-300 light:text-zinc-600">T</th>
+        </tr>
+      </thead>
+      <tbody>
+        {teams.map((t) => (
+          <tr key={t.abbr} className="border-b border-white/5 last:border-0 light:border-zinc-100">
+            <td className="py-2.5 pr-2">
+              <div className="flex min-w-0 items-center gap-2.5">
+                <TeamMark logo={t.logo} abbr={t.abbr} size={30} />
+                <span className="truncate text-sm font-bold text-white light:text-zinc-900 sm:text-base">{t.name}</span>
+                {t.record && <span className="hidden shrink-0 text-xs text-zinc-500 md:inline light:text-zinc-400">{t.record}</span>}
+              </div>
+            </td>
+            {Array.from({ length: periods }, (_, i) => (
+              <td key={i} className="tnum hidden w-9 py-2.5 text-right align-middle font-mono text-sm text-zinc-300 sm:table-cell light:text-zinc-600">
+                {t.lines[i] ?? "–"}
+              </td>
+            ))}
+            <td className="tnum w-12 py-2.5 text-right align-middle font-display text-2xl font-semibold text-white light:text-zinc-900">
+              {t.total}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 
@@ -151,12 +237,143 @@ function PlayRow({ p, homeAbbr }: { p: GameDetail["drives"][number]["plays"][num
   );
 }
 
+function DrivesSection({ detail }: { detail: GameDetail }) {
+  if (detail.drives.length === 0) {
+    return <p className="mt-3 text-sm text-zinc-400 light:text-zinc-600">No drives yet — the game hasn&apos;t started.</p>;
+  }
+  return (
+    <div className="mt-4 space-y-4">
+      {detail.drives.map((dr, di) => (
+        <section key={dr.id} className="overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:border-zinc-200 light:bg-white">
+          <div className="flex items-center justify-between gap-3 border-b border-white/10 bg-zinc-950/70 px-5 py-3 light:border-zinc-200 light:bg-zinc-50">
+            <div className="flex min-w-0 items-center gap-2.5">
+              <TeamMark logo={dr.teamLogo} abbr={dr.teamAbbr} size={24} />
+              <div className="min-w-0">
+                <div className="truncate text-sm font-semibold">{dr.description || `${dr.teamAbbr} drive`}</div>
+              </div>
+            </div>
+            <div className="flex shrink-0 items-center gap-2">
+              {di === 0 && detail.game.state === "in" && (
+                <span className="rounded bg-amber-400/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-300 light:text-amber-700">
+                  current
+                </span>
+              )}
+              {dr.result && (
+                <span className={`rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${dr.isScore ? "bg-emerald-400/15 text-emerald-300 light:text-emerald-700" : "bg-zinc-800 text-zinc-400 light:bg-zinc-200 light:text-zinc-600"}`}>
+                  {dr.result}
+                </span>
+              )}
+            </div>
+          </div>
+          <div>
+            {dr.plays.map((p) => (
+              <PlayRow key={p.id} p={p} homeAbbr={detail.game.homeAbbr} />
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+function ScoringSection({ detail, football }: { detail: GameDetail; football: boolean }) {
+  const logoFor = (abbr: string) =>
+    abbr === detail.game.awayAbbr ? detail.game.awayLogo : abbr === detail.game.homeAbbr ? detail.game.homeLogo : "";
+  return (
+    <div className="mt-4 overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:border-zinc-200 light:bg-white">
+      {detail.scoringPlays.map((p) => (
+        <div key={p.id} className="flex gap-4 border-b border-white/10 px-5 py-3.5 last:border-0 light:border-zinc-100">
+          <div className="w-[72px] shrink-0 pt-0.5">
+            <div className="tnum font-mono text-xs font-bold text-zinc-200 light:text-zinc-800">
+              {p.period ? (football ? `Q${p.period}` : `P${p.period}`) : "–"}
+            </div>
+            <div className="tnum font-mono text-xs text-zinc-400 light:text-zinc-500">{p.clock}</div>
+          </div>
+          <TeamMark logo={logoFor(p.teamAbbr)} abbr={p.teamAbbr} size={24} />
+          <p className="min-w-0 flex-1 text-sm font-medium leading-relaxed text-zinc-100 light:text-zinc-900">{p.text}</p>
+          <div className="tnum shrink-0 pt-0.5 font-mono text-xs font-semibold text-zinc-300 light:text-zinc-600">
+            {p.awayScore}–{p.homeScore}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function StatsSection({ detail }: { detail: GameDetail }) {
+  const logoFor = (abbr: string) =>
+    abbr === detail.game.awayAbbr ? detail.game.awayLogo : abbr === detail.game.homeAbbr ? detail.game.homeLogo : "";
+  return (
+    <div className="mt-4 grid items-start gap-4 lg:grid-cols-[1fr_320px]">
+      {detail.teamStats.length > 0 && (
+        <section className="overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:border-zinc-200 light:bg-white">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-white/10 bg-zinc-950/70 light:border-zinc-200 light:bg-zinc-50">
+                <th className="px-5 py-3 text-left">
+                  <span className="flex items-center gap-2 text-sm font-bold text-white light:text-zinc-900">
+                    <TeamMark logo={detail.game.awayLogo} abbr={detail.game.awayAbbr} size={22} />
+                    {detail.game.awayAbbr}
+                  </span>
+                </th>
+                <th className="px-2 py-3 text-center text-[11px] font-semibold uppercase tracking-wider text-zinc-400 light:text-zinc-500">Team stats</th>
+                <th className="px-5 py-3 text-right">
+                  <span className="flex items-center justify-end gap-2 text-sm font-bold text-white light:text-zinc-900">
+                    {detail.game.homeAbbr}
+                    <TeamMark logo={detail.game.homeLogo} abbr={detail.game.homeAbbr} size={22} />
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {detail.teamStats.map((r) => (
+                <tr key={r.label} className="border-b border-white/5 last:border-0 light:border-zinc-100">
+                  <td className="tnum px-5 py-2.5 font-mono text-sm font-semibold text-zinc-100 light:text-zinc-900">{r.awayValue || "–"}</td>
+                  <td className="px-2 py-2.5 text-center text-xs text-zinc-400 light:text-zinc-500">{r.label}</td>
+                  <td className="tnum px-5 py-2.5 text-right font-mono text-sm font-semibold text-zinc-100 light:text-zinc-900">{r.homeValue || "–"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      )}
+      {detail.leaders.length > 0 && (
+        <div className="space-y-4">
+          {detail.leaders.map((tl) => (
+            <section key={tl.teamAbbr} className="rounded-2xl border border-white/15 bg-zinc-900/70 p-5 light:border-zinc-200 light:bg-white">
+              <div className="flex items-center gap-2">
+                <TeamMark logo={logoFor(tl.teamAbbr)} abbr={tl.teamAbbr} size={24} />
+                <h3 className="text-sm font-bold text-white light:text-zinc-900">{tl.teamAbbr} leaders</h3>
+              </div>
+              <dl className="mt-3 space-y-2.5">
+                {tl.leaders.map((l) => (
+                  <div key={l.category} className="flex items-baseline justify-between gap-3">
+                    <dt className="shrink-0 text-[11px] font-semibold uppercase tracking-wider text-zinc-400 light:text-zinc-500">{l.category}</dt>
+                    <dd className="tnum min-w-0 text-right text-sm text-zinc-200 light:text-zinc-800">
+                      <span className="font-semibold">{l.player}</span>
+                      {l.value && <span className="ml-1.5 font-mono text-xs text-zinc-400 light:text-zinc-500">{l.value}</span>}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+type TabId = "plays" | "scoring" | "stats";
+
 export default function LivePage({ league = "nfl" as League, basePath = "" }: { league?: League; basePath?: string }) {
   const [games, setGames] = useState<LiveGame[] | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [detail, setDetail] = useState<GameDetail | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
+  const [tab, setTab] = useState<TabId>("plays");
+  const football = league === "nfl" || league === "college-football";
 
   const loadBoard = useCallback(async () => {
     try {
@@ -192,6 +409,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
   useEffect(() => {
     if (!selectedId) return;
     setDetail(null);
+    setTab("plays");
     loadDetail(selectedId);
     const t = setInterval(() => loadDetail(selectedId), 30000);
     return () => clearInterval(t);
@@ -203,6 +421,38 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
     return [...games].sort((a, b) => rank[a.state] - rank[b.state]);
   }, [games]);
   const liveCount = games?.filter((g) => g.state === "in").length ?? 0;
+  const boardGame = games?.find((g) => g.id === selectedId) ?? null;
+
+  // Tabs degrade with the feed: basketball summaries carry no drives, and a
+  // pre-game feed has nothing yet — show only tabs that have content.
+  const tabs: { id: TabId; label: string }[] = detail
+    ? [
+        ...(detail.drives.length > 0 ? [{ id: "plays" as TabId, label: "Play-by-Play" }] : []),
+        ...(detail.scoringPlays.length > 0 ? [{ id: "scoring" as TabId, label: "Scoring Summary" }] : []),
+        ...(detail.teamStats.length > 0 || detail.leaders.length > 0
+          ? [{ id: "stats" as TabId, label: "Team Stats" }]
+          : []),
+      ]
+    : [];
+  const activeTab: TabId | null = tabs.some((t) => t.id === tab) ? tab : (tabs[0]?.id ?? null);
+
+  // Linescore + live situation: prefer the detail feed, fall back to the
+  // scoreboard row (the summary feed carries no situation object).
+  const awayLines = detail
+    ? detail.awayLinescores.length > 0
+      ? detail.awayLinescores
+      : (boardGame?.awayLinescores ?? [])
+    : [];
+  const homeLines = detail
+    ? detail.homeLinescores.length > 0
+      ? detail.homeLinescores
+      : (boardGame?.homeLinescores ?? [])
+    : [];
+  const headerPeriods = Math.max(awayLines.length, homeLines.length);
+  const situationText =
+    detail && detail.game.state === "in"
+      ? (boardGame?.situationText ?? detail.game.situationText ?? null)
+      : null;
 
   return (
     <div>
@@ -233,83 +483,92 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
         </p>
       ) : (
         <>
-          <div className="mt-8 flex snap-x gap-3 overflow-x-auto pb-2">
+          <div className="mt-8 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:divide-zinc-100 light:border-zinc-200 light:bg-white">
             {sorted.map((g) => (
-              <GameCard key={g.id} g={g} selected={g.id === selectedId} onSelect={() => setSelectedId(g.id)} />
+              <ScoreboardRow key={g.id} g={g} selected={g.id === selectedId} onSelect={() => setSelectedId(g.id)} football={football} />
             ))}
           </div>
 
           {detail ? (
             <div className="mt-6">
-              {/* Score header */}
-              <div className="flex items-center justify-between rounded-2xl border border-white/20 bg-zinc-800/90 p-5 shadow-lg shadow-black/30 light:border-zinc-200 light:bg-white light:shadow-zinc-300/40">
-                {[
-                  { abbr: detail.game.awayAbbr, name: detail.game.awayName, score: detail.game.awayScore, logo: games?.find((g) => g.id === selectedId)?.awayLogo || detail.game.awayLogo },
-                  { abbr: detail.game.homeAbbr, name: detail.game.homeName, score: detail.game.homeScore, logo: games?.find((g) => g.id === selectedId)?.homeLogo || detail.game.homeLogo },
-                ].map((t, i) => (
-                  <div key={t.abbr} className={`flex flex-1 items-center gap-3 ${i === 1 ? "flex-row-reverse text-right" : ""}`}>
-                    <TeamMark logo={t.logo} abbr={t.abbr} size={48} />
-                    <div className="min-w-0">
-                      <div className="truncate text-base font-bold text-white light:text-zinc-900 sm:text-lg">{t.name}</div>
-                      <div className="text-xs font-medium text-zinc-400 light:text-zinc-500">{t.abbr}</div>
+              {/* Gamecast header: status + live situation over a linescore table */}
+              <div className="rounded-2xl border border-white/20 bg-zinc-800/90 p-5 shadow-lg shadow-black/30 light:border-zinc-200 light:bg-white light:shadow-zinc-300/40">
+                <div className="flex items-start justify-between gap-3 pb-2">
+                  <div className="min-w-0">
+                    <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-300 light:text-amber-600" : "text-zinc-200 light:text-zinc-600"}`}>
+                      {detail.game.state === "in" ? detail.game.detail || "Live" : detail.game.state === "post" ? "Final" : detail.game.detail}
                     </div>
-                    <div className="tnum font-display text-5xl font-semibold text-white light:text-zinc-900 sm:text-6xl">{t.score}</div>
-                  </div>
-                ))}
-                <div className="shrink-0 px-3 text-center sm:px-4">
-                  <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-300 light:text-amber-600" : "text-zinc-200 light:text-zinc-600"}`}>
-                    {detail.game.state === "in" ? detail.game.detail || "Live" : detail.game.state === "post" ? "Final" : detail.game.detail}
+                    {situationText && (
+                      <div className="mt-1 flex items-center gap-1.5 text-sm font-semibold text-amber-300 light:text-amber-700">
+                        {football && <BallIcon size={14} />}
+                        {situationText}
+                      </div>
+                    )}
                   </div>
                   {lastUpdate && (
-                    <div className="mt-1 text-[11px] text-zinc-400 light:text-zinc-500">
+                    <div className="shrink-0 text-[11px] text-zinc-400 light:text-zinc-500">
                       updated {lastUpdate.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}
                     </div>
                   )}
                 </div>
+                <LinescoreTable
+                  football={football}
+                  periods={headerPeriods}
+                  teams={[
+                    {
+                      abbr: detail.game.awayAbbr,
+                      name: detail.game.awayName,
+                      logo: boardGame?.awayLogo || detail.game.awayLogo,
+                      record: detail.game.awayRecord || boardGame?.awayRecord || "",
+                      lines: awayLines,
+                      total: detail.game.awayScore,
+                    },
+                    {
+                      abbr: detail.game.homeAbbr,
+                      name: detail.game.homeName,
+                      logo: boardGame?.homeLogo || detail.game.homeLogo,
+                      record: detail.game.homeRecord || boardGame?.homeRecord || "",
+                      lines: homeLines,
+                      total: detail.game.homeScore,
+                    },
+                  ]}
+                />
               </div>
 
               <div className="mt-4">
                 <WinProbChart points={detail.winProb} homeAbbr={detail.game.homeAbbr} awayAbbr={detail.game.awayAbbr} />
               </div>
 
-              {/* Drives */}
-              <h2 className="mt-8 font-display text-2xl font-semibold uppercase tracking-wide">
-                Drives
-              </h2>
-              {detail.drives.length === 0 ? (
-                <p className="mt-3 text-sm text-zinc-400 light:text-zinc-600">No drives yet — the game hasn&apos;t started.</p>
+              {/* Tabs: play-by-play / scoring summary / team stats */}
+              {tabs.length > 0 && activeTab ? (
+                <>
+                  <div className="mt-8 flex gap-1 overflow-x-auto border-b border-white/10 light:border-zinc-200" role="tablist" aria-label="Game detail sections">
+                    {tabs.map((t) => (
+                      <button
+                        key={t.id}
+                        role="tab"
+                        aria-selected={activeTab === t.id}
+                        onClick={() => setTab(t.id)}
+                        className={`-mb-px shrink-0 border-b-2 px-4 py-2.5 text-sm font-semibold transition ${
+                          activeTab === t.id
+                            ? "border-amber-400 text-amber-300 light:border-amber-600 light:text-amber-700"
+                            : "border-transparent text-zinc-400 hover:text-zinc-200 light:text-zinc-500 light:hover:text-zinc-800"
+                        }`}
+                      >
+                        {t.label}
+                      </button>
+                    ))}
+                  </div>
+                  {activeTab === "plays" && <DrivesSection detail={detail} />}
+                  {activeTab === "scoring" && <ScoringSection detail={detail} football={football} />}
+                  {activeTab === "stats" && <StatsSection detail={detail} />}
+                </>
               ) : (
-                <div className="mt-4 space-y-4">
-                  {detail.drives.map((dr, di) => (
-                    <section key={dr.id} className="overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:border-zinc-200 light:bg-white">
-                      <div className="flex items-center justify-between gap-3 border-b border-white/10 bg-zinc-950/70 px-5 py-3 light:border-zinc-200 light:bg-zinc-50">
-                        <div className="flex min-w-0 items-center gap-2.5">
-                          <TeamMark logo={dr.teamLogo} abbr={dr.teamAbbr} size={24} />
-                          <div className="min-w-0">
-                            <div className="truncate text-sm font-semibold">{dr.description || `${dr.teamAbbr} drive`}</div>
-                          </div>
-                        </div>
-                        <div className="flex shrink-0 items-center gap-2">
-                          {di === 0 && detail.game.state === "in" && (
-                            <span className="rounded bg-amber-400/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-300 light:text-amber-700">
-                              current
-                            </span>
-                          )}
-                          {dr.result && (
-                            <span className={`rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${dr.isScore ? "bg-emerald-400/15 text-emerald-300 light:text-emerald-700" : "bg-zinc-800 text-zinc-400 light:bg-zinc-200 light:text-zinc-600"}`}>
-                              {dr.result}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                      <div>
-                        {dr.plays.map((p) => (
-                          <PlayRow key={p.id} p={p} homeAbbr={detail.game.homeAbbr} />
-                        ))}
-                      </div>
-                    </section>
-                  ))}
-                </div>
+                detail.game.state === "pre" && (
+                  <p className="mt-8 text-sm text-zinc-400 light:text-zinc-600">
+                    Play-by-play, scoring summary, and team stats appear here once the game is underway.
+                  </p>
+                )
               )}
             </div>
           ) : (

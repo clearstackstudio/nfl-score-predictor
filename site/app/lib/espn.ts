@@ -20,12 +20,45 @@ export interface LiveGame {
   awayName: string;
   awayScore: string;
   awayLogo: string;
+  awayRecord: string;
+  awayLinescores: string[];
   homeAbbr: string;
   homeName: string;
   homeScore: string;
   homeLogo: string;
+  homeRecord: string;
+  homeLinescores: string[];
   /** Abbreviation of the team currently in possession, or null if unknown/not live. */
   possessionAbbr: string | null;
+  /** Live down & distance text, e.g. "1st & 10 at DEN 34", or null when not live/unknown. */
+  situationText: string | null;
+}
+
+export interface StatRow {
+  label: string;
+  awayValue: string;
+  homeValue: string;
+}
+
+export interface TeamLeader {
+  category: string;
+  player: string;
+  value: string;
+}
+
+export interface TeamLeaders {
+  teamAbbr: string;
+  leaders: TeamLeader[];
+}
+
+export interface ScoringPlay {
+  id: string;
+  period: number;
+  clock: string;
+  teamAbbr: string;
+  text: string;
+  awayScore: number;
+  homeScore: number;
 }
 
 export interface Play {
@@ -59,6 +92,62 @@ export interface GameDetail {
   game: LiveGame;
   drives: Drive[];
   winProb: WinProbPoint[];
+  awayLinescores: string[];
+  homeLinescores: string[];
+  teamStats: StatRow[];
+  leaders: TeamLeaders[];
+  scoringPlays: ScoringPlay[];
+}
+
+interface RawLinescore {
+  value?: number | null;
+  displayValue?: string;
+}
+
+interface RawTeamExtras {
+  records?: { summary?: string }[];
+  linescores?: RawLinescore[];
+}
+
+/** Period scores from a scoreboard competitor: linescores carry a numeric value. */
+function boardLinescores(c: RawTeamExtras | undefined): string[] {
+  return (c?.linescores ?? [])
+    .map((l) => (l?.value != null ? String(Math.trunc(Number(l.value))) : l?.displayValue ?? ""))
+    .filter((s) => s !== "");
+}
+
+/** Period scores from a summary competitor: value is null there, displayValue is set. */
+function summaryLinescores(c: RawTeamExtras | undefined): string[] {
+  return (c?.linescores ?? [])
+    .map((l) => l?.displayValue ?? (l?.value != null ? String(Math.trunc(Number(l.value))) : ""))
+    .filter((s) => s !== "");
+}
+
+function recordOf(c: RawTeamExtras | undefined): string {
+  return c?.records?.[0]?.summary ?? "";
+}
+
+interface RawStatTeam {
+  homeAway?: string;
+  statistics?: { label?: string; displayValue?: string }[];
+}
+
+interface RawLeaderTeam {
+  team?: { abbreviation?: string };
+  leaders?: {
+    displayName?: string;
+    leaders?: { athlete?: { displayName?: string }; displayValue?: string }[];
+  }[];
+}
+
+interface RawScoringPlay {
+  id?: string | number;
+  period?: { number?: number };
+  clock?: { displayValue?: string };
+  team?: { abbreviation?: string };
+  text?: string;
+  awayScore?: number;
+  homeScore?: number;
 }
 
 const API = "https://site.api.espn.com/apis/site/v2/sports";
@@ -94,11 +183,16 @@ export async function fetchScoreboard(league: League): Promise<LiveGame[]> {
       awayName: away.team?.displayName ?? away.team?.abbreviation ?? "",
       awayScore: away.score ?? "0",
       awayLogo: away.team?.logo ?? "",
+      awayRecord: recordOf(away),
+      awayLinescores: boardLinescores(away),
       homeAbbr: home.team?.abbreviation ?? "",
       homeName: home.team?.displayName ?? home.team?.abbreviation ?? "",
       homeScore: home.score ?? "0",
       homeLogo: home.team?.logo ?? "",
+      homeRecord: recordOf(home),
+      homeLinescores: boardLinescores(home),
       possessionAbbr,
+      situationText: comp.situation?.downDistanceText ?? null,
     };
   });
 }
@@ -150,11 +244,16 @@ export async function fetchGameDetail(league: League, gameId: string): Promise<G
     awayName: away.team?.displayName ?? "",
     awayScore: away.score ?? "0",
     awayLogo: away.team?.logo ?? "",
+    awayRecord: recordOf(away),
+    awayLinescores: summaryLinescores(away),
     homeAbbr: home.team?.abbreviation ?? "",
     homeName: home.team?.displayName ?? "",
     homeScore: home.score ?? "0",
     homeLogo: home.team?.logo ?? "",
+    homeRecord: recordOf(home),
+    homeLinescores: summaryLinescores(home),
     possessionAbbr,
+    situationText: comp.situation?.downDistanceText ?? null,
   };
 
   const logoFor = (abbr: string) =>
@@ -183,5 +282,63 @@ export async function fetchGameDetail(league: League, gameId: string): Promise<G
     playId: String(w.playId ?? ""),
   }));
 
-  return { game, drives, winProb };
+  // Team stats: align the two boxscore.teams statistics lists by label,
+  // preserving the away team's label order, then any home-only labels.
+  const statList = (side: "away" | "home"): { label: string; value: string }[] => {
+    const t = ((d.boxscore?.teams ?? []) as RawStatTeam[]).find((x) => x?.homeAway === side);
+    return (t?.statistics ?? [])
+      .map((s) => ({ label: s?.label ?? "", value: s?.displayValue ?? "" }))
+      .filter((s) => s.label !== "");
+  };
+  const awayStats = statList("away");
+  const homeStats = statList("home");
+  const homeByLabel = new Map(homeStats.map((s) => [s.label, s.value]));
+  const teamStats: StatRow[] = awayStats.map((s) => ({
+    label: s.label,
+    awayValue: s.value,
+    homeValue: homeByLabel.get(s.label) ?? "",
+  }));
+  for (const s of homeStats) {
+    if (!teamStats.some((r) => r.label === s.label)) {
+      teamStats.push({ label: s.label, awayValue: "", homeValue: s.value });
+    }
+  }
+
+  // Game leaders per team. ESPN reports the placeholder player name
+  // "None" for empty categories (e.g. sacks before any sack) — drop those.
+  const leaders: TeamLeaders[] = ((d.leaders ?? []) as RawLeaderTeam[])
+    .map((tl): TeamLeaders => {
+      const rows: TeamLeader[] = [];
+      for (const cat of tl?.leaders ?? []) {
+        const top = cat?.leaders?.[0];
+        const player = top?.athlete?.displayName ?? "";
+        if (!cat?.displayName || !player || player === "None") continue;
+        rows.push({ category: cat.displayName, player, value: top?.displayValue ?? "" });
+      }
+      return { teamAbbr: tl?.team?.abbreviation ?? "", leaders: rows };
+    })
+    .filter((t: TeamLeaders) => t.teamAbbr !== "" && t.leaders.length > 0);
+
+  const scoringPlays: ScoringPlay[] = ((d.scoringPlays ?? []) as RawScoringPlay[])
+    .map((p, i): ScoringPlay => ({
+      id: String(p?.id ?? i),
+      period: p?.period?.number ?? 0,
+      clock: p?.clock?.displayValue ?? "",
+      teamAbbr: p?.team?.abbreviation ?? "",
+      text: p?.text ?? "",
+      awayScore: Number(p?.awayScore ?? 0),
+      homeScore: Number(p?.homeScore ?? 0),
+    }))
+    .filter((p) => p.text !== "");
+
+  return {
+    game,
+    drives,
+    winProb,
+    awayLinescores: game.awayLinescores,
+    homeLinescores: game.homeLinescores,
+    teamStats,
+    leaders,
+    scoringPlays,
+  };
 }
