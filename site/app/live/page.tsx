@@ -417,7 +417,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
 
   const sorted = useMemo(() => {
     if (!games) return [];
-    const rank = { post: 0, in: 1, pre: 2 } as const;
+    const rank = { in: 0, post: 1, pre: 2 } as const;
     return [...games].sort((a, b) => rank[a.state] - rank[b.state]);
   }, [games]);
   const liveCount = games?.filter((g) => g.state === "in").length ?? 0;
