@@ -1,0 +1,36 @@
+legs: 13533 (spread 8489, total 5044)
+leg win rates: spread 48.3%, total 49.8%
+
+=== H-P1 policies ===
+  (a) current top-3 any market: parlays=185  outright hits=21 (11.4%)  book ROI/unit=-0.128 (total -23.6)  fair-odds ROI/unit=-0.140
+    3-leg: n=185 hit 11.4% ROI -0.128
+  (b) spread legs only: parlays=185  outright hits=19 (10.3%)  book ROI/unit=-0.262 (total -48.4)  fair-odds ROI/unit=-0.217
+    3-leg: n=185 hit 10.3% ROI -0.262
+  (d) current pool + EV gate: parlays=174  outright hits=20 (11.5%)  book ROI/unit=-0.133 (total -23.2)  fair-odds ROI/unit=-0.148
+    3-leg: n=174 hit 11.5% ROI -0.133
+
+  (a) per-season:
+    2014: n=15 hit 20.0% ROI +0.400
+    2015: n=15 hit 20.0% ROI +0.400
+    2016: n=15 hit 6.7% ROI -0.533
+    2017: n=15 hit 0.0% ROI -0.520
+    2018: n=15 hit 13.3% ROI +0.173
+    2019: n=16 hit 18.8% ROI +0.312
+    2020: n=17 hit 29.4% ROI +1.059
+    2021: n=15 hit 0.0% ROI -1.000
+    2022: n=15 hit 6.7% ROI -0.533
+    2023: n=15 hit 6.7% ROI -0.533
+    2024: n=16 hit 6.2% ROI -0.338
+    2025: n=16 hit 6.2% ROI -0.562
+
+  (a) market mix of selected legs:
+markets
+total+total+total      180
+spread+total+total       4
+spread+spread+total      1
+
+  leg outcomes by recalibrated prob band:
+band
+(0.5, 0.51]     n=3779 W50.1%
+(0.51, 0.52]    n=2480 W49.5%
+(0.52, 0.53]    n=1332 W48.3%

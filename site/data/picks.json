@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 6,
-  "generated": "2026-10-15 19:41 PDT",
+  "generated": "2026-10-15 20:26 PDT",
   "disclaimer": "Model probabilities for entertainment. Our backtest shows no edge vs the closing line \u2014 track record published openly.",
   "parlay": {
     "legs": [
@@ -110,28 +110,28 @@
       "weekday": "Sunday",
       "line_spread": -1.5,
       "line_total": 50.5,
-      "our_spread": 7.2,
-      "our_total": 50.7,
-      "spread_edge": 8.7,
-      "total_edge": 0.2,
+      "our_spread": 4.5,
+      "our_total": 53.4,
+      "spread_edge": 6.0,
+      "total_edge": 2.9,
       "qb_adj_home": 2.6,
-      "qb_adj_away": -3.3,
+      "qb_adj_away": -0.6,
       "wind_mph": null,
       "wind_adj_pts": 0.0,
       "indoor_adj_pts": 0.0,
       "pick_spread": "home",
-      "pick_total": null,
+      "pick_total": "over",
       "pick_total_note": null,
       "pick_spread_label": "ATL +1.5",
-      "pick_total_label": null,
+      "pick_total_label": "Over 50.5",
       "spread_labels": {
         "home": "ATL +1.5",
         "away": "CHI -1.5"
       },
-      "cover_prob": 0.5,
-      "ou_prob": null,
+      "cover_prob": 0.502,
+      "ou_prob": 0.51,
       "home_qb": "Michael Penix Jr.",
-      "away_qb": "Tyson Bagent"
+      "away_qb": "Caleb Williams"
     },
     {
       "away": "Baltimore Ravens",
