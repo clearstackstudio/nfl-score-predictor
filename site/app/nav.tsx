@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type LeagueId = "nfl" | "cfb" | "nba" | "ncaab" | "mlb";
 
@@ -53,6 +53,23 @@ export default function Nav() {
   const base = leagueCfg.base;
   const scoreboard = leagueCfg.scoreboard;
   const [anyLive, setAnyLive] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+
+  // The nav row scrolls horizontally on narrow screens, and later tabs
+  // (e.g. Rankings) can sit off-screen after a navigation resets the
+  // row's scroll. Keep the active tab visible: scroll the row so the
+  // current page's tab is in view whenever the route changes.
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+    const active = nav.querySelector('[aria-current="page"]');
+    if (!active) return;
+    const delta =
+      active.getBoundingClientRect().left - nav.getBoundingClientRect().left;
+    if (delta < 0 || delta > nav.clientWidth - 48) {
+      nav.scrollLeft += delta - 8;
+    }
+  }, [pathname]);
 
   useEffect(() => {
     let cancelled = false;
@@ -105,7 +122,7 @@ export default function Nav() {
           );
         })}
       </div>
-      <nav className="flex max-w-full gap-1 overflow-x-auto" aria-label="Primary">
+      <nav ref={navRef} className="flex max-w-full gap-1 overflow-x-auto" aria-label="Primary">
         {NAV_ITEMS.filter(
           (item) => !(league === "mlb" && item.slug === "/live")
         ).map((item) => {
