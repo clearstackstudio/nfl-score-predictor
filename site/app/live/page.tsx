@@ -466,7 +466,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
       </p>
 
       {error && (
-        <p className="mt-6 rounded-xl border border-red-400/25 bg-red-400/10 px-4 py-3 text-sm text-red-200">
+        <p className="mt-6 rounded-xl border border-red-400/25 bg-red-400/10 px-4 py-3 text-sm text-red-200 light:border-red-600/30 light:bg-red-600/10 light:text-red-700">
           {error}
         </p>
       )}

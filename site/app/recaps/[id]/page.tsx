@@ -187,7 +187,7 @@ export default async function RecapPage({
       <p className="mt-8 max-w-2xl text-xs text-zinc-500">
         Every pick above was published before kickoff and graded against the final
         score. Nothing rewritten, nothing hidden — the full record lives on the{" "}
-        <Link href="/track-record" className="underline hover:text-zinc-300">
+        <Link href="/track-record" className="underline hover:text-zinc-300 light:hover:text-zinc-900">
           track record
         </Link>{" "}
         page.

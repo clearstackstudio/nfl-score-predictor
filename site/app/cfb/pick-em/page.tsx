@@ -303,7 +303,7 @@ export default function CfbPickEm() {
           Week {week} <span className="font-sans text-sm font-medium normal-case tracking-normal text-zinc-500">· your card</span>
         </h2>
         <div className="flex items-center gap-3">
-          <span className="text-sm text-zinc-400">
+          <span className="text-sm text-zinc-400 light:text-zinc-600">
             {ready ? `${pickedCount} of ${pickedTotal} picked` : "…"}
           </span>
           <button
@@ -556,11 +556,11 @@ export default function CfbPickEm() {
                   <tr key={r.week} className="border-b border-zinc-800/60 last:border-0 light:border-zinc-200">
                     <td className="px-4 py-3 font-semibold">{r.week}</td>
                     <td className="px-4 py-3 font-mono text-amber-200/90 light:text-amber-700">{r.youAts ? fmtTally(r.youAts) : "—"}</td>
-                    <td className="px-4 py-3 font-mono text-zinc-400">{fmtTally(r.modelAts)}</td>
+                    <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{fmtTally(r.modelAts)}</td>
                     <td className="px-4 py-3 font-mono text-amber-200/90 light:text-amber-700">{r.youSu ? fmtTally(r.youSu) : "—"}</td>
-                    <td className="px-4 py-3 font-mono text-zinc-400">{fmtTally(r.modelSu)}</td>
+                    <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{fmtTally(r.modelSu)}</td>
                     <td className="px-4 py-3 font-mono text-amber-200/90 light:text-amber-700">{r.youOu ? fmtTally(r.youOu) : "—"}</td>
-                    <td className="px-4 py-3 font-mono text-zinc-400">{fmtTally(r.modelOu)}</td>
+                    <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{fmtTally(r.modelOu)}</td>
                   </tr>
                 ))}
               </tbody>
