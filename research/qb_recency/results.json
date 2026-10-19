@@ -1,1 +1,248 @@
-{"baseline_published_pin":{"ats":[399,441,26],"ats_pct":0.475,"games":1107,"our_margin_rmse":14.443910158355155,"source":"research/epa_live_backtest/config_a.json (pre-damping model, Arm 0 w=1.00)"},"baseline_reproduced":{"ats":[393,438,29],"ats_pct":0.4729241877256318,"games":1107,"our_margin_rmse":14.130860208614187,"seconds":168.6,"source":"src/epa_ratings.run_backtest() as-is, 2026-10-19, repo venv"},"diagnosis":{"cause":"Commit e1056e3 (2026-10-12) adopted QB-inclusive turnover damping (w=0.50) into the live EPA ratings after the epa_live_backtest baseline was measured. The preregistration (2026-10-15) pins the pre-damping pair while specifying the live (damped) config.","evidence":"Today's reproduction matches research/turnover_damping/RESULTS.md's robustness arm (w=0.50 + QB pool damped = the adopted configuration) exactly: ATS 393-438-29 (47.29%), margin RMSE 14.131, n=1107.","test_run":false,"verdict":null},"status":"STOPPED","stop_rule":"Preregistration: if the reproduced 2021-24 baseline does not match the published ATS 47.5% / margin RMSE 14.44, stop and report.","unblock":"Addendum to PREREGISTRATION.md re-pinning the baseline gate to ATS 47.29% (393-438-29) / margin RMSE 14.131 / n=1107, and re-basing the runner's internal per-game check (the harness per_game.csv and its aggregates are pre-damping). All other protocol elements unchanged."}
+{
+  "baseline_reproduced": {
+    "games": 1107,
+    "ats": [
+      393,
+      438,
+      29
+    ],
+    "ats_pct": 0.4729241877256318,
+    "our_margin_rmse": 14.130860208614187,
+    "seconds": 170.1
+  },
+  "replication_check": {
+    "games_2021_24": 1107,
+    "ats_wlp": [
+      393,
+      438,
+      29
+    ],
+    "margin_rmse": 14.130860208614182,
+    "merged_vs_harness_per_game": 1107,
+    "max_abs_margin_diff": 3.552713678800501e-15
+  },
+  "coverage": {
+    "discovery_2021_2023": {
+      "predicted_games": 822,
+      "both_continuing": 235,
+      "both_continuing_pct": 0.28588807785888076,
+      "test_sample": 199,
+      "test_sample_pct": 0.24209245742092458
+    },
+    "validation_2024_2025": {
+      "predicted_games": 570,
+      "both_continuing": 108,
+      "both_continuing_pct": 0.18947368421052632,
+      "test_sample": 106,
+      "test_sample_pct": 0.18596491228070175
+    },
+    "all_2021_2025": {
+      "predicted_games": 1392,
+      "both_continuing": 343,
+      "both_continuing_pct": 0.2464080459770115,
+      "test_sample": 305,
+      "test_sample_pct": 0.21910919540229884
+    }
+  },
+  "primary": {
+    "discovery_fit": {
+      "intercept": -0.7227322051554915,
+      "slope": -2.407374369657768,
+      "se_slope": 2.86710305509011,
+      "z": -0.8396539375812938,
+      "n": 199
+    },
+    "validation_fit": {
+      "intercept": 0.7610822826173442,
+      "slope": 2.53665764187905,
+      "se_slope": 3.448893083207056,
+      "z": 0.7354990661294328,
+      "n": 106
+    },
+    "validation_rmse_unadjusted": 13.267215668140059,
+    "validation_rmse_adjusted": 13.36594943686197,
+    "validation_rmse_per_season": {
+      "2024": {
+        "n": 59,
+        "rmse_unadjusted": 13.901669874260284,
+        "rmse_adjusted": 14.04920146953167
+      },
+      "2025": {
+        "n": 47,
+        "rmse_unadjusted": 12.424997226526266,
+        "rmse_adjusted": 12.45530597607508
+      }
+    },
+    "bar1_slope_positive_z>=1.96": false,
+    "bar2_rmse_reduced": false,
+    "guardrail_worse_in_both_seasons": true
+  },
+  "secondary": {
+    "int_regression_discovery": {
+      "intercept": -0.664601658370526,
+      "slope": 0.3611986724838678,
+      "se_slope": 0.9755814863635567,
+      "z": 0.37023936752861336,
+      "n": 199
+    },
+    "int_regression_validation": {
+      "intercept": 0.8032709136745023,
+      "slope": 0.7447483152138975,
+      "se_slope": 1.1985078824616546,
+      "z": 0.6213962595592066,
+      "n": 106
+    },
+    "ats_split_validation": {
+      "agree": {
+        "wlp": [
+          24,
+          22,
+          0
+        ],
+        "win_pct": 0.5217391304347826
+      },
+      "disagree": {
+        "wlp": [
+          14,
+          24,
+          0
+        ],
+        "win_pct": 0.3684210526315789
+      }
+    },
+    "ats_split_discovery": {
+      "agree": {
+        "wlp": [
+          34,
+          41,
+          1
+        ],
+        "win_pct": 0.4533333333333333
+      },
+      "disagree": {
+        "wlp": [
+          32,
+          29,
+          2
+        ],
+        "win_pct": 0.5245901639344263
+      }
+    },
+    "ats_split_note": "2025 rows use the nflverse schedules spread_line (see header); 2021-2024 rows use spreadspoke closing spreads, as in prior diagnostics."
+  },
+  "verdict": "KILL",
+  "status": "COMPLETED",
+  "supplementary_descriptive": {
+    "per_season_test_sample": {
+      "2021": {
+        "n_test_sample": 105,
+        "rmse_unadjusted": 15.964634227982364,
+        "rmse_adjusted_b_discovery": 15.86690456552687,
+        "beta_within_season_descriptive": {
+          "slope": -5.054614356625897,
+          "se": 3.8463590252752824,
+          "z": -1.3141296284124544
+        }
+      },
+      "2022": {
+        "n_test_sample": 47,
+        "rmse_unadjusted": 13.561621307353207,
+        "rmse_adjusted_b_discovery": 13.737704228522436,
+        "beta_within_season_descriptive": {
+          "slope": 7.679204307965142,
+          "se": 6.1854309617468735,
+          "z": 1.2414986692853494
+        }
+      },
+      "2023": {
+        "n_test_sample": 47,
+        "rmse_unadjusted": 13.146088105531618,
+        "rmse_adjusted_b_discovery": 13.111251349529665,
+        "beta_within_season_descriptive": {
+          "slope": -1.9647913895855507,
+          "se": 6.245824180164857,
+          "z": -0.31457680090086854
+        }
+      },
+      "2024": {
+        "n_test_sample": 59,
+        "rmse_unadjusted": 13.901669874260284,
+        "rmse_adjusted_b_discovery": 14.049201469531669,
+        "beta_within_season_descriptive": {
+          "slope": 4.508492857660955,
+          "se": 4.714496998470975,
+          "z": 0.9563041103055465
+        }
+      },
+      "2025": {
+        "n_test_sample": 47,
+        "rmse_unadjusted": 12.424997226526266,
+        "rmse_adjusted_b_discovery": 12.45530597607508,
+        "beta_within_season_descriptive": {
+          "slope": -0.5603951070915377,
+          "se": 5.085826311775351,
+          "z": -0.11018762197876081
+        }
+      }
+    },
+    "validation_rmse_delta_bootstrap": {
+      "delta_rmse_adjusted_minus_unadjusted": 0.09873376872191031,
+      "ci95": [
+        -0.09086069233333824,
+        0.2769696347075744
+      ],
+      "share_of_resamples_improving": 0.1528,
+      "b_resamples": 10000,
+      "seed": 20261019,
+      "n": 106
+    },
+    "ats_context_all_predicted": {
+      "2021": {
+        "wlp": [
+          89,
+          115,
+          3
+        ],
+        "win_pct": 0.4362745098039216,
+        "predicted_games": 253
+      },
+      "2022": {
+        "wlp": [
+          102,
+          106,
+          7
+        ],
+        "win_pct": 0.49038461538461536,
+        "predicted_games": 284
+      },
+      "2023": {
+        "wlp": [
+          93,
+          99,
+          11
+        ],
+        "win_pct": 0.484375,
+        "predicted_games": 285
+      },
+      "2024": {
+        "wlp": [
+          109,
+          118,
+          8
+        ],
+        "win_pct": 0.4801762114537445,
+        "predicted_games": 285
+      },
+      "2025": {
+        "wlp": [
+          100,
+          119,
+          1
+        ],
+        "win_pct": 0.45662100456621,
+        "predicted_games": 285
+      }
+    }
+  },
+  "supplementary_note": "Descriptive only; computed from per_game.csv after the frozen run. Not part of the preregistered verdict."
+}

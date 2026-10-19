@@ -107,3 +107,53 @@ Scope written 2026-10-15 at Bryant's direction. **Not run.** On Bryant's
 go-ahead: build features, reproduce the baseline, run the frozen test once,
 write `research/qb_recency/RESULTS.md` with the verdict (KEEP or KILL) and
 the full numbers, and report in chat. Cost: $0 — all data already in repo.
+
+---
+
+## ADDENDUM — baseline re-pin (2026-10-19)
+
+**Approved by Bryant, 2026-10-19**, after the first run attempt stopped at
+the baseline gate (see `RESULTS.md` / `results.json` of that attempt). The
+diagnosis, established with evidence before this addendum was written: the
+gate below pinned the **pre-turnover-damping** baseline pair (ATS 47.5% /
+margin RMSE 14.44, from `research/epa_live_backtest/`, measured before
+damping was adopted), while this preregistration specifies the test under
+the LIVE — damped — configuration. This addendum corrects the pins only.
+
+### What changes (pins only)
+
+1. **Baseline reproduction gate** is re-pinned to the live model's
+   configuration — QB-inclusive turnover damping w = 0.50, adopted in
+   commit `e1056e3` (2026-10-12):
+   - ATS **47.29%** (record **393-438-29**)
+   - Margin RMSE **14.131**
+   - n = **1,107** games (2021–2024)
+
+   The 2026-10-19 reproduction of `src/epa_ratings.run_backtest()` matched
+   these figures digit-for-digit, and they are identical to the damping
+   study's published robustness arm (w = 0.50 with the QB pool damped —
+   exactly the adopted configuration; `research/turnover_damping/RESULTS.md`).
+2. **The runner's internal per-game replication check** is re-based to the
+   same damped-model artifacts: the reference per-game file becomes
+   `research/turnover_damping/per_game_robustness_w0.50_qb.csv` (with its
+   aggregates 393-438-29 / RMSE 14.131 / n = 1,107), replacing the
+   pre-damping `research/epa_live_backtest/per_game.csv` and its
+   399-441-26 / 14.44 aggregates.
+3. **2025 descriptive ATS split source ratified:** the descriptive ATS
+   outputs take 2025 closing spreads from `data/schedules_games.parquet`
+   (`spread_line`), because the repo's line store
+   (`spreadspoke_scores.csv`) ends at 2024. Verified on 2021–2024 against
+   spreadspoke: same sign convention, correlation 0.996; final scores agree
+   99.9%. The primary test uses no lines at all and is unaffected by this
+   choice.
+
+### What does NOT change
+
+The hypothesis, the feature definitions and eligibility rules, the model
+form (OLS of `margin_resid` on `qb_form_diff`, slope fit on discovery
+2021–2023 only), the walk-forward design and splits (discovery 2021–2023,
+validation 2024–2025, 2026 excluded), and the decision rule and its bars —
+KEEP iff BOTH validation bars hold (slope > 0 with z ≥ 1.96, AND the
+discovery-fitted adjustment reduces validation margin RMSE), with the
+both-validation-seasons-worse guardrail as an automatic KILL, otherwise
+KILL — are **UNCHANGED**. No bar is softened, moved, or reinterpreted.

@@ -3,14 +3,20 @@
 Executes research/qb_recency/PREREGISTRATION.md exactly as written:
 
   Phase 0  Reproduce the harness baseline (src/epa_ratings.run_backtest,
-           PBP_YEARS 2021-2024 as-is). STOP if ATS != 47.5% or margin
-           RMSE != 14.44 (published, research/epa_live_backtest/RESULTS.md).
+           PBP_YEARS 2021-2024 as-is). STOP if ATS != 47.29% or margin
+           RMSE != 14.131 — the gate as re-pinned by the 2026-10-19
+           ADDENDUM to PREREGISTRATION.md (live damped config, w = 0.50;
+           published as the robustness arm of
+           research/turnover_damping/RESULTS.md). The original pins
+           (47.5% / 14.44) were pre-damping and halted the first attempt.
   Phase 1  Walk-forward predictions 2021-2025 under the live EPA config
            (same imported functions and loop order as
            research/epa_live_backtest Part B), with QB-recency features
            computed at each game's prediction cutoff from games strictly
-           before it. The 2021-2024 rows are verified against config A /
-           the harness per_game.csv before anything else is trusted.
+           before it. The 2021-2024 rows are verified against the damping
+           study's robustness per-game file
+           (research/turnover_damping/per_game_robustness_w0.50_qb.csv,
+           per the addendum) before anything else is trusted.
   Phase 2  The frozen test: OLS of margin_resid on qb_form_diff, slope fit
            on discovery 2021-2023, verdict bars evaluated on validation
            2024-2025. Plus the pre-registered descriptive outputs.
@@ -55,8 +61,8 @@ from epa_ratings import (  # noqa: E402
 YEARS = [2021, 2022, 2023, 2024, 2025]
 DISCOVERY = [2021, 2022, 2023]
 VALIDATION = [2024, 2025]
-PUBLISHED_ATS_PCT = 47.5
-PUBLISHED_RMSE = 14.44
+PUBLISHED_ATS_PCT = 47.29  # re-pinned by the 2026-10-19 addendum (damped config)
+PUBLISHED_RMSE = 14.131    # re-pinned by the 2026-10-19 addendum (damped config)
 
 
 def fail(results: dict, msg: str) -> None:
@@ -354,7 +360,8 @@ def verify_replication(df: pd.DataFrame, results: dict) -> None:
                 w += 1
             else:
                 l += 1
-    ref = pd.read_csv(REPO / "research" / "epa_live_backtest" / "per_game.csv")
+    ref = pd.read_csv(REPO / "research" / "turnover_damping"
+                      / "per_game_robustness_w0.50_qb.csv")
     m = sub.merge(ref, on=["season", "week", "home", "away"], suffixes=("", "_ref"))
     max_diff = float((m["our_margin"] - m["our_margin_ref"]).abs().max()) \
         if len(m) else float("nan")
@@ -364,11 +371,11 @@ def verify_replication(df: pd.DataFrame, results: dict) -> None:
     }
     print(f"[phase1] 2021-24 replication: n={n} ats={w}-{l}-{p} "
           f"rmse={rmse:.4f} max_diff_vs_harness={max_diff:.2e}")
-    if not (n == 1107 and (w, l, p) == (399, 441, 26)
-            and abs(rmse - 14.443910158355157) < 1e-6
+    if not (n == 1107 and (w, l, p) == (393, 438, 29)
+            and abs(rmse - 14.130860208614187) < 1e-6
             and len(m) == 1107 and max_diff < 1e-9):
         fail(results, "extended walk-forward does not reproduce the "
-                      "verified 2021-24 harness rows; analysis halted")
+                      "verified 2021-24 damped-config rows; analysis halted")
 
 
 # --------------------------------------------------------------------------
@@ -516,8 +523,11 @@ def main() -> None:
     md = f"""# QB recency diagnostic — RESULTS
 
 **Run:** 2026-10-19, on Bryant's explicit approval to run the diagnostic
-scoped 2026-10-15. **Preregistration:** `PREREGISTRATION.md` in this
-directory (written before any recency results were computed). Runner:
+scoped 2026-10-15, under the 2026-10-19 addendum he approved after the
+first attempt stopped at the stale pre-damping baseline pin (pins only;
+protocol otherwise frozen). **Preregistration:** `PREREGISTRATION.md` in
+this directory (written before any recency results were computed).
+Runner:
 `run_qb_recency.py`; numbers: `results.json`; per-game rows:
 `per_game.csv`. Measurement only — no live model code was changed.
 
@@ -544,12 +554,16 @@ on n = {fv['n']} games (2024–2025).
 
 ## Baseline reproduction (stop rule — passed)
 
-The harness baseline was reproduced before anything else was run:
-`run_backtest()` exactly as-is returned ATS **47.50%** (399-441-26) and
-margin RMSE **14.444** on 1,107 games (2021–2024), matching the published
-figures in `research/epa_live_backtest/RESULTS.md`. The extended
-walk-forward's 2021–2024 rows were then verified bit-for-bit against the
-harness's `per_game.csv` (max |Δmargin| = \
+The live-config baseline was reproduced before anything else was run:
+`run_backtest()` exactly as-is returned ATS **47.29%** (393-438-29) and
+margin RMSE **14.131** on 1,107 games (2021–2024), matching the gate as
+re-pinned by the 2026-10-19 addendum to the preregistration — the live
+damped configuration's figures, published as the robustness arm of
+`research/turnover_damping/RESULTS.md` (the original pins, 47.5% /
+14.44 from `research/epa_live_backtest/`, were pre-damping and halted
+the first run attempt). The extended walk-forward's 2021–2024 rows were
+then verified bit-for-bit against the damping study's per-game
+robustness file (max |Δmargin| = \
 {r['replication_check']['max_abs_margin_diff']:.1e}), so the 2025
 extension runs on a verified frame.
 
