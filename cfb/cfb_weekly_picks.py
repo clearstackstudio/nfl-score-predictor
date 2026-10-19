@@ -150,6 +150,69 @@ def current_ratings(team_games: pd.DataFrame, season: int):
     return adjusted_ratings(team_games, len(team_games), season, prior)
 
 
+def export_power_rankings(off: dict, deff: dict, week: int,
+                          note: str | None = None) -> None:
+    """Write site/data/cfb_power_rankings.json from the current PPA ratings.
+
+    Read-only use of the ratings: rating = (off - deff) * PLAYS_PER_GAME,
+    i.e. expected margin vs an average FBS team on a neutral field. This is
+    the same team-strength number predict() builds its margin from (predict
+    uses the two teams' own pace; the table uses the league-standard
+    PLAYS_PER_GAME so every row shares one unit) -- no new computation.
+    Movement arrows come from the previous export when its week differs;
+    same-week re-runs keep the prior week's ranks (mirrors the NFL export
+    in src/weekly_picks.py). CFB team names are their own abbreviations
+    here, matching the picks JSON convention.
+    """
+    dest = REPO / "site" / "data" / "cfb_power_rankings.json"
+    prev_ranks: dict[str, int] = {}
+    prev_week = None
+    try:
+        old = json.loads(dest.read_text())
+        prev_week = old.get("week")
+        if prev_week is not None and int(prev_week) != int(week):
+            for t in old.get("teams", []):
+                if t.get("abbr") and t.get("rank"):
+                    prev_ranks[t["abbr"]] = int(t["rank"])
+        elif prev_week is not None:
+            # Same-week re-run: preserve the movement baseline we already have.
+            for t in old.get("teams", []):
+                if t.get("abbr") and t.get("prev_rank"):
+                    prev_ranks[t["abbr"]] = int(t["prev_rank"])
+    except Exception:
+        pass
+    rows = []
+    for team in off:
+        if team not in deff:
+            continue
+        rows.append((round((off[team] - deff[team]) * PLAYS_PER_GAME, 1), team))
+    rows.sort(key=lambda r: (-r[0], r[1]))
+    teams = [
+        {
+            "rank": i + 1,
+            "team": team,
+            "abbr": team,
+            "rating": pts,
+            "prev_rank": prev_ranks.get(team),
+        }
+        for i, (pts, team) in enumerate(rows)
+    ]
+    out = {
+        "sport": "cfb",
+        "season": SEASON,
+        "week": int(week),
+        "updated": pd.Timestamp.now("America/Los_Angeles").strftime("%Y-%m-%d %H:%M %Z"),
+        "note": note or ("Model-internal predictive ratings: expected margin vs an "
+                 "average FBS team on a neutral field, before game-specific "
+                 "weather adjustments. Not a resume ranking; moves only on "
+                 "game results."),
+        "teams": teams,
+    }
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(out, indent=2))
+    print(f"CFB power rankings (week {week}): {len(teams)} teams -> {dest}")
+
+
 # Verified 2026-10-01 against completed CFBD games: the raw /lines spread
 # is an AWAY margin (spread > 0 means the away team is favored). Negate to
 # get a home margin (positive = home favored), matching the convention used
@@ -242,6 +305,7 @@ def main() -> None:
         print("no backtest calibration found; using default SDs")
 
     next_week, sched, lines = fetch_upcoming_week(SEASON)
+    export_power_rankings(off, deff, int(next_week))
 
     done = pd.read_parquet(DATA / "cfb_games.parquet")
     done = done[(done["season"] == SEASON) & done["home_score"].notna()]

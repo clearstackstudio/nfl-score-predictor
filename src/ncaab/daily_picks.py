@@ -245,6 +245,62 @@ def train(df: pd.DataFrame, roll_to_season: int | None = None
     return model, last_date
 
 
+def export_power_rankings(model: NCAABEfficiency, season: int,
+                          canon: set[str],
+                          note: str | None = None) -> None:
+    """Write site/data/ncaab_power_rankings.json from the trained model.
+
+    Read-only use of the ratings, in the model's native units:
+    rating = (off - def) * 100 = net efficiency, i.e. expected points
+    scored minus points allowed per 100 possessions against a
+    league-average opponent on a neutral court (exactly what
+    NCAABEfficiency.predict computes per possession against a
+    league-average team). Only teams in the current D1 membership list
+    that the model actually rates are listed. Movement arrows come from
+    the previous export when its date differs; same-day re-runs keep the
+    morning's baseline (the daily analog of the NFL export's week rule).
+    """
+    dest = SITE_DATA / "ncaab_power_rankings.json"
+    today = datetime.datetime.now(PT).strftime("%Y-%m-%d")
+    prev_ranks: dict[str, int] = {}
+    try:
+        old = json.loads(dest.read_text())
+        if old.get("asof") is not None and old.get("asof") != today:
+            for t in old.get("teams", []):
+                if t.get("abbr") and t.get("rank"):
+                    prev_ranks[t["abbr"]] = int(t["rank"])
+        elif old.get("asof") is not None:
+            for t in old.get("teams", []):
+                if t.get("abbr") and t.get("prev_rank"):
+                    prev_ranks[t["abbr"]] = int(t["prev_rank"])
+    except Exception:
+        pass
+    rows = sorted(
+        ((round((model.off[t] - model.deff[t]) * 100.0, 1), t)
+         for t in canon if t in model.off and t in model.deff),
+        key=lambda r: (-r[0], r[1]))
+    teams = [
+        {"rank": i + 1, "team": t, "abbr": t, "rating": pts,
+         "prev_rank": prev_ranks.get(t)}
+        for i, (pts, t) in enumerate(rows)
+    ]
+    out = {
+        "sport": "ncaab",
+        "season": int(season),
+        "asof": today,
+        "updated": datetime.datetime.now(PT).strftime("%Y-%m-%d %H:%M %Z"),
+        "note": note or ("Model-internal predictive ratings: net efficiency "
+                 "-- expected points scored minus points allowed per 100 "
+                 "possessions vs a league-average opponent, from the "
+                 "model's per-possession efficiency ratings. Not a resume "
+                 "ranking; moves only on game results."),
+        "teams": teams,
+    }
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(out, indent=2))
+    print(f"NCAAB power rankings: {len(teams)} teams -> {dest}")
+
+
 def rest_days(team: str, season: int, game_date: datetime.date,
               last_date: dict) -> float:
     prev = last_date.get((team, season))
@@ -336,6 +392,12 @@ def main() -> None:
             game_date, day_games = cand, gs
             break
     if game_date is None:
+        # Rankings still refresh on no-game days: they are the model's
+        # current state (e.g. preseason ratings carried across the
+        # offseason rollover), independent of any slate.
+        df = load_training_rows(yesterday)
+        model, _last_date = train(df, roll_to_season=SEASON)
+        export_power_rankings(model, SEASON, canonical_teams(SEASON))
         out = {
             "sport": "ncaab", "season": SEASON, "date": target.isoformat(),
             "preseason": False, "experimental_note": None,
@@ -372,6 +434,7 @@ def main() -> None:
             "regular/postseason games only. Treat these picks as experimental.")
 
     canon = canonical_teams(season)
+    export_power_rankings(model, season, canon)
     seen = set()
     picks = []
     for g in sorted(day_games, key=lambda x: x["commence_time"]):

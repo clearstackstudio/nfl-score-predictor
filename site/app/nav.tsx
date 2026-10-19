@@ -19,7 +19,7 @@ const NAV_ITEMS = [
   { slug: "/live", label: "Live", liveDot: true },
   { slug: "/pick-em", label: "Pick'em" },
   { slug: "/track-record", label: "Track record" },
-  { slug: "/rankings", label: "Rankings", nflOnly: true },
+  { slug: "/rankings", label: "Rankings" },
 ];
 
 function leagueOf(pathname: string): LeagueId {
@@ -38,8 +38,8 @@ function switchHref(pathname: string, target: LeagueId): string {
   // Only league subpages exist under every league; anything else (e.g.
   // /accuracy, /disclaimer) falls back to the league home.
   // MLB has no live page, so /live is not a valid MLB slug.
-  const leagueSlugs = ["", "/live", "/pick-em", "/track-record"];
-  const mlbSlugs = ["", "/pick-em", "/track-record"];
+  const leagueSlugs = ["", "/live", "/pick-em", "/track-record", "/rankings"];
+  const mlbSlugs = ["", "/pick-em", "/track-record", "/rankings"];
   const valid = (target === "mlb" ? mlbSlugs : leagueSlugs).includes(stripped);
   if (target === "nfl") return valid ? stripped : "/";
   const base = target === "cfb" ? "/cfb" : target === "nba" ? "/nba" : target === "ncaab" ? "/ncaab" : "/mlb";
@@ -107,9 +107,7 @@ export default function Nav() {
       </div>
       <nav className="flex max-w-full gap-1 overflow-x-auto" aria-label="Primary">
         {NAV_ITEMS.filter(
-          (item) =>
-            !(league === "mlb" && item.slug === "/live") &&
-            !((item as { nflOnly?: boolean }).nflOnly && league !== "nfl")
+          (item) => !(league === "mlb" && item.slug === "/live")
         ).map((item) => {
           const href = `${base}${item.slug}` || "/";
           const label = (league === "nba" || league === "mlb") && item.nbaLabel ? item.nbaLabel : item.label;

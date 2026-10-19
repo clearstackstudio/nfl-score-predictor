@@ -77,6 +77,79 @@ def save_ratings(r: MLBRatings, path: Path = ARTIFACT) -> dict:
     return state
 
 
+ABBR_TO_FULL = {
+    "ARI": "Arizona Diamondbacks", "ATL": "Atlanta Braves",
+    "BAL": "Baltimore Orioles", "BOS": "Boston Red Sox",
+    "CHC": "Chicago Cubs", "CIN": "Cincinnati Reds",
+    "CLE": "Cleveland Guardians", "COL": "Colorado Rockies",
+    "CWS": "Chicago White Sox", "DET": "Detroit Tigers",
+    "HOU": "Houston Astros", "KC": "Kansas City Royals",
+    "LAA": "Los Angeles Angels", "LAD": "Los Angeles Dodgers",
+    "MIA": "Miami Marlins", "MIL": "Milwaukee Brewers",
+    "MIN": "Minnesota Twins", "NYM": "New York Mets",
+    "NYY": "New York Yankees", "OAK": "Athletics",
+    "PHI": "Philadelphia Phillies", "PIT": "Pittsburgh Pirates",
+    "SD": "San Diego Padres", "SEA": "Seattle Mariners",
+    "SF": "San Francisco Giants", "STL": "St. Louis Cardinals",
+    "TB": "Tampa Bay Rays", "TEX": "Texas Rangers",
+    "TOR": "Toronto Blue Jays", "WSH": "Washington Nationals",
+}
+
+
+def export_power_rankings(state: dict, note: str | None = None) -> None:
+    """Write site/data/mlb_power_rankings.json from a fitted ratings state.
+
+    Read-only use of the ratings: rating = off - deff = expected run
+    differential per game vs an average team in a neutral park (off/deff
+    are park-adjusted expected runs scored/allowed per game vs
+    league-average opposition) -- the same net number main() sanity-
+    prints. Movement arrows come from the previous export when its
+    season differs; same-season re-retrains keep the existing baseline
+    (the seasonal analog of the NFL export's week rule).
+    """
+    import datetime
+    from zoneinfo import ZoneInfo
+    dest = REPO / "site" / "data" / "mlb_power_rankings.json"
+    season = int(state["seasons"][-1]) if state.get("seasons") else None
+    prev_ranks: dict[str, int] = {}
+    try:
+        old = json.loads(dest.read_text())
+        if old.get("season") is not None and int(old["season"]) != season:
+            for t in old.get("teams", []):
+                if t.get("abbr") and t.get("rank"):
+                    prev_ranks[t["abbr"]] = int(t["rank"])
+        elif old.get("season") is not None:
+            for t in old.get("teams", []):
+                if t.get("abbr") and t.get("prev_rank"):
+                    prev_ranks[t["abbr"]] = int(t["prev_rank"])
+    except Exception:
+        pass
+    rows = sorted(
+        ((round(state["off"][t] - state["deff"][t], 2), t)
+         for t in state["off"] if t in state["deff"]),
+        key=lambda r: (-r[0], r[1]))
+    teams = [
+        {"rank": i + 1, "team": ABBR_TO_FULL.get(t, t), "abbr": t,
+         "rating": pts, "prev_rank": prev_ranks.get(t)}
+        for i, (pts, t) in enumerate(rows)
+    ]
+    out = {
+        "sport": "mlb",
+        "season": season,
+        "asof": state.get("trained_through"),
+        "updated": datetime.datetime.now(
+            ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d %H:%M %Z"),
+        "note": note or ("Model-internal predictive ratings: expected run "
+                 "differential per game vs an average team in a neutral "
+                 "park, from park-adjusted runs scored/allowed ratings. "
+                 "Not a resume ranking; moves only on game results."),
+        "teams": teams,
+    }
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(out, indent=2))
+    print(f"MLB power rankings: {len(teams)} teams -> {dest}")
+
+
 def load_ratings(path: Path = ARTIFACT) -> MLBRatings:
     """Rehydrate a fitted MLBRatings for the 2027 live-picks script."""
     state = json.loads(path.read_text())
@@ -111,6 +184,7 @@ def main() -> None:
     state["games"] = len(games)
     ARTIFACT.write_text(json.dumps(state, indent=1))
     print(f"wrote {ARTIFACT}")
+    export_power_rankings(state)
 
     # Sanity: top-5 by net rating (off - deff).
     net = {t: r.off.get(t, 0) - r.deff.get(t, 0) for t in r.off}

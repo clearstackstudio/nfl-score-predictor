@@ -41,12 +41,12 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.append(str(Path(__file__).resolve().parent.parent))
-from elo import NBAElo
+from elo import ELO_PER_POINT, ELO_START, NBAElo
 from totals import NBATotals
 from features import (REST_CAP_DAYS, apply_rest_adjustment,
                       apply_rest_adjustment_total)
 from stars import apply_star_adjustment, load_stars_out
-from teams import normalize_team
+from teams import CANONICAL_TEAMS, normalize_team
 from recalibration import recalibrate
 
 REPO = Path(__file__).resolve().parent.parent.parent
@@ -311,6 +311,62 @@ def build_parlay(picks: list[dict]) -> dict | None:
             "book_pays": BOOK_PARLAY_PAYS[len(legs)]}
 
 
+def export_power_rankings(elo: NBAElo, season: int,
+                          note: str | None = None) -> None:
+    """Write site/data/nba_power_rankings.json from the trained Elo ratings.
+
+    Read-only use of the ratings. The published number converts Elo with
+    the model's own fitted rate (ELO_PER_POINT = 30 Elo points per point
+    of margin -- the same conversion NBAElo.predict_margin uses):
+    rating = (team Elo - mean Elo of the 30 teams) / ELO_PER_POINT, i.e.
+    expected margin vs the average team on a neutral court, before the
+    nightly rest/star adjustments. Movement arrows come from the previous
+    export when its date differs; same-day re-runs keep the morning's
+    baseline (the daily analog of the NFL export's week rule).
+    """
+    dest = SITE_DATA / "nba_power_rankings.json"
+    today = datetime.datetime.now(PT).strftime("%Y-%m-%d")
+    prev_ranks: dict[str, int] = {}
+    try:
+        old = json.loads(dest.read_text())
+        if old.get("asof") is not None and old.get("asof") != today:
+            for t in old.get("teams", []):
+                if t.get("abbr") and t.get("rank"):
+                    prev_ranks[t["abbr"]] = int(t["rank"])
+        elif old.get("asof") is not None:
+            for t in old.get("teams", []):
+                if t.get("abbr") and t.get("prev_rank"):
+                    prev_ranks[t["abbr"]] = int(t["prev_rank"])
+    except Exception:
+        pass
+    elos = {t: elo.ratings.get(t, ELO_START) for t in CANONICAL_TEAMS}
+    mean_elo = sum(elos.values()) / len(elos)
+    rows = sorted(
+        ((round((e - mean_elo) / ELO_PER_POINT, 1), t) for t, e in elos.items()),
+        key=lambda r: (-r[0], r[1]))
+    teams = [
+        {"rank": i + 1, "team": t, "abbr": t, "rating": pts,
+         "prev_rank": prev_ranks.get(t)}
+        for i, (pts, t) in enumerate(rows)
+    ]
+    out = {
+        "sport": "nba",
+        "season": int(season),
+        "asof": today,
+        "updated": datetime.datetime.now(PT).strftime("%Y-%m-%d %H:%M %Z"),
+        "note": note or ("Model-internal predictive ratings: the model's Elo "
+                 "ratings converted to expected margin vs an average team "
+                 "on a neutral court at the model's fitted rate (30 Elo "
+                 "points per point of margin), before nightly rest/star "
+                 "adjustments. Not a resume ranking; moves only on game "
+                 "results."),
+        "teams": teams,
+    }
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(out, indent=2))
+    print(f"NBA power rankings: {len(teams)} teams -> {dest}")
+
+
 def validate_picks(picks: list[dict]) -> None:
     """Fail loudly BEFORE publishing, never after.
 
@@ -359,6 +415,12 @@ def main() -> None:
             game_date, day_games = cand, gs
             break
     if game_date is None:
+        # Rankings still refresh on no-game days: they are the model's
+        # current state (e.g. preseason ratings carried across the
+        # offseason rollover), independent of any slate.
+        df = load_training_rows(yesterday)
+        elo, _totals, _last_date = train(df, roll_to_season=SEASON)
+        export_power_rankings(elo, SEASON)
         out = {
             "sport": "nba", "season": SEASON, "date": target.isoformat(),
             "preseason": False, "experimental_note": None,
@@ -384,6 +446,7 @@ def main() -> None:
     print(f"training: {len(df):,} games through {df['date'].max()}")
     season = season_of(game_date)
     elo, totals, last_date = train(df, roll_to_season=season)
+    export_power_rankings(elo, season)
     if df["season"].max() < season:
         print(f"note: no training data for seasons "
               f"{int(df['season'].max()) + 1}..{season}; ratings regressed "
