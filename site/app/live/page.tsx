@@ -483,7 +483,55 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
         </p>
       ) : (
         <>
-          <div className="mt-8 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:divide-zinc-100 light:border-zinc-200 light:bg-white">
+{detail && (
+            <div className="mt-8">
+          {/* Gamecast header: status + live situation over a linescore table */}
+          <div className="rounded-2xl border border-white/20 bg-zinc-800/90 p-5 shadow-lg shadow-black/30 light:border-zinc-200 light:bg-white light:shadow-zinc-300/40">
+            <div className="flex items-start justify-between gap-3 pb-2">
+              <div className="min-w-0">
+                <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-300 light:text-amber-600" : "text-zinc-200 light:text-zinc-600"}`}>
+                  {detail.game.state === "in" ? detail.game.detail || "Live" : detail.game.state === "post" ? "Final" : detail.game.detail}
+                </div>
+                {situationText && (
+                  <div className="mt-1 flex items-center gap-1.5 text-sm font-semibold text-amber-300 light:text-amber-700">
+                    {football && <BallIcon size={14} />}
+                    {situationText}
+                  </div>
+                )}
+              </div>
+              {lastUpdate && (
+                <div className="shrink-0 text-[11px] text-zinc-400 light:text-zinc-500">
+                  updated {lastUpdate.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}
+                </div>
+              )}
+            </div>
+            <LinescoreTable
+              football={football}
+              periods={headerPeriods}
+              teams={[
+                {
+                  abbr: detail.game.awayAbbr,
+                  name: detail.game.awayName,
+                  logo: boardGame?.awayLogo || detail.game.awayLogo,
+                  record: detail.game.awayRecord || boardGame?.awayRecord || "",
+                  lines: awayLines,
+                  total: detail.game.awayScore,
+                },
+                {
+                  abbr: detail.game.homeAbbr,
+                  name: detail.game.homeName,
+                  logo: boardGame?.homeLogo || detail.game.homeLogo,
+                  record: detail.game.homeRecord || boardGame?.homeRecord || "",
+                  lines: homeLines,
+                  total: detail.game.homeScore,
+                },
+              ]}
+            />
+          </div>
+            </div>
+          )}
+
+          <div className={`${detail ? "mt-4" : "mt-8"} divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:divide-zinc-100 light:border-zinc-200 light:bg-white`}">
             {sorted.map((g) => (
               <ScoreboardRow key={g.id} g={g} selected={g.id === selectedId} onSelect={() => setSelectedId(g.id)} football={football} />
             ))}
@@ -491,50 +539,6 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
 
           {detail ? (
             <div className="mt-6">
-              {/* Gamecast header: status + live situation over a linescore table */}
-              <div className="rounded-2xl border border-white/20 bg-zinc-800/90 p-5 shadow-lg shadow-black/30 light:border-zinc-200 light:bg-white light:shadow-zinc-300/40">
-                <div className="flex items-start justify-between gap-3 pb-2">
-                  <div className="min-w-0">
-                    <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-300 light:text-amber-600" : "text-zinc-200 light:text-zinc-600"}`}>
-                      {detail.game.state === "in" ? detail.game.detail || "Live" : detail.game.state === "post" ? "Final" : detail.game.detail}
-                    </div>
-                    {situationText && (
-                      <div className="mt-1 flex items-center gap-1.5 text-sm font-semibold text-amber-300 light:text-amber-700">
-                        {football && <BallIcon size={14} />}
-                        {situationText}
-                      </div>
-                    )}
-                  </div>
-                  {lastUpdate && (
-                    <div className="shrink-0 text-[11px] text-zinc-400 light:text-zinc-500">
-                      updated {lastUpdate.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}
-                    </div>
-                  )}
-                </div>
-                <LinescoreTable
-                  football={football}
-                  periods={headerPeriods}
-                  teams={[
-                    {
-                      abbr: detail.game.awayAbbr,
-                      name: detail.game.awayName,
-                      logo: boardGame?.awayLogo || detail.game.awayLogo,
-                      record: detail.game.awayRecord || boardGame?.awayRecord || "",
-                      lines: awayLines,
-                      total: detail.game.awayScore,
-                    },
-                    {
-                      abbr: detail.game.homeAbbr,
-                      name: detail.game.homeName,
-                      logo: boardGame?.homeLogo || detail.game.homeLogo,
-                      record: detail.game.homeRecord || boardGame?.homeRecord || "",
-                      lines: homeLines,
-                      total: detail.game.homeScore,
-                    },
-                  ]}
-                />
-              </div>
-
               <div className="mt-4">
                 <WinProbChart points={detail.winProb} homeAbbr={detail.game.homeAbbr} awayAbbr={detail.game.awayAbbr} />
               </div>
