@@ -104,7 +104,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.5,
       "home_qb": "Trevor Lawrence",
-      "away_qb": "C.J. Stroud"
+      "away_qb": "C.J. Stroud",
+      "result": {
+        "home_score": 31,
+        "away_score": 34,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Chicago Bears",
@@ -136,7 +142,13 @@
       "cover_prob": 0.502,
       "ou_prob": 0.51,
       "home_qb": "Michael Penix Jr.",
-      "away_qb": "Caleb Williams"
+      "away_qb": "Caleb Williams",
+      "result": {
+        "home_score": 23,
+        "away_score": 31,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Baltimore Ravens",
@@ -168,7 +180,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.51,
       "home_qb": "Deshaun Watson",
-      "away_qb": "Tyler Huntley"
+      "away_qb": "Tyler Huntley",
+      "result": {
+        "home_score": 13,
+        "away_score": 10,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Tennessee Titans",
@@ -200,7 +218,12 @@
       "cover_prob": null,
       "ou_prob": 0.509,
       "home_qb": "Daniel Jones",
-      "away_qb": "Cam Ward"
+      "away_qb": "Cam Ward",
+      "result": {
+        "home_score": 20,
+        "away_score": 26,
+        "ou": "win"
+      }
     },
     {
       "away": "New York Jets",
@@ -232,7 +255,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.532,
       "home_qb": "Drake Maye",
-      "away_qb": "Geno Smith"
+      "away_qb": "Geno Smith",
+      "result": {
+        "home_score": 26,
+        "away_score": 19,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "New Orleans Saints",
@@ -264,7 +293,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Jameis Winston",
-      "away_qb": "Tyler Shough"
+      "away_qb": "Tyler Shough",
+      "result": {
+        "home_score": 27,
+        "away_score": 34,
+        "ats": "loss"
+      }
     },
     {
       "away": "Carolina Panthers",
@@ -296,7 +330,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Tanner McKee",
-      "away_qb": "Bryce Young"
+      "away_qb": "Bryce Young",
+      "result": {
+        "home_score": 14,
+        "away_score": 25,
+        "ats": "loss"
+      }
     },
     {
       "away": "Pittsburgh Steelers",
@@ -328,7 +367,12 @@
       "cover_prob": 0.502,
       "ou_prob": null,
       "home_qb": "Jalon Daniels",
-      "away_qb": "Aaron Rodgers"
+      "away_qb": "Aaron Rodgers",
+      "result": {
+        "home_score": 19,
+        "away_score": 26,
+        "ats": "loss"
+      }
     },
     {
       "away": "Arizona Cardinals",
@@ -360,7 +404,12 @@
       "cover_prob": 0.502,
       "ou_prob": null,
       "home_qb": "Matthew Stafford",
-      "away_qb": "Jacoby Brissett"
+      "away_qb": "Jacoby Brissett",
+      "result": {
+        "home_score": 16,
+        "away_score": 18,
+        "ats": "loss"
+      }
     },
     {
       "away": "Los Angeles Chargers",
@@ -392,7 +441,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Patrick Mahomes",
-      "away_qb": "Justin Herbert"
+      "away_qb": "Justin Herbert",
+      "result": {
+        "home_score": 22,
+        "away_score": 6,
+        "ats": "loss"
+      }
     },
     {
       "away": "Buffalo Bills",
@@ -424,7 +478,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.5,
       "home_qb": "Kirk Cousins",
-      "away_qb": "Josh Allen"
+      "away_qb": "Josh Allen",
+      "result": {
+        "home_score": 30,
+        "away_score": 33,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Dallas Cowboys",
@@ -456,7 +516,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Jordan Love",
-      "away_qb": "Dak Prescott"
+      "away_qb": "Dak Prescott",
+      "result": {
+        "home_score": 23,
+        "away_score": 13,
+        "ats": "win"
+      }
     },
     {
       "away": "Washington Commanders",
