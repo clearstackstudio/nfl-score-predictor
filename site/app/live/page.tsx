@@ -531,7 +531,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
             </div>
           )}
 
-          <div className={`${detail ? "mt-4" : "mt-8"} divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:divide-zinc-100 light:border-zinc-200 light:bg-white`}">
+          <div className={`${detail ? "mt-4" : "mt-8"} divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:divide-zinc-100 light:border-zinc-200 light:bg-white`}>
             {sorted.map((g) => (
               <ScoreboardRow key={g.id} g={g} selected={g.id === selectedId} onSelect={() => setSelectedId(g.id)} football={football} />
             ))}
