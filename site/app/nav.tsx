@@ -137,8 +137,8 @@ export default function Nav() {
               aria-current={active ? "page" : undefined}
               className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition ${
                 active
-                  ? "bg-white/10 text-white"
-                  : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100"
+                  ? "bg-white/10 text-white light:bg-zinc-900/10 light:text-zinc-900"
+                  : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100 light:text-zinc-500 light:hover:bg-zinc-900/5 light:hover:text-zinc-900"
               }`}
             >
               {item.liveDot && anyLive && (
@@ -156,8 +156,8 @@ export default function Nav() {
           aria-current={pathname === "/recaps" || pathname.startsWith("/recaps/") ? "page" : undefined}
           className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition ${
             pathname === "/recaps" || pathname.startsWith("/recaps/")
-              ? "bg-white/10 text-white"
-              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100"
+              ? "bg-white/10 text-white light:bg-zinc-900/10 light:text-zinc-900"
+              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100 light:text-zinc-500 light:hover:bg-zinc-900/5 light:hover:text-zinc-900"
           }`}
         >
           Recaps
@@ -167,8 +167,8 @@ export default function Nav() {
           aria-current={pathname === "/tracker" ? "page" : undefined}
           className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition ${
             pathname === "/tracker"
-              ? "bg-white/10 text-white"
-              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100"
+              ? "bg-white/10 text-white light:bg-zinc-900/10 light:text-zinc-900"
+              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100 light:text-zinc-500 light:hover:bg-zinc-900/5 light:hover:text-zinc-900"
           }`}
         >
           Tracker
@@ -178,8 +178,8 @@ export default function Nav() {
           aria-current={pathname === "/accuracy" ? "page" : undefined}
           className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition ${
             pathname === "/accuracy"
-              ? "bg-white/10 text-white"
-              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100"
+              ? "bg-white/10 text-white light:bg-zinc-900/10 light:text-zinc-900"
+              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100 light:text-zinc-500 light:hover:bg-zinc-900/5 light:hover:text-zinc-900"
           }`}
         >
           Accuracy
