@@ -115,7 +115,10 @@ function fmtTally(t: Tally) {
 const picksFile = picksData as { week?: number | null; date?: string | null; picks: Game[]; preseason?: boolean; experimental_note?: string | null };
 const slateKey = String(picksFile.week ?? picksFile.date ?? "slate");
 const slateLabel = picksFile.week != null ? `Week ${picksFile.week}` : "Tonight's slate";
-const showPreseason = picksFile.preseason === true;
+const showExperimental = picksFile.preseason === true || !!picksFile.experimental_note;
+const experimentalTitle = picksFile.preseason === true
+  ? "Preseason — experimental"
+  : "Early season — experimental";
 
 function slateTitle(wn: string) {
   return /^\d+$/.test(wn) ? `Week ${wn}` : wn;
@@ -291,9 +294,9 @@ export default function NbaPickEm() {
       </p>
 
       {/* Mode toggle */}
-      {showPreseason && (
+      {showExperimental && (
         <div className="mt-5 rounded-xl border border-sky-400/25 bg-sky-400/[0.07] px-4 py-3 light:bg-sky-50">
-          <div className="text-xs font-bold uppercase tracking-[0.16em] text-sky-300 light:text-sky-700">Preseason — experimental</div>
+          <div className="text-xs font-bold uppercase tracking-[0.16em] text-sky-300 light:text-sky-700">{experimentalTitle}</div>
           <p className="mt-1 text-sm text-zinc-400 light:text-zinc-600">
             {picksFile.experimental_note ?? "The model is running before it has seen a real regular-season game. Treat these numbers as a calibration exercise, not as picks."}
           </p>

@@ -294,7 +294,10 @@ export default function NbaHome() {
   const isPending = !!dv.pending || picks.length === 0;
   const nSpread = picks.filter((p) => p.pick_spread).length;
   const seasonLabel = `${dv.season - 1}–${String(dv.season).slice(2)}`;
-  const showPreseason = dv.preseason === true || !!dv.experimental_note;
+  const showExperimental = dv.preseason === true || !!dv.experimental_note;
+  const experimentalTitle = dv.preseason === true
+    ? "Preseason — experimental"
+    : "Early season — experimental";
 
   return (
     <div>
@@ -349,9 +352,9 @@ export default function NbaHome() {
             <a href="/calibration#nba" className="underline">calibration</a> pages.
           </p>
         </div>
-        {showPreseason && (
+        {showExperimental && (
           <div className="mt-5 max-w-2xl rounded-xl border border-sky-400/30 bg-sky-400/10 px-4 py-3 light:bg-sky-50">
-            <div className="text-xs font-bold uppercase tracking-[0.16em] text-sky-300 light:text-sky-700">Preseason — experimental</div>
+            <div className="text-xs font-bold uppercase tracking-[0.16em] text-sky-300 light:text-sky-700">{experimentalTitle}</div>
             <p className="mt-1 text-sm leading-relaxed text-sky-200/90 light:text-sky-800">
               {dv.experimental_note ?? "The model is running before it has seen a real regular-season game. Treat these numbers as a calibration exercise, not as picks."}
             </p>

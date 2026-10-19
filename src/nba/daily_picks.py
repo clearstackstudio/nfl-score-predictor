@@ -13,6 +13,11 @@ Honesty rules (same as the rest of this repo):
   - Prediction precedes update; games train in chronological order.
   - Preseason games are excluded from training and flagged experimental in
     the output (the model was validated on regular-season games only).
+  - Early regular-season boards are also flagged experimental while the
+    model is warming up: until every team has WARMUP_GAMES_PER_TEAM
+    current-season regular-season games in training, the ratings have seen
+    too little of the new season to present the board as settled. The flag
+    is computed from the training state each run and clears itself.
 
 Usage:
     python3 src/nba/daily_picks.py [--date YYYY-MM-DD] [--force]
@@ -24,6 +29,8 @@ When neither day has games, picks: [] is emitted with a pending_reason.
 
 Season timing: the 2026-27 regular season starts ~Oct 20, 2026. Games
 commencing before the season opener are preseason (flagged, experimental).
+Boards after the opener stay flagged (as early-season experimental) until
+the warm-up threshold above is met.
 """
 from __future__ import annotations
 
@@ -93,6 +100,23 @@ BOOK_PARLAY_PAYS = {2: "+260", 3: "+600"}
 # in the picks output.
 SEASON_OPENERS = {2027: datetime.date(2026, 10, 20)}
 
+# Early-season warm-up: a regular-season board is flagged experimental
+# until EVERY team has at least this many current-season regular-season
+# games in the training data. Five games per team is the point where each
+# club has a real (if small) sample of the new season in its rating; at
+# ~3 games per team per week the flag clears itself roughly 10-12 days
+# after the opener with no manual step. (Bryant, 2026-10-19: the 2026-27
+# opener board is generated from ratings carried across a multi-season
+# data gap at near-prior strength, so early boards must not publish as
+# normal until the model has warmed up on real 2026-27 games.)
+WARMUP_GAMES_PER_TEAM = 5
+
+WARMUP_NOTE = (
+    "Early season -- the model's ratings are still warming up on this "
+    "season's games: it has not yet seen five regular-season games per "
+    "team, so the ratings lean on prior seasons more than usual. Treat "
+    "these picks as experimental and provisional.")
+
 
 def normal_cdf(x: float) -> float:
     return 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
@@ -140,6 +164,32 @@ def is_preseason(commence: datetime.date) -> bool:
         print(f"WARNING: no opener on record for season {season_of(commence)}; "
               f"assuming {opener} for preseason detection")
     return commence < opener
+
+
+def season_games_per_team(df: pd.DataFrame, season: int) -> dict[str, int]:
+    """Regular-season games per team in the training frame for one season.
+
+    load_training_rows already excludes preseason finals, so every counted
+    game is a regular-season game the model actually trained on.
+    """
+    counts = {t: 0 for t in CANONICAL_TEAMS}
+    cur = df[df["season"] == season]
+    for r in cur.itertuples():
+        if r.home_team in counts:
+            counts[r.home_team] += 1
+        if r.away_team in counts:
+            counts[r.away_team] += 1
+    return counts
+
+
+def warming_up(df: pd.DataFrame, season: int) -> bool:
+    """True while some team has fewer than WARMUP_GAMES_PER_TEAM games of
+    the given season in training -- i.e. the model's ratings have not yet
+    warmed up on the new season and its boards stay flagged experimental.
+    Evaluated from the same training frame the ratings are built from, so
+    the flag clears on its own as finals merge in."""
+    counts = season_games_per_team(df, season)
+    return min(counts[t] for t in CANONICAL_TEAMS) < WARMUP_GAMES_PER_TEAM
 
 
 def consensus_line(game: dict) -> tuple[float, float] | None:
@@ -421,9 +471,11 @@ def main() -> None:
         df = load_training_rows(yesterday)
         elo, _totals, _last_date = train(df, roll_to_season=SEASON)
         export_power_rankings(elo, SEASON)
+        warmup = warming_up(df, SEASON)
         out = {
             "sport": "nba", "season": SEASON, "date": target.isoformat(),
-            "preseason": False, "experimental_note": None,
+            "preseason": False, "warming_up": warmup,
+            "experimental_note": WARMUP_NOTE if warmup else None,
             "generated": datetime.datetime.now(PT).strftime("%Y-%m-%d %H:%M %Z"),
             "disclaimer": ("Model probabilities for entertainment. Our backtest "
                            "shows no proven edge vs the closing line — track "
@@ -453,12 +505,18 @@ def main() -> None:
               f"to near-prior across the gap")
 
     preseason_day = is_preseason(game_date)
+    warmup = not preseason_day and warming_up(df, season)
     experimental_note = None
     if preseason_day:
         experimental_note = (
             "Preseason games -- rotations and effort differ from the regular "
             "season, and this model was validated on regular-season games only. "
             "Treat these picks as experimental.")
+    elif warmup:
+        experimental_note = WARMUP_NOTE
+        print("note: early-season warm-up (some team has fewer than "
+              f"{WARMUP_GAMES_PER_TEAM} season-{season} games in training); "
+              "board flagged experimental")
 
     seen = set()
     picks = []
@@ -547,6 +605,7 @@ def main() -> None:
     out = {
         "sport": "nba", "season": season, "date": game_date.isoformat(),
         "preseason": preseason_day,
+        "warming_up": warmup,
         "experimental_note": experimental_note,
         "generated": datetime.datetime.now(PT).strftime("%Y-%m-%d %H:%M %Z"),
         "disclaimer": ("Model probabilities for entertainment. Our backtest "
@@ -575,6 +634,7 @@ def main() -> None:
         log["days"][day_key] = {
             "date": day_key, "generated": out["generated"],
             "preseason": preseason_day,
+            "warming_up": warmup,
             "experimental_note": experimental_note,
             "graded": False, "complete": False,
             "picks": picks, "parlay": parlay,
