@@ -1,0 +1,274 @@
+{
+  "baseline_reproduced": {
+    "games": 1107,
+    "ats": [
+      393,
+      438,
+      29
+    ],
+    "ats_pct": 0.4729241877256318,
+    "our_margin_rmse": 14.130860208614187,
+    "seconds": 447.8
+  },
+  "replication_check": {
+    "games_2021_24": 1107,
+    "ats_wlp": [
+      393,
+      438,
+      29
+    ],
+    "margin_rmse": 14.130860208614182,
+    "merged_vs_reference_per_game": 1107,
+    "max_abs_margin_diff": 3.552713678800501e-15,
+    "max_abs_total_diff": 28.05057815892365
+  },
+  "scored_set_check": {
+    "4": {
+      "n": 1392,
+      "identical_to_baseline_set": true,
+      "only_in_arm": 0,
+      "only_in_baseline": 0
+    },
+    "6": {
+      "n": 1392,
+      "identical_to_baseline_set": true,
+      "only_in_arm": 0,
+      "only_in_baseline": 0
+    },
+    "8": {
+      "n": 1392,
+      "identical_to_baseline_set": true,
+      "only_in_arm": 0,
+      "only_in_baseline": 0
+    },
+    "12": {
+      "n": 1392,
+      "identical_to_baseline_set": true,
+      "only_in_arm": 0,
+      "only_in_baseline": 0
+    },
+    "16": {
+      "n": 1392,
+      "identical_to_baseline_set": true,
+      "only_in_arm": 0,
+      "only_in_baseline": 0
+    }
+  },
+  "sweep_table": {
+    "4": {
+      "discovery_2021_2023": {
+        "n": 822,
+        "margin_rmse": 14.517332544524965,
+        "totals_rmse": 15.354266166148252
+      },
+      "validation_2024_2025": {
+        "n": 570,
+        "margin_rmse": 13.79237847122706,
+        "totals_rmse": 14.514231855962182
+      },
+      "all_2021_2025": {
+        "n": 1392,
+        "margin_rmse": 14.224943976986415,
+        "totals_rmse": 15.015969382432996
+      },
+      "season_2024": {
+        "n": 285,
+        "margin_rmse": 13.765169165246544,
+        "totals_rmse": 14.260822643125396
+      },
+      "season_2025": {
+        "n": 285,
+        "margin_rmse": 13.81953420485948,
+        "totals_rmse": 14.763291986497347
+      }
+    },
+    "6": {
+      "discovery_2021_2023": {
+        "n": 822,
+        "margin_rmse": 14.367133832744575,
+        "totals_rmse": 15.28195280792783
+      },
+      "validation_2024_2025": {
+        "n": 570,
+        "margin_rmse": 13.678844173761378,
+        "totals_rmse": 14.262724648262314
+      },
+      "all_2021_2025": {
+        "n": 1392,
+        "margin_rmse": 14.089356942321546,
+        "totals_rmse": 14.873043489079212
+      },
+      "season_2024": {
+        "n": 285,
+        "margin_rmse": 13.653786287135947,
+        "totals_rmse": 14.019886883582586
+      },
+      "season_2025": {
+        "n": 285,
+        "margin_rmse": 13.70385624141284,
+        "totals_rmse": 14.50149649366739
+      }
+    },
+    "8": {
+      "discovery_2021_2023": {
+        "n": 822,
+        "margin_rmse": 14.305480120627871,
+        "totals_rmse": 15.269947138925447
+      },
+      "validation_2024_2025": {
+        "n": 570,
+        "margin_rmse": 13.640344920938558,
+        "totals_rmse": 14.122909205963996
+      },
+      "all_2021_2025": {
+        "n": 1392,
+        "margin_rmse": 14.036929776454798,
+        "totals_rmse": 14.810998905824682
+      },
+      "season_2024": {
+        "n": 285,
+        "margin_rmse": 13.614680130723015,
+        "totals_rmse": 13.87201971213873
+      },
+      "season_2025": {
+        "n": 285,
+        "margin_rmse": 13.66596151254805,
+        "totals_rmse": 14.369418846489223
+      }
+    },
+    "12": {
+      "discovery_2021_2023": {
+        "n": 822,
+        "margin_rmse": 14.244569389135371,
+        "totals_rmse": 15.261375004042122
+      },
+      "validation_2024_2025": {
+        "n": 570,
+        "margin_rmse": 13.57057769629002,
+        "totals_rmse": 13.996373788298746
+      },
+      "all_2021_2025": {
+        "n": 1392,
+        "margin_rmse": 13.972512690603942,
+        "totals_rmse": 14.756495677676618
+      },
+      "season_2024": {
+        "n": 285,
+        "margin_rmse": 13.508464934132217,
+        "totals_rmse": 13.757169840171278
+      },
+      "season_2025": {
+        "n": 285,
+        "margin_rmse": 13.632407459631208,
+        "totals_rmse": 14.23155776548141
+      }
+    },
+    "16": {
+      "discovery_2021_2023": {
+        "n": 822,
+        "margin_rmse": 14.200915903871628,
+        "totals_rmse": 15.263759603997006
+      },
+      "validation_2024_2025": {
+        "n": 570,
+        "margin_rmse": 13.5342638345366,
+        "totals_rmse": 13.929649157145835
+      },
+      "all_2021_2025": {
+        "n": 1392,
+        "margin_rmse": 13.931790732653532,
+        "totals_rmse": 14.732078516263703
+      },
+      "season_2024": {
+        "n": 285,
+        "margin_rmse": 13.441830809915707,
+        "totals_rmse": 13.695167949731017
+      },
+      "season_2025": {
+        "n": 285,
+        "margin_rmse": 13.626069850227964,
+        "totals_rmse": 14.160248094966688
+      }
+    }
+  },
+  "selection": {
+    "winner": 16,
+    "discovery_rmse_by_arm": {
+      "4": 14.517332544524965,
+      "6": 14.367133832744575,
+      "8": 14.305480120627871,
+      "12": 14.244569389135371,
+      "16": 14.200915903871628
+    },
+    "margin_over_second_best": 0.04365348526374291,
+    "tied_arms_within_0.001": [
+      16
+    ],
+    "at_grid_edge": true
+  },
+  "validation": {
+    "paired_n": 570,
+    "baseline_n": 570,
+    "candidate_n": 570,
+    "candidate_half_life": 16,
+    "baseline_margin_rmse": 13.640344920938558,
+    "candidate_margin_rmse": 13.5342638345366,
+    "delta_margin_rmse": -0.10608108640195724,
+    "bootstrap_ci95": [
+      -0.23651783989120684,
+      0.021643093522955337
+    ],
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20261019,
+    "per_season": {
+      "2024": {
+        "n_paired": 285,
+        "baseline_margin_rmse": 13.614680130723015,
+        "candidate_margin_rmse": 13.441830809915707,
+        "delta": -0.1728493208073072
+      },
+      "2025": {
+        "n_paired": 285,
+        "baseline_margin_rmse": 13.66596151254805,
+        "candidate_margin_rmse": 13.626069850227964,
+        "delta": -0.039891662320085786
+      }
+    },
+    "baseline_totals_rmse": 14.122909205963996,
+    "candidate_totals_rmse": 13.929649157145835,
+    "delta_totals_rmse": -0.1932600488181606,
+    "bar1_delta_neg_ci_below_0": false,
+    "bar2_neither_season_worse": true,
+    "bar3_totals_within_+0.10": true,
+    "degenerate_candidate_is_live_setting": false
+  },
+  "validation_ats_context": {
+    "baseline_H8": {
+      "wlp": [
+        209,
+        237,
+        9
+      ],
+      "win_pct": 0.46860986547085204,
+      "picks": 455
+    },
+    "candidate": {
+      "wlp": [
+        222,
+        236,
+        9
+      ],
+      "win_pct": 0.4847161572052402,
+      "picks": 467
+    },
+    "note": "Picks at |our_margin - line_margin| >= 1.5. 2024 lines from spreadspoke closing spreads; 2025 lines from schedules_games.parquet spread_line (ratified by the 2026-10-19 QB-recency addendum). Context only."
+  },
+  "verdict": "KILL",
+  "status": "COMPLETED",
+  "totals_verification": {
+    "run_backtest_totals_rmse_2021_24": 14.9603221328,
+    "baseline_arm_totals_rmse_2021_24": 14.9225698631,
+    "abs_diff": 0.0378,
+    "note": "Per-game our_total does not replicate the damping-study file exactly (max abs diff 28.05, opening games of 2021, decaying to <=0.12 by 2024): the epa_const calibration is a trailing mean whose warm-up values depend on same-date game ordering, which differs slightly between run_backtest, the damping study Part B loop, and this runner. Margins are order-invariant and replicate to 1e-15. Totals were not a gate criterion; bar 3 is a within-harness cross-arm difference sharing one calibration sequence. See RESULTS.md method note 2."
+  }
+}
