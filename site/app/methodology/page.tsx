@@ -132,6 +132,51 @@ export default function Methodology() {
     },
     {
       n: "05",
+      title: "Tested and rejected: a quarterback’s last game",
+      body: (
+        <>
+          <p>
+            On 2026-10-19 we ran a pre-registered test of an idea that sounds
+            obviously true: a quarterback coming off a strong game — or a bad
+            one — carries that form into the next week. The model already
+            adjusts when the starting quarterback <em>changes</em>; this would
+            have added a term for how the starter played in his most recent
+            game, relative to his own season baseline. The test was written
+            down before it was run, then run walk-forward over 2021–2025. It
+            could only apply where both starting quarterbacks also started
+            their team&rsquo;s previous game — 305 games, about 22% of the games
+            the model predicted in that span.
+          </p>
+          <p>
+            The bars were set in advance, and the term cleared none of them.
+            On the held-out 2024–25 seasons, the effect&rsquo;s slope scored{" "}
+            <span className="font-semibold text-zinc-100 light:text-zinc-900">z = +0.74 against a required 1.96</span>{" "}
+            — indistinguishable from zero. Adding the term made margin error
+            worse, not better:{" "}
+            <span className="font-semibold text-zinc-100 light:text-zinc-900">13.267 points to 13.366</span>{" "}
+            (+0.099; 95% confidence interval [−0.091, +0.277]). It worsened
+            both validation seasons — 2024: 13.902 → 14.049; 2025: 12.425 →
+            12.455 — which the protocol treats as an automatic rejection. And
+            the effect&rsquo;s sign flipped between the seasons used to fit it
+            (−2.41) and the seasons used to judge it (+2.54).
+          </p>
+          <p>
+            Verdict:{" "}
+            <span className="font-semibold text-zinc-100 light:text-zinc-900">rejected</span>.
+            The model is unchanged — its ratings already weight recent games,
+            and one game&rsquo;s deviation from a quarterback&rsquo;s own baseline
+            adds nothing measurable on top. One process note, because it is
+            the point of publishing tests like this: the first attempt stopped
+            itself before running, when the protocol&rsquo;s baseline check caught
+            that the benchmark it was pinned to predated the turnover change
+            described above. The pin was corrected with a dated, approved
+            addendum, and the test then ran exactly as pre-registered.
+          </p>
+        </>
+      ),
+    },
+    {
+      n: "06",
       title: "What’s next",
       list: [
         ["QB-specific adjustments (injuries and backup quarterbacks move games)."],
