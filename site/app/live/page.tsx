@@ -76,12 +76,16 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
   );
 }
 
-/** ESPN-style Gamecast field strip, rendered inside the linescore card for
- * live football games: end zones, the ball spot, the first-down line, down
- * & distance, and the last play. The feed's yard line is an absolute 0–100
- * coordinate; which end the offense is attacking follows from the spot's
- * yards-to-endzone, so the marker always lands on the right yard line. The
- * field keeps its own colors in both schemes, like a broadcast graphic. */
+/** Gamecast, modeled on ESPN's current design: a "Current drive" header, a
+ * Down / Ball-on readout, then a flat gray field \u2014 alternating 10-yard
+ * mowing stripes, white yard lines, a dashed hash row, team-colored end
+ * zones with the nickname vertical and a small goalpost, the ball as the
+ * possessing team's logo pin with a dashed line-of-scrimmage drop, and a
+ * yellow first-down line. Yard numbers sit in a row below the field, as
+ * ESPN draws them, and a last-play panel closes the strip. The field is a
+ * self-contained graphic with fixed colors in both schemes. Ball position
+ * is the feed's absolute 0\u2013100 yard line; which end is being attacked
+ * follows from the spot's yards-to-endzone. */
 function GamecastStrip({ detail }: { detail: GameDetail }) {
   if (detail.game.state !== "in") return null;
   const drive = detail.drives[0];
@@ -89,11 +93,18 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
   const spotPlay = drive.plays.find((p) => p.spot);
   if (!spotPlay?.spot) return null;
   const spot = spotPlay.spot;
+  const g = detail.game;
   const offense = drive.teamAbbr;
-  const defense = offense === detail.game.awayAbbr ? detail.game.homeAbbr : detail.game.awayAbbr;
+  const defense = offense === g.awayAbbr ? g.homeAbbr : g.awayAbbr;
   const attacksHigh = spot.yardsToEndzone === 100 - spot.yardLine;
   const leftAbbr = attacksHigh ? offense : defense;
   const rightAbbr = attacksHigh ? defense : offense;
+  const meta = (abbr: string) =>
+    abbr === g.awayAbbr
+      ? { color: g.awayColor, alt: g.awayAltColor, name: g.awayName, logo: g.awayLogo }
+      : { color: g.homeColor, alt: g.homeAltColor, name: g.homeName, logo: g.homeLogo };
+  const offMeta = meta(offense);
+  const nickname = (name: string) => (name.split(" ").pop() ?? "").toUpperCase();
   const firstDown =
     spot.distance > 0 && !spot.downDistanceText.includes("Goal")
       ? attacksHigh
@@ -101,44 +112,121 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
         : spot.yardLine - spot.distance
       : null;
   const lastPlay = drive.plays.find((p) => p.text) ?? spotPlay;
+  const downText = spot.downDistanceText.includes(" at ")
+    ? spot.downDistanceText.split(" at ")[0]
+    : spot.downDistanceText;
+
+  const EndZone = ({ abbr, side }: { abbr: string; side: "left" | "right" }) => {
+    const m = meta(abbr);
+    return (
+      <div
+        className="relative flex w-[9%] items-center justify-center"
+        style={{ backgroundColor: m.color ? `#${m.color}` : "#3f3f46" }}
+      >
+        <span
+          className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white"
+          style={{ writingMode: "vertical-rl", transform: side === "left" ? "rotate(180deg)" : undefined }}
+        >
+          {nickname(m.name)}
+        </span>
+        <svg
+          className={`absolute top-1/2 h-5 w-2.5 -translate-y-1/2 text-yellow-400 ${side === "left" ? "-left-px" : "-right-px"}`}
+          viewBox="0 0 10 20"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          aria-hidden="true"
+        >
+          <path d="M1.5 1v6M8.5 1v6M1.5 7h7M5 7v12" />
+        </svg>
+      </div>
+    );
+  };
+
   return (
     <div className="mt-4 border-t border-white/10 pt-4 light:border-zinc-100">
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+        <TeamMark logo={drive.teamLogo} abbr={offense} size={20} />
+        <span className="text-xs font-bold uppercase tracking-[0.14em] text-zinc-200 light:text-zinc-700">
+          {drive.isCurrent ? "Current drive" : "Last drive"}
+        </span>
+        {drive.description && (
+          <span className="text-xs text-zinc-400 light:text-zinc-500">{drive.description}</span>
+        )}
+      </div>
+
+      <div className="mt-2.5 flex gap-10">
+        <div>
+          <div className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Down</div>
+          <div className="mt-0.5 text-sm font-bold text-zinc-100 light:text-zinc-900">{downText || "\u2014"}</div>
+        </div>
+        <div>
+          <div className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Ball on</div>
+          <div className="mt-0.5 text-sm font-bold text-zinc-100 light:text-zinc-900">{spot.text || "\u2014"}</div>
+        </div>
+      </div>
+
       <div
-        className="flex h-14 overflow-hidden rounded-lg text-[10px] font-bold tracking-widest text-white/85"
+        className="mt-3 flex h-24 overflow-hidden rounded-lg"
         role="img"
         aria-label={`Gamecast field: ${spot.downDistanceText || `${offense} ball`}`}
       >
-        <div className="flex w-[9%] items-center justify-center bg-zinc-800" style={{ writingMode: "vertical-rl" }}>
-          {leftAbbr}
-        </div>
-        <div className="relative flex-1 bg-emerald-900">
+        <EndZone abbr={leftAbbr} side="left" />
+        <div
+          className="relative flex-1"
+          style={{
+            background:
+              "repeating-linear-gradient(90deg, #e8e8eb 0%, #e8e8eb 10%, #dadade 10%, #dadade 20%)",
+          }}
+        >
           {[10, 20, 30, 40, 50, 60, 70, 80, 90].map((y) => (
-            <span key={y} className={`absolute inset-y-0 w-px ${y === 50 ? "bg-white/40" : "bg-white/15"}`} style={{ left: `${y}%` }} />
+            <span key={y} className="absolute inset-y-0 w-px bg-white/80" style={{ left: `${y}%` }} />
           ))}
+          <span className="absolute inset-x-0 top-1/2 border-t border-dashed border-zinc-500/50" />
           {firstDown !== null && firstDown > 0 && firstDown < 100 && (
-            <span className="absolute inset-y-0 w-[2px] bg-yellow-300/90" style={{ left: `${firstDown}%` }} />
+            <span className="absolute inset-y-0 w-[2.5px] bg-yellow-400" style={{ left: `${firstDown}%` }} />
           )}
-          <span
-            className="absolute top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-amber-400 shadow"
-            style={{ left: `${spot.yardLine}%` }}
-          />
+          <div className="absolute z-10" style={{ left: `${spot.yardLine}%`, top: "50%" }}>
+            <div className="absolute left-1/2 top-0 h-6 w-px -translate-x-1/2 border-l border-dashed border-zinc-800/60" />
+            <div className="flex -translate-x-1/2 -translate-y-[112%] flex-col items-center">
+              <div
+                className="flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-md ring-2 ring-amber-400"
+                style={offMeta.alt ? { ["--tw-ring-color" as string]: `#${offMeta.alt}` } : undefined}
+              >
+                <TeamMark logo={offMeta.logo} abbr={offense} size={19} />
+              </div>
+              <div className="h-0 w-0 border-x-[5px] border-t-[7px] border-x-transparent border-t-white" />
+            </div>
+          </div>
         </div>
-        <div className="flex w-[9%] items-center justify-center bg-zinc-800" style={{ writingMode: "vertical-rl" }}>
-          {rightAbbr}
+        <EndZone abbr={rightAbbr} side="right" />
+      </div>
+
+      <div className="mt-1 flex h-4 text-[10px] font-medium text-zinc-400 light:text-zinc-500">
+        <div className="w-[9%] text-center font-bold">{leftAbbr}</div>
+        <div className="relative flex-1">
+          {[10, 20, 30, 40, 50, 60, 70, 80, 90].map((y) => (
+            <span key={y} className="absolute -translate-x-1/2" style={{ left: `${y}%` }}>
+              {y <= 50 ? y : 100 - y}
+            </span>
+          ))}
         </div>
+        <div className="w-[9%] text-center font-bold">{rightAbbr}</div>
       </div>
-      <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1">
-        <span className="flex items-center gap-1.5 text-sm font-semibold text-amber-300 light:text-amber-700">
-          <BallIcon size={14} />
-          {spot.downDistanceText || `${offense} ball`}
-        </span>
-        <span className="text-xs text-zinc-400 light:text-zinc-500">{offense} possession</span>
-      </div>
+
       {lastPlay.text && (
-        <p className="mt-1.5 text-sm leading-relaxed text-zinc-300 light:text-zinc-600">
-          <span className="font-semibold text-zinc-100 light:text-zinc-800">Last play: </span>
-          {lastPlay.text}
-        </p>
+        <div className="mt-2 rounded-xl bg-zinc-950/50 px-4 py-3 light:bg-zinc-50">
+          <div className="flex items-center justify-between gap-3">
+            <span className="text-sm font-bold text-zinc-100 light:text-zinc-900">
+              {lastPlay.typeText ?? "Play"}
+            </span>
+            <span className="rounded-full bg-zinc-800 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-300 light:bg-zinc-200 light:text-zinc-600">
+              Last play
+            </span>
+          </div>
+          <p className="mt-1 text-sm leading-relaxed text-zinc-400 light:text-zinc-600">{lastPlay.text}</p>
+          {lastPlay.startText && <p className="mt-1 text-[11px] text-zinc-500">{lastPlay.startText}</p>}
+        </div>
       )}
     </div>
   );

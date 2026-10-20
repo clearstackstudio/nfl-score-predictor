@@ -32,6 +32,11 @@ export interface LiveGame {
   possessionAbbr: string | null;
   /** Live down & distance text, e.g. "1st & 10 at DEN 34", or null when not live/unknown. */
   situationText: string | null;
+  /** Team brand colors (hex, no '#') for the Gamecast end zones — detail feed only. */
+  awayColor?: string;
+  homeColor?: string;
+  awayAltColor?: string;
+  homeAltColor?: string;
 }
 
 export interface StatRow {
@@ -83,6 +88,10 @@ export interface Play {
   scoringPlay: boolean;
   turnover: boolean;
   downDistance?: string;
+  /** Play type label from the feed, e.g. "Sack", "Pass", "Rush". */
+  typeText?: string;
+  /** This play's pre-snap situation, e.g. "3rd & 9 at WSH 44". */
+  startText?: string;
   /** Where the ball sits for the next snap (this play's end state, falling
    * back to its start) — the Gamecast field position. */
   spot?: PlaySpot;
@@ -95,6 +104,8 @@ export interface Drive {
   description: string;
   result: string;
   isScore: boolean;
+  /** True for the drive in progress (ESPN's drives.current), false for completed ones. */
+  isCurrent: boolean;
   plays: Play[]; // newest first
 }
 
@@ -241,6 +252,8 @@ function toPlay(p: any): Play {
     turnover: !!p.turnover,
     downDistance:
       down && dist ? `${down}${ordinal(down)} & ${dist}` : undefined,
+    typeText: p.type?.text ?? undefined,
+    startText: start.downDistanceText ?? undefined,
     // The next snap's state is this play's END; if the play ended the drive
     // (score, turnover, downs), fall back to where the snap itself happened.
     spot: spotOf(p.end) ?? spotOf(p.start),
@@ -286,16 +299,21 @@ export async function fetchGameDetail(league: League, gameId: string): Promise<G
     homeLinescores: summaryLinescores(home),
     possessionAbbr,
     situationText: comp.situation?.downDistanceText ?? null,
+    awayColor: away.team?.color ?? undefined,
+    homeColor: home.team?.color ?? undefined,
+    awayAltColor: away.team?.alternateColor ?? undefined,
+    homeAltColor: home.team?.alternateColor ?? undefined,
   };
 
   const logoFor = (abbr: string) =>
     abbr === game.awayAbbr ? game.awayLogo : abbr === game.homeAbbr ? game.homeLogo : "";
 
+  const hasCurrent = !!d.drives?.current;
   const rawDrives: any[] = [
-    ...(d.drives?.current ? [d.drives.current] : []),
+    ...(hasCurrent ? [d.drives.current] : []),
     ...(d.drives?.previous ?? []),
   ];
-  const drives: Drive[] = rawDrives.map((dr: any) => {
+  const drives: Drive[] = rawDrives.map((dr: any, i: number) => {
     const teamAbbr = dr.team?.abbreviation ?? "";
     const plays: Play[] = (dr.plays ?? []).map(toPlay).reverse(); // newest first
     return {
@@ -305,6 +323,7 @@ export async function fetchGameDetail(league: League, gameId: string): Promise<G
       description: dr.description ?? "",
       result: dr.displayResult ?? dr.shortDisplayResult ?? "",
       isScore: !!dr.isScore,
+      isCurrent: hasCurrent && i === 0,
       plays,
     };
   });
