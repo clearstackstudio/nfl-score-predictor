@@ -854,7 +854,17 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
             <CollapseRegion open={listOpen}>
               <div className="divide-y divide-white/10 light:divide-zinc-100">
                 {sorted.map((g) => (
-                  <ScoreboardRow key={g.id} g={g} selected={g.id === selectedId} onSelect={() => setSelectedId(g.id)} football={football} />
+                  <ScoreboardRow
+                    key={g.id}
+                    // The selected game's row borrows the detail-derived
+                    // possession: both ESPN feeds drop their situation
+                    // object during breaks, which blanked the row's icon
+                    // at halftime while the card still showed it.
+                    g={g.id === selectedId && possessionAbbr ? { ...g, possessionAbbr } : g}
+                    selected={g.id === selectedId}
+                    onSelect={() => setSelectedId(g.id)}
+                    football={football}
+                  />
                 ))}
               </div>
             </CollapseRegion>
