@@ -61,6 +61,18 @@ export interface ScoringPlay {
   homeScore: number;
 }
 
+export interface PlaySpot {
+  /** Absolute field position, 0–100 (one goal line to the other). */
+  yardLine: number;
+  yardsToEndzone: number;
+  down: number;
+  distance: number;
+  /** Territory text, e.g. "WSH 1". */
+  text: string;
+  /** Full situation text, e.g. "3rd & Goal at WSH 1". */
+  downDistanceText: string;
+}
+
 export interface Play {
   id: string;
   text: string;
@@ -71,6 +83,9 @@ export interface Play {
   scoringPlay: boolean;
   turnover: boolean;
   downDistance?: string;
+  /** Where the ball sits for the next snap (this play's end state, falling
+   * back to its start) — the Gamecast field position. */
+  spot?: PlaySpot;
 }
 
 export interface Drive {
@@ -197,6 +212,20 @@ export async function fetchScoreboard(league: League): Promise<LiveGame[]> {
   });
 }
 
+function spotOf(s: any): PlaySpot | undefined {
+  // A real scrimmage state only: administrative entries (timeouts, quarter
+  // breaks) and drive-ending plays carry down -1/0 and no trustworthy spot.
+  if (!s || typeof s.yardLine !== "number" || !(s.down >= 1)) return undefined;
+  return {
+    yardLine: s.yardLine,
+    yardsToEndzone: typeof s.yardsToEndzone === "number" ? s.yardsToEndzone : 100 - s.yardLine,
+    down: s.down,
+    distance: s.distance ?? 0,
+    text: s.possessionText ?? "",
+    downDistanceText: s.downDistanceText ?? "",
+  };
+}
+
 function toPlay(p: any): Play {
   const start = p.start ?? {};
   const down = start.down ?? p.down;
@@ -212,6 +241,9 @@ function toPlay(p: any): Play {
     turnover: !!p.turnover,
     downDistance:
       down && dist ? `${down}${ordinal(down)} & ${dist}` : undefined,
+    // The next snap's state is this play's END; if the play ended the drive
+    // (score, turnover, downs), fall back to where the snap itself happened.
+    spot: spotOf(p.end) ?? spotOf(p.start),
   };
 }
 

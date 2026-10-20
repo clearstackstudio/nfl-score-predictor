@@ -76,6 +76,74 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
   );
 }
 
+/** ESPN-style Gamecast field strip, rendered inside the linescore card for
+ * live football games: end zones, the ball spot, the first-down line, down
+ * & distance, and the last play. The feed's yard line is an absolute 0–100
+ * coordinate; which end the offense is attacking follows from the spot's
+ * yards-to-endzone, so the marker always lands on the right yard line. The
+ * field keeps its own colors in both schemes, like a broadcast graphic. */
+function GamecastStrip({ detail }: { detail: GameDetail }) {
+  if (detail.game.state !== "in") return null;
+  const drive = detail.drives[0];
+  if (!drive) return null;
+  const spotPlay = drive.plays.find((p) => p.spot);
+  if (!spotPlay?.spot) return null;
+  const spot = spotPlay.spot;
+  const offense = drive.teamAbbr;
+  const defense = offense === detail.game.awayAbbr ? detail.game.homeAbbr : detail.game.awayAbbr;
+  const attacksHigh = spot.yardsToEndzone === 100 - spot.yardLine;
+  const leftAbbr = attacksHigh ? offense : defense;
+  const rightAbbr = attacksHigh ? defense : offense;
+  const firstDown =
+    spot.distance > 0 && !spot.downDistanceText.includes("Goal")
+      ? attacksHigh
+        ? spot.yardLine + spot.distance
+        : spot.yardLine - spot.distance
+      : null;
+  const lastPlay = drive.plays.find((p) => p.text) ?? spotPlay;
+  return (
+    <div className="mt-4 border-t border-white/10 pt-4 light:border-zinc-100">
+      <div
+        className="flex h-14 overflow-hidden rounded-lg text-[10px] font-bold tracking-widest text-white/85"
+        role="img"
+        aria-label={`Gamecast field: ${spot.downDistanceText || `${offense} ball`}`}
+      >
+        <div className="flex w-[9%] items-center justify-center bg-zinc-800" style={{ writingMode: "vertical-rl" }}>
+          {leftAbbr}
+        </div>
+        <div className="relative flex-1 bg-emerald-900">
+          {[10, 20, 30, 40, 50, 60, 70, 80, 90].map((y) => (
+            <span key={y} className={`absolute inset-y-0 w-px ${y === 50 ? "bg-white/40" : "bg-white/15"}`} style={{ left: `${y}%` }} />
+          ))}
+          {firstDown !== null && firstDown > 0 && firstDown < 100 && (
+            <span className="absolute inset-y-0 w-[2px] bg-yellow-300/90" style={{ left: `${firstDown}%` }} />
+          )}
+          <span
+            className="absolute top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-amber-400 shadow"
+            style={{ left: `${spot.yardLine}%` }}
+          />
+        </div>
+        <div className="flex w-[9%] items-center justify-center bg-zinc-800" style={{ writingMode: "vertical-rl" }}>
+          {rightAbbr}
+        </div>
+      </div>
+      <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1">
+        <span className="flex items-center gap-1.5 text-sm font-semibold text-amber-300 light:text-amber-700">
+          <BallIcon size={14} />
+          {spot.downDistanceText || `${offense} ball`}
+        </span>
+        <span className="text-xs text-zinc-400 light:text-zinc-500">{offense} possession</span>
+      </div>
+      {lastPlay.text && (
+        <p className="mt-1.5 text-sm leading-relaxed text-zinc-300 light:text-zinc-600">
+          <span className="font-semibold text-zinc-100 light:text-zinc-800">Last play: </span>
+          {lastPlay.text}
+        </p>
+      )}
+    </div>
+  );
+}
+
 function BallIcon({ size = 13 }: { size?: number }) {
   return (
     <svg aria-label="Possession" role="img" width={size} height={size} viewBox="0 0 16 16" className="shrink-0 text-amber-400 light:text-amber-600">
@@ -527,6 +595,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
                 },
               ]}
             />
+            {football && <GamecastStrip detail={detail} />}
           </div>
           <div className="mt-4">
             <WinProbChart points={detail.winProb} homeAbbr={detail.game.homeAbbr} awayAbbr={detail.game.awayAbbr} />
