@@ -2,8 +2,8 @@
   "sport": "nba",
   "season": 2027,
   "asof": "2026-10-19",
-  "updated": "2026-10-19 14:53 PDT",
-  "note": "Preseason ratings for the 2026-27 season: the model's Elo ratings converted to expected margin vs an average team on a neutral court at the model's fitted rate (30 Elo points per point of margin), carried across the offseason with the model's mean-regression rollover. No 2026-27 games have been played yet; the regular season opens Oct 20, 2026.",
+  "updated": "2026-10-19 21:39 PDT",
+  "note": "Model-internal predictive ratings: the model's Elo ratings converted to expected margin vs an average team on a neutral court at the model's fitted rate (30 Elo points per point of margin), before nightly rest/star adjustments. Not a resume ranking; moves only on game results.",
   "teams": [
     {
       "rank": 1,

@@ -1,1 +1,117 @@
-{"sport":"nba","season":2027,"days":{}}
+{
+  "sport": "nba",
+  "season": 2027,
+  "days": {
+    "2026-10-20": {
+      "date": "2026-10-20",
+      "generated": "2026-10-19 21:39 PDT",
+      "preseason": false,
+      "warming_up": true,
+      "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Boston Celtics",
+          "home": "Detroit Pistons",
+          "away_abbr": "Boston Celtics",
+          "home_abbr": "Detroit Pistons",
+          "gameday": "2026-10-20",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -1.0,
+          "line_total": 222.0,
+          "our_spread": 2.0,
+          "our_total": 230.7,
+          "spread_edge": 3.0,
+          "total_edge": 8.7,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Detroit Pistons +1",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Detroit Pistons +1",
+            "away": "Boston Celtics -1"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Philadelphia 76ers",
+          "home": "New York Knicks",
+          "away_abbr": "Philadelphia 76ers",
+          "home_abbr": "New York Knicks",
+          "gameday": "2026-10-20",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 4.5,
+          "line_total": 232.0,
+          "our_spread": 2.7,
+          "our_total": 230.0,
+          "spread_edge": -1.8,
+          "total_edge": -2.0,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Philadelphia 76ers +4.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "New York Knicks -4.5",
+            "away": "Philadelphia 76ers +4.5"
+          },
+          "cover_prob": 0.504,
+          "ou_prob": null
+        },
+        {
+          "away": "Oklahoma City Thunder",
+          "home": "San Antonio Spurs",
+          "away_abbr": "Oklahoma City Thunder",
+          "home_abbr": "San Antonio Spurs",
+          "gameday": "2026-10-20",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 2.0,
+          "line_total": 231.5,
+          "our_spread": 2.3,
+          "our_total": 231.0,
+          "spread_edge": 0.3,
+          "total_edge": -0.5,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "San Antonio Spurs -2",
+            "away": "Oklahoma City Thunder +2"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Philadelphia 76ers @ New York Knicks",
+            "market": "spread",
+            "label": "Philadelphia 76ers +4.5",
+            "prob": 0.504
+          },
+          {
+            "game": "Boston Celtics @ Detroit Pistons",
+            "market": "spread",
+            "label": "Detroit Pistons +1",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.252,
+        "fair_odds": "+297",
+        "book_pays": "+260"
+      }
+    }
+  }
+}
