@@ -1148,7 +1148,7 @@
     },
     "6": {
       "generated": "2026-10-16 19:40 PDT",
-      "complete": false,
+      "complete": true,
       "picks": [
         {
           "away": "Seattle Seahawks",
@@ -1666,7 +1666,13 @@
           "cover_prob": 0.5,
           "ou_prob": 0.5,
           "home_qb": "Brock Purdy",
-          "away_qb": "Jayden Daniels"
+          "away_qb": "Jayden Daniels",
+          "result": {
+            "home_score": 23,
+            "away_score": 17,
+            "ats": "loss",
+            "ou": "loss"
+          }
         }
       ],
       "parlay": {
