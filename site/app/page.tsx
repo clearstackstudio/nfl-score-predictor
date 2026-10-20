@@ -5,6 +5,7 @@ import seasonLog from "../data/season_2026.json";
 import { fmtSpread, fmtPct, trim } from "./lib/format";
 import TeamLogo from "./lib/team-logo";
 import SharePicks from "./lib/share-picks";
+import Expandable from "./lib/expandable";
 
 type Pick = {
   away: string; home: string; away_abbr: string; home_abbr: string;
@@ -145,6 +146,7 @@ function PickStrip({ active, note, result, children }: { active: boolean; note?:
 function GameCard({ p }: { p: Pick }) {
   return (
     <article className="rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-zinc-900/30 p-5 transition-colors hover:border-white/20 light:border-zinc-200 light:from-white light:to-zinc-50 light:hover:border-zinc-300">
+      <Expandable>
       {/* Header: matchup + date */}
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="flex flex-wrap items-center gap-x-2.5 text-[17px] font-bold tracking-tight">
@@ -199,6 +201,7 @@ function GameCard({ p }: { p: Pick }) {
           </PickStrip>
         }
       />
+      </Expandable>
     </article>
   );
 }

@@ -4,6 +4,7 @@ import picksData from "../../data/nba_picks.json";
 import seasonLog from "../../data/nba_season_2027.json";
 import { fmtSpread, fmtPct, trim } from "../lib/format";
 import NbaTeamLogo from "../lib/nba-team-logo";
+import Expandable from "../lib/expandable";
 
 type Pick = {
   away: string; home: string; away_abbr: string; home_abbr: string;
@@ -165,6 +166,7 @@ function PickStrip({ active, note, children }: { active: boolean; note?: string 
 function GameCard({ p }: { p: Pick }) {
   return (
     <article className="rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-zinc-900/30 p-5 transition-colors hover:border-white/20 light:border-zinc-200 light:from-white light:to-zinc-50 light:hover:border-zinc-300">
+      <Expandable>
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="flex flex-wrap items-center gap-x-2.5 text-[17px] font-bold tracking-tight">
           <span className="inline-flex items-center gap-2">
@@ -196,6 +198,7 @@ function GameCard({ p }: { p: Pick }) {
           worse than a coin flip. We&rsquo;d rather show nothing than a losing pick.
         </p>
       </div>
+      </Expandable>
     </article>
   );
 }
