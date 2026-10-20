@@ -564,13 +564,14 @@ function ScoringSection({ detail, football }: { detail: GameDetail; football: bo
   );
 }
 
-function LeaderCard({ tl, logo }: { tl: GameDetail["leaders"][number]; logo: string }) {
+function LeaderCard({ tl, logo, hasBall }: { tl: GameDetail["leaders"][number]; logo: string; hasBall: boolean }) {
   const [open, setOpen] = useState(true);
   return (
     <section className="rounded-2xl border border-white/15 bg-zinc-900/70 p-5 light:border-zinc-200 light:bg-white">
       <button onClick={() => setOpen(!open)} aria-expanded={open} className="flex w-full items-center gap-2 text-left">
         <TeamMark logo={logo} abbr={tl.teamAbbr} size={24} />
         <h3 className="flex-1 text-sm font-bold text-white light:text-zinc-900">{tl.teamAbbr} leaders</h3>
+        {hasBall && <BallIcon size={16} />}
         <CollapsePill open={open} />
       </button>
       <CollapseRegion open={open}>
@@ -590,7 +591,7 @@ function LeaderCard({ tl, logo }: { tl: GameDetail["leaders"][number]; logo: str
   );
 }
 
-function StatsSection({ detail }: { detail: GameDetail }) {
+function StatsSection({ detail, possessionAbbr }: { detail: GameDetail; possessionAbbr: string | null }) {
   const [statsOpen, setStatsOpen] = useState(true);
   const logoFor = (abbr: string) =>
     abbr === detail.game.awayAbbr ? detail.game.awayLogo : abbr === detail.game.homeAbbr ? detail.game.homeLogo : "";
@@ -605,6 +606,7 @@ function StatsSection({ detail }: { detail: GameDetail }) {
                   <span className="flex items-center gap-2 text-sm font-bold text-white light:text-zinc-900">
                     <TeamMark logo={detail.game.awayLogo} abbr={detail.game.awayAbbr} size={22} />
                     {detail.game.awayAbbr}
+                    {possessionAbbr === detail.game.awayAbbr && <BallIcon size={16} />}
                   </span>
                 </th>
                 <th className="px-2 py-3 text-center text-[11px] font-semibold uppercase tracking-wider text-zinc-400 light:text-zinc-500">
@@ -616,6 +618,7 @@ function StatsSection({ detail }: { detail: GameDetail }) {
                 <th className="px-5 py-3 text-right">
                   <span className="flex items-center justify-end gap-2 text-sm font-bold text-white light:text-zinc-900">
                     {detail.game.homeAbbr}
+                    {possessionAbbr === detail.game.homeAbbr && <BallIcon size={16} />}
                     <TeamMark logo={detail.game.homeLogo} abbr={detail.game.homeAbbr} size={22} />
                   </span>
                 </th>
@@ -638,7 +641,7 @@ function StatsSection({ detail }: { detail: GameDetail }) {
       {detail.leaders.length > 0 && (
         <div className="space-y-4">
           {detail.leaders.map((tl) => (
-            <LeaderCard key={tl.teamAbbr} tl={tl} logo={logoFor(tl.teamAbbr)} />
+            <LeaderCard key={tl.teamAbbr} tl={tl} logo={logoFor(tl.teamAbbr)} hasBall={possessionAbbr === tl.teamAbbr} />
           ))}
         </div>
       )}
@@ -706,6 +709,16 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
   }, [games]);
   const liveCount = games?.filter((g) => g.state === "in").length ?? 0;
   const boardGame = games?.find((g) => g.id === selectedId) ?? null;
+  // Possession for the selected game, with fallbacks: the summary feed's
+  // situation object sometimes comes back empty (breaks, post-score
+  // transitions), so fall back to the scoreboard's possession, then the
+  // current drive's team.
+  const possessionAbbr =
+    detail && detail.game.state === "in"
+      ? (detail.game.possessionAbbr ??
+        boardGame?.possessionAbbr ??
+        (detail.drives[0]?.isCurrent ? detail.drives[0].teamAbbr : null))
+      : null;
 
   // Tabs degrade with the feed: basketball summaries carry no drives, and a
   // pre-game feed has nothing yet — show only tabs that have content.
@@ -794,16 +807,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
             <CollapseRegion open={cardOpen}>
             <LinescoreTable
               football={football}
-              possessionAbbr={
-                detail.game.state === "in"
-                  ? // The summary feed's situation object sometimes comes back
-                    // empty (breaks, post-score transitions) — fall back to the
-                    // scoreboard's possession, then the current drive's team.
-                    (detail.game.possessionAbbr ??
-                      boardGame?.possessionAbbr ??
-                      (detail.drives[0]?.isCurrent ? detail.drives[0].teamAbbr : null))
-                  : null
-              }
+              possessionAbbr={possessionAbbr}
               periods={headerPeriods}
               teams={[
                 {
@@ -880,7 +884,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
                   </div>
                   {activeTab === "plays" && <DrivesSection detail={detail} />}
                   {activeTab === "scoring" && <ScoringSection detail={detail} football={football} />}
-                  {activeTab === "stats" && <StatsSection detail={detail} />}
+                  {activeTab === "stats" && <StatsSection detail={detail} possessionAbbr={possessionAbbr} />}
                 </>
               ) : (
                 detail.game.state === "pre" && (
