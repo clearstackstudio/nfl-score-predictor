@@ -247,7 +247,6 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
             </span>
           </div>
           <p className="mt-1 text-sm leading-relaxed text-zinc-400 light:text-zinc-600">{lastPlay.text}</p>
-          {lastPlay.startText && <p className="mt-1 text-[11px] text-zinc-500">{lastPlay.startText}</p>}
         </div>
       )}
     </div>
@@ -627,10 +626,9 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
       : (boardGame?.homeLinescores ?? [])
     : [];
   const headerPeriods = Math.max(awayLines.length, homeLines.length);
-  const situationText =
-    detail && detail.game.state === "in"
-      ? (boardGame?.situationText ?? detail.game.situationText ?? null)
-      : null;
+  // Down & distance now lives in exactly one place: the Gamecast strip's
+  // Down / Ball-on readout (simplification pass, 2026-10-19). The header
+  // keeps only the game status + last-update time.
 
   return (
     <div>
@@ -639,8 +637,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
         Live <span className="text-amber-400 light:text-amber-500">play-by-play</span>
       </h1>
       <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-300 light:text-zinc-600">
-        Every snap, as it happens — pulled live from the ESPN feed and refreshed
-        every 30 seconds. Scores, drives, and win probability update together.
+        Every snap, live from the ESPN feed — refreshed every 30 seconds.
       </p>
 
       {error && (
@@ -670,12 +667,6 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
                 <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-300 light:text-amber-600" : "text-zinc-200 light:text-zinc-600"}`}>
                   {detail.game.state === "in" ? detail.game.detail || "Live" : detail.game.state === "post" ? "Final" : detail.game.detail}
                 </div>
-                {situationText && (
-                  <div className="mt-1 flex items-center gap-1.5 text-sm font-semibold text-amber-300 light:text-amber-700">
-                    {football && <BallIcon size={14} />}
-                    {situationText}
-                  </div>
-                )}
               </div>
               {lastUpdate && (
                 <div className="shrink-0 text-[11px] text-zinc-400 light:text-zinc-500">
@@ -762,8 +753,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
       )}
 
       <p className="mt-8 max-w-2xl text-xs leading-relaxed text-zinc-500 light:text-zinc-500">
-        Live data via ESPN. Play-by-play and win probability refresh automatically
-        while games are in progress; pre-game and final states update on the minute.
+        Live data via ESPN · refreshes automatically during games.
       </p>
     </div>
   );
