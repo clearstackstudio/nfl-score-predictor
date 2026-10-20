@@ -232,6 +232,18 @@ def build_parlay(picks: list[dict]) -> dict | None:
     }
 
 
+def parlay_is_live(parlay: dict, picks: list[dict]) -> bool:
+    """True once any leg's game has a result in the current picks.
+
+    From that kickoff the parlay is a live bet and a published record: it
+    must not change, even if a later line move would have dropped a leg —
+    a refresh can never be allowed to eject a leg that already lost.
+    """
+    played = {(p["home_abbr"], p["away_abbr"]) for p in picks if p.get("result")}
+    return any((leg["home_abbr"], leg["away_abbr"]) in played
+               for leg in parlay.get("legs", []))
+
+
 def validate_picks(picks: list[dict], parlay: dict | None,
                    locked: bool = False) -> None:
     """Recompute every display label and consistency rule from raw fields.
@@ -487,22 +499,31 @@ def main() -> None:
             pick["result"] = old["result"]
         picks.append(pick)
 
-    # Parlay lock: the parlay is a published record. Once a week's parlay is
-    # out, mid-week re-runs keep it exactly as published instead of silently
-    # swapping legs as lines move. A new week builds a fresh parlay. The lock
-    # is methodology-aware: a calibration change rebuilds the parlay once so
-    # the site never displays probabilities from a superseded formula.
-    if (old_doc.get("season") == SEASON
-            and old_doc.get("week") == int(next_week)
-            and old_doc.get("parlay")
-            and old_doc["parlay"].get("calibration") == CALIBRATION_VERSION):
-        parlay = old_doc["parlay"]
+    # Parlay consistency rule (Bryant, 2026-10-19): the parlay must never
+    # contain a pick the card currently shows as no play. Before any leg
+    # kicks off, every refresh rebuilds the parlay from the CURRENT picks,
+    # so when a line move kills a pick (Week 6: PIT@TB's total fell from
+    # 40.5 to 39.5, onto our 39.4, and the card went to no play), the leg
+    # leaves with it and the next-best current play takes its place. Once
+    # any leg's game has kicked off, the parlay freezes as published — a
+    # live bet is a record, and no refresh may rewrite it. A calibration
+    # change still rebuilds a not-yet-live parlay once, so the site never
+    # displays probabilities from a superseded formula.
+    old_parlay = old_doc.get("parlay")
+    same_week = (old_doc.get("season") == SEASON
+                 and old_doc.get("week") == int(next_week)
+                 and old_parlay
+                 and old_parlay.get("calibration") == CALIBRATION_VERSION)
+    if same_week and parlay_is_live(old_parlay, picks):
+        parlay = old_parlay
         parlay_locked = True
-        print("Parlay locked at first publish — carrying over.")
+        print("Parlay live (a leg has kicked off) — frozen as published.")
     else:
         parlay = build_parlay(picks)
         parlay_locked = False
-        if old_doc.get("parlay"):
+        if same_week:
+            print("Parlay rebuilt from current picks (consistency rule).")
+        elif old_parlay:
             print("Parlay rebuilt under new calibration (methodology change).")
     validate_picks(picks, parlay, locked=parlay_locked)  # fail loudly BEFORE publishing, never after
     out = {

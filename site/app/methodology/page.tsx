@@ -23,6 +23,17 @@ export default function Methodology() {
             estimated cover probability.
           </p>
           <p>
+            The parlay of the week is the week&rsquo;s three highest-probability
+            published picks, spread or total. It is rebuilt every time the
+            picks refresh, so it always matches the cards: if a line moves far
+            enough that a leg&rsquo;s pick drops to no play — as happened in
+            Week 6 of 2026, when Tampa Bay&rsquo;s total moved from 40.5 to
+            39.5, onto our number — the leg leaves the parlay and the next-best
+            published pick takes its place. Once the first leg kicks off, the
+            parlay freezes exactly as published: a live bet is a record, and
+            no later update rewrites it.
+          </p>
+          <p>
             Two guardrails keep the model honest with itself. Quarterback
             changes are adjusted for explicitly: when the announced starter
             differs from the passers who produced a team&apos;s trailing
