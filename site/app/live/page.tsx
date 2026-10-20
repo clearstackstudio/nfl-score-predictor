@@ -655,6 +655,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
   const [tab, setTab] = useState<TabId>("plays");
   const [cardOpen, setCardOpen] = useState(true);
+  const [listOpen, setListOpen] = useState(true);
   const football = league === "nfl" || league === "college-football";
 
   const loadBoard = useCallback(async () => {
@@ -822,10 +823,27 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
             </div>
           )}
 
-          <div className={`${detail ? "mt-4" : "mt-8"} divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:divide-zinc-100 light:border-zinc-200 light:bg-white`}>
-            {sorted.map((g) => (
-              <ScoreboardRow key={g.id} g={g} selected={g.id === selectedId} onSelect={() => setSelectedId(g.id)} football={football} />
-            ))}
+          <div className={`${detail ? "mt-4" : "mt-8"} overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:border-zinc-200 light:bg-white`}>
+            <button
+              onClick={() => setListOpen(!listOpen)}
+              aria-expanded={listOpen}
+              className={`flex w-full items-center justify-between gap-3 bg-zinc-950/70 px-5 py-3 text-left light:bg-zinc-50 ${listOpen ? "border-b border-white/10 light:border-zinc-200" : ""}`}
+            >
+              <span className="text-sm font-semibold">All games</span>
+              <span className="flex shrink-0 items-center gap-2">
+                <span className="text-[11px] font-medium text-zinc-400 light:text-zinc-500">
+                  {sorted.length} {sorted.length === 1 ? "game" : "games"}
+                </span>
+                <CollapsePill open={listOpen} />
+              </span>
+            </button>
+            <CollapseRegion open={listOpen}>
+              <div className="divide-y divide-white/10 light:divide-zinc-100">
+                {sorted.map((g) => (
+                  <ScoreboardRow key={g.id} g={g} selected={g.id === selectedId} onSelect={() => setSelectedId(g.id)} football={football} />
+                ))}
+              </div>
+            </CollapseRegion>
           </div>
 
           {detail ? (
