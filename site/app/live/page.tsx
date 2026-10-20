@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import {
   fetchScoreboard,
   fetchGameDetail,
@@ -38,6 +38,7 @@ function TeamMark({ logo, abbr, size = 28 }: { logo: string; abbr: string; size?
 }
 
 function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: number }[]; homeAbbr: string; awayAbbr: string }) {
+  const [open, setOpen] = useState(true);
   const { path, area } = useMemo(() => {
     if (points.length < 2) return { path: "", area: "" };
     const W = 600, H = 120, PAD = 8;
@@ -54,24 +55,27 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
   return (
     <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-5 light:border-zinc-200 light:bg-white">
       <div className="flex items-baseline justify-between">
-        <div className="text-xs font-semibold uppercase tracking-wider text-zinc-300 light:text-zinc-600">
+        <button onClick={() => setOpen(!open)} aria-expanded={open} className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-300 light:text-zinc-600">
           Win probability
-        </div>
+          <Chevron open={open} />
+        </button>
         <div className="tnum font-mono text-base font-bold">
           <span className="text-zinc-300 light:text-zinc-600">{awayAbbr} {Math.round((1 - last) * 100)}%</span>
           <span className="mx-2 text-zinc-600 light:text-zinc-300">·</span>
           <span className="text-amber-300 light:text-amber-600">{homeAbbr} {Math.round(last * 100)}%</span>
         </div>
       </div>
-      <svg viewBox="0 0 600 120" className="mt-3 h-32 w-full" preserveAspectRatio="none" role="img" aria-label="Win probability chart">
-        <line x1="0" y1="60" x2="600" y2="60" stroke="#52525b" strokeDasharray="4 4" strokeWidth="1" />
-        <path d={area} fill="rgba(251,191,36,0.15)" className="fade-in" />
-        <path d={path} fill="none" stroke="#fbbf24" strokeWidth="2.5" vectorEffect="non-scaling-stroke" pathLength={1} className="chart-draw" />
-      </svg>
-      <div className="mt-2 flex justify-between text-[11px] font-medium text-zinc-400 light:text-zinc-500">
-        <span>Kickoff</span>
-        <span>Now</span>
-      </div>
+      <CollapseRegion open={open}>
+        <svg viewBox="0 0 600 120" className="mt-3 h-32 w-full" preserveAspectRatio="none" role="img" aria-label="Win probability chart">
+          <line x1="0" y1="60" x2="600" y2="60" stroke="#52525b" strokeDasharray="4 4" strokeWidth="1" />
+          <path d={area} fill="rgba(251,191,36,0.15)" className="fade-in" />
+          <path d={path} fill="none" stroke="#fbbf24" strokeWidth="2.5" vectorEffect="non-scaling-stroke" pathLength={1} className="chart-draw" />
+        </svg>
+        <div className="mt-2 flex justify-between text-[11px] font-medium text-zinc-400 light:text-zinc-500">
+          <span>Kickoff</span>
+          <span>Now</span>
+        </div>
+      </CollapseRegion>
     </div>
   );
 }
@@ -278,6 +282,24 @@ function BallIcon({ size = 13 }: { size?: number }) {
   );
 }
 
+/** Chevron for a collapsible card header; points right when folded. */
+function Chevron({ open }: { open: boolean }) {
+  return (
+    <svg viewBox="0 0 20 20" className={`h-4 w-4 shrink-0 text-zinc-400 transition-transform duration-300 light:text-zinc-500 ${open ? "" : "-rotate-90"}`} fill="none" aria-hidden="true">
+      <path d="M5 7.5 10 12.5 15 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+/** Smoothly folds its children away (grid-rows animation) when closed. */
+function CollapseRegion({ open, children }: { open: boolean; children: ReactNode }) {
+  return (
+    <div className={`grid transition-all duration-300 ease-out ${open ? "[grid-template-rows:1fr] opacity-100" : "[grid-template-rows:0fr] opacity-0"}`}>
+      <div className="min-h-0 overflow-hidden">{children}</div>
+    </div>
+  );
+}
+
 /** Column header for period i (0-based): Q1..Q4, then OT, 2OT… (basketball: P1, P2…). */
 function periodLabel(i: number, football: boolean): string {
   if (!football) return `P${i + 1}`;
@@ -358,8 +380,10 @@ interface LinescoreTeam {
   total: string;
 }
 
-/** Gamecast-style linescore table: team rows × period columns + total. */
-function LinescoreTable({ teams, periods, football }: { teams: LinescoreTeam[]; periods: number; football: boolean }) {
+/** Gamecast-style linescore table: team rows × period columns + total.
+ * The team in possession gets the same football marker the scoreboard
+ * rows use (an amber dot for non-football leagues). */
+function LinescoreTable({ teams, periods, football, possessionAbbr }: { teams: LinescoreTeam[]; periods: number; football: boolean; possessionAbbr?: string | null }) {
   return (
     <table className="w-full border-collapse">
       <thead>
@@ -380,6 +404,12 @@ function LinescoreTable({ teams, periods, football }: { teams: LinescoreTeam[]; 
               <div className="flex min-w-0 items-center gap-2.5">
                 <TeamMark logo={t.logo} abbr={t.abbr} size={30} />
                 <span className="truncate text-sm font-bold text-white light:text-zinc-900 sm:text-base">{t.name}</span>
+                {possessionAbbr === t.abbr &&
+                  (football ? (
+                    <BallIcon size={15} />
+                  ) : (
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400 light:bg-amber-600" aria-label="Possession" />
+                  ))}
                 {t.record && <span className="hidden shrink-0 text-xs text-zinc-500 md:inline light:text-zinc-400">{t.record}</span>}
               </div>
             </td>
@@ -428,6 +458,46 @@ function PlayRow({ p, homeAbbr }: { p: GameDetail["drives"][number]["plays"][num
   );
 }
 
+function DriveCard({ dr, isCurrent, homeAbbr }: { dr: GameDetail["drives"][number]; isCurrent: boolean; homeAbbr: string }) {
+  const [open, setOpen] = useState(true);
+  return (
+    <section className="overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:border-zinc-200 light:bg-white">
+      <button
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        className={`flex w-full items-center justify-between gap-3 bg-zinc-950/70 px-5 py-3 text-left light:bg-zinc-50 ${open ? "border-b border-white/10 light:border-zinc-200" : ""}`}
+      >
+        <div className="flex min-w-0 items-center gap-2.5">
+          <TeamMark logo={dr.teamLogo} abbr={dr.teamAbbr} size={24} />
+          <div className="min-w-0">
+            <div className="truncate text-sm font-semibold">{dr.description || `${dr.teamAbbr} drive`}</div>
+          </div>
+        </div>
+        <div className="flex shrink-0 items-center gap-2">
+          {isCurrent && (
+            <span className="rounded bg-amber-400/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-300 light:text-amber-700">
+              current
+            </span>
+          )}
+          {dr.result && (
+            <span className={`rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${dr.isScore ? "bg-emerald-400/15 text-emerald-300 light:text-emerald-700" : "bg-zinc-800 text-zinc-400 light:bg-zinc-200 light:text-zinc-600"}`}>
+              {dr.result}
+            </span>
+          )}
+          <Chevron open={open} />
+        </div>
+      </button>
+      <CollapseRegion open={open}>
+        <div>
+          {dr.plays.map((p) => (
+            <PlayRow key={p.id} p={p} homeAbbr={homeAbbr} />
+          ))}
+        </div>
+      </CollapseRegion>
+    </section>
+  );
+}
+
 function DrivesSection({ detail }: { detail: GameDetail }) {
   if (detail.drives.length === 0) {
     return <p className="mt-3 text-sm text-zinc-400 light:text-zinc-600">No drives yet — the game hasn&apos;t started.</p>;
@@ -435,43 +505,33 @@ function DrivesSection({ detail }: { detail: GameDetail }) {
   return (
     <div className="mt-4 space-y-4">
       {detail.drives.map((dr, di) => (
-        <section key={dr.id} className="overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:border-zinc-200 light:bg-white">
-          <div className="flex items-center justify-between gap-3 border-b border-white/10 bg-zinc-950/70 px-5 py-3 light:border-zinc-200 light:bg-zinc-50">
-            <div className="flex min-w-0 items-center gap-2.5">
-              <TeamMark logo={dr.teamLogo} abbr={dr.teamAbbr} size={24} />
-              <div className="min-w-0">
-                <div className="truncate text-sm font-semibold">{dr.description || `${dr.teamAbbr} drive`}</div>
-              </div>
-            </div>
-            <div className="flex shrink-0 items-center gap-2">
-              {di === 0 && detail.game.state === "in" && (
-                <span className="rounded bg-amber-400/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-300 light:text-amber-700">
-                  current
-                </span>
-              )}
-              {dr.result && (
-                <span className={`rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${dr.isScore ? "bg-emerald-400/15 text-emerald-300 light:text-emerald-700" : "bg-zinc-800 text-zinc-400 light:bg-zinc-200 light:text-zinc-600"}`}>
-                  {dr.result}
-                </span>
-              )}
-            </div>
-          </div>
-          <div>
-            {dr.plays.map((p) => (
-              <PlayRow key={p.id} p={p} homeAbbr={detail.game.homeAbbr} />
-            ))}
-          </div>
-        </section>
+        <DriveCard key={dr.id} dr={dr} isCurrent={di === 0 && detail.game.state === "in"} homeAbbr={detail.game.homeAbbr} />
       ))}
     </div>
   );
 }
 
 function ScoringSection({ detail, football }: { detail: GameDetail; football: boolean }) {
+  const [open, setOpen] = useState(true);
   const logoFor = (abbr: string) =>
     abbr === detail.game.awayAbbr ? detail.game.awayLogo : abbr === detail.game.homeAbbr ? detail.game.homeLogo : "";
   return (
     <div className="mt-4 overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:border-zinc-200 light:bg-white">
+      <button
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        className={`flex w-full items-center justify-between gap-3 bg-zinc-950/70 px-5 py-3 text-left light:bg-zinc-50 ${open ? "border-b border-white/10 light:border-zinc-200" : ""}`}
+      >
+        <span className="text-sm font-semibold">Scoring summary</span>
+        <span className="flex shrink-0 items-center gap-2">
+          <span className="text-[11px] font-medium text-zinc-400 light:text-zinc-500">
+            {detail.scoringPlays.length} {detail.scoringPlays.length === 1 ? "score" : "scores"}
+          </span>
+          <Chevron open={open} />
+        </span>
+      </button>
+      <CollapseRegion open={open}>
+      <div>
       {detail.scoringPlays.map((p) => (
         <div key={p.id} className="flex gap-4 border-b border-white/10 px-5 py-3.5 last:border-0 light:border-zinc-100">
           <div className="w-[72px] shrink-0 pt-0.5">
@@ -487,11 +547,40 @@ function ScoringSection({ detail, football }: { detail: GameDetail; football: bo
           </div>
         </div>
       ))}
+      </div>
+      </CollapseRegion>
     </div>
   );
 }
 
+function LeaderCard({ tl, logo }: { tl: GameDetail["leaders"][number]; logo: string }) {
+  const [open, setOpen] = useState(true);
+  return (
+    <section className="rounded-2xl border border-white/15 bg-zinc-900/70 p-5 light:border-zinc-200 light:bg-white">
+      <button onClick={() => setOpen(!open)} aria-expanded={open} className="flex w-full items-center gap-2 text-left">
+        <TeamMark logo={logo} abbr={tl.teamAbbr} size={24} />
+        <h3 className="flex-1 text-sm font-bold text-white light:text-zinc-900">{tl.teamAbbr} leaders</h3>
+        <Chevron open={open} />
+      </button>
+      <CollapseRegion open={open}>
+        <dl className="mt-3 space-y-2.5">
+          {tl.leaders.map((l) => (
+            <div key={l.category} className="flex items-baseline justify-between gap-3">
+              <dt className="shrink-0 text-[11px] font-semibold uppercase tracking-wider text-zinc-400 light:text-zinc-500">{l.category}</dt>
+              <dd className="tnum min-w-0 text-right text-sm text-zinc-200 light:text-zinc-800">
+                <span className="font-semibold">{l.player}</span>
+                {l.value && <span className="ml-1.5 font-mono text-xs text-zinc-400 light:text-zinc-500">{l.value}</span>}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </CollapseRegion>
+    </section>
+  );
+}
+
 function StatsSection({ detail }: { detail: GameDetail }) {
+  const [statsOpen, setStatsOpen] = useState(true);
   const logoFor = (abbr: string) =>
     abbr === detail.game.awayAbbr ? detail.game.awayLogo : abbr === detail.game.homeAbbr ? detail.game.homeLogo : "";
   return (
@@ -507,7 +596,12 @@ function StatsSection({ detail }: { detail: GameDetail }) {
                     {detail.game.awayAbbr}
                   </span>
                 </th>
-                <th className="px-2 py-3 text-center text-[11px] font-semibold uppercase tracking-wider text-zinc-400 light:text-zinc-500">Team stats</th>
+                <th className="px-2 py-3 text-center text-[11px] font-semibold uppercase tracking-wider text-zinc-400 light:text-zinc-500">
+                  <button onClick={() => setStatsOpen(!statsOpen)} aria-expanded={statsOpen} className="inline-flex items-center gap-1 uppercase tracking-wider">
+                    Team stats
+                    <Chevron open={statsOpen} />
+                  </button>
+                </th>
                 <th className="px-5 py-3 text-right">
                   <span className="flex items-center justify-end gap-2 text-sm font-bold text-white light:text-zinc-900">
                     {detail.game.homeAbbr}
@@ -516,38 +610,24 @@ function StatsSection({ detail }: { detail: GameDetail }) {
                 </th>
               </tr>
             </thead>
-            <tbody>
-              {detail.teamStats.map((r) => (
-                <tr key={r.label} className="border-b border-white/5 last:border-0 light:border-zinc-100">
-                  <td className="tnum px-5 py-2.5 font-mono text-sm font-semibold text-zinc-100 light:text-zinc-900">{r.awayValue || "–"}</td>
-                  <td className="px-2 py-2.5 text-center text-xs text-zinc-400 light:text-zinc-500">{r.label}</td>
-                  <td className="tnum px-5 py-2.5 text-right font-mono text-sm font-semibold text-zinc-100 light:text-zinc-900">{r.homeValue || "–"}</td>
-                </tr>
-              ))}
-            </tbody>
+            {statsOpen && (
+              <tbody>
+                {detail.teamStats.map((r) => (
+                  <tr key={r.label} className="border-b border-white/5 last:border-0 light:border-zinc-100">
+                    <td className="tnum px-5 py-2.5 font-mono text-sm font-semibold text-zinc-100 light:text-zinc-900">{r.awayValue || "–"}</td>
+                    <td className="px-2 py-2.5 text-center text-xs text-zinc-400 light:text-zinc-500">{r.label}</td>
+                    <td className="tnum px-5 py-2.5 text-right font-mono text-sm font-semibold text-zinc-100 light:text-zinc-900">{r.homeValue || "–"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            )}
           </table>
         </section>
       )}
       {detail.leaders.length > 0 && (
         <div className="space-y-4">
           {detail.leaders.map((tl) => (
-            <section key={tl.teamAbbr} className="rounded-2xl border border-white/15 bg-zinc-900/70 p-5 light:border-zinc-200 light:bg-white">
-              <div className="flex items-center gap-2">
-                <TeamMark logo={logoFor(tl.teamAbbr)} abbr={tl.teamAbbr} size={24} />
-                <h3 className="text-sm font-bold text-white light:text-zinc-900">{tl.teamAbbr} leaders</h3>
-              </div>
-              <dl className="mt-3 space-y-2.5">
-                {tl.leaders.map((l) => (
-                  <div key={l.category} className="flex items-baseline justify-between gap-3">
-                    <dt className="shrink-0 text-[11px] font-semibold uppercase tracking-wider text-zinc-400 light:text-zinc-500">{l.category}</dt>
-                    <dd className="tnum min-w-0 text-right text-sm text-zinc-200 light:text-zinc-800">
-                      <span className="font-semibold">{l.player}</span>
-                      {l.value && <span className="ml-1.5 font-mono text-xs text-zinc-400 light:text-zinc-500">{l.value}</span>}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </section>
+            <LeaderCard key={tl.teamAbbr} tl={tl} logo={logoFor(tl.teamAbbr)} />
           ))}
         </div>
       )}
@@ -564,6 +644,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
   const [error, setError] = useState<string | null>(null);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
   const [tab, setTab] = useState<TabId>("plays");
+  const [cardOpen, setCardOpen] = useState(true);
   const football = league === "nfl" || league === "college-football";
 
   const loadBoard = useCallback(async () => {
@@ -681,15 +762,27 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
                 <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-300 light:text-amber-600" : "text-zinc-200 light:text-zinc-600"}`}>
                   {detail.game.state === "in" ? detail.game.detail || "Live" : detail.game.state === "post" ? "Final" : detail.game.detail}
                 </div>
+                {!cardOpen && (
+                  <div className="tnum mt-0.5 font-mono text-sm font-semibold text-zinc-200 light:text-zinc-800">
+                    {detail.game.awayAbbr} {detail.game.awayScore} · {detail.game.homeAbbr} {detail.game.homeScore}
+                  </div>
+                )}
               </div>
-              {lastUpdate && (
-                <div className="shrink-0 text-[11px] text-zinc-400 light:text-zinc-500">
-                  updated {lastUpdate.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}
-                </div>
-              )}
+              <div className="flex shrink-0 items-center gap-2">
+                {lastUpdate && (
+                  <div className="text-[11px] text-zinc-400 light:text-zinc-500">
+                    updated {lastUpdate.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}
+                  </div>
+                )}
+                <button onClick={() => setCardOpen(!cardOpen)} aria-expanded={cardOpen} aria-label={cardOpen ? "Collapse game card" : "Expand game card"} className="rounded-md p-1 transition hover:bg-white/10 light:hover:bg-zinc-100">
+                  <Chevron open={cardOpen} />
+                </button>
+              </div>
             </div>
+            <CollapseRegion open={cardOpen}>
             <LinescoreTable
               football={football}
+              possessionAbbr={detail.game.state === "in" ? detail.game.possessionAbbr : null}
               periods={headerPeriods}
               teams={[
                 {
@@ -711,6 +804,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
               ]}
             />
             {football && <GamecastStrip detail={detail} />}
+            </CollapseRegion>
           </div>
           <div className="mt-4">
             <WinProbChart points={detail.winProb} homeAbbr={detail.game.homeAbbr} awayAbbr={detail.game.awayAbbr} />
