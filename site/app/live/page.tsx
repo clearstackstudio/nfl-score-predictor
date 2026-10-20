@@ -57,7 +57,7 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
       <div className="flex items-baseline justify-between">
         <button onClick={() => setOpen(!open)} aria-expanded={open} className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-300 light:text-zinc-600">
           Win probability
-          <Chevron open={open} />
+          <CollapsePill open={open} />
         </button>
         <div className="tnum font-mono text-base font-bold">
           <span className="text-zinc-300 light:text-zinc-600">{awayAbbr} {Math.round((1 - last) * 100)}%</span>
@@ -291,6 +291,16 @@ function Chevron({ open }: { open: boolean }) {
   );
 }
 
+/** Labeled Collapse/Expand pill shown in each card's toggle control. */
+function CollapsePill({ open }: { open: boolean }) {
+  return (
+    <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-semibold normal-case tracking-normal text-zinc-300 light:border-zinc-300 light:bg-zinc-50 light:text-zinc-600">
+      {open ? "Collapse" : "Expand"}
+      <Chevron open={open} />
+    </span>
+  );
+}
+
 /** Smoothly folds its children away (grid-rows animation) when closed. */
 function CollapseRegion({ open, children }: { open: boolean; children: ReactNode }) {
   return (
@@ -484,7 +494,7 @@ function DriveCard({ dr, isCurrent, homeAbbr }: { dr: GameDetail["drives"][numbe
               {dr.result}
             </span>
           )}
-          <Chevron open={open} />
+          <CollapsePill open={open} />
         </div>
       </button>
       <CollapseRegion open={open}>
@@ -527,7 +537,7 @@ function ScoringSection({ detail, football }: { detail: GameDetail; football: bo
           <span className="text-[11px] font-medium text-zinc-400 light:text-zinc-500">
             {detail.scoringPlays.length} {detail.scoringPlays.length === 1 ? "score" : "scores"}
           </span>
-          <Chevron open={open} />
+          <CollapsePill open={open} />
         </span>
       </button>
       <CollapseRegion open={open}>
@@ -560,7 +570,7 @@ function LeaderCard({ tl, logo }: { tl: GameDetail["leaders"][number]; logo: str
       <button onClick={() => setOpen(!open)} aria-expanded={open} className="flex w-full items-center gap-2 text-left">
         <TeamMark logo={logo} abbr={tl.teamAbbr} size={24} />
         <h3 className="flex-1 text-sm font-bold text-white light:text-zinc-900">{tl.teamAbbr} leaders</h3>
-        <Chevron open={open} />
+        <CollapsePill open={open} />
       </button>
       <CollapseRegion open={open}>
         <dl className="mt-3 space-y-2.5">
@@ -599,7 +609,7 @@ function StatsSection({ detail }: { detail: GameDetail }) {
                 <th className="px-2 py-3 text-center text-[11px] font-semibold uppercase tracking-wider text-zinc-400 light:text-zinc-500">
                   <button onClick={() => setStatsOpen(!statsOpen)} aria-expanded={statsOpen} className="inline-flex items-center gap-1 uppercase tracking-wider">
                     Team stats
-                    <Chevron open={statsOpen} />
+                    <CollapsePill open={statsOpen} />
                   </button>
                 </th>
                 <th className="px-5 py-3 text-right">
@@ -774,8 +784,8 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
                     updated {lastUpdate.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}
                   </div>
                 )}
-                <button onClick={() => setCardOpen(!cardOpen)} aria-expanded={cardOpen} aria-label={cardOpen ? "Collapse game card" : "Expand game card"} className="rounded-md p-1 transition hover:bg-white/10 light:hover:bg-zinc-100">
-                  <Chevron open={cardOpen} />
+                <button onClick={() => setCardOpen(!cardOpen)} aria-expanded={cardOpen} aria-label={cardOpen ? "Collapse game card" : "Expand game card"}>
+                  <CollapsePill open={cardOpen} />
                 </button>
               </div>
             </div>
