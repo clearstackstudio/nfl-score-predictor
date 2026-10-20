@@ -528,6 +528,9 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
               ]}
             />
           </div>
+          <div className="mt-4">
+            <WinProbChart points={detail.winProb} homeAbbr={detail.game.homeAbbr} awayAbbr={detail.game.awayAbbr} />
+          </div>
             </div>
           )}
 
@@ -539,10 +542,6 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
 
           {detail ? (
             <div className="mt-6">
-              <div className="mt-4">
-                <WinProbChart points={detail.winProb} homeAbbr={detail.game.homeAbbr} awayAbbr={detail.game.awayAbbr} />
-              </div>
-
               {/* Tabs: play-by-play / scoring summary / team stats */}
               {tabs.length > 0 && activeTab ? (
                 <>
