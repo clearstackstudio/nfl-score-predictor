@@ -469,8 +469,8 @@ function PlayRow({ p, homeAbbr }: { p: GameDetail["drives"][number]["plays"][num
   );
 }
 
-function DriveCard({ dr, isCurrent, homeAbbr }: { dr: GameDetail["drives"][number]; isCurrent: boolean; homeAbbr: string }) {
-  const [open, setOpen] = useState(true);
+function DriveCard({ dr, isCurrent, homeAbbr, defaultOpen }: { dr: GameDetail["drives"][number]; isCurrent: boolean; homeAbbr: string; defaultOpen: boolean }) {
+  const [open, setOpen] = useState(defaultOpen);
   return (
     <section className="overflow-hidden rounded-2xl border border-white/15 bg-zinc-900/70 light:border-zinc-200 light:bg-white">
       <button
@@ -516,7 +516,7 @@ function DrivesSection({ detail }: { detail: GameDetail }) {
   return (
     <div className="mt-4 space-y-4">
       {detail.drives.map((dr, di) => (
-        <DriveCard key={dr.id} dr={dr} isCurrent={di === 0 && detail.game.state === "in"} homeAbbr={detail.game.homeAbbr} />
+        <DriveCard key={dr.id} dr={dr} isCurrent={di === 0 && detail.game.state === "in"} homeAbbr={detail.game.homeAbbr} defaultOpen={di === 0} />
       ))}
     </div>
   );
