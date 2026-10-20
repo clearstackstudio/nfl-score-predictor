@@ -794,7 +794,16 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
             <CollapseRegion open={cardOpen}>
             <LinescoreTable
               football={football}
-              possessionAbbr={detail.game.state === "in" ? detail.game.possessionAbbr : null}
+              possessionAbbr={
+                detail.game.state === "in"
+                  ? // The summary feed's situation object sometimes comes back
+                    // empty (breaks, post-score transitions) — fall back to the
+                    // scoreboard's possession, then the current drive's team.
+                    (detail.game.possessionAbbr ??
+                      boardGame?.possessionAbbr ??
+                      (detail.drives[0]?.isCurrent ? detail.drives[0].teamAbbr : null))
+                  : null
+              }
               periods={headerPeriods}
               teams={[
                 {
