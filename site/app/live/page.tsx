@@ -83,9 +83,8 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
  * possessing team's logo pin with a dashed line-of-scrimmage drop, and a
  * yellow first-down line. Yard numbers sit in a row below the field, as
  * ESPN draws them, and a last-play panel closes the strip. The plane is
- * tilted in perspective and shortened to 88% width at the owner's request,
- * for a 3D stadium feel; the logo pin counter-rotates to stand upright off
- * the surface. The field is a
+ * flat and full-width, as ESPN draws it (a 3D tilt was tried and reverted
+ * the same evening at the owner's direction). The field is a
  * self-contained graphic with fixed colors in both schemes. Ball position
  * is the feed's absolute 0\u2013100 yard line; which end is being attacked
  * follows from the spot's yards-to-endzone. */
@@ -110,21 +109,35 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
   const g = detail.game;
   const offense = drive.teamAbbr;
   const defense = offense === g.awayAbbr ? g.homeAbbr : g.awayAbbr;
-  const attacksHigh = spot.yardsToEndzone === 100 - spot.yardLine;
-  const leftAbbr = attacksHigh ? offense : defense;
-  const rightAbbr = attacksHigh ? defense : offense;
+  // Orientation comes from the Ball-on text ESPN itself prints ("SF 13"),
+  // never from the raw yard-line fields: their absolute frame flips
+  // between halves, which put the pin on the wrong side in 8 of 62 spots
+  // replayed from the 2026-10-19 WAS@SF game. The field always faces the
+  // possessing team — their end zone left, the target end zone right —
+  // and the pin sits exactly the stated yards from the stated end zone.
+  const terr =
+    /^([A-Z]{2,4}) (\d{1,2})$/.exec(spot.text) ??
+    /at ([A-Z]{2,4}) (\d{1,2})\b/.exec(spot.downDistanceText);
+  let ballX: number;
+  if (terr) {
+    ballX = terr[1] === offense ? parseInt(terr[2], 10) : 100 - parseInt(terr[2], 10);
+  } else if (spot.text === "50" || spot.downDistanceText.endsWith("at 50")) {
+    ballX = 50; // midfield: the feed names no territory team
+  } else {
+    return null;
+  }
+  const leftAbbr = offense;
+  const rightAbbr = defense;
   const meta = (abbr: string) =>
     abbr === g.awayAbbr
       ? { color: g.awayColor, alt: g.awayAltColor, name: g.awayName, logo: g.awayLogo }
       : { color: g.homeColor, alt: g.homeAltColor, name: g.homeName, logo: g.homeLogo };
   const offMeta = meta(offense);
   const nickname = (name: string) => (name.split(" ").pop() ?? "").toUpperCase();
+  const distMatch = /& (\d+)\b/.exec(spot.downDistanceText);
+  const dist = distMatch ? parseInt(distMatch[1], 10) : spot.distance;
   const firstDown =
-    spot.distance > 0 && !spot.downDistanceText.includes("Goal")
-      ? attacksHigh
-        ? spot.yardLine + spot.distance
-        : spot.yardLine - spot.distance
-      : null;
+    dist > 0 && !spot.downDistanceText.includes("Goal") ? ballX + dist : null;
   const lastPlay = drive.plays.find((p) => p.text) ?? spotPlay;
   const downText = spot.downDistanceText.includes(" at ")
     ? spot.downDistanceText.split(" at ")[0]
@@ -180,12 +193,11 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
         </div>
       </div>
 
-      <div className="gamecast-in mx-auto mt-1 w-[88%]" style={{ perspective: "520px" }}>
+      <div className="gamecast-in">
         <div
-          className="relative flex h-28 overflow-hidden rounded-lg shadow-[0_16px_20px_-10px_rgba(0,0,0,0.5)]"
+          className="relative mt-3 flex h-24 overflow-hidden rounded-lg"
           role="img"
           aria-label={`Gamecast field: ${spot.downDistanceText || `${offense} ball`}`}
-          style={{ transform: "rotateX(34deg)", transformOrigin: "50% 100%" }}
         >
         <EndZone abbr={leftAbbr} side="left" />
         <div
@@ -202,12 +214,9 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
           {firstDown !== null && firstDown > 0 && firstDown < 100 && (
             <span className="absolute inset-y-0 w-[2.5px] bg-yellow-400 transition-[left] duration-1000 ease-[cubic-bezier(0.22,0.8,0.32,1)]" style={{ left: `${firstDown}%` }} />
           )}
-          <div className="absolute z-10 transition-[left] duration-1000 ease-[cubic-bezier(0.22,0.8,0.32,1)]" style={{ left: `${spot.yardLine}%`, top: "50%" }}>
+          <div className="absolute z-10 transition-[left] duration-1000 ease-[cubic-bezier(0.22,0.8,0.32,1)]" style={{ left: `${ballX}%`, top: "50%" }}>
             <div className="absolute left-1/2 top-0 h-6 w-px -translate-x-1/2 border-l border-dashed border-zinc-800/60" />
-            <div
-              className="flex flex-col items-center"
-              style={{ transform: "translate(-50%, -112%) rotateX(-34deg)", transformOrigin: "50% 100%" }}
-            >
+            <div className="flex -translate-x-1/2 -translate-y-[112%] flex-col items-center">
               <div
                 className={`flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-md ring-2 ring-amber-400${pulse ? " pin-pulse" : ""}`}
                 style={offMeta.alt ? { ["--tw-ring-color" as string]: `#${offMeta.alt}` } : undefined}
@@ -219,12 +228,10 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
           </div>
         </div>
           <EndZone abbr={rightAbbr} side="right" />
-          <span className="pointer-events-none absolute inset-0 z-[5] bg-gradient-to-b from-black/25 via-transparent to-black/20" />
         </div>
-        <div className="h-[7px] rounded-b-lg bg-gradient-to-b from-zinc-400 to-zinc-600" />
       </div>
 
-      <div className="mx-auto mt-1 flex h-4 w-[88%] text-[10px] font-medium text-zinc-400 light:text-zinc-500">
+      <div className="mt-1 flex h-4 text-[10px] font-medium text-zinc-400 light:text-zinc-500">
         <div className="w-[9%] text-center font-bold">{leftAbbr}</div>
         <div className="relative flex-1">
           {[10, 20, 30, 40, 50, 60, 70, 80, 90].map((y) => (
