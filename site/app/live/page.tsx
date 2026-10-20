@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   fetchScoreboard,
   fetchGameDetail,
@@ -65,8 +65,8 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
       </div>
       <svg viewBox="0 0 600 120" className="mt-3 h-32 w-full" preserveAspectRatio="none" role="img" aria-label="Win probability chart">
         <line x1="0" y1="60" x2="600" y2="60" stroke="#52525b" strokeDasharray="4 4" strokeWidth="1" />
-        <path d={area} fill="rgba(251,191,36,0.15)" />
-        <path d={path} fill="none" stroke="#fbbf24" strokeWidth="2.5" vectorEffect="non-scaling-stroke" />
+        <path d={area} fill="rgba(251,191,36,0.15)" className="fade-in" />
+        <path d={path} fill="none" stroke="#fbbf24" strokeWidth="2.5" vectorEffect="non-scaling-stroke" pathLength={1} className="chart-draw" />
       </svg>
       <div className="mt-2 flex justify-between text-[11px] font-medium text-zinc-400 light:text-zinc-500">
         <span>Kickoff</span>
@@ -90,11 +90,22 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
  * is the feed's absolute 0\u2013100 yard line; which end is being attacked
  * follows from the spot's yards-to-endzone. */
 function GamecastStrip({ detail }: { detail: GameDetail }) {
-  if (detail.game.state !== "in") return null;
   const drive = detail.drives[0];
-  if (!drive) return null;
-  const spotPlay = drive.plays.find((p) => p.spot);
-  if (!spotPlay?.spot) return null;
+  const spotPlay = drive?.plays.find((p) => p.spot);
+  // ESPN-style update pulse: when a new play lands, the pin rings once.
+  const [pulse, setPulse] = useState(false);
+  const prevPlayId = useRef<string | null>(null);
+  useEffect(() => {
+    const id = spotPlay?.id ?? null;
+    if (id && prevPlayId.current && prevPlayId.current !== id) {
+      setPulse(true);
+      const t = setTimeout(() => setPulse(false), 1300);
+      prevPlayId.current = id;
+      return () => clearTimeout(t);
+    }
+    prevPlayId.current = id;
+  }, [spotPlay?.id]);
+  if (detail.game.state !== "in" || !drive || !spotPlay?.spot) return null;
   const spot = spotPlay.spot;
   const g = detail.game;
   const offense = drive.teamAbbr;
@@ -148,7 +159,7 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
 
   return (
     <div className="mt-4 border-t border-white/10 pt-4 light:border-zinc-100">
-      <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+      <div key={drive.id} className="fade-slide-in flex flex-wrap items-center gap-x-2 gap-y-1">
         <TeamMark logo={drive.teamLogo} abbr={offense} size={20} />
         <span className="text-xs font-bold uppercase tracking-[0.14em] text-zinc-200 light:text-zinc-700">
           {drive.isCurrent ? "Current drive" : "Last drive"}
@@ -169,7 +180,7 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
         </div>
       </div>
 
-      <div className="mx-auto mt-1 w-[88%]" style={{ perspective: "520px" }}>
+      <div className="gamecast-in mx-auto mt-1 w-[88%]" style={{ perspective: "520px" }}>
         <div
           className="relative flex h-28 overflow-hidden rounded-lg shadow-[0_16px_20px_-10px_rgba(0,0,0,0.5)]"
           role="img"
@@ -189,16 +200,16 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
           ))}
           <span className="absolute inset-x-0 top-1/2 border-t border-dashed border-zinc-500/50" />
           {firstDown !== null && firstDown > 0 && firstDown < 100 && (
-            <span className="absolute inset-y-0 w-[2.5px] bg-yellow-400" style={{ left: `${firstDown}%` }} />
+            <span className="absolute inset-y-0 w-[2.5px] bg-yellow-400 transition-[left] duration-1000 ease-[cubic-bezier(0.22,0.8,0.32,1)]" style={{ left: `${firstDown}%` }} />
           )}
-          <div className="absolute z-10" style={{ left: `${spot.yardLine}%`, top: "50%" }}>
+          <div className="absolute z-10 transition-[left] duration-1000 ease-[cubic-bezier(0.22,0.8,0.32,1)]" style={{ left: `${spot.yardLine}%`, top: "50%" }}>
             <div className="absolute left-1/2 top-0 h-6 w-px -translate-x-1/2 border-l border-dashed border-zinc-800/60" />
             <div
               className="flex flex-col items-center"
               style={{ transform: "translate(-50%, -112%) rotateX(-34deg)", transformOrigin: "50% 100%" }}
             >
               <div
-                className="flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-md ring-2 ring-amber-400"
+                className={`flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-md ring-2 ring-amber-400${pulse ? " pin-pulse" : ""}`}
                 style={offMeta.alt ? { ["--tw-ring-color" as string]: `#${offMeta.alt}` } : undefined}
               >
                 <TeamMark logo={offMeta.logo} abbr={offense} size={19} />
@@ -226,7 +237,7 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
       </div>
 
       {lastPlay.text && (
-        <div className="mt-2 rounded-xl bg-zinc-950/50 px-4 py-3 light:bg-zinc-50">
+        <div key={lastPlay.id} className="play-flash mt-2 rounded-xl bg-zinc-950/50 px-4 py-3 light:bg-zinc-50">
           <div className="flex items-center justify-between gap-3">
             <span className="text-sm font-bold text-zinc-100 light:text-zinc-900">
               {lastPlay.typeText ?? "Play"}
