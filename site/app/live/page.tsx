@@ -179,6 +179,7 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
     <div className="mt-4 border-t border-white/10 pt-4 light:border-zinc-100">
       <div key={drive.id} className="fade-slide-in flex flex-wrap items-center gap-x-2 gap-y-1">
         <TeamMark logo={drive.teamLogo} abbr={offense} size={20} />
+        {drive.isCurrent && <BallIcon size={18} />}
         <span className="text-xs font-bold uppercase tracking-[0.14em] text-zinc-200 light:text-zinc-700">
           {drive.isCurrent ? "Current drive" : "Last drive"}
         </span>
@@ -361,7 +362,7 @@ function ScoreboardRow({ g, selected, onSelect, football }: { g: LiveGame; selec
                 <TeamMark logo={t.logo} abbr={t.abbr} size={22} />
                 <span className="flex min-w-0 items-center gap-1.5 text-sm font-semibold text-zinc-100 light:text-zinc-900">
                   {t.abbr}
-                  {hasBall && (football ? <BallIcon /> : <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400 light:bg-amber-600" aria-label="Possession" />)}
+                  {hasBall && (football ? <BallIcon size={16} /> : <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400 light:bg-amber-600" aria-label="Possession" />)}
                   {t.record && <span className="truncate text-[11px] font-normal text-zinc-500 light:text-zinc-400">{t.record}</span>}
                 </span>
                 <span className="ml-auto flex items-baseline">
@@ -416,7 +417,7 @@ function LinescoreTable({ teams, periods, football, possessionAbbr }: { teams: L
                 <span className="truncate text-sm font-bold text-white light:text-zinc-900 sm:text-base">{t.name}</span>
                 {possessionAbbr === t.abbr &&
                   (football ? (
-                    <BallIcon size={15} />
+                    <BallIcon size={20} />
                   ) : (
                     <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400 light:bg-amber-600" aria-label="Possession" />
                   ))}
