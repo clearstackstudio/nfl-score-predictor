@@ -82,7 +82,10 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
  * zones with the nickname vertical and a small goalpost, the ball as the
  * possessing team's logo pin with a dashed line-of-scrimmage drop, and a
  * yellow first-down line. Yard numbers sit in a row below the field, as
- * ESPN draws them, and a last-play panel closes the strip. The field is a
+ * ESPN draws them, and a last-play panel closes the strip. The plane is
+ * tilted in perspective and shortened to 88% width at the owner's request,
+ * for a 3D stadium feel; the logo pin counter-rotates to stand upright off
+ * the surface. The field is a
  * self-contained graphic with fixed colors in both schemes. Ball position
  * is the feed's absolute 0\u2013100 yard line; which end is being attacked
  * follows from the spot's yards-to-endzone. */
@@ -166,11 +169,13 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
         </div>
       </div>
 
-      <div
-        className="mt-3 flex h-24 overflow-hidden rounded-lg"
-        role="img"
-        aria-label={`Gamecast field: ${spot.downDistanceText || `${offense} ball`}`}
-      >
+      <div className="mx-auto mt-1 w-[88%]" style={{ perspective: "520px" }}>
+        <div
+          className="relative flex h-28 overflow-hidden rounded-lg shadow-[0_16px_20px_-10px_rgba(0,0,0,0.5)]"
+          role="img"
+          aria-label={`Gamecast field: ${spot.downDistanceText || `${offense} ball`}`}
+          style={{ transform: "rotateX(34deg)", transformOrigin: "50% 100%" }}
+        >
         <EndZone abbr={leftAbbr} side="left" />
         <div
           className="relative flex-1"
@@ -188,7 +193,10 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
           )}
           <div className="absolute z-10" style={{ left: `${spot.yardLine}%`, top: "50%" }}>
             <div className="absolute left-1/2 top-0 h-6 w-px -translate-x-1/2 border-l border-dashed border-zinc-800/60" />
-            <div className="flex -translate-x-1/2 -translate-y-[112%] flex-col items-center">
+            <div
+              className="flex flex-col items-center"
+              style={{ transform: "translate(-50%, -112%) rotateX(-34deg)", transformOrigin: "50% 100%" }}
+            >
               <div
                 className="flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-md ring-2 ring-amber-400"
                 style={offMeta.alt ? { ["--tw-ring-color" as string]: `#${offMeta.alt}` } : undefined}
@@ -199,10 +207,13 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
             </div>
           </div>
         </div>
-        <EndZone abbr={rightAbbr} side="right" />
+          <EndZone abbr={rightAbbr} side="right" />
+          <span className="pointer-events-none absolute inset-0 z-[5] bg-gradient-to-b from-black/25 via-transparent to-black/20" />
+        </div>
+        <div className="h-[7px] rounded-b-lg bg-gradient-to-b from-zinc-400 to-zinc-600" />
       </div>
 
-      <div className="mt-1 flex h-4 text-[10px] font-medium text-zinc-400 light:text-zinc-500">
+      <div className="mx-auto mt-1 flex h-4 w-[88%] text-[10px] font-medium text-zinc-400 light:text-zinc-500">
         <div className="w-[9%] text-center font-bold">{leftAbbr}</div>
         <div className="relative flex-1">
           {[10, 20, 30, 40, 50, 60, 70, 80, 90].map((y) => (
