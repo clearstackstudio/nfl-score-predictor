@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-10-21T00:21:52.526330-07:00",
+  "games_logged": 2,
+  "games_graded": 0,
+  "dates_graded": [],
+  "moneyline": {
+    "brier_raw": null,
+    "brier_cal": null,
+    "market_brier": null,
+    "su_acc_cal": null
+  },
+  "totals_flagged": {
+    "w": 0,
+    "l": 0,
+    "p": 0,
+    "win_pct": null
+  },
+  "totals_all": {
+    "w": 0,
+    "l": 0,
+    "p": 0,
+    "win_pct": null
+  },
+  "totals_rmse": null
+}
