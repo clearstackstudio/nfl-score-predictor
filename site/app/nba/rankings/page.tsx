@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import rankings from "../../../data/nba_power_rankings.json";
+import NbaTeamLogo from "../../lib/nba-team-logo";
 
 export const metadata: Metadata = {
   title: "NBA power rankings",
@@ -86,7 +87,10 @@ export default function NbaRankings() {
                     </span>
                   </td>
                   <td className="px-4 py-2.5">
-                    <span className="font-semibold text-zinc-100 light:text-zinc-900">{t.team}</span>
+                    <span className="flex items-center gap-2.5">
+                      <NbaTeamLogo abbr={t.abbr} name={t.team} size={26} />
+                      <span className="font-semibold text-zinc-100 light:text-zinc-900">{t.team}</span>
+                    </span>
                   </td>
                   <td className="px-4 py-2.5 text-right font-mono font-bold text-zinc-100 light:text-zinc-900">
                     {t.rating > 0 ? "+" : ""}

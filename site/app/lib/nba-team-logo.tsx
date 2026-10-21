@@ -8,6 +8,47 @@ function initials(name: string): string {
   return (words[0][0] + words[words.length - 1][0]).toUpperCase();
 }
 
+/** ESPN CDN logo codes by canonical full team name. The NBA data files
+ * store full names in their abbr fields, so without this map the logo URL
+ * was built from e.g. "Boston Celtics" and 404'd — every logo silently
+ * fell back to initials. All 30 codes verified live on 2026-10-20. */
+const TEAM_CODES: Record<string, string> = {
+  "Atlanta Hawks": "atl",
+  "Boston Celtics": "bos",
+  "Brooklyn Nets": "bkn",
+  "Charlotte Hornets": "cha",
+  "Chicago Bulls": "chi",
+  "Cleveland Cavaliers": "cle",
+  "Dallas Mavericks": "dal",
+  "Denver Nuggets": "den",
+  "Detroit Pistons": "det",
+  "Golden State Warriors": "gs",
+  "Houston Rockets": "hou",
+  "Indiana Pacers": "ind",
+  "Los Angeles Clippers": "lac",
+  "Los Angeles Lakers": "lal",
+  "Memphis Grizzlies": "mem",
+  "Miami Heat": "mia",
+  "Milwaukee Bucks": "mil",
+  "Minnesota Timberwolves": "min",
+  "New Orleans Pelicans": "no",
+  "New York Knicks": "ny",
+  "Oklahoma City Thunder": "okc",
+  "Orlando Magic": "orl",
+  "Philadelphia 76ers": "phi",
+  "Phoenix Suns": "phx",
+  "Portland Trail Blazers": "por",
+  "Sacramento Kings": "sac",
+  "San Antonio Spurs": "sa",
+  "Toronto Raptors": "tor",
+  "Utah Jazz": "utah",
+  "Washington Wizards": "was",
+};
+
+function logoCode(abbr: string, name?: string): string {
+  return TEAM_CODES[abbr] ?? (name ? TEAM_CODES[name] : undefined) ?? abbr.toLowerCase();
+}
+
 /** NBA team badge: ESPN's CDN logo, falls back to initials if it fails. */
 export default function NbaTeamLogo({
   abbr,
@@ -32,7 +73,7 @@ export default function NbaTeamLogo({
   }
   return (
     <img
-      src={`https://a.espncdn.com/i/teamlogos/nba/500/${abbr.toLowerCase()}.png`}
+      src={`https://a.espncdn.com/i/teamlogos/nba/500/${logoCode(abbr, name)}.png`}
       alt={`${name ?? abbr} logo`}
       width={size}
       height={size}
