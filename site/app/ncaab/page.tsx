@@ -5,6 +5,7 @@ import seasonLog from "../../data/ncaab_season_2027.json";
 import { fmtSpread, fmtPct, trim } from "../lib/format";
 import NcaabTeamLogo from "../lib/ncaab-team-logo";
 import Expandable from "../lib/expandable";
+import AdSlot from "../lib/ad-slot";
 
 type Pick = {
   away: string; home: string; away_abbr: string; home_abbr: string;
@@ -312,6 +313,7 @@ export default function NcaabHome() {
 
   return (
     <div>
+      <AdSlot format="leaderboard" league="ncaab" />
       <div className="mb-8">
         <Eyebrow>
           NCAAB · {seasonLabel} season
@@ -390,6 +392,8 @@ export default function NcaabHome() {
       {!isPending && <SeasonRecord days={allDays} href="/ncaab/track-record" />}
 
       {!isPending && <ParlayCard parlay={dv.parlay ?? null} title="Parlay of the night" />}
+
+      <AdSlot format="rectangle" league="ncaab" />
 
       {!isPending && picks.length > 0 && (
         <>

@@ -5,6 +5,7 @@ import seasonLog from "../data/season_2026.json";
 import { fmtSpread, fmtPct, trim } from "./lib/format";
 import TeamLogo from "./lib/team-logo";
 import SharePicks from "./lib/share-picks";
+import AdSlot from "./lib/ad-slot";
 import Expandable from "./lib/expandable";
 
 type Pick = {
@@ -373,6 +374,7 @@ export default function Home() {
 
   return (
     <div>
+      <AdSlot format="leaderboard" league="nfl" />
       {/* Hero */}
       <div className="mb-8">
         <Eyebrow>
@@ -444,6 +446,8 @@ export default function Home() {
       </div>
 
       <ParlayCard parlay={wv.parlay} />
+
+      <AdSlot format="rectangle" league="nfl" />
 
       <div className="mb-4 flex items-baseline justify-between">
         <h2 className="font-display text-2xl font-semibold uppercase tracking-wide">

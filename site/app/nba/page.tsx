@@ -5,6 +5,7 @@ import seasonLog from "../../data/nba_season_2027.json";
 import { fmtSpread, fmtPct, trim } from "../lib/format";
 import NbaTeamLogo from "../lib/nba-team-logo";
 import Expandable from "../lib/expandable";
+import AdSlot from "../lib/ad-slot";
 
 type Pick = {
   away: string; home: string; away_abbr: string; home_abbr: string;
@@ -304,6 +305,7 @@ export default function NbaHome() {
 
   return (
     <div>
+      <AdSlot format="leaderboard" league="nba" />
       <div className="mb-8">
         <Eyebrow>
           NBA · {seasonLabel} season
@@ -385,6 +387,8 @@ export default function NbaHome() {
       {!isPending && <SeasonRecord days={allDays} href="/nba/track-record" />}
 
       {!isPending && <ParlayCard parlay={dv.parlay ?? null} title="Parlay of the night" />}
+
+      <AdSlot format="rectangle" league="nba" />
 
       {!isPending && picks.length > 0 && (
         <>

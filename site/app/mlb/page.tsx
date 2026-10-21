@@ -2,6 +2,7 @@
 import picksData from "../../data/mlb_picks.json";
 import record from "../../data/mlb_track_record.json";
 import { fmtPct } from "../lib/format";
+import AdSlot from "../lib/ad-slot";
 
 type PicksFile = {
   sport: string; season: number; date?: string | null;
@@ -35,6 +36,7 @@ export default function MlbHome() {
 
   return (
     <div>
+      <AdSlot format="leaderboard" league="mlb" />
       <div className="mb-8">
         <Eyebrow>MLB · {data.season} season</Eyebrow>
         <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide sm:text-6xl">
@@ -91,6 +93,8 @@ export default function MlbHome() {
           {data.disclaimer}
         </p>
       </div>
+
+      <AdSlot format="rectangle" league="mlb" />
     </div>
   );
 }

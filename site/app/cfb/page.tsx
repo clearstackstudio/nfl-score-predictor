@@ -5,6 +5,7 @@ import seasonLog from "../../data/cfb_season_2026.json";
 import { fmtSpread, fmtPct, trim } from "../lib/format";
 import CfbTeamLogo from "../lib/cfb-team-logo";
 import Expandable from "../lib/expandable";
+import AdSlot from "../lib/ad-slot";
 
 type Pick = {
   away: string; home: string; away_abbr: string; home_abbr: string;
@@ -318,6 +319,7 @@ export default function CfbHome() {
 
   return (
     <div>
+      <AdSlot format="leaderboard" league="cfb" />
       <div className="mb-8">
         <Eyebrow>
           College football · {wv.season} season{wv.week ? ` · Week ${wv.week}` : ""}
@@ -386,6 +388,8 @@ export default function CfbHome() {
       {!wv.pending && <SeasonRecord weeks={allWeeks} href="/cfb/track-record" />}
 
       {!wv.pending && <ParlayCard parlay={wv.parlay ?? null} />}
+
+      <AdSlot format="rectangle" league="cfb" />
 
       {!wv.pending && picks.length > 0 && (
         <>

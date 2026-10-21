@@ -8,6 +8,7 @@ import {
   type GameDetail,
   type League,
 } from "../lib/espn";
+import AdSlot, { type AdLeague } from "../lib/ad-slot";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
@@ -663,6 +664,14 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
   const [cardOpen, setCardOpen] = useState(true);
   const [listOpen, setListOpen] = useState(true);
   const football = league === "nfl" || league === "college-football";
+  const adLeague: AdLeague =
+    league === "college-football"
+      ? "cfb"
+      : league === "mens-college-basketball"
+        ? "ncaab"
+        : league === "nba"
+          ? "nba"
+          : "nfl";
 
   const loadBoard = useCallback(async () => {
     try {
@@ -871,6 +880,8 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
               </div>
             </CollapseRegion>
           </div>
+
+          <AdSlot format="rectangle" league={adLeague} />
 
           {detail ? (
             <div className="mt-6">

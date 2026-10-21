@@ -44,6 +44,14 @@ const sections = [
       "To the fullest extent permitted by law, Honest Line and ClearStack Studio are not liable for any decisions you make based on this site's content, or for any losses arising from them. You use this site at your own risk.",
     ],
   },
+  {
+    n: "06",
+    title: "Advertising and affiliates",
+    body: [
+      "Honest Line is free to read, and advertising helps keep it that way. Some slots on this site currently show our own promotions; third-party ads served by Google AdSense may also appear, and Google may use cookies to serve and personalize them.",
+      "Some links on this site may be affiliate links to sportsbooks or ticket marketplaces. If you sign up or buy through one, we may earn a commission at no additional cost to you. Affiliate relationships never influence our picks, probabilities, or track record — the model doesn't know who advertises, and no sponsor can buy a better number. Betting offers are for adults 21+ and are only valid where sports betting is legal.",
+    ],
+  },
 ];
 
 export default function Disclaimer() {
