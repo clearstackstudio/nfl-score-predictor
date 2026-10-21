@@ -196,6 +196,34 @@ export default function Methodology() {
         ["Live pick tracking for the current season, graded weekly."],
       ],
     },
+    {
+      n: "07",
+      title: "A worked example: from a spread to a probability",
+      body: (
+        <>
+          <p>
+            Everything above produces a margin — say, a team by 6. A margin is not a
+            probability, so the last step is a formula: the normal cumulative
+            distribution, Φ, which asks how often a team favored by that much
+            actually wins, given how noisy football margins are:
+          </p>
+          <p className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 font-mono text-[13px] leading-relaxed text-zinc-100 light:border-zinc-200 light:bg-zinc-50 light:text-zinc-900">
+            P(win) = Φ( predicted margin ÷ σ ), σ = 14.5 points
+          </p>
+          <p>
+            The σ is not a guess: it is the backtest RMSE of our predicted margin
+            (2021–2024) — how wrong the margin usually is. Worked:{" "}
+            <span className="font-semibold text-zinc-100 light:text-zinc-900">Φ(6 ÷ 14.5) = Φ(0.41) ≈ 66%</span>.
+            The same formula run against the Vegas line instead of zero gives the
+            raw cover probability — our margin sitting 3 points beyond the spread
+            is Φ(3 ÷ 14.5) ≈ 58% — and the calibration map described on this page
+            then pulls that down toward the low 50s before it is published,
+            because that is the rate that edge actually hit in the backtest.
+            Totals work identically, with σ = 15.4.
+          </p>
+        </>
+      ),
+    },
   ];
 
   return (

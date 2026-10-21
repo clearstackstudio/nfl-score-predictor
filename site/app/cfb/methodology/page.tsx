@@ -134,6 +134,33 @@ export default function CfbMethodology() {
         [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">Full history published:</span>, " every season from 2014 on, not a cherry-picked hot streak. Code is open source."],
       ],
     },
+    {
+      n: "06",
+      title: "A worked example: from a spread to a probability",
+      body: (
+        <>
+          <p>
+            The ratings produce a margin — say, a team by 10. A margin is not a
+            probability, so the last step is a formula: the normal cumulative
+            distribution, Φ, which asks how often a team favored by that much
+            actually wins, given how noisy college football margins are:
+          </p>
+          <p className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 font-mono text-[13px] leading-relaxed text-zinc-100 light:border-zinc-200 light:bg-zinc-50 light:text-zinc-900">
+            P(win) = Φ( predicted margin ÷ σ ), σ = 17.8 points
+          </p>
+          <p>
+            The σ is the restated backtest&rsquo;s margin RMSE — how wrong the
+            predicted margin usually is. Worked:{" "}
+            <span className="font-semibold text-zinc-100 light:text-zinc-900">Φ(10 ÷ 17.8) = Φ(0.56) ≈ 71%</span>.
+            Run against the closing spread instead of zero, the same formula
+            gives the raw cover probability, and the calibration map described
+            on this page then adjusts it to the hit rate that edge actually
+            produced across 8,947 backtested games. Totals work identically,
+            with σ = 17.7.
+          </p>
+        </>
+      ),
+    },
   ];
 
   return (

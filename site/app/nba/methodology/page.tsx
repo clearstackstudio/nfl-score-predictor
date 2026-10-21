@@ -127,6 +127,31 @@ export default function NbaMethodology() {
         [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">Ratings data gap — closed Oct 20, 2026:</span>, " the live ratings train on final scores, and those finals were missing from the training file from January 2023 through April 2026 — so early 2026-27 ratings were compressed toward average and the boards were flagged “Early season — experimental.” We backfilled the missing 4,256 finals (the rest of 2022-23, plus 2023-24, 2024-25, and 2025-26; scores only, no lines), so the ratings now train on 22,808 games through the end of the 2025-26 season. The backtest above is unchanged — it still ends in January 2023, because it grades against closing lines. Boards published during the warmup window stay in the track record, flagged as published."],
       ],
     },
+    {
+      n: "06",
+      title: "A worked example: from a rating to a probability",
+      body: (
+        <>
+          <p>
+            The Elo ratings carry their own win formula — the classic expected-score
+            equation, where Δ is the rating gap between the two teams:
+          </p>
+          <p className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 font-mono text-[13px] leading-relaxed text-zinc-100 light:border-zinc-200 light:bg-zinc-50 light:text-zinc-900">
+            P(win) = 1 ÷ ( 1 + 10^(−Δ ÷ 400) )
+          </p>
+          <p>
+            Worked: a 100-point Elo gap gives{" "}
+            <span className="font-semibold text-zinc-100 light:text-zinc-900">1 ÷ (1 + 0.56) ≈ 64%</span>.
+            The predicted margin converts through the same bell curve the other
+            models use — Φ(margin ÷ σ), with σ = 12.5 points, the model&rsquo;s
+            margin RMSE — so a team favored by 5 sits at Φ(5 ÷ 12.5) = Φ(0.40) ≈ 66%.
+            Cover probabilities use the gap between our margin and the market line
+            in that same formula, then pass through the calibration map described
+            on this page before they are published.
+          </p>
+        </>
+      ),
+    },
   ];
 
   return (

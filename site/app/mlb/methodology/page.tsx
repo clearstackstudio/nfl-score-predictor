@@ -101,6 +101,30 @@ export default function MlbMethodology() {
         </>
       ),
     },
+    {
+      n: "05",
+      title: "A worked example: from runs to a probability",
+      body: (
+        <>
+          <p>
+            The ratings produce a run margin — say, a home team projected to
+            outscore its opponent by 1.5 runs. A margin is not a probability, so
+            the last step is a formula: the normal cumulative distribution, Φ:
+          </p>
+          <p className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 font-mono text-[13px] leading-relaxed text-zinc-100 light:border-zinc-200 light:bg-zinc-50 light:text-zinc-900">
+            P(home win) = Φ( predicted run margin ÷ σ ), σ = 4.135 runs
+          </p>
+          <p>
+            The σ is fitted, not assumed: it is the standard deviation of the
+            model&rsquo;s own prediction errors on the tuning split. Worked:{" "}
+            <span className="font-semibold text-zinc-100 light:text-zinc-900">Φ(1.5 ÷ 4.135) = Φ(0.36) ≈ 64%</span>.
+            Unlike the other models, this number is published exactly as the
+            formula gives it — the raw probabilities tested honest (a published
+            57% won 57%), so no calibration map sits on top.
+          </p>
+        </>
+      ),
+    },
   ];
 
   return (

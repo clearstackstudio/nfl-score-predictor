@@ -135,6 +135,32 @@ export default function NcaabMethodology() {
         [<span key="k" className="font-semibold text-zinc-100 light:text-zinc-900">Data-quality guard:</span>, " the raw box-score pace field has known garbage values (the 2013 season's pace is on an inflated scale); the model sanitizes possessions before they touch a rating."],
       ],
     },
+    {
+      n: "06",
+      title: "A worked example: from a spread to a probability",
+      body: (
+        <>
+          <p>
+            The ratings produce a margin — say, a team by 4. A margin is not a
+            probability, so the last step is a formula: the normal cumulative
+            distribution, Φ, which asks how often a team favored by that much
+            actually wins, given how noisy college basketball margins are:
+          </p>
+          <p className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 font-mono text-[13px] leading-relaxed text-zinc-100 light:border-zinc-200 light:bg-zinc-50 light:text-zinc-900">
+            P(win) = Φ( predicted margin ÷ σ ), σ = 12.3 points
+          </p>
+          <p>
+            The σ is the model&rsquo;s margin RMSE — how wrong the predicted
+            margin usually is. Worked:{" "}
+            <span className="font-semibold text-zinc-100 light:text-zinc-900">Φ(4 ÷ 12.3) = Φ(0.33) ≈ 63%</span>.
+            Run against the closing spread instead of zero, the same formula
+            gives the raw cover probability, and the calibration map described
+            on this page then adjusts it to the hit rate that edge actually
+            produced in the backtest. Totals work identically, with σ = 18.2.
+          </p>
+        </>
+      ),
+    },
   ];
 
   return (
