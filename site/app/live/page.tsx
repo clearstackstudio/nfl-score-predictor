@@ -591,10 +591,12 @@ function LeaderCard({ tl, logo, hasBall }: { tl: GameDetail["leaders"][number]; 
   );
 }
 
-function StatsSection({ detail, possessionAbbr }: { detail: GameDetail; possessionAbbr: string | null }) {
+function StatsSection({ detail, possessionAbbr, awayLogo, homeLogo }: { detail: GameDetail; possessionAbbr: string | null; awayLogo?: string; homeLogo?: string }) {
   const [statsOpen, setStatsOpen] = useState(true);
+  // The summary feed's logo fields are empty for some leagues (NBA) — fall
+  // back to the scoreboard feed's logos, same as the linescore table does.
   const logoFor = (abbr: string) =>
-    abbr === detail.game.awayAbbr ? detail.game.awayLogo : abbr === detail.game.homeAbbr ? detail.game.homeLogo : "";
+    abbr === detail.game.awayAbbr ? awayLogo || detail.game.awayLogo : abbr === detail.game.homeAbbr ? homeLogo || detail.game.homeLogo : "";
   return (
     <div className="mt-4 grid items-start gap-4 lg:grid-cols-[1fr_320px]">
       {detail.teamStats.length > 0 && (
@@ -604,7 +606,7 @@ function StatsSection({ detail, possessionAbbr }: { detail: GameDetail; possessi
               <tr className="border-b border-white/10 bg-zinc-950/70 light:border-zinc-200 light:bg-zinc-50">
                 <th className="px-5 py-3 text-left">
                   <span className="flex items-center gap-2 text-sm font-bold text-white light:text-zinc-900">
-                    <TeamMark logo={detail.game.awayLogo} abbr={detail.game.awayAbbr} size={22} />
+                    <TeamMark logo={logoFor(detail.game.awayAbbr)} abbr={detail.game.awayAbbr} size={22} />
                     {detail.game.awayAbbr}
                     {possessionAbbr === detail.game.awayAbbr && <BallIcon size={16} />}
                   </span>
@@ -619,7 +621,7 @@ function StatsSection({ detail, possessionAbbr }: { detail: GameDetail; possessi
                   <span className="flex items-center justify-end gap-2 text-sm font-bold text-white light:text-zinc-900">
                     {detail.game.homeAbbr}
                     {possessionAbbr === detail.game.homeAbbr && <BallIcon size={16} />}
-                    <TeamMark logo={detail.game.homeLogo} abbr={detail.game.homeAbbr} size={22} />
+                    <TeamMark logo={logoFor(detail.game.homeAbbr)} abbr={detail.game.homeAbbr} size={22} />
                   </span>
                 </th>
               </tr>
@@ -894,7 +896,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
                   </div>
                   {activeTab === "plays" && <DrivesSection detail={detail} />}
                   {activeTab === "scoring" && <ScoringSection detail={detail} football={football} />}
-                  {activeTab === "stats" && <StatsSection detail={detail} possessionAbbr={possessionAbbr} />}
+                  {activeTab === "stats" && <StatsSection detail={detail} possessionAbbr={possessionAbbr} awayLogo={boardGame?.awayLogo} homeLogo={boardGame?.homeLogo} />}
                 </>
               ) : (
                 detail.game.state === "pre" && (
