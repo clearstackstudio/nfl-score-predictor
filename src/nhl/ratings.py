@@ -13,6 +13,9 @@ Frozen spec (scope doc, 2026-10-20 — do not tune against validation):
   regulation resolve via OT (winner weighted by lambda share; OT
   decides 66% of tied games, measured on the discovery seasons from
   MoneyPuck ice time) and shootout (50/50).
+- Rest term (v1.1, adopted 2026-10-20 per the pre-registered add-on
+  test in research/nhl_rest/): expected goals shift by REST_BETA per
+  rest-day of differential between the teams.
 """
 import numpy as np
 import pandas as pd
@@ -27,6 +30,12 @@ OT_DECISIVE = 0.66                    # share of tied games decided in OT
                                       # games past regulation ending
                                       # before the 3900s shootout mark)
 MAX_GOALS = 12                        # Poisson truncation
+REST_BETA = 0.05                      # goals per rest-day of differential
+                                      # (rest term adopted 2026-10-20 per
+                                      # the pre-registered test in
+                                      # research/nhl_rest/RESULTS.md:
+                                      # validation Brier 0.2394 vs v1
+                                      # 0.2401, bootstrap CI excludes 0)
 
 
 def ratings_snapshot(history: pd.DataFrame, prior: dict) -> dict | None:
@@ -74,14 +83,48 @@ def ratings_snapshot(history: pd.DataFrame, prior: dict) -> dict | None:
             "lg_x": lg_x, "lg_goals": lg_goals}
 
 
-def expected_goals(snap: dict, home: str, away: str, home_ice: float):
-    """(lambda_home, lambda_away) or None if a team is unrated."""
+def expected_goals(snap: dict, home: str, away: str, home_ice: float,
+                   rest_d: int = 0):
+    """(lambda_home, lambda_away) or None if a team is unrated.
+
+    rest_d is the rest differential (home rest days - away rest days,
+    capped to [-3, +3]; see rest_days_map). The rest term shifts
+    lam_h by +REST_BETA * rest_d and lam_a by -REST_BETA * rest_d
+    after the usual [0.5, 6.5] clip, with a 0.5 floor after the
+    adjustment — exactly the term frozen in
+    research/nhl_rest/PREREGISTRATION.md. rest_d=0 reproduces v1.
+    """
     if home not in snap["off"] or away not in snap["off"]:
         return None
     base = snap["lg_goals"]
     lam_h = base + snap["off"][home] + snap["def"][away] + home_ice
     lam_a = base + snap["off"][away] + snap["def"][home]
-    return float(np.clip(lam_h, 0.5, 6.5)), float(np.clip(lam_a, 0.5, 6.5))
+    lam_h = float(np.clip(lam_h, 0.5, 6.5))
+    lam_a = float(np.clip(lam_a, 0.5, 6.5))
+    if rest_d:
+        lam_h = max(lam_h + REST_BETA * rest_d, 0.5)
+        lam_a = max(lam_a - REST_BETA * rest_d, 0.5)
+    return lam_h, lam_a
+
+
+def rest_days_map(tg: pd.DataFrame) -> dict:
+    """game_id -> capped rest differential d in [-3, +3] (home - away).
+
+    rest_days(team) = calendar days since that team's previous
+    regular-season game within the same season; a team's first game
+    of a season counts as 3. Derived from each team's previous game
+    date only, so it is walk-forward safe (no future information).
+    tg is the team-games table built by data_prep.py (regular
+    season only, one row per team-game).
+    """
+    t = tg[["game_id", "team", "season", "date", "home"]].copy()
+    t = t.sort_values(["team", "season", "date"])
+    prev = t.groupby(["team", "season"])["date"].shift(1)
+    t["rest"] = (t["date"] - prev).dt.days.fillna(3).astype(int)
+    home = t[t["home"] == 1].set_index("game_id")["rest"]
+    away = t[t["home"] == 0].set_index("game_id")["rest"]
+    d = (home - away).dropna().clip(-3, 3)
+    return {int(gid): int(v) for gid, v in d.items()}
 
 
 def _pois(k: int, lam: float) -> float:

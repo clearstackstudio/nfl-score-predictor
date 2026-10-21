@@ -7,6 +7,15 @@ Pre-registered design (scope doc, 2026-10-20):
   refresh nightly; 2018-19 serves as warmup history only.
 - Market comparison lives in market_eval.py (needs the odds pull);
   this runner emits model-only metrics + a predictions parquet.
+- Rest term integrated 2026-10-20 (v1.1): expected goals carry the
+  REST_BETA rest adjustment from research/nhl_rest/ (pre-registered
+  ADOPT verdict; Bryant approved adoption). Home-ice and the
+  calibration map are still fitted on rest-free lambdas (beta = 0),
+  exactly as the frozen v1 spec fitted them -- the rest term applies
+  to the emitted predictions only. The integrated runner reproduces
+  the research overlay's validation numbers (Brier 0.2394, totals
+  RMSE 2.327); with REST_BETA = 0 it reproduces frozen v1 exactly
+  (Brier 0.2401).
 """
 import json
 import sys
@@ -18,7 +27,8 @@ from scipy.optimize import minimize
 from scipy.special import expit, logit
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from ratings import expected_goals, ratings_snapshot, win_prob  # noqa: E402
+from ratings import (expected_goals, ratings_snapshot, rest_days_map,  # noqa: E402
+                     win_prob)
 
 DATA = Path(__file__).resolve().parents[2] / "data" / "nhl"
 WARMUP_SEASON = 2018
@@ -27,8 +37,16 @@ VALIDATION = {2023, 2024, 2025}
 HOME_ICE_GRID = np.round(np.arange(0.0, 0.401, 0.025), 3)
 
 
-def walk_forward(tg: pd.DataFrame) -> pd.DataFrame:
-    """One row per game in seasons 2019..2025 with lambda at home_ice=0."""
+def walk_forward(tg: pd.DataFrame, rest: dict | None = None) -> pd.DataFrame:
+    """One row per game in seasons 2019..2025 with lambda at home_ice=0.
+
+    Expected goals include the rest term (ratings.REST_BETA, adopted
+    2026-10-20), so lam_h0/lam_a in the output are post-rest values.
+    rest maps game_id -> capped rest differential (see
+    ratings.rest_days_map); computed from tg when not supplied.
+    """
+    if rest is None:
+        rest = rest_days_map(tg)
     rows = []
     prior: dict = {}
     last_season = None
@@ -51,7 +69,8 @@ def walk_forward(tg: pd.DataFrame) -> pd.DataFrame:
             continue
         games = day[day["home"] == 1]
         for g in games.itertuples():
-            lam = expected_goals(snap, g.team, g.opp, home_ice=0.0)
+            lam = expected_goals(snap, g.team, g.opp, home_ice=0.0,
+                                 rest_d=rest.get(int(g.game_id), 0))
             if lam is None:
                 continue
             away_row = day[(day["team"] == g.opp)].iloc[0]
@@ -94,11 +113,22 @@ def apply_cal(p: np.ndarray, a: float, b: float) -> np.ndarray:
 def main() -> None:
     tg = pd.read_parquet(DATA / "team_games.parquet")
     tg = tg[tg["season"] >= WARMUP_SEASON]
-    pred = walk_forward(tg)
+    rest = rest_days_map(tg)
+    pred = walk_forward(tg, rest=rest)
     print(f"predicted games: {len(pred)}")
 
-    # --- fit home ice on discovery (Brier) ---
-    disc = pred[pred["season"].isin(DISCOVERY)]
+    # --- fit home ice + calibration on REST-FREE lambdas (beta = 0) ---
+    # Frozen-spec fidelity: v1 fitted home-ice and the calibration map
+    # with the rest term absent, and the pre-registered rest test judged
+    # the term on top of those frozen fits (home-ice 0.20; see
+    # research/nhl_rest/RESULTS.md). Fitting on post-rest lambdas would
+    # silently change the spec -- the home-ice grid then selects 0.175,
+    # an untested model nobody approved. So the fits below run on a
+    # rest-free walk-forward; the fitted constants are applied to the
+    # emitted predictions, which DO carry the rest term.
+    free = walk_forward(tg, rest={})
+
+    disc = free[free["season"].isin(DISCOVERY)]
     scores = {}
     for h in HOME_ICE_GRID:
         p = np.array([win_prob(r.lam_h0 + h, r.lam_a)
@@ -108,14 +138,15 @@ def main() -> None:
     print(f"home ice fitted: {home_ice} goals "
           f"(grid Brier {scores[home_ice]:.4f} vs 0.0 -> {scores[0.0]:.4f})")
 
+    free["p_raw"] = [win_prob(r.lam_h0 + home_ice, r.lam_a)
+                     for r in free.itertuples()]
+    d = free[free["season"].isin(DISCOVERY)]
+    a, b = fit_calibration(d["p_raw"].to_numpy(), d["home_win"].to_numpy())
+    print(f"calibration fitted on discovery: a={a:.3f} b={b:.3f}")
+
     pred["lam_h"] = pred["lam_h0"] + home_ice
     pred["p_raw"] = [win_prob(r.lam_h, r.lam_a) for r in pred.itertuples()]
-
-    # --- fit calibration on discovery ---
-    d = pred[pred["season"].isin(DISCOVERY)]
-    a, b = fit_calibration(d["p_raw"].to_numpy(), d["home_win"].to_numpy())
     pred["p_home"] = apply_cal(pred["p_raw"].to_numpy(), a, b)
-    print(f"calibration fitted on discovery: a={a:.3f} b={b:.3f}")
 
     def metrics(df: pd.DataFrame) -> dict:
         y = df["home_win"].to_numpy()
