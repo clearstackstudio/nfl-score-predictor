@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import record from "../../../data/nba_track_record.json";
 import seasonLog from "../../../data/nba_season_2027.json";
 import { fmtPct } from "../../lib/format";
+import CollapsibleGroup from "../../lib/collapsible-group";
 
 export const metadata: Metadata = {
   title: "NBA track record",
@@ -341,11 +342,17 @@ function LiveSeason({ log }: { log: SeasonLog }) {
         backtest has them at 48.3%, worse than a coin flip. The historical evidence is
         in the table above and on the calibration page.
       </p>
-      {days.map(([dk, w]) => (
-        <div key={dk} className="mt-6">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400 light:text-zinc-600">
-            {fmtDay(dk)} {w.complete ? "" : "· partial"}
-          </h3>
+      {days.map(([dk, w], i) => (
+        <CollapsibleGroup
+          key={dk}
+          className="mt-6"
+          defaultOpen={i === 0}
+          header={
+            <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400 light:text-zinc-600">
+              {fmtDay(dk)} {w.complete ? "" : "· partial"}
+            </h3>
+          }
+        >
           {w.parlay && w.parlay.legs.length > 0 && (
             <div className="mt-2 flex flex-wrap items-center gap-2 rounded-xl border border-amber-400/25 bg-amber-400/[0.06] px-4 py-2.5 text-sm light:bg-amber-50">
               <span className="font-bold text-amber-200 light:text-amber-700">Parlay:</span>
@@ -385,7 +392,7 @@ function LiveSeason({ log }: { log: SeasonLog }) {
               </tbody>
             </table>
           </div>
-        </div>
+        </CollapsibleGroup>
       ))}
     </div>
   );
