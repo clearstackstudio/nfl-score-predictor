@@ -2,7 +2,7 @@
   "sport": "nba",
   "season": 2027,
   "asof": "2026-10-20",
-  "updated": "2026-10-20 17:08 PDT",
+  "updated": "2026-10-20 21:41 PDT",
   "note": "Model-internal predictive ratings: the model's Elo ratings converted to expected margin vs an average team on a neutral court at the model's fitted rate (30 Elo points per point of margin), before nightly rest/star adjustments. Not a resume ranking; moves only on game results.",
   "teams": [
     {
@@ -23,14 +23,14 @@
       "rank": 3,
       "team": "Detroit Pistons",
       "abbr": "Detroit Pistons",
-      "rating": 3.9,
+      "rating": 4.2,
       "prev_rank": 28
     },
     {
       "rank": 4,
       "team": "Boston Celtics",
       "abbr": "Boston Celtics",
-      "rating": 3.8,
+      "rating": 3.5,
       "prev_rank": 1
     },
     {
@@ -42,17 +42,17 @@
     },
     {
       "rank": 6,
-      "team": "New York Knicks",
-      "abbr": "New York Knicks",
-      "rating": 2.9,
-      "prev_rank": 7
-    },
-    {
-      "rank": 7,
       "team": "Charlotte Hornets",
       "abbr": "Charlotte Hornets",
       "rating": 2.8,
       "prev_rank": 26
+    },
+    {
+      "rank": 7,
+      "team": "New York Knicks",
+      "abbr": "New York Knicks",
+      "rating": 2.4,
+      "prev_rank": 7
     },
     {
       "rank": 8,
@@ -119,24 +119,24 @@
     },
     {
       "rank": 17,
+      "team": "Philadelphia 76ers",
+      "abbr": "Philadelphia 76ers",
+      "rating": 0.6,
+      "prev_rank": 8
+    },
+    {
+      "rank": 18,
       "team": "Miami Heat",
       "abbr": "Miami Heat",
       "rating": 0.5,
       "prev_rank": 9
     },
     {
-      "rank": 18,
+      "rank": 19,
       "team": "Portland Trail Blazers",
       "abbr": "Portland Trail Blazers",
       "rating": 0.4,
       "prev_rank": 24
-    },
-    {
-      "rank": 19,
-      "team": "Philadelphia 76ers",
-      "abbr": "Philadelphia 76ers",
-      "rating": 0.2,
-      "prev_rank": 8
     },
     {
       "rank": 20,
