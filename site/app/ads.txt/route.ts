@@ -1,4 +1,4 @@
-// ads.txt — declares authorized digital sellers for honest-line.vercel.app.
+// ads.txt — declares authorized digital sellers for honestlinesports.com.
 // When NEXT_PUBLIC_ADSENSE_ID is set (ca-pub-… or pub-…), serves the
 // standard Google line. Until then, a comment-only file: valid ads.txt,
 // zero sellers authorized.

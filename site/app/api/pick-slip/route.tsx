@@ -78,7 +78,7 @@ export async function GET() {
           {`No edge claimed. Full graded record:`}
         </div>
         <div style={{ fontSize: 28, fontWeight: 700, color: "#fbbf24", marginTop: 4 }}>
-          {`honest-line.vercel.app`}
+          {`honestlinesports.com`}
         </div>
       </div>
     ),

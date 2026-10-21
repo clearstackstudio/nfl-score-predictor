@@ -15,7 +15,7 @@ const barlow = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://honest-line.vercel.app"),
+  metadataBase: new URL("https://honestlinesports.com"),
   title: {
     default:
       "Honest Line — NFL, college football, NBA & MLB picks with a public track record",
@@ -48,13 +48,13 @@ const jsonLd = {
     {
       "@type": "Organization",
       name: "Honest Line",
-      url: "https://honest-line.vercel.app",
-      logo: "https://honest-line.vercel.app/honest-line-mark.png",
+      url: "https://honestlinesports.com",
+      logo: "https://honestlinesports.com/honest-line-mark.png",
     },
     {
       "@type": "WebSite",
       name: "Honest Line",
-      url: "https://honest-line.vercel.app",
+      url: "https://honestlinesports.com",
     },
     {
       "@type": "BreadcrumbList",
@@ -63,7 +63,7 @@ const jsonLd = {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://honest-line.vercel.app",
+          item: "https://honestlinesports.com",
         },
       ],
     },

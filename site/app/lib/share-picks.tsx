@@ -36,7 +36,7 @@ export default function SharePicks({ label = "Share this week's picks" }: { labe
           await navigator.share({
             files: [file],
             title: "Honest Line picks",
-            text: "This week's Honest Line model picks — full graded record at honest-line.vercel.app",
+            text: "This week's Honest Line model picks — full graded record at honestlinesports.com",
           });
           return; // shared — done
         } catch (e) {
