@@ -8,8 +8,8 @@
       "preseason": false,
       "warming_up": true,
       "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Boston Celtics",
@@ -36,7 +36,12 @@
             "away": "Boston Celtics -1"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 121.0,
+            "away_score": 113.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Philadelphia 76ers",
@@ -63,7 +68,12 @@
             "away": "Philadelphia 76ers +4.5"
           },
           "cover_prob": 0.504,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 100.0,
+            "away_score": 106.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Oklahoma City Thunder",
@@ -90,7 +100,11 @@
             "away": "Oklahoma City Thunder +2"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 104.0,
+            "away_score": 116.0
+          }
         }
       ],
       "parlay": {
@@ -108,10 +122,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.252,
-        "fair_odds": "+297",
-        "book_pays": "+260"
-      }
+        "result": "win"
+      },
+      "graded_at": "2026-10-21 06:48 PDT"
     },
     "2026-10-21": {
       "date": "2026-10-21",
