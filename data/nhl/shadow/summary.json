@@ -1,13 +1,15 @@
 {
-  "generated_at": "2026-10-21T06:40:23.616369-07:00",
-  "games_logged": 2,
-  "games_graded": 0,
-  "dates_graded": [],
+  "generated_at": "2026-10-22T06:40:14.927937-07:00",
+  "games_logged": 14,
+  "games_graded": 2,
+  "dates_graded": [
+    "2026-10-21"
+  ],
   "moneyline": {
-    "brier_raw": null,
-    "brier_cal": null,
-    "market_brier": null,
-    "su_acc_cal": null
+    "brier_raw": 0.2268,
+    "brier_cal": 0.2226,
+    "market_brier": 0.3203,
+    "su_acc_cal": 0.5
   },
   "totals_flagged": {
     "w": 0,
@@ -16,10 +18,10 @@
     "win_pct": null
   },
   "totals_all": {
-    "w": 0,
+    "w": 1,
     "l": 0,
-    "p": 0,
-    "win_pct": null
+    "p": 1,
+    "win_pct": 1.0
   },
-  "totals_rmse": null
+  "totals_rmse": 1.309
 }
