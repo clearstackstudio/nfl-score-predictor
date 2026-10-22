@@ -151,6 +151,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Read the full disclaimers
                 </Link>
               </p>
+              <p className="mt-3 text-xs">
+                <Link
+                  href="/privacy"
+                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200 light:text-zinc-600 light:decoration-zinc-300 light:hover:text-zinc-900"
+                >
+                  Read the privacy policy
+                </Link>
+              </p>
             </div>
           </div>
           <div className="border-t border-white/5 light:border-zinc-200">

@@ -9,6 +9,7 @@ const routes = [
   "/disclaimer",
   "/live",
   "/pick-em",
+  "/privacy",
   "/rankings",
   "/recaps",
   "/tracker",
