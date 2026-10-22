@@ -22,10 +22,19 @@ Honesty rules (same as the rest of this repo):
 Usage:
     python3 src/nba/daily_picks.py [--date YYYY-MM-DD] [--force]
 
---date selects the game day (default: today, America/Los_Angeles). When the
-target day has no games with logged lines, tomorrow is tried instead --
-at 9pm the useful slate is tomorrow's, not today's already-finished games.
-When neither day has games, picks: [] is emitted with a pending_reason.
+--date selects the game day (default: today, America/Los_Angeles). The
+game day is the first day, starting at the target, that still has
+UN-TIPPED games with logged lines -- at 9pm the useful slate is
+tomorrow's, not today's already-finished games. A game whose tip time
+has passed is never selected: the odds snapshot keeps listing it while
+it is live, but its line is by then an in-game line, not the pre-game
+line a published board must carry. When no day has un-tipped games,
+picks: [] is emitted with a pending_reason.
+
+Shrink guard: a run that would publish FEWER games for a date than are
+already recorded for it (in nba_picks.json or the season log) refuses
+to overwrite and exits with an error instead, so a partial regeneration
+can never silently replace a fuller published board.
 
 Season timing: the 2026-27 regular season starts ~Oct 20, 2026. Games
 commencing before the season opener are preseason (flagged, experimental).
@@ -332,6 +341,30 @@ def pt_date(iso: str) -> datetime.date:
     return datetime.datetime.fromisoformat(iso).astimezone(PT).date()
 
 
+def recorded_pick_count(day: datetime.date) -> int:
+    """Games already published for a date: the live board
+    (site/data/nba_picks.json, when it carries that date) and/or the
+    season log's day entry. The shrink guard compares a regeneration
+    against this count so a partial run can never silently replace a
+    fuller published board."""
+    count = 0
+    try:
+        board = json.loads((SITE_DATA / "nba_picks.json").read_text())
+        if board.get("date") == day.isoformat():
+            count = max(count, len(board.get("picks", [])))
+    except Exception:
+        pass
+    try:
+        log = json.loads(
+            (SITE_DATA / f"nba_season_{season_of(day)}.json").read_text())
+        entry = log.get("days", {}).get(day.isoformat())
+        if entry:
+            count = max(count, len(entry.get("picks", [])))
+    except Exception:
+        pass
+    return count
+
+
 def build_parlay(picks: list[dict]) -> dict | None:
     """Parlay of the day: the 3 highest-probability legs (spread or total).
 
@@ -454,13 +487,30 @@ def main() -> None:
         sys.exit(1)
     snap_date, odds = snap
 
-    # Game day: the target date if it has games with lines, else tomorrow.
-    # (At 9pm the useful slate is tomorrow's, not today's finished games.)
+    # Game day: the first day, starting at the target, that still has
+    # UN-TIPPED games with lines. A game whose tip time has passed is
+    # never selected: the snapshot keeps listing it while it is live,
+    # but its line is by then an in-game line (e.g. +32.5), not the
+    # pre-game line a published board must carry. (On 2026-10-21 the
+    # 9pm run found 3 west-coast games still in the snapshot after tip
+    # and would have overwritten the published 11-game board with them.)
+    now = datetime.datetime.now(PT)
+
+    def untipped(g: dict) -> bool:
+        ct = g.get("commence_time")
+        return bool(ct) and datetime.datetime.fromisoformat(ct) > now
+
+    snap_days = sorted({pt_date(g["commence_time"])
+                        for g in odds.get("games", [])
+                        if g.get("commence_time")})
     game_date = None
     day_games: list[dict] = []
-    for cand in (target, target + datetime.timedelta(days=1)):
+    for cand in snap_days:
+        if cand < target:
+            continue
         gs = [g for g in odds.get("games", [])
-              if g.get("commence_time") and pt_date(g["commence_time"]) == cand]
+              if g.get("commence_time")
+              and pt_date(g["commence_time"]) == cand and untipped(g)]
         if gs:
             game_date, day_games = cand, gs
             break
@@ -482,14 +532,24 @@ def main() -> None:
                            "record published openly."),
             "parlay": None, "picks": [],
             "pending_reason": (
-                f"No NBA games with logged lines on {target} or {target + datetime.timedelta(days=1)}. "
+                f"No NBA games with logged lines on or after {target}. "
                 f"(Regular season starts ~Oct 20, 2026.)"),
             "odds_snapshot": snap_date,
         }
+        # Shrink guard: an empty board must never replace a published
+        # one (e.g. late at night, after every game on a published day
+        # has tipped and tomorrow's lines are not logged yet).
+        recorded = recorded_pick_count(target)
+        if recorded > 0:
+            print(f"ERROR: shrink guard: {target} already has {recorded} "
+                  f"published games, but no un-tipped games remain in "
+                  f"the snapshot to regenerate them; refusing to replace "
+                  f"the board with an empty one. Picks files unchanged.")
+            sys.exit(1)
         dest = SITE_DATA / "nba_picks.json"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(json.dumps(out, indent=2))
-        print(f"no games {target} or +1d -> {dest} (pending)")
+        print(f"no un-tipped games on/after {target} -> {dest} (pending)")
         return
 
     print(f"game day {game_date} ({len(day_games)} games in snapshot {snap_date})")
@@ -601,6 +661,18 @@ def main() -> None:
 
     parlay = build_parlay(picks)
     validate_picks(picks)
+
+    # Shrink guard (safety net behind the un-tipped selection above):
+    # never overwrite a date's published board with fewer games than it
+    # already has. Equal-or-larger regenerations and unpublished dates
+    # pass through untouched.
+    recorded = recorded_pick_count(game_date)
+    if len(picks) < recorded:
+        print(f"ERROR: shrink guard: {game_date} already has {recorded} "
+              f"published games, but this run produced only "
+              f"{len(picks)}; refusing to overwrite the fuller board. "
+              f"Picks files unchanged.")
+        sys.exit(1)
 
     out = {
         "sport": "nba", "season": season, "date": game_date.isoformat(),
