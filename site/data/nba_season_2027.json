@@ -515,8 +515,8 @@
       "preseason": false,
       "warming_up": true,
       "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Cleveland Cavaliers",
@@ -543,7 +543,12 @@
             "away": "Cleveland Cavaliers +3"
           },
           "cover_prob": 0.502,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 114.0,
+            "away_score": 106.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Denver Nuggets",
@@ -570,7 +575,12 @@
             "away": "Denver Nuggets +8"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 96.0,
+            "away_score": 84.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -588,10 +598,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.251,
-        "fair_odds": "+298",
-        "book_pays": "+260"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-10-23 06:41 PDT"
     },
     "2026-10-23": {
       "date": "2026-10-23",
