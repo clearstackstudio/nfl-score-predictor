@@ -8,10 +8,16 @@ type LeagueId = "nfl" | "cfb" | "nba" | "ncaab" | "mlb";
 
 const LEAGUES: { id: LeagueId; label: string; base: string; scoreboard: string }[] = [
   { id: "nfl", label: "NFL", base: "", scoreboard: "football/nfl" },
-  { id: "cfb", label: "NCAAF", base: "/cfb", scoreboard: "football/college-football" },
   { id: "nba", label: "NBA", base: "/nba", scoreboard: "basketball/nba" },
-  { id: "ncaab", label: "NCAAB", base: "/ncaab", scoreboard: "basketball/mens-college-basketball" },
   { id: "mlb", label: "MLB", base: "/mlb", scoreboard: "baseball/mlb" },
+  { id: "cfb", label: "NCAAF", base: "/cfb", scoreboard: "football/college-football" },
+  { id: "ncaab", label: "NCAAB", base: "/ncaab", scoreboard: "basketball/mens-college-basketball" },
+];
+
+// League tabs are grouped: pro leagues first, then college.
+const LEAGUE_GROUPS: { label: string; ids: LeagueId[] }[] = [
+  { label: "Pro", ids: ["nfl", "nba", "mlb"] },
+  { label: "College", ids: ["cfb", "ncaab"] },
 ];
 
 const NAV_ITEMS = [
@@ -99,28 +105,41 @@ export default function Nav() {
 
   return (
     <div className="flex max-w-full flex-wrap items-center gap-x-3 gap-y-2">
-      {/* League toggle */}
-      <div
-        className="inline-flex shrink-0 rounded-lg border border-white/10 bg-zinc-900 p-0.5"
-        role="tablist"
-        aria-label="League"
-      >
-        {LEAGUES.map((l) => {
-          const active = l.id === league;
-          return (
-            <Link
-              key={l.id}
-              href={switchHref(pathname, l.id)}
-              role="tab"
-              aria-selected={active}
-              className={`rounded-md px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
-                active ? "bg-amber-400 text-zinc-950" : "text-zinc-400 hover:text-white"
-              }`}
+      {/* League toggle — pro leagues and college leagues in separate groups */}
+      <div className="flex shrink-0 items-start gap-3">
+        {LEAGUE_GROUPS.map((group, gi) => (
+          <div
+            key={group.label}
+            className={`flex flex-col gap-1 ${gi > 0 ? "border-l border-white/10 pl-3 light:border-zinc-300" : ""}`}
+          >
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 light:text-zinc-500">
+              {group.label}
+            </span>
+            <div
+              className="inline-flex rounded-lg border border-white/10 bg-zinc-900 p-0.5"
+              role="tablist"
+              aria-label={`${group.label} leagues`}
             >
-              {l.label}
-            </Link>
-          );
-        })}
+              {group.ids.map((id) => {
+                const l = LEAGUES.find((x) => x.id === id) ?? LEAGUES[0];
+                const active = l.id === league;
+                return (
+                  <Link
+                    key={l.id}
+                    href={switchHref(pathname, l.id)}
+                    role="tab"
+                    aria-selected={active}
+                    className={`rounded-md px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
+                      active ? "bg-amber-400 text-zinc-950" : "text-zinc-400 hover:text-white"
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </div>
       <nav ref={navRef} className="flex max-w-full gap-1 overflow-x-auto" aria-label="Primary">
         {NAV_ITEMS.filter(
