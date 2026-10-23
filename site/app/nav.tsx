@@ -112,7 +112,7 @@ export default function Nav() {
             key={group.label}
             className={`flex flex-col gap-1 ${gi > 0 ? "border-l border-white/10 pl-3 light:border-zinc-300" : ""}`}
           >
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 light:text-zinc-500">
+            <span className="text-[13px] font-bold uppercase tracking-[0.18em] text-zinc-400 light:text-zinc-500">
               {group.label}
             </span>
             <div
