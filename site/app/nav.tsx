@@ -110,9 +110,9 @@ export default function Nav() {
         {LEAGUE_GROUPS.map((group, gi) => (
           <div
             key={group.label}
-            className={`flex flex-col gap-1 ${gi > 0 ? "border-l border-white/10 pl-3 light:border-zinc-300" : ""}`}
+            className={`flex flex-col gap-1 ${gi > 0 ? "border-l border-white/10 pl-3" : ""}`}
           >
-            <span className="text-[13px] font-bold uppercase tracking-[0.18em] text-zinc-400 light:text-zinc-500">
+            <span className="text-[13px] font-bold uppercase tracking-[0.18em] text-zinc-400">
               {group.label}
             </span>
             <div
@@ -130,7 +130,7 @@ export default function Nav() {
                     role="tab"
                     aria-selected={active}
                     className={`rounded-md px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
-                      active ? "bg-amber-400 text-zinc-950" : "text-zinc-400 hover:text-white"
+                      active ? "bg-red-500 text-white" : "text-zinc-400 hover:text-white"
                     }`}
                   >
                     {l.label}
@@ -156,14 +156,14 @@ export default function Nav() {
               aria-current={active ? "page" : undefined}
               className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition ${
                 active
-                  ? "bg-white/10 text-white light:bg-zinc-900/10 light:text-zinc-900"
-                  : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100 light:text-zinc-500 light:hover:bg-zinc-900/5 light:hover:text-zinc-900"
+                  ? "bg-white/10 text-white"
+                  : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100"
               }`}
             >
               {item.liveDot && anyLive && (
                 <span className="relative flex h-1.5 w-1.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-amber-400" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-red-500" />
                 </span>
               )}
               {label}
@@ -175,8 +175,8 @@ export default function Nav() {
           aria-current={pathname === "/recaps" || pathname.startsWith("/recaps/") ? "page" : undefined}
           className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition ${
             pathname === "/recaps" || pathname.startsWith("/recaps/")
-              ? "bg-white/10 text-white light:bg-zinc-900/10 light:text-zinc-900"
-              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100 light:text-zinc-500 light:hover:bg-zinc-900/5 light:hover:text-zinc-900"
+              ? "bg-white/10 text-white"
+              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100"
           }`}
         >
           Recaps
@@ -186,8 +186,8 @@ export default function Nav() {
           aria-current={pathname === "/tracker" ? "page" : undefined}
           className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition ${
             pathname === "/tracker"
-              ? "bg-white/10 text-white light:bg-zinc-900/10 light:text-zinc-900"
-              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100 light:text-zinc-500 light:hover:bg-zinc-900/5 light:hover:text-zinc-900"
+              ? "bg-white/10 text-white"
+              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100"
           }`}
         >
           Tracker
@@ -197,8 +197,8 @@ export default function Nav() {
           aria-current={pathname === "/accuracy" ? "page" : undefined}
           className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition ${
             pathname === "/accuracy"
-              ? "bg-white/10 text-white light:bg-zinc-900/10 light:text-zinc-900"
-              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100 light:text-zinc-500 light:hover:bg-zinc-900/5 light:hover:text-zinc-900"
+              ? "bg-white/10 text-white"
+              : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100"
           }`}
         >
           Accuracy

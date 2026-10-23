@@ -90,12 +90,12 @@ export default async function RecapPage({
     <div>
       <Link
         href="/recaps"
-        className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 hover:text-amber-300 light:text-amber-700 light:hover:text-amber-600"
+        className="text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 hover:text-red-300 light:text-red-700 light:hover:text-red-600"
       >
         ← All recaps
       </Link>
-      <div className="mt-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+      <div className="mt-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+        <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
         {r.period_label}
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">

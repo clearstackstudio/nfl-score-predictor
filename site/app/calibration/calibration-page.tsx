@@ -287,7 +287,7 @@ function BinTable({ bins, caption }: { bins: CalBin[]; caption: string }) {
               <tr key={b.label} className={rowCls}>
                 <td className="px-3 py-2 font-semibold">{b.label}</td>
                 <td className={`${tdCls} text-zinc-300 light:text-zinc-700`}>{fmtPct(b.predicted)}</td>
-                <td className={`${tdCls} font-semibold ${b.actual >= b.predicted ? "text-emerald-400 light:text-emerald-700" : "text-amber-400 light:text-amber-700"}`}>
+                <td className={`${tdCls} font-semibold ${b.actual >= b.predicted ? "text-emerald-400 light:text-emerald-700" : "text-red-500 light:text-red-700"}`}>
                   {fmtPct(b.actual)}
                 </td>
                 <td className={`${tdCls} text-zinc-400 light:text-zinc-600`}>{b.n.toLocaleString()}</td>
@@ -302,7 +302,7 @@ function BinTable({ bins, caption }: { bins: CalBin[]; caption: string }) {
 
 function SmallSampleFlag() {
   return (
-    <span className="ml-2 rounded bg-amber-400/15 px-1.5 py-0.5 align-middle font-sans text-[10px] font-bold uppercase tracking-wide text-amber-300 light:bg-amber-600/15 light:text-amber-700">
+    <span className="ml-2 rounded bg-red-500/15 px-1.5 py-0.5 align-middle font-sans text-[10px] font-bold uppercase tracking-wide text-red-300 light:bg-red-600/15 light:text-red-700">
       small sample
     </span>
   );
@@ -376,9 +376,9 @@ function MarketSection({ sportId, market, season }: { sportId: string; market: C
           </p>
         </div>
       )}
-      <div className={`mt-3 max-w-3xl border-l-2 pl-4 text-[15px] leading-relaxed light:border-amber-700 ${
-        honest ? "border-emerald-400/70" : "border-amber-400/70"}`}>
-        <span className={`font-bold ${honest ? "text-emerald-300 light:text-emerald-700" : "text-amber-200 light:text-amber-700"}`}>
+      <div className={`mt-3 max-w-3xl border-l-2 pl-4 text-[15px] leading-relaxed light:border-red-700 ${
+        honest ? "border-emerald-400/70" : "border-red-500/70"}`}>
+        <span className={`font-bold ${honest ? "text-emerald-300 light:text-emerald-700" : "text-red-200 light:text-red-700"}`}>
           The verdict:{" "}
         </span>
         <span className="text-zinc-300 light:text-zinc-700">{market.verdict}</span>

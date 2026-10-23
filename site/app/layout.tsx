@@ -3,6 +3,7 @@ import { Inter, Barlow_Condensed } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import Nav from "./nav";
+import ScoreStrip from "./lib/score-strip";
 import { SupportButton } from "./lib/support";
 import "./globals.css";
 
@@ -73,13 +74,13 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.className} ${barlow.variable}`}>
-      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased light:bg-white light:text-zinc-900">
+      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased light:bg-zinc-100 light:text-zinc-900">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <div className="page-glow">
-          <header className="sticky top-0 z-40 border-b border-white/10 bg-zinc-950/85 backdrop-blur-md light:border-zinc-200 light:bg-white/85">
+        <div>
+          <header className="sticky top-0 z-40 border-b border-white/10 bg-zinc-950">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-y-3 px-4 py-3.5">
               <Link href="/" className="flex shrink-0 items-center gap-2.5">
                 <Image
@@ -90,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   className="h-12 w-12 rounded-lg"
                 />
                 <span className="font-display text-[32px] font-semibold uppercase leading-none tracking-wide">
-                  Honest<span className="text-amber-400 light:text-amber-600">Line</span>
+                  Honest<span className="text-red-500">Line</span>
                 </span>
                 <span className="hidden text-xs text-zinc-500 md:inline">
                   Picks, tracked in public
@@ -98,14 +99,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Link>
               <Nav />
             </div>
+            <ScoreStrip />
           </header>
           <main className="mx-auto max-w-6xl px-4 pb-16 pt-10">{children}</main>
         </div>
-        <footer className="border-t border-white/10 bg-zinc-950 light:border-zinc-200 light:bg-zinc-50">
+        <footer className="border-t border-white/10 bg-zinc-950">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-[1.2fr_1fr_1fr]">
             <div>
               <div className="font-display text-xl font-semibold uppercase tracking-wide">
-                Honest<span className="text-amber-400 light:text-amber-600">Line</span>
+                Honest<span className="text-red-500">Line</span>
               </div>
               <p className="mt-2 max-w-xs text-sm leading-relaxed text-zinc-500">
                 Fundamentals-only NFL, college football, NBA, and MLB
@@ -127,7 +129,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ["College track record", "/cfb/track-record"],
                 ].map(([label, href]) => (
                   <li key={href}>
-                    <Link href={href} className="text-zinc-400 transition hover:text-white light:text-zinc-600 light:hover:text-zinc-900">
+                    <Link href={href} className="text-zinc-400 transition hover:text-white">
                       {label}
                     </Link>
                   </li>
@@ -146,7 +148,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <p className="mt-3 text-xs">
                 <Link
                   href="/disclaimer"
-                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200 light:text-zinc-600 light:decoration-zinc-300 light:hover:text-zinc-900"
+                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200"
                 >
                   Read the full disclaimers
                 </Link>
@@ -154,15 +156,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <p className="mt-3 text-xs">
                 <Link
                   href="/privacy"
-                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200 light:text-zinc-600 light:decoration-zinc-300 light:hover:text-zinc-900"
+                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200"
                 >
                   Read the privacy policy
                 </Link>
               </p>
             </div>
           </div>
-          <div className="border-t border-white/5 light:border-zinc-200">
-            <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-4 text-xs text-zinc-600 light:text-zinc-500">
+          <div className="border-t border-white/5">
+            <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-4 text-xs text-zinc-600">
               <span>© 2026 HonestLine</span>
               <span>
                 A{" "}
@@ -170,7 +172,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   href="https://weclearstack.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200 light:text-zinc-600 light:decoration-zinc-300 light:hover:text-zinc-900"
+                  className="text-zinc-400 underline decoration-zinc-700 underline-offset-2 transition hover:text-zinc-200"
                 >
                   ClearStack Studio
                 </a>{" "}

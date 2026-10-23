@@ -156,12 +156,12 @@ export default function NbaMethodology() {
 
   return (
     <div className="max-w-3xl">
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+        <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
         NBA · How it works
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Method<span className="text-amber-400 light:text-amber-600">ology</span>
+        Method<span className="text-red-500 light:text-red-600">ology</span>
       </h1>
       <p className="mt-4 text-[15px] text-zinc-400 light:text-zinc-600">
         How the NBA picks are made — and what we honestly claim about them.
@@ -170,7 +170,7 @@ export default function NbaMethodology() {
       {sections.map((s) => (
         <section key={s.n} className="mt-8 rounded-2xl border border-white/10 bg-zinc-900/40 p-6 sm:p-8 light:border-zinc-200 light:bg-white">
           <div className="flex items-baseline gap-4">
-            <span className="tnum font-display text-lg font-semibold text-amber-400/80 light:text-amber-700">{s.n}</span>
+            <span className="tnum font-display text-lg font-semibold text-red-500/80 light:text-red-700">{s.n}</span>
             <h2 className="font-display text-2xl font-semibold uppercase tracking-wide">{s.title}</h2>
           </div>
           {s.body && (
@@ -180,7 +180,7 @@ export default function NbaMethodology() {
             <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
               {s.list.map((item, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400/70 light:bg-amber-600" aria-hidden="true" />
+                  <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-red-500/70 light:bg-red-600" aria-hidden="true" />
                   <span>{item}</span>
                 </li>
               ))}

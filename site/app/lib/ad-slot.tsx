@@ -109,9 +109,9 @@ function HousePromo({
   return (
     <Link
       href={promo.href}
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-xl border border-amber-400/25 bg-gradient-to-b from-amber-400/[0.09] to-amber-400/[0.03] p-3.5 transition hover:border-amber-400/50 light:border-amber-600/30 light:from-amber-600/[0.08] light:to-amber-600/[0.02] light:hover:border-amber-600/50 ${box}`}
+      className={`group relative flex flex-col justify-between overflow-hidden rounded-xl border border-red-500/25 bg-gradient-to-b from-red-500/[0.09] to-red-500/[0.03] p-3.5 transition hover:border-red-500/50 light:border-red-600/30 light:from-red-600/[0.08] light:to-red-600/[0.02] light:hover:border-red-600/50 ${box}`}
     >
-      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
+      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
         Honest Line
       </span>
       <span>
@@ -127,7 +127,7 @@ function HousePromo({
             {promo.sub}
           </span>
         )}
-        <span className="mt-2 inline-block text-xs font-bold uppercase tracking-wider text-amber-300 transition group-hover:text-amber-200 light:text-amber-700 light:group-hover:text-amber-800">
+        <span className="mt-2 inline-block text-xs font-bold uppercase tracking-wider text-red-300 transition group-hover:text-red-200 light:text-red-700 light:group-hover:text-red-800">
           {promo.cta} →
         </span>
       </span>

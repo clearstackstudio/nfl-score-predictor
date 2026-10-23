@@ -63,7 +63,7 @@ export default function SharePicks({ label = "Share this week's picks" }: { labe
       <button
         onClick={share}
         disabled={busy}
-        className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 px-5 py-2.5 text-sm font-semibold text-amber-400 transition hover:bg-amber-400/10 disabled:opacity-50 light:border-amber-600/40 light:text-amber-700 light:hover:bg-amber-600/10"
+        className="inline-flex items-center gap-2 rounded-full border border-red-500/40 px-5 py-2.5 text-sm font-semibold text-red-500 transition hover:bg-red-500/10 disabled:opacity-50 light:border-red-600/40 light:text-red-700 light:hover:bg-red-600/10"
       >
         <svg aria-hidden="true" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 3v9M8 7l4-4 4 4M4 13h12" transform="translate(-2 0)" />

@@ -35,7 +35,7 @@ export async function GET() {
         }}
       >
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
-          <div style={{ fontSize: 40, fontWeight: 800, letterSpacing: 4, color: "#fbbf24" }}>
+          <div style={{ fontSize: 40, fontWeight: 800, letterSpacing: 4, color: "#ef4444" }}>
             HONEST LINE
           </div>
           <div style={{ fontSize: 26, color: "#a1a1aa" }}>
@@ -77,7 +77,7 @@ export async function GET() {
         <div style={{ fontSize: 22, color: "#a1a1aa" }}>
           {`No edge claimed. Full graded record:`}
         </div>
-        <div style={{ fontSize: 28, fontWeight: 700, color: "#fbbf24", marginTop: 4 }}>
+        <div style={{ fontSize: 28, fontWeight: 700, color: "#ef4444", marginTop: 4 }}>
           {`honestlinesports.com`}
         </div>
       </div>

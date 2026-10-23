@@ -12,10 +12,10 @@ import AdSlot, { type AdLeague } from "../lib/ad-slot";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
+    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
       <span className="relative flex h-2 w-2">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-60" />
-        <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-400 light:bg-amber-600" />
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-60" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500 light:bg-red-600" />
       </span>
       {children}
     </div>
@@ -63,14 +63,14 @@ function WinProbChart({ points, homeAbbr, awayAbbr }: { points: { homeWinPct: nu
         <div className="tnum font-mono text-base font-bold">
           <span className="text-zinc-300 light:text-zinc-600">{awayAbbr} {Math.round((1 - last) * 100)}%</span>
           <span className="mx-2 text-zinc-600 light:text-zinc-300">·</span>
-          <span className="text-amber-300 light:text-amber-600">{homeAbbr} {Math.round(last * 100)}%</span>
+          <span className="text-red-300 light:text-red-600">{homeAbbr} {Math.round(last * 100)}%</span>
         </div>
       </div>
       <CollapseRegion open={open}>
         <svg viewBox="0 0 600 120" className="mt-3 h-32 w-full" preserveAspectRatio="none" role="img" aria-label="Win probability chart">
           <line x1="0" y1="60" x2="600" y2="60" stroke="#52525b" strokeDasharray="4 4" strokeWidth="1" />
           <path d={area} fill="rgba(251,191,36,0.15)" className="fade-in" />
-          <path d={path} fill="none" stroke="#fbbf24" strokeWidth="2.5" vectorEffect="non-scaling-stroke" pathLength={1} className="chart-draw" />
+          <path d={path} fill="none" stroke="#ef4444" strokeWidth="2.5" vectorEffect="non-scaling-stroke" pathLength={1} className="chart-draw" />
         </svg>
         <div className="mt-2 flex justify-between text-[11px] font-medium text-zinc-400 light:text-zinc-500">
           <span>Kickoff</span>
@@ -229,7 +229,7 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
               style={{ transform: "translate(-50%, -112%) rotateX(-34deg)", transformOrigin: "50% 100%" }}
             >
               <div
-                className={`flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-md ring-2 ring-amber-400${pulse ? " pin-pulse" : ""}`}
+                className={`flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-md ring-2 ring-red-500${pulse ? " pin-pulse" : ""}`}
                 style={offMeta.alt ? { ["--tw-ring-color" as string]: `#${offMeta.alt}` } : undefined}
               >
                 <TeamMark logo={offMeta.logo} abbr={offense} size={19} />
@@ -275,7 +275,7 @@ function GamecastStrip({ detail }: { detail: GameDetail }) {
 
 function BallIcon({ size = 13 }: { size?: number }) {
   return (
-    <svg aria-label="Possession" role="img" width={size} height={size} viewBox="0 0 16 16" className="shrink-0 text-amber-400 light:text-amber-600">
+    <svg aria-label="Possession" role="img" width={size} height={size} viewBox="0 0 16 16" className="shrink-0 text-red-500 light:text-red-600">
       <ellipse cx="8" cy="8" rx="7" ry="4.6" transform="rotate(-30 8 8)" fill="currentColor" />
       <line x1="6.2" y1="6.4" x2="9.8" y2="9.6" stroke="#09090b" strokeWidth="1.1" strokeLinecap="round" transform="rotate(-30 8 8)" />
       <line x1="8" y1="4.6" x2="8" y2="6.2" stroke="#09090b" strokeWidth="1" strokeLinecap="round" transform="rotate(-30 8 8)" />
@@ -331,13 +331,13 @@ function ScoreboardRow({ g, selected, onSelect, football }: { g: LiveGame; selec
       aria-pressed={selected}
       className={`block w-full text-left transition ${
         selected
-          ? "bg-amber-400/[0.08] light:bg-amber-400/15"
+          ? "bg-red-500/[0.08] light:bg-red-500/15"
           : "hover:bg-white/[0.04] light:hover:bg-zinc-50"
       }`}
     >
       <div className="flex">
         <div className="flex w-[92px] shrink-0 flex-col justify-center border-r border-white/10 px-3 py-2.5 light:border-zinc-200">
-          <span className={`text-[11px] font-bold uppercase tracking-wider ${g.state === "in" ? "text-amber-400 light:text-amber-600" : "text-zinc-400 light:text-zinc-500"}`}>
+          <span className={`text-[11px] font-bold uppercase tracking-wider ${g.state === "in" ? "text-red-500 light:text-red-600" : "text-zinc-400 light:text-zinc-500"}`}>
             {g.state === "in" ? "● Live" : g.state === "post" ? "Final" : "Upcoming"}
           </span>
           {g.detail && (
@@ -363,7 +363,7 @@ function ScoreboardRow({ g, selected, onSelect, football }: { g: LiveGame; selec
                 <TeamMark logo={t.logo} abbr={t.abbr} size={22} />
                 <span className="flex min-w-0 items-center gap-1.5 text-sm font-semibold text-zinc-100 light:text-zinc-900">
                   {t.abbr}
-                  {hasBall && (football ? <BallIcon size={16} /> : <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400 light:bg-amber-600" aria-label="Possession" />)}
+                  {hasBall && (football ? <BallIcon size={16} /> : <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-500 light:bg-red-600" aria-label="Possession" />)}
                   {t.record && <span className="truncate text-[11px] font-normal text-zinc-500 light:text-zinc-400">{t.record}</span>}
                 </span>
                 <span className="ml-auto flex items-baseline">
@@ -394,7 +394,7 @@ interface LinescoreTeam {
 
 /** Gamecast-style linescore table: team rows × period columns + total.
  * The team in possession gets the same football marker the scoreboard
- * rows use (an amber dot for non-football leagues). */
+ * rows use (a red dot for non-football leagues). */
 function LinescoreTable({ teams, periods, football, possessionAbbr }: { teams: LinescoreTeam[]; periods: number; football: boolean; possessionAbbr?: string | null }) {
   return (
     <table className="w-full border-collapse">
@@ -420,7 +420,7 @@ function LinescoreTable({ teams, periods, football, possessionAbbr }: { teams: L
                   (football ? (
                     <BallIcon size={20} />
                   ) : (
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400 light:bg-amber-600" aria-label="Possession" />
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-500 light:bg-red-600" aria-label="Possession" />
                   ))}
                 {t.record && <span className="hidden shrink-0 text-xs text-zinc-500 md:inline light:text-zinc-400">{t.record}</span>}
               </div>
@@ -444,7 +444,7 @@ function PlayRow({ p, homeAbbr }: { p: GameDetail["drives"][number]["plays"][num
   return (
     <div
       className={`flex gap-4 border-b border-white/10 px-5 py-3.5 last:border-0 light:border-zinc-100 ${
-        p.scoringPlay ? "border-l-2 border-l-amber-400 bg-amber-400/[0.07]" : ""
+        p.scoringPlay ? "border-l-2 border-l-red-500 bg-red-500/[0.07]" : ""
       }`}
     >
       <div className="w-[72px] shrink-0 pt-0.5">
@@ -454,7 +454,7 @@ function PlayRow({ p, homeAbbr }: { p: GameDetail["drives"][number]["plays"][num
         <div className="tnum font-mono text-xs text-zinc-400 light:text-zinc-500">{p.clock}</div>
       </div>
       <div className="min-w-0 flex-1">
-        <p className={`text-sm leading-relaxed ${p.scoringPlay ? "font-semibold text-amber-100 light:text-amber-800" : "text-zinc-100 light:text-zinc-900"}`}>
+        <p className={`text-sm leading-relaxed ${p.scoringPlay ? "font-semibold text-red-100 light:text-red-800" : "text-zinc-100 light:text-zinc-900"}`}>
           {p.scoringPlay && <span className="mr-1.5">🏈</span>}
           {p.turnover && !p.scoringPlay && <span className="mr-1.5">🔄</span>}
           {p.text}
@@ -487,7 +487,7 @@ function DriveCard({ dr, isCurrent, homeAbbr, defaultOpen }: { dr: GameDetail["d
         </div>
         <div className="flex shrink-0 items-center gap-2">
           {isCurrent && (
-            <span className="rounded bg-amber-400/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-300 light:text-amber-700">
+            <span className="rounded bg-red-500/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-red-300 light:text-red-700">
               current
             </span>
           )}
@@ -765,7 +765,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
     <div>
       <Eyebrow>{liveCount > 0 ? `${liveCount} game${liveCount > 1 ? "s" : ""} live now · auto-refreshes` : "Auto-refreshes during games"}</Eyebrow>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide sm:text-6xl">
-        Live <span className="text-amber-400 light:text-amber-500">play-by-play</span>
+        Live <span className="text-red-500 light:text-red-600">play-by-play</span>
       </h1>
       <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-300 light:text-zinc-600">
         Every snap, live from the ESPN feed — refreshed every 30 seconds.
@@ -795,7 +795,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
           <div className="rounded-2xl border border-white/20 bg-zinc-800/90 p-5 shadow-lg shadow-black/30 light:border-zinc-200 light:bg-white light:shadow-zinc-300/40">
             <div className="flex items-start justify-between gap-3 pb-2">
               <div className="min-w-0">
-                <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-amber-300 light:text-amber-600" : "text-zinc-200 light:text-zinc-600"}`}>
+                <div className={`text-sm font-bold ${detail.game.state === "in" ? "text-red-300 light:text-red-600" : "text-zinc-200 light:text-zinc-600"}`}>
                   {detail.game.state === "in" ? detail.game.detail || "Live" : detail.game.state === "post" ? "Final" : detail.game.detail}
                 </div>
                 {!cardOpen && (
@@ -897,7 +897,7 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
                         onClick={() => setTab(t.id)}
                         className={`-mb-px shrink-0 border-b-2 px-4 py-2.5 text-sm font-semibold transition ${
                           activeTab === t.id
-                            ? "border-amber-400 text-amber-300 light:border-amber-600 light:text-amber-700"
+                            ? "border-red-500 text-red-300 light:border-red-600 light:text-red-700"
                             : "border-transparent text-zinc-400 hover:text-zinc-200 light:text-zinc-500 light:hover:text-zinc-800"
                         }`}
                       >

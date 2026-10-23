@@ -24,8 +24,8 @@ function fmtRoi(r: number) {
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-      <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+      <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
       {children}
     </div>
   );
@@ -40,7 +40,7 @@ export default function MlbHome() {
       <div className="mb-8">
         <Eyebrow>MLB · {data.season} season</Eyebrow>
         <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide sm:text-6xl">
-          MLB <span className="text-amber-400 light:text-amber-600">picks</span>
+          MLB <span className="text-red-500 light:text-red-600">picks</span>
         </h1>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
           Daily MLB picks from park-adjusted exponential runs ratings — with a fitted
@@ -52,7 +52,7 @@ export default function MlbHome() {
         </p>
 
         {isPending && (
-          <div className="mt-6 rounded-2xl border border-amber-400/25 bg-amber-400/[0.06] p-8 text-center light:bg-amber-50">
+          <div className="mt-6 rounded-2xl border border-red-500/25 bg-red-500/[0.06] p-8 text-center light:bg-red-50">
             <div className="font-display text-2xl font-semibold uppercase tracking-wide">
               2027 season starts late March
             </div>
@@ -82,14 +82,14 @@ export default function MlbHome() {
             </p>
             <a
               href="/mlb/track-record"
-              className="mt-5 inline-block rounded-xl bg-amber-400 px-6 py-3 text-sm font-bold uppercase tracking-wider text-zinc-950 transition hover:bg-amber-300"
+              className="mt-5 inline-block rounded-xl bg-red-500 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-red-600"
             >
               Full track record →
             </a>
           </div>
         )}
 
-        <p className="mt-5 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90 light:text-amber-800">
+        <p className="mt-5 max-w-2xl rounded-xl border border-red-500/25 bg-red-500/10 px-4 py-3 text-sm leading-relaxed text-red-200/90 light:text-red-800">
           {data.disclaimer}
         </p>
       </div>

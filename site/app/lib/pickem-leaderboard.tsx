@@ -148,12 +148,12 @@ export default function PickemLeaderboard({
               onChange={(e) => setName(e.target.value)}
               placeholder="Display name"
               maxLength={20}
-              className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-2.5 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-amber-400 focus:outline-none sm:max-w-xs light:border-zinc-300 light:bg-zinc-50 light:text-zinc-900"
+              className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-2.5 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-red-500 focus:outline-none sm:max-w-xs light:border-zinc-300 light:bg-zinc-50 light:text-zinc-900"
             />
             <button
               onClick={submit}
               disabled={submitting || !complete || board?.locked}
-              className="rounded-xl bg-amber-400 px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-zinc-950 transition hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-40"
+              className="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-red-600 disabled:cursor-not-allowed disabled:opacity-40"
             >
               {submitting
                 ? "Submitting…"
@@ -197,7 +197,7 @@ export default function PickemLeaderboard({
                       key={e.rank}
                       className="border-b border-zinc-800/60 last:border-0 light:border-zinc-200"
                     >
-                      <td className="px-4 py-3 font-mono font-bold text-amber-300 light:text-amber-700">
+                      <td className="px-4 py-3 font-mono font-bold text-red-300 light:text-red-700">
                         {e.rank}
                       </td>
                       <td className="px-4 py-3 font-semibold">{e.name}</td>

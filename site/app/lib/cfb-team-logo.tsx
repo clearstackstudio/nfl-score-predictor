@@ -20,7 +20,7 @@ export default function CfbTeamLogo({ name, size = 26 }: { name: string; size?: 
     return (
       <span
         aria-hidden="true"
-        className="inline-flex shrink-0 items-center justify-center rounded-full bg-amber-400/15 font-display text-[11px] font-bold text-amber-300 light:bg-amber-600/15 light:text-amber-700"
+        className="inline-flex shrink-0 items-center justify-center rounded-full bg-red-500/15 font-display text-[11px] font-bold text-red-300 light:bg-red-600/15 light:text-red-700"
         style={{ width: size, height: size }}
       >
         {initials(name)}

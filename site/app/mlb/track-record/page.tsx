@@ -42,12 +42,12 @@ function roiCls(r: number) {
 export default function MlbTrackRecord() {
   return (
     <div>
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+        <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
         MLB · Full history · nothing hidden
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Track <span className="text-amber-400 light:text-amber-600">record</span>
+        Track <span className="text-red-500 light:text-red-600">record</span>
       </h1>
       <p className="mt-4 max-w-2xl text-sm text-zinc-400 light:text-zinc-600">{rec.model}</p>
 
@@ -109,8 +109,8 @@ export default function MlbTrackRecord() {
         </table>
       </div>
 
-      <div className="mt-8 rounded-2xl border border-amber-400/25 bg-amber-400/[0.06] p-6 light:bg-amber-50">
-        <div className="text-xs font-bold uppercase tracking-[0.16em] text-amber-400/90 light:text-amber-700">The honest verdict</div>
+      <div className="mt-8 rounded-2xl border border-red-500/25 bg-red-500/[0.06] p-6 light:bg-red-50">
+        <div className="text-xs font-bold uppercase tracking-[0.16em] text-red-500/90 light:text-red-700">The honest verdict</div>
         <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
           Walk-forward, 2012–2021 ({overall.games.toLocaleString()} games): the model picks the
           winner {fmtPct(overall.straight_up_pct)} straight up — barely above the{" "}

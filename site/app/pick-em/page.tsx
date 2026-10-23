@@ -263,12 +263,12 @@ export default function PickEm() {
 
   return (
     <div>
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+        <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
         Beat the model, not the book
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Pick<span className="text-amber-400 light:text-amber-600">&rsquo;em</span>
+        Pick<span className="text-red-500 light:text-red-600">&rsquo;em</span>
       </h1>
       <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
         Pick every game against the spread and on the total — or go straight up.
@@ -287,7 +287,7 @@ export default function PickEm() {
             key={m}
             onClick={() => setMode(m)}
             className={`rounded-lg px-4 py-2 text-sm font-semibold transition ${
-              mode === m ? "bg-amber-400 text-zinc-950" : "text-zinc-400 hover:text-white light:text-zinc-600 light:hover:text-zinc-900"
+              mode === m ? "bg-red-500 text-white" : "text-zinc-400 hover:text-white light:text-zinc-600 light:hover:text-zinc-900"
             }`}
           >
             {label}
@@ -315,7 +315,7 @@ export default function PickEm() {
       {ready && pickedCount > 0 && pickedCount < pickedTotal && (
         <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-zinc-800 light:bg-zinc-200">
           <div
-            className="h-full rounded-full bg-amber-400 transition-all"
+            className="h-full rounded-full bg-red-500 transition-all"
             style={{ width: `${(pickedCount / pickedTotal) * 100}%` }}
           />
         </div>
@@ -339,11 +339,11 @@ export default function PickEm() {
                 onClick={() => setPick(g, "ats", side)}
                 className={`flex-1 rounded-xl border px-4 py-3 text-left transition ${
                   active
-                    ? "border-amber-400 bg-amber-400/15"
+                    ? "border-red-500 bg-red-500/15"
                     : "border-zinc-800 bg-zinc-900 hover:border-zinc-600 light:border-zinc-200 light:bg-white light:hover:border-zinc-400"
                 }`}
               >
-                <div className={`flex items-center gap-2 font-mono text-lg font-bold ${active ? "text-amber-300 light:text-amber-700" : "text-zinc-100 light:text-zinc-900"}`}>
+                <div className={`flex items-center gap-2 font-mono text-lg font-bold ${active ? "text-red-300 light:text-red-700" : "text-zinc-100 light:text-zinc-900"}`}>
                   <TeamLogo abbr={side === "home" ? g.home_abbr : g.away_abbr} size={28} />
                   {label}
                 </div>
@@ -363,11 +363,11 @@ export default function PickEm() {
                 onClick={() => setPick(g, "ou", pick)}
                 className={`flex-1 rounded-xl border px-4 py-3 text-left transition ${
                   active
-                    ? "border-amber-400 bg-amber-400/15"
+                    ? "border-red-500 bg-red-500/15"
                     : "border-zinc-800 bg-zinc-900 hover:border-zinc-600 light:border-zinc-200 light:bg-white light:hover:border-zinc-400"
                 }`}
               >
-                <div className={`font-mono text-lg font-bold ${active ? "text-amber-300 light:text-amber-700" : "text-zinc-100 light:text-zinc-900"}`}>
+                <div className={`font-mono text-lg font-bold ${active ? "text-red-300 light:text-red-700" : "text-zinc-100 light:text-zinc-900"}`}>
                   {label}
                 </div>
                 <div className="text-xs text-zinc-500">
@@ -384,11 +384,11 @@ export default function PickEm() {
                 onClick={() => setPick(g, "su", side)}
                 className={`flex-1 rounded-xl border px-4 py-3 text-left transition ${
                   active
-                    ? "border-amber-400 bg-amber-400/15"
+                    ? "border-red-500 bg-red-500/15"
                     : "border-zinc-800 bg-zinc-900 hover:border-zinc-600 light:border-zinc-200 light:bg-white light:hover:border-zinc-400"
                 }`}
               >
-                <div className={`flex items-center gap-2 font-mono text-lg font-bold ${active ? "text-amber-300 light:text-amber-700" : "text-zinc-100 light:text-zinc-900"}`}>
+                <div className={`flex items-center gap-2 font-mono text-lg font-bold ${active ? "text-red-300 light:text-red-700" : "text-zinc-100 light:text-zinc-900"}`}>
                   <TeamLogo abbr={side === "home" ? g.home_abbr : g.away_abbr} size={28} />
                   {side === "home" ? g.home_abbr : g.away_abbr}
                 </div>
@@ -486,7 +486,7 @@ export default function PickEm() {
               </div>
               <div className="mt-2 flex items-baseline gap-4">
                 <div>
-                  <div className="font-mono text-3xl font-extrabold text-amber-300 light:text-amber-700">{fmtTally(youAts)}</div>
+                  <div className="font-mono text-3xl font-extrabold text-red-300 light:text-red-700">{fmtTally(youAts)}</div>
                   <div className="text-xs text-zinc-500">You</div>
                 </div>
                 <div className="text-xl text-zinc-600 light:text-zinc-400">vs</div>
@@ -502,7 +502,7 @@ export default function PickEm() {
               </div>
               <div className="mt-2 flex items-baseline gap-4">
                 <div>
-                  <div className="font-mono text-3xl font-extrabold text-amber-300 light:text-amber-700">{fmtTally(youSu)}</div>
+                  <div className="font-mono text-3xl font-extrabold text-red-300 light:text-red-700">{fmtTally(youSu)}</div>
                   <div className="text-xs text-zinc-500">You</div>
                 </div>
                 <div className="text-xl text-zinc-600 light:text-zinc-400">vs</div>
@@ -518,7 +518,7 @@ export default function PickEm() {
               </div>
               <div className="mt-2 flex items-baseline gap-4">
                 <div>
-                  <div className="font-mono text-3xl font-extrabold text-amber-300 light:text-amber-700">{fmtTally(youOu)}</div>
+                  <div className="font-mono text-3xl font-extrabold text-red-300 light:text-red-700">{fmtTally(youOu)}</div>
                   <div className="text-xs text-zinc-500">You</div>
                 </div>
                 <div className="text-xl text-zinc-600 light:text-zinc-400">vs</div>
@@ -547,11 +547,11 @@ export default function PickEm() {
                 {rows.map((r) => (
                   <tr key={r.week} className="border-b border-zinc-800/60 last:border-0 light:border-zinc-200">
                     <td className="px-4 py-3 font-semibold">{r.week}</td>
-                    <td className="px-4 py-3 font-mono text-amber-200/90 light:text-amber-700">{r.youAts ? fmtTally(r.youAts) : "—"}</td>
+                    <td className="px-4 py-3 font-mono text-red-200/90 light:text-red-700">{r.youAts ? fmtTally(r.youAts) : "—"}</td>
                     <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{fmtTally(r.modelAts)}</td>
-                    <td className="px-4 py-3 font-mono text-amber-200/90 light:text-amber-700">{r.youSu ? fmtTally(r.youSu) : "—"}</td>
+                    <td className="px-4 py-3 font-mono text-red-200/90 light:text-red-700">{r.youSu ? fmtTally(r.youSu) : "—"}</td>
                     <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{fmtTally(r.modelSu)}</td>
-                    <td className="px-4 py-3 font-mono text-amber-200/90 light:text-amber-700">{r.youOu ? fmtTally(r.youOu) : "—"}</td>
+                    <td className="px-4 py-3 font-mono text-red-200/90 light:text-red-700">{r.youOu ? fmtTally(r.youOu) : "—"}</td>
                     <td className="px-4 py-3 font-mono text-zinc-400 light:text-zinc-600">{fmtTally(r.modelOu)}</td>
                   </tr>
                 ))}

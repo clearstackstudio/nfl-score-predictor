@@ -127,12 +127,12 @@ export default function Accuracy() {
   const cards = [nflCard(), cfbCard(), nbaCard(), ncaabCard()];
   return (
     <div>
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+        <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
         All sports · one honest page
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Model <span className="text-amber-400 light:text-amber-600">accuracy</span>
+        Model <span className="text-red-500 light:text-red-600">accuracy</span>
       </h1>
       <p className="mt-4 max-w-2xl text-sm text-zinc-400 light:text-zinc-600">
         Walk-forward backtests: every prediction was made before the result was known.
@@ -185,7 +185,7 @@ export default function Accuracy() {
 
               <Link
                 href={c.href}
-                className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-amber-400 hover:text-amber-300 light:text-amber-700 light:hover:text-amber-800"
+                className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-red-500 hover:text-red-300 light:text-red-700 light:hover:text-red-800"
               >
                 Full {c.name} track record
                 <span aria-hidden="true">→</span>
@@ -195,7 +195,7 @@ export default function Accuracy() {
         })}
       </div>
 
-      <div className="mt-8 rounded-2xl border border-amber-400/20 bg-amber-400/5 p-5 light:border-amber-600/20 light:bg-amber-50">
+      <div className="mt-8 rounded-2xl border border-red-500/20 bg-red-500/5 p-5 light:border-red-600/20 light:bg-red-50">
         <h2 className="font-display text-xl font-semibold uppercase tracking-wide">The honest verdict</h2>
         <p className="mt-2 max-w-3xl text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
           A competent forecaster that roughly matches the Vegas line on prediction error —

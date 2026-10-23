@@ -103,7 +103,7 @@ const cardCls =
 const labelCls =
   "mb-1 block text-[11px] font-bold uppercase tracking-wider text-zinc-500 light:text-zinc-600";
 const inputCls =
-  "w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-amber-400 focus:outline-none light:border-zinc-300 light:bg-white light:text-zinc-900 light:placeholder:text-zinc-400";
+  "w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-red-500 focus:outline-none light:border-zinc-300 light:bg-white light:text-zinc-900 light:placeholder:text-zinc-400";
 const thCls =
   "px-3 py-2 text-left text-[11px] font-semibold uppercase tracking-wider text-zinc-500 light:text-zinc-600";
 const tdCls = "px-3 py-2 text-[13px]";
@@ -124,7 +124,7 @@ function StatCard({
     tone === "good"
       ? "text-emerald-400 light:text-emerald-700"
       : tone === "bad"
-        ? "text-amber-400 light:text-amber-700"
+        ? "text-red-500 light:text-red-700"
         : "text-zinc-100 light:text-zinc-900";
   return (
     <div className={cardCls}>
@@ -225,7 +225,7 @@ function UserCalibrationPlot({ bins }: { bins: CalBin[] }) {
             strokeWidth={2} opacity={0.95}
             className={above
               ? "fill-emerald-400/70 stroke-emerald-300 light:fill-emerald-600/70 light:stroke-emerald-700"
-              : "fill-amber-400/70 stroke-amber-300 light:fill-amber-600/70 light:stroke-amber-700"}>
+              : "fill-red-500/70 stroke-red-300 light:fill-red-600/70 light:stroke-red-700"}>
             <title>{`${b.label}: needed ${fmtPct(b.predicted)}, hit ${fmtPct(b.actual)} (n=${b.n})`}</title>
           </circle>
         );
@@ -340,10 +340,10 @@ function BetForm({ onAdd }: { onAdd: (b: Bet) => void }) {
             placeholder="e.g. 60" inputMode="numeric" className={`${inputCls} font-mono max-w-[160px]`} />
         </div>
       </div>
-      {err && <div className="mt-3 text-sm font-semibold text-amber-400 light:text-amber-700">{err}</div>}
+      {err && <div className="mt-3 text-sm font-semibold text-red-500 light:text-red-700">{err}</div>}
       <button
         onClick={submit}
-        className="mt-4 rounded-lg bg-amber-400 px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-zinc-950 transition hover:bg-amber-300"
+        className="mt-4 rounded-lg bg-red-500 px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-red-600"
       >
         Add to my receipt
       </button>
@@ -360,7 +360,7 @@ function resultBadge(r: Result) {
     r === "win"
       ? "bg-emerald-400/15 text-emerald-300 light:text-emerald-700"
       : r === "loss"
-        ? "bg-amber-400/15 text-amber-300 light:text-amber-700"
+        ? "bg-red-500/15 text-red-300 light:text-red-700"
         : "bg-zinc-700/40 text-zinc-400 light:bg-zinc-200 light:text-zinc-600";
   return (
     <span className={`rounded px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-wide ${cls}`}>
@@ -412,7 +412,7 @@ function BetList({ bets, onDelete, onSetResult }: {
                       <span className="inline-flex gap-1">
                         {(["win", "loss", "push"] as Result[]).map((r) => (
                           <button key={r} onClick={() => onSetResult(b.id, r)}
-                            className="rounded border border-zinc-700 px-1.5 py-0.5 text-[11px] font-bold uppercase text-zinc-400 hover:border-amber-400 hover:text-amber-300 light:border-zinc-300 light:text-zinc-600">
+                            className="rounded border border-zinc-700 px-1.5 py-0.5 text-[11px] font-bold uppercase text-zinc-400 hover:border-red-500 hover:text-red-300 light:border-zinc-300 light:text-zinc-600">
                             {r === "win" ? "W" : r === "loss" ? "L" : "P"}
                           </button>
                         ))}
@@ -421,7 +421,7 @@ function BetList({ bets, onDelete, onSetResult }: {
                       resultBadge(b.result)
                     )}
                   </td>
-                  <td className={`${tdCls} font-mono font-semibold ${pl > 0 ? "text-emerald-400 light:text-emerald-700" : pl < 0 ? "text-amber-400 light:text-amber-700" : "text-zinc-500"}`}>
+                  <td className={`${tdCls} font-mono font-semibold ${pl > 0 ? "text-emerald-400 light:text-emerald-700" : pl < 0 ? "text-red-500 light:text-red-700" : "text-zinc-500"}`}>
                     {b.result === "pending" ? "—" : fmtMoney(pl)}
                   </td>
                   <td className={tdCls}>
@@ -512,7 +512,7 @@ function BreakdownTable({ title, rows }: {
                   <td className={`${tdCls} font-mono font-semibold ${wr >= 0.524 ? "text-emerald-400 light:text-emerald-700" : "text-zinc-300 light:text-zinc-700"}`}>
                     {fmtPct(wr)}
                   </td>
-                  <td className={`${tdCls} font-mono font-semibold ${r.profit > 0 ? "text-emerald-400 light:text-emerald-700" : r.profit < 0 ? "text-amber-400 light:text-amber-700" : "text-zinc-500"}`}>
+                  <td className={`${tdCls} font-mono font-semibold ${r.profit > 0 ? "text-emerald-400 light:text-emerald-700" : r.profit < 0 ? "text-red-500 light:text-red-700" : "text-zinc-500"}`}>
                     {fmtMoney(r.profit)}
                   </td>
                   <td className={`${tdCls} font-mono`}>{roi == null ? "—" : `${roi >= 0 ? "+" : ""}${(roi * 100).toFixed(1)}%`}</td>
@@ -629,7 +629,7 @@ function Insights({ bets, stats }: { bets: Bet[]; stats: Stats }) {
             <span
               aria-hidden="true"
               className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${
-                n.tone === "good" ? "bg-emerald-400" : n.tone === "bad" ? "bg-amber-400" : "bg-zinc-500"
+                n.tone === "good" ? "bg-emerald-400" : n.tone === "bad" ? "bg-red-500" : "bg-zinc-500"
               }`}
             />
             <span className="text-zinc-300 light:text-zinc-700">{n.text}</span>
@@ -656,7 +656,7 @@ function EmptyState() {
         ROI, and whether you&rsquo;re as good as you think — plotted the same way we
         grade our own models. No account, nothing leaves your browser.
       </p>
-      <p className="mt-4 text-sm font-semibold text-amber-300 light:text-amber-700">
+      <p className="mt-4 text-sm font-semibold text-red-300 light:text-red-700">
         Log your first bet above to start building your receipt.
       </p>
     </div>
@@ -784,7 +784,7 @@ export default function TrackerPage() {
                 rate your odds demanded. Side axis: how often you actually won. Dots above
                 the dashed line beat the price; below it, the vig won.{" "}
                 {bins.length > 0 && bins.every((b) => b.n < 10) && (
-                  <span className="font-semibold text-amber-300 light:text-amber-700">
+                  <span className="font-semibold text-red-300 light:text-red-700">
                     Small samples — these dots will move a lot as you log more.
                   </span>
                 )}
@@ -814,7 +814,7 @@ export default function TrackerPage() {
                 Stored only in this browser ({LS_KEY}). Clearing site data deletes your bets.
               </p>
               <button onClick={exportJSON}
-                className="rounded-lg border border-zinc-700 px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-300 hover:border-amber-400 hover:text-amber-300 light:border-zinc-300 light:text-zinc-700">
+                className="rounded-lg border border-zinc-700 px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-300 hover:border-red-500 hover:text-red-300 light:border-zinc-300 light:text-zinc-700">
                 Export JSON
               </button>
             </div>

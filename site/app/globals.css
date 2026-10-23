@@ -36,15 +36,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Subtle top-of-page glow */
-.page-glow {
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(251, 191, 36, 0.07), transparent 70%),
-    radial-gradient(ellipse 60% 40% at 80% 0%, rgba(255, 255, 255, 0.03), transparent 70%);
-}
-
 ::selection {
-  background: rgba(251, 191, 36, 0.28);
+  background: rgba(214, 0, 42, 0.3);
   color: #fff;
 }
 
@@ -58,7 +51,7 @@ thead.sticky-head th {
 /* Refined focus states */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid rgba(251, 191, 36, 0.7);
+  outline: 2px solid rgba(214, 0, 42, 0.75);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -82,16 +75,16 @@ button:focus-visible {
   to { opacity: 1; }
 }
 @keyframes play-flash {
-  0% { box-shadow: inset 0 0 0 999px rgba(251, 191, 36, 0.16); }
-  100% { box-shadow: inset 0 0 0 999px rgba(251, 191, 36, 0); }
+  0% { box-shadow: inset 0 0 0 999px rgba(239, 68, 68, 0.16); }
+  100% { box-shadow: inset 0 0 0 999px rgba(239, 68, 68, 0); }
 }
 @keyframes chart-draw {
   from { stroke-dashoffset: 1; }
   to { stroke-dashoffset: 0; }
 }
 @keyframes pin-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.55); }
-  100% { box-shadow: 0 0 0 14px rgba(251, 191, 36, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.55); }
+  100% { box-shadow: 0 0 0 14px rgba(239, 68, 68, 0); }
 }
 .gamecast-in { animation: gamecast-in 0.6s cubic-bezier(0.22, 0.8, 0.32, 1) both; }
 .fade-slide-in { animation: fade-slide-in 0.45s ease-out both; }

@@ -72,12 +72,12 @@ const sections = [
 export default function Privacy() {
   return (
     <div className="max-w-3xl">
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+        <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
         The fine print
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Privacy <span className="text-amber-400 light:text-amber-600">Policy</span>
+        Privacy <span className="text-red-500 light:text-red-600">Policy</span>
       </h1>
       <p className="mt-4 text-[15px] text-zinc-400 light:text-zinc-600">
         The short version: no accounts, no emails collected, and most of what
@@ -91,7 +91,7 @@ export default function Privacy() {
           className="mt-8 rounded-2xl border border-white/10 bg-zinc-900/40 p-6 sm:p-8 light:border-zinc-200 light:bg-white"
         >
           <div className="flex items-baseline gap-4">
-            <span className="tnum font-display text-lg font-semibold text-amber-400/80 light:text-amber-700">
+            <span className="tnum font-display text-lg font-semibold text-red-500/80 light:text-red-700">
               {s.n}
             </span>
             <h2 className="font-display text-2xl font-semibold uppercase tracking-wide">

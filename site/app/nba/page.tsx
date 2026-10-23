@@ -111,8 +111,8 @@ function spreadPickText(p: Pick): string {
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-      <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+      <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
       {children}
     </div>
   );
@@ -152,9 +152,9 @@ function MarketPanel({
 function PickStrip({ active, note, children }: { active: boolean; note?: string | null; children: React.ReactNode }) {
   if (active) {
     return (
-      <div className="border-l-2 border-amber-400 bg-amber-400/[0.07] px-4 py-3">
-        <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-amber-400/90 light:text-amber-700">Model pick</div>
-        <div className="mt-0.5 text-[15px] font-semibold text-amber-100 light:text-amber-800">{children}</div>
+      <div className="border-l-2 border-red-500 bg-red-500/[0.07] px-4 py-3">
+        <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-red-500/90 light:text-red-700">Model pick</div>
+        <div className="mt-0.5 text-[15px] font-semibold text-red-100 light:text-red-800">{children}</div>
       </div>
     );
   }
@@ -210,10 +210,10 @@ type Parlay = { legs: ParlayLeg[]; combined_prob: number; fair_odds: string; boo
 function ParlayCard({ parlay, title }: { parlay: Parlay; title: string }) {
   if (!parlay || parlay.legs.length < 2) return null;
   return (
-    <section className="mb-8 overflow-hidden rounded-2xl border border-amber-400/25 bg-gradient-to-b from-amber-400/[0.09] to-amber-400/[0.03]">
+    <section className="mb-8 overflow-hidden rounded-2xl border border-red-500/25 bg-gradient-to-b from-red-500/[0.09] to-red-500/[0.03]">
       <div className="flex flex-wrap items-baseline justify-between gap-2 px-5 pt-5">
         <div>
-          <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">For fun · not a strategy</div>
+          <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">For fun · not a strategy</div>
           <h2 className="mt-1 font-display text-3xl font-semibold uppercase tracking-wide">{title}</h2>
         </div>
         <span className="text-sm text-zinc-500">Our {parlay.legs.length} highest-conviction picks, combined</span>
@@ -222,7 +222,7 @@ function ParlayCard({ parlay, title }: { parlay: Parlay; title: string }) {
         {parlay.legs.map((l) => (
           <li key={`${l.game}-${l.market}`} className="flex items-center justify-between gap-3 rounded-xl border border-white/5 bg-zinc-950/70 px-4 py-2.5 light:border-zinc-200 light:bg-white">
             <div>
-              <span className="font-bold text-amber-200 light:text-amber-700">{l.label}</span>
+              <span className="font-bold text-red-200 light:text-red-700">{l.label}</span>
               <span className="ml-2 text-sm text-zinc-500">{l.game}</span>
             </div>
             <span className="tnum font-mono text-sm font-semibold text-zinc-300 light:text-zinc-700">{fmtPct(l.prob)}</span>
@@ -249,7 +249,7 @@ function ParlayCard({ parlay, title }: { parlay: Parlay; title: string }) {
 
 function PendingNotice({ reason }: { reason?: string }) {
   return (
-    <div className="rounded-2xl border border-amber-400/25 bg-amber-400/[0.06] p-8 text-center light:bg-amber-50">
+    <div className="rounded-2xl border border-red-500/25 bg-red-500/[0.06] p-8 text-center light:bg-red-50">
       <div className="font-display text-2xl font-semibold uppercase tracking-wide">No card yet</div>
       <p className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
         {reason ?? "No games on today's slate yet."} Check back soon — the pipeline, the model, and the backtest are all built.
@@ -271,7 +271,7 @@ function SeasonRecord({ days, href }: { days: DayView[]; href: string }) {
       if (r?.ats === "win") aw++; else if (r?.ats === "loss") al++; else if (r?.ats === "push") ap++;
     }
   if (aw + al === 0) return null;
-  const card = "rounded-xl border border-white/10 bg-zinc-900/50 p-4 transition-colors hover:border-amber-400/40 light:border-zinc-200 light:bg-white";
+  const card = "rounded-xl border border-white/10 bg-zinc-900/50 p-4 transition-colors hover:border-red-500/40 light:border-zinc-200 light:bg-white";
   return (
     <a href={href} className="mb-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-2" aria-label="Season record — full track record">
       <div className={card}>
@@ -317,9 +317,9 @@ export default function NbaHome() {
         </Eyebrow>
         <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide sm:text-6xl">
           {dv.isCurrent ? (
-            <>NBA <span className="text-amber-400 light:text-amber-600">picks</span></>
+            <>NBA <span className="text-red-500 light:text-red-600">picks</span></>
           ) : (
-            <><span className="text-amber-400 light:text-amber-600">{fmtSlateDate(dv.date)}</span> slate</>
+            <><span className="text-red-500 light:text-red-600">{fmtSlateDate(dv.date)}</span> slate</>
           )}
         </h1>
         {allDays.length > 1 && (
@@ -332,7 +332,7 @@ export default function NbaHome() {
                 onClick={() => setSel(i)}
                 className={`rounded-full border px-3.5 py-1.5 text-sm font-semibold transition ${
                   i === sel
-                    ? "border-amber-400 bg-amber-400/15 text-amber-200 light:border-amber-600 light:bg-amber-600/10 light:text-amber-700"
+                    ? "border-red-500 bg-red-500/15 text-red-200 light:border-red-600 light:bg-red-600/10 light:text-red-700"
                     : "border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200 light:border-zinc-200 light:bg-white light:text-zinc-600 light:hover:border-zinc-400"
                 }`}
               >
@@ -377,7 +377,7 @@ export default function NbaHome() {
                 </div>
               ))}
             </div>
-            <p className="mt-5 max-w-2xl rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm leading-relaxed text-amber-200/90 light:text-amber-800">
+            <p className="mt-5 max-w-2xl rounded-xl border border-red-500/25 bg-red-500/10 px-4 py-3 text-sm leading-relaxed text-red-200/90 light:text-red-800">
               {dv.isCurrent ? dv.disclaimer : "Graded results — every pick marked won, lost, or push. Nothing hidden, nothing rewritten."}
             </p>
           </>

@@ -24,12 +24,12 @@ export default function RecapsIndex() {
   const recaps = (index as { recaps: RecapEntry[] }).recaps ?? [];
   return (
     <div>
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+        <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
         Every week · wins and losses
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Weekly <span className="text-amber-400 light:text-amber-600">recaps</span>
+        Weekly <span className="text-red-500 light:text-red-600">recaps</span>
       </h1>
       <p className="mt-4 max-w-2xl text-sm text-zinc-400 light:text-zinc-600">
         What the model&apos;s picks got right, what they got wrong, and one honest
@@ -45,7 +45,7 @@ export default function RecapsIndex() {
             <Link
               key={r.id}
               href={`/recaps/${r.id}`}
-              className="block rounded-xl border border-white/10 bg-zinc-900/50 p-5 transition hover:border-amber-400/40 hover:bg-zinc-900 light:border-zinc-200 light:bg-white light:hover:border-amber-600/40"
+              className="block rounded-xl border border-white/10 bg-zinc-900/50 p-5 transition hover:border-red-500/40 hover:bg-zinc-900 light:border-zinc-200 light:bg-white light:hover:border-red-600/40"
             >
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
                 {r.period_label}

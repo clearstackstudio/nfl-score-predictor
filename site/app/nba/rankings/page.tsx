@@ -36,12 +36,12 @@ export default function NbaRankings() {
   const teams = doc.teams;
   return (
     <div>
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+        <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
         The model&apos;s own ratings · updated {doc.updated}
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Power <span className="text-amber-400 light:text-amber-600">rankings</span>
+        Power <span className="text-red-500 light:text-red-600">rankings</span>
       </h1>
       <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
         These are the Honest Line model&apos;s internal predictive ratings —
@@ -79,7 +79,7 @@ export default function NbaRankings() {
                     <span
                       className={`inline-flex h-7 w-7 items-center justify-center rounded-md text-xs font-extrabold ${
                         top
-                          ? "bg-amber-400/15 text-amber-300 light:bg-amber-100 light:text-amber-800"
+                          ? "bg-red-500/15 text-red-300 light:bg-red-100 light:text-red-800"
                           : "bg-zinc-800/60 text-zinc-300 light:bg-zinc-100 light:text-zinc-600"
                       }`}
                     >

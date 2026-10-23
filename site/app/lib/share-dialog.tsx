@@ -103,13 +103,13 @@ export default function SharePreviewDialog({
                 <a
                   href={preview.url}
                   download={preview.filename}
-                  className="rounded-full bg-amber-400 px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-amber-300 light:bg-amber-600 light:text-white light:hover:bg-amber-700"
+                  className="rounded-full bg-red-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-600 light:bg-red-600 light:text-white light:hover:bg-red-700"
                 >
                   Download PNG
                 </a>
                 <button
                   onClick={copyLink}
-                  className="rounded-full border border-amber-400/40 px-4 py-2 text-sm font-semibold text-amber-400 transition hover:bg-amber-400/10 light:border-amber-600/40 light:text-amber-700 light:hover:bg-amber-600/10"
+                  className="rounded-full border border-red-500/40 px-4 py-2 text-sm font-semibold text-red-500 transition hover:bg-red-500/10 light:border-red-600/40 light:text-red-700 light:hover:bg-red-600/10"
                 >
                   {copied ? "Copied!" : "Copy link"}
                 </button>

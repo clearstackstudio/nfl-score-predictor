@@ -84,14 +84,14 @@ export default function NbaTrackRecord() {
   if (!overall && eras.length === 0 && seasons.length === 0) {
     return (
       <div>
-        <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-          <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+        <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+          <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
           NBA · Full history · nothing hidden
         </div>
         <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-          Track <span className="text-amber-400 light:text-amber-600">record</span>
+          Track <span className="text-red-500 light:text-red-600">record</span>
         </h1>
-        <div className="mt-8 rounded-2xl border border-amber-400/25 bg-amber-400/[0.06] p-8 text-center light:bg-amber-50">
+        <div className="mt-8 rounded-2xl border border-red-500/25 bg-red-500/[0.06] p-8 text-center light:bg-red-50">
           <div className="font-display text-2xl font-semibold uppercase tracking-wide">Backtest warming up</div>
           <p className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
             {rec.pending_reason ?? "The walk-forward backtest is still running."} Once it lands, every season — winners, losers, and the
@@ -104,12 +104,12 @@ export default function NbaTrackRecord() {
 
   return (
     <div>
-      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-400/90 light:text-amber-700">
-        <span className="h-px w-8 bg-amber-400/60 light:bg-amber-600/70" aria-hidden="true" />
+      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-500/90 light:text-red-700">
+        <span className="h-px w-8 bg-red-500/60 light:bg-red-600/70" aria-hidden="true" />
         NBA · Full history · nothing hidden
       </div>
       <h1 className="mt-3 font-display text-5xl font-semibold uppercase leading-[0.95] tracking-wide">
-        Track <span className="text-amber-400 light:text-amber-600">record</span>
+        Track <span className="text-red-500 light:text-red-600">record</span>
       </h1>
       <p className="mt-4 max-w-2xl text-sm text-zinc-400 light:text-zinc-600">{rec.model}</p>
 
@@ -277,7 +277,7 @@ export default function NbaTrackRecord() {
           </div>
         </>
       ) : (
-        <div className="mt-4 rounded-2xl border border-amber-400/25 bg-amber-400/[0.06] p-6 text-center light:bg-amber-50">
+        <div className="mt-4 rounded-2xl border border-red-500/25 bg-red-500/[0.06] p-6 text-center light:bg-red-50">
           <p className="mx-auto max-w-xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
             {rec.pending_season_reason ?? "Per-season detail is still being tabulated."}
           </p>
@@ -318,7 +318,7 @@ function LiveSeason({ log }: { log: SeasonLog }) {
     <div className="mt-8">
       <h2 className="font-display text-3xl font-semibold uppercase tracking-wide">
         {log.season - 1}–{String(log.season).slice(2)} season — live
-        <span className="ml-3 rounded bg-amber-400/15 px-2 py-0.5 align-middle font-sans text-xs font-bold uppercase tracking-wider text-amber-300 light:bg-amber-600/15 light:text-amber-700">
+        <span className="ml-3 rounded bg-red-500/15 px-2 py-0.5 align-middle font-sans text-xs font-bold uppercase tracking-wider text-red-300 light:bg-red-600/15 light:text-red-700">
           grading in progress
         </span>
       </h2>
@@ -331,7 +331,7 @@ function LiveSeason({ log }: { log: SeasonLog }) {
           <div className="mt-0.5 text-sm font-semibold text-zinc-400 light:text-zinc-600">{fmtPct(winPct(aw, al))}</div>
           <div className="mt-1 text-xs text-zinc-500">Against the spread</div>
         </div>
-        <div className="rounded-xl border border-amber-400/25 bg-amber-400/[0.06] p-4 light:bg-amber-50">
+        <div className="rounded-xl border border-red-500/25 bg-red-500/[0.06] p-4 light:bg-red-50">
           <div className="text-2xl font-extrabold">{pw}-{pl}-{pp}</div>
           <div className="mt-0.5 text-sm font-semibold text-zinc-400 light:text-zinc-600">{fmtPct(winPct(pw, pl))}</div>
           <div className="mt-1 text-xs text-zinc-500">Parlay of the night</div>
@@ -354,8 +354,8 @@ function LiveSeason({ log }: { log: SeasonLog }) {
           }
         >
           {w.parlay && w.parlay.legs.length > 0 && (
-            <div className="mt-2 flex flex-wrap items-center gap-2 rounded-xl border border-amber-400/25 bg-amber-400/[0.06] px-4 py-2.5 text-sm light:bg-amber-50">
-              <span className="font-bold text-amber-200 light:text-amber-700">Parlay:</span>
+            <div className="mt-2 flex flex-wrap items-center gap-2 rounded-xl border border-red-500/25 bg-red-500/[0.06] px-4 py-2.5 text-sm light:bg-red-50">
+              <span className="font-bold text-red-200 light:text-red-700">Parlay:</span>
               <span className="text-zinc-300 light:text-zinc-700">{w.parlay.legs.map((l) => l.label).join(" · ")}</span>
               {resultBadge(w.parlay.result ?? undefined)}
             </div>
