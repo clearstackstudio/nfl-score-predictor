@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 7,
-  "updated": "2026-10-21 19:41 PDT",
+  "updated": "2026-10-23 09:42 PDT",
   "note": "Model-internal predictive ratings: expected margin vs an average team on a neutral field, before weekly QB/weather adjustments. Not a resume ranking; moves only on game results.",
   "teams": [
     {
@@ -22,28 +22,28 @@
       "rank": 3,
       "team": "New England Patriots",
       "abbr": "NE",
-      "rating": 8.5,
+      "rating": 8.3,
       "prev_rank": 3
     },
     {
       "rank": 4,
       "team": "San Francisco 49ers",
       "abbr": "SF",
-      "rating": 7.4,
+      "rating": 7.5,
       "prev_rank": 6
     },
     {
       "rank": 5,
       "team": "Buffalo Bills",
       "abbr": "BUF",
-      "rating": 7.1,
+      "rating": 7.0,
       "prev_rank": 4
     },
     {
       "rank": 6,
       "team": "Los Angeles Rams",
       "abbr": "LA",
-      "rating": 6.3,
+      "rating": 6.4,
       "prev_rank": 5
     },
     {
@@ -69,23 +69,23 @@
     },
     {
       "rank": 10,
-      "team": "Minnesota Vikings",
-      "abbr": "MIN",
-      "rating": 3.2,
-      "prev_rank": 10
+      "team": "Chicago Bears",
+      "abbr": "CHI",
+      "rating": 3.5,
+      "prev_rank": 13
     },
     {
       "rank": 11,
-      "team": "Chicago Bears",
-      "abbr": "CHI",
-      "rating": 2.9,
-      "prev_rank": 13
+      "team": "Minnesota Vikings",
+      "abbr": "MIN",
+      "rating": 3.3,
+      "prev_rank": 10
     },
     {
       "rank": 12,
       "team": "Kansas City Chiefs",
       "abbr": "KC",
-      "rating": 2.7,
+      "rating": 2.8,
       "prev_rank": 14
     },
     {
@@ -120,14 +120,14 @@
       "rank": 17,
       "team": "Indianapolis Colts",
       "abbr": "IND",
-      "rating": -0.4,
+      "rating": -0.3,
       "prev_rank": 17
     },
     {
       "rank": 18,
       "team": "Carolina Panthers",
       "abbr": "CAR",
-      "rating": -0.9,
+      "rating": -0.8,
       "prev_rank": 20
     },
     {
@@ -162,7 +162,7 @@
       "rank": 23,
       "team": "Philadelphia Eagles",
       "abbr": "PHI",
-      "rating": -3.7,
+      "rating": -3.6,
       "prev_rank": 19
     },
     {
@@ -190,7 +190,7 @@
       "rank": 27,
       "team": "Dallas Cowboys",
       "abbr": "DAL",
-      "rating": -5.7,
+      "rating": -5.6,
       "prev_rank": 25
     },
     {
@@ -204,14 +204,14 @@
       "rank": 29,
       "team": "Las Vegas Raiders",
       "abbr": "LV",
-      "rating": -7.0,
+      "rating": -7.1,
       "prev_rank": 29
     },
     {
       "rank": 30,
       "team": "New York Jets",
       "abbr": "NYJ",
-      "rating": -7.5,
+      "rating": -7.6,
       "prev_rank": 32
     },
     {
