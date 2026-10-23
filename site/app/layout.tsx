@@ -90,7 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   height={48}
                   className="h-12 w-12 rounded-lg"
                 />
-                <span className="font-display text-[32px] font-semibold uppercase leading-none tracking-wide">
+                <span className="font-display text-[32px] font-semibold uppercase leading-none tracking-wide text-white">
                   Honest<span className="text-red-500">Line</span>
                 </span>
                 <span className="hidden text-xs text-zinc-500 md:inline">
@@ -106,7 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="border-t border-white/10 bg-zinc-950">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-[1.2fr_1fr_1fr]">
             <div>
-              <div className="font-display text-xl font-semibold uppercase tracking-wide">
+              <div className="font-display text-xl font-semibold uppercase tracking-wide text-white">
                 Honest<span className="text-red-500">Line</span>
               </div>
               <p className="mt-2 max-w-xs text-sm leading-relaxed text-zinc-500">
