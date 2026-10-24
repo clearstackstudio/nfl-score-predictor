@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 7,
-  "generated": "2026-10-23 09:42 PDT",
+  "generated": "2026-10-23 19:42 PDT",
   "disclaimer": "Model probabilities for entertainment. Our backtest shows no edge vs the closing line \u2014 track record published openly.",
   "parlay": {
     "legs": [
@@ -14,24 +14,24 @@
         "prob": 0.531
       },
       {
+        "game": "TB @ CAR",
+        "away_abbr": "TB",
+        "home_abbr": "CAR",
+        "market": "total",
+        "label": "Under 44.5",
+        "prob": 0.53
+      },
+      {
         "game": "NYG @ HOU",
         "away_abbr": "NYG",
         "home_abbr": "HOU",
         "market": "total",
         "label": "Over 42.5",
         "prob": 0.53
-      },
-      {
-        "game": "DAL @ PHI",
-        "away_abbr": "DAL",
-        "home_abbr": "PHI",
-        "market": "total",
-        "label": "Over 44.5",
-        "prob": 0.527
       }
     ],
-    "combined_prob": 0.148,
-    "fair_odds": "+576",
+    "combined_prob": 0.149,
+    "fair_odds": "+571",
     "book_pays": "+600",
     "calibration": "empirical-2026-10-09"
   },
@@ -153,7 +153,7 @@
       "total_edge": 11.7,
       "qb_adj_home": -3.1,
       "qb_adj_away": 1.7,
-      "wind_mph": 3,
+      "wind_mph": 6,
       "wind_adj_pts": -0.0,
       "indoor_adj_pts": 0.0,
       "pick_spread": "away",
@@ -179,14 +179,14 @@
       "weekday": "Sunday",
       "line_spread": 3.0,
       "line_total": 44.5,
-      "our_spread": 6.0,
-      "our_total": 43.1,
-      "spread_edge": 3.0,
-      "total_edge": -1.4,
+      "our_spread": 8.0,
+      "our_total": 39.9,
+      "spread_edge": 5.0,
+      "total_edge": -4.6,
       "qb_adj_home": 0.0,
-      "qb_adj_away": -1.1,
-      "wind_mph": 9,
-      "wind_adj_pts": -0.0,
+      "qb_adj_away": -3.2,
+      "wind_mph": 11,
+      "wind_adj_pts": -1.2,
       "indoor_adj_pts": 0.0,
       "pick_spread": "home",
       "pick_total": "under",
@@ -198,9 +198,9 @@
         "away": "TB +3"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.51,
+      "ou_prob": 0.53,
       "home_qb": "Bryce Young",
-      "away_qb": "Jalon Daniels"
+      "away_qb": "Baker Mayfield"
     },
     {
       "away": "New York Giants",
@@ -281,7 +281,7 @@
       "total_edge": 8.3,
       "qb_adj_home": 2.0,
       "qb_adj_away": 2.7,
-      "wind_mph": 3,
+      "wind_mph": 4,
       "wind_adj_pts": -0.0,
       "indoor_adj_pts": 0.0,
       "pick_spread": "away",
@@ -441,7 +441,7 @@
       "total_edge": -4.9,
       "qb_adj_home": 0.0,
       "qb_adj_away": 1.6,
-      "wind_mph": 8,
+      "wind_mph": 6,
       "wind_adj_pts": -0.0,
       "indoor_adj_pts": 0.0,
       "pick_spread": "home",
@@ -473,7 +473,7 @@
       "total_edge": 5.0,
       "qb_adj_home": -1.5,
       "qb_adj_away": 0.0,
-      "wind_mph": 4,
+      "wind_mph": 5,
       "wind_adj_pts": -0.0,
       "indoor_adj_pts": 0.0,
       "pick_spread": "home",
