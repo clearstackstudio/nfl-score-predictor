@@ -1271,6 +1271,231 @@
         "fair_odds": "+619",
         "book_pays": "+600"
       }
+    },
+    "2026-10-25": {
+      "date": "2026-10-25",
+      "generated": "2026-10-24 21:39 PDT",
+      "preseason": false,
+      "warming_up": true,
+      "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Los Angeles Lakers",
+          "home": "Utah Jazz",
+          "away_abbr": "Los Angeles Lakers",
+          "home_abbr": "Utah Jazz",
+          "gameday": "2026-10-25",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -6.0,
+          "line_total": 236.5,
+          "our_spread": -4.3,
+          "our_total": 236.8,
+          "spread_edge": 1.7,
+          "total_edge": 0.3,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Utah Jazz +6",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Utah Jazz +6",
+            "away": "Los Angeles Lakers -6"
+          },
+          "cover_prob": 0.504,
+          "ou_prob": null
+        },
+        {
+          "away": "Indiana Pacers",
+          "home": "Brooklyn Nets",
+          "away_abbr": "Indiana Pacers",
+          "home_abbr": "Brooklyn Nets",
+          "gameday": "2026-10-25",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -7.0,
+          "line_total": 231.5,
+          "our_spread": 1.1,
+          "our_total": 229.6,
+          "spread_edge": 8.1,
+          "total_edge": -1.9,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Brooklyn Nets +7",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Brooklyn Nets +7",
+            "away": "Indiana Pacers -7"
+          },
+          "cover_prob": 0.513,
+          "ou_prob": null
+        },
+        {
+          "away": "Orlando Magic",
+          "home": "New York Knicks",
+          "away_abbr": "Orlando Magic",
+          "home_abbr": "New York Knicks",
+          "gameday": "2026-10-25",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 7.5,
+          "line_total": 224.5,
+          "our_spread": 5.5,
+          "our_total": 225.2,
+          "spread_edge": -2.0,
+          "total_edge": 0.7,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Orlando Magic +7.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "New York Knicks -7.5",
+            "away": "Orlando Magic +7.5"
+          },
+          "cover_prob": 0.502,
+          "ou_prob": null
+        },
+        {
+          "away": "Los Angeles Clippers",
+          "home": "Oklahoma City Thunder",
+          "away_abbr": "Los Angeles Clippers",
+          "home_abbr": "Oklahoma City Thunder",
+          "gameday": "2026-10-25",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 14.5,
+          "line_total": 221.0,
+          "our_spread": 9.3,
+          "our_total": 224.4,
+          "spread_edge": -5.2,
+          "total_edge": 3.4,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Los Angeles Clippers +14.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Oklahoma City Thunder -14.5",
+            "away": "Los Angeles Clippers +14.5"
+          },
+          "cover_prob": 0.519,
+          "ou_prob": null
+        },
+        {
+          "away": "Toronto Raptors",
+          "home": "Minnesota Timberwolves",
+          "away_abbr": "Toronto Raptors",
+          "home_abbr": "Minnesota Timberwolves",
+          "gameday": "2026-10-25",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -0.0,
+          "line_total": 232.5,
+          "our_spread": 3.6,
+          "our_total": 227.9,
+          "spread_edge": 3.6,
+          "total_edge": -4.6,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Pick'em",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Pick'em",
+            "away": "Pick'em"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Detroit Pistons",
+          "home": "Philadelphia 76ers",
+          "away_abbr": "Detroit Pistons",
+          "home_abbr": "Philadelphia 76ers",
+          "gameday": "2026-10-25",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 2.8,
+          "line_total": 226.5,
+          "our_spread": 0.7,
+          "our_total": 228.9,
+          "spread_edge": -2.1,
+          "total_edge": 2.4,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Detroit Pistons +2.75",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Philadelphia 76ers -2.75",
+            "away": "Detroit Pistons +2.75"
+          },
+          "cover_prob": 0.501,
+          "ou_prob": null
+        },
+        {
+          "away": "Memphis Grizzlies",
+          "home": "Sacramento Kings",
+          "away_abbr": "Memphis Grizzlies",
+          "home_abbr": "Sacramento Kings",
+          "gameday": "2026-10-25",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -4.0,
+          "line_total": 236.5,
+          "our_spread": 1.9,
+          "our_total": 235.0,
+          "spread_edge": 5.9,
+          "total_edge": -1.5,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Sacramento Kings +4",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Sacramento Kings +4",
+            "away": "Memphis Grizzlies -4"
+          },
+          "cover_prob": 0.522,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Memphis Grizzlies @ Sacramento Kings",
+            "market": "spread",
+            "label": "Sacramento Kings +4",
+            "prob": 0.522
+          },
+          {
+            "game": "Los Angeles Clippers @ Oklahoma City Thunder",
+            "market": "spread",
+            "label": "Los Angeles Clippers +14.5",
+            "prob": 0.519
+          },
+          {
+            "game": "Indiana Pacers @ Brooklyn Nets",
+            "market": "spread",
+            "label": "Brooklyn Nets +7",
+            "prob": 0.513
+          }
+        ],
+        "combined_prob": 0.139,
+        "fair_odds": "+619",
+        "book_pays": "+600"
+      }
     }
   }
 }
