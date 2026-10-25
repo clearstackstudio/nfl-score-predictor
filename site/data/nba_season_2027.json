@@ -1026,8 +1026,8 @@
       "preseason": false,
       "warming_up": true,
       "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Miami Heat",
@@ -1054,7 +1054,12 @@
             "away": "Miami Heat -3.5"
           },
           "cover_prob": 0.513,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 115.0,
+            "away_score": 110.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Brooklyn Nets",
@@ -1081,7 +1086,12 @@
             "away": "Brooklyn Nets +10.5"
           },
           "cover_prob": 0.506,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 125.0,
+            "away_score": 121.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Milwaukee Bucks",
@@ -1108,7 +1118,12 @@
             "away": "Milwaukee Bucks +12.5"
           },
           "cover_prob": 0.504,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 127.0,
+            "away_score": 116.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Washington Wizards",
@@ -1135,7 +1150,12 @@
             "away": "Washington Wizards -1.5"
           },
           "cover_prob": 0.52,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 120.0,
+            "away_score": 124.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "San Antonio Spurs",
@@ -1162,7 +1182,12 @@
             "away": "San Antonio Spurs -11.5"
           },
           "cover_prob": 0.521,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 106.0,
+            "away_score": 122.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Houston Rockets",
@@ -1189,7 +1214,12 @@
             "away": "Houston Rockets +1.5"
           },
           "cover_prob": 0.503,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 114.0,
+            "away_score": 121.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "New Orleans Pelicans",
@@ -1216,7 +1246,12 @@
             "away": "New Orleans Pelicans +11.5"
           },
           "cover_prob": 0.504,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 141.0,
+            "away_score": 135.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Golden State Warriors",
@@ -1243,7 +1278,12 @@
             "away": "Golden State Warriors +6.5"
           },
           "cover_prob": 0.502,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 131.0,
+            "away_score": 122.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -1267,10 +1307,9 @@
             "prob": 0.513
           }
         ],
-        "combined_prob": 0.139,
-        "fair_odds": "+619",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-10-24 23:39 PDT"
     },
     "2026-10-25": {
       "date": "2026-10-25",
