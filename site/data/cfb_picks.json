@@ -33,7 +33,13 @@
         "away": "Akron +3"
       },
       "cover_prob": 0.502,
-      "ou_prob": 0.52
+      "ou_prob": 0.52,
+      "result": {
+        "home_score": 35,
+        "away_score": 20,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "BYU",
@@ -61,7 +67,13 @@
         "away": "BYU -7"
       },
       "cover_prob": 0.512,
-      "ou_prob": 0.51
+      "ou_prob": 0.51,
+      "result": {
+        "home_score": 39,
+        "away_score": 31,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Baylor",
@@ -89,7 +101,13 @@
         "away": "Baylor +1"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.51
+      "ou_prob": 0.51,
+      "result": {
+        "home_score": 25,
+        "away_score": 24,
+        "ats": "push",
+        "ou": "loss"
+      }
     },
     {
       "away": "Boise State",
@@ -117,7 +135,13 @@
         "away": "Boise State -14.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.527
+      "ou_prob": 0.527,
+      "result": {
+        "home_score": 10,
+        "away_score": 31,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Boston College",
@@ -145,7 +169,13 @@
         "away": "Boston College +6"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.525
+      "ou_prob": 0.525,
+      "result": {
+        "home_score": 27,
+        "away_score": 49,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Bowling Green",
@@ -173,7 +203,13 @@
         "away": "Bowling Green +3"
       },
       "cover_prob": 0.512,
-      "ou_prob": 0.512
+      "ou_prob": 0.512,
+      "result": {
+        "home_score": 31,
+        "away_score": 24,
+        "ats": "win",
+        "ou": "loss"
+      }
     },
     {
       "away": "Colorado",
@@ -201,7 +237,12 @@
         "away": "Colorado +13.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 57,
+        "away_score": 24,
+        "ats": "loss"
+      }
     },
     {
       "away": "Eastern Michigan",
@@ -229,7 +270,12 @@
         "away": "Eastern Michigan +10"
       },
       "cover_prob": 0.5,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 24,
+        "away_score": 20,
+        "ats": "loss"
+      }
     },
     {
       "away": "Georgia State",
@@ -257,7 +303,13 @@
         "away": "Georgia State -2.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.5
+      "ou_prob": 0.5,
+      "result": {
+        "home_score": 38,
+        "away_score": 32,
+        "ats": "win",
+        "ou": "loss"
+      }
     },
     {
       "away": "Hawai'i",
@@ -285,7 +337,12 @@
         "away": "Hawai'i -3.5"
       },
       "cover_prob": 0.506,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 21,
+        "away_score": 56,
+        "ats": "win"
+      }
     },
     {
       "away": "Houston",
@@ -341,7 +398,13 @@
         "away": "Iowa -7.5"
       },
       "cover_prob": 0.506,
-      "ou_prob": 0.51
+      "ou_prob": 0.51,
+      "result": {
+        "home_score": 13,
+        "away_score": 10,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Iowa State",
@@ -369,7 +432,12 @@
         "away": "Iowa State +11"
       },
       "cover_prob": null,
-      "ou_prob": 0.527
+      "ou_prob": 0.527,
+      "result": {
+        "home_score": 39,
+        "away_score": 3,
+        "ou": "loss"
+      }
     },
     {
       "away": "Kansas State",
@@ -397,7 +465,13 @@
         "away": "Kansas State -1"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.512
+      "ou_prob": 0.512,
+      "result": {
+        "home_score": 28,
+        "away_score": 17,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Louisiana",
@@ -425,7 +499,13 @@
         "away": "Louisiana -10"
       },
       "cover_prob": 0.506,
-      "ou_prob": 0.52
+      "ou_prob": 0.52,
+      "result": {
+        "home_score": 35,
+        "away_score": 31,
+        "ats": "win",
+        "ou": "loss"
+      }
     },
     {
       "away": "Miami (OH)",
@@ -453,7 +533,12 @@
         "away": "Miami (OH) -3.5"
       },
       "cover_prob": 0.501,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 27,
+        "away_score": 28,
+        "ats": "win"
+      }
     },
     {
       "away": "Michigan State",
@@ -481,7 +566,13 @@
         "away": "Michigan State +16.5"
       },
       "cover_prob": 0.512,
-      "ou_prob": 0.526
+      "ou_prob": 0.526,
+      "result": {
+        "home_score": 28,
+        "away_score": 10,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "North Dakota State",
@@ -537,7 +628,13 @@
         "away": "North Texas -3"
       },
       "cover_prob": 0.508,
-      "ou_prob": 0.5
+      "ou_prob": 0.5,
+      "result": {
+        "home_score": 39,
+        "away_score": 49,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "Oklahoma",
@@ -565,7 +662,13 @@
         "away": "Oklahoma -1.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.524
+      "ou_prob": 0.524,
+      "result": {
+        "home_score": 15,
+        "away_score": 23,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "Old Dominion",
@@ -593,7 +696,13 @@
         "away": "Old Dominion +14"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.513
+      "ou_prob": 0.513,
+      "result": {
+        "home_score": 26,
+        "away_score": 0,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Ole Miss",
@@ -621,7 +730,13 @@
         "away": "Ole Miss +3"
       },
       "cover_prob": 0.504,
-      "ou_prob": 0.52
+      "ou_prob": 0.52,
+      "result": {
+        "home_score": 34,
+        "away_score": 27,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "Oregon",
@@ -649,7 +764,12 @@
         "away": "Oregon -10"
       },
       "cover_prob": 0.5,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 21,
+        "away_score": 10,
+        "ats": "loss"
+      }
     },
     {
       "away": "Sacramento State",
@@ -677,7 +797,13 @@
         "away": "Sacramento State +14.5"
       },
       "cover_prob": 0.513,
-      "ou_prob": 0.509
+      "ou_prob": 0.509,
+      "result": {
+        "home_score": 34,
+        "away_score": 17,
+        "ats": "loss",
+        "ou": "push"
+      }
     },
     {
       "away": "San Diego State",
@@ -705,7 +831,13 @@
         "away": "San Diego State -1"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.519
+      "ou_prob": 0.519,
+      "result": {
+        "home_score": 56,
+        "away_score": 49,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "San Jos\u00e9 State",
@@ -733,7 +865,13 @@
         "away": "San Jos\u00e9 State +5.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.525
+      "ou_prob": 0.525,
+      "result": {
+        "home_score": 28,
+        "away_score": 13,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Syracuse",
@@ -761,7 +899,12 @@
         "away": "Syracuse +9"
       },
       "cover_prob": 0.5,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 30,
+        "away_score": 31,
+        "ats": "loss"
+      }
     },
     {
       "away": "Tennessee",
@@ -789,7 +932,13 @@
         "away": "Tennessee +2.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.526
+      "ou_prob": 0.526,
+      "result": {
+        "home_score": 27,
+        "away_score": 24,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Texas A&M",
@@ -817,7 +966,13 @@
         "away": "Texas A&M +13.5"
       },
       "cover_prob": 0.513,
-      "ou_prob": 0.512
+      "ou_prob": 0.512,
+      "result": {
+        "home_score": 31,
+        "away_score": 20,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "UL Monroe",
@@ -845,7 +1000,13 @@
         "away": "UL Monroe +12.5"
       },
       "cover_prob": 0.507,
-      "ou_prob": 0.509
+      "ou_prob": 0.509,
+      "result": {
+        "home_score": 14,
+        "away_score": 21,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "USC",
@@ -873,7 +1034,13 @@
         "away": "USC -3"
       },
       "cover_prob": 0.503,
-      "ou_prob": 0.506
+      "ou_prob": 0.506,
+      "result": {
+        "home_score": 24,
+        "away_score": 7,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "UTSA",
@@ -901,7 +1068,12 @@
         "away": "UTSA -3"
       },
       "cover_prob": 0.5,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 19,
+        "away_score": 42,
+        "ats": "loss"
+      }
     },
     {
       "away": "Utah State",
@@ -929,7 +1101,13 @@
         "away": "Utah State +13.5"
       },
       "cover_prob": 0.511,
-      "ou_prob": 0.5
+      "ou_prob": 0.5,
+      "result": {
+        "home_score": 20,
+        "away_score": 17,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "Vanderbilt",
@@ -957,7 +1135,13 @@
         "away": "Vanderbilt +10.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.51
+      "ou_prob": 0.51,
+      "result": {
+        "home_score": 34,
+        "away_score": 17,
+        "ats": "loss",
+        "ou": "push"
+      }
     },
     {
       "away": "Virginia Tech",
@@ -985,7 +1169,13 @@
         "away": "Virginia Tech +3"
       },
       "cover_prob": 0.51,
-      "ou_prob": 0.5
+      "ou_prob": 0.5,
+      "result": {
+        "home_score": 16,
+        "away_score": 20,
+        "ats": "loss",
+        "ou": "win"
+      }
     }
   ]
 }
