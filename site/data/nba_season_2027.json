@@ -1317,8 +1317,8 @@
       "preseason": false,
       "warming_up": true,
       "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Los Angeles Lakers",
@@ -1345,7 +1345,12 @@
             "away": "Los Angeles Lakers -6"
           },
           "cover_prob": 0.504,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 123.0,
+            "away_score": 132.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Indiana Pacers",
@@ -1372,7 +1377,12 @@
             "away": "Indiana Pacers -7"
           },
           "cover_prob": 0.513,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 109.0,
+            "away_score": 136.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Orlando Magic",
@@ -1399,7 +1409,12 @@
             "away": "Orlando Magic +7.5"
           },
           "cover_prob": 0.502,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 102.0,
+            "away_score": 111.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Los Angeles Clippers",
@@ -1426,7 +1441,12 @@
             "away": "Los Angeles Clippers +14.5"
           },
           "cover_prob": 0.519,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 108.0,
+            "away_score": 101.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Toronto Raptors",
@@ -1453,7 +1473,12 @@
             "away": "Pick'em"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 117.0,
+            "away_score": 94.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Detroit Pistons",
@@ -1480,7 +1505,12 @@
             "away": "Detroit Pistons +2.75"
           },
           "cover_prob": 0.501,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 93.0,
+            "away_score": 106.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Memphis Grizzlies",
@@ -1507,7 +1537,12 @@
             "away": "Memphis Grizzlies -4"
           },
           "cover_prob": 0.522,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 112.0,
+            "away_score": 123.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -1531,10 +1566,9 @@
             "prob": 0.513
           }
         ],
-        "combined_prob": 0.139,
-        "fair_odds": "+619",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-10-25 23:40 PDT"
     },
     "2026-10-26": {
       "date": "2026-10-26",
