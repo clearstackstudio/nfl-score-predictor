@@ -370,7 +370,12 @@
         "away": "Houston +6.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 21,
+        "away_score": 13,
+        "ats": "win"
+      }
     },
     {
       "away": "Iowa",
@@ -600,7 +605,13 @@
         "away": "North Dakota State +4.5"
       },
       "cover_prob": 0.513,
-      "ou_prob": 0.501
+      "ou_prob": 0.501,
+      "result": {
+        "home_score": 21,
+        "away_score": 16,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "North Texas",
