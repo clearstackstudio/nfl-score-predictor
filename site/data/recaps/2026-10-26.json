@@ -1,0 +1,157 @@
+{
+  "id": "2026-10-26",
+  "title": "Weekly recap \u2014 Oct 26, 2026",
+  "period_label": "NFL Week 6 \u00b7 CFB Week 8 \u00b7 NBA 2026-10-25",
+  "published": "2026-10-26",
+  "covers": [
+    {
+      "sport": "nfl",
+      "period": "6"
+    },
+    {
+      "sport": "cfb",
+      "period": "8"
+    },
+    {
+      "sport": "nba",
+      "period": "2026-10-25"
+    }
+  ],
+  "overall": {
+    "ats": [
+      16,
+      37,
+      1
+    ],
+    "ou": [
+      19,
+      13,
+      2
+    ]
+  },
+  "sports": [
+    {
+      "sport": "nfl",
+      "label": "NFL",
+      "period": "Week 6",
+      "ats": [
+        1,
+        12,
+        0
+      ],
+      "ou": [
+        4,
+        3,
+        0
+      ],
+      "n_picks": 14
+    },
+    {
+      "sport": "cfb",
+      "label": "CFB",
+      "period": "Week 8",
+      "ats": [
+        11,
+        22,
+        1
+      ],
+      "ou": [
+        15,
+        10,
+        2
+      ],
+      "n_picks": 35
+    },
+    {
+      "sport": "nba",
+      "label": "NBA",
+      "period": "2026-10-25",
+      "ats": [
+        4,
+        3,
+        0
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ],
+      "n_picks": 7
+    }
+  ],
+  "best_call": {
+    "label": "Utah -6.5",
+    "kind": "spread",
+    "edge": 19.4,
+    "prob": 0.5,
+    "game": "Houston at Utah",
+    "score": "13\u201321",
+    "sport": "CFB",
+    "period": "Week 8"
+  },
+  "worst_miss": {
+    "label": "Under 43.5",
+    "kind": "total",
+    "edge": -4.7,
+    "prob": 0.532,
+    "game": "NYJ at NE",
+    "score": "19\u201326",
+    "sport": "NFL",
+    "period": "Week 6"
+  },
+  "observation": "Rough week \u2014 35-50 across 85 decided picks. No spin: the model was wrong more than it was right. Totals detail: NFL totals 4-3; CFB totals 15-10. NFL spreads were the damage at 1-12. CFB spreads were the damage at 11-22.",
+  "season_to_date": {
+    "nfl": {
+      "label": "NFL",
+      "ats": [
+        21,
+        29,
+        4
+      ],
+      "ou": [
+        18,
+        16,
+        1
+      ]
+    },
+    "cfb": {
+      "label": "CFB",
+      "ats": [
+        67,
+        68,
+        3
+      ],
+      "ou": [
+        47,
+        56,
+        2
+      ]
+    },
+    "nba": {
+      "label": "NBA",
+      "ats": [
+        19,
+        18,
+        8
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ]
+    },
+    "ncaab": {
+      "label": "NCAAB",
+      "ats": [
+        0,
+        0,
+        0
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}
