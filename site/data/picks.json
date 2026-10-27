@@ -554,7 +554,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.527,
       "home_qb": "Tanner McKee",
-      "away_qb": "Dak Prescott"
+      "away_qb": "Dak Prescott",
+      "result": {
+        "home_score": 21,
+        "away_score": 38,
+        "ats": "loss",
+        "ou": "win"
+      }
     }
   ]
 }
