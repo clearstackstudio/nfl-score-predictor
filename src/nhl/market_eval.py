@@ -39,6 +39,9 @@ NAME_TO_ABBR = {
     "Utah Mammoth": "UTA", "Vancouver Canucks": "VAN",
     "Vegas Golden Knights": "VGK", "Washington Capitals": "WSH",
     "Winnipeg Jets": "WPG",
+    # The Odds API spellings (shadow_picks feed) — Shane's spreadsheet
+    # uses the un-accented / dotted forms above; both must resolve.
+    "Montréal Canadiens": "MTL", "St Louis Blues": "STL",
 }
 
 

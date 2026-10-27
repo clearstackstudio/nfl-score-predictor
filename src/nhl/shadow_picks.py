@@ -250,7 +250,8 @@ def build_picks(target: date) -> tuple[list[dict], dict]:
         try:
             key = (NAME_TO_ABBR[ev["away_team"]],
                    NAME_TO_ABBR[ev["home_team"]])
-        except KeyError:
+        except KeyError as e:
+            print(f"WARNING unmapped Odds API team name: {e}")
             continue
         if key not in events or ev["commence_time"] < events[key]["commence_time"]:
             events[key] = ev
