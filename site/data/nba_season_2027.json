@@ -1848,6 +1848,144 @@
         "fair_odds": "+641",
         "book_pays": "+600"
       }
+    },
+    "2026-10-27": {
+      "date": "2026-10-27",
+      "generated": "2026-10-26 21:39 PDT",
+      "preseason": false,
+      "warming_up": true,
+      "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Brooklyn Nets",
+          "home": "Boston Celtics",
+          "away_abbr": "Brooklyn Nets",
+          "home_abbr": "Boston Celtics",
+          "gameday": "2026-10-27",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 11.8,
+          "line_total": 221.5,
+          "our_spread": 12.1,
+          "our_total": 223.1,
+          "spread_edge": 0.3,
+          "total_edge": 1.6,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Boston Celtics -11.75",
+            "away": "Brooklyn Nets +11.75"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Detroit Pistons",
+          "home": "New York Knicks",
+          "away_abbr": "Detroit Pistons",
+          "home_abbr": "New York Knicks",
+          "gameday": "2026-10-27",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 3.5,
+          "line_total": 218.5,
+          "our_spread": 0.8,
+          "our_total": 221.3,
+          "spread_edge": -2.7,
+          "total_edge": 2.8,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Detroit Pistons +3.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "New York Knicks -3.5",
+            "away": "Detroit Pistons +3.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Sacramento Kings",
+          "home": "San Antonio Spurs",
+          "away_abbr": "Sacramento Kings",
+          "home_abbr": "San Antonio Spurs",
+          "gameday": "2026-10-27",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 17.5,
+          "line_total": 230.0,
+          "our_spread": 12.4,
+          "our_total": 232.5,
+          "spread_edge": -5.1,
+          "total_edge": 2.5,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Sacramento Kings +17.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "San Antonio Spurs -17.5",
+            "away": "Sacramento Kings +17.5"
+          },
+          "cover_prob": 0.518,
+          "ou_prob": null
+        },
+        {
+          "away": "Portland Trail Blazers",
+          "home": "Los Angeles Lakers",
+          "away_abbr": "Portland Trail Blazers",
+          "home_abbr": "Los Angeles Lakers",
+          "gameday": "2026-10-27",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 3.0,
+          "line_total": 236.5,
+          "our_spread": 3.4,
+          "our_total": 230.3,
+          "spread_edge": 0.4,
+          "total_edge": -6.2,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Los Angeles Lakers -3",
+            "away": "Portland Trail Blazers +3"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Sacramento Kings @ San Antonio Spurs",
+            "market": "spread",
+            "label": "Sacramento Kings +17.5",
+            "prob": 0.518
+          },
+          {
+            "game": "Detroit Pistons @ New York Knicks",
+            "market": "spread",
+            "label": "Detroit Pistons +3.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.259,
+        "fair_odds": "+286",
+        "book_pays": "+260"
+      }
     }
   }
 }
