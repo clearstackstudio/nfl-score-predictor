@@ -1898,8 +1898,8 @@
       "preseason": false,
       "warming_up": true,
       "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Brooklyn Nets",
@@ -1926,7 +1926,11 @@
             "away": "Brooklyn Nets +11.75"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 125.0,
+            "away_score": 124.0
+          }
         },
         {
           "away": "Detroit Pistons",
@@ -1953,7 +1957,12 @@
             "away": "Detroit Pistons +3.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 111.0,
+            "away_score": 97.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Sacramento Kings",
@@ -1980,7 +1989,12 @@
             "away": "Sacramento Kings +17.5"
           },
           "cover_prob": 0.518,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 130.0,
+            "away_score": 103.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Portland Trail Blazers",
@@ -2007,7 +2021,11 @@
             "away": "Portland Trail Blazers +3"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 129.0,
+            "away_score": 136.0
+          }
         }
       ],
       "parlay": {
@@ -2025,10 +2043,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.259,
-        "fair_odds": "+286",
-        "book_pays": "+260"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-10-27 23:40 PDT"
     },
     "2026-10-28": {
       "date": "2026-10-28",
