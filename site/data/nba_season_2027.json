@@ -2406,6 +2406,123 @@
         "fair_odds": "+609",
         "book_pays": "+600"
       }
+    },
+    "2026-10-29": {
+      "date": "2026-10-29",
+      "generated": "2026-10-28 21:39 PDT",
+      "preseason": false,
+      "warming_up": true,
+      "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Cleveland Cavaliers",
+          "home": "Atlanta Hawks",
+          "away_abbr": "Cleveland Cavaliers",
+          "home_abbr": "Atlanta Hawks",
+          "gameday": "2026-10-29",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 1.0,
+          "line_total": 239.0,
+          "our_spread": 2.6,
+          "our_total": 236.5,
+          "spread_edge": 1.6,
+          "total_edge": -2.5,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Atlanta Hawks -1",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Atlanta Hawks -1",
+            "away": "Cleveland Cavaliers +1"
+          },
+          "cover_prob": 0.505,
+          "ou_prob": null
+        },
+        {
+          "away": "Sacramento Kings",
+          "home": "New Orleans Pelicans",
+          "away_abbr": "Sacramento Kings",
+          "home_abbr": "New Orleans Pelicans",
+          "gameday": "2026-10-29",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 5.5,
+          "line_total": 237.5,
+          "our_spread": 4.2,
+          "our_total": 235.9,
+          "spread_edge": -1.3,
+          "total_edge": -1.6,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Sacramento Kings +5.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "New Orleans Pelicans -5.5",
+            "away": "Sacramento Kings +5.5"
+          },
+          "cover_prob": 0.508,
+          "ou_prob": null
+        },
+        {
+          "away": "Memphis Grizzlies",
+          "home": "Portland Trail Blazers",
+          "away_abbr": "Memphis Grizzlies",
+          "home_abbr": "Portland Trail Blazers",
+          "gameday": "2026-10-29",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 7.5,
+          "line_total": 234.0,
+          "our_spread": 6.9,
+          "our_total": 232.9,
+          "spread_edge": -0.6,
+          "total_edge": -1.1,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Memphis Grizzlies +7.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Portland Trail Blazers -7.5",
+            "away": "Memphis Grizzlies +7.5"
+          },
+          "cover_prob": 0.506,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Sacramento Kings @ New Orleans Pelicans",
+            "market": "spread",
+            "label": "Sacramento Kings +5.5",
+            "prob": 0.508
+          },
+          {
+            "game": "Memphis Grizzlies @ Portland Trail Blazers",
+            "market": "spread",
+            "label": "Memphis Grizzlies +7.5",
+            "prob": 0.506
+          },
+          {
+            "game": "Cleveland Cavaliers @ Atlanta Hawks",
+            "market": "spread",
+            "label": "Atlanta Hawks -1",
+            "prob": 0.505
+          }
+        ],
+        "combined_prob": 0.13,
+        "fair_odds": "+669",
+        "book_pays": "+600"
+      }
     }
   }
 }
