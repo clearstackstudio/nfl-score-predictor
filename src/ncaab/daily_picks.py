@@ -79,7 +79,7 @@ BOOK_PARLAY_PAYS = {2: "+260", 3: "+600"}
 # Regular-season openers by ending-year season. A game tipping before its
 # season's opener is preseason/exhibition: excluded from training, flagged
 # experimental in the picks output.
-SEASON_OPENERS = {2027: datetime.date(2026, 11, 3)}
+SEASON_OPENERS = {2027: datetime.date(2026, 11, 1)}
 
 
 def normal_cdf(x: float) -> float:
@@ -409,7 +409,7 @@ def main() -> None:
             "pending_reason": (
                 f"No NCAAB games with logged lines on {target} or "
                 f"{target + datetime.timedelta(days=1)}. "
-                f"(Regular season starts ~Nov 3, 2026.)"),
+                f"(Regular season starts Nov 1, 2026.)"),
             "odds_snapshot": snap_date,
         }
         dest = SITE_DATA / "ncaab_picks.json"
