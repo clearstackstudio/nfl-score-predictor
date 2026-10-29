@@ -60,6 +60,18 @@ export default function RecapsIndex() {
           ))}
         </div>
       )}
+
+      <p className="mt-8 max-w-2xl text-sm text-zinc-400 light:text-zinc-600">
+        The recaps are the week-to-week story; the running totals live on each
+        league&apos;s track record page. New here?{" "}
+        <Link
+          href="/how-it-works"
+          className="underline hover:text-zinc-300 light:hover:text-zinc-900"
+        >
+          How Honest Line works
+        </Link>{" "}
+        explains how the picks are made and graded.
+      </p>
     </div>
   );
 }

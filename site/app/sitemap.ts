@@ -4,9 +4,11 @@ import type { MetadataRoute } from "next";
 // they return 401 behind HTTP Basic Auth and listing them would create crawl errors.
 const routes = [
   "",
+  "/about",
   "/accuracy",
   "/calibration",
   "/disclaimer",
+  "/how-it-works",
   "/live",
   "/pick-em",
   "/privacy",
