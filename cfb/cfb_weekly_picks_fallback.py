@@ -1,4 +1,4 @@
-"""Week 8 fallback CFB picks (2026-10-24, Bryant-approved one-off).
+"""Week 9 fallback CFB picks (2026-10-29, Bryant-approved one-off).
 
 The normal generator (cfb_weekly_picks.py) pulls the schedule + lines from
 the CFBD API, which hit its monthly quota (429) until ~Nov 1 — the board
@@ -42,7 +42,7 @@ from dynamic_credentials import (  # noqa: E402
 
 DATA = REPO / "data" / "cfb"
 SEASON = 2026
-WEEK = 8
+WEEK = 9
 
 # Odds API full names that the generic prefix matcher cannot resolve to
 # the model's (CFBD) team names. Verified identities, 2026-10-24.
@@ -64,13 +64,12 @@ def norm(name: str) -> str:
 
 
 def fetch_espn_pre_games() -> list:
-    """Week 8 games ESPN still marks pre-kickoff, today and tomorrow (ET)."""
-    now_et = pd.Timestamp.now("America/New_York")
+    """Week 9 games ESPN still marks pre-kickoff, Thu 2026-10-29 through Sat 2026-10-31 (ET)."""
     out, seen = [], set()
-    for day in (now_et, now_et + pd.Timedelta(days=1)):
+    for date_str in ("20261029", "20261030", "20261031"):
         url = ("https://site.api.espn.com/apis/site/v2/sports/football/"
                "college-football/scoreboard?dates="
-               f"{day.strftime('%Y%m%d')}&groups=80&limit=300")
+               f"{date_str}&groups=80&limit=300")
         with urllib.request.urlopen(url, timeout=30) as r:
             d = json.load(r)
         for e in d.get("events", []):
@@ -235,7 +234,7 @@ def main() -> None:
     picks.sort(key=lambda p: (p["gameday"], p["away"], p["home"]))
 
     disclosure = (
-        "Week 8 board, published from fallback data: our primary college "
+        "Week 9 board, published from fallback data: our primary college "
         "feed hit its monthly limit, so team ratings run through Week 6, "
         "the schedule is ESPN's, and market lines come via The Odds API. "
         "Games that had already kicked off are not picked — nothing here "
