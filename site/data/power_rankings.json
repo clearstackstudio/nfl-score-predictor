@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 8,
-  "updated": "2026-10-27 08:41 PDT",
+  "updated": "2026-10-30 09:42 PDT",
   "note": "Model-internal predictive ratings: expected margin vs an average team on a neutral field, before weekly QB/weather adjustments. Not a resume ranking; moves only on game results.",
   "teams": [
     {
       "rank": 1,
       "team": "Seattle Seahawks",
       "abbr": "SEA",
-      "rating": 11.7,
+      "rating": 11.6,
       "prev_rank": 1
     },
     {
@@ -22,35 +22,35 @@
       "rank": 3,
       "team": "New England Patriots",
       "abbr": "NE",
-      "rating": 8.4,
+      "rating": 8.3,
       "prev_rank": 3
     },
     {
       "rank": 4,
       "team": "San Francisco 49ers",
       "abbr": "SF",
-      "rating": 7.5,
+      "rating": 7.4,
       "prev_rank": 4
     },
     {
       "rank": 5,
       "team": "Buffalo Bills",
       "abbr": "BUF",
-      "rating": 7.0,
+      "rating": 6.9,
       "prev_rank": 5
     },
     {
       "rank": 6,
       "team": "Los Angeles Rams",
       "abbr": "LA",
-      "rating": 6.9,
+      "rating": 6.8,
       "prev_rank": 6
     },
     {
       "rank": 7,
       "team": "Cincinnati Bengals",
       "abbr": "CIN",
-      "rating": 5.2,
+      "rating": 5.1,
       "prev_rank": 13
     },
     {
@@ -62,135 +62,135 @@
     },
     {
       "rank": 9,
-      "team": "Baltimore Ravens",
-      "abbr": "BAL",
-      "rating": 3.4,
-      "prev_rank": 7
+      "team": "Green Bay Packers",
+      "abbr": "GB",
+      "rating": 3.8,
+      "prev_rank": 14
     },
     {
       "rank": 10,
       "team": "Minnesota Vikings",
       "abbr": "MIN",
-      "rating": 3.3,
+      "rating": 3.5,
       "prev_rank": 11
     },
     {
       "rank": 11,
       "team": "Chicago Bears",
       "abbr": "CHI",
-      "rating": 3.2,
+      "rating": 3.4,
       "prev_rank": 10
     },
     {
       "rank": 12,
-      "team": "Green Bay Packers",
-      "abbr": "GB",
-      "rating": 2.8,
-      "prev_rank": 14
+      "team": "Baltimore Ravens",
+      "abbr": "BAL",
+      "rating": 3.4,
+      "prev_rank": 7
     },
     {
       "rank": 13,
       "team": "Houston Texans",
       "abbr": "HOU",
-      "rating": 2.0,
+      "rating": 1.9,
       "prev_rank": 8
     },
     {
       "rank": 14,
       "team": "Kansas City Chiefs",
       "abbr": "KC",
-      "rating": 1.7,
+      "rating": 1.6,
       "prev_rank": 12
     },
     {
       "rank": 15,
+      "team": "Detroit Lions",
+      "abbr": "DET",
+      "rating": 1.0,
+      "prev_rank": 15
+    },
+    {
+      "rank": 16,
       "team": "Atlanta Falcons",
       "abbr": "ATL",
       "rating": 1.0,
       "prev_rank": 16
     },
     {
-      "rank": 16,
-      "team": "Detroit Lions",
-      "abbr": "DET",
-      "rating": 0.8,
-      "prev_rank": 15
-    },
-    {
       "rank": 17,
       "team": "Indianapolis Colts",
       "abbr": "IND",
-      "rating": -0.9,
+      "rating": -1.0,
       "prev_rank": 17
     },
     {
       "rank": 18,
       "team": "Tampa Bay Buccaneers",
       "abbr": "TB",
-      "rating": -1.3,
+      "rating": -1.4,
       "prev_rank": 24
     },
     {
       "rank": 19,
       "team": "Pittsburgh Steelers",
       "abbr": "PIT",
-      "rating": -1.9,
+      "rating": -2.0,
       "prev_rank": 20
     },
     {
       "rank": 20,
       "team": "New Orleans Saints",
       "abbr": "NO",
-      "rating": -2.1,
+      "rating": -2.2,
       "prev_rank": 21
     },
     {
       "rank": 21,
       "team": "Los Angeles Chargers",
       "abbr": "LAC",
-      "rating": -2.2,
+      "rating": -2.3,
       "prev_rank": 19
     },
     {
       "rank": 22,
-      "team": "Carolina Panthers",
-      "abbr": "CAR",
-      "rating": -2.5,
-      "prev_rank": 18
-    },
-    {
-      "rank": 23,
       "team": "New York Giants",
       "abbr": "NYG",
       "rating": -2.6,
       "prev_rank": 26
     },
     {
+      "rank": 23,
+      "team": "Carolina Panthers",
+      "abbr": "CAR",
+      "rating": -2.7,
+      "prev_rank": 18
+    },
+    {
       "rank": 24,
       "team": "Cleveland Browns",
       "abbr": "CLE",
-      "rating": -2.9,
+      "rating": -3.0,
       "prev_rank": 22
     },
     {
       "rank": 25,
       "team": "Dallas Cowboys",
       "abbr": "DAL",
-      "rating": -4.2,
+      "rating": -4.1,
       "prev_rank": 27
     },
     {
       "rank": 26,
       "team": "Arizona Cardinals",
       "abbr": "ARI",
-      "rating": -5.3,
+      "rating": -5.4,
       "prev_rank": 25
     },
     {
       "rank": 27,
       "team": "Philadelphia Eagles",
       "abbr": "PHI",
-      "rating": -6.1,
+      "rating": -6.2,
       "prev_rank": 23
     },
     {
@@ -202,23 +202,23 @@
     },
     {
       "rank": 29,
-      "team": "Miami Dolphins",
-      "abbr": "MIA",
-      "rating": -7.3,
-      "prev_rank": 28
-    },
-    {
-      "rank": 30,
       "team": "Las Vegas Raiders",
       "abbr": "LV",
       "rating": -7.3,
       "prev_rank": 29
     },
     {
+      "rank": 30,
+      "team": "Miami Dolphins",
+      "abbr": "MIA",
+      "rating": -7.4,
+      "prev_rank": 28
+    },
+    {
       "rank": 31,
       "team": "Washington Commanders",
       "abbr": "WAS",
-      "rating": -8.6,
+      "rating": -8.7,
       "prev_rank": 31
     },
     {
