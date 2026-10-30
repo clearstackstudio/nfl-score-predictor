@@ -2307,7 +2307,13 @@
           "cover_prob": 0.5,
           "ou_prob": 0.515,
           "home_qb": "Jordan Love",
-          "away_qb": "Bryce Young"
+          "away_qb": "Bryce Young",
+          "result": {
+            "home_score": 27,
+            "away_score": 19,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Baltimore Ravens",
