@@ -1,15 +1,20 @@
 # Backup-QB Rating Haircut — Implementation Test Pre-Registration
 
-## ⚠️ DRAFT — NOT FROZEN, NOT RUN
+## ❄️ FREEZE RECORD — 2026-10-29
 
-Status: **DRAFT ONLY.** Prepared 2026-10-29 after Bryant approved
+**FROZEN 2026-10-29** by Bryant's approval: **"Freeze it as written and
+run the test"** (options-widget tap, 2026-10-29 21:06 PT). The design
+below — the single 1.0-pt haircut (§1), the backup definition (§2),
+composition with the QB adjustment (§3), the evaluation procedure
+including τ = 0.5 play selection (§4), and the adopt bar (§5, proposed in
+draft and now frozen exactly as written) — is locked. **No design edits
+after this freeze.** The run follows in `HAIRCUT-RESULTS.md`; no live-model
+change is made by the run, whatever the verdict (§6).
+
+History: prepared 2026-10-29 as a DRAFT after Bryant approved
 pre-registering this test ("Pre-register the backup haircut test",
-options-widget tap, 2026-10-29 20:58 PT). The adopt-bar numbers in §5 are
-**PROPOSED** and marked as such. Nothing in this document is frozen until
-Bryant approves the draft as written; nothing has been run; **no model or
-code change has been made.** Freezing, when it happens, will be recorded in
-a freeze block at the top of this file, as with
-`FOLLOWUP-SCOPE-2026-10-26.md`.
+options-widget tap, 2026-10-29 20:58 PT), following the freeze-block
+convention of `FOLLOWUP-SCOPE-2026-10-26.md`.
 
 Parent diagnostic: `BACKUP-QB-RESULTS.md` (run 2026-10-29 under the frozen
 scope in `FOLLOWUP-SCOPE-2026-10-26.md`). Measured effect: in backup-QB
@@ -177,12 +182,12 @@ winner count below.
    restricted to the sensitivity population (true fill-ins, §2), and the
    per-season table for both-backup games.
 
-## 5. Adopt bar — PROPOSED numbers (Bryant's approval required to freeze)
+## 5. Adopt bar — FROZEN 2026-10-29 (proposed in draft, approved as written)
 
-All four conditions must hold. These numbers are **PROPOSED**, chosen
-against the diagnostic baselines (~50 backup-involved plays and ~22
-winners per season), and are not in force until Bryant approves this
-draft and it is frozen.
+All four conditions must hold. These numbers were chosen against the
+diagnostic baselines (~50 backup-involved plays and ~22 winners per
+season) and were **frozen exactly as proposed** by Bryant's 2026-10-29
+approval (see the freeze record at the top of this file).
 
 1. **Pooled net winners gained on affected plays ≥ +5** over 2021–2025
    (an average of ≥ +1 winner per season — the smallest gain worth a
