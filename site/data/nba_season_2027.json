@@ -2471,8 +2471,8 @@
       "preseason": false,
       "warming_up": true,
       "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Cleveland Cavaliers",
@@ -2499,7 +2499,12 @@
             "away": "Cleveland Cavaliers +1"
           },
           "cover_prob": 0.505,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 114.0,
+            "away_score": 111.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Sacramento Kings",
@@ -2526,7 +2531,12 @@
             "away": "Sacramento Kings +5.5"
           },
           "cover_prob": 0.508,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 132.0,
+            "away_score": 120.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Memphis Grizzlies",
@@ -2553,7 +2563,12 @@
             "away": "Memphis Grizzlies +7.5"
           },
           "cover_prob": 0.506,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 103.0,
+            "away_score": 124.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -2577,10 +2592,9 @@
             "prob": 0.505
           }
         ],
-        "combined_prob": 0.13,
-        "fair_odds": "+669",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-10-29 23:40 PDT"
     },
     "2026-10-30": {
       "date": "2026-10-30",
