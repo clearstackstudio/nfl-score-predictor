@@ -101,7 +101,12 @@
         "away": "Baylor -1"
       },
       "cover_prob": 0.506,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 9,
+        "away_score": 41,
+        "ats": "win"
+      }
     },
     {
       "away": "Kent State",
@@ -157,7 +162,13 @@
         "away": "Tulane -9.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.527
+      "ou_prob": 0.527,
+      "result": {
+        "home_score": 31,
+        "away_score": 38,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Arizona",
