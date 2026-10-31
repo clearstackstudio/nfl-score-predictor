@@ -2901,6 +2901,204 @@
         "fair_odds": "+619",
         "book_pays": "+600"
       }
+    },
+    "2026-10-31": {
+      "date": "2026-10-31",
+      "generated": "2026-10-30 21:39 PDT",
+      "preseason": false,
+      "warming_up": true,
+      "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Portland Trail Blazers",
+          "home": "Utah Jazz",
+          "away_abbr": "Portland Trail Blazers",
+          "home_abbr": "Utah Jazz",
+          "gameday": "2026-10-31",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -6.5,
+          "line_total": 231.5,
+          "our_spread": -3.0,
+          "our_total": 236.8,
+          "spread_edge": 3.5,
+          "total_edge": 5.3,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Utah Jazz +6.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Utah Jazz +6.5",
+            "away": "Portland Trail Blazers -6.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Philadelphia 76ers",
+          "home": "Charlotte Hornets",
+          "away_abbr": "Philadelphia 76ers",
+          "home_abbr": "Charlotte Hornets",
+          "gameday": "2026-10-31",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -1.5,
+          "line_total": 216.5,
+          "our_spread": 2.3,
+          "our_total": 213.6,
+          "spread_edge": 3.8,
+          "total_edge": -2.9,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Charlotte Hornets +1.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Charlotte Hornets +1.5",
+            "away": "Philadelphia 76ers -1.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Atlanta Hawks",
+          "home": "New Orleans Pelicans",
+          "away_abbr": "Atlanta Hawks",
+          "home_abbr": "New Orleans Pelicans",
+          "gameday": "2026-10-31",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -4.5,
+          "line_total": 240.5,
+          "our_spread": -2.3,
+          "our_total": 238.0,
+          "spread_edge": 2.2,
+          "total_edge": -2.5,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "New Orleans Pelicans +4.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "New Orleans Pelicans +4.5",
+            "away": "Atlanta Hawks -4.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Cleveland Cavaliers",
+          "home": "Milwaukee Bucks",
+          "away_abbr": "Cleveland Cavaliers",
+          "home_abbr": "Milwaukee Bucks",
+          "gameday": "2026-10-31",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -9.0,
+          "line_total": 237.5,
+          "our_spread": -3.2,
+          "our_total": 235.1,
+          "spread_edge": 5.8,
+          "total_edge": -2.4,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Milwaukee Bucks +9",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Milwaukee Bucks +9",
+            "away": "Cleveland Cavaliers -9"
+          },
+          "cover_prob": 0.523,
+          "ou_prob": null
+        },
+        {
+          "away": "Sacramento Kings",
+          "home": "Memphis Grizzlies",
+          "away_abbr": "Sacramento Kings",
+          "home_abbr": "Memphis Grizzlies",
+          "gameday": "2026-10-31",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 10.5,
+          "line_total": 233.5,
+          "our_spread": 6.4,
+          "our_total": 235.6,
+          "spread_edge": -4.1,
+          "total_edge": 2.1,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Sacramento Kings +10.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Memphis Grizzlies -10.5",
+            "away": "Sacramento Kings +10.5"
+          },
+          "cover_prob": 0.504,
+          "ou_prob": null
+        },
+        {
+          "away": "Minnesota Timberwolves",
+          "home": "San Antonio Spurs",
+          "away_abbr": "Minnesota Timberwolves",
+          "home_abbr": "San Antonio Spurs",
+          "gameday": "2026-10-31",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 12.5,
+          "line_total": 226.5,
+          "our_spread": 6.8,
+          "our_total": 231.0,
+          "spread_edge": -5.7,
+          "total_edge": 4.5,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Minnesota Timberwolves +12.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "San Antonio Spurs -12.5",
+            "away": "Minnesota Timberwolves +12.5"
+          },
+          "cover_prob": 0.523,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Cleveland Cavaliers @ Milwaukee Bucks",
+            "market": "spread",
+            "label": "Milwaukee Bucks +9",
+            "prob": 0.523
+          },
+          {
+            "game": "Minnesota Timberwolves @ San Antonio Spurs",
+            "market": "spread",
+            "label": "Minnesota Timberwolves +12.5",
+            "prob": 0.523
+          },
+          {
+            "game": "Sacramento Kings @ Memphis Grizzlies",
+            "market": "spread",
+            "label": "Sacramento Kings +10.5",
+            "prob": 0.504
+          }
+        ],
+        "combined_prob": 0.138,
+        "fair_odds": "+625",
+        "book_pays": "+600"
+      }
     }
   }
 }
