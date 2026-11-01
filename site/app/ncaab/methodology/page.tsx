@@ -64,23 +64,31 @@ export default function NcaabMethodology() {
         <>
           <p>
             The verdict is plain: <span className="font-semibold text-zinc-100 light:text-zinc-900">no betting edge</span>.
-            Walk-forward over 2013–2026 (47,794 regular and postseason games),
-            the model&rsquo;s margin RMSE is <span className="font-semibold text-zinc-100 light:text-zinc-900">12.17 vs the closing line&rsquo;s 11.04</span> —
-            1.13 points worse. Totals are 18.05 vs 16.90 — 1.15 points worse.
+            Walk-forward over 2013–2026 (64,267 regular and postseason games),
+            the model&rsquo;s margin RMSE is <span className="font-semibold text-zinc-100 light:text-zinc-900">12.13 vs the closing line&rsquo;s 11.07</span> —
+            1.06 points worse. Totals are 17.81 vs 16.79 — 1.02 points worse.
             The line is simply better at this than we are.
           </p>
           <p>
             Against the spread, at the 0.5-point disagreement threshold:{" "}
-            <span className="font-semibold text-zinc-100 light:text-zinc-900">16,868-17,093-488 — 49.7%</span>.
+            <span className="font-semibold text-zinc-100 light:text-zinc-900">22,614-22,906-566 — 49.7%</span>.
             Breaking even at standard -110 vig requires 52.4%. Totals are
-            15,366-14,817-200, <span className="font-semibold text-zinc-100 light:text-zinc-900">50.9%</span> — also
+            18,789-18,545-228, <span className="font-semibold text-zinc-100 light:text-zinc-900">50.3%</span> — also
             below break-even.
           </p>
           <p>
             It&rsquo;s stable rather than decaying: ATS 48.9% (2013–16) →
-            49.8% (2017–20) → 50.2% (2021–26) — improving, but no era comes
-            close to an edge. The model is a competent forecaster (70.4%
+            49.5% (2017–20) → 50.1% (2021–26) — improving, but no era comes
+            close to an edge. The model is a competent forecaster (70.7%
             straight-up), but competence isn&rsquo;t profit.
+          </p>
+          <p>
+            Re-run note — November 1, 2026: the first published backtest
+            (October 2026) was missing the 2022–2024 seasons entirely; our
+            data provider&rsquo;s monthly quota ran out mid-pull. Those
+            seasons have been backfilled, and every figure on this page comes
+            from the re-run on the complete, continuous dataset. The verdict
+            did not move.
           </p>
           <p>
             This model is <span className="font-semibold text-zinc-100 light:text-zinc-900">not a betting tool</span>.

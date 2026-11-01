@@ -30,7 +30,7 @@ const sections = [
     title: "Tested before trusted",
     body: [
       "Before any model publishes a live pick, it is validated with a walk-forward backtest: the model is re-run through history using only the information that would have been available at the time, and its picks are graded against the historical closing lines. No peeking, no hindsight-tuned parameters.",
-      "The results are published whether they flatter us or not. Our college football backtest covers 8,947 games and grades 49.3% against the spread and 50.8% on totals. The NBA backtest covers 18,552 games at 50.4% against the spread. College basketball: 47,794 games at 49.5% against the spread. The MLB model picked the correct winner in 55.6% of 22,765 games. The NFL model's multi-decade backtest is published on the track record page.",
+      "The results are published whether they flatter us or not. Our college football backtest covers 8,947 games and grades 49.3% against the spread and 50.8% on totals. The NBA backtest covers 18,552 games at 50.4% against the spread. College basketball: 64,267 games at 49.7% against the spread. The MLB model picked the correct winner in 55.6% of 22,765 games. The NFL model's multi-decade backtest is published on the track record page.",
       "Read those numbers honestly: at standard -110 odds, a bettor needs about 52.4% against the spread to break even. Our backtests do not clear that bar, and we do not claim a betting edge. What they show is a model that is roughly as accurate as the market itself — which is exactly why we think the honest public record, not a sales pitch, is the interesting product here.",
     ],
   },

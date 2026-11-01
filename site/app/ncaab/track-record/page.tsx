@@ -113,6 +113,30 @@ export default function NcaabTrackRecord() {
       </h1>
       <p className="mt-4 max-w-2xl text-sm text-zinc-400 light:text-zinc-600">{rec.model}</p>
 
+      <div className="mt-6 max-w-3xl rounded-2xl border border-red-500/25 bg-red-500/[0.06] p-5 light:bg-red-50">
+        <p className="text-sm font-semibold uppercase tracking-wide text-red-500 light:text-red-700">
+          Update — November 1, 2026
+        </p>
+        <p className="mt-2 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+          This backtest was re-run on the completed dataset. The first published
+          run (October 2026) was missing the 2022–2024 seasons entirely — our
+          data provider&rsquo;s monthly quota ran out mid-pull, which we
+          disclosed at the time. Those seasons are now backfilled, the history
+          is continuous 2013–2026, and the per-season table below is published
+          in full for the first time. The first write-up also headlined figures
+          that didn&rsquo;t match its own saved run; the numbers here, in the
+          write-up, and in the saved results file now agree exactly. The
+          verdict did not move.
+        </p>
+        <p className="mt-2 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+          Old → new: games 47,794 → 64,267 · ATS 16,744-17,090-473 (49.5%) →
+          22,614-22,906-566 (49.7%) · over/under 14,569-14,252-193 (50.6%) →
+          18,789-18,545-228 (50.3%) · margin RMSE 12.17 → 12.13 (closing line
+          11.04 → 11.07). Nothing was quietly edited — the previous figures
+          remain in the site&rsquo;s version history.
+        </p>
+      </div>
+
       {overall && (
         <>
           <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
