@@ -3148,6 +3148,126 @@
         "fair_odds": "+625",
         "book_pays": "+600"
       }
+    },
+    "2026-11-01": {
+      "date": "2026-11-01",
+      "generated": "2026-10-31 21:39 PDT",
+      "preseason": false,
+      "warming_up": true,
+      "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Boston Celtics",
+          "home": "Orlando Magic",
+          "away_abbr": "Boston Celtics",
+          "home_abbr": "Orlando Magic",
+          "gameday": "2026-11-01",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -6.5,
+          "line_total": 223.5,
+          "our_spread": -1.4,
+          "our_total": 229.3,
+          "spread_edge": 5.1,
+          "total_edge": 5.8,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Orlando Magic +6.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Orlando Magic +6.5",
+            "away": "Boston Celtics -6.5"
+          },
+          "cover_prob": 0.517,
+          "ou_prob": null
+        },
+        {
+          "away": "Brooklyn Nets",
+          "home": "Indiana Pacers",
+          "away_abbr": "Brooklyn Nets",
+          "home_abbr": "Indiana Pacers",
+          "gameday": "2026-11-01",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 4.0,
+          "line_total": 230.5,
+          "our_spread": 4.4,
+          "our_total": 232.2,
+          "spread_edge": 0.4,
+          "total_edge": 1.7,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Indiana Pacers -4",
+            "away": "Brooklyn Nets +4"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Los Angeles Clippers",
+          "home": "Golden State Warriors",
+          "away_abbr": "Los Angeles Clippers",
+          "home_abbr": "Golden State Warriors",
+          "gameday": "2026-11-01",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 2.5,
+          "line_total": 219.5,
+          "our_spread": 2.8,
+          "our_total": 226.7,
+          "spread_edge": 0.3,
+          "total_edge": 7.2,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Golden State Warriors -2.5",
+            "away": "Los Angeles Clippers +2.5"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Toronto Raptors",
+          "home": "Los Angeles Lakers",
+          "away_abbr": "Toronto Raptors",
+          "home_abbr": "Los Angeles Lakers",
+          "gameday": "2026-11-01",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 4.5,
+          "line_total": 227.5,
+          "our_spread": 4.5,
+          "our_total": 227.4,
+          "spread_edge": 0.0,
+          "total_edge": -0.1,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Los Angeles Lakers -4.5",
+            "away": "Toronto Raptors +4.5"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        }
+      ],
+      "parlay": null
     }
   }
 }
