@@ -2957,8 +2957,8 @@
       "preseason": false,
       "warming_up": true,
       "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Portland Trail Blazers",
@@ -2985,7 +2985,12 @@
             "away": "Portland Trail Blazers -6.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 90.0,
+            "away_score": 112.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Philadelphia 76ers",
@@ -3012,7 +3017,12 @@
             "away": "Philadelphia 76ers -1.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 104.0,
+            "away_score": 109.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Atlanta Hawks",
@@ -3039,7 +3049,12 @@
             "away": "Atlanta Hawks -4.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 121.0,
+            "away_score": 99.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Cleveland Cavaliers",
@@ -3066,7 +3081,12 @@
             "away": "Cleveland Cavaliers -9"
           },
           "cover_prob": 0.523,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 111.0,
+            "away_score": 136.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Sacramento Kings",
@@ -3093,7 +3113,12 @@
             "away": "Sacramento Kings +10.5"
           },
           "cover_prob": 0.504,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 136.0,
+            "away_score": 105.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Minnesota Timberwolves",
@@ -3120,7 +3145,12 @@
             "away": "Minnesota Timberwolves +12.5"
           },
           "cover_prob": 0.523,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 121.0,
+            "away_score": 111.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -3144,10 +3174,9 @@
             "prob": 0.504
           }
         ],
-        "combined_prob": 0.138,
-        "fair_odds": "+625",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-10-31 23:42 PDT"
     },
     "2026-11-01": {
       "date": "2026-11-01",
