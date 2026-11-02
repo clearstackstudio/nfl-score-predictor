@@ -150,7 +150,7 @@ export default function CfbTrackRecord() {
         ))}
       </div>
 
-      <LiveSeason log={seasonLog as SeasonLog} />
+      <LiveSeason log={seasonLog as unknown as SeasonLog} />
 
       <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">ATS by era</h2>
       <p className="mt-1 max-w-2xl text-[15px] leading-relaxed text-zinc-400 light:text-zinc-600">
