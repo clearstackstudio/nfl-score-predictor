@@ -7,8 +7,8 @@
       "generated": "2026-11-01 21:39 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "High Point",
@@ -35,7 +35,13 @@
             "away": "High Point -9.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 57.0,
+            "away_score": 72.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         }
       ],
       "parlay": {
@@ -53,10 +59,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.252,
-        "fair_odds": "+297",
-        "book_pays": "+260"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-02 06:45 PST"
     }
   }
 }
