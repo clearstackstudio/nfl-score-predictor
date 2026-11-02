@@ -3184,8 +3184,8 @@
       "preseason": false,
       "warming_up": true,
       "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Boston Celtics",
@@ -3212,7 +3212,12 @@
             "away": "Boston Celtics -6.5"
           },
           "cover_prob": 0.517,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 97.0,
+            "away_score": 108.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Brooklyn Nets",
@@ -3239,7 +3244,11 @@
             "away": "Brooklyn Nets +4"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 90.0,
+            "away_score": 98.0
+          }
         },
         {
           "away": "Los Angeles Clippers",
@@ -3266,7 +3275,11 @@
             "away": "Los Angeles Clippers +2.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 124.0,
+            "away_score": 112.0
+          }
         },
         {
           "away": "Toronto Raptors",
@@ -3293,10 +3306,15 @@
             "away": "Toronto Raptors +4.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 131.0,
+            "away_score": 125.0
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-01 23:41 PST"
     },
     "2026-11-02": {
       "date": "2026-11-02",
