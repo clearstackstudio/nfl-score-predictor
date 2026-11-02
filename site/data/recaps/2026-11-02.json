@@ -1,0 +1,157 @@
+{
+  "id": "2026-11-02",
+  "title": "Weekly recap \u2014 Nov 2, 2026",
+  "period_label": "NFL Week 7 \u00b7 NBA 2026-11-01 \u00b7 NCAAB 2026-11-01",
+  "published": "2026-11-02",
+  "covers": [
+    {
+      "sport": "nfl",
+      "period": "7"
+    },
+    {
+      "sport": "nba",
+      "period": "2026-11-01"
+    },
+    {
+      "sport": "ncaab",
+      "period": "2026-11-01"
+    }
+  ],
+  "overall": {
+    "ats": [
+      6,
+      8,
+      1
+    ],
+    "ou": [
+      6,
+      3,
+      0
+    ]
+  },
+  "sports": [
+    {
+      "sport": "nfl",
+      "label": "NFL",
+      "period": "Week 7",
+      "ats": [
+        6,
+        6,
+        1
+      ],
+      "ou": [
+        5,
+        3,
+        0
+      ],
+      "n_picks": 14
+    },
+    {
+      "sport": "nba",
+      "label": "NBA",
+      "period": "2026-11-01",
+      "ats": [
+        0,
+        1,
+        0
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ],
+      "n_picks": 4
+    },
+    {
+      "sport": "ncaab",
+      "label": "NCAAB",
+      "period": "2026-11-01",
+      "ats": [
+        0,
+        1,
+        0
+      ],
+      "ou": [
+        1,
+        0,
+        0
+      ],
+      "n_picks": 1
+    }
+  ],
+  "best_call": {
+    "label": "LA -3.5",
+    "kind": "spread",
+    "edge": -5.1,
+    "prob": 0.5,
+    "game": "LA at LV",
+    "score": "35\u201321",
+    "sport": "NFL",
+    "period": "Week 7"
+  },
+  "worst_miss": {
+    "label": "Under 44.5",
+    "kind": "total",
+    "edge": -4.6,
+    "prob": 0.53,
+    "game": "TB at CAR",
+    "score": "43\u201313",
+    "sport": "NFL",
+    "period": "Week 7"
+  },
+  "observation": "About what you'd expect from a coin-flip operation: 12-11. Totals detail: NFL totals 5-3.",
+  "season_to_date": {
+    "nfl": {
+      "label": "NFL",
+      "ats": [
+        26,
+        38,
+        4
+      ],
+      "ou": [
+        21,
+        21,
+        0
+      ]
+    },
+    "cfb": {
+      "label": "CFB",
+      "ats": [
+        89,
+        92,
+        66
+      ],
+      "ou": [
+        62,
+        75,
+        46
+      ]
+    },
+    "nba": {
+      "label": "NBA",
+      "ats": [
+        36,
+        42,
+        13
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ]
+    },
+    "ncaab": {
+      "label": "NCAAB",
+      "ats": [
+        0,
+        1,
+        0
+      ],
+      "ou": [
+        1,
+        0,
+        0
+      ]
+    }
+  }
+}
