@@ -34,7 +34,7 @@
     "fair_odds": "+619",
     "book_pays": "+600",
     "calibration": "empirical-2026-10-09",
-    "result": null
+    "result": "loss"
   },
   "picks": [
     {
@@ -105,7 +105,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Josh Allen",
-      "away_qb": "Lamar Jackson"
+      "away_qb": "Lamar Jackson",
+      "result": {
+        "home_score": 36,
+        "away_score": 10,
+        "ats": "loss"
+      }
     },
     {
       "away": "Tennessee Titans",
@@ -137,7 +142,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Joe Burrow",
-      "away_qb": "Cam Ward"
+      "away_qb": "Cam Ward",
+      "result": {
+        "home_score": 43,
+        "away_score": 36,
+        "ats": "loss"
+      }
     },
     {
       "away": "Arizona Cardinals",
@@ -169,7 +179,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Dak Prescott",
-      "away_qb": "Jacoby Brissett"
+      "away_qb": "Jacoby Brissett",
+      "result": {
+        "home_score": 30,
+        "away_score": 33,
+        "ats": "win"
+      }
     },
     {
       "away": "Minnesota Vikings",
@@ -201,7 +216,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Jared Goff",
-      "away_qb": "Kyler Murray"
+      "away_qb": "Kyler Murray",
+      "result": {
+        "home_score": 19,
+        "away_score": 15,
+        "ats": "loss"
+      }
     },
     {
       "away": "Indianapolis Colts",
@@ -233,7 +253,13 @@
       "cover_prob": 0.501,
       "ou_prob": 0.51,
       "home_qb": "Trevor Lawrence",
-      "away_qb": "Daniel Jones"
+      "away_qb": "Daniel Jones",
+      "result": {
+        "home_score": 42,
+        "away_score": 7,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "Las Vegas Raiders",
@@ -265,7 +291,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.51,
       "home_qb": "Geno Smith",
-      "away_qb": "Kirk Cousins"
+      "away_qb": "Kirk Cousins",
+      "result": {
+        "home_score": 33,
+        "away_score": 38,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Cleveland Browns",
@@ -297,7 +329,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.51,
       "home_qb": "Aaron Rodgers",
-      "away_qb": "Deshaun Watson"
+      "away_qb": "Deshaun Watson",
+      "result": {
+        "home_score": 27,
+        "away_score": 6,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Atlanta Falcons",
@@ -329,7 +367,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.507,
       "home_qb": "Baker Mayfield",
-      "away_qb": "Michael Penix Jr."
+      "away_qb": "Michael Penix Jr.",
+      "result": {
+        "home_score": 16,
+        "away_score": 0,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Los Angeles Chargers",
@@ -361,7 +405,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Matthew Stafford",
-      "away_qb": "Justin Herbert"
+      "away_qb": "Justin Herbert",
+      "result": {
+        "home_score": 24,
+        "away_score": 9,
+        "ats": "win"
+      }
     },
     {
       "away": "Kansas City Chiefs",
@@ -393,7 +442,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.522,
       "home_qb": "Bo Nix",
-      "away_qb": "Patrick Mahomes"
+      "away_qb": "Patrick Mahomes",
+      "result": {
+        "home_score": 28,
+        "away_score": 24,
+        "ats": "win",
+        "ou": "loss"
+      }
     },
     {
       "away": "New England Patriots",
@@ -425,7 +480,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.514,
       "home_qb": "Malik Willis",
-      "away_qb": "Drake Maye"
+      "away_qb": "Drake Maye",
+      "result": {
+        "home_score": 19,
+        "away_score": 24,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Philadelphia Eagles",
@@ -457,7 +518,12 @@
       "cover_prob": 0.503,
       "ou_prob": null,
       "home_qb": "Jayden Daniels",
-      "away_qb": "Tanner McKee"
+      "away_qb": "Tanner McKee",
+      "result": {
+        "home_score": 27,
+        "away_score": 10,
+        "ats": "loss"
+      }
     },
     {
       "away": "Chicago Bears",
