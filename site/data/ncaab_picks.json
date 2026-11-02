@@ -1,13 +1,58 @@
 {
   "sport": "ncaab",
   "season": 2027,
-  "date": "2026-10-09",
+  "date": "2026-11-01",
   "preseason": false,
   "experimental_note": null,
-  "generated": "2026-10-09 21:20 PDT",
+  "generated": "2026-11-01 21:39 PST",
   "disclaimer": "Model probabilities for entertainment. Our backtest shows no proven edge vs the closing line \u2014 track record published openly.",
-  "parlay": null,
-  "picks": [],
-  "pending_reason": "No NCAAB games with logged lines yet. The 2026-27 regular season starts Nov 1, 2026; daily picks begin with the nightly odds logging on Nov 1.",
-  "odds_snapshot": null
+  "parlay": {
+    "legs": [
+      {
+        "game": "High Point @ Liberty",
+        "market": "total",
+        "label": "Under 156.5",
+        "prob": 0.504
+      },
+      {
+        "game": "High Point @ Liberty",
+        "market": "spread",
+        "label": "Liberty +9.5",
+        "prob": 0.5
+      }
+    ],
+    "combined_prob": 0.252,
+    "fair_odds": "+297",
+    "book_pays": "+260"
+  },
+  "picks": [
+    {
+      "away": "High Point",
+      "home": "Liberty",
+      "away_abbr": "High Point",
+      "home_abbr": "Liberty",
+      "gameday": "2026-11-01",
+      "weekday": "Sunday",
+      "neutral": false,
+      "preseason": false,
+      "line_spread": -9.5,
+      "line_total": 156.5,
+      "our_spread": -0.8,
+      "our_total": 155.0,
+      "spread_edge": 8.7,
+      "total_edge": -1.5,
+      "pick_spread": "home",
+      "pick_total": "under",
+      "pick_spread_label": "Liberty +9.5",
+      "pick_total_label": "Under 156.5",
+      "pick_total_note": null,
+      "spread_labels": {
+        "home": "Liberty +9.5",
+        "away": "High Point -9.5"
+      },
+      "cover_prob": 0.5,
+      "ou_prob": 0.504
+    }
+  ],
+  "odds_snapshot": "2026-11-01"
 }
