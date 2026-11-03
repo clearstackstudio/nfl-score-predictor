@@ -3322,8 +3322,8 @@
       "preseason": false,
       "warming_up": true,
       "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Oklahoma City Thunder",
@@ -3350,7 +3350,12 @@
             "away": "Oklahoma City Thunder +4"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 112.0,
+            "away_score": 117.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Atlanta Hawks",
@@ -3377,7 +3382,12 @@
             "away": "Atlanta Hawks -4.5"
           },
           "cover_prob": 0.507,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 104.0,
+            "away_score": 108.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Brooklyn Nets",
@@ -3404,7 +3414,12 @@
             "away": "Brooklyn Nets +15"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 103.0,
+            "away_score": 90.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Detroit Pistons",
@@ -3431,7 +3446,12 @@
             "away": "Detroit Pistons -4"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 91.0,
+            "away_score": 124.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Chicago Bulls",
@@ -3458,7 +3478,12 @@
             "away": "Chicago Bulls +11.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 126.0,
+            "away_score": 107.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Washington Wizards",
@@ -3485,7 +3510,12 @@
             "away": "Washington Wizards +2.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 94.0,
+            "away_score": 103.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Sacramento Kings",
@@ -3512,7 +3542,12 @@
             "away": "Sacramento Kings +9.75"
           },
           "cover_prob": 0.502,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 100.0,
+            "away_score": 115.0,
+            "ats": "win"
+          }
         },
         {
           "away": "New Orleans Pelicans",
@@ -3539,7 +3574,12 @@
             "away": "New Orleans Pelicans +5.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 134.0,
+            "away_score": 135.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Milwaukee Bucks",
@@ -3566,7 +3606,12 @@
             "away": "Milwaukee Bucks +10.5"
           },
           "cover_prob": 0.506,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 112.0,
+            "away_score": 100.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Boston Celtics",
@@ -3593,7 +3638,12 @@
             "away": "Boston Celtics +5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 109.0,
+            "away_score": 93.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Utah Jazz",
@@ -3620,7 +3670,12 @@
             "away": "Utah Jazz +16"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 119.0,
+            "away_score": 97.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Portland Trail Blazers",
@@ -3647,7 +3702,11 @@
             "away": "Portland Trail Blazers +4"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 110.0,
+            "away_score": 118.0
+          }
         },
         {
           "away": "Phoenix Suns",
@@ -3674,7 +3733,12 @@
             "away": "Phoenix Suns +4.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 116.0,
+            "away_score": 113.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Miami Heat",
@@ -3701,7 +3765,12 @@
             "away": "Miami Heat +1.5"
           },
           "cover_prob": 0.502,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 138.0,
+            "away_score": 117.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -3725,10 +3794,9 @@
             "prob": 0.502
           }
         ],
-        "combined_prob": 0.129,
-        "fair_odds": "+675",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-02 23:40 PST"
     },
     "2026-11-04": {
       "date": "2026-11-04",
