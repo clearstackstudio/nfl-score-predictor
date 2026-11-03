@@ -2275,7 +2275,7 @@
     },
     "8": {
       "generated": "2026-10-30 15:32 PDT",
-      "complete": false,
+      "complete": true,
       "picks": [
         {
           "away": "Carolina Panthers",
@@ -2795,7 +2795,12 @@
           "cover_prob": 0.5,
           "ou_prob": null,
           "home_qb": "Sam Darnold",
-          "away_qb": "Caleb Williams"
+          "away_qb": "Caleb Williams",
+          "result": {
+            "home_score": 17,
+            "away_score": 34,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
