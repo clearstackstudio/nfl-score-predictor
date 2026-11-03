@@ -13,12 +13,20 @@ an unmappable name so a silent mis-join can never train the model).
 """
 from __future__ import annotations
 
-# Canonical name (CBBD) -> Odds API full name(s) known to need overrides.
-# The heuristic handles the common "<School> <Mascot>" pattern; only the
-# exceptions live here.
+# Odds API full name -> canonical CBBD name, for names the trailing-word
+# heuristic cannot reach (abbreviations like "St"/"CSU", renamed schools,
+# shortened forms). The heuristic handles the common "<School> <Mascot>"
+# pattern; only the exceptions live here.
 KNOWN_OVERRIDES: dict[str, str] = {
-    # filled in as misses surface during the November 2026 odds-logging
-    # shakeout; the heuristic covers the standard cases.
+    # November 2026 odds-logging shakeout misses (each target verified
+    # against the CBBD D1 list in data/ncaab/raw/ and games.csv):
+    "East Tennessee St Buccaneers": "East Tennessee State",
+    "Seattle Redhawks": "Seattle U",
+    "Cleveland St Vikings": "Cleveland State",
+    "Coppin St Eagles": "Coppin State",
+    "CSU Fullerton Titans": "Cal State Fullerton",
+    "Cal Baptist Lancers": "California Baptist",
+    "Fort Wayne Mastodons": "Purdue Fort Wayne",
 }
 
 

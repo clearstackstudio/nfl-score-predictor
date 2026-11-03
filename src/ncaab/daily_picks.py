@@ -437,9 +437,21 @@ def main() -> None:
     export_power_rankings(model, season, canon)
     seen = set()
     picks = []
+    skipped_unmappable: list[str] = []
     for g in sorted(day_games, key=lambda x: x["commence_time"]):
-        home = normalize_team(g["home_team"], canon)
-        away = normalize_team(g["away_team"], canon)
+        try:
+            home = normalize_team(g["home_team"], canon)
+            away = normalize_team(g["away_team"], canon)
+        except ValueError as e:
+            # One bad Odds API name must never kill the whole slate:
+            # skip the game loudly (cf. the merge swap-fix hardening).
+            # Training rows still fail loud -- this tolerance applies
+            # only to the nightly odds snapshot.
+            skipped_unmappable.append(
+                f"{g['away_team']} @ {g['home_team']}")
+            print(f"  WARNING: skipping game with unmappable team "
+                  f"name: {e}")
+            continue
         if (home, away) in seen:
             continue
         seen.add((home, away))
@@ -527,6 +539,11 @@ def main() -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(out, indent=2))
     print(f"{len(picks)} games -> {dest}")
+    if skipped_unmappable:
+        print(f"WARNING: {len(skipped_unmappable)} game(s) skipped -- "
+              f"unmappable Odds API team name(s): "
+              f"{'; '.join(skipped_unmappable)}. Add verified aliases "
+              f"to KNOWN_OVERRIDES in src/ncaab/teams.py.")
 
     log_path = SITE_DATA / f"ncaab_season_{season}.json"
     log = json.loads(log_path.read_text()) if log_path.exists() \
