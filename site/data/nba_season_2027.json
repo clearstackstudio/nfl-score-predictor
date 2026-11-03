@@ -3729,6 +3729,90 @@
         "fair_odds": "+675",
         "book_pays": "+600"
       }
+    },
+    "2026-11-04": {
+      "date": "2026-11-04",
+      "generated": "2026-11-02 21:39 PST",
+      "preseason": false,
+      "warming_up": true,
+      "experimental_note": "Early season -- the model's ratings are still warming up on this season's games: it has not yet seen five regular-season games per team, so the ratings lean on prior seasons more than usual. Treat these picks as experimental and provisional.",
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Philadelphia 76ers",
+          "home": "Detroit Pistons",
+          "away_abbr": "Philadelphia 76ers",
+          "home_abbr": "Detroit Pistons",
+          "gameday": "2026-11-04",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 1.5,
+          "line_total": 219.5,
+          "our_spread": 6.8,
+          "our_total": 218.6,
+          "spread_edge": 5.3,
+          "total_edge": -0.9,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Detroit Pistons -1.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Detroit Pistons -1.5",
+            "away": "Philadelphia 76ers +1.5"
+          },
+          "cover_prob": 0.52,
+          "ou_prob": null
+        },
+        {
+          "away": "Dallas Mavericks",
+          "home": "San Antonio Spurs",
+          "away_abbr": "Dallas Mavericks",
+          "home_abbr": "San Antonio Spurs",
+          "gameday": "2026-11-04",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 12.5,
+          "line_total": 229.5,
+          "our_spread": 9.7,
+          "our_total": 232.1,
+          "spread_edge": -2.8,
+          "total_edge": 2.6,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Dallas Mavericks +12.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "San Antonio Spurs -12.5",
+            "away": "Dallas Mavericks +12.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Philadelphia 76ers @ Detroit Pistons",
+            "market": "spread",
+            "label": "Detroit Pistons -1.5",
+            "prob": 0.52
+          },
+          {
+            "game": "Dallas Mavericks @ San Antonio Spurs",
+            "market": "spread",
+            "label": "Dallas Mavericks +12.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.26,
+        "fair_odds": "+285",
+        "book_pays": "+260"
+      }
     }
   }
 }
