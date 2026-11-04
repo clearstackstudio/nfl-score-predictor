@@ -107,9 +107,36 @@ def load_qb_overrides(season: int, week: int) -> dict:
                       (r.away_qb_name, r.away_qb_id)):
             if nm and i == i:
                 name_to_id[_norm_qb_name(nm)] = str(i)
+    def _pbp_id_for(team: str, name: str):
+        """Fallback for a QB who has thrown passes but has never been a
+        listed schedule starter (emergency / third-string starters — e.g.
+        Joe Fagnano, BAL, 2026-11-03: no schedule row carries his name, so
+        the schedule map above can never resolve him). Play-by-play passer
+        names are abbreviated ('J.Fagnano'); match on first initial +
+        surname among that team's passers this season, and only accept a
+        unique match."""
+        parts = _norm_qb_name(name).split()
+        if len(parts) < 2:
+            return None
+        initial, surname = parts[0][0], parts[-1]
+        f = DATA / f"play_by_play_{season}.parquet"
+        if not f.exists():
+            return None
+        pbp = pd.read_parquet(f, columns=["posteam", "passer", "passer_id"])
+        pbp = pbp[(pbp["posteam"] == team) & pbp["passer_id"].notna()]
+        ids = set()
+        for nm, i in zip(pbp["passer"], pbp["passer_id"]):
+            if not nm or "." not in str(nm):
+                continue
+            ini, sur = str(nm).split(".", 1)
+            if ini.strip().lower() == initial and \
+                    _norm_qb_name(sur.strip()) == surname:
+                ids.add(str(i))
+        return ids.pop() if len(ids) == 1 else None
+
     out = {}
     for team, name in cfg.get("starters", {}).items():
-        qid = name_to_id.get(_norm_qb_name(name))
+        qid = name_to_id.get(_norm_qb_name(name)) or _pbp_id_for(team, name)
         if qid:
             out[team] = (qid, name)
         else:
