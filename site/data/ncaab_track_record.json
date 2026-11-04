@@ -261,20 +261,22 @@
     {
       "season": 2027,
       "days": [
-        "2026-11-01"
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03"
       ],
-      "games": 1,
-      "straight_up_pct": 1.0,
-      "our_rmse": 14.2,
-      "line_rmse": 5.5,
-      "ats_w": 0,
-      "ats_l": 1,
+      "games": 23,
+      "straight_up_pct": 0.8261,
+      "our_rmse": 17.8,
+      "line_rmse": 5.02,
+      "ats_w": 4,
+      "ats_l": 17,
       "ats_p": 0,
-      "ats_pct": 0.0,
-      "ou_w": 1,
-      "ou_l": 0,
+      "ats_pct": 0.1905,
+      "ou_w": 5,
+      "ou_l": 5,
       "ou_p": 0,
-      "ou_pct": 1.0
+      "ou_pct": 0.5
     }
   ]
 }

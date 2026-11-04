@@ -61,7 +61,7 @@
         ],
         "result": "loss"
       },
-      "graded_at": "2026-11-02 06:45 PST"
+      "graded_at": "2026-11-04 13:16 PST"
     },
     "2026-11-02": {
       "date": "2026-11-02",
@@ -69,7 +69,7 @@
       "preseason": false,
       "experimental_note": null,
       "graded": true,
-      "complete": false,
+      "complete": true,
       "picks": [
         {
           "away": "Texas Southern",
@@ -97,7 +97,11 @@
           },
           "cover_prob": 0.5,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 103.0,
+            "away_score": 79.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "La Salle",
@@ -189,7 +193,11 @@
           },
           "cover_prob": 0.5,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 94.0,
+            "away_score": 58.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Weber State",
@@ -217,7 +225,11 @@
           },
           "cover_prob": 0.5,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 102.0,
+            "away_score": 61.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Northwestern",
@@ -245,7 +257,12 @@
           },
           "cover_prob": 0.5,
           "ou_prob": 0.504,
-          "result": null
+          "result": {
+            "home_score": 87.0,
+            "away_score": 65.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Radford",
@@ -273,7 +290,12 @@
           },
           "cover_prob": 0.5,
           "ou_prob": 0.505,
-          "result": null
+          "result": {
+            "home_score": 76.0,
+            "away_score": 62.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Colgate",
@@ -301,7 +323,11 @@
           },
           "cover_prob": 0.5,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 90.0,
+            "away_score": 76.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Illinois",
@@ -329,7 +355,10 @@
           },
           "cover_prob": null,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 90.0,
+            "away_score": 85.0
+          }
         },
         {
           "away": "East Tennessee State",
@@ -357,7 +386,10 @@
           },
           "cover_prob": null,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 75.0,
+            "away_score": 65.0
+          }
         },
         {
           "away": "Eastern Washington",
@@ -385,7 +417,11 @@
           },
           "cover_prob": 0.5,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 74.0,
+            "away_score": 65.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Towson",
@@ -413,7 +449,12 @@
           },
           "cover_prob": 0.5,
           "ou_prob": 0.508,
-          "result": null
+          "result": {
+            "home_score": 89.0,
+            "away_score": 70.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Montana",
@@ -441,7 +482,12 @@
           },
           "cover_prob": 0.5,
           "ou_prob": 0.505,
-          "result": null
+          "result": {
+            "home_score": 84.0,
+            "away_score": 74.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "North Alabama",
@@ -469,7 +515,11 @@
           },
           "cover_prob": 0.5,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 75.0,
+            "away_score": 79.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Montana",
@@ -497,7 +547,11 @@
           },
           "cover_prob": 0.5,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 87.0,
+            "away_score": 69.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Robert Morris",
@@ -525,7 +579,12 @@
           },
           "cover_prob": 0.5,
           "ou_prob": 0.508,
-          "result": null
+          "result": {
+            "home_score": 86.0,
+            "away_score": 49.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "UCLA",
@@ -619,7 +678,12 @@
           },
           "cover_prob": 0.5,
           "ou_prob": 0.505,
-          "result": null
+          "result": {
+            "home_score": 74.0,
+            "away_score": 73.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         }
       ],
       "parlay": {
@@ -643,17 +707,17 @@
             "prob": 0.507
           }
         ],
-        "result": null
+        "result": "loss"
       },
-      "graded_at": "2026-11-03 06:41 PST"
+      "graded_at": "2026-11-04 13:16 PST"
     },
     "2026-11-03": {
       "date": "2026-11-03",
       "generated": "2026-11-03 21:39 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "North Florida",
@@ -680,7 +744,13 @@
             "away": "North Florida -4.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.503
+          "ou_prob": 0.503,
+          "result": {
+            "home_score": 63.0,
+            "away_score": 71.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Northern Arizona",
@@ -707,7 +777,12 @@
             "away": "Northern Arizona +7.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 89.0,
+            "away_score": 77.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Cal State Fullerton",
@@ -734,7 +809,12 @@
             "away": "Cal State Fullerton +12.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 102.0,
+            "away_score": 78.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -758,10 +838,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.126,
-        "fair_odds": "+694",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-04 13:16 PST"
     }
   }
 }
