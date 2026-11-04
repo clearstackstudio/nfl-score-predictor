@@ -1,8 +1,8 @@
 {
   "sport": "ncaab",
   "season": 2027,
-  "asof": "2026-11-02",
-  "updated": "2026-11-02 21:44 PST",
+  "asof": "2026-11-03",
+  "updated": "2026-11-03 21:39 PST",
   "note": "Model-internal predictive ratings: net efficiency -- expected points scored minus points allowed per 100 possessions vs a league-average opponent, from the model's per-possession efficiency ratings. Not a resume ranking; moves only on game results.",
   "teams": [
     {
@@ -10,812 +10,812 @@
       "team": "Illinois",
       "abbr": "Illinois",
       "rating": 21.4,
-      "prev_rank": 8
+      "prev_rank": 1
     },
     {
       "rank": 2,
       "team": "Houston",
       "abbr": "Houston",
-      "rating": 16.0,
-      "prev_rank": 4
+      "rating": 20.3,
+      "prev_rank": 2
     },
     {
       "rank": 3,
       "team": "Florida",
       "abbr": "Florida",
       "rating": 13.5,
-      "prev_rank": 1
+      "prev_rank": 3
     },
     {
       "rank": 4,
       "team": "Michigan",
       "abbr": "Michigan",
       "rating": 12.7,
-      "prev_rank": 3
+      "prev_rank": 4
     },
     {
       "rank": 5,
       "team": "Duke",
       "abbr": "Duke",
       "rating": 12.2,
-      "prev_rank": 2
+      "prev_rank": 5
     },
     {
       "rank": 6,
       "team": "UMBC",
       "abbr": "UMBC",
       "rating": 11.0,
-      "prev_rank": 5
+      "prev_rank": 6
     },
     {
       "rank": 7,
       "team": "High Point",
       "abbr": "High Point",
       "rating": 10.5,
-      "prev_rank": 11
+      "prev_rank": 7
     },
     {
       "rank": 8,
       "team": "Gonzaga",
       "abbr": "Gonzaga",
       "rating": 10.4,
-      "prev_rank": 6
+      "prev_rank": 8
     },
     {
       "rank": 9,
       "team": "Vanderbilt",
       "abbr": "Vanderbilt",
       "rating": 10.4,
-      "prev_rank": 61
+      "prev_rank": 9
     },
     {
       "rank": 10,
-      "team": "Arizona",
-      "abbr": "Arizona",
-      "rating": 10.2,
-      "prev_rank": 7
-    },
-    {
-      "rank": 11,
       "team": "South Florida",
       "abbr": "South Florida",
       "rating": 10.0,
-      "prev_rank": 10
+      "prev_rank": 11
+    },
+    {
+      "rank": 11,
+      "team": "Arkansas",
+      "abbr": "Arkansas",
+      "rating": 9.9,
+      "prev_rank": 53
     },
     {
       "rank": 12,
       "team": "St. John's",
       "abbr": "St. John's",
       "rating": 9.6,
-      "prev_rank": 13
-    },
-    {
-      "rank": 13,
-      "team": "Navy",
-      "abbr": "Navy",
-      "rating": 8.6,
       "prev_rank": 12
     },
     {
+      "rank": 13,
+      "team": "Virginia",
+      "abbr": "Virginia",
+      "rating": 9.6,
+      "prev_rank": 31
+    },
+    {
       "rank": 14,
-      "team": "Iowa State",
-      "abbr": "Iowa State",
-      "rating": 8.4,
-      "prev_rank": 9
+      "team": "Navy",
+      "abbr": "Navy",
+      "rating": 8.6,
+      "prev_rank": 13
     },
     {
       "rank": 15,
-      "team": "Saint Mary's",
-      "abbr": "Saint Mary's",
-      "rating": 8.0,
+      "team": "Iowa State",
+      "abbr": "Iowa State",
+      "rating": 8.4,
       "prev_rank": 14
     },
     {
       "rank": 16,
-      "team": "Howard",
-      "abbr": "Howard",
-      "rating": 7.7,
-      "prev_rank": 15
+      "team": "Tennessee",
+      "abbr": "Tennessee",
+      "rating": 8.1,
+      "prev_rank": 61
     },
     {
       "rank": 17,
-      "team": "McNeese",
-      "abbr": "McNeese",
+      "team": "Saint Mary's",
+      "abbr": "Saint Mary's",
+      "rating": 8.0,
+      "prev_rank": 15
+    },
+    {
+      "rank": 18,
+      "team": "Arizona",
+      "abbr": "Arizona",
+      "rating": 7.8,
+      "prev_rank": 10
+    },
+    {
+      "rank": 19,
+      "team": "Howard",
+      "abbr": "Howard",
       "rating": 7.7,
       "prev_rank": 16
     },
     {
-      "rank": 18,
-      "team": "St. Thomas-Minnesota",
-      "abbr": "St. Thomas-Minnesota",
-      "rating": 7.3,
+      "rank": 20,
+      "team": "McNeese",
+      "abbr": "McNeese",
+      "rating": 7.7,
       "prev_rank": 17
     },
     {
-      "rank": 19,
-      "team": "Akron",
-      "abbr": "Akron",
-      "rating": 7.2,
+      "rank": 21,
+      "team": "St. Thomas-Minnesota",
+      "abbr": "St. Thomas-Minnesota",
+      "rating": 7.3,
       "prev_rank": 18
     },
     {
-      "rank": 20,
-      "team": "New Mexico",
-      "abbr": "New Mexico",
-      "rating": 7.0,
+      "rank": 22,
+      "team": "Akron",
+      "abbr": "Akron",
+      "rating": 7.2,
       "prev_rank": 19
     },
     {
-      "rank": 21,
-      "team": "Robert Morris",
-      "abbr": "Robert Morris",
-      "rating": 6.8,
+      "rank": 23,
+      "team": "New Mexico",
+      "abbr": "New Mexico",
+      "rating": 7.0,
       "prev_rank": 20
     },
     {
-      "rank": 22,
-      "team": "Grand Canyon",
-      "abbr": "Grand Canyon",
-      "rating": 6.7,
+      "rank": 24,
+      "team": "Robert Morris",
+      "abbr": "Robert Morris",
+      "rating": 6.8,
       "prev_rank": 21
     },
     {
-      "rank": 23,
-      "team": "Hofstra",
-      "abbr": "Hofstra",
+      "rank": 25,
+      "team": "Grand Canyon",
+      "abbr": "Grand Canyon",
       "rating": 6.7,
       "prev_rank": 22
     },
     {
-      "rank": 24,
+      "rank": 26,
+      "team": "Hofstra",
+      "abbr": "Hofstra",
+      "rating": 6.7,
+      "prev_rank": 23
+    },
+    {
+      "rank": 27,
       "team": "North Dakota State",
       "abbr": "North Dakota State",
       "rating": 6.5,
       "prev_rank": 24
     },
     {
-      "rank": 25,
+      "rank": 28,
       "team": "UConn",
       "abbr": "UConn",
       "rating": 6.3,
       "prev_rank": 25
     },
     {
-      "rank": 26,
+      "rank": 29,
       "team": "Yale",
       "abbr": "Yale",
       "rating": 6.0,
       "prev_rank": 26
     },
     {
-      "rank": 27,
+      "rank": 30,
       "team": "Arkansas State",
       "abbr": "Arkansas State",
       "rating": 5.9,
       "prev_rank": 27
     },
     {
-      "rank": 28,
+      "rank": 31,
       "team": "UT Rio Grande Valley",
       "abbr": "UT Rio Grande Valley",
       "rating": 5.9,
       "prev_rank": 28
     },
     {
-      "rank": 29,
+      "rank": 32,
       "team": "Alabama",
       "abbr": "Alabama",
       "rating": 5.8,
       "prev_rank": 29
     },
     {
-      "rank": 30,
+      "rank": 33,
       "team": "Tennessee State",
       "abbr": "Tennessee State",
       "rating": 5.7,
       "prev_rank": 30
     },
     {
-      "rank": 31,
-      "team": "Virginia",
-      "abbr": "Virginia",
-      "rating": 5.7,
-      "prev_rank": 31
-    },
-    {
-      "rank": 32,
+      "rank": 34,
       "team": "Merrimack",
       "abbr": "Merrimack",
       "rating": 5.6,
       "prev_rank": 32
     },
     {
-      "rank": 33,
+      "rank": 35,
       "team": "Michigan State",
       "abbr": "Michigan State",
       "rating": 5.6,
       "prev_rank": 33
     },
     {
-      "rank": 34,
+      "rank": 36,
       "team": "Louisville",
       "abbr": "Louisville",
       "rating": 5.5,
-      "prev_rank": 55
-    },
-    {
-      "rank": 35,
-      "team": "Belmont",
-      "abbr": "Belmont",
-      "rating": 5.4,
       "prev_rank": 34
     },
     {
-      "rank": 36,
-      "team": "Central Arkansas",
-      "abbr": "Central Arkansas",
+      "rank": 37,
+      "team": "Belmont",
+      "abbr": "Belmont",
       "rating": 5.4,
       "prev_rank": 35
     },
     {
-      "rank": 37,
-      "team": "Tulsa",
-      "abbr": "Tulsa",
+      "rank": 38,
+      "team": "Central Arkansas",
+      "abbr": "Central Arkansas",
       "rating": 5.4,
       "prev_rank": 36
     },
     {
-      "rank": 38,
-      "team": "Wichita State",
-      "abbr": "Wichita State",
+      "rank": 39,
+      "team": "Tulsa",
+      "abbr": "Tulsa",
       "rating": 5.4,
       "prev_rank": 37
     },
     {
-      "rank": 39,
-      "team": "Northern Iowa",
-      "abbr": "Northern Iowa",
-      "rating": 5.3,
+      "rank": 40,
+      "team": "Wichita State",
+      "abbr": "Wichita State",
+      "rating": 5.4,
       "prev_rank": 38
     },
     {
-      "rank": 40,
-      "team": "Nebraska",
-      "abbr": "Nebraska",
-      "rating": 5.2,
+      "rank": 41,
+      "team": "Northern Iowa",
+      "abbr": "Northern Iowa",
+      "rating": 5.3,
       "prev_rank": 39
     },
     {
-      "rank": 41,
-      "team": "California Baptist",
-      "abbr": "California Baptist",
-      "rating": 5.1,
+      "rank": 42,
+      "team": "Nebraska",
+      "abbr": "Nebraska",
+      "rating": 5.2,
       "prev_rank": 40
     },
     {
-      "rank": 42,
-      "team": "Kansas",
-      "abbr": "Kansas",
-      "rating": 5.0,
-      "prev_rank": 142
-    },
-    {
       "rank": 43,
-      "team": "Purdue",
-      "abbr": "Purdue",
-      "rating": 5.0,
-      "prev_rank": 23
-    },
-    {
-      "rank": 44,
-      "team": "Saint Louis",
-      "abbr": "Saint Louis",
-      "rating": 5.0,
+      "team": "California Baptist",
+      "abbr": "California Baptist",
+      "rating": 5.1,
       "prev_rank": 41
     },
     {
-      "rank": 45,
-      "team": "Santa Clara",
-      "abbr": "Santa Clara",
+      "rank": 44,
+      "team": "Kansas",
+      "abbr": "Kansas",
       "rating": 5.0,
       "prev_rank": 42
     },
     {
-      "rank": 46,
-      "team": "Utah State",
-      "abbr": "Utah State",
+      "rank": 45,
+      "team": "Purdue",
+      "abbr": "Purdue",
       "rating": 5.0,
       "prev_rank": 43
     },
     {
-      "rank": 47,
-      "team": "Utah Valley",
-      "abbr": "Utah Valley",
-      "rating": 4.8,
+      "rank": 46,
+      "team": "Saint Louis",
+      "abbr": "Saint Louis",
+      "rating": 5.0,
       "prev_rank": 44
     },
     {
-      "rank": 48,
-      "team": "Vermont",
-      "abbr": "Vermont",
-      "rating": 4.8,
+      "rank": 47,
+      "team": "Santa Clara",
+      "abbr": "Santa Clara",
+      "rating": 5.0,
       "prev_rank": 45
     },
     {
-      "rank": 49,
-      "team": "VCU",
-      "abbr": "VCU",
-      "rating": 4.7,
+      "rank": 48,
+      "team": "Utah State",
+      "abbr": "Utah State",
+      "rating": 5.0,
       "prev_rank": 46
     },
     {
-      "rank": 50,
-      "team": "Wisconsin",
-      "abbr": "Wisconsin",
-      "rating": 4.6,
+      "rank": 49,
+      "team": "Utah Valley",
+      "abbr": "Utah Valley",
+      "rating": 4.8,
       "prev_rank": 47
     },
     {
-      "rank": 51,
-      "team": "UC Irvine",
-      "abbr": "UC Irvine",
-      "rating": 4.5,
+      "rank": 50,
+      "team": "Vermont",
+      "abbr": "Vermont",
+      "rating": 4.8,
       "prev_rank": 48
     },
     {
-      "rank": 52,
-      "team": "Boise State",
-      "abbr": "Boise State",
-      "rating": 4.1,
+      "rank": 51,
+      "team": "VCU",
+      "abbr": "VCU",
+      "rating": 4.7,
       "prev_rank": 49
     },
     {
-      "rank": 53,
-      "team": "Arkansas",
-      "abbr": "Arkansas",
-      "rating": 4.0,
+      "rank": 52,
+      "team": "Wisconsin",
+      "abbr": "Wisconsin",
+      "rating": 4.6,
       "prev_rank": 50
     },
     {
-      "rank": 54,
-      "team": "Miami (OH)",
-      "abbr": "Miami (OH)",
-      "rating": 4.0,
+      "rank": 53,
+      "team": "UC Irvine",
+      "abbr": "UC Irvine",
+      "rating": 4.5,
       "prev_rank": 51
     },
     {
+      "rank": 54,
+      "team": "BYU",
+      "abbr": "BYU",
+      "rating": 4.1,
+      "prev_rank": 77
+    },
+    {
       "rank": 55,
-      "team": "Samford",
-      "abbr": "Samford",
-      "rating": 4.0,
+      "team": "Boise State",
+      "abbr": "Boise State",
+      "rating": 4.1,
       "prev_rank": 52
     },
     {
       "rank": 56,
-      "team": "Stephen F. Austin",
-      "abbr": "Stephen F. Austin",
+      "team": "Kentucky",
+      "abbr": "Kentucky",
       "rating": 4.0,
-      "prev_rank": 53
+      "prev_rank": 172
     },
     {
       "rank": 57,
-      "team": "Western Carolina",
-      "abbr": "Western Carolina",
+      "team": "Miami (OH)",
+      "abbr": "Miami (OH)",
       "rating": 4.0,
       "prev_rank": 54
     },
     {
       "rank": 58,
-      "team": "Northern Colorado",
-      "abbr": "Northern Colorado",
-      "rating": 3.9,
-      "prev_rank": 56
+      "team": "Samford",
+      "abbr": "Samford",
+      "rating": 4.0,
+      "prev_rank": 55
     },
     {
       "rank": 59,
-      "team": "Cincinnati",
-      "abbr": "Cincinnati",
-      "rating": 3.8,
-      "prev_rank": 57
+      "team": "Stephen F. Austin",
+      "abbr": "Stephen F. Austin",
+      "rating": 4.0,
+      "prev_rank": 56
     },
     {
       "rank": 60,
-      "team": "Oklahoma",
-      "abbr": "Oklahoma",
-      "rating": 3.8,
-      "prev_rank": 58
+      "team": "Western Carolina",
+      "abbr": "Western Carolina",
+      "rating": 4.0,
+      "prev_rank": 57
     },
     {
       "rank": 61,
-      "team": "Tennessee",
-      "abbr": "Tennessee",
+      "team": "Northern Colorado",
+      "abbr": "Northern Colorado",
+      "rating": 3.9,
+      "prev_rank": 58
+    },
+    {
+      "rank": 62,
+      "team": "Cincinnati",
+      "abbr": "Cincinnati",
       "rating": 3.8,
       "prev_rank": 59
     },
     {
-      "rank": 62,
-      "team": "Toledo",
-      "abbr": "Toledo",
+      "rank": 63,
+      "team": "Oklahoma",
+      "abbr": "Oklahoma",
       "rating": 3.8,
       "prev_rank": 60
     },
     {
-      "rank": 63,
-      "team": "Siena",
-      "abbr": "Siena",
-      "rating": 3.7,
+      "rank": 64,
+      "team": "Toledo",
+      "abbr": "Toledo",
+      "rating": 3.8,
       "prev_rank": 62
     },
     {
-      "rank": 64,
-      "team": "Auburn",
-      "abbr": "Auburn",
-      "rating": 3.6,
+      "rank": 65,
+      "team": "Siena",
+      "abbr": "Siena",
+      "rating": 3.7,
       "prev_rank": 63
     },
     {
-      "rank": 65,
-      "team": "Austin Peay",
-      "abbr": "Austin Peay",
+      "rank": 66,
+      "team": "Auburn",
+      "abbr": "Auburn",
       "rating": 3.6,
       "prev_rank": 64
     },
     {
-      "rank": 66,
-      "team": "Nevada",
-      "abbr": "Nevada",
+      "rank": 67,
+      "team": "Austin Peay",
+      "abbr": "Austin Peay",
       "rating": 3.6,
       "prev_rank": 65
     },
     {
-      "rank": 67,
-      "team": "Towson",
-      "abbr": "Towson",
+      "rank": 68,
+      "team": "Nevada",
+      "abbr": "Nevada",
       "rating": 3.6,
       "prev_rank": 66
     },
     {
-      "rank": 68,
-      "team": "Wright State",
-      "abbr": "Wright State",
+      "rank": 69,
+      "team": "Towson",
+      "abbr": "Towson",
       "rating": 3.6,
       "prev_rank": 67
     },
     {
-      "rank": 69,
-      "team": "Montana State",
-      "abbr": "Montana State",
-      "rating": 3.5,
+      "rank": 70,
+      "team": "Wright State",
+      "abbr": "Wright State",
+      "rating": 3.6,
       "prev_rank": 68
     },
     {
-      "rank": 70,
-      "team": "Dayton",
-      "abbr": "Dayton",
-      "rating": 3.4,
+      "rank": 71,
+      "team": "Montana State",
+      "abbr": "Montana State",
+      "rating": 3.5,
       "prev_rank": 69
     },
     {
-      "rank": 71,
-      "team": "Harvard",
-      "abbr": "Harvard",
-      "rating": 3.3,
+      "rank": 72,
+      "team": "UCLA",
+      "abbr": "UCLA",
+      "rating": 3.5,
+      "prev_rank": 85
+    },
+    {
+      "rank": 73,
+      "team": "Dayton",
+      "abbr": "Dayton",
+      "rating": 3.4,
       "prev_rank": 70
     },
     {
-      "rank": 72,
+      "rank": 74,
+      "team": "Harvard",
+      "abbr": "Harvard",
+      "rating": 3.3,
+      "prev_rank": 71
+    },
+    {
+      "rank": 75,
       "team": "Eastern Washington",
       "abbr": "Eastern Washington",
       "rating": 3.1,
       "prev_rank": 72
     },
     {
-      "rank": 73,
+      "rank": 76,
       "team": "Southeast Missouri State",
       "abbr": "Southeast Missouri State",
       "rating": 3.0,
       "prev_rank": 73
     },
     {
-      "rank": 74,
+      "rank": 77,
       "team": "Southern Illinois",
       "abbr": "Southern Illinois",
       "rating": 3.0,
       "prev_rank": 74
     },
     {
-      "rank": 75,
+      "rank": 78,
       "team": "James Madison",
       "abbr": "James Madison",
       "rating": 2.9,
       "prev_rank": 75
     },
     {
-      "rank": 76,
+      "rank": 79,
       "team": "SIU Edwardsville",
       "abbr": "SIU Edwardsville",
       "rating": 2.9,
       "prev_rank": 76
     },
     {
-      "rank": 77,
-      "team": "BYU",
-      "abbr": "BYU",
-      "rating": 2.7,
-      "prev_rank": 120
-    },
-    {
-      "rank": 78,
+      "rank": 80,
       "team": "East Tennessee State",
       "abbr": "East Tennessee State",
-      "rating": 2.7,
-      "prev_rank": 77
-    },
-    {
-      "rank": 79,
-      "team": "Furman",
-      "abbr": "Furman",
       "rating": 2.7,
       "prev_rank": 78
     },
     {
-      "rank": 80,
-      "team": "App State",
-      "abbr": "App State",
-      "rating": 2.6,
+      "rank": 81,
+      "team": "Furman",
+      "abbr": "Furman",
+      "rating": 2.7,
       "prev_rank": 79
     },
     {
-      "rank": 81,
-      "team": "Florida State",
-      "abbr": "Florida State",
+      "rank": 82,
+      "team": "App State",
+      "abbr": "App State",
       "rating": 2.6,
       "prev_rank": 80
     },
     {
-      "rank": 82,
-      "team": "Long Island University",
-      "abbr": "Long Island University",
+      "rank": 83,
+      "team": "Florida State",
+      "abbr": "Florida State",
       "rating": 2.6,
       "prev_rank": 81
     },
     {
-      "rank": 83,
+      "rank": 84,
+      "team": "Long Island University",
+      "abbr": "Long Island University",
+      "rating": 2.6,
+      "prev_rank": 82
+    },
+    {
+      "rank": 85,
       "team": "San Diego State",
       "abbr": "San Diego State",
+      "rating": 2.6,
+      "prev_rank": 83
+    },
+    {
+      "rank": 86,
+      "team": "UNC Wilmington",
+      "abbr": "UNC Wilmington",
       "rating": 2.6,
       "prev_rank": 84
     },
     {
-      "rank": 84,
-      "team": "UNC Wilmington",
-      "abbr": "UNC Wilmington",
-      "rating": 2.6,
-      "prev_rank": 85
-    },
-    {
-      "rank": 85,
-      "team": "UCLA",
-      "abbr": "UCLA",
-      "rating": 2.4,
+      "rank": 87,
+      "team": "Boston University",
+      "abbr": "Boston University",
+      "rating": 2.3,
       "prev_rank": 86
     },
     {
-      "rank": 86,
-      "team": "Boston University",
-      "abbr": "Boston University",
+      "rank": 88,
+      "team": "Hawai'i",
+      "abbr": "Hawai'i",
       "rating": 2.3,
       "prev_rank": 87
     },
     {
-      "rank": 87,
-      "team": "Hawai'i",
-      "abbr": "Hawai'i",
+      "rank": 89,
+      "team": "UIC",
+      "abbr": "UIC",
       "rating": 2.3,
       "prev_rank": 88
     },
     {
-      "rank": 88,
-      "team": "UIC",
-      "abbr": "UIC",
-      "rating": 2.3,
+      "rank": 90,
+      "team": "Louisiana Tech",
+      "abbr": "Louisiana Tech",
+      "rating": 2.2,
       "prev_rank": 89
     },
     {
-      "rank": 89,
-      "team": "Louisiana Tech",
-      "abbr": "Louisiana Tech",
+      "rank": 91,
+      "team": "Mount St. Mary's",
+      "abbr": "Mount St. Mary's",
       "rating": 2.2,
       "prev_rank": 90
     },
     {
-      "rank": 90,
-      "team": "Mount St. Mary's",
-      "abbr": "Mount St. Mary's",
+      "rank": 92,
+      "team": "Portland State",
+      "abbr": "Portland State",
       "rating": 2.2,
       "prev_rank": 91
     },
     {
-      "rank": 91,
-      "team": "Portland State",
-      "abbr": "Portland State",
+      "rank": 93,
+      "team": "Texas A&M-Corpus Christi",
+      "abbr": "Texas A&M-Corpus Christi",
       "rating": 2.2,
       "prev_rank": 92
     },
     {
-      "rank": 92,
-      "team": "Texas A&M-Corpus Christi",
-      "abbr": "Texas A&M-Corpus Christi",
-      "rating": 2.2,
+      "rank": 94,
+      "team": "Northern Kentucky",
+      "abbr": "Northern Kentucky",
+      "rating": 2.1,
       "prev_rank": 93
     },
     {
-      "rank": 93,
-      "team": "Northern Kentucky",
-      "abbr": "Northern Kentucky",
+      "rank": 95,
+      "team": "Texas Tech",
+      "abbr": "Texas Tech",
       "rating": 2.1,
       "prev_rank": 94
     },
     {
-      "rank": 94,
-      "team": "Texas Tech",
-      "abbr": "Texas Tech",
-      "rating": 2.1,
+      "rank": 96,
+      "team": "Mercer",
+      "abbr": "Mercer",
+      "rating": 2.0,
       "prev_rank": 95
     },
     {
-      "rank": 95,
-      "team": "Mercer",
-      "abbr": "Mercer",
+      "rank": 97,
+      "team": "UC San Diego",
+      "abbr": "UC San Diego",
       "rating": 2.0,
       "prev_rank": 96
     },
     {
-      "rank": 96,
-      "team": "UC San Diego",
-      "abbr": "UC San Diego",
+      "rank": 98,
+      "team": "Winthrop",
+      "abbr": "Winthrop",
       "rating": 2.0,
       "prev_rank": 97
     },
     {
-      "rank": 97,
-      "team": "Winthrop",
-      "abbr": "Winthrop",
-      "rating": 2.0,
+      "rank": 99,
+      "team": "Bethune-Cookman",
+      "abbr": "Bethune-Cookman",
+      "rating": 1.9,
       "prev_rank": 98
     },
     {
-      "rank": 98,
-      "team": "Bethune-Cookman",
-      "abbr": "Bethune-Cookman",
+      "rank": 100,
+      "team": "UAB",
+      "abbr": "UAB",
       "rating": 1.9,
       "prev_rank": 99
     },
     {
-      "rank": 99,
-      "team": "UAB",
-      "abbr": "UAB",
+      "rank": 101,
+      "team": "West Virginia",
+      "abbr": "West Virginia",
       "rating": 1.9,
       "prev_rank": 100
     },
     {
-      "rank": 100,
-      "team": "West Virginia",
-      "abbr": "West Virginia",
-      "rating": 1.9,
+      "rank": 102,
+      "team": "Cornell",
+      "abbr": "Cornell",
+      "rating": 1.8,
       "prev_rank": 101
     },
     {
-      "rank": 101,
-      "team": "Cornell",
-      "abbr": "Cornell",
+      "rank": 103,
+      "team": "Marist",
+      "abbr": "Marist",
       "rating": 1.8,
       "prev_rank": 102
     },
     {
-      "rank": 102,
-      "team": "Marist",
-      "abbr": "Marist",
+      "rank": 104,
+      "team": "Saint Joseph's",
+      "abbr": "Saint Joseph's",
       "rating": 1.8,
       "prev_rank": 103
     },
     {
-      "rank": 103,
-      "team": "Saint Joseph's",
-      "abbr": "Saint Joseph's",
+      "rank": 105,
+      "team": "Troy",
+      "abbr": "Troy",
       "rating": 1.8,
       "prev_rank": 104
     },
     {
-      "rank": 104,
-      "team": "Troy",
-      "abbr": "Troy",
-      "rating": 1.8,
+      "rank": 106,
+      "team": "Bowling Green",
+      "abbr": "Bowling Green",
+      "rating": 1.7,
       "prev_rank": 105
     },
     {
-      "rank": 105,
-      "team": "Bowling Green",
-      "abbr": "Bowling Green",
+      "rank": 107,
+      "team": "Idaho",
+      "abbr": "Idaho",
       "rating": 1.7,
       "prev_rank": 106
     },
     {
-      "rank": 106,
-      "team": "Idaho",
-      "abbr": "Idaho",
+      "rank": 108,
+      "team": "Mercyhurst",
+      "abbr": "Mercyhurst",
       "rating": 1.7,
       "prev_rank": 107
     },
     {
-      "rank": 107,
-      "team": "Mercyhurst",
-      "abbr": "Mercyhurst",
+      "rank": 109,
+      "team": "North Carolina",
+      "abbr": "North Carolina",
       "rating": 1.7,
       "prev_rank": 108
     },
     {
-      "rank": 108,
-      "team": "North Carolina",
-      "abbr": "North Carolina",
-      "rating": 1.7,
+      "rank": 110,
+      "team": "Kennesaw State",
+      "abbr": "Kennesaw State",
+      "rating": 1.6,
       "prev_rank": 109
     },
     {
-      "rank": 109,
-      "team": "Kennesaw State",
-      "abbr": "Kennesaw State",
+      "rank": 111,
+      "team": "Longwood",
+      "abbr": "Longwood",
       "rating": 1.6,
       "prev_rank": 110
     },
     {
-      "rank": 110,
-      "team": "Longwood",
-      "abbr": "Longwood",
-      "rating": 1.6,
-      "prev_rank": 111
-    },
-    {
-      "rank": 111,
+      "rank": 112,
       "team": "UC Santa Barbara",
       "abbr": "UC Santa Barbara",
       "rating": 1.5,
-      "prev_rank": 112
-    },
-    {
-      "rank": 112,
-      "team": "Seattle U",
-      "abbr": "Seattle U",
-      "rating": 1.4,
-      "prev_rank": 113
+      "prev_rank": 111
     },
     {
       "rank": 113,
+      "team": "Seattle U",
+      "abbr": "Seattle U",
+      "rating": 1.4,
+      "prev_rank": 112
+    },
+    {
+      "rank": 114,
       "team": "American University",
       "abbr": "American University",
+      "rating": 1.3,
+      "prev_rank": 113
+    },
+    {
+      "rank": 115,
+      "team": "Detroit Mercy",
+      "abbr": "Detroit Mercy",
       "rating": 1.3,
       "prev_rank": 114
     },
     {
-      "rank": 114,
-      "team": "Detroit Mercy",
-      "abbr": "Detroit Mercy",
-      "rating": 1.3,
-      "prev_rank": 115
-    },
-    {
-      "rank": 115,
+      "rank": 116,
       "team": "Iowa",
       "abbr": "Iowa",
       "rating": 1.3,
-      "prev_rank": 116
-    },
-    {
-      "rank": 116,
-      "team": "Ohio State",
-      "abbr": "Ohio State",
-      "rating": 1.3,
-      "prev_rank": 71
+      "prev_rank": 115
     },
     {
       "rank": 117,
@@ -843,70 +843,70 @@
       "team": "Charleston",
       "abbr": "Charleston",
       "rating": 1.2,
-      "prev_rank": 121
+      "prev_rank": 120
     },
     {
       "rank": 121,
       "team": "Fairfield",
       "abbr": "Fairfield",
       "rating": 1.2,
-      "prev_rank": 122
+      "prev_rank": 121
     },
     {
       "rank": 122,
       "team": "Sam Houston",
       "abbr": "Sam Houston",
       "rating": 1.2,
-      "prev_rank": 123
+      "prev_rank": 122
     },
     {
       "rank": 123,
       "team": "Colorado State",
       "abbr": "Colorado State",
       "rating": 1.1,
-      "prev_rank": 124
+      "prev_rank": 123
     },
     {
       "rank": 124,
       "team": "Texas",
       "abbr": "Texas",
       "rating": 1.0,
-      "prev_rank": 125
+      "prev_rank": 124
     },
     {
       "rank": 125,
       "team": "Villanova",
       "abbr": "Villanova",
       "rating": 1.0,
-      "prev_rank": 126
+      "prev_rank": 125
     },
     {
       "rank": 126,
       "team": "Baylor",
       "abbr": "Baylor",
       "rating": 0.9,
-      "prev_rank": 127
+      "prev_rank": 126
     },
     {
       "rank": 127,
       "team": "Florida A&M",
       "abbr": "Florida A&M",
       "rating": 0.9,
-      "prev_rank": 128
+      "prev_rank": 127
     },
     {
       "rank": 128,
       "team": "Green Bay",
       "abbr": "Green Bay",
       "rating": 0.9,
-      "prev_rank": 129
+      "prev_rank": 128
     },
     {
       "rank": 129,
       "team": "Miami",
       "abbr": "Miami",
       "rating": 0.9,
-      "prev_rank": 82
+      "prev_rank": 129
     },
     {
       "rank": 130,
@@ -997,1561 +997,1561 @@
       "team": "Queens University",
       "abbr": "Queens University",
       "rating": 0.6,
-      "prev_rank": 143
+      "prev_rank": 142
     },
     {
       "rank": 143,
       "team": "Texas Southern",
       "abbr": "Texas Southern",
       "rating": 0.6,
-      "prev_rank": 144
+      "prev_rank": 143
     },
     {
       "rank": 144,
       "team": "William & Mary",
       "abbr": "William & Mary",
       "rating": 0.6,
-      "prev_rank": 145
+      "prev_rank": 144
     },
     {
       "rank": 145,
       "team": "Lindenwood",
       "abbr": "Lindenwood",
       "rating": 0.5,
-      "prev_rank": 147
+      "prev_rank": 145
     },
     {
       "rank": 146,
       "team": "Middle Tennessee",
       "abbr": "Middle Tennessee",
       "rating": 0.5,
-      "prev_rank": 148
+      "prev_rank": 146
     },
     {
       "rank": 147,
       "team": "Radford",
       "abbr": "Radford",
       "rating": 0.5,
-      "prev_rank": 149
+      "prev_rank": 147
     },
     {
       "rank": 148,
       "team": "TCU",
       "abbr": "TCU",
       "rating": 0.5,
-      "prev_rank": 150
+      "prev_rank": 148
     },
     {
       "rank": 149,
       "team": "Western Kentucky",
       "abbr": "Western Kentucky",
       "rating": 0.5,
-      "prev_rank": 151
+      "prev_rank": 149
     },
     {
       "rank": 150,
       "team": "Davidson",
       "abbr": "Davidson",
       "rating": 0.4,
-      "prev_rank": 152
+      "prev_rank": 150
     },
     {
       "rank": 151,
       "team": "SMU",
       "abbr": "SMU",
       "rating": 0.4,
-      "prev_rank": 153
+      "prev_rank": 151
     },
     {
       "rank": 152,
       "team": "Seton Hall",
       "abbr": "Seton Hall",
       "rating": 0.4,
-      "prev_rank": 154
+      "prev_rank": 152
     },
     {
       "rank": 153,
       "team": "Temple",
       "abbr": "Temple",
       "rating": 0.4,
-      "prev_rank": 155
+      "prev_rank": 153
     },
     {
       "rank": 154,
       "team": "Bradley",
       "abbr": "Bradley",
       "rating": 0.3,
-      "prev_rank": 156
+      "prev_rank": 154
     },
     {
       "rank": 155,
       "team": "George Mason",
       "abbr": "George Mason",
       "rating": 0.3,
-      "prev_rank": 157
+      "prev_rank": 155
     },
     {
       "rank": 156,
       "team": "Georgia Southern",
       "abbr": "Georgia Southern",
       "rating": 0.3,
-      "prev_rank": 158
+      "prev_rank": 156
     },
     {
       "rank": 157,
       "team": "Lipscomb",
       "abbr": "Lipscomb",
       "rating": 0.3,
-      "prev_rank": 159
+      "prev_rank": 157
     },
     {
       "rank": 158,
       "team": "Old Dominion",
       "abbr": "Old Dominion",
       "rating": 0.3,
-      "prev_rank": 160
+      "prev_rank": 158
     },
     {
       "rank": 159,
       "team": "Southern",
       "abbr": "Southern",
       "rating": 0.3,
-      "prev_rank": 161
+      "prev_rank": 159
     },
     {
       "rank": 160,
       "team": "Washington",
       "abbr": "Washington",
       "rating": 0.3,
-      "prev_rank": 162
+      "prev_rank": 160
     },
     {
       "rank": 161,
       "team": "Illinois State",
       "abbr": "Illinois State",
       "rating": 0.2,
-      "prev_rank": 163
+      "prev_rank": 161
     },
     {
       "rank": 162,
       "team": "Morehead State",
       "abbr": "Morehead State",
       "rating": 0.2,
-      "prev_rank": 164
+      "prev_rank": 162
     },
     {
       "rank": 163,
       "team": "Cal State Fullerton",
       "abbr": "Cal State Fullerton",
       "rating": 0.1,
-      "prev_rank": 166
+      "prev_rank": 163
     },
     {
       "rank": 164,
       "team": "Grambling",
       "abbr": "Grambling",
       "rating": 0.1,
-      "prev_rank": 167
+      "prev_rank": 164
     },
     {
       "rank": 165,
       "team": "Monmouth",
       "abbr": "Monmouth",
       "rating": 0.1,
-      "prev_rank": 83
+      "prev_rank": 165
     },
     {
       "rank": 166,
       "team": "Wagner",
       "abbr": "Wagner",
       "rating": 0.1,
-      "prev_rank": 168
+      "prev_rank": 166
     },
     {
       "rank": 167,
       "team": "Wyoming",
       "abbr": "Wyoming",
       "rating": 0.1,
-      "prev_rank": 169
+      "prev_rank": 167
     },
     {
       "rank": 168,
       "team": "Cal State Northridge",
       "abbr": "Cal State Northridge",
       "rating": -0.0,
-      "prev_rank": 170
+      "prev_rank": 168
     },
     {
       "rank": 169,
       "team": "Kent State",
       "abbr": "Kent State",
       "rating": -0.0,
-      "prev_rank": 171
+      "prev_rank": 169
     },
     {
       "rank": 170,
       "team": "Norfolk State",
       "abbr": "Norfolk State",
       "rating": 0.0,
-      "prev_rank": 172
+      "prev_rank": 170
     },
     {
       "rank": 171,
       "team": "George Washington",
       "abbr": "George Washington",
       "rating": -0.1,
-      "prev_rank": 174
+      "prev_rank": 171
     },
     {
       "rank": 172,
-      "team": "Kentucky",
-      "abbr": "Kentucky",
-      "rating": -0.1,
-      "prev_rank": 175
-    },
-    {
-      "rank": 173,
       "team": "Virginia Tech",
       "abbr": "Virginia Tech",
       "rating": -0.1,
-      "prev_rank": 176
+      "prev_rank": 173
+    },
+    {
+      "rank": 173,
+      "team": "Jacksonville State",
+      "abbr": "Jacksonville State",
+      "rating": -0.2,
+      "prev_rank": 175
     },
     {
       "rank": 174,
-      "team": "Wofford",
-      "abbr": "Wofford",
-      "rating": -0.1,
-      "prev_rank": 177
+      "team": "Le Moyne",
+      "abbr": "Le Moyne",
+      "rating": -0.2,
+      "prev_rank": 176
     },
     {
       "rank": 175,
-      "team": "Jacksonville State",
-      "abbr": "Jacksonville State",
+      "team": "Marshall",
+      "abbr": "Marshall",
+      "rating": -0.2,
+      "prev_rank": 177
+    },
+    {
+      "rank": 176,
+      "team": "Saint Peter's",
+      "abbr": "Saint Peter's",
       "rating": -0.2,
       "prev_rank": 178
     },
     {
-      "rank": 176,
-      "team": "Le Moyne",
-      "abbr": "Le Moyne",
+      "rank": 177,
+      "team": "Valparaiso",
+      "abbr": "Valparaiso",
       "rating": -0.2,
       "prev_rank": 179
     },
     {
-      "rank": 177,
-      "team": "Marshall",
-      "abbr": "Marshall",
-      "rating": -0.2,
+      "rank": 178,
+      "team": "Charleston Southern",
+      "abbr": "Charleston Southern",
+      "rating": -0.3,
       "prev_rank": 180
     },
     {
-      "rank": 178,
-      "team": "Saint Peter's",
-      "abbr": "Saint Peter's",
-      "rating": -0.2,
-      "prev_rank": 181
-    },
-    {
       "rank": 179,
-      "team": "Valparaiso",
-      "abbr": "Valparaiso",
-      "rating": -0.2,
+      "team": "UC Davis",
+      "abbr": "UC Davis",
+      "rating": -0.3,
       "prev_rank": 182
     },
     {
       "rank": 180,
-      "team": "Charleston Southern",
-      "abbr": "Charleston Southern",
-      "rating": -0.3,
+      "team": "Ball State",
+      "abbr": "Ball State",
+      "rating": -0.4,
       "prev_rank": 183
     },
     {
       "rank": 181,
-      "team": "Drexel",
-      "abbr": "Drexel",
-      "rating": -0.3,
+      "team": "Florida International",
+      "abbr": "Florida International",
+      "rating": -0.4,
       "prev_rank": 184
     },
     {
       "rank": 182,
-      "team": "UC Davis",
-      "abbr": "UC Davis",
-      "rating": -0.3,
+      "team": "New Orleans",
+      "abbr": "New Orleans",
+      "rating": -0.4,
       "prev_rank": 185
     },
     {
       "rank": 183,
-      "team": "Ball State",
-      "abbr": "Ball State",
+      "team": "Ohio State",
+      "abbr": "Ohio State",
+      "rating": -0.4,
+      "prev_rank": 116
+    },
+    {
+      "rank": 184,
+      "team": "St. Bonaventure",
+      "abbr": "St. Bonaventure",
       "rating": -0.4,
       "prev_rank": 186
     },
     {
-      "rank": 184,
-      "team": "Florida International",
-      "abbr": "Florida International",
+      "rank": 185,
+      "team": "UT Arlington",
+      "abbr": "UT Arlington",
       "rating": -0.4,
       "prev_rank": 187
     },
     {
-      "rank": 185,
-      "team": "New Orleans",
-      "abbr": "New Orleans",
+      "rank": 186,
+      "team": "Wake Forest",
+      "abbr": "Wake Forest",
       "rating": -0.4,
       "prev_rank": 188
     },
     {
-      "rank": 186,
-      "team": "St. Bonaventure",
-      "abbr": "St. Bonaventure",
-      "rating": -0.4,
-      "prev_rank": 189
-    },
-    {
       "rank": 187,
-      "team": "UT Arlington",
-      "abbr": "UT Arlington",
-      "rating": -0.4,
-      "prev_rank": 190
-    },
-    {
-      "rank": 188,
-      "team": "Wake Forest",
-      "abbr": "Wake Forest",
-      "rating": -0.4,
-      "prev_rank": 191
-    },
-    {
-      "rank": 189,
       "team": "Cal Poly",
       "abbr": "Cal Poly",
       "rating": -0.5,
-      "prev_rank": 192
+      "prev_rank": 189
     },
     {
-      "rank": 190,
+      "rank": 188,
       "team": "Missouri State",
       "abbr": "Missouri State",
       "rating": -0.5,
-      "prev_rank": 193
+      "prev_rank": 190
     },
     {
-      "rank": 191,
+      "rank": 189,
       "team": "South Dakota State",
       "abbr": "South Dakota State",
       "rating": -0.5,
+      "prev_rank": 191
+    },
+    {
+      "rank": 190,
+      "team": "Alabama A&M",
+      "abbr": "Alabama A&M",
+      "rating": -0.6,
+      "prev_rank": 192
+    },
+    {
+      "rank": 191,
+      "team": "NC State",
+      "abbr": "NC State",
+      "rating": -0.6,
       "prev_rank": 194
     },
     {
       "rank": 192,
-      "team": "Alabama A&M",
-      "abbr": "Alabama A&M",
+      "team": "Pennsylvania",
+      "abbr": "Pennsylvania",
       "rating": -0.6,
       "prev_rank": 195
     },
     {
       "rank": 193,
-      "team": "Arkansas-Pine Bluff",
-      "abbr": "Arkansas-Pine Bluff",
-      "rating": -0.6,
+      "team": "Central Connecticut",
+      "abbr": "Central Connecticut",
+      "rating": -0.7,
       "prev_rank": 196
     },
     {
       "rank": 194,
-      "team": "NC State",
-      "abbr": "NC State",
-      "rating": -0.6,
+      "team": "Jacksonville",
+      "abbr": "Jacksonville",
+      "rating": -0.7,
       "prev_rank": 197
     },
     {
       "rank": 195,
-      "team": "Pennsylvania",
-      "abbr": "Pennsylvania",
-      "rating": -0.6,
+      "team": "New Mexico State",
+      "abbr": "New Mexico State",
+      "rating": -0.7,
       "prev_rank": 198
     },
     {
       "rank": 196,
-      "team": "Central Connecticut",
-      "abbr": "Central Connecticut",
+      "team": "Weber State",
+      "abbr": "Weber State",
       "rating": -0.7,
       "prev_rank": 199
     },
     {
       "rank": 197,
-      "team": "Jacksonville",
-      "abbr": "Jacksonville",
-      "rating": -0.7,
+      "team": "Florida Atlantic",
+      "abbr": "Florida Atlantic",
+      "rating": -0.8,
       "prev_rank": 200
     },
     {
       "rank": 198,
-      "team": "New Mexico State",
-      "abbr": "New Mexico State",
-      "rating": -0.7,
+      "team": "Prairie View A&M",
+      "abbr": "Prairie View A&M",
+      "rating": -0.8,
       "prev_rank": 201
     },
     {
       "rank": 199,
-      "team": "Weber State",
-      "abbr": "Weber State",
-      "rating": -0.7,
+      "team": "UNLV",
+      "abbr": "UNLV",
+      "rating": -0.8,
       "prev_rank": 202
     },
     {
       "rank": 200,
-      "team": "Florida Atlantic",
-      "abbr": "Florida Atlantic",
-      "rating": -0.8,
+      "team": "Colgate",
+      "abbr": "Colgate",
+      "rating": -0.9,
       "prev_rank": 203
     },
     {
       "rank": 201,
-      "team": "Prairie View A&M",
-      "abbr": "Prairie View A&M",
-      "rating": -0.8,
+      "team": "Denver",
+      "abbr": "Denver",
+      "rating": -1.0,
       "prev_rank": 204
     },
     {
       "rank": 202,
-      "team": "UNLV",
-      "abbr": "UNLV",
-      "rating": -0.8,
+      "team": "Little Rock",
+      "abbr": "Little Rock",
+      "rating": -1.1,
       "prev_rank": 205
     },
     {
       "rank": 203,
-      "team": "Colgate",
-      "abbr": "Colgate",
-      "rating": -0.9,
+      "team": "Providence",
+      "abbr": "Providence",
+      "rating": -1.1,
       "prev_rank": 206
     },
     {
       "rank": 204,
-      "team": "Denver",
-      "abbr": "Denver",
-      "rating": -1.0,
-      "prev_rank": 208
-    },
-    {
-      "rank": 205,
-      "team": "Little Rock",
-      "abbr": "Little Rock",
-      "rating": -1.1,
-      "prev_rank": 209
-    },
-    {
-      "rank": 206,
-      "team": "Providence",
-      "abbr": "Providence",
-      "rating": -1.1,
-      "prev_rank": 210
-    },
-    {
-      "rank": 207,
       "team": "New Haven",
       "abbr": "New Haven",
       "rating": -1.2,
-      "prev_rank": 211
+      "prev_rank": 207
     },
     {
-      "rank": 208,
+      "rank": 205,
       "team": "Presbyterian",
       "abbr": "Presbyterian",
       "rating": -1.3,
-      "prev_rank": 212
+      "prev_rank": 208
+    },
+    {
+      "rank": 206,
+      "team": "Duquesne",
+      "abbr": "Duquesne",
+      "rating": -1.4,
+      "prev_rank": 209
+    },
+    {
+      "rank": 207,
+      "team": "Georgetown",
+      "abbr": "Georgetown",
+      "rating": -1.4,
+      "prev_rank": 210
+    },
+    {
+      "rank": 208,
+      "team": "Loyola Marymount",
+      "abbr": "Loyola Marymount",
+      "rating": -1.4,
+      "prev_rank": 211
     },
     {
       "rank": 209,
-      "team": "Duquesne",
-      "abbr": "Duquesne",
+      "team": "Stonehill",
+      "abbr": "Stonehill",
+      "rating": -1.4,
+      "prev_rank": 212
+    },
+    {
+      "rank": 210,
+      "team": "UNC Greensboro",
+      "abbr": "UNC Greensboro",
       "rating": -1.4,
       "prev_rank": 213
     },
     {
-      "rank": 210,
-      "team": "Georgetown",
-      "abbr": "Georgetown",
-      "rating": -1.4,
+      "rank": 211,
+      "team": "Coastal Carolina",
+      "abbr": "Coastal Carolina",
+      "rating": -1.5,
       "prev_rank": 214
     },
     {
-      "rank": 211,
-      "team": "Loyola Marymount",
-      "abbr": "Loyola Marymount",
-      "rating": -1.4,
+      "rank": 212,
+      "team": "Pacific",
+      "abbr": "Pacific",
+      "rating": -1.5,
       "prev_rank": 215
     },
     {
-      "rank": 212,
-      "team": "Stonehill",
-      "abbr": "Stonehill",
-      "rating": -1.4,
+      "rank": 213,
+      "team": "UAlbany",
+      "abbr": "UAlbany",
+      "rating": -1.5,
       "prev_rank": 216
     },
     {
-      "rank": 213,
-      "team": "UNC Greensboro",
-      "abbr": "UNC Greensboro",
-      "rating": -1.4,
+      "rank": 214,
+      "team": "USC",
+      "abbr": "USC",
+      "rating": -1.5,
+      "prev_rank": 332
+    },
+    {
+      "rank": 215,
+      "team": "West Georgia",
+      "abbr": "West Georgia",
+      "rating": -1.5,
       "prev_rank": 217
     },
     {
-      "rank": 214,
-      "team": "Coastal Carolina",
-      "abbr": "Coastal Carolina",
+      "rank": 216,
+      "team": "Youngstown State",
+      "abbr": "Youngstown State",
       "rating": -1.5,
       "prev_rank": 218
     },
     {
-      "rank": 215,
-      "team": "Pacific",
-      "abbr": "Pacific",
-      "rating": -1.5,
-      "prev_rank": 219
-    },
-    {
-      "rank": 216,
-      "team": "UAlbany",
-      "abbr": "UAlbany",
-      "rating": -1.5,
-      "prev_rank": 220
-    },
-    {
       "rank": 217,
-      "team": "West Georgia",
-      "abbr": "West Georgia",
-      "rating": -1.5,
-      "prev_rank": 221
-    },
-    {
-      "rank": 218,
-      "team": "Youngstown State",
-      "abbr": "Youngstown State",
-      "rating": -1.5,
-      "prev_rank": 222
-    },
-    {
-      "rank": 219,
       "team": "Columbia",
       "abbr": "Columbia",
       "rating": -1.6,
-      "prev_rank": 223
+      "prev_rank": 219
     },
     {
-      "rank": 220,
+      "rank": 218,
       "team": "Massachusetts",
       "abbr": "Massachusetts",
       "rating": -1.6,
-      "prev_rank": 224
+      "prev_rank": 220
     },
     {
-      "rank": 221,
+      "rank": 219,
       "team": "Texas A&M",
       "abbr": "Texas A&M",
       "rating": -1.6,
-      "prev_rank": 225
+      "prev_rank": 221
     },
     {
-      "rank": 222,
+      "rank": 220,
       "team": "UNC Asheville",
       "abbr": "UNC Asheville",
       "rating": -1.7,
-      "prev_rank": 226
+      "prev_rank": 222
     },
     {
-      "rank": 223,
+      "rank": 221,
       "team": "Utah Tech",
       "abbr": "Utah Tech",
       "rating": -1.7,
-      "prev_rank": 227
+      "prev_rank": 223
     },
     {
-      "rank": 224,
+      "rank": 222,
       "team": "Indiana",
       "abbr": "Indiana",
       "rating": -1.8,
-      "prev_rank": 228
+      "prev_rank": 224
     },
     {
-      "rank": 225,
+      "rank": 223,
       "team": "Liberty",
       "abbr": "Liberty",
       "rating": -1.8,
-      "prev_rank": 146
+      "prev_rank": 225
     },
     {
-      "rank": 226,
+      "rank": 224,
       "team": "Northwestern",
       "abbr": "Northwestern",
       "rating": -1.8,
-      "prev_rank": 229
+      "prev_rank": 226
     },
     {
-      "rank": 227,
+      "rank": 225,
       "team": "UMass Lowell",
       "abbr": "UMass Lowell",
       "rating": -1.8,
-      "prev_rank": 230
+      "prev_rank": 227
     },
     {
-      "rank": 228,
+      "rank": 226,
       "team": "Missouri",
       "abbr": "Missouri",
       "rating": -1.9,
-      "prev_rank": 231
+      "prev_rank": 228
     },
     {
-      "rank": 229,
+      "rank": 227,
       "team": "Sacred Heart",
       "abbr": "Sacred Heart",
       "rating": -1.9,
-      "prev_rank": 232
+      "prev_rank": 229
     },
     {
-      "rank": 230,
+      "rank": 228,
       "team": "Tennessee Tech",
       "abbr": "Tennessee Tech",
       "rating": -1.9,
-      "prev_rank": 233
+      "prev_rank": 230
     },
     {
-      "rank": 231,
+      "rank": 229,
       "team": "Ole Miss",
       "abbr": "Ole Miss",
       "rating": -2.0,
-      "prev_rank": 234
+      "prev_rank": 231
     },
     {
-      "rank": 232,
+      "rank": 230,
       "team": "Oral Roberts",
       "abbr": "Oral Roberts",
       "rating": -2.0,
-      "prev_rank": 235
+      "prev_rank": 232
     },
     {
-      "rank": 233,
+      "rank": 231,
       "team": "San Francisco",
       "abbr": "San Francisco",
       "rating": -2.0,
-      "prev_rank": 236
+      "prev_rank": 233
     },
     {
-      "rank": 234,
+      "rank": 232,
       "team": "Montana",
       "abbr": "Montana",
       "rating": -2.1,
-      "prev_rank": 237
+      "prev_rank": 234
     },
     {
-      "rank": 235,
+      "rank": 233,
       "team": "Oakland",
       "abbr": "Oakland",
       "rating": -2.1,
-      "prev_rank": 165
+      "prev_rank": 235
     },
     {
-      "rank": 236,
+      "rank": 234,
       "team": "Rhode Island",
       "abbr": "Rhode Island",
       "rating": -2.3,
-      "prev_rank": 239
+      "prev_rank": 236
     },
     {
-      "rank": 237,
+      "rank": 235,
       "team": "Stetson",
       "abbr": "Stetson",
       "rating": -2.3,
-      "prev_rank": 240
+      "prev_rank": 237
     },
     {
-      "rank": 238,
+      "rank": 236,
       "team": "Washington State",
       "abbr": "Washington State",
       "rating": -2.3,
-      "prev_rank": 241
+      "prev_rank": 238
     },
     {
-      "rank": 239,
+      "rank": 237,
       "team": "Omaha",
       "abbr": "Omaha",
       "rating": -2.4,
-      "prev_rank": 242
+      "prev_rank": 239
     },
     {
-      "rank": 240,
+      "rank": 238,
       "team": "Rice",
       "abbr": "Rice",
       "rating": -2.4,
-      "prev_rank": 243
+      "prev_rank": 240
+    },
+    {
+      "rank": 239,
+      "team": "Central Michigan",
+      "abbr": "Central Michigan",
+      "rating": -2.5,
+      "prev_rank": 241
+    },
+    {
+      "rank": 240,
+      "team": "Nicholls",
+      "abbr": "Nicholls",
+      "rating": -2.5,
+      "prev_rank": 242
     },
     {
       "rank": 241,
-      "team": "Central Michigan",
-      "abbr": "Central Michigan",
+      "team": "Ohio",
+      "abbr": "Ohio",
+      "rating": -2.5,
+      "prev_rank": 243
+    },
+    {
+      "rank": 242,
+      "team": "South Dakota",
+      "abbr": "South Dakota",
       "rating": -2.5,
       "prev_rank": 244
     },
     {
-      "rank": 242,
-      "team": "Nicholls",
-      "abbr": "Nicholls",
-      "rating": -2.5,
-      "prev_rank": 245
-    },
-    {
       "rank": 243,
-      "team": "Ohio",
-      "abbr": "Ohio",
-      "rating": -2.5,
-      "prev_rank": 246
-    },
-    {
-      "rank": 244,
-      "team": "South Dakota",
-      "abbr": "South Dakota",
-      "rating": -2.5,
-      "prev_rank": 247
-    },
-    {
-      "rank": 245,
       "team": "Buffalo",
       "abbr": "Buffalo",
       "rating": -2.6,
-      "prev_rank": 248
+      "prev_rank": 245
     },
     {
-      "rank": 246,
+      "rank": 244,
       "team": "Stony Brook",
       "abbr": "Stony Brook",
       "rating": -2.6,
-      "prev_rank": 249
+      "prev_rank": 246
+    },
+    {
+      "rank": 245,
+      "team": "Alabama State",
+      "abbr": "Alabama State",
+      "rating": -2.7,
+      "prev_rank": 247
+    },
+    {
+      "rank": 246,
+      "team": "DePaul",
+      "abbr": "DePaul",
+      "rating": -2.7,
+      "prev_rank": 248
     },
     {
       "rank": 247,
-      "team": "Alabama State",
-      "abbr": "Alabama State",
+      "team": "Oregon State",
+      "abbr": "Oregon State",
+      "rating": -2.7,
+      "prev_rank": 249
+    },
+    {
+      "rank": 248,
+      "team": "Richmond",
+      "abbr": "Richmond",
       "rating": -2.7,
       "prev_rank": 250
     },
     {
-      "rank": 248,
-      "team": "DePaul",
-      "abbr": "DePaul",
-      "rating": -2.7,
-      "prev_rank": 251
-    },
-    {
       "rank": 249,
-      "team": "Oregon State",
-      "abbr": "Oregon State",
-      "rating": -2.7,
-      "prev_rank": 252
-    },
-    {
-      "rank": 250,
-      "team": "Richmond",
-      "abbr": "Richmond",
-      "rating": -2.7,
-      "prev_rank": 253
-    },
-    {
-      "rank": 251,
       "team": "Charlotte",
       "abbr": "Charlotte",
       "rating": -2.8,
-      "prev_rank": 254
+      "prev_rank": 251
     },
     {
-      "rank": 252,
+      "rank": 250,
       "team": "Creighton",
       "abbr": "Creighton",
       "rating": -2.8,
-      "prev_rank": 255
+      "prev_rank": 252
     },
     {
-      "rank": 253,
+      "rank": 251,
       "team": "Indiana State",
       "abbr": "Indiana State",
       "rating": -2.9,
-      "prev_rank": 256
+      "prev_rank": 253
     },
     {
-      "rank": 254,
+      "rank": 252,
       "team": "Memphis",
       "abbr": "Memphis",
       "rating": -2.9,
-      "prev_rank": 277
+      "prev_rank": 254
     },
     {
-      "rank": 255,
+      "rank": 253,
       "team": "Morgan State",
       "abbr": "Morgan State",
       "rating": -2.9,
+      "prev_rank": 255
+    },
+    {
+      "rank": 254,
+      "team": "Chattanooga",
+      "abbr": "Chattanooga",
+      "rating": -3.0,
+      "prev_rank": 256
+    },
+    {
+      "rank": 255,
+      "team": "Fresno State",
+      "abbr": "Fresno State",
+      "rating": -3.0,
       "prev_rank": 257
     },
     {
       "rank": 256,
-      "team": "Chattanooga",
-      "abbr": "Chattanooga",
-      "rating": -3.0,
-      "prev_rank": 207
-    },
-    {
-      "rank": 257,
-      "team": "Fresno State",
-      "abbr": "Fresno State",
+      "team": "North Dakota",
+      "abbr": "North Dakota",
       "rating": -3.0,
       "prev_rank": 258
     },
     {
-      "rank": 258,
-      "team": "North Dakota",
-      "abbr": "North Dakota",
-      "rating": -3.0,
+      "rank": 257,
+      "team": "Loyola Maryland",
+      "abbr": "Loyola Maryland",
+      "rating": -3.2,
       "prev_rank": 259
     },
     {
-      "rank": 259,
-      "team": "Loyola Maryland",
-      "abbr": "Loyola Maryland",
+      "rank": 258,
+      "team": "Purdue Fort Wayne",
+      "abbr": "Purdue Fort Wayne",
       "rating": -3.2,
       "prev_rank": 260
     },
     {
-      "rank": 260,
-      "team": "Purdue Fort Wayne",
-      "abbr": "Purdue Fort Wayne",
+      "rank": 259,
+      "team": "UCF",
+      "abbr": "UCF",
       "rating": -3.2,
       "prev_rank": 261
     },
     {
-      "rank": 261,
-      "team": "UCF",
-      "abbr": "UCF",
-      "rating": -3.2,
-      "prev_rank": 262
-    },
-    {
-      "rank": 262,
+      "rank": 260,
       "team": "Pittsburgh",
       "abbr": "Pittsburgh",
       "rating": -3.3,
+      "prev_rank": 262
+    },
+    {
+      "rank": 261,
+      "team": "Butler",
+      "abbr": "Butler",
+      "rating": -3.4,
       "prev_rank": 263
     },
     {
-      "rank": 263,
-      "team": "Butler",
-      "abbr": "Butler",
+      "rank": 262,
+      "team": "Long Beach State",
+      "abbr": "Long Beach State",
       "rating": -3.4,
       "prev_rank": 264
     },
     {
-      "rank": 264,
-      "team": "Long Beach State",
-      "abbr": "Long Beach State",
+      "rank": 263,
+      "team": "North Carolina Central",
+      "abbr": "North Carolina Central",
       "rating": -3.4,
       "prev_rank": 265
     },
     {
-      "rank": 265,
-      "team": "North Carolina Central",
-      "abbr": "North Carolina Central",
-      "rating": -3.4,
+      "rank": 264,
+      "team": "East Carolina",
+      "abbr": "East Carolina",
+      "rating": -3.6,
       "prev_rank": 266
     },
     {
-      "rank": 266,
-      "team": "East Carolina",
-      "abbr": "East Carolina",
+      "rank": 265,
+      "team": "Lafayette",
+      "abbr": "Lafayette",
       "rating": -3.6,
       "prev_rank": 267
     },
     {
-      "rank": 267,
-      "team": "Lafayette",
-      "abbr": "Lafayette",
+      "rank": 266,
+      "team": "Southern Utah",
+      "abbr": "Southern Utah",
       "rating": -3.6,
       "prev_rank": 268
     },
     {
-      "rank": 268,
-      "team": "Southern Utah",
-      "abbr": "Southern Utah",
-      "rating": -3.6,
-      "prev_rank": 269
-    },
-    {
-      "rank": 269,
+      "rank": 267,
       "team": "South Carolina Upstate",
       "abbr": "South Carolina Upstate",
       "rating": -3.7,
+      "prev_rank": 269
+    },
+    {
+      "rank": 268,
+      "team": "Incarnate Word",
+      "abbr": "Incarnate Word",
+      "rating": -3.8,
       "prev_rank": 270
     },
     {
-      "rank": 270,
-      "team": "Incarnate Word",
-      "abbr": "Incarnate Word",
+      "rank": 269,
+      "team": "Lamar",
+      "abbr": "Lamar",
       "rating": -3.8,
       "prev_rank": 271
     },
     {
-      "rank": 271,
-      "team": "Lamar",
-      "abbr": "Lamar",
+      "rank": 270,
+      "team": "Minnesota",
+      "abbr": "Minnesota",
       "rating": -3.8,
       "prev_rank": 272
     },
     {
-      "rank": 272,
-      "team": "Minnesota",
-      "abbr": "Minnesota",
+      "rank": 271,
+      "team": "Murray State",
+      "abbr": "Murray State",
       "rating": -3.8,
       "prev_rank": 273
     },
     {
-      "rank": 273,
-      "team": "Murray State",
-      "abbr": "Murray State",
-      "rating": -3.8,
+      "rank": 272,
+      "team": "Colorado",
+      "abbr": "Colorado",
+      "rating": -3.9,
       "prev_rank": 274
     },
     {
-      "rank": 274,
-      "team": "Colorado",
-      "abbr": "Colorado",
+      "rank": 273,
+      "team": "Maine",
+      "abbr": "Maine",
       "rating": -3.9,
       "prev_rank": 275
     },
     {
-      "rank": 275,
-      "team": "Maine",
-      "abbr": "Maine",
-      "rating": -3.9,
-      "prev_rank": 276
-    },
-    {
-      "rank": 276,
+      "rank": 274,
       "team": "Eastern Illinois",
       "abbr": "Eastern Illinois",
       "rating": -4.1,
+      "prev_rank": 276
+    },
+    {
+      "rank": 275,
+      "team": "Princeton",
+      "abbr": "Princeton",
+      "rating": -4.1,
+      "prev_rank": 277
+    },
+    {
+      "rank": 276,
+      "team": "Eastern Kentucky",
+      "abbr": "Eastern Kentucky",
+      "rating": -4.2,
       "prev_rank": 278
     },
     {
       "rank": 277,
-      "team": "Princeton",
-      "abbr": "Princeton",
-      "rating": -4.1,
+      "team": "Holy Cross",
+      "abbr": "Holy Cross",
+      "rating": -4.3,
       "prev_rank": 279
     },
     {
       "rank": 278,
-      "team": "Eastern Kentucky",
-      "abbr": "Eastern Kentucky",
-      "rating": -4.2,
-      "prev_rank": 280
-    },
-    {
-      "rank": 279,
-      "team": "Holy Cross",
-      "abbr": "Holy Cross",
+      "team": "Northwestern State",
+      "abbr": "Northwestern State",
       "rating": -4.3,
       "prev_rank": 281
     },
     {
-      "rank": 280,
-      "team": "Milwaukee",
-      "abbr": "Milwaukee",
+      "rank": 279,
+      "team": "Tarleton State",
+      "abbr": "Tarleton State",
       "rating": -4.3,
       "prev_rank": 282
     },
     {
-      "rank": 281,
-      "team": "Northwestern State",
-      "abbr": "Northwestern State",
-      "rating": -4.3,
-      "prev_rank": 283
-    },
-    {
-      "rank": 282,
-      "team": "Tarleton State",
-      "abbr": "Tarleton State",
-      "rating": -4.3,
-      "prev_rank": 284
-    },
-    {
-      "rank": 283,
+      "rank": 280,
       "team": "Oklahoma State",
       "abbr": "Oklahoma State",
       "rating": -4.4,
-      "prev_rank": 285
+      "prev_rank": 283
     },
     {
-      "rank": 284,
+      "rank": 281,
       "team": "LSU",
       "abbr": "LSU",
+      "rating": -4.5,
+      "prev_rank": 284
+    },
+    {
+      "rank": 282,
+      "team": "Rutgers",
+      "abbr": "Rutgers",
       "rating": -4.5,
       "prev_rank": 286
     },
     {
-      "rank": 285,
-      "team": "Manhattan",
-      "abbr": "Manhattan",
-      "rating": -4.5,
-      "prev_rank": 287
-    },
-    {
-      "rank": 286,
-      "team": "Rutgers",
-      "abbr": "Rutgers",
-      "rating": -4.5,
-      "prev_rank": 288
-    },
-    {
-      "rank": 287,
+      "rank": 283,
       "team": "Fordham",
       "abbr": "Fordham",
       "rating": -4.6,
-      "prev_rank": 173
+      "prev_rank": 287
     },
     {
-      "rank": 288,
+      "rank": 284,
       "team": "Jackson State",
       "abbr": "Jackson State",
+      "rating": -4.6,
+      "prev_rank": 288
+    },
+    {
+      "rank": 285,
+      "team": "UC Riverside",
+      "abbr": "UC Riverside",
+      "rating": -4.6,
+      "prev_rank": 289
+    },
+    {
+      "rank": 286,
+      "team": "UTEP",
+      "abbr": "UTEP",
       "rating": -4.6,
       "prev_rank": 290
     },
     {
-      "rank": 289,
-      "team": "UC Riverside",
-      "abbr": "UC Riverside",
-      "rating": -4.6,
-      "prev_rank": 291
-    },
-    {
-      "rank": 290,
-      "team": "UTEP",
-      "abbr": "UTEP",
-      "rating": -4.6,
-      "prev_rank": 292
-    },
-    {
-      "rank": 291,
+      "rank": 287,
       "team": "Drake",
       "abbr": "Drake",
       "rating": -4.7,
+      "prev_rank": 291
+    },
+    {
+      "rank": 288,
+      "team": "Drexel",
+      "abbr": "Drexel",
+      "rating": -4.7,
+      "prev_rank": 181
+    },
+    {
+      "rank": 289,
+      "team": "Abilene Christian",
+      "abbr": "Abilene Christian",
+      "rating": -4.8,
+      "prev_rank": 292
+    },
+    {
+      "rank": 290,
+      "team": "Houston Christian",
+      "abbr": "Houston Christian",
+      "rating": -4.8,
       "prev_rank": 293
     },
     {
-      "rank": 292,
-      "team": "Abilene Christian",
-      "abbr": "Abilene Christian",
+      "rank": 291,
+      "team": "Idaho State",
+      "abbr": "Idaho State",
       "rating": -4.8,
       "prev_rank": 294
     },
     {
-      "rank": 293,
-      "team": "Houston Christian",
-      "abbr": "Houston Christian",
+      "rank": 292,
+      "team": "Niagara",
+      "abbr": "Niagara",
       "rating": -4.8,
       "prev_rank": 295
     },
     {
-      "rank": 294,
-      "team": "Idaho State",
-      "abbr": "Idaho State",
+      "rank": 293,
+      "team": "South Carolina State",
+      "abbr": "South Carolina State",
       "rating": -4.8,
       "prev_rank": 296
     },
     {
-      "rank": 295,
-      "team": "Niagara",
-      "abbr": "Niagara",
+      "rank": 294,
+      "team": "Wofford",
+      "abbr": "Wofford",
       "rating": -4.8,
+      "prev_rank": 174
+    },
+    {
+      "rank": 295,
+      "team": "Binghamton",
+      "abbr": "Binghamton",
+      "rating": -4.9,
       "prev_rank": 297
     },
     {
       "rank": 296,
-      "team": "South Carolina State",
-      "abbr": "South Carolina State",
-      "rating": -4.8,
+      "team": "Eastern Michigan",
+      "abbr": "Eastern Michigan",
+      "rating": -4.9,
       "prev_rank": 298
     },
     {
       "rank": 297,
-      "team": "Binghamton",
-      "abbr": "Binghamton",
+      "team": "Hampton",
+      "abbr": "Hampton",
       "rating": -4.9,
       "prev_rank": 299
     },
     {
       "rank": 298,
-      "team": "Eastern Michigan",
-      "abbr": "Eastern Michigan",
-      "rating": -4.9,
+      "team": "Georgia State",
+      "abbr": "Georgia State",
+      "rating": -5.0,
       "prev_rank": 300
     },
     {
       "rank": 299,
-      "team": "Hampton",
-      "abbr": "Hampton",
-      "rating": -4.9,
+      "team": "Maryland Eastern Shore",
+      "abbr": "Maryland Eastern Shore",
+      "rating": -5.0,
       "prev_rank": 301
     },
     {
       "rank": 300,
-      "team": "Georgia State",
-      "abbr": "Georgia State",
-      "rating": -5.0,
+      "team": "Louisiana",
+      "abbr": "Louisiana",
+      "rating": -5.1,
       "prev_rank": 302
     },
     {
       "rank": 301,
-      "team": "Maryland Eastern Shore",
-      "abbr": "Maryland Eastern Shore",
-      "rating": -5.0,
+      "team": "Notre Dame",
+      "abbr": "Notre Dame",
+      "rating": -5.1,
       "prev_rank": 303
     },
     {
       "rank": 302,
-      "team": "Louisiana",
-      "abbr": "Louisiana",
-      "rating": -5.1,
+      "team": "Oregon",
+      "abbr": "Oregon",
+      "rating": -5.2,
       "prev_rank": 304
     },
     {
       "rank": 303,
-      "team": "Notre Dame",
-      "abbr": "Notre Dame",
-      "rating": -5.1,
+      "team": "Western Michigan",
+      "abbr": "Western Michigan",
+      "rating": -5.2,
       "prev_rank": 305
     },
     {
       "rank": 304,
-      "team": "Oregon",
-      "abbr": "Oregon",
+      "team": "Xavier",
+      "abbr": "Xavier",
       "rating": -5.2,
       "prev_rank": 306
     },
     {
       "rank": 305,
-      "team": "Western Michigan",
-      "abbr": "Western Michigan",
-      "rating": -5.2,
+      "team": "SE Louisiana",
+      "abbr": "SE Louisiana",
+      "rating": -5.4,
       "prev_rank": 307
     },
     {
       "rank": 306,
-      "team": "Xavier",
-      "abbr": "Xavier",
-      "rating": -5.2,
+      "team": "Arizona State",
+      "abbr": "Arizona State",
+      "rating": -5.5,
       "prev_rank": 308
     },
     {
       "rank": 307,
-      "team": "SE Louisiana",
-      "abbr": "SE Louisiana",
-      "rating": -5.4,
+      "team": "Bucknell",
+      "abbr": "Bucknell",
+      "rating": -5.5,
       "prev_rank": 309
     },
     {
       "rank": 308,
-      "team": "Arizona State",
-      "abbr": "Arizona State",
+      "team": "Chicago State",
+      "abbr": "Chicago State",
       "rating": -5.5,
       "prev_rank": 310
     },
     {
       "rank": 309,
-      "team": "Bucknell",
-      "abbr": "Bucknell",
+      "team": "IU Indianapolis",
+      "abbr": "IU Indianapolis",
       "rating": -5.5,
       "prev_rank": 311
     },
     {
       "rank": 310,
-      "team": "Chicago State",
-      "abbr": "Chicago State",
+      "team": "NJIT",
+      "abbr": "NJIT",
       "rating": -5.5,
       "prev_rank": 312
     },
     {
       "rank": 311,
-      "team": "IU Indianapolis",
-      "abbr": "IU Indianapolis",
-      "rating": -5.5,
+      "team": "Brown",
+      "abbr": "Brown",
+      "rating": -5.6,
       "prev_rank": 313
     },
     {
       "rank": 312,
-      "team": "NJIT",
-      "abbr": "NJIT",
-      "rating": -5.5,
+      "team": "San Diego",
+      "abbr": "San Diego",
+      "rating": -5.6,
       "prev_rank": 314
     },
     {
       "rank": 313,
-      "team": "Brown",
-      "abbr": "Brown",
+      "team": "Tulane",
+      "abbr": "Tulane",
       "rating": -5.6,
       "prev_rank": 315
     },
     {
       "rank": 314,
-      "team": "San Diego",
-      "abbr": "San Diego",
-      "rating": -5.6,
+      "team": "Sacramento State",
+      "abbr": "Sacramento State",
+      "rating": -5.7,
       "prev_rank": 316
     },
     {
       "rank": 315,
-      "team": "Tulane",
-      "abbr": "Tulane",
-      "rating": -5.6,
+      "team": "Southern Indiana",
+      "abbr": "Southern Indiana",
+      "rating": -5.7,
       "prev_rank": 317
     },
     {
       "rank": 316,
-      "team": "Sacramento State",
-      "abbr": "Sacramento State",
-      "rating": -5.7,
+      "team": "Portland",
+      "abbr": "Portland",
+      "rating": -5.8,
       "prev_rank": 318
     },
     {
       "rank": 317,
-      "team": "Southern Indiana",
-      "abbr": "Southern Indiana",
-      "rating": -5.7,
+      "team": "Syracuse",
+      "abbr": "Syracuse",
+      "rating": -5.8,
       "prev_rank": 319
     },
     {
       "rank": 318,
-      "team": "Portland",
-      "abbr": "Portland",
-      "rating": -5.8,
+      "team": "Northeastern",
+      "abbr": "Northeastern",
+      "rating": -6.0,
       "prev_rank": 320
     },
     {
       "rank": 319,
-      "team": "Syracuse",
-      "abbr": "Syracuse",
-      "rating": -5.8,
+      "team": "Alcorn State",
+      "abbr": "Alcorn State",
+      "rating": -6.1,
       "prev_rank": 321
     },
     {
       "rank": 320,
-      "team": "Northeastern",
-      "abbr": "Northeastern",
-      "rating": -6.0,
+      "team": "North Carolina A&T",
+      "abbr": "North Carolina A&T",
+      "rating": -6.1,
       "prev_rank": 322
     },
     {
       "rank": 321,
-      "team": "Alcorn State",
-      "abbr": "Alcorn State",
-      "rating": -6.1,
+      "team": "Boston College",
+      "abbr": "Boston College",
+      "rating": -6.2,
       "prev_rank": 323
     },
     {
       "rank": 322,
-      "team": "North Carolina A&T",
-      "abbr": "North Carolina A&T",
-      "rating": -6.1,
+      "team": "Canisius",
+      "abbr": "Canisius",
+      "rating": -6.2,
       "prev_rank": 324
     },
     {
       "rank": 323,
-      "team": "Boston College",
-      "abbr": "Boston College",
+      "team": "Loyola Chicago",
+      "abbr": "Loyola Chicago",
       "rating": -6.2,
       "prev_rank": 325
     },
     {
       "rank": 324,
-      "team": "Canisius",
-      "abbr": "Canisius",
-      "rating": -6.2,
+      "team": "Dartmouth",
+      "abbr": "Dartmouth",
+      "rating": -6.3,
       "prev_rank": 326
     },
     {
       "rank": 325,
-      "team": "Loyola Chicago",
-      "abbr": "Loyola Chicago",
-      "rating": -6.2,
+      "team": "East Texas A&M",
+      "abbr": "East Texas A&M",
+      "rating": -6.3,
       "prev_rank": 327
     },
     {
       "rank": 326,
-      "team": "Dartmouth",
-      "abbr": "Dartmouth",
+      "team": "Elon",
+      "abbr": "Elon",
       "rating": -6.3,
       "prev_rank": 328
     },
     {
       "rank": 327,
-      "team": "East Texas A&M",
-      "abbr": "East Texas A&M",
-      "rating": -6.3,
+      "team": "Army",
+      "abbr": "Army",
+      "rating": -6.4,
       "prev_rank": 329
     },
     {
       "rank": 328,
-      "team": "Elon",
-      "abbr": "Elon",
-      "rating": -6.3,
-      "prev_rank": 330
+      "team": "Arkansas-Pine Bluff",
+      "abbr": "Arkansas-Pine Bluff",
+      "rating": -6.8,
+      "prev_rank": 193
     },
     {
       "rank": 329,
-      "team": "Army",
-      "abbr": "Army",
-      "rating": -6.4,
-      "prev_rank": 331
-    },
-    {
-      "rank": 330,
       "team": "North Florida",
       "abbr": "North Florida",
       "rating": -6.9,
-      "prev_rank": 332
+      "prev_rank": 330
     },
     {
-      "rank": 331,
+      "rank": 330,
       "team": "St. Francis (PA)",
       "abbr": "St. Francis (PA)",
       "rating": -6.9,
+      "prev_rank": 331
+    },
+    {
+      "rank": 331,
+      "team": "Pepperdine",
+      "abbr": "Pepperdine",
+      "rating": -7.1,
       "prev_rank": 333
     },
     {
       "rank": 332,
-      "team": "USC",
-      "abbr": "USC",
-      "rating": -6.9,
+      "team": "Delaware State",
+      "abbr": "Delaware State",
+      "rating": -7.3,
       "prev_rank": 334
     },
     {
       "rank": 333,
-      "team": "Pepperdine",
-      "abbr": "Pepperdine",
-      "rating": -7.1,
+      "team": "Kansas State",
+      "abbr": "Kansas State",
+      "rating": -7.3,
       "prev_rank": 335
     },
     {
       "rank": 334,
-      "team": "Delaware State",
-      "abbr": "Delaware State",
-      "rating": -7.3,
+      "team": "Maryland",
+      "abbr": "Maryland",
+      "rating": -7.4,
       "prev_rank": 336
     },
     {
       "rank": 335,
-      "team": "Kansas State",
-      "abbr": "Kansas State",
-      "rating": -7.3,
+      "team": "San Jos\u00e9 State",
+      "abbr": "San Jos\u00e9 State",
+      "rating": -7.4,
       "prev_rank": 337
     },
     {
       "rank": 336,
-      "team": "Maryland",
-      "abbr": "Maryland",
-      "rating": -7.4,
+      "team": "South Carolina",
+      "abbr": "South Carolina",
+      "rating": -7.5,
       "prev_rank": 338
     },
     {
       "rank": 337,
-      "team": "San Jos\u00e9 State",
-      "abbr": "San Jos\u00e9 State",
-      "rating": -7.4,
+      "team": "New Hampshire",
+      "abbr": "New Hampshire",
+      "rating": -7.6,
       "prev_rank": 339
     },
     {
       "rank": 338,
-      "team": "South Carolina",
-      "abbr": "South Carolina",
-      "rating": -7.5,
-      "prev_rank": 341
-    },
-    {
-      "rank": 339,
-      "team": "New Hampshire",
-      "abbr": "New Hampshire",
-      "rating": -7.6,
-      "prev_rank": 342
-    },
-    {
-      "rank": 340,
       "team": "Delaware",
       "abbr": "Delaware",
       "rating": -7.7,
-      "prev_rank": 343
+      "prev_rank": 340
     },
     {
-      "rank": 341,
+      "rank": 339,
       "team": "Georgia Tech",
       "abbr": "Georgia Tech",
       "rating": -7.9,
-      "prev_rank": 344
+      "prev_rank": 341
     },
     {
-      "rank": 342,
+      "rank": 340,
       "team": "The Citadel",
       "abbr": "The Citadel",
       "rating": -7.9,
-      "prev_rank": 345
+      "prev_rank": 342
     },
     {
-      "rank": 343,
+      "rank": 341,
       "team": "Bryant",
       "abbr": "Bryant",
       "rating": -8.0,
-      "prev_rank": 346
+      "prev_rank": 343
     },
     {
-      "rank": 344,
+      "rank": 342,
       "team": "Coppin State",
       "abbr": "Coppin State",
       "rating": -8.0,
-      "prev_rank": 347
+      "prev_rank": 344
     },
     {
-      "rank": 345,
+      "rank": 343,
+      "team": "Manhattan",
+      "abbr": "Manhattan",
+      "rating": -8.1,
+      "prev_rank": 285
+    },
+    {
+      "rank": 344,
       "team": "Cleveland State",
       "abbr": "Cleveland State",
       "rating": -8.3,
-      "prev_rank": 348
+      "prev_rank": 345
     },
     {
-      "rank": 346,
+      "rank": 345,
       "team": "Mississippi State",
       "abbr": "Mississippi State",
       "rating": -8.3,
-      "prev_rank": 349
+      "prev_rank": 346
     },
     {
-      "rank": 347,
+      "rank": 346,
       "team": "North Alabama",
       "abbr": "North Alabama",
       "rating": -8.3,
-      "prev_rank": 350
+      "prev_rank": 347
     },
     {
-      "rank": 348,
+      "rank": 347,
       "team": "Utah",
       "abbr": "Utah",
       "rating": -8.4,
-      "prev_rank": 351
+      "prev_rank": 348
+    },
+    {
+      "rank": 348,
+      "team": "Milwaukee",
+      "abbr": "Milwaukee",
+      "rating": -8.5,
+      "prev_rank": 280
     },
     {
       "rank": 349,
       "team": "Bellarmine",
       "abbr": "Bellarmine",
       "rating": -8.9,
-      "prev_rank": 238
+      "prev_rank": 349
     },
     {
       "rank": 350,
       "team": "Northern Arizona",
       "abbr": "Northern Arizona",
       "rating": -9.4,
-      "prev_rank": 352
+      "prev_rank": 350
     },
     {
       "rank": 351,
       "team": "Penn State",
       "abbr": "Penn State",
       "rating": -10.1,
-      "prev_rank": 353
+      "prev_rank": 351
     },
     {
       "rank": 352,
       "team": "Cal State Bakersfield",
       "abbr": "Cal State Bakersfield",
       "rating": -10.2,
-      "prev_rank": 354
+      "prev_rank": 352
     },
     {
       "rank": 353,
       "team": "Rider",
       "abbr": "Rider",
       "rating": -10.7,
-      "prev_rank": 355
+      "prev_rank": 353
     },
     {
       "rank": 354,
       "team": "UTSA",
       "abbr": "UTSA",
       "rating": -11.3,
-      "prev_rank": 356
+      "prev_rank": 354
     },
     {
       "rank": 355,
       "team": "UL Monroe",
       "abbr": "UL Monroe",
       "rating": -11.4,
-      "prev_rank": 357
+      "prev_rank": 355
     },
     {
       "rank": 356,
       "team": "Evansville",
       "abbr": "Evansville",
       "rating": -12.1,
-      "prev_rank": 358
+      "prev_rank": 356
     },
     {
       "rank": 357,
       "team": "Mississippi Valley State",
       "abbr": "Mississippi Valley State",
       "rating": -12.5,
-      "prev_rank": 359
+      "prev_rank": 357
     },
     {
       "rank": 358,
-      "team": "La Salle",
-      "abbr": "La Salle",
-      "rating": -12.7,
-      "prev_rank": 340
-    },
-    {
-      "rank": 359,
       "team": "Gardner-Webb",
       "abbr": "Gardner-Webb",
       "rating": -12.8,
+      "prev_rank": 359
+    },
+    {
+      "rank": 359,
+      "team": "VMI",
+      "abbr": "VMI",
+      "rating": -12.9,
       "prev_rank": 360
     },
     {
       "rank": 360,
-      "team": "VMI",
-      "abbr": "VMI",
-      "rating": -12.9,
+      "team": "Northern Illinois",
+      "abbr": "Northern Illinois",
+      "rating": -14.1,
       "prev_rank": 361
     },
     {
       "rank": 361,
-      "team": "Northern Illinois",
-      "abbr": "Northern Illinois",
-      "rating": -14.1,
+      "team": "Western Illinois",
+      "abbr": "Western Illinois",
+      "rating": -14.2,
       "prev_rank": 362
     },
     {
       "rank": 362,
-      "team": "Western Illinois",
-      "abbr": "Western Illinois",
-      "rating": -14.2,
+      "team": "Kansas City",
+      "abbr": "Kansas City",
+      "rating": -15.7,
       "prev_rank": 363
     },
     {
       "rank": 363,
-      "team": "Kansas City",
-      "abbr": "Kansas City",
-      "rating": -15.7,
+      "team": "Fairleigh Dickinson",
+      "abbr": "Fairleigh Dickinson",
+      "rating": -16.3,
       "prev_rank": 364
     },
     {
       "rank": 364,
-      "team": "Fairleigh Dickinson",
-      "abbr": "Fairleigh Dickinson",
-      "rating": -16.3,
-      "prev_rank": 289
+      "team": "La Salle",
+      "abbr": "La Salle",
+      "rating": -17.4,
+      "prev_rank": 358
     },
     {
       "rank": 365,
