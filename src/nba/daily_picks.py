@@ -552,6 +552,21 @@ def main() -> None:
         print(f"no un-tipped games on/after {target} -> {dest} (pending)")
         return
 
+    # Board-date guard (added 2026-11-05, Bryant approved): on 2026-11-04
+    # the evening odds capture ran before The Odds API had listed the next
+    # day's games, so the only un-tipped games in the snapshot were
+    # Christmas Day games posted months early by one book, and the
+    # selection above picked Dec 25 as the board date. A first un-tipped
+    # day more than 2 days out is never the real next slate -- refuse
+    # before anything is written rather than publish a far-future board.
+    if (game_date - today).days > 2:
+        print(f"ERROR: board-date guard: selected game day {game_date} "
+              f"is {(game_date - today).days} days after today ({today}); "
+              f"snapshot {snap_date} likely predates the books posting "
+              f"the next real slate. Refusing to publish; no files "
+              f"written.")
+        sys.exit(1)
+
     print(f"game day {game_date} ({len(day_games)} games in snapshot {snap_date})")
 
     df = load_training_rows(yesterday)
