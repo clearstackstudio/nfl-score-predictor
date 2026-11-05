@@ -841,6 +841,122 @@
         "result": "loss"
       },
       "graded_at": "2026-11-04 13:16 PST"
+    },
+    "2026-11-04": {
+      "date": "2026-11-04",
+      "generated": "2026-11-04 21:42 PST",
+      "preseason": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Queens University",
+          "home": "Loyola Marymount",
+          "away_abbr": "Queens University",
+          "home_abbr": "Loyola Marymount",
+          "gameday": "2026-11-04",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 8.5,
+          "line_total": 191.5,
+          "our_spread": 3.2,
+          "our_total": 160.5,
+          "spread_edge": -5.3,
+          "total_edge": -31.0,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Queens University +8.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Loyola Marymount -8.5",
+            "away": "Queens University +8.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Milwaukee",
+          "home": "Santa Clara",
+          "away_abbr": "Milwaukee",
+          "home_abbr": "Santa Clara",
+          "gameday": "2026-11-04",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 23.5,
+          "line_total": 174.5,
+          "our_spread": 19.7,
+          "our_total": 158.2,
+          "spread_edge": -3.8,
+          "total_edge": -16.3,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Milwaukee +23.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Santa Clara -23.5",
+            "away": "Milwaukee +23.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "North Dakota State",
+          "home": "Saint Mary's",
+          "away_abbr": "North Dakota State",
+          "home_abbr": "Saint Mary's",
+          "gameday": "2026-11-04",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 38.5,
+          "line_total": 170.0,
+          "our_spread": 6.0,
+          "our_total": 148.0,
+          "spread_edge": -32.5,
+          "total_edge": -22.0,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "North Dakota State +38.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Saint Mary's -38.5",
+            "away": "North Dakota State +38.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Queens University @ Loyola Marymount",
+            "market": "spread",
+            "label": "Queens University +8.5",
+            "prob": 0.5
+          },
+          {
+            "game": "Milwaukee @ Santa Clara",
+            "market": "spread",
+            "label": "Milwaukee +23.5",
+            "prob": 0.5
+          },
+          {
+            "game": "North Dakota State @ Saint Mary's",
+            "market": "spread",
+            "label": "North Dakota State +38.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.125,
+        "fair_odds": "+700",
+        "book_pays": "+600"
+      }
     }
   }
 }

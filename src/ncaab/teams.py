@@ -27,6 +27,63 @@ KNOWN_OVERRIDES: dict[str, str] = {
     "CSU Fullerton Titans": "Cal State Fullerton",
     "Cal Baptist Lancers": "California Baptist",
     "Fort Wayne Mastodons": "Purdue Fort Wayne",
+    # November 4, 2026: the Nov 1-3 finals backfill (full D1 board) surfaced
+    # 27 more unmappable names in merged finals / logged odds. Each target
+    # verified against the CBBD D1 list in data/ncaab/raw/ and games.csv.
+    "Alcorn St Braves": "Alcorn State",
+    "American Eagles": "American University",
+    "Appalachian St Mountaineers": "App State",
+    "Arkansas-Little Rock Trojans": "Little Rock",
+    "Boston Univ. Terriers": "Boston University",
+    "CSU Northridge Matadors": "Cal State Northridge",
+    "Chicago St Cougars": "Chicago State",
+    "GW Revolutionaries": "George Washington",
+    "Jackson St Tigers": "Jackson State",
+    "LIU Sharks": "Long Island University",
+    "Long Beach St 49ers": "Long Beach State",
+    "Loyola (Chi) Ramblers": "Loyola Chicago",
+    "Loyola (MD) Greyhounds": "Loyola Maryland",
+    "Maryland-Eastern Shore Hawks": "Maryland Eastern Shore",
+    "Mississippi St Bulldogs": "Mississippi State",
+    "Morehead St Eagles": "Morehead State",
+    "Mt. St. Mary's Mountaineers": "Mount St. Mary's",
+    "Murray St Racers": "Murray State",
+    "SE Missouri St Redhawks": "Southeast Missouri State",
+    "San José St Spartans": "San José State",
+    "St. Thomas (MN) Tommies": "St. Thomas-Minnesota",
+    "Tenn-Martin Skyhawks": "UT Martin",
+    "UMKC Kangaroos": "Kansas City",
+    "Wichita St Shockers": "Wichita State",
+    "Wright St Raiders": "Wright State",
+    "Youngstown St Penguins": "Youngstown State",
+    "Albany Great Danes": "UAlbany",
+    # "X St" names where the trailing-word heuristic silently lands on a
+    # DIFFERENT school ("Michigan St Spartans" -> "Michigan"). Explicit
+    # overrides so they map to their real CBBD names (all verified as
+    # above). Correct-by-heuristic exceptions -- canonical drops "State"
+    # itself -- are Grambling, Sam Houston and Central Connecticut; do
+    # NOT add overrides for those.
+    "Alabama St Hornets": "Alabama State",
+    "Arizona St Sun Devils": "Arizona State",
+    "Arkansas St Red Wolves": "Arkansas State",
+    "Colorado St Rams": "Colorado State",
+    "Delaware St Hornets": "Delaware State",
+    "Florida St Seminoles": "Florida State",
+    "Georgia St Panthers": "Georgia State",
+    "Illinois St Redbirds": "Illinois State",
+    "Indiana St Sycamores": "Indiana State",
+    "Jacksonville St Gamecocks": "Jacksonville State",
+    "Kansas St Wildcats": "Kansas State",
+    "Michigan St Spartans": "Michigan State",
+    "Montana St Bobcats": "Montana State",
+    "North Dakota St Bison": "North Dakota State",
+    "Northwestern St Demons": "Northwestern State",
+    "Oklahoma St Cowboys": "Oklahoma State",
+    "Oregon St Beavers": "Oregon State",
+    "San Diego St Aztecs": "San Diego State",
+    "South Dakota St Jackrabbits": "South Dakota State",
+    "Tennessee St Tigers": "Tennessee State",
+    "Washington St Cougars": "Washington State",
 }
 
 
