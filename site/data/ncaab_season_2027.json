@@ -847,8 +847,8 @@
       "generated": "2026-11-04 21:42 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Queens University",
@@ -875,7 +875,12 @@
             "away": "Queens University +8.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 95.0,
+            "away_score": 96.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Milwaukee",
@@ -902,7 +907,12 @@
             "away": "Milwaukee +23.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 95.0,
+            "away_score": 72.0,
+            "ats": "win"
+          }
         },
         {
           "away": "North Dakota State",
@@ -929,7 +939,12 @@
             "away": "North Dakota State +38.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 105.0,
+            "away_score": 64.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -953,10 +968,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.125,
-        "fair_odds": "+700",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-05 06:58 PST"
     }
   }
 }
