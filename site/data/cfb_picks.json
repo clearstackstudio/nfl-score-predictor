@@ -99,7 +99,13 @@
         "away": "Ball State +4"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.525
+      "ou_prob": 0.525,
+      "result": {
+        "home_score": 31,
+        "away_score": 30,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "Toledo",
@@ -127,7 +133,12 @@
         "away": "Toledo -27.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 17,
+        "away_score": 20,
+        "ats": "loss"
+      }
     },
     {
       "away": "Central Michigan",
@@ -155,7 +166,12 @@
         "away": "Central Michigan +1.5"
       },
       "cover_prob": 0.501,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 7,
+        "away_score": 35,
+        "ats": "win"
+      }
     },
     {
       "away": "UTSA",
