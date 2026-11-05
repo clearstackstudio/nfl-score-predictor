@@ -4211,6 +4211,90 @@
         "fair_odds": "+630",
         "book_pays": "+600"
       }
+    },
+    "2026-11-05": {
+      "date": "2026-11-05",
+      "generated": "2026-11-04 21:46 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Orlando Magic",
+          "home": "Phoenix Suns",
+          "away_abbr": "Orlando Magic",
+          "home_abbr": "Phoenix Suns",
+          "gameday": "2026-11-05",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 1.5,
+          "line_total": 224.0,
+          "our_spread": 3.3,
+          "our_total": 227.5,
+          "spread_edge": 1.8,
+          "total_edge": 3.5,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Phoenix Suns -1.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Phoenix Suns -1.5",
+            "away": "Orlando Magic +1.5"
+          },
+          "cover_prob": 0.503,
+          "ou_prob": null
+        },
+        {
+          "away": "Miami Heat",
+          "home": "Golden State Warriors",
+          "away_abbr": "Miami Heat",
+          "home_abbr": "Golden State Warriors",
+          "gameday": "2026-11-05",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 4.8,
+          "line_total": 237.5,
+          "our_spread": 3.7,
+          "our_total": 242.1,
+          "spread_edge": -1.0,
+          "total_edge": 4.6,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Miami Heat +4.75",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Golden State Warriors -4.75",
+            "away": "Miami Heat +4.75"
+          },
+          "cover_prob": 0.51,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Miami Heat @ Golden State Warriors",
+            "market": "spread",
+            "label": "Miami Heat +4.75",
+            "prob": 0.51
+          },
+          {
+            "game": "Orlando Magic @ Phoenix Suns",
+            "market": "spread",
+            "label": "Phoenix Suns -1.5",
+            "prob": 0.503
+          }
+        ],
+        "combined_prob": 0.257,
+        "fair_odds": "+289",
+        "book_pays": "+260"
+      }
     }
   }
 }
