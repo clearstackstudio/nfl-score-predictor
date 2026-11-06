@@ -33,7 +33,8 @@
     "combined_prob": 0.143,
     "fair_odds": "+599",
     "book_pays": "+600",
-    "calibration": "empirical-2026-10-09"
+    "calibration": "empirical-2026-10-09",
+    "result": null
   },
   "picks": [
     {
@@ -66,7 +67,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Joe Fagnano",
-      "away_qb": "Trevor Lawrence"
+      "away_qb": "Trevor Lawrence",
+      "result": {
+        "home_score": 10,
+        "away_score": 33,
+        "ats": "win"
+      }
     },
     {
       "away": "Cincinnati Bengals",
