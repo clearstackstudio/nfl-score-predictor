@@ -4286,8 +4286,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Orlando Magic",
@@ -4314,7 +4314,12 @@
             "away": "Orlando Magic +1.5"
           },
           "cover_prob": 0.503,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 117.0,
+            "away_score": 104.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Miami Heat",
@@ -4341,7 +4346,12 @@
             "away": "Miami Heat +4.75"
           },
           "cover_prob": 0.51,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 120.0,
+            "away_score": 100.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -4359,10 +4369,9 @@
             "prob": 0.503
           }
         ],
-        "combined_prob": 0.257,
-        "fair_odds": "+289",
-        "book_pays": "+260"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-05 23:40 PST"
     },
     "2026-11-06": {
       "date": "2026-11-06",
