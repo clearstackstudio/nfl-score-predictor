@@ -977,8 +977,8 @@
       "generated": "2026-11-05 21:39 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Cal Poly",
@@ -1005,10 +1005,16 @@
             "away": "Cal Poly +32.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 104.0,
+            "away_score": 84.0,
+            "ats": "win"
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-06 06:40 PST"
     }
   }
 }
