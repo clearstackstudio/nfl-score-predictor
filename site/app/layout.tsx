@@ -20,16 +20,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://honestlinesports.com"),
   title: {
     default:
-      "Honest Line — NFL, college football, NBA & MLB picks with a public track record",
+      "Honest Line — NFL, college football, NBA, NHL & MLB picks with a public track record",
     template: "%s · Honest Line",
   },
   description:
-    "Fundamentals-only NFL, college football, NBA, and MLB prediction models. Every pick published before game time, every result graded in public — including the losers.",
+    "Fundamentals-only NFL, college football, NBA, NHL, and MLB prediction models. Every pick published before game time, every result graded in public — including the losers.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Honest Line — picks with a public track record",
     description:
-      "Every pick published before game time, every result graded in public — including the losers. NFL, college football, NBA & MLB.",
+      "Every pick published before game time, every result graded in public — including the losers. NFL, college football, NBA, NHL & MLB.",
     url: "/",
     siteName: "Honest Line",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -111,7 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Honest<span className="text-red-500">Line</span>
               </div>
               <p className="mt-2 max-w-xs text-sm leading-relaxed text-zinc-500">
-                Fundamentals-only NFL, college football, NBA, and MLB
+                Fundamentals-only NFL, college football, NBA, NHL, and MLB
                 prediction models. Every pick published before tip-off, every
                 result graded in public.
               </p>

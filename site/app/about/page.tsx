@@ -58,7 +58,7 @@ export default function About() {
       </h1>
       <p className="mt-4 text-[15px] text-zinc-400 light:text-zinc-600">
         Honest Line publishes sports prediction models — for the NFL, NBA,
-        college football, and college basketball — and keeps an honest public
+        NHL, college football, and college basketball — and keeps an honest public
         record of how they do.
       </p>
 

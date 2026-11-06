@@ -4,12 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type LeagueId = "nfl" | "cfb" | "nba" | "ncaab" | "mlb";
+type LeagueId = "nfl" | "cfb" | "nba" | "nhl" | "ncaab" | "mlb";
 
 // Same league → ESPN scoreboard mapping as nav.tsx.
 const LEAGUES: { id: LeagueId; base: string; scoreboard: string }[] = [
   { id: "nfl", base: "", scoreboard: "football/nfl" },
   { id: "nba", base: "/nba", scoreboard: "basketball/nba" },
+  { id: "nhl", base: "/nhl", scoreboard: "hockey/nhl" },
   { id: "mlb", base: "/mlb", scoreboard: "baseball/mlb" },
   { id: "cfb", base: "/cfb", scoreboard: "football/college-football" },
   { id: "ncaab", base: "/ncaab", scoreboard: "basketball/mens-college-basketball" },
@@ -19,6 +20,7 @@ function leagueOf(pathname: string): LeagueId {
   if (pathname === "/mlb" || pathname.startsWith("/mlb/")) return "mlb";
   if (pathname === "/ncaab" || pathname.startsWith("/ncaab/")) return "ncaab";
   if (pathname === "/nba" || pathname.startsWith("/nba/")) return "nba";
+  if (pathname === "/nhl" || pathname.startsWith("/nhl/")) return "nhl";
   if (pathname === "/cfb" || pathname.startsWith("/cfb/")) return "cfb";
   return "nfl";
 }
@@ -96,8 +98,8 @@ export default function ScoreStrip() {
 
   if (games.length === 0) return null;
 
-  // MLB has no live page; its tiles link to the league home instead.
-  const href = league === "mlb" ? "/mlb" : `${cfg.base}/live`;
+  // MLB and NHL have no live page; their tiles link to the league home instead.
+  const href = league === "mlb" || league === "nhl" ? cfg.base : `${cfg.base}/live`;
 
   return (
     <div className="border-t border-white/10">

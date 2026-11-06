@@ -13,7 +13,7 @@ const sections = [
     n: "01",
     title: "What we publish",
     body: [
-      "Honest Line publishes model-generated lines and picks — spreads, totals, and win probabilities — for the NFL, NBA, college football (NCAAF), and college basketball (NCAAB). Models for MLB and the NHL are in development and will join the site under the same rules once they pass the same testing described below.",
+      "Honest Line publishes model-generated lines and picks — spreads, totals, and win probabilities — for the NFL, NBA, NHL, college football (NCAAF), college basketball (NCAAB), and MLB.",
       "Every league page shows the model's numbers next to the current market line, so you can see exactly where the model agrees with the market and where it doesn't.",
     ],
   },

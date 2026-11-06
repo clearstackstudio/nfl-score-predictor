@@ -4,11 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-type LeagueId = "nfl" | "cfb" | "nba" | "ncaab" | "mlb";
+type LeagueId = "nfl" | "cfb" | "nba" | "nhl" | "ncaab" | "mlb";
 
 const LEAGUES: { id: LeagueId; label: string; base: string; scoreboard: string }[] = [
   { id: "nfl", label: "NFL", base: "", scoreboard: "football/nfl" },
   { id: "nba", label: "NBA", base: "/nba", scoreboard: "basketball/nba" },
+  { id: "nhl", label: "NHL", base: "/nhl", scoreboard: "hockey/nhl" },
   { id: "mlb", label: "MLB", base: "/mlb", scoreboard: "baseball/mlb" },
   { id: "cfb", label: "NCAAF", base: "/cfb", scoreboard: "football/college-football" },
   { id: "ncaab", label: "NCAAB", base: "/ncaab", scoreboard: "basketball/mens-college-basketball" },
@@ -16,7 +17,7 @@ const LEAGUES: { id: LeagueId; label: string; base: string; scoreboard: string }
 
 // League tabs are grouped: pro leagues first, then college.
 const LEAGUE_GROUPS: { label: string; ids: LeagueId[] }[] = [
-  { label: "Pro", ids: ["nfl", "nba", "mlb"] },
+  { label: "Pro", ids: ["nfl", "nba", "nhl", "mlb"] },
   { label: "College", ids: ["cfb", "ncaab"] },
 ];
 
@@ -32,6 +33,7 @@ function leagueOf(pathname: string): LeagueId {
   if (pathname === "/mlb" || pathname.startsWith("/mlb/")) return "mlb";
   if (pathname === "/ncaab" || pathname.startsWith("/ncaab/")) return "ncaab";
   if (pathname === "/nba" || pathname.startsWith("/nba/")) return "nba";
+  if (pathname === "/nhl" || pathname.startsWith("/nhl/")) return "nhl";
   if (pathname === "/cfb" || pathname.startsWith("/cfb/")) return "cfb";
   return "nfl";
 }
@@ -40,15 +42,17 @@ function switchHref(pathname: string, target: LeagueId): string {
   const current = leagueOf(pathname);
   if (current === target) return pathname;
   const stripped =
-    current === "nfl" ? pathname : pathname.replace(/^\/(cfb|nba|ncaab|mlb)/, "") || "/";
+    current === "nfl" ? pathname : pathname.replace(/^\/(cfb|nba|nhl|ncaab|mlb)/, "") || "/";
   // Only league subpages exist under every league; anything else (e.g.
   // /accuracy, /disclaimer) falls back to the league home.
   // MLB has no live page, so /live is not a valid MLB slug.
+  // NHL launches with just the board and track record.
   const leagueSlugs = ["", "/live", "/pick-em", "/track-record", "/rankings"];
   const mlbSlugs = ["", "/pick-em", "/track-record", "/rankings"];
-  const valid = (target === "mlb" ? mlbSlugs : leagueSlugs).includes(stripped);
+  const nhlSlugs = ["", "/track-record"];
+  const valid = (target === "mlb" ? mlbSlugs : target === "nhl" ? nhlSlugs : leagueSlugs).includes(stripped);
   if (target === "nfl") return valid ? stripped : "/";
-  const base = target === "cfb" ? "/cfb" : target === "nba" ? "/nba" : target === "ncaab" ? "/ncaab" : "/mlb";
+  const base = target === "cfb" ? "/cfb" : target === "nba" ? "/nba" : target === "nhl" ? "/nhl" : target === "ncaab" ? "/ncaab" : "/mlb";
   return valid && stripped !== "/" ? `${base}${stripped}` : base;
 }
 
@@ -143,10 +147,12 @@ export default function Nav() {
       </div>
       <nav ref={navRef} className="flex max-w-full gap-1 overflow-x-auto" aria-label="Primary">
         {NAV_ITEMS.filter(
-          (item) => !(league === "mlb" && item.slug === "/live")
+          (item) =>
+            !(league === "mlb" && item.slug === "/live") &&
+            !(league === "nhl" && !["", "/track-record"].includes(item.slug))
         ).map((item) => {
           const href = `${base}${item.slug}` || "/";
-          const label = (league === "nba" || league === "mlb") && item.nbaLabel ? item.nbaLabel : item.label;
+          const label = (league === "nba" || league === "nhl" || league === "mlb") && item.nbaLabel ? item.nbaLabel : item.label;
           const active =
             item.slug === "" ? pathname === href || pathname === `${href}/` : pathname.startsWith(href);
           return (

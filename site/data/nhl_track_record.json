@@ -1,0 +1,81 @@
+{
+  "model": "Expected-goals ratings model (v1.1): team offense/defense ratings fitted walk-forward on MoneyPuck expected goals, a 0.20-goal home-ice term, a rest-day term, Poisson win probabilities, and a calibration map fitted on the discovery period (a=-0.0279, b=1.2755). The betting line is never an input \u2014 only the benchmark. Moneyline picks publish when model and market disagree by 2.0 points or more; totals are context only.",
+  "backtest": {
+    "discovery": {
+      "games": 4573,
+      "brier_cal": 0.2347,
+      "su_pct": 0.6062
+    },
+    "validation": {
+      "games": 3935,
+      "brier_cal": 0.2404,
+      "su_pct": 0.5759
+    },
+    "market_eval_2025_26": {
+      "games": 1311,
+      "model_brier": 0.2479,
+      "market_brier": 0.2435,
+      "model_su_pct": 0.5446,
+      "market_su_pct": 0.5599
+    }
+  },
+  "shadow_seed": {
+    "label": "Pre-launch shadow record",
+    "dates": "2026-10-21 \u2013 2026-11-05",
+    "games_logged": 113,
+    "games_graded": 110,
+    "paired_games": 104,
+    "brier_raw": 0.232,
+    "brier_cal": 0.2312,
+    "market_brier": 0.2304,
+    "su_pct_ex_invalid": 0.578,
+    "su_record_ex_invalid": "63-46",
+    "su_pct_all_games": 0.573,
+    "note": "Before this section launched, the model ran in shadow for 16 nights: picks frozen before puck drop, graded against official finals, nothing published. That frozen record is the seed of this track record \u2014 shown in full, including the one excluded game below. On the 104 games that froze with a valid market line, model and market are an effective tie (calibrated Brier 0.2312 vs 0.2304). The model has not beaten the market and no edge is claimed.",
+    "excluded_game": {
+      "date": "2026-11-01",
+      "game_id": 2026020231,
+      "matchup": "Ottawa Senators @ Anaheim Ducks",
+      "frozen_home_ml": -1.0,
+      "books": 8,
+      "market_p_home": 0.018,
+      "market_brier": 0.9643,
+      "final_score": "Anaheim won 6-3",
+      "reason": "The game froze with an invalid market moneyline: -1.0 across all 8 books, a 1.8% implied home win chance for a home favorite. That single bad feed value would flatter the model in every market comparison, so the game is excluded from all of them. The frozen shadow record itself is unchanged.",
+      "model_line": "Model-only, counted in full: the model had Anaheim at 46.8% raw / 45.2% calibrated \u2014 it picked Ottawa, and Ottawa lost 6-3. The miss counts in the model's own numbers; only the market comparison excludes the game."
+    }
+  },
+  "seasons": [
+    {
+      "season": 2027,
+      "days": [
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05"
+      ],
+      "games": 110,
+      "straight_up_pct": 0.5727,
+      "paired_games": 104,
+      "brier_raw": 0.232,
+      "brier_cal": 0.2312,
+      "market_brier": 0.2304,
+      "pick_w": 63,
+      "pick_l": 47,
+      "pick_pct": 0.5727,
+      "totals_rmse": 2.283
+    }
+  ]
+}

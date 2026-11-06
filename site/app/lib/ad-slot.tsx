@@ -21,7 +21,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import Script from "next/script";
 
-export type AdLeague = "nfl" | "cfb" | "nba" | "ncaab" | "mlb";
+export type AdLeague = "nfl" | "cfb" | "nba" | "nhl" | "ncaab" | "mlb";
 export type AdFormat = "leaderboard" | "rectangle";
 
 const PUBLISHER_ID = process.env.NEXT_PUBLIC_ADSENSE_ID ?? "";
@@ -50,11 +50,12 @@ const LEAGUES: Record<
   nfl: { label: "NFL", home: "/", record: "/track-record", pickem: "/pick-em" },
   cfb: { label: "College football", home: "/cfb", record: "/cfb/track-record", pickem: "/cfb/pick-em" },
   nba: { label: "NBA", home: "/nba", record: "/nba/track-record", pickem: "/nba/pick-em" },
+  nhl: { label: "NHL", home: "/nhl", record: "/nhl/track-record", pickem: "/nhl" },
   ncaab: { label: "College hoops", home: "/ncaab", record: "/ncaab/track-record", pickem: "/ncaab/pick-em" },
   mlb: { label: "MLB", home: "/mlb", record: "/mlb/track-record", pickem: "/mlb/pick-em" },
 };
 
-const LEAGUE_ORDER: AdLeague[] = ["nfl", "cfb", "nba", "ncaab", "mlb"];
+const LEAGUE_ORDER: AdLeague[] = ["nfl", "cfb", "nba", "ncaab", "mlb", "nhl"];
 
 function housePromo(league: AdLeague, format: AdFormat): Promo {
   const me = LEAGUES[league];

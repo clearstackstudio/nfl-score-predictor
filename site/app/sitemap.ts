@@ -26,6 +26,8 @@ const routes = [
   "/nba/pick-em",
   "/nba/rankings",
   "/nba/track-record",
+  "/nhl",
+  "/nhl/track-record",
   "/ncaab",
   "/ncaab/live",
   "/ncaab/pick-em",
