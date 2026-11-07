@@ -1021,8 +1021,8 @@
       "generated": "2026-11-06 21:40 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Tarleton State",
@@ -1049,7 +1049,12 @@
             "away": "Tarleton State +3.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 96.0,
+            "away_score": 90.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Portland",
@@ -1076,7 +1081,12 @@
             "away": "Portland +3.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 89.0,
+            "away_score": 85.0,
+            "ats": "win"
+          }
         },
         {
           "away": "North Dakota State",
@@ -1103,7 +1113,13 @@
             "away": "North Dakota State +8.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.503
+          "ou_prob": 0.503,
+          "result": {
+            "home_score": 79.0,
+            "away_score": 70.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Oakland",
@@ -1130,7 +1146,13 @@
             "away": "Oakland +12.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 81.0,
+            "away_score": 63.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "North Florida",
@@ -1157,7 +1179,13 @@
             "away": "North Florida +44.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.508
+          "ou_prob": 0.508,
+          "result": {
+            "home_score": 114.0,
+            "away_score": 63.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         }
       ],
       "parlay": {
@@ -1181,10 +1209,9 @@
             "prob": 0.503
           }
         ],
-        "combined_prob": 0.129,
-        "fair_odds": "+675",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-07 06:40 PST"
     }
   }
 }
