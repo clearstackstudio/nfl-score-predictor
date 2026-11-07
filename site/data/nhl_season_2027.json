@@ -4302,8 +4302,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Columbus Blue Jackets",
@@ -4329,7 +4329,16 @@
           "pick_label": "Buffalo Sabres -171",
           "pick_prob": 0.5252,
           "edge_pp": -8.3,
-          "result": null
+          "result": {
+            "home_score": 5,
+            "away_score": 2,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.225435,
+            "brier_cal": 0.225435,
+            "market_brier": 0.153507,
+            "total_error": -0.789
+          }
         },
         {
           "away": "San Jose Sharks",
@@ -4355,7 +4364,16 @@
           "pick_label": "Minnesota Wild -275",
           "pick_prob": 0.7848,
           "edge_pp": 8.2,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 1,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.068592,
+            "brier_cal": 0.046311,
+            "market_brier": 0.08815,
+            "total_error": 1.915
+          }
         },
         {
           "away": "Anaheim Ducks",
@@ -4381,10 +4399,20 @@
           "pick_label": "Anaheim Ducks +125",
           "pick_prob": 0.5411,
           "edge_pp": -11.4,
-          "result": null
+          "result": {
+            "home_score": 3,
+            "away_score": 5,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.223918,
+            "brier_cal": 0.210589,
+            "market_brier": 0.328444,
+            "total_error": -1.1737
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-07 06:41 PST"
     },
     "2026-11-07": {
       "date": "2026-11-07",
