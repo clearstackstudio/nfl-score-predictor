@@ -32,7 +32,13 @@
         "away": "Virginia Tech +6.25"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.51
+      "ou_prob": 0.51,
+      "result": {
+        "home_score": 51,
+        "away_score": 28,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "South Florida",
@@ -60,7 +66,13 @@
         "away": "South Florida +2"
       },
       "cover_prob": 0.51,
-      "ou_prob": 0.5
+      "ou_prob": 0.5,
+      "result": {
+        "home_score": 20,
+        "away_score": 17,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Nebraska",
@@ -88,7 +100,12 @@
         "away": "Nebraska -4.25"
       },
       "cover_prob": 0.5,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 24,
+        "away_score": 13,
+        "ats": "loss"
+      }
     },
     {
       "away": "New Mexico",
@@ -116,7 +133,13 @@
         "away": "New Mexico -10"
       },
       "cover_prob": 0.511,
-      "ou_prob": 0.518
+      "ou_prob": 0.518,
+      "result": {
+        "home_score": 3,
+        "away_score": 31,
+        "ats": "win",
+        "ou": "loss"
+      }
     },
     {
       "away": "TCU",
