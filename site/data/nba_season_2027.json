@@ -4379,8 +4379,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Boston Celtics",
@@ -4407,7 +4407,12 @@
             "away": "Boston Celtics -8.5"
           },
           "cover_prob": 0.521,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 80.0,
+            "away_score": 119.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Philadelphia 76ers",
@@ -4434,7 +4439,12 @@
             "away": "Philadelphia 76ers -2.5"
           },
           "cover_prob": 0.519,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 119.0,
+            "away_score": 95.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Utah Jazz",
@@ -4461,7 +4471,12 @@
             "away": "Utah Jazz +7"
           },
           "cover_prob": 0.508,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 112.0,
+            "away_score": 100.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Oklahoma City Thunder",
@@ -4488,7 +4503,12 @@
             "away": "Oklahoma City Thunder -3.5"
           },
           "cover_prob": 0.508,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 97.0,
+            "away_score": 128.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Toronto Raptors",
@@ -4515,7 +4535,12 @@
             "away": "Toronto Raptors -7.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 107.0,
+            "away_score": 121.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Minnesota Timberwolves",
@@ -4542,7 +4567,12 @@
             "away": "Minnesota Timberwolves -4.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 109.0,
+            "away_score": 115.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Portland Trail Blazers",
@@ -4569,7 +4599,11 @@
             "away": "Portland Trail Blazers +2.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 124.0,
+            "away_score": 118.0
+          }
         },
         {
           "away": "San Antonio Spurs",
@@ -4596,7 +4630,12 @@
             "away": "San Antonio Spurs -15.25"
           },
           "cover_prob": 0.519,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 109.0,
+            "away_score": 124.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -4620,10 +4659,9 @@
             "prob": 0.519
           }
         ],
-        "combined_prob": 0.14,
-        "fair_odds": "+614",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-06 23:41 PST"
     },
     "2026-11-07": {
       "date": "2026-11-07",
