@@ -1,40 +1,172 @@
 {
   "sport": "ncaab",
   "season": 2027,
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "preseason": false,
   "experimental_note": null,
-  "generated": "2026-11-05 21:39 PST",
+  "generated": "2026-11-06 21:40 PST",
   "disclaimer": "Model probabilities for entertainment. Our backtest shows no proven edge vs the closing line \u2014 track record published openly.",
-  "parlay": null,
+  "parlay": {
+    "legs": [
+      {
+        "game": "North Florida @ UCLA",
+        "market": "total",
+        "label": "Under 155.5",
+        "prob": 0.508
+      },
+      {
+        "game": "Oakland @ Stanford",
+        "market": "total",
+        "label": "Over 146",
+        "prob": 0.504
+      },
+      {
+        "game": "North Dakota State @ San Francisco",
+        "market": "total",
+        "label": "Over 146.5",
+        "prob": 0.503
+      }
+    ],
+    "combined_prob": 0.129,
+    "fair_odds": "+675",
+    "book_pays": "+600"
+  },
   "picks": [
     {
-      "away": "Cal Poly",
-      "home": "Arizona",
-      "away_abbr": "Cal Poly",
-      "home_abbr": "Arizona",
-      "gameday": "2026-11-05",
-      "weekday": "Thursday",
+      "away": "Tarleton State",
+      "home": "San Diego",
+      "away_abbr": "Tarleton State",
+      "home_abbr": "San Diego",
+      "gameday": "2026-11-06",
+      "weekday": "Friday",
       "neutral": false,
       "preseason": false,
-      "line_spread": 32.5,
-      "line_total": 189.5,
-      "our_spread": 9.6,
-      "our_total": 164.3,
-      "spread_edge": -22.9,
-      "total_edge": -25.2,
-      "pick_spread": "away",
+      "line_spread": 3.5,
+      "line_total": 162.5,
+      "our_spread": 4.2,
+      "our_total": 144.2,
+      "spread_edge": 0.7,
+      "total_edge": -18.3,
+      "pick_spread": "home",
       "pick_total": null,
-      "pick_spread_label": "Cal Poly +32.5",
+      "pick_spread_label": "San Diego -3.5",
       "pick_total_label": null,
       "pick_total_note": "No play -- our total is too far from the market to trust.",
       "spread_labels": {
-        "home": "Arizona -32.5",
-        "away": "Cal Poly +32.5"
+        "home": "San Diego -3.5",
+        "away": "Tarleton State +3.5"
       },
       "cover_prob": 0.5,
       "ou_prob": null
+    },
+    {
+      "away": "Portland",
+      "home": "UT Arlington",
+      "away_abbr": "Portland",
+      "home_abbr": "UT Arlington",
+      "gameday": "2026-11-06",
+      "weekday": "Friday",
+      "neutral": false,
+      "preseason": false,
+      "line_spread": 3.5,
+      "line_total": 175.5,
+      "our_spread": 8.6,
+      "our_total": 137.0,
+      "spread_edge": 5.1,
+      "total_edge": -38.5,
+      "pick_spread": "home",
+      "pick_total": null,
+      "pick_spread_label": "UT Arlington -3.5",
+      "pick_total_label": null,
+      "pick_total_note": "No play -- our total is too far from the market to trust.",
+      "spread_labels": {
+        "home": "UT Arlington -3.5",
+        "away": "Portland +3.5"
+      },
+      "cover_prob": 0.5,
+      "ou_prob": null
+    },
+    {
+      "away": "North Dakota State",
+      "home": "San Francisco",
+      "away_abbr": "North Dakota State",
+      "home_abbr": "San Francisco",
+      "gameday": "2026-11-06",
+      "weekday": "Friday",
+      "neutral": false,
+      "preseason": false,
+      "line_spread": 8.5,
+      "line_total": 146.5,
+      "our_spread": 6.8,
+      "our_total": 147.8,
+      "spread_edge": -1.7,
+      "total_edge": 1.3,
+      "pick_spread": "away",
+      "pick_total": "over",
+      "pick_spread_label": "North Dakota State +8.5",
+      "pick_total_label": "Over 146.5",
+      "pick_total_note": null,
+      "spread_labels": {
+        "home": "San Francisco -8.5",
+        "away": "North Dakota State +8.5"
+      },
+      "cover_prob": 0.5,
+      "ou_prob": 0.503
+    },
+    {
+      "away": "Oakland",
+      "home": "Stanford",
+      "away_abbr": "Oakland",
+      "home_abbr": "Stanford",
+      "gameday": "2026-11-06",
+      "weekday": "Friday",
+      "neutral": false,
+      "preseason": false,
+      "line_spread": 12.5,
+      "line_total": 146.0,
+      "our_spread": 8.9,
+      "our_total": 153.1,
+      "spread_edge": -3.6,
+      "total_edge": 7.1,
+      "pick_spread": "away",
+      "pick_total": "over",
+      "pick_spread_label": "Oakland +12.5",
+      "pick_total_label": "Over 146",
+      "pick_total_note": null,
+      "spread_labels": {
+        "home": "Stanford -12.5",
+        "away": "Oakland +12.5"
+      },
+      "cover_prob": 0.5,
+      "ou_prob": 0.504
+    },
+    {
+      "away": "North Florida",
+      "home": "UCLA",
+      "away_abbr": "North Florida",
+      "home_abbr": "UCLA",
+      "gameday": "2026-11-06",
+      "weekday": "Friday",
+      "neutral": false,
+      "preseason": false,
+      "line_spread": 44.5,
+      "line_total": 155.5,
+      "our_spread": 10.4,
+      "our_total": 152.0,
+      "spread_edge": -34.1,
+      "total_edge": -3.5,
+      "pick_spread": "away",
+      "pick_total": "under",
+      "pick_spread_label": "North Florida +44.5",
+      "pick_total_label": "Under 155.5",
+      "pick_total_note": null,
+      "spread_labels": {
+        "home": "UCLA -44.5",
+        "away": "North Florida +44.5"
+      },
+      "cover_prob": 0.5,
+      "ou_prob": 0.508
     }
   ],
-  "odds_snapshot": "2026-11-05"
+  "odds_snapshot": "2026-11-06"
 }

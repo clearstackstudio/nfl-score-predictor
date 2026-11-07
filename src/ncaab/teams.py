@@ -84,6 +84,12 @@ KNOWN_OVERRIDES: dict[str, str] = {
     "South Dakota St Jackrabbits": "South Dakota State",
     "Tennessee St Tigers": "Tennessee State",
     "Washington St Cougars": "Washington State",
+    # November 6, 2026: Nov 5 finals backfill surfaced 3 more unmappable
+    # names. Each target verified against the CBBD D1 list in
+    # data/ncaab/raw/ and games.csv.
+    "Kennesaw St Owls": "Kennesaw State",
+    "N Colorado Bears": "Northern Colorado",
+    "UT-Arlington Mavericks": "UT Arlington",
 }
 
 
