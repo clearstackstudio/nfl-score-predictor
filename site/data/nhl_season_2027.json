@@ -4420,8 +4420,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Florida Panthers",
@@ -4447,7 +4447,16 @@
           "pick_label": "Washington Capitals -119",
           "pick_prob": 0.5717,
           "edge_pp": 5.1,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 3,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.192107,
+            "brier_cal": 0.183441,
+            "market_brier": 0.229633,
+            "total_error": -0.0998
+          }
         },
         {
           "away": "St. Louis Blues",
@@ -4473,7 +4482,16 @@
           "pick_label": null,
           "pick_prob": null,
           "edge_pp": 1.8,
-          "result": null
+          "result": {
+            "home_score": 3,
+            "away_score": 1,
+            "su": null,
+            "model_correct": true,
+            "brier_raw": 0.231072,
+            "brier_cal": 0.232613,
+            "market_brier": 0.25,
+            "total_error": 2.2045
+          }
         },
         {
           "away": "New York Rangers",
@@ -4499,7 +4517,16 @@
           "pick_label": null,
           "pick_prob": null,
           "edge_pp": -0.7,
-          "result": null
+          "result": {
+            "home_score": 3,
+            "away_score": 4,
+            "su": null,
+            "model_correct": true,
+            "brier_raw": 0.217436,
+            "brier_cal": 0.20259,
+            "market_brier": 0.209123,
+            "total_error": -0.9106
+          }
         },
         {
           "away": "Montreal Canadiens",
@@ -4525,7 +4552,16 @@
           "pick_label": "Montreal Canadiens -114",
           "pick_prob": 0.5435,
           "edge_pp": -3.4,
-          "result": null
+          "result": {
+            "home_score": 2,
+            "away_score": 4,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.222124,
+            "brier_cal": 0.208392,
+            "market_brier": 0.240296,
+            "total_error": 1.1668
+          }
         },
         {
           "away": "Utah Mammoth",
@@ -4551,7 +4587,16 @@
           "pick_label": "Ottawa Senators -105",
           "pick_prob": 0.5785,
           "edge_pp": 8.9,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 2,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.187402,
+            "brier_cal": 0.177662,
+            "market_brier": 0.260917,
+            "total_error": 0.4702
+          }
         },
         {
           "away": "New Jersey Devils",
@@ -4577,7 +4622,16 @@
           "pick_label": "New Jersey Devils -148",
           "pick_prob": 0.6556,
           "edge_pp": -8.1,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 5,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.145619,
+            "brier_cal": 0.118611,
+            "market_brier": 0.181306,
+            "total_error": -2.5729
+          }
         },
         {
           "away": "Chicago Blackhawks",
@@ -4603,7 +4657,16 @@
           "pick_label": "Carolina Hurricanes -450",
           "pick_prob": 0.8276,
           "edge_pp": 4.1,
-          "result": null
+          "result": {
+            "home_score": 9,
+            "away_score": 2,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.049462,
+            "brier_cal": 0.029722,
+            "market_brier": 0.045454,
+            "total_error": -4.378
+          }
         },
         {
           "away": "San Jose Sharks",
@@ -4629,7 +4692,16 @@
           "pick_label": null,
           "pick_prob": null,
           "edge_pp": 1.6,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 3,
+            "su": null,
+            "model_correct": true,
+            "brier_raw": 0.094618,
+            "brier_cal": 0.07161,
+            "market_brier": 0.080316,
+            "total_error": -0.8126
+          }
         },
         {
           "away": "Tampa Bay Lightning",
@@ -4655,7 +4727,16 @@
           "pick_label": "Minnesota Wild +115",
           "pick_prob": 0.5385,
           "edge_pp": 9.1,
-          "result": null
+          "result": {
+            "home_score": 3,
+            "away_score": 4,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.286867,
+            "brier_cal": 0.289982,
+            "market_brier": 0.200167,
+            "total_error": -0.0906
+          }
         },
         {
           "away": "Detroit Red Wings",
@@ -4681,7 +4762,16 @@
           "pick_label": null,
           "pick_prob": null,
           "edge_pp": -1.2,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 0,
+            "su": null,
+            "model_correct": true,
+            "brier_raw": 0.140026,
+            "brier_cal": 0.121104,
+            "market_brier": 0.113165,
+            "total_error": 2.5806
+          }
         },
         {
           "away": "Pittsburgh Penguins",
@@ -4707,7 +4797,16 @@
           "pick_label": "Los Angeles Kings -128",
           "pick_prob": 0.5638,
           "edge_pp": 2.6,
-          "result": null
+          "result": {
+            "home_score": 2,
+            "away_score": 5,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.308691,
+            "brier_cal": 0.31787,
+            "market_brier": 0.288906,
+            "total_error": -0.4124
+          }
         },
         {
           "away": "Vancouver Canucks",
@@ -4733,10 +4832,20 @@
           "pick_label": null,
           "pick_prob": null,
           "edge_pp": 1.7,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 2,
+            "su": null,
+            "model_correct": true,
+            "brier_raw": 0.080202,
+            "brier_cal": 0.057217,
+            "market_brier": 0.065587,
+            "total_error": 0.1142
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-08 06:41 PST"
     },
     "2026-11-08": {
       "date": "2026-11-08",
