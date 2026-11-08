@@ -1218,8 +1218,8 @@
       "generated": "2026-11-07 21:41 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Sacramento State",
@@ -1246,7 +1246,12 @@
             "away": "Sacramento State -1.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 83.0,
+            "away_score": 77.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Portland State",
@@ -1273,7 +1278,13 @@
             "away": "Portland State +10.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.506
+          "ou_prob": 0.506,
+          "result": {
+            "home_score": 79.0,
+            "away_score": 60.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Fresno State",
@@ -1300,7 +1311,12 @@
             "away": "Fresno State +10.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 81.0,
+            "away_score": 65.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "San Jos\u00e9 State",
@@ -1327,7 +1343,12 @@
             "away": "San Jos\u00e9 State +17.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 91.0,
+            "away_score": 79.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -1351,10 +1372,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.127,
-        "fair_odds": "+687",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-08 06:40 PST"
     }
   }
 }
