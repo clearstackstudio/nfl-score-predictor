@@ -4669,8 +4669,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Denver Nuggets",
@@ -4697,7 +4697,12 @@
             "away": "Denver Nuggets -7"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 102.0,
+            "away_score": 114.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Brooklyn Nets",
@@ -4724,7 +4729,12 @@
             "away": "Brooklyn Nets +6.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 124.0,
+            "away_score": 121.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "New York Knicks",
@@ -4751,7 +4761,12 @@
             "away": "New York Knicks -5"
           },
           "cover_prob": 0.519,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 97.0,
+            "away_score": 109.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Washington Wizards",
@@ -4778,7 +4793,12 @@
             "away": "Washington Wizards +11.5"
           },
           "cover_prob": 0.508,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 114.0,
+            "away_score": 75.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Orlando Magic",
@@ -4805,7 +4825,12 @@
             "away": "Orlando Magic +6.5"
           },
           "cover_prob": 0.504,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 126.0,
+            "away_score": 119.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Houston Rockets",
@@ -4832,7 +4857,12 @@
             "away": "Houston Rockets -7.5"
           },
           "cover_prob": 0.522,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 102.0,
+            "away_score": 99.0,
+            "ats": "win"
+          }
         },
         {
           "away": "San Antonio Spurs",
@@ -4859,7 +4889,12 @@
             "away": "San Antonio Spurs -4"
           },
           "cover_prob": 0.508,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 103.0,
+            "away_score": 125.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -4883,10 +4918,9 @@
             "prob": 0.508
           }
         ],
-        "combined_prob": 0.138,
-        "fair_odds": "+625",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-07 23:42 PST"
     },
     "2026-11-08": {
       "date": "2026-11-08",
