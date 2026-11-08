@@ -1212,6 +1212,149 @@
         "result": "loss"
       },
       "graded_at": "2026-11-07 06:40 PST"
+    },
+    "2026-11-07": {
+      "date": "2026-11-07",
+      "generated": "2026-11-07 21:41 PST",
+      "preseason": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Sacramento State",
+          "home": "Santa Clara",
+          "away_abbr": "Sacramento State",
+          "home_abbr": "Santa Clara",
+          "gameday": "2026-11-07",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -1.5,
+          "line_total": 167.5,
+          "our_spread": 17.3,
+          "our_total": 157.8,
+          "spread_edge": 18.8,
+          "total_edge": -9.7,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Santa Clara +1.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Santa Clara +1.5",
+            "away": "Sacramento State -1.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Portland State",
+          "home": "Seattle U",
+          "away_abbr": "Portland State",
+          "home_abbr": "Seattle U",
+          "gameday": "2026-11-07",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 10.5,
+          "line_total": 142.0,
+          "our_spread": 4.1,
+          "our_total": 136.6,
+          "spread_edge": -6.4,
+          "total_edge": -5.4,
+          "pick_spread": "away",
+          "pick_total": "under",
+          "pick_spread_label": "Portland State +10.5",
+          "pick_total_label": "Under 142",
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Seattle U -10.5",
+            "away": "Portland State +10.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": 0.506
+        },
+        {
+          "away": "Fresno State",
+          "home": "UC San Diego",
+          "away_abbr": "Fresno State",
+          "home_abbr": "UC San Diego",
+          "gameday": "2026-11-07",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 10.5,
+          "line_total": 139.5,
+          "our_spread": 8.4,
+          "our_total": 140.2,
+          "spread_edge": -2.1,
+          "total_edge": 0.7,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Fresno State +10.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "UC San Diego -10.5",
+            "away": "Fresno State +10.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "San Jos\u00e9 State",
+          "home": "UC Irvine",
+          "away_abbr": "San Jos\u00e9 State",
+          "home_abbr": "UC Irvine",
+          "gameday": "2026-11-07",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 17.5,
+          "line_total": 162.5,
+          "our_spread": 10.5,
+          "our_total": 151.3,
+          "spread_edge": -7.0,
+          "total_edge": -11.2,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "San Jos\u00e9 State +17.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "UC Irvine -17.5",
+            "away": "San Jos\u00e9 State +17.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Portland State @ Seattle U",
+            "market": "total",
+            "label": "Under 142",
+            "prob": 0.506
+          },
+          {
+            "game": "Sacramento State @ Santa Clara",
+            "market": "spread",
+            "label": "Santa Clara +1.5",
+            "prob": 0.5
+          },
+          {
+            "game": "Portland State @ Seattle U",
+            "market": "spread",
+            "label": "Portland State +10.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.127,
+        "fair_odds": "+687",
+        "book_pays": "+600"
+      }
     }
   }
 }

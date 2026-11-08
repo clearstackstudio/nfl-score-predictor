@@ -90,6 +90,16 @@ KNOWN_OVERRIDES: dict[str, str] = {
     "Kennesaw St Owls": "Kennesaw State",
     "N Colorado Bears": "Northern Colorado",
     "UT-Arlington Mavericks": "UT Arlington",
+    # November 7, 2026: Nov 6 merged finals (Morgan St) blocked training
+    # outright, and the Nov 7 odds snapshot carried 3 more misses plus a
+    # silent mis-map ("Portland St Vikings" -> heuristic lands on
+    # "Portland", a different school). Each target verified against the
+    # CBBD D1 list in data/ncaab/raw/ and games.csv.
+    "Morgan St Bears": "Morgan State",
+    "Sacramento St Hornets": "Sacramento State",
+    "Fresno St Bulldogs": "Fresno State",
+    "Portland St Vikings": "Portland State",
+    "CSU Bakersfield Roadrunners": "Cal State Bakersfield",
 }
 
 
