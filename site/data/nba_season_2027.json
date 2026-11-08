@@ -4887,6 +4887,231 @@
         "fair_odds": "+625",
         "book_pays": "+600"
       }
+    },
+    "2026-11-08": {
+      "date": "2026-11-08",
+      "generated": "2026-11-07 21:39 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Philadelphia 76ers",
+          "home": "Chicago Bulls",
+          "away_abbr": "Philadelphia 76ers",
+          "home_abbr": "Chicago Bulls",
+          "gameday": "2026-11-08",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -8.5,
+          "line_total": 238.0,
+          "our_spread": -2.3,
+          "our_total": 233.6,
+          "spread_edge": 6.2,
+          "total_edge": -4.4,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Chicago Bulls +8.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Chicago Bulls +8.5",
+            "away": "Philadelphia 76ers -8.5"
+          },
+          "cover_prob": 0.521,
+          "ou_prob": null
+        },
+        {
+          "away": "Los Angeles Lakers",
+          "home": "Detroit Pistons",
+          "away_abbr": "Los Angeles Lakers",
+          "home_abbr": "Detroit Pistons",
+          "gameday": "2026-11-08",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 4.5,
+          "line_total": 222.0,
+          "our_spread": 4.3,
+          "our_total": 227.3,
+          "spread_edge": -0.2,
+          "total_edge": 5.3,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Detroit Pistons -4.5",
+            "away": "Los Angeles Lakers +4.5"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Utah Jazz",
+          "home": "Minnesota Timberwolves",
+          "away_abbr": "Utah Jazz",
+          "home_abbr": "Minnesota Timberwolves",
+          "gameday": "2026-11-08",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 11.5,
+          "line_total": 224.0,
+          "our_spread": 11.1,
+          "our_total": 232.1,
+          "spread_edge": -0.4,
+          "total_edge": 8.1,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Minnesota Timberwolves -11.5",
+            "away": "Utah Jazz +11.5"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Brooklyn Nets",
+          "home": "Dallas Mavericks",
+          "away_abbr": "Brooklyn Nets",
+          "home_abbr": "Dallas Mavericks",
+          "gameday": "2026-11-08",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 8.5,
+          "line_total": 219.0,
+          "our_spread": 6.8,
+          "our_total": 225.4,
+          "spread_edge": -1.7,
+          "total_edge": 6.4,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Brooklyn Nets +8.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Dallas Mavericks -8.5",
+            "away": "Brooklyn Nets +8.5"
+          },
+          "cover_prob": 0.505,
+          "ou_prob": null
+        },
+        {
+          "away": "Boston Celtics",
+          "home": "Milwaukee Bucks",
+          "away_abbr": "Boston Celtics",
+          "home_abbr": "Milwaukee Bucks",
+          "gameday": "2026-11-08",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -12.5,
+          "line_total": 223.0,
+          "our_spread": -7.7,
+          "our_total": 224.0,
+          "spread_edge": 4.8,
+          "total_edge": 1.0,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Milwaukee Bucks +12.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Milwaukee Bucks +12.5",
+            "away": "Boston Celtics -12.5"
+          },
+          "cover_prob": 0.513,
+          "ou_prob": null
+        },
+        {
+          "away": "New Orleans Pelicans",
+          "home": "Los Angeles Clippers",
+          "away_abbr": "New Orleans Pelicans",
+          "home_abbr": "Los Angeles Clippers",
+          "gameday": "2026-11-08",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -1.5,
+          "line_total": 229.5,
+          "our_spread": 2.8,
+          "our_total": 235.8,
+          "spread_edge": 4.3,
+          "total_edge": 6.3,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Los Angeles Clippers +1.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Los Angeles Clippers +1.5",
+            "away": "New Orleans Pelicans -1.5"
+          },
+          "cover_prob": 0.506,
+          "ou_prob": null
+        },
+        {
+          "away": "Miami Heat",
+          "home": "Sacramento Kings",
+          "away_abbr": "Miami Heat",
+          "home_abbr": "Sacramento Kings",
+          "gameday": "2026-11-08",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -8.5,
+          "line_total": 238.5,
+          "our_spread": -2.3,
+          "our_total": 241.9,
+          "spread_edge": 6.2,
+          "total_edge": 3.4,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Sacramento Kings +8.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Sacramento Kings +8.5",
+            "away": "Miami Heat -8.5"
+          },
+          "cover_prob": 0.521,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Philadelphia 76ers @ Chicago Bulls",
+            "market": "spread",
+            "label": "Chicago Bulls +8.5",
+            "prob": 0.521
+          },
+          {
+            "game": "Miami Heat @ Sacramento Kings",
+            "market": "spread",
+            "label": "Sacramento Kings +8.5",
+            "prob": 0.521
+          },
+          {
+            "game": "Boston Celtics @ Milwaukee Bucks",
+            "market": "spread",
+            "label": "Milwaukee Bucks +12.5",
+            "prob": 0.513
+          }
+        ],
+        "combined_prob": 0.139,
+        "fair_odds": "+619",
+        "book_pays": "+600"
+      }
     }
   }
 }
