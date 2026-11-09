@@ -4928,8 +4928,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Philadelphia 76ers",
@@ -4956,7 +4956,12 @@
             "away": "Philadelphia 76ers -8.5"
           },
           "cover_prob": 0.521,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 121.0,
+            "away_score": 127.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Los Angeles Lakers",
@@ -4983,7 +4988,11 @@
             "away": "Los Angeles Lakers +4.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 116.0,
+            "away_score": 121.0
+          }
         },
         {
           "away": "Utah Jazz",
@@ -5010,7 +5019,11 @@
             "away": "Utah Jazz +11.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 115.0,
+            "away_score": 100.0
+          }
         },
         {
           "away": "Brooklyn Nets",
@@ -5037,7 +5050,12 @@
             "away": "Brooklyn Nets +8.5"
           },
           "cover_prob": 0.505,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 130.0,
+            "away_score": 93.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Boston Celtics",
@@ -5064,7 +5082,12 @@
             "away": "Boston Celtics -12.5"
           },
           "cover_prob": 0.513,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 97.0,
+            "away_score": 117.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "New Orleans Pelicans",
@@ -5091,7 +5114,12 @@
             "away": "New Orleans Pelicans -1.5"
           },
           "cover_prob": 0.506,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 139.0,
+            "away_score": 123.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Miami Heat",
@@ -5118,7 +5146,12 @@
             "away": "Miami Heat -8.5"
           },
           "cover_prob": 0.521,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 108.0,
+            "away_score": 114.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -5142,10 +5175,9 @@
             "prob": 0.513
           }
         ],
-        "combined_prob": 0.139,
-        "fair_odds": "+619",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-08 23:41 PST"
     },
     "2026-11-09": {
       "date": "2026-11-09",
