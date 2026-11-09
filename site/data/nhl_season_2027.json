@@ -4853,8 +4853,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Florida Panthers",
@@ -4880,7 +4880,16 @@
           "pick_label": null,
           "pick_prob": null,
           "edge_pp": -0.4,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 1,
+            "su": null,
+            "model_correct": true,
+            "brier_raw": 0.209032,
+            "brier_cal": 0.204666,
+            "market_brier": 0.201242,
+            "total_error": 1.5749
+          }
         },
         {
           "away": "Vegas Golden Knights",
@@ -4906,7 +4915,16 @@
           "pick_label": "Vegas Golden Knights -110",
           "pick_prob": 0.599,
           "edge_pp": -9.7,
-          "result": null
+          "result": {
+            "home_score": 1,
+            "away_score": 4,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.182671,
+            "brier_cal": 0.160801,
+            "market_brier": 0.247805,
+            "total_error": 1.2061
+          }
         },
         {
           "away": "Tampa Bay Lightning",
@@ -4932,7 +4950,16 @@
           "pick_label": null,
           "pick_prob": null,
           "edge_pp": 0.2,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 3,
+            "su": null,
+            "model_correct": false,
+            "brier_raw": 0.293872,
+            "brier_cal": 0.31416,
+            "market_brier": 0.315844,
+            "total_error": -0.402
+          }
         },
         {
           "away": "New Jersey Devils",
@@ -4958,7 +4985,16 @@
           "pick_label": "New Jersey Devils -146",
           "pick_prob": 0.7357,
           "edge_pp": -16.4,
-          "result": null
+          "result": {
+            "home_score": 0,
+            "away_score": 4,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.098722,
+            "brier_cal": 0.069854,
+            "market_brier": 0.183355,
+            "total_error": 2.5698
+          }
         },
         {
           "away": "Philadelphia Flyers",
@@ -4984,7 +5020,16 @@
           "pick_label": "Philadelphia Flyers -115",
           "pick_prob": 0.6106,
           "edge_pp": -10.0,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 3,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.338608,
+            "brier_cal": 0.372832,
+            "market_brier": 0.260917,
+            "total_error": -1.1999
+          }
         },
         {
           "away": "Pittsburgh Penguins",
@@ -5010,10 +5055,20 @@
           "pick_label": null,
           "pick_prob": null,
           "edge_pp": 0.2,
-          "result": null
+          "result": {
+            "home_score": 5,
+            "away_score": 2,
+            "su": null,
+            "model_correct": true,
+            "brier_raw": 0.226671,
+            "brier_cal": 0.227052,
+            "market_brier": 0.228771,
+            "total_error": 0.3778
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-09 06:42 PST"
     },
     "2026-11-09": {
       "date": "2026-11-09",
