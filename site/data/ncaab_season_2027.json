@@ -1375,6 +1375,89 @@
         "result": "loss"
       },
       "graded_at": "2026-11-08 06:40 PST"
+    },
+    "2026-11-08": {
+      "date": "2026-11-08",
+      "generated": "2026-11-08 21:39 PST",
+      "preseason": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "UT Arlington",
+          "home": "Hawai'i",
+          "away_abbr": "UT Arlington",
+          "home_abbr": "Hawai'i",
+          "gameday": "2026-11-08",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 2.5,
+          "line_total": 129.5,
+          "our_spread": 6.3,
+          "our_total": 141.9,
+          "spread_edge": 3.8,
+          "total_edge": 12.4,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Hawai'i -2.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Hawai'i -2.5",
+            "away": "UT Arlington +2.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Wichita State",
+          "home": "USC",
+          "away_abbr": "Wichita State",
+          "home_abbr": "USC",
+          "gameday": "2026-11-08",
+          "weekday": "Sunday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 3.5,
+          "line_total": 172.5,
+          "our_spread": 2.8,
+          "our_total": 150.5,
+          "spread_edge": -0.7,
+          "total_edge": -22.0,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Wichita State +3.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "USC -3.5",
+            "away": "Wichita State +3.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "UT Arlington @ Hawai'i",
+            "market": "spread",
+            "label": "Hawai'i -2.5",
+            "prob": 0.5
+          },
+          {
+            "game": "Wichita State @ USC",
+            "market": "spread",
+            "label": "Wichita State +3.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.25,
+        "fair_odds": "+300",
+        "book_pays": "+260"
+      }
     }
   }
 }
