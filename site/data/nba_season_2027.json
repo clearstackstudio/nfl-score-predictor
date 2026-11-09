@@ -5146,6 +5146,258 @@
         "fair_odds": "+619",
         "book_pays": "+600"
       }
+    },
+    "2026-11-09": {
+      "date": "2026-11-09",
+      "generated": "2026-11-08 21:39 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Los Angeles Lakers",
+          "home": "Atlanta Hawks",
+          "away_abbr": "Los Angeles Lakers",
+          "home_abbr": "Atlanta Hawks",
+          "gameday": "2026-11-09",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -2.5,
+          "line_total": 235.5,
+          "our_spread": 1.1,
+          "our_total": 235.2,
+          "spread_edge": 3.6,
+          "total_edge": -0.3,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Atlanta Hawks +2.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Atlanta Hawks +2.5",
+            "away": "Los Angeles Lakers -2.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Cleveland Cavaliers",
+          "home": "Charlotte Hornets",
+          "away_abbr": "Cleveland Cavaliers",
+          "home_abbr": "Charlotte Hornets",
+          "gameday": "2026-11-09",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -8.5,
+          "line_total": 215.5,
+          "our_spread": -0.6,
+          "our_total": 220.5,
+          "spread_edge": 7.9,
+          "total_edge": 5.0,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Charlotte Hornets +8.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Charlotte Hornets +8.5",
+            "away": "Cleveland Cavaliers -8.5"
+          },
+          "cover_prob": 0.514,
+          "ou_prob": null
+        },
+        {
+          "away": "Washington Wizards",
+          "home": "Detroit Pistons",
+          "away_abbr": "Washington Wizards",
+          "home_abbr": "Detroit Pistons",
+          "gameday": "2026-11-09",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 10.0,
+          "line_total": 218.5,
+          "our_spread": 10.8,
+          "our_total": 221.2,
+          "spread_edge": 0.8,
+          "total_edge": 2.7,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Detroit Pistons -10",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Detroit Pistons -10",
+            "away": "Washington Wizards +10"
+          },
+          "cover_prob": 0.508,
+          "ou_prob": null
+        },
+        {
+          "away": "Memphis Grizzlies",
+          "home": "Toronto Raptors",
+          "away_abbr": "Memphis Grizzlies",
+          "home_abbr": "Toronto Raptors",
+          "gameday": "2026-11-09",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 3.5,
+          "line_total": 231.0,
+          "our_spread": 5.7,
+          "our_total": 235.0,
+          "spread_edge": 2.2,
+          "total_edge": 4.0,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Toronto Raptors -3.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Toronto Raptors -3.5",
+            "away": "Memphis Grizzlies +3.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Indiana Pacers",
+          "home": "Dallas Mavericks",
+          "away_abbr": "Indiana Pacers",
+          "home_abbr": "Dallas Mavericks",
+          "gameday": "2026-11-09",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 3.8,
+          "line_total": 222.0,
+          "our_spread": 4.8,
+          "our_total": 229.8,
+          "spread_edge": 1.1,
+          "total_edge": 7.8,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Dallas Mavericks -3.75",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Dallas Mavericks -3.75",
+            "away": "Indiana Pacers +3.75"
+          },
+          "cover_prob": 0.51,
+          "ou_prob": null
+        },
+        {
+          "away": "Denver Nuggets",
+          "home": "Houston Rockets",
+          "away_abbr": "Denver Nuggets",
+          "home_abbr": "Houston Rockets",
+          "gameday": "2026-11-09",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 9.0,
+          "line_total": 217.5,
+          "our_spread": 3.3,
+          "our_total": 231.2,
+          "spread_edge": -5.7,
+          "total_edge": 13.7,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Denver Nuggets +9",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Houston Rockets -9",
+            "away": "Denver Nuggets +9"
+          },
+          "cover_prob": 0.523,
+          "ou_prob": null
+        },
+        {
+          "away": "San Antonio Spurs",
+          "home": "Phoenix Suns",
+          "away_abbr": "San Antonio Spurs",
+          "home_abbr": "Phoenix Suns",
+          "gameday": "2026-11-09",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -8.5,
+          "line_total": 228.5,
+          "our_spread": -2.9,
+          "our_total": 228.3,
+          "spread_edge": 5.6,
+          "total_edge": -0.2,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Phoenix Suns +8.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Phoenix Suns +8.5",
+            "away": "San Antonio Spurs -8.5"
+          },
+          "cover_prob": 0.524,
+          "ou_prob": null
+        },
+        {
+          "away": "New Orleans Pelicans",
+          "home": "Golden State Warriors",
+          "away_abbr": "New Orleans Pelicans",
+          "home_abbr": "Golden State Warriors",
+          "gameday": "2026-11-09",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 10.0,
+          "line_total": 231.5,
+          "our_spread": 5.0,
+          "our_total": 239.6,
+          "spread_edge": -5.0,
+          "total_edge": 8.1,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "New Orleans Pelicans +10",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Golden State Warriors -10",
+            "away": "New Orleans Pelicans +10"
+          },
+          "cover_prob": 0.516,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "San Antonio Spurs @ Phoenix Suns",
+            "market": "spread",
+            "label": "Phoenix Suns +8.5",
+            "prob": 0.524
+          },
+          {
+            "game": "Denver Nuggets @ Houston Rockets",
+            "market": "spread",
+            "label": "Denver Nuggets +9",
+            "prob": 0.523
+          },
+          {
+            "game": "New Orleans Pelicans @ Golden State Warriors",
+            "market": "spread",
+            "label": "New Orleans Pelicans +10",
+            "prob": 0.516
+          }
+        ],
+        "combined_prob": 0.141,
+        "fair_odds": "+609",
+        "book_pays": "+600"
+      }
     }
   }
 }
