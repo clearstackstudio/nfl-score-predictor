@@ -1,0 +1,177 @@
+{
+  "id": "2026-11-09",
+  "title": "Weekly recap \u2014 Nov 9, 2026",
+  "period_label": "NFL Week 8 \u00b7 CFB Week 10 \u00b7 NBA 2026-11-08 \u00b7 NCAAB 2026-11-08",
+  "published": "2026-11-09",
+  "covers": [
+    {
+      "sport": "nfl",
+      "period": "8"
+    },
+    {
+      "sport": "cfb",
+      "period": "10"
+    },
+    {
+      "sport": "nba",
+      "period": "2026-11-08"
+    },
+    {
+      "sport": "ncaab",
+      "period": "2026-11-08"
+    }
+  ],
+  "overall": {
+    "ats": [
+      40,
+      42,
+      0
+    ],
+    "ou": [
+      20,
+      26,
+      0
+    ]
+  },
+  "sports": [
+    {
+      "sport": "nfl",
+      "label": "NFL",
+      "period": "Week 8",
+      "ats": [
+        5,
+        9,
+        0
+      ],
+      "ou": [
+        2,
+        5,
+        0
+      ],
+      "n_picks": 14
+    },
+    {
+      "sport": "cfb",
+      "label": "CFB",
+      "period": "Week 10",
+      "ats": [
+        31,
+        30,
+        0
+      ],
+      "ou": [
+        18,
+        21,
+        0
+      ],
+      "n_picks": 62
+    },
+    {
+      "sport": "nba",
+      "label": "NBA",
+      "period": "2026-11-08",
+      "ats": [
+        3,
+        2,
+        0
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ],
+      "n_picks": 7
+    },
+    {
+      "sport": "ncaab",
+      "label": "NCAAB",
+      "period": "2026-11-08",
+      "ats": [
+        1,
+        1,
+        0
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ],
+      "n_picks": 2
+    }
+  ],
+  "best_call": {
+    "label": "North Texas -16.75",
+    "kind": "spread",
+    "edge": 14.8,
+    "prob": 0.5,
+    "game": "Rice at North Texas",
+    "score": "23\u201352",
+    "sport": "CFB",
+    "period": "Week 10"
+  },
+  "worst_miss": {
+    "label": "Under 47.75",
+    "kind": "total",
+    "edge": -6.9,
+    "prob": 0.525,
+    "game": "Louisiana Tech at Troy",
+    "score": "41\u201317",
+    "sport": "CFB",
+    "period": "Week 10"
+  },
+  "observation": "About what you'd expect from a coin-flip operation: 60-68. Totals detail: NFL totals 2-5; CFB totals 18-21.",
+  "season_to_date": {
+    "nfl": {
+      "label": "NFL",
+      "ats": [
+        33,
+        46,
+        4
+      ],
+      "ou": [
+        24,
+        24,
+        1
+      ]
+    },
+    "cfb": {
+      "label": "CFB",
+      "ats": [
+        122,
+        123,
+        5
+      ],
+      "ou": [
+        80,
+        97,
+        2
+      ]
+    },
+    "nba": {
+      "label": "NBA",
+      "ats": [
+        59,
+        66,
+        8
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ]
+    },
+    "ncaab": {
+      "label": "NCAAB",
+      "ats": [
+        12,
+        24,
+        0
+      ],
+      "ou": [
+        7,
+        7,
+        0
+      ]
+    }
+  }
+}
