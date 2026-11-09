@@ -1716,7 +1716,12 @@
         "away": "Fresno State -2.5"
       },
       "cover_prob": 0.514,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 17,
+        "away_score": 10,
+        "ats": "win"
+      }
     },
     {
       "away": "West Virginia",
@@ -1744,7 +1749,12 @@
         "away": "West Virginia +16.75"
       },
       "cover_prob": 0.5,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 53,
+        "away_score": 48,
+        "ats": "loss"
+      }
     },
     {
       "away": "Hawai'i",
@@ -1772,7 +1782,12 @@
         "away": "Hawai'i -8.5"
       },
       "cover_prob": 0.507,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 14,
+        "away_score": 17,
+        "ats": "loss"
+      }
     },
     {
       "away": "Texas State",
@@ -1800,7 +1815,12 @@
         "away": "Texas State +6.25"
       },
       "cover_prob": 0.5,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 21,
+        "away_score": 42,
+        "ats": "win"
+      }
     },
     {
       "away": "Wyoming",
@@ -1828,7 +1848,13 @@
         "away": "Wyoming +5"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.5
+      "ou_prob": 0.5,
+      "result": {
+        "home_score": 35,
+        "away_score": 41,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Ohio",
