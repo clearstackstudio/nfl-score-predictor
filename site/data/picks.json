@@ -34,7 +34,7 @@
     "fair_odds": "+609",
     "book_pays": "+600",
     "calibration": "empirical-2026-10-09",
-    "result": null
+    "result": "loss"
   },
   "picks": [
     {
@@ -104,7 +104,12 @@
       "cover_prob": 0.502,
       "ou_prob": null,
       "home_qb": "Michael Penix Jr.",
-      "away_qb": "Joe Burrow"
+      "away_qb": "Joe Burrow",
+      "result": {
+        "home_score": 17,
+        "away_score": 34,
+        "ats": "win"
+      }
     },
     {
       "away": "Denver Broncos",
@@ -136,7 +141,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.51,
       "home_qb": "Bryce Young",
-      "away_qb": "Bo Nix"
+      "away_qb": "Bo Nix",
+      "result": {
+        "home_score": 21,
+        "away_score": 26,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "Dallas Cowboys",
@@ -168,7 +179,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Daniel Jones",
-      "away_qb": "Dak Prescott"
+      "away_qb": "Dak Prescott",
+      "result": {
+        "home_score": 23,
+        "away_score": 27,
+        "ats": "win"
+      }
     },
     {
       "away": "New York Jets",
@@ -200,7 +216,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.51,
       "home_qb": "Patrick Mahomes",
-      "away_qb": "Geno Smith"
+      "away_qb": "Geno Smith",
+      "result": {
+        "home_score": 35,
+        "away_score": 12,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Detroit Lions",
@@ -232,7 +254,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Malik Willis",
-      "away_qb": "Jared Goff"
+      "away_qb": "Jared Goff",
+      "result": {
+        "home_score": 9,
+        "away_score": 19,
+        "ats": "loss"
+      }
     },
     {
       "away": "Cleveland Browns",
@@ -264,7 +291,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Tyler Shough",
-      "away_qb": "Shedeur Sanders"
+      "away_qb": "Shedeur Sanders",
+      "result": {
+        "home_score": 23,
+        "away_score": 22,
+        "ats": "loss"
+      }
     },
     {
       "away": "New York Giants",
@@ -296,7 +328,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Joe Milton III",
-      "away_qb": "J.J. McCarthy"
+      "away_qb": "J.J. McCarthy",
+      "result": {
+        "home_score": 11,
+        "away_score": 19,
+        "ats": "loss"
+      }
     },
     {
       "away": "Los Angeles Rams",
@@ -328,7 +365,12 @@
       "cover_prob": 0.503,
       "ou_prob": null,
       "home_qb": "Jayden Daniels",
-      "away_qb": "Matthew Stafford"
+      "away_qb": "Matthew Stafford",
+      "result": {
+        "home_score": 13,
+        "away_score": 20,
+        "ats": "win"
+      }
     },
     {
       "away": "Houston Texans",
@@ -360,7 +402,12 @@
       "cover_prob": 0.5,
       "ou_prob": null,
       "home_qb": "Justin Herbert",
-      "away_qb": "C.J. Stroud"
+      "away_qb": "C.J. Stroud",
+      "result": {
+        "home_score": 22,
+        "away_score": 44,
+        "ats": "loss"
+      }
     },
     {
       "away": "Las Vegas Raiders",
@@ -392,7 +439,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.5,
       "home_qb": "Brock Purdy",
-      "away_qb": "Kirk Cousins"
+      "away_qb": "Kirk Cousins",
+      "result": {
+        "home_score": 38,
+        "away_score": 17,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "Green Bay Packers",
@@ -424,7 +477,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.524,
       "home_qb": "Drake Maye",
-      "away_qb": "Jordan Love"
+      "away_qb": "Jordan Love",
+      "result": {
+        "home_score": 27,
+        "away_score": 45,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Arizona Cardinals",
@@ -456,7 +515,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.526,
       "home_qb": "Drew Lock",
-      "away_qb": "Gardner Minshew"
+      "away_qb": "Gardner Minshew",
+      "result": {
+        "home_score": 17,
+        "away_score": 3,
+        "ats": "win",
+        "ou": "loss"
+      }
     },
     {
       "away": "Tampa Bay Buccaneers",
@@ -488,7 +553,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.5,
       "home_qb": "Caleb Williams",
-      "away_qb": "Baker Mayfield"
+      "away_qb": "Baker Mayfield",
+      "result": {
+        "home_score": 27,
+        "away_score": 24,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Buffalo Bills",
