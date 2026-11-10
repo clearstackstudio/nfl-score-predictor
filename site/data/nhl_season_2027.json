@@ -5076,8 +5076,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "New York Rangers",
@@ -5103,7 +5103,16 @@
           "pick_label": null,
           "pick_prob": null,
           "edge_pp": 0.4,
-          "result": null
+          "result": {
+            "home_score": 3,
+            "away_score": 1,
+            "su": null,
+            "model_correct": true,
+            "brier_raw": 0.181391,
+            "brier_cal": 0.170321,
+            "market_brier": 0.173889,
+            "total_error": 2.2275
+          }
         },
         {
           "away": "Philadelphia Flyers",
@@ -5129,7 +5138,16 @@
           "pick_label": "Philadelphia Flyers -135",
           "pick_prob": 0.6208,
           "edge_pp": -6.8,
-          "result": null
+          "result": {
+            "home_score": 1,
+            "away_score": 3,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.168018,
+            "brier_cal": 0.143793,
+            "market_brier": 0.200167,
+            "total_error": 1.8742
+          }
         },
         {
           "away": "New York Islanders",
@@ -5155,10 +5173,20 @@
           "pick_label": null,
           "pick_prob": null,
           "edge_pp": -0.8,
-          "result": null
+          "result": {
+            "home_score": 3,
+            "away_score": 2,
+            "su": null,
+            "model_correct": false,
+            "brier_raw": 0.289444,
+            "brier_cal": 0.308247,
+            "market_brier": 0.299756,
+            "total_error": 1.9123
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-10 06:41 PST"
     },
     "2026-11-10": {
       "date": "2026-11-10",

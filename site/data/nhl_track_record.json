@@ -67,18 +67,19 @@
         "2026-11-05",
         "2026-11-06",
         "2026-11-07",
-        "2026-11-08"
+        "2026-11-08",
+        "2026-11-09"
       ],
-      "games": 131,
-      "straight_up_pct": 0.6107,
-      "paired_games": 125,
-      "brier_raw": 0.2252,
-      "brier_cal": 0.2231,
+      "games": 134,
+      "straight_up_pct": 0.6119,
+      "paired_games": 128,
+      "brier_raw": 0.2249,
+      "brier_cal": 0.2227,
       "market_brier": 0.225,
-      "pick_w": 73,
+      "pick_w": 74,
       "pick_l": 50,
-      "pick_pct": 0.5935,
-      "totals_rmse": 2.196
+      "pick_pct": 0.5968,
+      "totals_rmse": 2.192
     }
   ]
 }
