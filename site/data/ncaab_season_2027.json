@@ -1473,7 +1473,7 @@
       "generated": "2026-11-09 21:41 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
+      "graded": true,
       "complete": false,
       "picks": [
         {
@@ -1501,7 +1501,12 @@
             "away": "Eastern Washington +17.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 94.0,
+            "away_score": 84.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Mississippi Valley State",
@@ -1528,7 +1533,8 @@
             "away": "Mississippi Valley State +16.5"
           },
           "cover_prob": null,
-          "ou_prob": 0.508
+          "ou_prob": 0.508,
+          "result": null
         },
         {
           "away": "Rice",
@@ -1555,7 +1561,12 @@
             "away": "Rice +27.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 91.0,
+            "away_score": 73.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Portland",
@@ -1582,7 +1593,12 @@
             "away": "Portland +7.75"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 66.0,
+            "away_score": 73.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -1606,10 +1622,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.127,
-        "fair_odds": "+687",
-        "book_pays": "+600"
-      }
+        "result": null
+      },
+      "graded_at": "2026-11-10 06:40 PST"
     }
   }
 }
