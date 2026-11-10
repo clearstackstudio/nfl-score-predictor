@@ -5430,6 +5430,204 @@
         "fair_odds": "+609",
         "book_pays": "+600"
       }
+    },
+    "2026-11-10": {
+      "date": "2026-11-10",
+      "generated": "2026-11-09 21:39 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Milwaukee Bucks",
+          "home": "New York Knicks",
+          "away_abbr": "Milwaukee Bucks",
+          "home_abbr": "New York Knicks",
+          "gameday": "2026-11-10",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 15.5,
+          "line_total": 220.0,
+          "our_spread": 12.3,
+          "our_total": 221.2,
+          "spread_edge": -3.2,
+          "total_edge": 1.2,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Milwaukee Bucks +15.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "New York Knicks -15.5",
+            "away": "Milwaukee Bucks +15.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Boston Celtics",
+          "home": "Philadelphia 76ers",
+          "away_abbr": "Boston Celtics",
+          "home_abbr": "Philadelphia 76ers",
+          "gameday": "2026-11-10",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -1.5,
+          "line_total": 218.0,
+          "our_spread": -0.1,
+          "our_total": 219.1,
+          "spread_edge": 1.4,
+          "total_edge": 1.1,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Philadelphia 76ers +1.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Philadelphia 76ers +1.5",
+            "away": "Boston Celtics -1.5"
+          },
+          "cover_prob": 0.507,
+          "ou_prob": null
+        },
+        {
+          "away": "Los Angeles Clippers",
+          "home": "Phoenix Suns",
+          "away_abbr": "Los Angeles Clippers",
+          "home_abbr": "Phoenix Suns",
+          "gameday": "2026-11-10",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 4.5,
+          "line_total": 226.5,
+          "our_spread": 4.1,
+          "our_total": 227.2,
+          "spread_edge": -0.4,
+          "total_edge": 0.7,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Phoenix Suns -4.5",
+            "away": "Los Angeles Clippers +4.5"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Miami Heat",
+          "home": "Utah Jazz",
+          "away_abbr": "Miami Heat",
+          "home_abbr": "Utah Jazz",
+          "gameday": "2026-11-10",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -9.5,
+          "line_total": 228.0,
+          "our_spread": -2.8,
+          "our_total": 239.4,
+          "spread_edge": 6.7,
+          "total_edge": 11.4,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Utah Jazz +9.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Utah Jazz +9.5",
+            "away": "Miami Heat -9.5"
+          },
+          "cover_prob": 0.519,
+          "ou_prob": null
+        },
+        {
+          "away": "Orlando Magic",
+          "home": "Sacramento Kings",
+          "away_abbr": "Orlando Magic",
+          "home_abbr": "Sacramento Kings",
+          "gameday": "2026-11-10",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -6.0,
+          "line_total": 222.0,
+          "our_spread": -1.8,
+          "our_total": 231.8,
+          "spread_edge": 4.2,
+          "total_edge": 9.8,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Sacramento Kings +6",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Sacramento Kings +6",
+            "away": "Orlando Magic -6"
+          },
+          "cover_prob": 0.505,
+          "ou_prob": null
+        },
+        {
+          "away": "Oklahoma City Thunder",
+          "home": "Portland Trail Blazers",
+          "away_abbr": "Oklahoma City Thunder",
+          "home_abbr": "Portland Trail Blazers",
+          "gameday": "2026-11-10",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -1.5,
+          "line_total": 226.75,
+          "our_spread": -0.0,
+          "our_total": 224.9,
+          "spread_edge": 1.5,
+          "total_edge": -1.9,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Portland Trail Blazers +1.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Portland Trail Blazers +1.5",
+            "away": "Oklahoma City Thunder -1.5"
+          },
+          "cover_prob": 0.506,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Miami Heat @ Utah Jazz",
+            "market": "spread",
+            "label": "Utah Jazz +9.5",
+            "prob": 0.519
+          },
+          {
+            "game": "Boston Celtics @ Philadelphia 76ers",
+            "market": "spread",
+            "label": "Philadelphia 76ers +1.5",
+            "prob": 0.507
+          },
+          {
+            "game": "Oklahoma City Thunder @ Portland Trail Blazers",
+            "market": "spread",
+            "label": "Portland Trail Blazers +1.5",
+            "prob": 0.506
+          }
+        ],
+        "combined_prob": 0.133,
+        "fair_odds": "+652",
+        "book_pays": "+600"
+      }
     }
   }
 }
