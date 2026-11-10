@@ -100,6 +100,14 @@ KNOWN_OVERRIDES: dict[str, str] = {
     "Fresno St Bulldogs": "Fresno State",
     "Portland St Vikings": "Portland State",
     "CSU Bakersfield Roadrunners": "Cal State Bakersfield",
+    # November 9, 2026: the nightly picks run failed loud on this name --
+    # the hyphen defeats the trailing-word heuristic ("SIU-Edwardsville"
+    # never strips to the canonical "SIU Edwardsville"). Target verified
+    # against games.csv.
+    "SIU-Edwardsville Cougars": "SIU Edwardsville",
+    # Same run, second miss: abbreviated "Miss" + "St" defeats the
+    # heuristic twice over. Target verified against games.csv.
+    "Miss Valley St Delta Devils": "Mississippi Valley State",
 }
 
 
