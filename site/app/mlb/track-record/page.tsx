@@ -126,6 +126,33 @@ export default function MlbTrackRecord() {
         </p>
       </div>
 
+      <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">How this backtest was run</h2>
+      <div className="mt-4 max-w-3xl space-y-4 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+        <p>
+          Walk-forward means the model only ever knew the past. Games were processed in
+          chronological order from 2012 to 2021; before each game, the ratings were
+          built solely from games already completed, the prediction was recorded, and
+          only then did the model learn the result. There is no way for future
+          information to leak into a prediction — the same discipline the live models
+          on this site follow in real time, applied here to history.
+        </p>
+        <p>
+          The model&rsquo;s settings — the learning rate (alpha 1/40), the prior-season
+          carryover (0.25), the fitted home edge (0.130 runs), and the probability
+          spread (sigma 4.135) — were tuned on the 2012–2015 seasons only. The
+          2016–2021 seasons are the post-tuning slice, where the model ran with
+          settings that had never seen those games; moneyline ROI on that slice was{" "}
+          <span className="font-semibold text-red-400 light:text-red-600">−1.0%</span>,
+          better than the full-period figure above but still negative. Benchmarks are
+          the vig-removed closing moneylines — the sharpest public probabilities
+          available — and a bet was only counted where the model disagreed with the
+          price by a real margin: at least 0.05 of probability on the moneyline, at
+          least half a run on totals. Brier score, for the record, grades probability
+          accuracy — lower is better — so the line&rsquo;s lower number above is the
+          line winning, not a typo.
+        </p>
+      </div>
+
       <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">Season by season</h2>
       <p className="mt-1 max-w-2xl text-[15px] text-zinc-400 light:text-zinc-600">
         Every season the model was tested on. Green ROI seasons were profitable; the rest weren&rsquo;t.
@@ -163,6 +190,28 @@ export default function MlbTrackRecord() {
         </table>
       </div>
       <p className="mt-2 text-xs text-zinc-500">* 2020: the shortened 60-game season.</p>
+
+      <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">What this record is — and isn&rsquo;t</h2>
+      <div className="mt-4 max-w-3xl space-y-4 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+        <p>
+          This is a backtest, not a live track record. The MLB model is in development
+          and has never published a pick before a real game, so there is no live record
+          to show — and rather than fill the space with projections, this page shows
+          the strongest evidence that exists: ten seasons of honest simulation, with
+          the losing ROI in the headline instead of a footnote. A backtest can flatter
+          a model in ways live grading never would, which is why the tuning quarantine
+          above matters: settings were frozen on 2012–2015, and everything after that
+          is the model meeting seasons it was never adjusted for.
+        </p>
+        <p>
+          When live picks begin with the 2027 season (Opening Day is late March 2027),
+          they will be graded on this page the same way the other sports are: published
+          before first pitch, scored against the closing line and the final score, and
+          kept in public whether the record is good or bad. Until then, read every
+          number here as what it is — evidence about a model under construction, not a
+          promise about next season.
+        </p>
+      </div>
     </div>
   );
 }

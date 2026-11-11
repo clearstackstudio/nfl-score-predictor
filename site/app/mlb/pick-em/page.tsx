@@ -41,6 +41,38 @@ export default function MlbPickEm() {
           Full track record →
         </a>
       </div>
+
+      <section className="mt-12 max-w-3xl">
+        <h2 className="font-display text-3xl font-semibold uppercase tracking-wide">
+          Why straight up
+        </h2>
+        <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+          <p>
+            Baseball has no point spread worth the name — the run line exists, but the
+            honest question in a baseball game is simply who wins. Pick&rsquo;em asks
+            exactly that: every game on the card, one winner, locked before first
+            pitch, graded against the finals. And it is a harder question than it
+            looks. In the model&rsquo;s own 2012–2021 walk-forward backtest, the home
+            team won just 53.5% of games, and a full park-adjusted ratings model —
+            ten seasons, 22,765 games of evidence — managed 55.6%. The gap between
+            &ldquo;pick the home team&rdquo; and a real forecaster is about two games
+            in a hundred. A season of pick&rsquo;em is a genuine test of whether your
+            reads clear that bar, and the model itself is the standing opponent: it
+            publishes its own pick for every game on the picks page, so your card can
+            always be compared against it.
+          </p>
+          <p>
+            The honest fine print: pick&rsquo;em is a forecasting contest, not a path
+            around the vig — there is no moneyline here and nothing to buy. It also
+            strips away the thing that decides real betting outcomes, the price.
+            Picking 55.6% of winners straight up still lost money against the closing
+            line in the backtest (−2.5% ROI), because a forecaster can be right about
+            who wins and wrong about what that win was worth. Pick&rsquo;em asks the
+            cleaner question on purpose: can you call winners, day after day, better
+            than a transparent model can? Opening Day 2027 is when we find out.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }

@@ -36,6 +36,13 @@ export default function RecapsIndex() {
         observation — published every Monday. A tout site would bury the bad weeks.
         We put them at the top of the page.
       </p>
+      <p className="mt-4 max-w-2xl text-sm leading-relaxed text-zinc-400 light:text-zinc-600">
+        Each recap is the week&rsquo;s receipt: the record across every graded pick,
+        the calls that landed, the ones that missed, and the one observation we think
+        is actually true — including when the honest observation is that the week was
+        bad and the model was worse. Recaps never edit a pick after the fact; anything
+        written here can be checked line by line against the track record pages.
+      </p>
 
       {recaps.length === 0 ? (
         <p className="mt-8 text-sm text-zinc-500">No recaps yet. Check back Monday.</p>

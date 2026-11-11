@@ -100,6 +100,42 @@ export default function MlbRankings() {
         </table>
       </div>
 
+      <h2 className="mt-12 font-display text-3xl font-semibold uppercase tracking-wide">
+        How to read a rating
+      </h2>
+      <div className="mt-4 max-w-3xl space-y-4 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+        <p>
+          A rating is an expected run margin. A team rated +0.80 is expected to outscore
+          an average team by eight-tenths of a run per game in a neutral park; a team
+          at −0.50 is expected to be outscored by half a run. A matchup combines the
+          two teams&rsquo; offense and defense ratings with the fitted home edge
+          (0.130 runs), and the resulting margin converts to a win probability through
+          the model&rsquo;s Normal-CDF step — a +1.5-run expected margin, for example,
+          prices at roughly a 64% win chance. The number is a forecast about runs, not
+          a reward for wins already banked: a team can rank high here with a mediocre
+          record if its run differential says it has been playing better than its
+          results.
+        </p>
+        <p>
+          Ratings move slowly by design. The exponential update (alpha 1/40) means one
+          blowout barely registers; a team&rsquo;s number reflects a full season of
+          park-adjusted run scoring and run prevention, with last season&rsquo;s
+          ratings carrying a quarter of their weight into the spring. That patience is
+          also the model&rsquo;s known limit — it will be late to notice a genuinely
+          transformed team, and in a sport where a starting pitcher can swing a single
+          game, a team-level rating is a prior, not a verdict on tonight.
+        </p>
+        <p>
+          One caution, because this site deals in receipts: in the 2012–2021
+          walk-forward backtest, these ratings produced well-calibrated probabilities
+          but no betting edge — a Brier score of 0.2444 against the closing
+          line&rsquo;s 0.2402, and a −2.5% return on the moneyline bets they pointed
+          to. The rankings are the model&rsquo;s honest opinion of team strength,
+          published to be checked against results — not a claim that the opinion beats
+          the market.
+        </p>
+      </div>
+
       <p className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-500 light:text-zinc-600">
         These are the model&apos;s final ratings for the {doc.season} season, trained on
         every game through the end of the regular season. The model retrains ahead of

@@ -928,6 +928,102 @@ export default function LivePage({ league = "nfl" as League, basePath = "" }: { 
       <p className="mt-8 max-w-2xl text-xs leading-relaxed text-zinc-500 light:text-zinc-500">
         Live data via ESPN · refreshes automatically during games.
       </p>
+
+      <LiveExplainer league={league} football={football} />
     </div>
+  );
+}
+
+const LIVE_COPY: Record<
+  string,
+  { sport: string; picksHref: string; picksLabel: string; recordHref: string; event: string; note: string }
+> = {
+  nfl: {
+    sport: "NFL",
+    picksHref: "/",
+    picksLabel: "the NFL picks page",
+    recordHref: "/track-record",
+    event: "kickoff",
+    note:
+      "For football, the game card carries a field view of the current drive — ball position, down and distance, and the first-down line — drawn from the same play feed listed below it, so you can see a drive build instead of just reading that it did.",
+  },
+  "college-football": {
+    sport: "college football",
+    picksHref: "/cfb",
+    picksLabel: "the college football picks page",
+    recordHref: "/cfb/track-record",
+    event: "kickoff",
+    note:
+      "For football, the game card carries a field view of the current drive — ball position, down and distance, and the first-down line — drawn from the same play feed listed below it, so you can see a drive build instead of just reading that it did.",
+  },
+  nba: {
+    sport: "NBA",
+    picksHref: "/nba",
+    picksLabel: "the NBA picks page",
+    recordHref: "/nba/track-record",
+    event: "tip-off",
+    note:
+      "Basketball summaries carry no drive chart, so the detail view leans on the scoring summary and team stats: who scored, when the runs happened, and which team controlled the game underneath the final margin.",
+  },
+  "mens-college-basketball": {
+    sport: "NCAAB",
+    picksHref: "/ncaab",
+    picksLabel: "the NCAAB picks page",
+    recordHref: "/ncaab/track-record",
+    event: "tip-off",
+    note:
+      "Basketball summaries carry no drive chart, so the detail view leans on the scoring summary and team stats: who scored, when the runs happened, and which team controlled the game underneath the final margin.",
+  },
+};
+
+/** Static explainer below the live tool: what this page shows, whose win
+ * probability the chart draws, and how a game here connects to the model's
+ * published picks and their grading. Server-rendered text; the live data
+ * above it is untouched. */
+function LiveExplainer({ league, football }: { league: League; football: boolean }) {
+  const c = LIVE_COPY[league] ?? LIVE_COPY.nfl;
+  return (
+    <section className="mt-12 max-w-3xl">
+      <h2 className="font-display text-3xl font-semibold uppercase tracking-wide">
+        About this <span className="text-red-500 light:text-red-600">coverage</span>
+      </h2>
+      <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+        <p>
+          This page follows every {c.sport} game on the schedule as it happens, using
+          the live ESPN feed. The scoreboard refreshes on its own every minute; open a
+          game and its detail —{" "}
+          {football
+            ? "every drive and play, the scoring summary, team stats, and game leaders"
+            : "every scoring play, team stats, and game leaders"}{" "}
+          — updates every 30 seconds. Games that are already final stay on the board
+          with their full play-by-play, so you can replay how a result happened instead
+          of just reading the score.
+        </p>
+        <p>{c.note}</p>
+        <p>
+          The win-probability chart is ESPN&rsquo;s live estimate, recalculated as the
+          game unfolds from the score, the clock, and the game state. It describes the
+          game in front of you — it is not an Honest Line pick, and it will swing hard
+          on a single play, especially late. Read it as a measure of how much each
+          moment mattered, not as advice about what happens next.
+        </p>
+        <p>
+          Honest Line&rsquo;s own numbers live elsewhere on purpose. The model&rsquo;s
+          pregame picks are published before {c.event} on{" "}
+          <a href={c.picksHref} className="font-semibold underline decoration-red-500/50 underline-offset-4 hover:decoration-red-500">
+            {c.picksLabel}
+          </a>
+          , with the model&rsquo;s line and win probability fixed in advance. When a
+          game here goes final, that result flows into the grading: the pick is scored
+          against the final score, and the season record on the{" "}
+          <a href={c.recordHref} className="font-semibold underline decoration-red-500/50 underline-offset-4 hover:decoration-red-500">
+            track record page
+          </a>{" "}
+          updates — wins, losses, and pushes all included. Nothing on this live page
+          changes a published pick after the fact; that separation is the whole point
+          of the site.
+        </p>
+      </div>
+    </section>
   );
 }

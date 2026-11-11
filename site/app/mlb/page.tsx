@@ -14,6 +14,7 @@ type PicksFile = {
 const data = picksData as PicksFile;
 const overall = (record as unknown as { overall: {
   games: number; straight_up_pct: number;
+  brier_model: number; brier_line: number;
   ml: { bets: number; roi: number };
   totals: { roi: number; ou: [number, number, number] };
 } }).overall;
@@ -93,6 +94,62 @@ export default function MlbHome() {
           {data.disclaimer}
         </p>
       </div>
+
+      <section className="mt-4 max-w-3xl">
+        <h2 className="font-display text-3xl font-semibold uppercase tracking-wide">
+          The model in brief
+        </h2>
+        <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+          <p>
+            Every team carries two park-adjusted ratings — one for runs scored, one for
+            runs allowed — updated after every game with a slow exponential learning
+            rate (alpha = 1/40), because baseball&rsquo;s long season rewards patience
+            over reaction. Park factors are estimated from the games themselves, with
+            expanding park factors shrunk toward the league over a 100-game prior, so a
+            slugfest at Coors Field and a pitchers&rsquo; duel at Petco Park aren&rsquo;t
+            judged on raw runs. A quarter of last season&rsquo;s ratings carry into
+            April (a 0.25 prior-season carryover), the home team gets a fitted edge of
+            0.130 runs, and neutral-site games get no home edge at all. The predicted
+            run margin becomes a win probability through a Normal CDF (sigma 4.135)
+            with a Platt recalibration layer on top. The betting line is never an input
+            to any of this — it exists only as the benchmark the model is measured
+            against.
+          </p>
+        </div>
+
+        <h2 className="mt-10 font-display text-3xl font-semibold uppercase tracking-wide">
+          The evidence so far
+        </h2>
+        <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-zinc-300 light:text-zinc-700">
+          <p>
+            The MLB model is still in development, and it has not published a single
+            live pick. What exists — and what this section presents until the live
+            launch — is a walk-forward backtest over ten full seasons:{" "}
+            {overall.games.toLocaleString()} games from 2012 through 2021, processed in
+            chronological order, with every prediction made only from games already
+            played. The model picked the winner {fmtPct(overall.straight_up_pct)} of
+            the time straight up — the home team alone won {fmtPct(0.535)} — and its
+            probabilities scored a Brier of {overall.brier_model.toFixed(4)} against
+            the closing line&rsquo;s {overall.brier_line.toFixed(4)}. Flat moneyline
+            bets at the model&rsquo;s edge threshold returned {fmtRoi(overall.ml.roi)}{" "}
+            ROI over {overall.ml.bets.toLocaleString()} bets, and totals returned{" "}
+            {fmtRoi(overall.totals.roi)} ROI. In plain terms: a competent forecaster
+            that does not beat the market. Those numbers, losses included, are
+            published in full on the track-record page, season by season.
+          </p>
+          <p>
+            Live picks are scheduled to begin with the 2027 season — Opening Day is
+            late March 2027 — with the daily pipeline (probable pitchers from the free
+            MLB Stats API, that day&rsquo;s lines, picks published before first pitch,
+            nightly grading) being built in February and March 2027. A starting-pitcher
+            adjustment is designed for the live model but was never part of the
+            team-level backtest, and it will claim nothing until it has been measured
+            the same walk-forward way. Until the first live pick posts, everything in
+            this section is backtest evidence and the final 2026 ratings — labeled as
+            such, never dressed up as a live record.
+          </p>
+        </div>
+      </section>
 
       <AdSlot format="rectangle" league="mlb" />
     </div>
