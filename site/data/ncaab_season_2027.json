@@ -1631,8 +1631,8 @@
       "generated": "2026-11-10 21:39 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "UL Monroe",
@@ -1659,7 +1659,12 @@
             "away": "UL Monroe +6.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 100.0,
+            "away_score": 92.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Kansas",
@@ -1686,7 +1691,12 @@
             "away": "Kansas -14.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 69.0,
+            "away_score": 89.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Montana",
@@ -1713,7 +1723,12 @@
             "away": "Montana +1.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 63.0,
+            "away_score": 58.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -1737,10 +1752,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.125,
-        "fair_odds": "+700",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-11 06:40 PST"
     }
   }
 }
