@@ -1625,6 +1625,122 @@
         "result": null
       },
       "graded_at": "2026-11-10 06:40 PST"
+    },
+    "2026-11-10": {
+      "date": "2026-11-10",
+      "generated": "2026-11-10 21:39 PST",
+      "preseason": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "UL Monroe",
+          "home": "TCU",
+          "away_abbr": "UL Monroe",
+          "home_abbr": "TCU",
+          "gameday": "2026-11-10",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 6.5,
+          "line_total": 193.0,
+          "our_spread": 20.1,
+          "our_total": 154.1,
+          "spread_edge": 13.6,
+          "total_edge": -38.9,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "TCU -6.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "TCU -6.5",
+            "away": "UL Monroe +6.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Kansas",
+          "home": "Kentucky",
+          "away_abbr": "Kansas",
+          "home_abbr": "Kentucky",
+          "gameday": "2026-11-10",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -14.5,
+          "line_total": 162.5,
+          "our_spread": 0.8,
+          "our_total": 146.9,
+          "spread_edge": 15.3,
+          "total_edge": -15.6,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Kentucky +14.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Kentucky +14.5",
+            "away": "Kansas -14.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Montana",
+          "home": "San Francisco",
+          "away_abbr": "Montana",
+          "home_abbr": "San Francisco",
+          "gameday": "2026-11-10",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 1.5,
+          "line_total": 116.5,
+          "our_spread": 12.0,
+          "our_total": 147.1,
+          "spread_edge": 10.5,
+          "total_edge": 30.6,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "San Francisco -1.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "San Francisco -1.5",
+            "away": "Montana +1.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "UL Monroe @ TCU",
+            "market": "spread",
+            "label": "TCU -6.5",
+            "prob": 0.5
+          },
+          {
+            "game": "Kansas @ Kentucky",
+            "market": "spread",
+            "label": "Kentucky +14.5",
+            "prob": 0.5
+          },
+          {
+            "game": "Montana @ San Francisco",
+            "market": "spread",
+            "label": "San Francisco -1.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.125,
+        "fair_odds": "+700",
+        "book_pays": "+600"
+      }
     }
   }
 }
