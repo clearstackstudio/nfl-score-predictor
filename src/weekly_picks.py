@@ -140,7 +140,18 @@ def load_qb_overrides(season: int, week: int) -> dict:
         if qid:
             out[team] = (qid, name)
         else:
-            print(f"qb_overrides: no GSIS id for {name!r}, skipping")
+            # No GSIS id anywhere: a starter who has never thrown an NFL
+            # pass (e.g. a rookie making his first start — Carson Beck,
+            # ARI, and Kyle McCord, MIA, 2026-11-10). Dropping the
+            # override here would leave the site displaying the old
+            # starter, so keep it as a name-only override with a sentinel
+            # id: it matches no passer, so _qb_adj_for_team finds zero
+            # career plays for him and returns a 0.0 QB adjustment, and
+            # the schedule-starter fallback in the matchup builder is
+            # not taken (the sentinel is truthy).
+            print(f"qb_overrides: no GSIS id for {name!r}; "
+                  "applying as name-only override (QB adj 0.0)")
+            out[team] = ("__no_gsis_id__", name)
     return out
 
 
