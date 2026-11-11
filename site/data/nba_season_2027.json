@@ -5476,8 +5476,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Milwaukee Bucks",
@@ -5504,7 +5504,12 @@
             "away": "Milwaukee Bucks +15.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 117.0,
+            "away_score": 85.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Boston Celtics",
@@ -5531,7 +5536,12 @@
             "away": "Boston Celtics -1.5"
           },
           "cover_prob": 0.507,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 101.0,
+            "away_score": 123.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Los Angeles Clippers",
@@ -5558,7 +5568,11 @@
             "away": "Los Angeles Clippers +4.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 133.0,
+            "away_score": 110.0
+          }
         },
         {
           "away": "Miami Heat",
@@ -5585,7 +5599,12 @@
             "away": "Miami Heat -9.5"
           },
           "cover_prob": 0.519,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 109.0,
+            "away_score": 115.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Orlando Magic",
@@ -5612,7 +5631,12 @@
             "away": "Orlando Magic -6"
           },
           "cover_prob": 0.505,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 100.0,
+            "away_score": 107.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Oklahoma City Thunder",
@@ -5639,7 +5663,12 @@
             "away": "Oklahoma City Thunder -1.5"
           },
           "cover_prob": 0.506,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 123.0,
+            "away_score": 103.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -5663,10 +5692,9 @@
             "prob": 0.506
           }
         ],
-        "combined_prob": 0.133,
-        "fair_odds": "+652",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-10 23:41 PST"
     },
     "2026-11-11": {
       "date": "2026-11-11",
