@@ -5702,8 +5702,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Boston Celtics",
@@ -5730,7 +5730,12 @@
             "away": "Boston Celtics -6.5"
           },
           "cover_prob": 0.501,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 93.0,
+            "away_score": 98.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Cleveland Cavaliers",
@@ -5757,7 +5762,11 @@
             "away": "Cleveland Cavaliers +3.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 107.0,
+            "away_score": 115.0
+          }
         },
         {
           "away": "Washington Wizards",
@@ -5784,7 +5793,12 @@
             "away": "Washington Wizards +3.5"
           },
           "cover_prob": 0.507,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 114.0,
+            "away_score": 101.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Brooklyn Nets",
@@ -5811,7 +5825,12 @@
             "away": "Brooklyn Nets +4.5"
           },
           "cover_prob": 0.507,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 111.0,
+            "away_score": 145.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "San Antonio Spurs",
@@ -5838,7 +5857,12 @@
             "away": "San Antonio Spurs -14.5"
           },
           "cover_prob": 0.517,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 119.0,
+            "away_score": 124.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Denver Nuggets",
@@ -5865,7 +5889,12 @@
             "away": "Denver Nuggets -4.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 118.0,
+            "away_score": 123.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Los Angeles Lakers",
@@ -5892,7 +5921,12 @@
             "away": "Los Angeles Lakers -10.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 112.0,
+            "away_score": 123.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Golden State Warriors",
@@ -5919,7 +5953,12 @@
             "away": "Golden State Warriors +5.5"
           },
           "cover_prob": 0.508,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 115.0,
+            "away_score": 108.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -5943,10 +5982,9 @@
             "prob": 0.507
           }
         ],
-        "combined_prob": 0.133,
-        "fair_odds": "+652",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-11 23:42 PST"
     },
     "2026-11-12": {
       "date": "2026-11-12",
