@@ -5947,6 +5947,150 @@
         "fair_odds": "+652",
         "book_pays": "+600"
       }
+    },
+    "2026-11-12": {
+      "date": "2026-11-12",
+      "generated": "2026-11-11 21:39 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Detroit Pistons",
+          "home": "Washington Wizards",
+          "away_abbr": "Detroit Pistons",
+          "home_abbr": "Washington Wizards",
+          "gameday": "2026-11-12",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -9.5,
+          "line_total": 221.0,
+          "our_spread": -7.0,
+          "our_total": 221.5,
+          "spread_edge": 2.5,
+          "total_edge": 0.5,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Washington Wizards +9.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Washington Wizards +9.5",
+            "away": "Detroit Pistons -9.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Toronto Raptors",
+          "home": "Philadelphia 76ers",
+          "away_abbr": "Toronto Raptors",
+          "home_abbr": "Philadelphia 76ers",
+          "gameday": "2026-11-12",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 10.2,
+          "line_total": 221.25,
+          "our_spread": 5.0,
+          "our_total": 223.3,
+          "spread_edge": -5.3,
+          "total_edge": 2.1,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Toronto Raptors +10.25",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Philadelphia 76ers -10.25",
+            "away": "Toronto Raptors +10.25"
+          },
+          "cover_prob": 0.52,
+          "ou_prob": null
+        },
+        {
+          "away": "Dallas Mavericks",
+          "home": "Minnesota Timberwolves",
+          "away_abbr": "Dallas Mavericks",
+          "home_abbr": "Minnesota Timberwolves",
+          "gameday": "2026-11-12",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 5.0,
+          "line_total": 227.0,
+          "our_spread": 6.9,
+          "our_total": 230.9,
+          "spread_edge": 1.9,
+          "total_edge": 3.9,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Minnesota Timberwolves -5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Minnesota Timberwolves -5",
+            "away": "Dallas Mavericks +5"
+          },
+          "cover_prob": 0.503,
+          "ou_prob": null
+        },
+        {
+          "away": "Charlotte Hornets",
+          "home": "Phoenix Suns",
+          "away_abbr": "Charlotte Hornets",
+          "home_abbr": "Phoenix Suns",
+          "gameday": "2026-11-12",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 6.5,
+          "line_total": 213.5,
+          "our_spread": 4.0,
+          "our_total": 218.1,
+          "spread_edge": -2.5,
+          "total_edge": 4.6,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Charlotte Hornets +6.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Phoenix Suns -6.5",
+            "away": "Charlotte Hornets +6.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Toronto Raptors @ Philadelphia 76ers",
+            "market": "spread",
+            "label": "Toronto Raptors +10.25",
+            "prob": 0.52
+          },
+          {
+            "game": "Dallas Mavericks @ Minnesota Timberwolves",
+            "market": "spread",
+            "label": "Minnesota Timberwolves -5",
+            "prob": 0.503
+          },
+          {
+            "game": "Detroit Pistons @ Washington Wizards",
+            "market": "spread",
+            "label": "Washington Wizards +9.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.131,
+        "fair_odds": "+663",
+        "book_pays": "+600"
+      }
     }
   }
 }
