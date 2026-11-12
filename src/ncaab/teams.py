@@ -108,6 +108,10 @@ KNOWN_OVERRIDES: dict[str, str] = {
     # Same run, second miss: abbreviated "Miss" + "St" defeats the
     # heuristic twice over. Target verified against games.csv.
     "Miss Valley St Delta Devils": "Mississippi Valley State",
+    # November 11, 2026: the nightly picks run failed loud on this name --
+    # "Norfolk St" strips to "Norfolk", which is not canonical. Target
+    # verified against games.csv (515 rows as Norfolk State).
+    "Norfolk St Spartans": "Norfolk State",
 }
 
 
