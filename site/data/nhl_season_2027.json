@@ -5675,8 +5675,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Carolina Hurricanes",
@@ -5702,7 +5702,16 @@
           "pick_label": "Carolina Hurricanes -291",
           "pick_prob": 0.755,
           "edge_pp": -3.8,
-          "result": null
+          "result": {
+            "home_score": 1,
+            "away_score": 4,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.088387,
+            "brier_cal": 0.060025,
+            "market_brier": 0.080259,
+            "total_error": 1.3845
+          }
         },
         {
           "away": "Montreal Canadiens",
@@ -5728,7 +5737,16 @@
           "pick_label": "Boston Bruins -121",
           "pick_prob": 0.5666,
           "edge_pp": 3.8,
-          "result": null
+          "result": {
+            "home_score": 2,
+            "away_score": 5,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.311141,
+            "brier_cal": 0.321036,
+            "market_brier": 0.279629,
+            "total_error": -0.0335
+          }
         },
         {
           "away": "Minnesota Wild",
@@ -5754,7 +5772,16 @@
           "pick_label": "Minnesota Wild -170",
           "pick_prob": 0.6943,
           "edge_pp": -8.8,
-          "result": null
+          "result": {
+            "home_score": 2,
+            "away_score": 5,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.12215,
+            "brier_cal": 0.093452,
+            "market_brier": 0.154685,
+            "total_error": -0.2388
+          }
         },
         {
           "away": "Colorado Avalanche",
@@ -5780,7 +5807,16 @@
           "pick_label": "Ottawa Senators +100",
           "pick_prob": 0.5316,
           "edge_pp": 5.3,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 3,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.220618,
+            "brier_cal": 0.219399,
+            "market_brier": 0.272171,
+            "total_error": -0.5796
+          }
         },
         {
           "away": "Washington Capitals",
@@ -5806,7 +5842,16 @@
           "pick_label": "New Jersey Devils -147",
           "pick_prob": 0.6298,
           "edge_pp": 5.7,
-          "result": null
+          "result": {
+            "home_score": 5,
+            "away_score": 2,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.153742,
+            "brier_cal": 0.137048,
+            "market_brier": 0.182756,
+            "total_error": -0.3579
+          }
         },
         {
           "away": "Tampa Bay Lightning",
@@ -5832,7 +5877,16 @@
           "pick_label": "Tampa Bay Lightning -118",
           "pick_prob": 0.5512,
           "edge_pp": -3.4,
-          "result": null
+          "result": {
+            "home_score": 1,
+            "away_score": 3,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.216504,
+            "brier_cal": 0.201421,
+            "market_brier": 0.232903,
+            "total_error": 2.3391
+          }
         },
         {
           "away": "Detroit Red Wings",
@@ -5858,7 +5912,16 @@
           "pick_label": "Florida Panthers -170",
           "pick_prob": 0.5502,
           "edge_pp": -5.6,
-          "result": null
+          "result": {
+            "home_score": 5,
+            "away_score": 4,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.207207,
+            "brier_cal": 0.20232,
+            "market_brier": 0.154685,
+            "total_error": -2.3867
+          }
         },
         {
           "away": "Buffalo Sabres",
@@ -5884,7 +5947,16 @@
           "pick_label": "Buffalo Sabres -150",
           "pick_prob": 0.5492,
           "edge_pp": 3.0,
-          "result": null
+          "result": {
+            "home_score": 3,
+            "away_score": 2,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.284196,
+            "brier_cal": 0.301621,
+            "market_brier": 0.335009,
+            "total_error": 1.3684
+          }
         },
         {
           "away": "Winnipeg Jets",
@@ -5910,7 +5982,16 @@
           "pick_label": "Dallas Stars -175",
           "pick_prob": 0.646,
           "edge_pp": 3.4,
-          "result": null
+          "result": {
+            "home_score": 3,
+            "away_score": 8,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.385517,
+            "brier_cal": 0.417316,
+            "market_brier": 0.374666,
+            "total_error": -4.9826
+          }
         },
         {
           "away": "St. Louis Blues",
@@ -5936,7 +6017,16 @@
           "pick_label": "Utah Mammoth -130",
           "pick_prob": 0.5978,
           "edge_pp": 5.5,
-          "result": null
+          "result": {
+            "home_score": 0,
+            "away_score": 1,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.33919,
+            "brier_cal": 0.357365,
+            "market_brier": 0.294523,
+            "total_error": 5.2612
+          }
         },
         {
           "away": "New York Islanders",
@@ -5962,10 +6052,20 @@
           "pick_label": "Los Angeles Kings -125",
           "pick_prob": 0.5977,
           "edge_pp": 6.5,
-          "result": null
+          "result": {
+            "home_score": 2,
+            "away_score": 5,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.339073,
+            "brier_cal": 0.357245,
+            "market_brier": 0.283556,
+            "total_error": -0.5466
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-13 06:42 PST"
     },
     "2026-11-13": {
       "date": "2026-11-13",
