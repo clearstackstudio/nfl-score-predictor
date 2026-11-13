@@ -1953,8 +1953,8 @@
       "generated": "2026-11-12 21:44 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "UC Riverside",
@@ -1981,7 +1981,13 @@
             "away": "UC Riverside +1.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.503
+          "ou_prob": 0.503,
+          "result": {
+            "home_score": 75.0,
+            "away_score": 80.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         }
       ],
       "parlay": {
@@ -1999,10 +2005,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.252,
-        "fair_odds": "+297",
-        "book_pays": "+260"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-13 06:40 PST"
     }
   }
 }
