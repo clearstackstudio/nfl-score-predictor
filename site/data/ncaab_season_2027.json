@@ -1947,6 +1947,62 @@
         "result": "loss"
       },
       "graded_at": "2026-11-12 06:40 PST"
+    },
+    "2026-11-12": {
+      "date": "2026-11-12",
+      "generated": "2026-11-12 21:44 PST",
+      "preseason": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "UC Riverside",
+          "home": "San Jos\u00e9 State",
+          "away_abbr": "UC Riverside",
+          "home_abbr": "San Jos\u00e9 State",
+          "gameday": "2026-11-12",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 1.5,
+          "line_total": 155.5,
+          "our_spread": 4.1,
+          "our_total": 154.3,
+          "spread_edge": 2.6,
+          "total_edge": -1.2,
+          "pick_spread": "home",
+          "pick_total": "under",
+          "pick_spread_label": "San Jos\u00e9 State -1.5",
+          "pick_total_label": "Under 155.5",
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "San Jos\u00e9 State -1.5",
+            "away": "UC Riverside +1.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": 0.503
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "UC Riverside @ San Jos\u00e9 State",
+            "market": "total",
+            "label": "Under 155.5",
+            "prob": 0.503
+          },
+          {
+            "game": "UC Riverside @ San Jos\u00e9 State",
+            "market": "spread",
+            "label": "San Jos\u00e9 State -1.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.252,
+        "fair_odds": "+297",
+        "book_pays": "+260"
+      }
     }
   }
 }

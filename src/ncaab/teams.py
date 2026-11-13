@@ -114,6 +114,19 @@ KNOWN_OVERRIDES: dict[str, str] = {
     "Norfolk St Spartans": "Norfolk State",
 }
 
+# Schools that appear in Odds API data (books hang totals on D1-vs-non-D1
+# buy games) but are NOT CBBD/D1 members, so no canonical target exists and
+# no override is possible. Finals involving these teams cannot enter
+# training (the opponent has no rating); the training loader skips them
+# loudly. Any OTHER unmappable name still raises -- a D1 name variant must
+# force a KNOWN_OVERRIDES entry, never a silent skip.
+NON_D1_TEAMS = {
+    # November 12, 2026: the nightly picks run failed loud on this name --
+    # West Florida is a D-II school (Gulf South Conference); its final at
+    # Alabama A&M can never map to a CBBD team.
+    "West Florida Argonauts",
+}
+
 
 def normalize_team(name: str, canonical: set[str]) -> str:
     """Map an Odds API team name to its canonical CBBD name.

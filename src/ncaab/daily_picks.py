@@ -42,7 +42,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from efficiency import NCAABEfficiency, HOME_EDGE_PTS, sanitize_poss
 from features import apply_rest_adjustment, apply_rest_adjustment_total
-from teams import normalize_team
+from teams import normalize_team, NON_D1_TEAMS
 from recalibration import recalibrate
 
 REPO = Path(__file__).resolve().parent.parent.parent
@@ -165,7 +165,8 @@ def load_training_rows(yesterday: datetime.date) -> pd.DataFrame:
 
     Preseason/exhibition finals are excluded. Team names are already
     canonical CBBD names in games.csv; merged finals are normalized
-    (fail loud on unknown names).
+    (fail loud on unknown names, except NON_D1_TEAMS finals, which are
+    skipped loudly -- a non-D1 opponent has no CBBD rating).
     """
     rows = []
     hist = pd.read_csv(DATA / "games.csv", parse_dates=["date"])
@@ -195,6 +196,16 @@ def load_training_rows(yesterday: datetime.date) -> pd.DataFrame:
                 commence = datetime.datetime.fromisoformat(
                     g["commence_time"]).date()
                 if is_preseason(commence):
+                    continue
+                if (g["home_team"] in NON_D1_TEAMS
+                        or g["away_team"] in NON_D1_TEAMS):
+                    # D1-vs-non-D1 final: the non-D1 school has no CBBD
+                    # rating, so the game cannot enter training. Skip it
+                    # loudly; any other unmappable name still raises in
+                    # normalize_team below.
+                    print(f"  WARNING: skipping non-D1 final "
+                          f"{g['away_team']} @ {g['home_team']} "
+                          f"({p.name}) -- not in training")
                     continue
                 rows.append({
                     "date": commence,
