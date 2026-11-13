@@ -1,8 +1,8 @@
 {
   "sport": "nba",
   "season": 2027,
-  "asof": "2026-11-11",
-  "updated": "2026-11-11 21:39 PST",
+  "asof": "2026-11-12",
+  "updated": "2026-11-12 21:39 PST",
   "note": "Model-internal predictive ratings: the model's Elo ratings converted to expected margin vs an average team on a neutral court at the model's fitted rate (30 Elo points per point of margin), before nightly rest/star adjustments. Not a resume ranking; moves only on game results.",
   "teams": [
     {
@@ -23,15 +23,15 @@
       "rank": 3,
       "team": "Detroit Pistons",
       "abbr": "Detroit Pistons",
-      "rating": 5.0,
-      "prev_rank": 4
+      "rating": 5.1,
+      "prev_rank": 3
     },
     {
       "rank": 4,
       "team": "Oklahoma City Thunder",
       "abbr": "Oklahoma City Thunder",
-      "rating": 5.0,
-      "prev_rank": 3
+      "rating": 4.6,
+      "prev_rank": 4
     },
     {
       "rank": 5,
@@ -44,14 +44,14 @@
       "rank": 6,
       "team": "Minnesota Timberwolves",
       "abbr": "Minnesota Timberwolves",
-      "rating": 3.8,
+      "rating": 4.2,
       "prev_rank": 6
     },
     {
       "rank": 7,
       "team": "Houston Rockets",
       "abbr": "Houston Rockets",
-      "rating": 3.6,
+      "rating": 3.8,
       "prev_rank": 7
     },
     {
@@ -65,57 +65,57 @@
       "rank": 9,
       "team": "Portland Trail Blazers",
       "abbr": "Portland Trail Blazers",
-      "rating": 2.3,
-      "prev_rank": 13
+      "rating": 2.8,
+      "prev_rank": 9
     },
     {
       "rank": 10,
       "team": "Denver Nuggets",
       "abbr": "Denver Nuggets",
       "rating": 2.2,
-      "prev_rank": 9
+      "prev_rank": 10
     },
     {
       "rank": 11,
       "team": "Cleveland Cavaliers",
       "abbr": "Cleveland Cavaliers",
       "rating": 2.1,
-      "prev_rank": 12
+      "prev_rank": 11
     },
     {
       "rank": 12,
       "team": "Atlanta Hawks",
       "abbr": "Atlanta Hawks",
       "rating": 1.7,
-      "prev_rank": 10
+      "prev_rank": 12
     },
     {
       "rank": 13,
       "team": "Golden State Warriors",
       "abbr": "Golden State Warriors",
-      "rating": 1.7,
-      "prev_rank": 11
+      "rating": 1.5,
+      "prev_rank": 13
     },
     {
       "rank": 14,
       "team": "Philadelphia 76ers",
       "abbr": "Philadelphia 76ers",
-      "rating": 1.1,
-      "prev_rank": 15
-    },
-    {
-      "rank": 15,
-      "team": "Toronto Raptors",
-      "abbr": "Toronto Raptors",
-      "rating": 0.9,
+      "rating": 1.4,
       "prev_rank": 14
     },
     {
-      "rank": 16,
+      "rank": 15,
       "team": "Phoenix Suns",
       "abbr": "Phoenix Suns",
-      "rating": 0.5,
+      "rating": 0.7,
       "prev_rank": 16
+    },
+    {
+      "rank": 16,
+      "team": "Toronto Raptors",
+      "abbr": "Toronto Raptors",
+      "rating": 0.6,
+      "prev_rank": 15
     },
     {
       "rank": 17,
@@ -126,38 +126,38 @@
     },
     {
       "rank": 18,
-      "team": "Charlotte Hornets",
-      "abbr": "Charlotte Hornets",
-      "rating": -1.3,
-      "prev_rank": 18
+      "team": "Orlando Magic",
+      "abbr": "Orlando Magic",
+      "rating": -1.0,
+      "prev_rank": 20
     },
     {
       "rank": 19,
-      "team": "Dallas Mavericks",
-      "abbr": "Dallas Mavericks",
-      "rating": -1.3,
-      "prev_rank": 19
+      "team": "Charlotte Hornets",
+      "abbr": "Charlotte Hornets",
+      "rating": -1.5,
+      "prev_rank": 18
     },
     {
       "rank": 20,
-      "team": "Orlando Magic",
-      "abbr": "Orlando Magic",
-      "rating": -1.5,
-      "prev_rank": 22
+      "team": "Dallas Mavericks",
+      "abbr": "Dallas Mavericks",
+      "rating": -1.7,
+      "prev_rank": 19
     },
     {
       "rank": 21,
       "team": "Los Angeles Clippers",
       "abbr": "Los Angeles Clippers",
       "rating": -1.9,
-      "prev_rank": 20
+      "prev_rank": 21
     },
     {
       "rank": 22,
       "team": "Memphis Grizzlies",
       "abbr": "Memphis Grizzlies",
       "rating": -1.9,
-      "prev_rank": 21
+      "prev_rank": 22
     },
     {
       "rank": 23,
@@ -178,7 +178,7 @@
       "team": "Brooklyn Nets",
       "abbr": "Brooklyn Nets",
       "rating": -4.5,
-      "prev_rank": 28
+      "prev_rank": 25
     },
     {
       "rank": 26,
@@ -191,28 +191,28 @@
       "rank": 27,
       "team": "Washington Wizards",
       "abbr": "Washington Wizards",
-      "rating": -5.1,
-      "prev_rank": 25
+      "rating": -5.2,
+      "prev_rank": 27
     },
     {
       "rank": 28,
       "team": "Milwaukee Bucks",
       "abbr": "Milwaukee Bucks",
       "rating": -6.1,
-      "prev_rank": 29
+      "prev_rank": 28
     },
     {
       "rank": 29,
       "team": "Sacramento Kings",
       "abbr": "Sacramento Kings",
       "rating": -6.1,
-      "prev_rank": 27
+      "prev_rank": 29
     },
     {
       "rank": 30,
       "team": "Utah Jazz",
       "abbr": "Utah Jazz",
-      "rating": -6.5,
+      "rating": -6.9,
       "prev_rank": 30
     }
   ]
