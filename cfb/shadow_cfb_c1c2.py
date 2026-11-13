@@ -89,6 +89,7 @@ import argparse
 import hashlib
 import json
 import math
+import statistics
 import sys
 from datetime import date, datetime
 from pathlib import Path
