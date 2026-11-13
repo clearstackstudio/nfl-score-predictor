@@ -5966,6 +5966,70 @@
         }
       ],
       "parlay": null
+    },
+    "2026-11-13": {
+      "date": "2026-11-13",
+      "generated": "2026-11-12 21:40 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "New York Rangers",
+          "home": "Vancouver Canucks",
+          "away_abbr": "NYR",
+          "home_abbr": "VAN",
+          "game_id": 2026020310,
+          "gameday": "2026-11-13",
+          "weekday": "Friday",
+          "start_time_pt": "18:00",
+          "home_ml": 185.0,
+          "away_ml": -220.0,
+          "market_p_home": 0.3379,
+          "market_p_away": 0.6621,
+          "p_home_raw": 0.4063,
+          "p_home_cal": 0.3748,
+          "p_away_cal": 0.6252,
+          "model_total": 6.2447,
+          "total_line": 6.5,
+          "over_price": -105.0,
+          "under_price": -115.0,
+          "pick_side": "away",
+          "pick_label": "New York Rangers -220",
+          "pick_prob": 0.6252,
+          "edge_pp": 3.7,
+          "result": null
+        },
+        {
+          "away": "Nashville Predators",
+          "home": "Vegas Golden Knights",
+          "away_abbr": "NSH",
+          "home_abbr": "VGK",
+          "game_id": 2026020311,
+          "gameday": "2026-11-13",
+          "weekday": "Friday",
+          "start_time_pt": "19:00",
+          "home_ml": -183.0,
+          "away_ml": 155.0,
+          "market_p_home": 0.6225,
+          "market_p_away": 0.3775,
+          "p_home_raw": 0.6211,
+          "p_home_cal": 0.6462,
+          "p_away_cal": 0.3538,
+          "model_total": 6.3605,
+          "total_line": 6.0,
+          "over_price": -110.0,
+          "under_price": -110.0,
+          "pick_side": "home",
+          "pick_label": "Vegas Golden Knights -183",
+          "pick_prob": 0.6462,
+          "edge_pp": 2.4,
+          "result": null
+        }
+      ],
+      "parlay": null
     }
   }
 }
