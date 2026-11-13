@@ -5992,8 +5992,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Detroit Pistons",
@@ -6020,7 +6020,12 @@
             "away": "Detroit Pistons -9.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 140.0,
+            "away_score": 144.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Toronto Raptors",
@@ -6047,7 +6052,12 @@
             "away": "Toronto Raptors +10.25"
           },
           "cover_prob": 0.52,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 123.0,
+            "away_score": 112.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Dallas Mavericks",
@@ -6074,7 +6084,12 @@
             "away": "Dallas Mavericks +5"
           },
           "cover_prob": 0.503,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 133.0,
+            "away_score": 94.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Charlotte Hornets",
@@ -6101,7 +6116,12 @@
             "away": "Charlotte Hornets +6.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 101.0,
+            "away_score": 96.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -6125,10 +6145,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.131,
-        "fair_odds": "+663",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-12 23:41 PST"
     },
     "2026-11-13": {
       "date": "2026-11-13",
