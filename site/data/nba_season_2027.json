@@ -6155,8 +6155,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "New York Knicks",
@@ -6183,7 +6183,12 @@
             "away": "New York Knicks -7"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 106.0,
+            "away_score": 104.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Milwaukee Bucks",
@@ -6210,7 +6215,12 @@
             "away": "Milwaukee Bucks +9"
           },
           "cover_prob": 0.509,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 107.0,
+            "away_score": 99.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Atlanta Hawks",
@@ -6237,7 +6247,12 @@
             "away": "Atlanta Hawks -6.5"
           },
           "cover_prob": 0.506,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 125.0,
+            "away_score": 117.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Cleveland Cavaliers",
@@ -6264,7 +6279,12 @@
             "away": "Cleveland Cavaliers +2.5"
           },
           "cover_prob": 0.504,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 133.0,
+            "away_score": 121.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Memphis Grizzlies",
@@ -6291,7 +6311,12 @@
             "away": "Memphis Grizzlies -3.5"
           },
           "cover_prob": 0.501,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 111.0,
+            "away_score": 142.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Utah Jazz",
@@ -6318,7 +6343,12 @@
             "away": "Utah Jazz +17.5"
           },
           "cover_prob": 0.501,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 125.0,
+            "away_score": 118.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Golden State Warriors",
@@ -6345,7 +6375,12 @@
             "away": "Golden State Warriors +13.25"
           },
           "cover_prob": 0.501,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 123.0,
+            "away_score": 85.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Portland Trail Blazers",
@@ -6372,7 +6407,12 @@
             "away": "Portland Trail Blazers -11"
           },
           "cover_prob": 0.523,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 107.0,
+            "away_score": 120.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Oklahoma City Thunder",
@@ -6399,7 +6439,12 @@
             "away": "Oklahoma City Thunder -7.5"
           },
           "cover_prob": 0.506,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 113.0,
+            "away_score": 112.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -6423,10 +6468,9 @@
             "prob": 0.506
           }
         ],
-        "combined_prob": 0.135,
-        "fair_odds": "+641",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-13 23:42 PST"
     },
     "2026-11-14": {
       "date": "2026-11-14",
