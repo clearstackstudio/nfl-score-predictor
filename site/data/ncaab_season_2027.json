@@ -2008,6 +2008,176 @@
         "result": "loss"
       },
       "graded_at": "2026-11-13 06:40 PST"
+    },
+    "2026-11-13": {
+      "date": "2026-11-13",
+      "generated": "2026-11-13 21:40 PST",
+      "preseason": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Xavier",
+          "home": "Mississippi State",
+          "away_abbr": "Xavier",
+          "home_abbr": "Mississippi State",
+          "gameday": "2026-11-13",
+          "weekday": "Friday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -18.0,
+          "line_total": 144.5,
+          "our_spread": -1.3,
+          "our_total": 159.0,
+          "spread_edge": 16.7,
+          "total_edge": 14.5,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Mississippi State +18",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Mississippi State +18",
+            "away": "Xavier -18"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "UIC",
+          "home": "Saint Mary's",
+          "away_abbr": "UIC",
+          "home_abbr": "Saint Mary's",
+          "gameday": "2026-11-13",
+          "weekday": "Friday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 26.5,
+          "line_total": 141.5,
+          "our_spread": 8.4,
+          "our_total": 152.4,
+          "spread_edge": -18.1,
+          "total_edge": 10.9,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "UIC +26.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Saint Mary's -26.5",
+            "away": "UIC +26.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "East Texas A&M",
+          "home": "Portland",
+          "away_abbr": "East Texas A&M",
+          "home_abbr": "Portland",
+          "gameday": "2026-11-13",
+          "weekday": "Friday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 6.5,
+          "line_total": 151.5,
+          "our_spread": 5.3,
+          "our_total": 143.5,
+          "spread_edge": -1.2,
+          "total_edge": -8.0,
+          "pick_spread": "away",
+          "pick_total": "under",
+          "pick_spread_label": "East Texas A&M +6.5",
+          "pick_total_label": "Under 151.5",
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Portland -6.5",
+            "away": "East Texas A&M +6.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": 0.503
+        },
+        {
+          "away": "UC San Diego",
+          "home": "Utah State",
+          "away_abbr": "UC San Diego",
+          "home_abbr": "Utah State",
+          "gameday": "2026-11-13",
+          "weekday": "Friday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 36.5,
+          "line_total": 204.5,
+          "our_spread": 16.5,
+          "our_total": 150.8,
+          "spread_edge": -20.0,
+          "total_edge": -53.7,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "UC San Diego +36.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Utah State -36.5",
+            "away": "UC San Diego +36.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Arkansas-Pine Bluff",
+          "home": "California Baptist",
+          "away_abbr": "Arkansas-Pine Bluff",
+          "home_abbr": "California Baptist",
+          "gameday": "2026-11-13",
+          "weekday": "Friday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 11.5,
+          "line_total": 133.5,
+          "our_spread": 17.4,
+          "our_total": 145.1,
+          "spread_edge": 5.9,
+          "total_edge": 11.6,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "California Baptist -11.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "California Baptist -11.5",
+            "away": "Arkansas-Pine Bluff +11.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "East Texas A&M @ Portland",
+            "market": "total",
+            "label": "Under 151.5",
+            "prob": 0.503
+          },
+          {
+            "game": "Xavier @ Mississippi State",
+            "market": "spread",
+            "label": "Mississippi State +18",
+            "prob": 0.5
+          },
+          {
+            "game": "UIC @ Saint Mary's",
+            "market": "spread",
+            "label": "UIC +26.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.126,
+        "fair_odds": "+694",
+        "book_pays": "+600"
+      }
     }
   }
 }
