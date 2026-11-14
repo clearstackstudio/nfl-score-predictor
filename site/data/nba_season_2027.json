@@ -6427,6 +6427,90 @@
         "fair_odds": "+641",
         "book_pays": "+600"
       }
+    },
+    "2026-11-14": {
+      "date": "2026-11-14",
+      "generated": "2026-11-13 21:39 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Denver Nuggets",
+          "home": "New Orleans Pelicans",
+          "away_abbr": "Denver Nuggets",
+          "home_abbr": "New Orleans Pelicans",
+          "gameday": "2026-11-14",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -11.5,
+          "line_total": 233.5,
+          "our_spread": -5.8,
+          "our_total": 242.5,
+          "spread_edge": 5.7,
+          "total_edge": 9.0,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "New Orleans Pelicans +11.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "New Orleans Pelicans +11.5",
+            "away": "Denver Nuggets -11.5"
+          },
+          "cover_prob": 0.523,
+          "ou_prob": null
+        },
+        {
+          "away": "Detroit Pistons",
+          "home": "Miami Heat",
+          "away_abbr": "Detroit Pistons",
+          "home_abbr": "Miami Heat",
+          "gameday": "2026-11-14",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -4.5,
+          "line_total": 226.5,
+          "our_spread": -1.5,
+          "our_total": 236.3,
+          "spread_edge": 3.0,
+          "total_edge": 9.8,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Miami Heat +4.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Miami Heat +4.5",
+            "away": "Detroit Pistons -4.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Denver Nuggets @ New Orleans Pelicans",
+            "market": "spread",
+            "label": "New Orleans Pelicans +11.5",
+            "prob": 0.523
+          },
+          {
+            "game": "Detroit Pistons @ Miami Heat",
+            "market": "spread",
+            "label": "Miami Heat +4.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.262,
+        "fair_odds": "+282",
+        "book_pays": "+260"
+      }
     }
   }
 }
