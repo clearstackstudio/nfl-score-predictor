@@ -2014,8 +2014,8 @@
       "generated": "2026-11-13 21:40 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Xavier",
@@ -2042,7 +2042,12 @@
             "away": "Xavier -18"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 63.0,
+            "away_score": 81.0,
+            "ats": "push"
+          }
         },
         {
           "away": "UIC",
@@ -2069,7 +2074,12 @@
             "away": "UIC +26.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 84.0,
+            "away_score": 61.0,
+            "ats": "win"
+          }
         },
         {
           "away": "East Texas A&M",
@@ -2096,7 +2106,13 @@
             "away": "East Texas A&M +6.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.503
+          "ou_prob": 0.503,
+          "result": {
+            "home_score": 88.0,
+            "away_score": 94.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "UC San Diego",
@@ -2123,7 +2139,12 @@
             "away": "UC San Diego +36.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 120.0,
+            "away_score": 82.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Arkansas-Pine Bluff",
@@ -2150,7 +2171,12 @@
             "away": "Arkansas-Pine Bluff +11.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 74.0,
+            "away_score": 60.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -2174,10 +2200,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.126,
-        "fair_odds": "+694",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-14 06:40 PST"
     }
   }
 }
