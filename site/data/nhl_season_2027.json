@@ -6073,8 +6073,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "New York Rangers",
@@ -6100,7 +6100,16 @@
           "pick_label": "New York Rangers -220",
           "pick_prob": 0.6252,
           "edge_pp": 3.7,
-          "result": null
+          "result": {
+            "home_score": 1,
+            "away_score": 5,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.16508,
+            "brier_cal": 0.140475,
+            "market_brier": 0.114176,
+            "total_error": 0.2447
+          }
         },
         {
           "away": "Nashville Predators",
@@ -6126,10 +6135,20 @@
           "pick_label": "Vegas Golden Knights -183",
           "pick_prob": 0.6462,
           "edge_pp": 2.4,
-          "result": null
+          "result": {
+            "home_score": 2,
+            "away_score": 3,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.385765,
+            "brier_cal": 0.417574,
+            "market_brier": 0.387506,
+            "total_error": 1.3605
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-14 06:41 PST"
     },
     "2026-11-14": {
       "date": "2026-11-14",
