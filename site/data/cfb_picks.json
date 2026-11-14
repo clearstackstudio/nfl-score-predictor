@@ -32,7 +32,12 @@
         "away": "Florida State +3.5"
       },
       "cover_prob": 0.514,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 10,
+        "away_score": 16,
+        "ats": "loss"
+      }
     },
     {
       "away": "Illinois",
@@ -60,7 +65,13 @@
         "away": "Illinois +10"
       },
       "cover_prob": 0.507,
-      "ou_prob": 0.52
+      "ou_prob": 0.52,
+      "result": {
+        "home_score": 22,
+        "away_score": 14,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Houston",
