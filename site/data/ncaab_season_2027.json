@@ -2203,6 +2203,95 @@
         "result": "loss"
       },
       "graded_at": "2026-11-14 06:40 PST"
+    },
+    "2026-11-14": {
+      "date": "2026-11-14",
+      "generated": "2026-11-14 21:39 PST",
+      "preseason": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "New Mexico",
+          "home": "Santa Clara",
+          "away_abbr": "New Mexico",
+          "home_abbr": "Santa Clara",
+          "gameday": "2026-11-14",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 8.5,
+          "line_total": 165.5,
+          "our_spread": 5.9,
+          "our_total": 159.9,
+          "spread_edge": -2.6,
+          "total_edge": -5.6,
+          "pick_spread": "away",
+          "pick_total": "under",
+          "pick_spread_label": "New Mexico +8.5",
+          "pick_total_label": "Under 165.5",
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Santa Clara -8.5",
+            "away": "New Mexico +8.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": 0.505
+        },
+        {
+          "away": "Utah Valley",
+          "home": "Nevada",
+          "away_abbr": "Utah Valley",
+          "home_abbr": "Nevada",
+          "gameday": "2026-11-14",
+          "weekday": "Saturday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -5.8,
+          "line_total": 140.0,
+          "our_spread": 7.5,
+          "our_total": 153.2,
+          "spread_edge": 13.3,
+          "total_edge": 13.2,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Nevada +5.75",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Nevada +5.75",
+            "away": "Utah Valley -5.75"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "New Mexico @ Santa Clara",
+            "market": "total",
+            "label": "Under 165.5",
+            "prob": 0.505
+          },
+          {
+            "game": "New Mexico @ Santa Clara",
+            "market": "spread",
+            "label": "New Mexico +8.5",
+            "prob": 0.5
+          },
+          {
+            "game": "Utah Valley @ Nevada",
+            "market": "spread",
+            "label": "Nevada +5.75",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.126,
+        "fair_odds": "+694",
+        "book_pays": "+600"
+      }
     }
   }
 }
