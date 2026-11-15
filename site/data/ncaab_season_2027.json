@@ -2209,8 +2209,8 @@
       "generated": "2026-11-14 21:39 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "New Mexico",
@@ -2237,7 +2237,13 @@
             "away": "New Mexico +8.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.505
+          "ou_prob": 0.505,
+          "result": {
+            "home_score": 90.0,
+            "away_score": 85.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Utah Valley",
@@ -2264,7 +2270,12 @@
             "away": "Utah Valley -5.75"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 71.0,
+            "away_score": 73.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -2288,10 +2299,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.126,
-        "fair_odds": "+694",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-15 06:40 PST"
     }
   }
 }
