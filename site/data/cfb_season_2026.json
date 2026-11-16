@@ -8529,7 +8529,7 @@
     },
     "11": {
       "generated": "2026-11-13 09:48 PST",
-      "complete": false,
+      "complete": true,
       "picks": [
         {
           "away": "Florida State",
@@ -9767,7 +9767,11 @@
             "away": "Ole Miss +1.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 24,
+            "away_score": 17
+          }
         },
         {
           "away": "Washington",
@@ -10131,7 +10135,13 @@
             "away": "Utah -2.5"
           },
           "cover_prob": 0.502,
-          "ou_prob": 0.5
+          "ou_prob": 0.5,
+          "result": {
+            "home_score": 39,
+            "away_score": 40,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Stanford",
@@ -10361,7 +10371,12 @@
             "away": "Utah State -2.75"
           },
           "cover_prob": 0.501,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 30,
+            "away_score": 13,
+            "ats": "win"
+          }
         },
         {
           "away": "Texas Tech",
@@ -10389,7 +10404,12 @@
             "away": "Texas Tech +3.25"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 27,
+            "away_score": 52,
+            "ats": "win"
+          }
         },
         {
           "away": "Wyoming",
@@ -10417,7 +10437,12 @@
             "away": "Wyoming -7.5"
           },
           "cover_prob": 0.511,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 15,
+            "away_score": 27,
+            "ats": "win"
+          }
         },
         {
           "away": "Colorado State",
@@ -10445,7 +10470,13 @@
             "away": "Colorado State +8.75"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 73,
+            "away_score": 7,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "North Dakota State",
@@ -10473,7 +10504,12 @@
             "away": "North Dakota State -6.75"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 13,
+            "away_score": 21,
+            "ats": "win"
+          }
         }
       ],
       "parlay": null
