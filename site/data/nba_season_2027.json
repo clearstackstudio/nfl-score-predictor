@@ -6843,6 +6843,258 @@
         "fair_odds": "+635",
         "book_pays": "+600"
       }
+    },
+    "2026-11-16": {
+      "date": "2026-11-16",
+      "generated": "2026-11-15 21:39 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Orlando Magic",
+          "home": "Boston Celtics",
+          "away_abbr": "Orlando Magic",
+          "home_abbr": "Boston Celtics",
+          "gameday": "2026-11-16",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 9.0,
+          "line_total": 211.5,
+          "our_spread": 9.4,
+          "our_total": 218.6,
+          "spread_edge": 0.4,
+          "total_edge": 7.1,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Boston Celtics -9",
+            "away": "Orlando Magic +9"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Chicago Bulls",
+          "home": "Cleveland Cavaliers",
+          "away_abbr": "Chicago Bulls",
+          "home_abbr": "Cleveland Cavaliers",
+          "gameday": "2026-11-16",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 9.5,
+          "line_total": 241.5,
+          "our_spread": 8.8,
+          "our_total": 243.3,
+          "spread_edge": -0.7,
+          "total_edge": 1.8,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Chicago Bulls +9.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Cleveland Cavaliers -9.5",
+            "away": "Chicago Bulls +9.5"
+          },
+          "cover_prob": 0.507,
+          "ou_prob": null
+        },
+        {
+          "away": "Memphis Grizzlies",
+          "home": "Washington Wizards",
+          "away_abbr": "Memphis Grizzlies",
+          "home_abbr": "Washington Wizards",
+          "gameday": "2026-11-16",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -4.2,
+          "line_total": 229.5,
+          "our_spread": -3.1,
+          "our_total": 236.7,
+          "spread_edge": 1.2,
+          "total_edge": 7.2,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Washington Wizards +4.25",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Washington Wizards +4.25",
+            "away": "Memphis Grizzlies -4.25"
+          },
+          "cover_prob": 0.509,
+          "ou_prob": null
+        },
+        {
+          "away": "Philadelphia 76ers",
+          "home": "Brooklyn Nets",
+          "away_abbr": "Philadelphia 76ers",
+          "home_abbr": "Brooklyn Nets",
+          "gameday": "2026-11-16",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -6.0,
+          "line_total": 225.5,
+          "our_spread": -1.6,
+          "our_total": 225.3,
+          "spread_edge": 4.4,
+          "total_edge": -0.2,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Brooklyn Nets +6",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Brooklyn Nets +6",
+            "away": "Philadelphia 76ers -6"
+          },
+          "cover_prob": 0.508,
+          "ou_prob": null
+        },
+        {
+          "away": "Houston Rockets",
+          "home": "Miami Heat",
+          "away_abbr": "Houston Rockets",
+          "home_abbr": "Miami Heat",
+          "gameday": "2026-11-16",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -3.0,
+          "line_total": 229.5,
+          "our_spread": -0.2,
+          "our_total": 237.7,
+          "spread_edge": 2.8,
+          "total_edge": 8.2,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Miami Heat +3",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Miami Heat +3",
+            "away": "Houston Rockets -3"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Golden State Warriors",
+          "home": "New Orleans Pelicans",
+          "away_abbr": "Golden State Warriors",
+          "home_abbr": "New Orleans Pelicans",
+          "gameday": "2026-11-16",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -3.0,
+          "line_total": 225.5,
+          "our_spread": -2.8,
+          "our_total": 238.8,
+          "spread_edge": 0.2,
+          "total_edge": 13.3,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "New Orleans Pelicans +3",
+            "away": "Golden State Warriors -3"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Portland Trail Blazers",
+          "home": "Minnesota Timberwolves",
+          "away_abbr": "Portland Trail Blazers",
+          "home_abbr": "Minnesota Timberwolves",
+          "gameday": "2026-11-16",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 2.5,
+          "line_total": 228.5,
+          "our_spread": 3.0,
+          "our_total": 228.6,
+          "spread_edge": 0.5,
+          "total_edge": 0.1,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Minnesota Timberwolves -2.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Minnesota Timberwolves -2.5",
+            "away": "Portland Trail Blazers +2.5"
+          },
+          "cover_prob": 0.505,
+          "ou_prob": null
+        },
+        {
+          "away": "Phoenix Suns",
+          "home": "Denver Nuggets",
+          "away_abbr": "Phoenix Suns",
+          "home_abbr": "Denver Nuggets",
+          "gameday": "2026-11-16",
+          "weekday": "Monday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 10.2,
+          "line_total": 228.25,
+          "our_spread": 4.7,
+          "our_total": 229.3,
+          "spread_edge": -5.5,
+          "total_edge": 1.0,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Phoenix Suns +10.25",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Denver Nuggets -10.25",
+            "away": "Phoenix Suns +10.25"
+          },
+          "cover_prob": 0.524,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Phoenix Suns @ Denver Nuggets",
+            "market": "spread",
+            "label": "Phoenix Suns +10.25",
+            "prob": 0.524
+          },
+          {
+            "game": "Memphis Grizzlies @ Washington Wizards",
+            "market": "spread",
+            "label": "Washington Wizards +4.25",
+            "prob": 0.509
+          },
+          {
+            "game": "Philadelphia 76ers @ Brooklyn Nets",
+            "market": "spread",
+            "label": "Brooklyn Nets +6",
+            "prob": 0.508
+          }
+        ],
+        "combined_prob": 0.135,
+        "fair_odds": "+641",
+        "book_pays": "+600"
+      }
     }
   }
 }
