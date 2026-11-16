@@ -6794,6 +6794,70 @@
         }
       ],
       "parlay": null
+    },
+    "2026-11-16": {
+      "date": "2026-11-16",
+      "generated": "2026-11-15 21:40 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Montreal Canadiens",
+          "home": "New York Rangers",
+          "away_abbr": "MTL",
+          "home_abbr": "NYR",
+          "game_id": 2026020331,
+          "gameday": "2026-11-16",
+          "weekday": "Monday",
+          "start_time_pt": "16:30",
+          "home_ml": -110.0,
+          "away_ml": -110.0,
+          "market_p_home": 0.5,
+          "market_p_away": 0.5,
+          "p_home_raw": 0.5796,
+          "p_home_cal": 0.5943,
+          "p_away_cal": 0.4057,
+          "model_total": 7.0203,
+          "total_line": 6.0,
+          "over_price": -111.0,
+          "under_price": -106.5,
+          "pick_side": "home",
+          "pick_label": "New York Rangers -110",
+          "pick_prob": 0.5943,
+          "edge_pp": 9.4,
+          "result": null
+        },
+        {
+          "away": "Vancouver Canucks",
+          "home": "Utah Mammoth",
+          "away_abbr": "VAN",
+          "home_abbr": "UTA",
+          "game_id": 2026020332,
+          "gameday": "2026-11-16",
+          "weekday": "Monday",
+          "start_time_pt": "18:30",
+          "home_ml": -340.0,
+          "away_ml": 270.0,
+          "market_p_home": 0.7409,
+          "market_p_away": 0.2591,
+          "p_home_raw": 0.7217,
+          "p_home_cal": 0.7663,
+          "p_away_cal": 0.2337,
+          "model_total": 6.4754,
+          "total_line": 6.5,
+          "over_price": -108.0,
+          "under_price": -112.0,
+          "pick_side": "home",
+          "pick_label": "Utah Mammoth -340",
+          "pick_prob": 0.7663,
+          "edge_pp": 2.5,
+          "result": null
+        }
+      ],
+      "parlay": null
     }
   }
 }
