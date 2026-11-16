@@ -1,0 +1,177 @@
+{
+  "id": "2026-11-16",
+  "title": "Weekly recap \u2014 Nov 16, 2026",
+  "period_label": "NFL Week 9 \u00b7 CFB Week 11 \u00b7 NBA 2026-11-15 \u00b7 NCAAB 2026-11-14",
+  "published": "2026-11-16",
+  "covers": [
+    {
+      "sport": "nfl",
+      "period": "9"
+    },
+    {
+      "sport": "cfb",
+      "period": "11"
+    },
+    {
+      "sport": "nba",
+      "period": "2026-11-15"
+    },
+    {
+      "sport": "ncaab",
+      "period": "2026-11-14"
+    }
+  ],
+  "overall": {
+    "ats": [
+      44,
+      36,
+      1
+    ],
+    "ou": [
+      24,
+      21,
+      0
+    ]
+  },
+  "sports": [
+    {
+      "sport": "nfl",
+      "label": "NFL",
+      "period": "Week 9",
+      "ats": [
+        7,
+        8,
+        0
+      ],
+      "ou": [
+        4,
+        3,
+        0
+      ],
+      "n_picks": 15
+    },
+    {
+      "sport": "cfb",
+      "label": "CFB",
+      "period": "Week 11",
+      "ats": [
+        31,
+        23,
+        1
+      ],
+      "ou": [
+        20,
+        17,
+        0
+      ],
+      "n_picks": 59
+    },
+    {
+      "sport": "nba",
+      "label": "NBA",
+      "period": "2026-11-15",
+      "ats": [
+        4,
+        5,
+        0
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ],
+      "n_picks": 9
+    },
+    {
+      "sport": "ncaab",
+      "label": "NCAAB",
+      "period": "2026-11-14",
+      "ats": [
+        2,
+        0,
+        0
+      ],
+      "ou": [
+        0,
+        1,
+        0
+      ],
+      "n_picks": 2
+    }
+  ],
+  "best_call": {
+    "label": "Wake Forest +1.25",
+    "kind": "spread",
+    "edge": -16.3,
+    "prob": 0.5,
+    "game": "Wake Forest at SMU",
+    "score": "49\u20137",
+    "sport": "CFB",
+    "period": "Week 11"
+  },
+  "worst_miss": {
+    "label": "Over 53.5",
+    "kind": "total",
+    "edge": 8.3,
+    "prob": 0.527,
+    "game": "Middle Tennessee at Liberty",
+    "score": "23\u201328",
+    "sport": "CFB",
+    "period": "Week 11"
+  },
+  "observation": "About what you'd expect from a coin-flip operation: 68-57. Totals detail: NFL totals 4-3; CFB totals 20-17.",
+  "season_to_date": {
+    "nfl": {
+      "label": "NFL",
+      "ats": [
+        41,
+        52,
+        3
+      ],
+      "ou": [
+        28,
+        28,
+        0
+      ]
+    },
+    "cfb": {
+      "label": "CFB",
+      "ats": [
+        153,
+        146,
+        6
+      ],
+      "ou": [
+        100,
+        114,
+        2
+      ]
+    },
+    "nba": {
+      "label": "NBA",
+      "ats": [
+        79,
+        90,
+        6
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ]
+    },
+    "ncaab": {
+      "label": "NCAAB",
+      "ats": [
+        22,
+        31,
+        22
+      ],
+      "ou": [
+        9,
+        10,
+        19
+      ]
+    }
+  }
+}
