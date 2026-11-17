@@ -2308,8 +2308,8 @@
       "generated": "2026-11-16 21:39 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "East Texas A&M",
@@ -2336,7 +2336,12 @@
             "away": "East Texas A&M +36.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 109.0,
+            "away_score": 71.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Long Beach State",
@@ -2363,7 +2368,12 @@
             "away": "Long Beach State +37.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 105.0,
+            "away_score": 66.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Texas Southern",
@@ -2390,7 +2400,12 @@
             "away": "Texas Southern +13.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 97.0,
+            "away_score": 92.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Portland State",
@@ -2417,7 +2432,11 @@
             "away": "Portland State +14.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 94.0,
+            "away_score": 78.0
+          }
         }
       ],
       "parlay": {
@@ -2441,10 +2460,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.125,
-        "fair_odds": "+700",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-17 06:40 PST"
     }
   }
 }
