@@ -7139,6 +7139,177 @@
         "fair_odds": "+641",
         "book_pays": "+600"
       }
+    },
+    "2026-11-17": {
+      "date": "2026-11-17",
+      "generated": "2026-11-16 21:39 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "New York Knicks",
+          "home": "Toronto Raptors",
+          "away_abbr": "New York Knicks",
+          "home_abbr": "Toronto Raptors",
+          "gameday": "2026-11-17",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -2.5,
+          "line_total": 216.5,
+          "our_spread": -1.4,
+          "our_total": 217.9,
+          "spread_edge": 1.1,
+          "total_edge": 1.4,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Toronto Raptors +2.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Toronto Raptors +2.5",
+            "away": "New York Knicks -2.5"
+          },
+          "cover_prob": 0.509,
+          "ou_prob": null
+        },
+        {
+          "away": "Detroit Pistons",
+          "home": "San Antonio Spurs",
+          "away_abbr": "Detroit Pistons",
+          "home_abbr": "San Antonio Spurs",
+          "gameday": "2026-11-17",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 8.5,
+          "line_total": 221.5,
+          "our_spread": 6.9,
+          "our_total": 228.7,
+          "spread_edge": -1.6,
+          "total_edge": 7.2,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Detroit Pistons +8.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "San Antonio Spurs -8.5",
+            "away": "Detroit Pistons +8.5"
+          },
+          "cover_prob": 0.505,
+          "ou_prob": null
+        },
+        {
+          "away": "Portland Trail Blazers",
+          "home": "Minnesota Timberwolves",
+          "away_abbr": "Portland Trail Blazers",
+          "home_abbr": "Minnesota Timberwolves",
+          "gameday": "2026-11-17",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 2.5,
+          "line_total": 226.5,
+          "our_spread": 2.9,
+          "our_total": 224.2,
+          "spread_edge": 0.4,
+          "total_edge": -2.3,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Minnesota Timberwolves -2.5",
+            "away": "Portland Trail Blazers +2.5"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Utah Jazz",
+          "home": "Los Angeles Clippers",
+          "away_abbr": "Utah Jazz",
+          "home_abbr": "Los Angeles Clippers",
+          "gameday": "2026-11-17",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 5.5,
+          "line_total": 224.5,
+          "our_spread": 6.9,
+          "our_total": 231.8,
+          "spread_edge": 1.4,
+          "total_edge": 7.3,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Los Angeles Clippers -5.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Los Angeles Clippers -5.5",
+            "away": "Utah Jazz +5.5"
+          },
+          "cover_prob": 0.507,
+          "ou_prob": null
+        },
+        {
+          "away": "Charlotte Hornets",
+          "home": "Los Angeles Lakers",
+          "away_abbr": "Charlotte Hornets",
+          "home_abbr": "Los Angeles Lakers",
+          "gameday": "2026-11-17",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 7.5,
+          "line_total": 218.0,
+          "our_spread": 9.5,
+          "our_total": 221.8,
+          "spread_edge": 2.0,
+          "total_edge": 3.8,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Los Angeles Lakers -7.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Los Angeles Lakers -7.5",
+            "away": "Charlotte Hornets +7.5"
+          },
+          "cover_prob": 0.502,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "New York Knicks @ Toronto Raptors",
+            "market": "spread",
+            "label": "Toronto Raptors +2.5",
+            "prob": 0.509
+          },
+          {
+            "game": "Utah Jazz @ Los Angeles Clippers",
+            "market": "spread",
+            "label": "Los Angeles Clippers -5.5",
+            "prob": 0.507
+          },
+          {
+            "game": "Detroit Pistons @ San Antonio Spurs",
+            "market": "spread",
+            "label": "Detroit Pistons +8.5",
+            "prob": 0.505
+          }
+        ],
+        "combined_prob": 0.13,
+        "fair_odds": "+669",
+        "book_pays": "+600"
+      }
     }
   }
 }
