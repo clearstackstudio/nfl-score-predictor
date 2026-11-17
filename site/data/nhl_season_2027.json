@@ -6847,8 +6847,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Montreal Canadiens",
@@ -6874,7 +6874,16 @@
           "pick_label": "New York Rangers -110",
           "pick_prob": 0.5943,
           "edge_pp": 9.4,
-          "result": null
+          "result": {
+            "home_score": 3,
+            "away_score": 1,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.176736,
+            "brier_cal": 0.164592,
+            "market_brier": 0.25,
+            "total_error": 3.0203
+          }
         },
         {
           "away": "Vancouver Canucks",
@@ -6900,10 +6909,20 @@
           "pick_label": "Utah Mammoth -340",
           "pick_prob": 0.7663,
           "edge_pp": 2.5,
-          "result": null
+          "result": {
+            "home_score": 2,
+            "away_score": 3,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.520851,
+            "brier_cal": 0.587216,
+            "market_brier": 0.548933,
+            "total_error": 1.4754
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-17 06:41 PST"
     },
     "2026-11-17": {
       "date": "2026-11-17",
