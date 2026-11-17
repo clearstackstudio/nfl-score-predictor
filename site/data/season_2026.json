@@ -3440,7 +3440,7 @@
     },
     "10": {
       "generated": "2026-11-13 09:45 PST",
-      "complete": false,
+      "complete": true,
       "picks": [
         {
           "away": "Washington Commanders",
@@ -3960,7 +3960,11 @@
           "cover_prob": null,
           "ou_prob": null,
           "home_qb": "Jacoby Brissett",
-          "away_qb": "Justin Herbert"
+          "away_qb": "Justin Herbert",
+          "result": {
+            "home_score": 20,
+            "away_score": 23
+          }
         }
       ],
       "parlay": {

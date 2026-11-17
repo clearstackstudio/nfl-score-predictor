@@ -555,7 +555,11 @@
       "cover_prob": null,
       "ou_prob": null,
       "home_qb": "Jacoby Brissett",
-      "away_qb": "Justin Herbert"
+      "away_qb": "Justin Herbert",
+      "result": {
+        "home_score": 20,
+        "away_score": 23
+      }
     }
   ]
 }
