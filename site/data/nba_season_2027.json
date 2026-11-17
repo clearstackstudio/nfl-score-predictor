@@ -6894,8 +6894,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Orlando Magic",
@@ -6922,7 +6922,11 @@
             "away": "Orlando Magic +9"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 105.0,
+            "away_score": 115.0
+          }
         },
         {
           "away": "Chicago Bulls",
@@ -6949,7 +6953,12 @@
             "away": "Chicago Bulls +9.5"
           },
           "cover_prob": 0.507,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 126.0,
+            "away_score": 115.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Memphis Grizzlies",
@@ -6976,7 +6985,12 @@
             "away": "Memphis Grizzlies -4.25"
           },
           "cover_prob": 0.509,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 120.0,
+            "away_score": 136.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Philadelphia 76ers",
@@ -7003,7 +7017,12 @@
             "away": "Philadelphia 76ers -6"
           },
           "cover_prob": 0.508,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 123.0,
+            "away_score": 135.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Houston Rockets",
@@ -7030,7 +7049,12 @@
             "away": "Houston Rockets -3"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 128.0,
+            "away_score": 110.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Golden State Warriors",
@@ -7057,7 +7081,11 @@
             "away": "Golden State Warriors -3"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 115.0,
+            "away_score": 94.0
+          }
         },
         {
           "away": "Portland Trail Blazers",
@@ -7084,7 +7112,12 @@
             "away": "Portland Trail Blazers +2.5"
           },
           "cover_prob": 0.505,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 106.0,
+            "away_score": 98.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Phoenix Suns",
@@ -7111,7 +7144,12 @@
             "away": "Phoenix Suns +10.25"
           },
           "cover_prob": 0.524,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 105.0,
+            "away_score": 117.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -7135,10 +7173,9 @@
             "prob": 0.508
           }
         ],
-        "combined_prob": 0.135,
-        "fair_odds": "+641",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-16 23:42 PST"
     },
     "2026-11-17": {
       "date": "2026-11-17",
