@@ -2463,6 +2463,176 @@
         "result": "loss"
       },
       "graded_at": "2026-11-17 06:40 PST"
+    },
+    "2026-11-17": {
+      "date": "2026-11-17",
+      "generated": "2026-11-17 21:39 PST",
+      "preseason": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "UNLV",
+          "home": "Kansas",
+          "away_abbr": "UNLV",
+          "home_abbr": "Kansas",
+          "gameday": "2026-11-17",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 38.5,
+          "line_total": 188.5,
+          "our_spread": 10.7,
+          "our_total": 152.1,
+          "spread_edge": -27.8,
+          "total_edge": -36.4,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "UNLV +38.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Kansas -38.5",
+            "away": "UNLV +38.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Seattle U",
+          "home": "California Baptist",
+          "away_abbr": "Seattle U",
+          "home_abbr": "California Baptist",
+          "gameday": "2026-11-17",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -22.5,
+          "line_total": 136.5,
+          "our_spread": 3.0,
+          "our_total": 135.5,
+          "spread_edge": 25.5,
+          "total_edge": -1.0,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "California Baptist +22.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "California Baptist +22.5",
+            "away": "Seattle U -22.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "UC Irvine",
+          "home": "Stanford",
+          "away_abbr": "UC Irvine",
+          "home_abbr": "Stanford",
+          "gameday": "2026-11-17",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -5.0,
+          "line_total": 127.5,
+          "our_spread": 5.2,
+          "our_total": 149.4,
+          "spread_edge": 10.2,
+          "total_edge": 21.9,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Stanford +5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Stanford +5",
+            "away": "UC Irvine -5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Montana State",
+          "home": "Gonzaga",
+          "away_abbr": "Montana State",
+          "home_abbr": "Gonzaga",
+          "gameday": "2026-11-17",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 19.5,
+          "line_total": 153.5,
+          "our_spread": 12.2,
+          "our_total": 150.5,
+          "spread_edge": -7.3,
+          "total_edge": -3.0,
+          "pick_spread": "away",
+          "pick_total": "under",
+          "pick_spread_label": "Montana State +19.5",
+          "pick_total_label": "Under 153.5",
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Gonzaga -19.5",
+            "away": "Montana State +19.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": 0.507
+        },
+        {
+          "away": "West Virginia",
+          "home": "Auburn",
+          "away_abbr": "West Virginia",
+          "home_abbr": "Auburn",
+          "gameday": "2026-11-17",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 1.5,
+          "line_total": 144.0,
+          "our_spread": 0.8,
+          "our_total": 145.2,
+          "spread_edge": -0.7,
+          "total_edge": 1.2,
+          "pick_spread": "away",
+          "pick_total": "over",
+          "pick_spread_label": "West Virginia +1.5",
+          "pick_total_label": "Over 144",
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Auburn -1.5",
+            "away": "West Virginia +1.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": 0.503
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Montana State @ Gonzaga",
+            "market": "total",
+            "label": "Under 153.5",
+            "prob": 0.507
+          },
+          {
+            "game": "West Virginia @ Auburn",
+            "market": "total",
+            "label": "Over 144",
+            "prob": 0.503
+          },
+          {
+            "game": "UNLV @ Kansas",
+            "market": "spread",
+            "label": "UNLV +38.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.128,
+        "fair_odds": "+681",
+        "book_pays": "+600"
+      }
     }
   }
 }
