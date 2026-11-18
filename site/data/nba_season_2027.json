@@ -7183,8 +7183,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "New York Knicks",
@@ -7211,7 +7211,12 @@
             "away": "New York Knicks -2.5"
           },
           "cover_prob": 0.509,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 102.0,
+            "away_score": 111.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Detroit Pistons",
@@ -7238,7 +7243,12 @@
             "away": "Detroit Pistons +8.5"
           },
           "cover_prob": 0.505,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 93.0,
+            "away_score": 105.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Portland Trail Blazers",
@@ -7265,7 +7275,11 @@
             "away": "Portland Trail Blazers +2.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 106.0,
+            "away_score": 105.0
+          }
         },
         {
           "away": "Utah Jazz",
@@ -7292,7 +7306,12 @@
             "away": "Utah Jazz +5.5"
           },
           "cover_prob": 0.507,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 107.0,
+            "away_score": 132.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Charlotte Hornets",
@@ -7319,7 +7338,12 @@
             "away": "Charlotte Hornets +7.5"
           },
           "cover_prob": 0.502,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 118.0,
+            "away_score": 114.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -7343,10 +7367,9 @@
             "prob": 0.505
           }
         ],
-        "combined_prob": 0.13,
-        "fair_odds": "+669",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-17 23:40 PST"
     },
     "2026-11-18": {
       "date": "2026-11-18",
