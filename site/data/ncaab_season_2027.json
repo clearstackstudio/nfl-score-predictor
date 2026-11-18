@@ -2469,8 +2469,8 @@
       "generated": "2026-11-17 21:39 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "UNLV",
@@ -2497,7 +2497,12 @@
             "away": "UNLV +38.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 102.0,
+            "away_score": 77.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Seattle U",
@@ -2524,7 +2529,12 @@
             "away": "Seattle U -22.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 54.0,
+            "away_score": 83.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "UC Irvine",
@@ -2551,7 +2561,12 @@
             "away": "UC Irvine -5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 65.0,
+            "away_score": 61.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Montana State",
@@ -2578,7 +2593,13 @@
             "away": "Montana State +19.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 74.0,
+            "away_score": 62.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "West Virginia",
@@ -2605,7 +2626,13 @@
             "away": "West Virginia +1.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.503
+          "ou_prob": 0.503,
+          "result": {
+            "home_score": 70.0,
+            "away_score": 76.0,
+            "ats": "win",
+            "ou": "win"
+          }
         }
       ],
       "parlay": {
@@ -2629,10 +2656,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.128,
-        "fair_odds": "+681",
-        "book_pays": "+600"
-      }
+        "result": "win"
+      },
+      "graded_at": "2026-11-18 06:40 PST"
     }
   }
 }
