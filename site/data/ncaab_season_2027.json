@@ -2659,6 +2659,257 @@
         "result": "win"
       },
       "graded_at": "2026-11-18 06:40 PST"
+    },
+    "2026-11-18": {
+      "date": "2026-11-18",
+      "generated": "2026-11-18 21:39 PST",
+      "preseason": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "UConn",
+          "home": "Arizona",
+          "away_abbr": "UConn",
+          "home_abbr": "Arizona",
+          "gameday": "2026-11-18",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 7.0,
+          "line_total": 165.5,
+          "our_spread": 1.1,
+          "our_total": 148.0,
+          "spread_edge": -5.9,
+          "total_edge": -17.5,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "UConn +7",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Arizona -7",
+            "away": "UConn +7"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "UC Riverside",
+          "home": "San Diego",
+          "away_abbr": "UC Riverside",
+          "home_abbr": "San Diego",
+          "gameday": "2026-11-18",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 8.5,
+          "line_total": 133.0,
+          "our_spread": 8.2,
+          "our_total": 150.6,
+          "spread_edge": -0.3,
+          "total_edge": 17.6,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "San Diego -8.5",
+            "away": "UC Riverside +8.5"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Hawai'i",
+          "home": "Washington State",
+          "away_abbr": "Hawai'i",
+          "home_abbr": "Washington State",
+          "gameday": "2026-11-18",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 10.5,
+          "line_total": 138.5,
+          "our_spread": 0.0,
+          "our_total": 147.6,
+          "spread_edge": -10.5,
+          "total_edge": 9.1,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Hawai'i +10.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Washington State -10.5",
+            "away": "Hawai'i +10.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Idaho",
+          "home": "Nevada",
+          "away_abbr": "Idaho",
+          "home_abbr": "Nevada",
+          "gameday": "2026-11-18",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 14.5,
+          "line_total": 150.5,
+          "our_spread": 11.4,
+          "our_total": 146.0,
+          "spread_edge": -3.1,
+          "total_edge": -4.5,
+          "pick_spread": "away",
+          "pick_total": "under",
+          "pick_spread_label": "Idaho +14.5",
+          "pick_total_label": "Under 150.5",
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Nevada -14.5",
+            "away": "Idaho +14.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": 0.508
+        },
+        {
+          "away": "Louisiana",
+          "home": "San Francisco",
+          "away_abbr": "Louisiana",
+          "home_abbr": "San Francisco",
+          "gameday": "2026-11-18",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 31.5,
+          "line_total": 129.5,
+          "our_spread": 10.1,
+          "our_total": 138.9,
+          "spread_edge": -21.4,
+          "total_edge": 9.4,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Louisiana +31.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "San Francisco -31.5",
+            "away": "Louisiana +31.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Texas Southern",
+          "home": "San Diego State",
+          "away_abbr": "Texas Southern",
+          "home_abbr": "San Diego State",
+          "gameday": "2026-11-18",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 49.5,
+          "line_total": 155.5,
+          "our_spread": 18.6,
+          "our_total": 162.3,
+          "spread_edge": -30.9,
+          "total_edge": 6.8,
+          "pick_spread": "away",
+          "pick_total": "over",
+          "pick_spread_label": "Texas Southern +49.5",
+          "pick_total_label": "Over 155.5",
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "San Diego State -49.5",
+            "away": "Texas Southern +49.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": 0.504
+        },
+        {
+          "away": "Cal State Fullerton",
+          "home": "UCLA",
+          "away_abbr": "Cal State Fullerton",
+          "home_abbr": "UCLA",
+          "gameday": "2026-11-18",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 21.5,
+          "line_total": 161.5,
+          "our_spread": 26.0,
+          "our_total": 164.6,
+          "spread_edge": 4.5,
+          "total_edge": 3.1,
+          "pick_spread": "home",
+          "pick_total": "over",
+          "pick_spread_label": "UCLA -21.5",
+          "pick_total_label": "Over 161.5",
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "UCLA -21.5",
+            "away": "Cal State Fullerton +21.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": 0.507
+        },
+        {
+          "away": "UNLV",
+          "home": "Auburn",
+          "away_abbr": "UNLV",
+          "home_abbr": "Auburn",
+          "gameday": "2026-11-18",
+          "weekday": "Wednesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 11.5,
+          "line_total": 146.5,
+          "our_spread": 9.0,
+          "our_total": 158.5,
+          "spread_edge": -2.5,
+          "total_edge": 12.0,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "UNLV +11.5",
+          "pick_total_label": null,
+          "pick_total_note": "No play -- our total is too far from the market to trust.",
+          "spread_labels": {
+            "home": "Auburn -11.5",
+            "away": "UNLV +11.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Idaho @ Nevada",
+            "market": "total",
+            "label": "Under 150.5",
+            "prob": 0.508
+          },
+          {
+            "game": "Cal State Fullerton @ UCLA",
+            "market": "total",
+            "label": "Over 161.5",
+            "prob": 0.507
+          },
+          {
+            "game": "Texas Southern @ San Diego State",
+            "market": "total",
+            "label": "Over 155.5",
+            "prob": 0.504
+          }
+        ],
+        "combined_prob": 0.13,
+        "fair_odds": "+669",
+        "book_pays": "+600"
+      }
     }
   }
 }
