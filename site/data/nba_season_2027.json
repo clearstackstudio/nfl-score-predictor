@@ -7703,6 +7703,150 @@
         "fair_odds": "+669",
         "book_pays": "+600"
       }
+    },
+    "2026-11-19": {
+      "date": "2026-11-19",
+      "generated": "2026-11-18 21:39 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Golden State Warriors",
+          "home": "Memphis Grizzlies",
+          "away_abbr": "Golden State Warriors",
+          "home_abbr": "Memphis Grizzlies",
+          "gameday": "2026-11-19",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 8.5,
+          "line_total": 225.5,
+          "our_spread": 4.6,
+          "our_total": 233.7,
+          "spread_edge": -3.9,
+          "total_edge": 8.2,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Golden State Warriors +8.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Memphis Grizzlies -8.5",
+            "away": "Golden State Warriors +8.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Los Angeles Clippers",
+          "home": "San Antonio Spurs",
+          "away_abbr": "Los Angeles Clippers",
+          "home_abbr": "San Antonio Spurs",
+          "gameday": "2026-11-19",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 16.5,
+          "line_total": 225.0,
+          "our_spread": 13.1,
+          "our_total": 227.9,
+          "spread_edge": -3.4,
+          "total_edge": 2.9,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Los Angeles Clippers +16.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "San Antonio Spurs -16.5",
+            "away": "Los Angeles Clippers +16.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "Portland Trail Blazers",
+          "home": "Milwaukee Bucks",
+          "away_abbr": "Portland Trail Blazers",
+          "home_abbr": "Milwaukee Bucks",
+          "gameday": "2026-11-19",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -9.5,
+          "line_total": 225.5,
+          "our_spread": -7.0,
+          "our_total": 225.4,
+          "spread_edge": 2.5,
+          "total_edge": -0.1,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Milwaukee Bucks +9.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Milwaukee Bucks +9.5",
+            "away": "Portland Trail Blazers -9.5"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        },
+        {
+          "away": "New York Knicks",
+          "home": "Minnesota Timberwolves",
+          "away_abbr": "New York Knicks",
+          "home_abbr": "Minnesota Timberwolves",
+          "gameday": "2026-11-19",
+          "weekday": "Thursday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -1.5,
+          "line_total": 217.5,
+          "our_spread": 2.4,
+          "our_total": 215.5,
+          "spread_edge": 3.9,
+          "total_edge": -2.0,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Minnesota Timberwolves +1.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Minnesota Timberwolves +1.5",
+            "away": "New York Knicks -1.5"
+          },
+          "cover_prob": 0.501,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "New York Knicks @ Minnesota Timberwolves",
+            "market": "spread",
+            "label": "Minnesota Timberwolves +1.5",
+            "prob": 0.501
+          },
+          {
+            "game": "Golden State Warriors @ Memphis Grizzlies",
+            "market": "spread",
+            "label": "Golden State Warriors +8.5",
+            "prob": 0.5
+          },
+          {
+            "game": "Los Angeles Clippers @ San Antonio Spurs",
+            "market": "spread",
+            "label": "Los Angeles Clippers +16.5",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.125,
+        "fair_odds": "+700",
+        "book_pays": "+600"
+      }
     }
   }
 }
