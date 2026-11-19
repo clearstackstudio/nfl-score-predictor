@@ -2665,8 +2665,8 @@
       "generated": "2026-11-18 21:39 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "UConn",
@@ -2693,7 +2693,12 @@
             "away": "UConn +7"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 85.0,
+            "away_score": 79.0,
+            "ats": "win"
+          }
         },
         {
           "away": "UC Riverside",
@@ -2720,7 +2725,11 @@
             "away": "UC Riverside +8.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 71.0,
+            "away_score": 62.0
+          }
         },
         {
           "away": "Hawai'i",
@@ -2747,7 +2756,12 @@
             "away": "Hawai'i +10.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 79.0,
+            "away_score": 63.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Idaho",
@@ -2774,7 +2788,13 @@
             "away": "Idaho +14.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.508
+          "ou_prob": 0.508,
+          "result": {
+            "home_score": 91.0,
+            "away_score": 74.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Louisiana",
@@ -2801,7 +2821,12 @@
             "away": "Louisiana +31.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 77.0,
+            "away_score": 56.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Texas Southern",
@@ -2828,7 +2853,13 @@
             "away": "Texas Southern +49.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 97.0,
+            "away_score": 51.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Cal State Fullerton",
@@ -2855,7 +2886,13 @@
             "away": "Cal State Fullerton +21.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 75.0,
+            "away_score": 71.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "UNLV",
@@ -2882,7 +2919,12 @@
             "away": "UNLV +11.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 86.0,
+            "away_score": 71.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -2906,10 +2948,9 @@
             "prob": 0.504
           }
         ],
-        "combined_prob": 0.13,
-        "fair_odds": "+669",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-19 06:40 PST"
     }
   }
 }
