@@ -7328,8 +7328,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Boston Bruins",
@@ -7355,7 +7355,16 @@
           "pick_label": "Detroit Red Wings -113.5",
           "pick_prob": 0.5883,
           "edge_pp": 7.7,
-          "result": null
+          "result": {
+            "home_score": 1,
+            "away_score": 4,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.330395,
+            "brier_cal": 0.346097,
+            "market_brier": 0.261223,
+            "total_error": 1.4201
+          }
         },
         {
           "away": "Montreal Canadiens",
@@ -7381,7 +7390,16 @@
           "pick_label": "New Jersey Devils -163.5",
           "pick_prob": 0.7129,
           "edge_pp": 11.5,
-          "result": null
+          "result": {
+            "home_score": 2,
+            "away_score": 3,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.456841,
+            "brier_cal": 0.508226,
+            "market_brier": 0.357963,
+            "total_error": 1.8924
+          }
         },
         {
           "away": "Colorado Avalanche",
@@ -7407,10 +7425,20 @@
           "pick_label": "Colorado Avalanche -105",
           "pick_prob": 0.5934,
           "edge_pp": -10.1,
-          "result": null
+          "result": {
+            "home_score": 4,
+            "away_score": 1,
+            "su": "loss",
+            "model_correct": false,
+            "brier_raw": 0.322851,
+            "brier_cal": 0.352124,
+            "market_brier": 0.242359,
+            "total_error": 1.774
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-19 06:41 PST"
     },
     "2026-11-19": {
       "date": "2026-11-19",
