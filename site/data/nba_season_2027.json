@@ -7762,8 +7762,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Golden State Warriors",
@@ -7790,7 +7790,12 @@
             "away": "Golden State Warriors +8.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 126.0,
+            "away_score": 98.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Los Angeles Clippers",
@@ -7817,7 +7822,12 @@
             "away": "Los Angeles Clippers +16.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 124.0,
+            "away_score": 112.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Portland Trail Blazers",
@@ -7844,7 +7854,12 @@
             "away": "Portland Trail Blazers -9.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 114.0,
+            "away_score": 124.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "New York Knicks",
@@ -7871,7 +7886,12 @@
             "away": "New York Knicks -1.5"
           },
           "cover_prob": 0.501,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 99.0,
+            "away_score": 102.0,
+            "ats": "loss"
+          }
         }
       ],
       "parlay": {
@@ -7895,10 +7915,9 @@
             "prob": 0.5
           }
         ],
-        "combined_prob": 0.125,
-        "fair_odds": "+700",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-20 13:41 PST"
     },
     "2026-11-20": {
       "date": "2026-11-20",
