@@ -32,7 +32,13 @@
         "away": "Rice +2.75"
       },
       "cover_prob": 0.511,
-      "ou_prob": 0.516
+      "ou_prob": 0.516,
+      "result": {
+        "home_score": 27,
+        "away_score": 31,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Iowa State",
