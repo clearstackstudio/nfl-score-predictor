@@ -8204,7 +8204,7 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
+      "graded": true,
       "complete": false,
       "picks": [
         {
@@ -8232,7 +8232,8 @@
             "away": "Milwaukee Bucks +12"
           },
           "cover_prob": 0.509,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Portland Trail Blazers",
@@ -8259,7 +8260,8 @@
             "away": "Portland Trail Blazers +5.5"
           },
           "cover_prob": 0.502,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Los Angeles Clippers",
@@ -8286,7 +8288,8 @@
             "away": "Los Angeles Clippers +5.5"
           },
           "cover_prob": 0.507,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Memphis Grizzlies",
@@ -8313,7 +8316,8 @@
             "away": "Memphis Grizzlies +5.5"
           },
           "cover_prob": 0.507,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "New Orleans Pelicans",
@@ -8340,7 +8344,8 @@
             "away": "New Orleans Pelicans +17.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Boston Celtics",
@@ -8367,7 +8372,8 @@
             "away": "Boston Celtics -13"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         }
       ],
       "parlay": {
@@ -8391,10 +8397,9 @@
             "prob": 0.507
           }
         ],
-        "combined_prob": 0.131,
-        "fair_odds": "+663",
-        "book_pays": "+600"
-      }
+        "result": null
+      },
+      "graded_at": "2026-11-21 06:40 PST"
     }
   }
 }
