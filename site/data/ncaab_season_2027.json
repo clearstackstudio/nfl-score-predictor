@@ -5344,7 +5344,7 @@
       "generated": "2026-11-21 21:39 PST",
       "preseason": false,
       "experimental_note": null,
-      "graded": false,
+      "graded": true,
       "complete": false,
       "picks": [
         {
@@ -5372,7 +5372,12 @@
             "away": "Siena -6.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 87.0,
+            "away_score": 93.0,
+            "ats": "win"
+          }
         },
         {
           "away": "South Carolina Upstate",
@@ -5399,7 +5404,13 @@
             "away": "South Carolina Upstate +7.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 85.0,
+            "away_score": 66.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Columbia",
@@ -5426,7 +5437,13 @@
             "away": "Columbia -1.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 71.0,
+            "away_score": 80.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Detroit Mercy",
@@ -5453,7 +5470,13 @@
             "away": "Detroit Mercy +41.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 91.0,
+            "away_score": 70.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Kent State",
@@ -5480,7 +5503,12 @@
             "away": "Kent State -3.75"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 62.0,
+            "away_score": 69.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Denver",
@@ -5507,7 +5535,13 @@
             "away": "Denver +7.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.505
+          "ou_prob": 0.505,
+          "result": {
+            "home_score": 70.0,
+            "away_score": 68.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Queens University",
@@ -5534,7 +5568,13 @@
             "away": "Queens University +26.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 106.0,
+            "away_score": 75.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "New Hampshire",
@@ -5561,7 +5601,13 @@
             "away": "New Hampshire -2.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.508
+          "ou_prob": 0.508,
+          "result": {
+            "home_score": 50.0,
+            "away_score": 47.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Mercyhurst",
@@ -5588,7 +5634,13 @@
             "away": "Mercyhurst -6.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 65.0,
+            "away_score": 68.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Little Rock",
@@ -5615,7 +5667,13 @@
             "away": "Little Rock -4.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.505
+          "ou_prob": 0.505,
+          "result": {
+            "home_score": 99.0,
+            "away_score": 87.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Northern Illinois",
@@ -5642,7 +5700,13 @@
             "away": "Northern Illinois +5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 68.0,
+            "away_score": 86.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Cornell",
@@ -5669,7 +5733,13 @@
             "away": "Cornell -6.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.506
+          "ou_prob": 0.506,
+          "result": {
+            "home_score": 63.0,
+            "away_score": 84.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Fordham",
@@ -5696,7 +5766,13 @@
             "away": "Fordham -5.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.508
+          "ou_prob": 0.508,
+          "result": {
+            "home_score": 69.0,
+            "away_score": 87.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Lafayette",
@@ -5723,7 +5799,13 @@
             "away": "Lafayette +25.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.506
+          "ou_prob": 0.506,
+          "result": {
+            "home_score": 84.0,
+            "away_score": 81.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Navy",
@@ -5750,7 +5832,13 @@
             "away": "Navy -5.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.505
+          "ou_prob": 0.505,
+          "result": {
+            "home_score": 69.0,
+            "away_score": 66.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "New Mexico",
@@ -5777,7 +5865,13 @@
             "away": "New Mexico -2.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.505
+          "ou_prob": 0.505,
+          "result": {
+            "home_score": 85.0,
+            "away_score": 60.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Stony Brook",
@@ -5804,7 +5898,12 @@
             "away": "Stony Brook -5.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 52.0,
+            "away_score": 67.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Western Carolina",
@@ -5831,7 +5930,13 @@
             "away": "Western Carolina +14.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 90.0,
+            "away_score": 63.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "UT Rio Grande Valley",
@@ -5858,7 +5963,13 @@
             "away": "UT Rio Grande Valley +7"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.506
+          "ou_prob": 0.506,
+          "result": {
+            "home_score": 73.0,
+            "away_score": 79.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Drake",
@@ -5885,7 +5996,13 @@
             "away": "Drake -3.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.505
+          "ou_prob": 0.505,
+          "result": {
+            "home_score": 67.0,
+            "away_score": 65.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Middle Tennessee",
@@ -5912,7 +6029,13 @@
             "away": "Middle Tennessee -2.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 59.0,
+            "away_score": 69.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "St. Thomas-Minnesota",
@@ -5939,7 +6062,13 @@
             "away": "St. Thomas-Minnesota -1.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 70.0,
+            "away_score": 98.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Army",
@@ -5966,7 +6095,13 @@
             "away": "Army -1.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.509
+          "ou_prob": 0.509,
+          "result": {
+            "home_score": 67.0,
+            "away_score": 46.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "UAlbany",
@@ -5993,7 +6128,8 @@
             "away": "UAlbany -1.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Central Arkansas",
@@ -6020,7 +6156,13 @@
             "away": "Central Arkansas -2.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 67.0,
+            "away_score": 82.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Longwood",
@@ -6047,7 +6189,13 @@
             "away": "Longwood +6.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.508
+          "ou_prob": 0.508,
+          "result": {
+            "home_score": 74.0,
+            "away_score": 68.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "South Florida",
@@ -6074,7 +6222,13 @@
             "away": "South Florida +3"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 73.0,
+            "away_score": 62.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Pennsylvania",
@@ -6101,7 +6255,12 @@
             "away": "Pennsylvania +2"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 73.0,
+            "away_score": 83.0,
+            "ats": "win"
+          }
         },
         {
           "away": "UC Irvine",
@@ -6128,7 +6287,13 @@
             "away": "UC Irvine -5.25"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.504
+          "ou_prob": 0.504,
+          "result": {
+            "home_score": 67.0,
+            "away_score": 64.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Air Force",
@@ -6155,7 +6320,12 @@
             "away": "Air Force +6"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 90.0,
+            "away_score": 68.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Nicholls",
@@ -6182,7 +6352,13 @@
             "away": "Nicholls +3.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.509
+          "ou_prob": 0.509,
+          "result": {
+            "home_score": 80.0,
+            "away_score": 69.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Northeastern",
@@ -6209,7 +6385,13 @@
             "away": "Northeastern -7.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.509
+          "ou_prob": 0.509,
+          "result": {
+            "home_score": 95.0,
+            "away_score": 82.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Winthrop",
@@ -6236,7 +6418,13 @@
             "away": "Winthrop +5.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 91.0,
+            "away_score": 86.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Southern Illinois",
@@ -6263,7 +6451,13 @@
             "away": "Southern Illinois +1.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.506
+          "ou_prob": 0.506,
+          "result": {
+            "home_score": 69.0,
+            "away_score": 85.0,
+            "ats": "loss",
+            "ou": "loss"
+          }
         },
         {
           "away": "Coppin State",
@@ -6290,7 +6484,13 @@
             "away": "Coppin State +31.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.509
+          "ou_prob": 0.509,
+          "result": {
+            "home_score": 84.0,
+            "away_score": 60.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Maine",
@@ -6317,7 +6517,12 @@
             "away": "Maine +12.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 76.0,
+            "away_score": 44.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "UNC Wilmington",
@@ -6344,7 +6549,13 @@
             "away": "UNC Wilmington -13.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 80.0,
+            "away_score": 89.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Brown",
@@ -6371,7 +6582,12 @@
             "away": "Brown +3.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 84.0,
+            "away_score": 71.0,
+            "ats": "win"
+          }
         },
         {
           "away": "California Baptist",
@@ -6398,7 +6614,13 @@
             "away": "California Baptist +13.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 80.0,
+            "away_score": 73.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Northern Arizona",
@@ -6425,7 +6647,13 @@
             "away": "Northern Arizona +8"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.509
+          "ou_prob": 0.509,
+          "result": {
+            "home_score": 89.0,
+            "away_score": 88.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Charleston Southern",
@@ -6452,7 +6680,13 @@
             "away": "Charleston Southern +8.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.506
+          "ou_prob": 0.506,
+          "result": {
+            "home_score": 69.0,
+            "away_score": 64.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Radford",
@@ -6479,7 +6713,12 @@
             "away": "Radford +8.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 65.0,
+            "away_score": 73.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Morehead State",
@@ -6506,7 +6745,13 @@
             "away": "Morehead State +12.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.505
+          "ou_prob": 0.505,
+          "result": {
+            "home_score": 84.0,
+            "away_score": 61.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Gardner-Webb",
@@ -6533,7 +6778,13 @@
             "away": "Gardner-Webb +8.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 71.0,
+            "away_score": 68.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Michigan",
@@ -6560,7 +6811,13 @@
             "away": "Michigan -4.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.508
+          "ou_prob": 0.508,
+          "result": {
+            "home_score": 79.0,
+            "away_score": 73.0,
+            "ats": "win",
+            "ou": "win"
+          }
         },
         {
           "away": "Presbyterian",
@@ -6587,7 +6844,13 @@
             "away": "Presbyterian +7.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.506
+          "ou_prob": 0.506,
+          "result": {
+            "home_score": 97.0,
+            "away_score": 69.0,
+            "ats": "win",
+            "ou": "loss"
+          }
         },
         {
           "away": "Texas",
@@ -6614,7 +6877,12 @@
             "away": "Texas +2.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 78.0,
+            "away_score": 74.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Valparaiso",
@@ -6641,7 +6909,13 @@
             "away": "Valparaiso -4.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.507
+          "ou_prob": 0.507,
+          "result": {
+            "home_score": 72.0,
+            "away_score": 77.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "New Orleans",
@@ -6668,7 +6942,13 @@
             "away": "New Orleans +1"
           },
           "cover_prob": 0.5,
-          "ou_prob": 0.509
+          "ou_prob": 0.509,
+          "result": {
+            "home_score": 70.0,
+            "away_score": 75.0,
+            "ats": "loss",
+            "ou": "win"
+          }
         },
         {
           "away": "Bradley",
@@ -6695,7 +6975,12 @@
             "away": "Bradley +9.25"
           },
           "cover_prob": null,
-          "ou_prob": 0.508
+          "ou_prob": 0.508,
+          "result": {
+            "home_score": 63.0,
+            "away_score": 62.0,
+            "ou": "loss"
+          }
         },
         {
           "away": "Washington State",
@@ -6722,7 +7007,12 @@
             "away": "Washington State +25.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 78.0,
+            "away_score": 74.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -6746,10 +7036,9 @@
             "prob": 0.509
           }
         ],
-        "combined_prob": 0.132,
-        "fair_odds": "+658",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-22 06:40 PST"
     }
   }
 }
