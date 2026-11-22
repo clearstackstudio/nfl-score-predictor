@@ -1,0 +1,157 @@
+{
+  "id": "2026-11-22",
+  "title": "Weekly recap \u2014 Nov 22, 2026",
+  "period_label": "NFL Week 10 \u00b7 NBA 2026-11-21 \u00b7 NCAAB 2026-11-18",
+  "published": "2026-11-22",
+  "covers": [
+    {
+      "sport": "nfl",
+      "period": "10"
+    },
+    {
+      "sport": "nba",
+      "period": "2026-11-21"
+    },
+    {
+      "sport": "ncaab",
+      "period": "2026-11-18"
+    }
+  ],
+  "overall": {
+    "ats": [
+      15,
+      11,
+      0
+    ],
+    "ou": [
+      3,
+      7,
+      0
+    ]
+  },
+  "sports": [
+    {
+      "sport": "nfl",
+      "label": "NFL",
+      "period": "Week 10",
+      "ats": [
+        8,
+        5,
+        0
+      ],
+      "ou": [
+        3,
+        4,
+        0
+      ],
+      "n_picks": 14
+    },
+    {
+      "sport": "nba",
+      "label": "NBA",
+      "period": "2026-11-21",
+      "ats": [
+        4,
+        2,
+        0
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ],
+      "n_picks": 6
+    },
+    {
+      "sport": "ncaab",
+      "label": "NCAAB",
+      "period": "2026-11-18",
+      "ats": [
+        3,
+        4,
+        0
+      ],
+      "ou": [
+        0,
+        3,
+        0
+      ],
+      "n_picks": 8
+    }
+  ],
+  "best_call": {
+    "label": "Texas Southern +49.5",
+    "kind": "spread",
+    "edge": -30.9,
+    "prob": 0.5,
+    "game": "Texas Southern at San Diego State",
+    "score": "51.0\u201397.0",
+    "sport": "NCAAB",
+    "period": "2026-11-18"
+  },
+  "worst_miss": {
+    "label": "Under 40.5",
+    "kind": "total",
+    "edge": -4.5,
+    "prob": 0.529,
+    "game": "HOU at CLE",
+    "score": "24\u201327",
+    "sport": "NFL",
+    "period": "Week 10"
+  },
+  "observation": "About what you'd expect from a coin-flip operation: 18-18. Totals detail: NFL totals 3-4.",
+  "season_to_date": {
+    "nfl": {
+      "label": "NFL",
+      "ats": [
+        41,
+        52,
+        15
+      ],
+      "ou": [
+        28,
+        28,
+        11
+      ]
+    },
+    "cfb": {
+      "label": "CFB",
+      "ats": [
+        181,
+        171,
+        11
+      ],
+      "ou": [
+        117,
+        131,
+        4
+      ]
+    },
+    "nba": {
+      "label": "NBA",
+      "ats": [
+        96,
+        109,
+        6
+      ],
+      "ou": [
+        0,
+        0,
+        0
+      ]
+    },
+    "ncaab": {
+      "label": "NCAAB",
+      "ats": [
+        82,
+        76,
+        29
+      ],
+      "ou": [
+        56,
+        43,
+        21
+      ]
+    }
+  }
+}
