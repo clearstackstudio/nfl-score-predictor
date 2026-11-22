@@ -8247,7 +8247,7 @@
       "warming_up": false,
       "experimental_note": null,
       "graded": true,
-      "complete": false,
+      "complete": true,
       "picks": [
         {
           "away": "Milwaukee Bucks",
@@ -8275,7 +8275,11 @@
           },
           "cover_prob": 0.509,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 132.0,
+            "away_score": 129.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Portland Trail Blazers",
@@ -8303,7 +8307,11 @@
           },
           "cover_prob": 0.502,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 97.0,
+            "away_score": 96.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Los Angeles Clippers",
@@ -8331,7 +8339,11 @@
           },
           "cover_prob": 0.507,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 110.0,
+            "away_score": 100.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Memphis Grizzlies",
@@ -8359,7 +8371,11 @@
           },
           "cover_prob": 0.507,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 104.0,
+            "away_score": 95.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "New Orleans Pelicans",
@@ -8387,7 +8403,11 @@
           },
           "cover_prob": 0.5,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 114.0,
+            "away_score": 91.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Boston Celtics",
@@ -8415,7 +8435,11 @@
           },
           "cover_prob": 0.5,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 97.0,
+            "away_score": 96.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -8439,9 +8463,9 @@
             "prob": 0.507
           }
         ],
-        "result": null
+        "result": "loss"
       },
-      "graded_at": "2026-11-21 06:40 PST"
+      "graded_at": "2026-11-22 13:39 PST"
     },
     "2026-11-22": {
       "date": "2026-11-22",
