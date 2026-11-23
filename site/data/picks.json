@@ -34,7 +34,7 @@
     "fair_odds": "+594",
     "book_pays": "+600",
     "calibration": "empirical-2026-10-09",
-    "result": null
+    "result": "loss"
   },
   "picks": [
     {
@@ -103,7 +103,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.513,
       "home_qb": "Josh Allen",
-      "away_qb": "Kyle McCord"
+      "away_qb": "Kyle McCord",
+      "result": {
+        "home_score": 26,
+        "away_score": 9,
+        "ats": "win",
+        "ou": "loss"
+      }
     },
     {
       "away": "Baltimore Ravens",
@@ -135,7 +141,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.519,
       "home_qb": "Bryce Young",
-      "away_qb": "Jacoby Brissett"
+      "away_qb": "Jacoby Brissett",
+      "result": {
+        "home_score": 35,
+        "away_score": 33,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "New Orleans Saints",
@@ -167,7 +179,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.5,
       "home_qb": "Caleb Williams",
-      "away_qb": "Tyler Shough"
+      "away_qb": "Tyler Shough",
+      "result": {
+        "home_score": 21,
+        "away_score": 13,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "Tennessee Titans",
@@ -199,7 +217,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.5,
       "home_qb": "Dak Prescott",
-      "away_qb": "Cam Ward"
+      "away_qb": "Cam Ward",
+      "result": {
+        "home_score": 51,
+        "away_score": 30,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Tampa Bay Buccaneers",
@@ -231,7 +255,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.523,
       "home_qb": "Jared Goff",
-      "away_qb": "Baker Mayfield"
+      "away_qb": "Baker Mayfield",
+      "result": {
+        "home_score": 31,
+        "away_score": 21,
+        "ats": "win",
+        "ou": "loss"
+      }
     },
     {
       "away": "Arizona Cardinals",
@@ -263,7 +293,13 @@
       "cover_prob": 0.501,
       "ou_prob": 0.505,
       "home_qb": "Patrick Mahomes",
-      "away_qb": "Josh Johnson"
+      "away_qb": "Josh Johnson",
+      "result": {
+        "home_score": 34,
+        "away_score": 7,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Jacksonville Jaguars",
@@ -295,7 +331,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.5,
       "home_qb": "J.J. McCarthy",
-      "away_qb": "Trevor Lawrence"
+      "away_qb": "Trevor Lawrence",
+      "result": {
+        "home_score": 23,
+        "away_score": 18,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "New York Jets",
@@ -327,7 +369,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.5,
       "home_qb": "Justin Herbert",
-      "away_qb": "Geno Smith"
+      "away_qb": "Geno Smith",
+      "result": {
+        "home_score": 24,
+        "away_score": 27,
+        "ats": "loss",
+        "ou": "loss"
+      }
     },
     {
       "away": "Las Vegas Raiders",
@@ -359,7 +407,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.517,
       "home_qb": "Bo Nix",
-      "away_qb": "Fernando Mendoza"
+      "away_qb": "Fernando Mendoza",
+      "result": {
+        "home_score": 38,
+        "away_score": 24,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "Pittsburgh Steelers",
@@ -391,7 +445,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.51,
       "home_qb": "Joe Milton III",
-      "away_qb": "Aaron Rodgers"
+      "away_qb": "Aaron Rodgers",
+      "result": {
+        "home_score": 19,
+        "away_score": 16,
+        "ats": "win",
+        "ou": "loss"
+      }
     },
     {
       "away": "Minnesota Vikings",
@@ -423,7 +483,13 @@
       "cover_prob": 0.5,
       "ou_prob": 0.53,
       "home_qb": "Brock Purdy",
-      "away_qb": "Kirk Cousins"
+      "away_qb": "Kirk Cousins",
+      "result": {
+        "home_score": 35,
+        "away_score": 10,
+        "ats": "loss",
+        "ou": "win"
+      }
     },
     {
       "away": "Cincinnati Bengals",
