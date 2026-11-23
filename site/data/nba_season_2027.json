@@ -8698,7 +8698,7 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
+      "graded": true,
       "complete": false,
       "picks": [
         {
@@ -8726,7 +8726,8 @@
             "away": "Memphis Grizzlies -4"
           },
           "cover_prob": 0.51,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Portland Trail Blazers",
@@ -8753,7 +8754,8 @@
             "away": "Portland Trail Blazers +4"
           },
           "cover_prob": 0.508,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Brooklyn Nets",
@@ -8780,7 +8782,8 @@
             "away": "Brooklyn Nets +11.5"
           },
           "cover_prob": 0.506,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Oklahoma City Thunder",
@@ -8807,7 +8810,8 @@
             "away": "Oklahoma City Thunder -5.5"
           },
           "cover_prob": 0.507,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Milwaukee Bucks",
@@ -8834,7 +8838,8 @@
             "away": "Milwaukee Bucks +10.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Cleveland Cavaliers",
@@ -8861,7 +8866,8 @@
             "away": "Cleveland Cavaliers -8.5"
           },
           "cover_prob": 0.504,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Phoenix Suns",
@@ -8888,7 +8894,8 @@
             "away": "Phoenix Suns -3.5"
           },
           "cover_prob": 0.509,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Los Angeles Clippers",
@@ -8915,7 +8922,8 @@
             "away": "Los Angeles Clippers +12.5"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "Utah Jazz",
@@ -8942,7 +8950,8 @@
             "away": "Utah Jazz +13.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         },
         {
           "away": "San Antonio Spurs",
@@ -8969,7 +8978,8 @@
             "away": "San Antonio Spurs -10.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": null
         }
       ],
       "parlay": {
@@ -8993,10 +9003,9 @@
             "prob": 0.508
           }
         ],
-        "combined_prob": 0.132,
-        "fair_odds": "+658",
-        "book_pays": "+600"
-      }
+        "result": null
+      },
+      "graded_at": "2026-11-23 06:40 PST"
     }
   }
 }
