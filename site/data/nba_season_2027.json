@@ -8473,8 +8473,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Detroit Pistons",
@@ -8501,7 +8501,12 @@
             "away": "Detroit Pistons -2"
           },
           "cover_prob": 0.5,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 107.0,
+            "away_score": 97.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Oklahoma City Thunder",
@@ -8528,7 +8533,12 @@
             "away": "Oklahoma City Thunder +2.5"
           },
           "cover_prob": 0.506,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 123.0,
+            "away_score": 113.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Denver Nuggets",
@@ -8555,7 +8565,12 @@
             "away": "Denver Nuggets -8.5"
           },
           "cover_prob": 0.523,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 145.0,
+            "away_score": 151.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Dallas Mavericks",
@@ -8582,7 +8597,11 @@
             "away": "Dallas Mavericks -1.5"
           },
           "cover_prob": null,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 114.0,
+            "away_score": 116.0
+          }
         },
         {
           "away": "Orlando Magic",
@@ -8609,7 +8628,12 @@
             "away": "Orlando Magic -5.5"
           },
           "cover_prob": 0.502,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 116.0,
+            "away_score": 96.0,
+            "ats": "win"
+          }
         },
         {
           "away": "Indiana Pacers",
@@ -8636,7 +8660,12 @@
             "away": "Indiana Pacers +9.5"
           },
           "cover_prob": 0.507,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 113.0,
+            "away_score": 106.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Boston Celtics",
@@ -8663,7 +8692,12 @@
             "away": "Boston Celtics -9.5"
           },
           "cover_prob": 0.516,
-          "ou_prob": null
+          "ou_prob": null,
+          "result": {
+            "home_score": 88.0,
+            "away_score": 87.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -8687,10 +8721,9 @@
             "prob": 0.507
           }
         ],
-        "combined_prob": 0.137,
-        "fair_odds": "+630",
-        "book_pays": "+600"
-      }
+        "result": "loss"
+      },
+      "graded_at": "2026-11-23 13:39 PST"
     },
     "2026-11-23": {
       "date": "2026-11-23",
