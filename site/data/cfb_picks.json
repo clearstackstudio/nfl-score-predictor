@@ -1912,7 +1912,13 @@
         "away": "Utah -7"
       },
       "cover_prob": 0.509,
-      "ou_prob": 0.509
+      "ou_prob": 0.509,
+      "result": {
+        "home_score": 17,
+        "away_score": 38,
+        "ats": "win",
+        "ou": "win"
+      }
     },
     {
       "away": "San Diego State",
@@ -1940,7 +1946,12 @@
         "away": "San Diego State +17.25"
       },
       "cover_prob": 0.507,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 20,
+        "away_score": 22,
+        "ats": "win"
+      }
     },
     {
       "away": "Oklahoma State",
@@ -1968,7 +1979,11 @@
         "away": "Oklahoma State -2.75"
       },
       "cover_prob": null,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 27,
+        "away_score": 30
+      }
     },
     {
       "away": "Hawai'i",
@@ -1996,7 +2011,12 @@
         "away": "Hawai'i +5.5"
       },
       "cover_prob": 0.514,
-      "ou_prob": null
+      "ou_prob": null,
+      "result": {
+        "home_score": 16,
+        "away_score": 8,
+        "ats": "win"
+      }
     },
     {
       "away": "Utah State",
@@ -2024,7 +2044,13 @@
         "away": "Utah State +8.5"
       },
       "cover_prob": 0.5,
-      "ou_prob": 0.521
+      "ou_prob": 0.521,
+      "result": {
+        "home_score": 31,
+        "away_score": 24,
+        "ats": "win",
+        "ou": "loss"
+      }
     }
   ]
 }
