@@ -9039,6 +9039,117 @@
         "result": null
       },
       "graded_at": "2026-11-23 06:40 PST"
+    },
+    "2026-11-24": {
+      "date": "2026-11-24",
+      "generated": "2026-11-24 04:39 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Detroit Pistons",
+          "home": "Orlando Magic",
+          "away_abbr": "Detroit Pistons",
+          "home_abbr": "Orlando Magic",
+          "gameday": "2026-11-24",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -2.0,
+          "line_total": 212.5,
+          "our_spread": -2.5,
+          "our_total": 223.7,
+          "spread_edge": -0.5,
+          "total_edge": 11.2,
+          "pick_spread": null,
+          "pick_total": null,
+          "pick_spread_label": null,
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Orlando Magic +2",
+            "away": "Detroit Pistons -2"
+          },
+          "cover_prob": null,
+          "ou_prob": null
+        },
+        {
+          "away": "Boston Celtics",
+          "home": "Washington Wizards",
+          "away_abbr": "Boston Celtics",
+          "home_abbr": "Washington Wizards",
+          "gameday": "2026-11-24",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": -10.5,
+          "line_total": 217.5,
+          "our_spread": -6.5,
+          "our_total": 213.7,
+          "spread_edge": 4.0,
+          "total_edge": -3.8,
+          "pick_spread": "home",
+          "pick_total": null,
+          "pick_spread_label": "Washington Wizards +10.5",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Washington Wizards +10.5",
+            "away": "Boston Celtics -10.5"
+          },
+          "cover_prob": 0.502,
+          "ou_prob": null
+        },
+        {
+          "away": "Dallas Mavericks",
+          "home": "Denver Nuggets",
+          "away_abbr": "Dallas Mavericks",
+          "home_abbr": "Denver Nuggets",
+          "gameday": "2026-11-24",
+          "weekday": "Tuesday",
+          "neutral": false,
+          "preseason": false,
+          "line_spread": 8.0,
+          "line_total": 233.5,
+          "our_spread": 5.7,
+          "our_total": 234.2,
+          "spread_edge": -2.3,
+          "total_edge": 0.7,
+          "pick_spread": "away",
+          "pick_total": null,
+          "pick_spread_label": "Dallas Mavericks +8",
+          "pick_total_label": null,
+          "pick_total_note": null,
+          "spread_labels": {
+            "home": "Denver Nuggets -8",
+            "away": "Dallas Mavericks +8"
+          },
+          "cover_prob": 0.5,
+          "ou_prob": null
+        }
+      ],
+      "parlay": {
+        "legs": [
+          {
+            "game": "Boston Celtics @ Washington Wizards",
+            "market": "spread",
+            "label": "Washington Wizards +10.5",
+            "prob": 0.502
+          },
+          {
+            "game": "Dallas Mavericks @ Denver Nuggets",
+            "market": "spread",
+            "label": "Dallas Mavericks +8",
+            "prob": 0.5
+          }
+        ],
+        "combined_prob": 0.251,
+        "fair_odds": "+298",
+        "book_pays": "+260"
+      }
     }
   }
 }
