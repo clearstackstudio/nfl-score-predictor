@@ -8757,6 +8757,44 @@
         }
       ],
       "parlay": null
+    },
+    "2026-11-24": {
+      "date": "2026-11-24",
+      "generated": "2026-11-24 04:40 PST",
+      "preseason": false,
+      "warming_up": false,
+      "experimental_note": null,
+      "graded": false,
+      "complete": false,
+      "picks": [
+        {
+          "away": "Vegas Golden Knights",
+          "home": "Edmonton Oilers",
+          "away_abbr": "VGK",
+          "home_abbr": "EDM",
+          "game_id": 2026020385,
+          "gameday": "2026-11-24",
+          "weekday": "Tuesday",
+          "start_time_pt": "17:00",
+          "home_ml": -102.0,
+          "away_ml": -115.0,
+          "market_p_home": 0.4856,
+          "market_p_away": 0.5144,
+          "p_home_raw": 0.4383,
+          "p_home_cal": 0.4147,
+          "p_away_cal": 0.5853,
+          "model_total": 6.1147,
+          "total_line": 6.5,
+          "over_price": 104.5,
+          "under_price": -123.0,
+          "pick_side": "away",
+          "pick_label": "Vegas Golden Knights -115",
+          "pick_prob": 0.5853,
+          "edge_pp": -7.1,
+          "result": null
+        }
+      ],
+      "parlay": null
     }
   }
 }
