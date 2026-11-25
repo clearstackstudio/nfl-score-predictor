@@ -8828,8 +8828,8 @@
       "preseason": false,
       "warming_up": false,
       "experimental_note": null,
-      "graded": false,
-      "complete": false,
+      "graded": true,
+      "complete": true,
       "picks": [
         {
           "away": "Vegas Golden Knights",
@@ -8855,10 +8855,20 @@
           "pick_label": "Vegas Golden Knights -115",
           "pick_prob": 0.5853,
           "edge_pp": -7.1,
-          "result": null
+          "result": {
+            "home_score": 3,
+            "away_score": 5,
+            "su": "win",
+            "model_correct": true,
+            "brier_raw": 0.192107,
+            "brier_cal": 0.171976,
+            "market_brier": 0.235807,
+            "total_error": -1.8853
+          }
         }
       ],
-      "parlay": null
+      "parlay": null,
+      "graded_at": "2026-11-25 13:41 PST"
     },
     "2026-11-25": {
       "date": "2026-11-25",
