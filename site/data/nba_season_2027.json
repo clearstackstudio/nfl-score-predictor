@@ -9085,7 +9085,7 @@
       "warming_up": false,
       "experimental_note": null,
       "graded": true,
-      "complete": false,
+      "complete": true,
       "picks": [
         {
           "away": "Detroit Pistons",
@@ -9113,7 +9113,10 @@
           },
           "cover_prob": null,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 86.0,
+            "away_score": 104.0
+          }
         },
         {
           "away": "Boston Celtics",
@@ -9141,7 +9144,11 @@
           },
           "cover_prob": 0.502,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 116.0,
+            "away_score": 131.0,
+            "ats": "loss"
+          }
         },
         {
           "away": "Dallas Mavericks",
@@ -9169,7 +9176,11 @@
           },
           "cover_prob": 0.5,
           "ou_prob": null,
-          "result": null
+          "result": {
+            "home_score": 101.0,
+            "away_score": 120.0,
+            "ats": "win"
+          }
         }
       ],
       "parlay": {
@@ -9187,9 +9198,9 @@
             "prob": 0.5
           }
         ],
-        "result": null
+        "result": "loss"
       },
-      "graded_at": "2026-11-24 06:40 PST"
+      "graded_at": "2026-11-25 13:39 PST"
     },
     "2026-11-25": {
       "date": "2026-11-25",
